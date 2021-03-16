@@ -2,6 +2,7 @@ Prescriptions for Thoth's adviser
 ---------------------------------
 
 ⚕️💊⚕️
+----
 
 Prescriptions to heal your applications and application dependencies.
 
@@ -10,7 +11,8 @@ What are prescriptions?
 
 This repository keeps a database of known issues in Python open-source
 projects. The database is used in `Thoth
-<https://khemenu.thoth-station.ninja/>`__ to resolve Python software stacks.
+<https://khemenu.thoth-station.ninja/>`__ to resolve high quality Python
+software stacks.
 
 How to write a prescription?
 ============================
