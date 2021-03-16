@@ -1,7 +1,7 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-labels: "enhancement, kind/feature"
+name: Prescription request
+about: Suggest a prescription for the resolution process
+labels: "enhancement, kind/feature, prescription"
 ---
 
 **Is your feature request related to a problem? Please describe.**
