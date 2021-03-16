@@ -5,6 +5,13 @@ Prescriptions for Thoth's adviser
 
 Prescriptions to heal your applications and application dependencies.
 
+What are prescriptions?
+=======================
+
+This repository keeps a database of known issues in Python open-source
+projects. The database is used in `Thoth
+<https://khemenu.thoth-station.ninja/>`__ to resolve Python software stacks.
+
 How to write a prescription?
 ============================
 
@@ -25,3 +32,6 @@ The prescription database is released under the terms of ODC Open Database
 License (ODbL). See LICENSE.md file available for more info or visit
 `opendatacommons.org/licenses/odbl
 <https://opendatacommons.org/licenses/odbl/>`__ for more info.
+
+Copyright © 2021 AICoE Project `Thoth
+<https://khemenu.thoth-station.ninja/>`__; Red Hat Inc.
