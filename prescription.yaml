@@ -3,7 +3,84 @@ kind: prescription
 spec:
   units:
     boots: []
-    pseudonyms: []
+    pseudonyms:
+      - name: IntelTensorFlow
+        type: pseudonym
+        should_include:
+          times: 1
+          adviser_pipeline: true
+          recommendation_types:
+            - performance
+            - security
+            - stable
+            - testing
+        run:
+          match:
+            package_name: tensorflow
+            index_url: https://pypi.org/simple
+
+          stack_info:
+            - message: Considering also intel-tensorflow package as an alternative to tensorflow
+              type: INFO
+              link: tf_intel
+
+          yield:
+            package_version:
+              name: intel-tensorflow
+              # TODO: match version
+              index_url: https://pypi.org/simple
+
+      - name: IntelTensorFlowCPU
+        type: pseudonym
+        should_include:
+          times: 1
+          adviser_pipeline: true
+          recommendation_types:
+            - performance
+            - security
+            - stable
+            - testing
+        run:
+          match:
+            package_name: tensorflow-cpu
+            index_url: https://pypi.org/simple
+
+          stack_info:
+            - message: Considering also intel-tensorflow package as an alternative to tensorflow-cpu
+              type: INFO
+              link: tf_intel
+
+          yield:
+            package_version:
+              name: intel-tensorflow
+              # TODO: match version
+              index_url: https://pypi.org/simple
+
+      - name: TensorFlowGPU
+        type: pseudonym
+        should_include:
+          times: 1
+          adviser_pipeline: true
+          recommendation_types:
+            - performance
+            - security
+            - stable
+            - testing
+          # TODO: if GPU is present
+        run:
+          match:
+            package_name: tensorflow-cpu
+            index_url: https://pypi.org/simple
+
+          stack_info:
+            - message: Considering also tensorflow-gpu package as the runtime environment used provides CUDA
+              type: INFO
+              link: tf_gpu_alt
+
+          yield:
+            package_version:
+              name: intel-tensorflow
+              index_url: https://pypi.org/simple
     sieves: []
     steps: []
     strides: []
