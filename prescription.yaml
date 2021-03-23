@@ -1312,3 +1312,35 @@ spec:
               link: mkl_libs
           advised_manifest_changes:
             <<: *omp_num_threads
+      - name: TensorFlowSlowKerasEmbedding
+        type: wrap
+        should_include:
+          adviser_pipeline: true
+          library_usage:
+            tensorflow:
+              - tensorflow.keras.layers.Embedding
+        run:
+          match:
+            state:
+              resolved_dependencies:
+                - name: tensorflow
+                  version: <=2.4
+          justification: &slow_keras_embedding
+            - type: WARNING
+              message: TensorFlow in version <=2.4 is slow when tf.keras.layers.Embedding is used
+              link: tf_42475
+      - name: IntelTensorFlowSlowKerasEmbedding
+        type: wrap
+        should_include:
+          adviser_pipeline: true
+          library_usage:
+            tensorflow:
+              - tensorflow.keras.layers.Embedding
+        run:
+          match:
+            state:
+              resolved_dependencies:
+                - name: intel-tensorflow
+                  version: <=2.4
+          justification:
+            - <<: *slow_keras_embedding
