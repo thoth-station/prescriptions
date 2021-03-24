@@ -30,10 +30,10 @@ know by openning an issue and we will help you with writing a prescription.
 Licensing
 =========
 
-The prescription database is released under the terms of ODC Open Database
-License (ODbL). See LICENSE.md file available for more info or visit
-`opendatacommons.org/licenses/odbl
-<https://opendatacommons.org/licenses/odbl/>`__ for more info.
+The prescription database is released under the terms of `GNU Affero General
+Public License v3.0 or later
+<https://www.gnu.org/licenses/agpl-3.0.en.html>`__. See the LICENSE file for
+more info.
 
 Copyright © 2021 AICoE Project `Thoth
 <https://khemenu.thoth-station.ninja/>`__; Red Hat Inc.
