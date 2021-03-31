@@ -14,6 +14,10 @@ projects. The database is used in `Thoth
 <https://khemenu.thoth-station.ninja/>`__ to resolve high quality Python
 software stacks.
 
+See `the linked presentation
+<https://github.com/thoth-station/adviser/blob/master/docs/presentation.pdf>`__
+or `YouTube video <https://youtu.be/dg6_WhUK5Ew>`__ for more info.
+
 How to write a prescription?
 ============================
 
