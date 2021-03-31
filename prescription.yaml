@@ -1344,6 +1344,23 @@ spec:
                   version: <=2.4
           justification:
             - <<: *slow_keras_embedding
+      - name: TensorFlow22DropRemainder
+        type: wrap
+        should_include:
+          adviser_pipeline: true
+          runtime_environments:
+            cuda_versions:
+              not: [null]
+        run:
+          match:
+            state:
+              resolved_dependencies:
+                - name: tensorflow
+                  version: ">=2.3.0"
+          justification:
+            - type: INFO
+              message: "pass drop_remainder=True to dataset batch when running tensorflow-gpu>=2.3.0 to improve training performance by 15%"
+              link: https://github.com/tensorflow/tensorflow/issues/41827
       - name: TensorFlowGPU22DropRemainder
         type: wrap
         should_include:
