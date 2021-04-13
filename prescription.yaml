@@ -887,3 +887,110 @@ spec:
             - type: INFO
               message: "pass drop_remainder=True to dataset batch when running tensorflow>=2.3.0 to improve training performance by 15%"
               link: https://github.com/tensorflow/tensorflow/issues/41827
+      - name: GitHubReleaseNotes
+        type: wrap.GitHubReleaseNotes
+        should_include:
+          adviser_pipeline: true
+        run:
+          release_notes:
+            - organization: tensorflow
+              repository: tensorflow
+              tag_version_prefix: v
+              package_version:
+                name: tensorflow
+      - name: ThothGitHubReleaseNotes
+        type: wrap.GitHubReleaseNotes
+        should_include:
+           adviser_pipeline: true
+        run:
+          release_notes:
+            - organization: thoth-station
+              repository: lab
+              tag_version_prefix: v
+              package_version:
+                name: thoth-lab
+            - organization: thoth-station
+              repository: analyzer
+              tag_version_prefix: v
+              package_version:
+                name: thoth-analyzer
+            - organization: thoth-station
+              repository: storages
+              tag_version_prefix: v
+              package_version:
+                name: thoth-storages
+            - organization: thoth-station
+              repository: python
+              tag_version_prefix: v
+              package_version:
+                name: thoth-python
+            - organization: thoth-station
+              repository: common
+              tag_version_prefix: v
+              package_version:
+                name: thoth-common
+            - organization: thoth-station
+              repository: solver
+              tag_version_prefix: v
+              package_version:
+                name: thoth-solver
+            - organization: thoth-station
+              repository: adviser
+              tag_version_prefix: v
+              package_version:
+                name: thoth-adviser
+            - organization: thoth-station
+              repository: source-management
+              tag_version_prefix: v
+              package_version:
+                name: thoth-sourcemanagement
+            - organization: thoth-station
+              repository: messaging
+              tag_version_prefix: v
+              package_version:
+                name: thoth-messaging
+            - organization: thoth-station
+              repository: glyph
+              tag_version_prefix: v
+              package_version:
+                name: thoth-glyph
+            - organization: thoth-station
+              repository: buildlog-parser
+              tag_version_prefix: v
+              package_version:
+                name: thoth-buildlog-parser
+            - organization: thoth-station
+              repository: jupyterlab-requirements
+              tag_version_prefix: v
+              package_version:
+                name: jupyterlab-requirements
+            - organization: thoth-station
+              repository: thamos
+              tag_version_prefix: v
+              package_version:
+                name: thamos
+            - organization: thoth-station
+              repository: kebechet
+              tag_version_prefix: v
+              package_version:
+                name: kebechet
+            - organization: thoth-station
+              repository: package-extract
+              tag_version_prefix: v
+              package_version:
+                name: thoth-package-extract
+            - organization: thoth-station
+              repository: micropipenv
+              tag_version_prefix: v
+              package_version:
+                name: micropipenv
+            - organization: thoth-station
+              repository: invectio
+              tag_version_prefix: v
+              package_version:
+                name: invectio
+            - organization: thoth-station
+              repository: fext
+              tag_version_prefix: v
+              package_version:
+                name: fext
