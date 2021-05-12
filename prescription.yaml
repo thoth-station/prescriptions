@@ -50,7 +50,7 @@ spec:
               index_url: "https://pypi.org/simple"
     sieves:
       - name: Enum34BackportSieve
-        type: sieve
+        type: sieve.SkipPackage
         should_include:
           adviser_pipeline: true
           recommendation_types:
@@ -60,9 +60,7 @@ spec:
           runtime_environments:
             python_versions: ["3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
         match:
-          package_version:
-            name: enum34
-            index_url: 'https://pypi.org/simple'
+          package_name: enum34
         run:
           log:
             message: "Dependency 'enum34' removed: emum34 is available in Python standard library starting Python 3.4"
@@ -72,7 +70,7 @@ spec:
               message: "Dependency 'enum34' removed: emum34 is available in Python standard library starting Python 3.4"
               link: backports
       - name: Functools32BackportSieve
-        type: sieve
+        type: sieve.SkipPackage
         should_include:
           adviser_pipeline: true
           recommendation_types:
@@ -82,9 +80,7 @@ spec:
           runtime_environments:
             python_versions: ["3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
         match:
-          package_version:
-            name: functools32
-            index_url: "https://pypi.org/simple"
+          package_name: functools32
         run:
           log:
             message: "Dependency 'functools32' removed: functools is available in Python standard library starting Python 3.2"
@@ -94,7 +90,7 @@ spec:
               message: "Dependency 'functools32' removed: functools is available in Python standard library starting Python 3.2"
               link: backports
       - name: ImportlibMetadataBackportSieve
-        type: sieve
+        type: sieve.SkipPackage
         should_include:
           adviser_pipeline: true
           recommendation_types:
@@ -104,9 +100,7 @@ spec:
           runtime_environments:
             python_versions: ["3.8", "3.9", "3.10"]
         match:
-          package_version:
-            name: importlib-metadata
-            index_url: "https://pypi.org/simple"
+          package_name: importlib-metadata
         run:
           log:
             message: "Dependency 'importlib-metadata' removed: importlib.metadata is available in Python standard library starting Python 3.8"
@@ -116,7 +110,7 @@ spec:
               message: "Dependency 'importlib-metadata' removed: importlib.metadata is available in Python standard library starting Python 3.8"
               link: backports
       - name: ImportlibResourcesBackportSieve
-        type: sieve
+        type: sieve.SkipPackage
         should_include:
           adviser_pipeline: true
           recommendation_types:
@@ -126,9 +120,7 @@ spec:
           runtime_environments:
             python_versions: ["3.8", "3.9", "3.10"]
         match:
-          package_version:
-            name: importlib-resources
-            index_url: "https://pypi.org/simple"
+          package_name: importlib-resources
         run:
           log:
             message: "Dependency 'importlib-resources' removed: importlib.pkg_resources is available in Python standard library starting Python 3.8"
@@ -138,7 +130,7 @@ spec:
               message: "Dependency 'importlib-resources' removed: importlib.pkg_resources is available in Python standard library starting Python 3.8"
               link: backports
       - name: MockBackportSieve
-        type: sieve
+        type: sieve.SkipPackage
         should_include:
           adviser_pipeline: true
           recommendation_types:
@@ -148,9 +140,7 @@ spec:
           runtime_environments:
             python_versions: ["3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
         match:
-          package_version:
-            name: mock
-            index_url: "https://pypi.org/simple"
+          package_name: mock
         run:
           log:
             message: "Dependency 'mock' removed: unittest.mock is available in Python standard library starting Python 3.3"
