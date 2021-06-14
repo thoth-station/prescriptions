@@ -1,0 +1,20 @@
+units:
+  steps:
+    - name: AICoEReleasesStep
+      type: step
+      should_include:
+        adviser_pipeline: true
+        recommendation_types:
+          - performance
+          - security
+          - stable
+      match:
+        package_version:
+          index_url: "https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple"
+      run:
+        multi_package_resolution: true
+        justification:
+          - type: INFO
+            message: "Builds produced by AICoE are optimized for performance"
+            link: aicoe_tf_releases
+        score: 0.1

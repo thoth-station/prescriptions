@@ -1,0 +1,50 @@
+units:
+  steps:
+      - name: TensorFlow22NumPyStep
+        type: step
+        should_include:
+          adviser_pipeline: true
+          recommendation_types:
+            - performance
+            - security
+            - stable
+        match:
+          - package_version:
+              name: numpy
+              version: "<=1.19.0"
+              index_url: "https://pypi.org/simple"
+            state:
+              resolved_dependencies:
+                - name: tensorflow
+                  version: ">=2.0,<2.3"
+          - package_version:
+              name: numpy
+              version: "<=1.19.0"
+              index_url: "https://pypi.org/simple"
+            state:
+              resolved_dependencies:
+                - name: tensorflow-cpu
+                  version: ">=2.0,<2.3"
+          - package_version:
+              name: numpy
+              version: "<=1.19.0"
+              index_url: "https://pypi.org/simple"
+            state:
+              resolved_dependencies:
+                - name: tensorflow-gpu
+                  version: ">=2.0,<2.3"
+          - package_version:
+              name: numpy
+              version: "<=1.19.0"
+              index_url: "https://pypi.org/simple"
+            state:
+              resolved_dependencies:
+                - name: intel-tensorflow
+                  version: ">=2.0,<2.3"
+        run:
+          multi_package_resolution: false
+          stack_info:
+            - type: WARNING
+              message: "tensorflow<2.3,>=2.0 states NumPy<2.0.0 as a dependency, but is compatible with NumPy<1.19.0"
+              link: tf_41902
+          not_acceptable: "tensorflow<2.3,>=2.0 states NumPy<2.0.0 as a dependency, but is compatible with NumPy<1.19.0"

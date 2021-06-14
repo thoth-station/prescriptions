@@ -1,0 +1,25 @@
+units:
+  sieves:
+    - name: Py36SetuptoolsSieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        recommendation_types:
+          - performance
+          - security
+          - stable
+        runtime_environments:
+          python_versions: ["3.6"]
+      match:
+        package_version:
+          name: setuptools
+          version: "<=17"
+          index_url: "https://pypi.org/simple"
+      run:
+        log:
+          message: "Package setuptools in versions <=17 do not work with Python 3.6"
+          type: WARNING
+        stack_info:
+          - type: WARNING
+            message: "Package setuptools in versions <=17 do not work with Python 3.6"
+            link: setuptools_py38

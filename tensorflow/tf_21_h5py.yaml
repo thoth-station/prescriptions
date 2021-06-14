@@ -1,0 +1,50 @@
+units:
+  steps:
+    - name: TensorFlow21H5pyStep
+      type: step
+      should_include:
+        adviser_pipeline: true
+        recommendation_types:
+          - performance
+          - security
+          - stable
+      match:
+        - package_version:
+            name: h5py
+            version: ">=3"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow
+                version: "~=2.1.0"
+        - package_version:
+            name: h5py
+            version: ">=3"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow-cpu
+                version: "~=2.1.0"
+        - package_version:
+            name: h5py
+            version: ">=3"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow-gpu
+                version: "~=2.1.0"
+        - package_version:
+            name: h5py
+            version: ">=3"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: intel-tensorflow
+                version: "~=2.1.0"
+      run:
+        multi_package_resolution: false
+        stack_info:
+          - type: WARNING
+            message: "tensorflow in version 2.1 can cause runtime errors when running with h5py>=3 caused by library overpinning"
+            link: tf_21_h5py
+        not_acceptable: "tensorflow in version 2.1 can cause runtime errors when running with h5py>=3 caused by library overpinning"
