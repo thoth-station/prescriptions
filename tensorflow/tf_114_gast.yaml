@@ -1,0 +1,50 @@
+units:
+  steps:
+    - name: TensorFlow114GastStep
+      type: step
+      should_include:
+        adviser_pipeline: true
+        recommendation_types:
+          - performance
+          - security
+          - stable
+      match:
+        - package_version:
+            name: gast
+            version: ">0.2.2"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow
+                version: "<=1.14"
+        - package_version:
+            name: gast
+            version: ">0.2.2"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow-cpu
+                version: "<=1.14"
+        - package_version:
+            name: gast
+            version: ">0.2.2"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow-gpu
+                version: "<=1.14"
+        - package_version:
+            name: gast
+            version: ">0.2.2"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: intel-tensorflow
+                version: "<=1.14"
+      run:
+        multi_package_resolution: false
+        stack_info:
+          - type: WARNING
+            message: "tensorflow in version <=1.14 used overpinned gast package, using gast in version <=0.2.2"
+            link: tf_114_gast
+        not_acceptable: "tensorflow in version <=1.14 used overpinned gast package, using gast in version <=0.2.2"

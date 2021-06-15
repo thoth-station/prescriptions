@@ -1,0 +1,31 @@
+units:
+  pseudonyms:
+    - name: IntelTensorFlowPseudonym
+      type: pseudonym
+      should_include:
+        adviser_pipeline: true
+        recommendation_types:
+          - performance
+          - security
+          - stable
+          - testing
+      match:
+        - package_version:
+            name: tensorflow
+            index_url: "https://pypi.org/simple"
+        - package_version:
+            name: tensorflow-cpu
+            index_url: "https://pypi.org/simple"
+      run:
+        log:
+          message: Considering also intel-tensorflow package as an alternative to tensorflow
+          type: INFO
+        stack_info:
+          - link: tf_intel
+            message: Considering also intel-tensorflow package as an alternative to tensorflow
+            type: INFO
+        yield:
+          yield_matched_version: true
+          package_version:
+            name: intel-tensorflow
+            index_url: "https://pypi.org/simple"

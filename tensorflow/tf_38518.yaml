@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: TensorFlowMultipleProcessesGPUBug
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: tensorflow-gpu
+              version: "~=2.3.0"
+      run:
+        justification:
+          - type: WARNING
+            message: "tensorflow in version 2.3 has a bug that prevents from running if multiple TensorFlow processes are running"
+            link: tf_38518

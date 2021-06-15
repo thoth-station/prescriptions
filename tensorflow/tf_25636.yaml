@@ -1,0 +1,50 @@
+units:
+  steps:
+    - name: TensorFlow113NumPyStep
+      type: step
+      should_include:
+        adviser_pipeline: true
+        recommendation_types:
+          - performance
+          - security
+          - stable
+      match:
+        - package_version:
+            name: numpy
+            version: "<1.16.0"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow
+                version: "==1.13.1"
+        - package_version:
+            name: numpy
+            version: "<1.16.0"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow-cpu
+                version: "==1.13.1"
+        - package_version:
+            name: numpy
+            version: "<1.16.0"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: tensorflow-gpu
+                version: "==1.13.1"
+        - package_version:
+            name: numpy
+            version: "<1.16.0"
+            index_url: "https://pypi.org/simple"
+          state:
+            resolved_dependencies:
+              - name: intel-tensorflow
+                version: "==1.13.1"
+      run:
+        multi_package_resolution: false
+        stack_info:
+          - type: WARNING
+            message: "tensorflow in version 1.13.1 is compatible with NumPy>=1.16.0"
+            link: tf_25636
+        not_acceptable: "tensorflow in version 1.13.1 is compatible with NumPy>=1.16.0"
