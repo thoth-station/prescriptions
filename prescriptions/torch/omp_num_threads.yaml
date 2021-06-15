@@ -12,10 +12,10 @@ units:
         justification:
           - type: WARNING
             message: Consider adjusting OMP_NUM_THREADS environment variable for containerized deployments,
-              one or more libraries use Intel's MKL that does not detect correctly
+              one or more libraries use Intel's MKL that does not correctly detect
               resource allocation in the cluster
             link: mkl_threads
-        advised_manifest_changes: &omp_num_threads
+        advised_manifest_changes:
           apiVersion: apps.openshift.io/v1
           kind: DeploymentConfig
           patch:
