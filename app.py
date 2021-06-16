@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright(C) 2021 Project Thoth
 
-__version__ = "0.0.0"
+__version__ = "0.0.0-rc.1"
 
 
 def main():
