@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+pushd /tmp/src
+
+METADATA_FILE="prescriptions/_prescription_metadata.yaml"
+VERSION_FILE="app.py"
+VERSION=$(grep __version__ ${VERSION_FILE} | cut -d= -f2 | tr -d '" ')
+
+echo "Building Thoth adviser prescriptions in version ${VERSION}"
+sed -i "s/^  release:.*$/  release: \"${VERSION}\"/" ${METADATA_FILE}
+
+popd
+exec /usr/libexec/s2i/assemble
