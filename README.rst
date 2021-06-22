@@ -15,7 +15,7 @@ projects. The database is used in `Thoth
 software stacks.
 
 See `the linked presentation
-<https://github.com/thoth-station/prescriptions/blob/master/docs/presentation.pdf>`__
+<https://github.com/thoth-station/prescriptions/blob/master/Documentation/presentation.pdf>`__
 or `YouTube video <https://youtu.be/dg6_WhUK5Ew>`__ for more info.
 
 How to write a prescription?
