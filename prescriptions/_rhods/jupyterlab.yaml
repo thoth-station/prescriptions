@@ -1,0 +1,23 @@
+units:
+  sieves:
+  - match:
+      package_version:
+        index_url: https://pypi.org/simple
+        name: jupyterlab
+        version: '!=3.0.14'
+    name: RHODSJupyterlabSieve
+    run:
+      log:
+        message: Removing package 'jupyterlab' as version does not match product version
+          expected '==3.0.14'
+        type: WARNING
+      stack_info:
+      - link: https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-data-science
+        message: Removing package 'jupyterlab' as version does not match product version
+          expected '==3.0.14'
+        type: WARNING
+    should_include:
+      adviser_pipeline: true
+      labels:
+        consumer: rhods
+    type: sieve

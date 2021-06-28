@@ -1,0 +1,23 @@
+units:
+  sieves:
+  - match:
+      package_version:
+        index_url: https://pypi.org/simple
+        name: torch
+        version: '!=1.9.0'
+    name: RHODSTorchSieve
+    run:
+      log:
+        message: Removing package 'torch' as version does not match product version
+          expected '==1.9.0'
+        type: WARNING
+      stack_info:
+      - link: https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-data-science
+        message: Removing package 'torch' as version does not match product version
+          expected '==1.9.0'
+        type: WARNING
+    should_include:
+      adviser_pipeline: true
+      labels:
+        consumer: rhods
+    type: sieve

@@ -1,0 +1,23 @@
+units:
+  sieves:
+  - match:
+      package_version:
+        index_url: https://pypi.org/simple
+        name: tensorboard
+        version: '!=2.4.1'
+    name: RHODSTensorboardSieve
+    run:
+      log:
+        message: Removing package 'tensorboard' as version does not match product
+          version expected '==2.4.1'
+        type: WARNING
+      stack_info:
+      - link: https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-data-science
+        message: Removing package 'tensorboard' as version does not match product
+          version expected '==2.4.1'
+        type: WARNING
+    should_include:
+      adviser_pipeline: true
+      labels:
+        consumer: rhods
+    type: sieve

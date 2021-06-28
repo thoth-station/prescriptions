@@ -1,0 +1,23 @@
+units:
+  sieves:
+  - match:
+      package_version:
+        index_url: https://pypi.org/simple
+        name: pyarrow
+        version: '!=3.0.0'
+    name: RHODSPyarrowSieve
+    run:
+      log:
+        message: Removing package 'pyarrow' as version does not match product version
+          expected '==3.0.0'
+        type: WARNING
+      stack_info:
+      - link: https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-data-science
+        message: Removing package 'pyarrow' as version does not match product version
+          expected '==3.0.0'
+        type: WARNING
+    should_include:
+      adviser_pipeline: true
+      labels:
+        consumer: rhods
+    type: sieve

@@ -1,0 +1,23 @@
+units:
+  sieves:
+  - match:
+      package_version:
+        index_url: https://pypi.org/simple
+        name: h5py
+        version: '!=2.10.0'
+    name: RHODSH5pySieve
+    run:
+      log:
+        message: Removing package 'h5py' as version does not match product version
+          expected '==2.10.0'
+        type: WARNING
+      stack_info:
+      - link: https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-data-science
+        message: Removing package 'h5py' as version does not match product version
+          expected '==2.10.0'
+        type: WARNING
+    should_include:
+      adviser_pipeline: true
+      labels:
+        consumer: rhods
+    type: sieve
