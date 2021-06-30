@@ -1,0 +1,20 @@
+units:
+  sieves:
+    - name: GitPythonRPMSieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          rpm_packages:
+            not:
+              - package_name: git
+        match:
+          package_name: gitpython
+      run:
+        log:
+          message: "Package 'gitpython' requires Git present in the runtime environment"
+          type: WARNING
+        stack_info:
+          - type: WARNING
+            message: "Package 'gitpython' requires Git present in the runtime environment"
+            link: rpm
