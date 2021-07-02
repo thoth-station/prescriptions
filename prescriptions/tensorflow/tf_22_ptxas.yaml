@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: TensorFlowPtxasWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: tensorflow
+              version: "~=2.2.0"
+      run:
+        stack_info:
+          - type: INFO
+            message: "Make sure ptxas executables are available in PATH otherwise performance degradation might be observed"
+            link: https://github.com/tensorflow/tensorflow/issues/40036
