@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: WebencodingsUbi8RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: webencodings
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'webencodings' is packaged as an RPM in UBI8 as 'python3-webencodings'"
+            link: rpm

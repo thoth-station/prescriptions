@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: CythonUbi8RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: cython
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'cython' is packaged as an RPM in UBI8 as 'python38-Cython'"
+            link: rpm

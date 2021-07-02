@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: DocutilsUbi8RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: docutils
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'docutils' is packaged as an RPM in UBI8 as 'python3-docutils'"
+            link: rpm

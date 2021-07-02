@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: PycparserUbi8RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pycparser
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'pycparser' is packaged as an RPM in UBI8 as 'python39-pycparser'"
+            link: rpm
