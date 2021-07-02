@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyleniumioGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: ElSnoMan
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pyleniumio
+        repository: pyleniumio
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Mail-parserGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: SpamScope
+        package_version:
+          index_url: https://pypi.org/simple
+          name: mail-parser
+        repository: mail-parser
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

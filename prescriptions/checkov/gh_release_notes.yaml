@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: CheckovGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: bridgecrewio
+        package_version:
+          index_url: https://pypi.org/simple
+          name: checkov
+        repository: checkov
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

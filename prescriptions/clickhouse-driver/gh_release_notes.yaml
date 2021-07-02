@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Clickhouse-driverGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: mymarilyn
+        package_version:
+          index_url: https://pypi.org/simple
+          name: clickhouse-driver
+        repository: clickhouse-driver
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

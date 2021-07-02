@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Cov-coreGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: schlamar
+        package_version:
+          index_url: https://pypi.org/simple
+          name: cov-core
+        repository: cov-core
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

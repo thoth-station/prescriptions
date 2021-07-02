@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GpytorchGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: cornellius-gp
+        package_version:
+          index_url: https://pypi.org/simple
+          name: gpytorch
+        repository: gpytorch
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

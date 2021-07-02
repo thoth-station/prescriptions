@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: S3transferGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: boto
+        package_version:
+          index_url: https://pypi.org/simple
+          name: s3transfer
+        repository: s3transfer
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

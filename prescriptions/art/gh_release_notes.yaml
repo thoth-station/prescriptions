@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ArtGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: sepandhaghighi
+        package_version:
+          index_url: https://pypi.org/simple
+          name: art
+        repository: art
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

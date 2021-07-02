@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pylint-djangoGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: PyCQA
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pylint-django
+        repository: pylint-django
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

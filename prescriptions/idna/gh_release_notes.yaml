@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: IdnaGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: kjd
+        package_version:
+          index_url: https://pypi.org/simple
+          name: idna
+        repository: idna
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

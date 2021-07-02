@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ReadcharGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: magmax
+        package_version:
+          index_url: https://pypi.org/simple
+          name: readchar
+        repository: python-readchar
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

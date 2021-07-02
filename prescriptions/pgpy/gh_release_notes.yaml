@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PgpyGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: SecurityInnovation
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pgpy
+        repository: PGPy
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

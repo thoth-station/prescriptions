@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Requests-htmlGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: kennethreitz
+        package_version:
+          index_url: https://pypi.org/simple
+          name: requests-html
+        repository: requests-html
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

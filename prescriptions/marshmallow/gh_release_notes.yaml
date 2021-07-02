@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: MarshmallowGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: marshmallow-code
+        package_version:
+          index_url: https://pypi.org/simple
+          name: marshmallow
+        repository: marshmallow
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

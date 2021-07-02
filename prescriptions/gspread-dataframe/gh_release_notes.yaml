@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Gspread-dataframeGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: robin900
+        package_version:
+          index_url: https://pypi.org/simple
+          name: gspread-dataframe
+        repository: gspread-dataframe
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

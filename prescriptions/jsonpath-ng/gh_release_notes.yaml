@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Jsonpath-ngGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: h2non
+        package_version:
+          index_url: https://pypi.org/simple
+          name: jsonpath-ng
+        repository: jsonpath-ng
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

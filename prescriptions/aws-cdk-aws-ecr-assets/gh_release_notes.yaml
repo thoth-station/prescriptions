@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Aws-cdk-aws-ecr-assetsGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: aws
+        package_version:
+          index_url: https://pypi.org/simple
+          name: aws-cdk-aws-ecr-assets
+        repository: aws-cdk
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

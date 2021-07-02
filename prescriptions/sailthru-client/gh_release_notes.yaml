@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Sailthru-clientGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: sailthru
+        package_version:
+          index_url: https://pypi.org/simple
+          name: sailthru-client
+        repository: sailthru-python-client
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

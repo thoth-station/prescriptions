@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: AiormqGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: mosquito
+        package_version:
+          index_url: https://pypi.org/simple
+          name: aiormq
+        repository: aiormq
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

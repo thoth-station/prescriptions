@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Google-cloud-coreGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: googleapis
+        package_version:
+          index_url: https://pypi.org/simple
+          name: google-cloud-core
+        repository: python-cloud-core
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

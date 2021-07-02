@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Neo4jGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: neo4j
+        package_version:
+          index_url: https://pypi.org/simple
+          name: neo4j
+        repository: neo4j-python-driver
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: RedisGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: andymccurdy
+        package_version:
+          index_url: https://pypi.org/simple
+          name: redis
+        repository: redis-py
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

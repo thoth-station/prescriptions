@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AsyncprawGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: praw-dev
+        package_version:
+          index_url: https://pypi.org/simple
+          name: asyncpraw
+        repository: asyncpraw
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

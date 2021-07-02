@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Sentry-sdkGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: getsentry
+        package_version:
+          index_url: https://pypi.org/simple
+          name: sentry-sdk
+        repository: sentry-python
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

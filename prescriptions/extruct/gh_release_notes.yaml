@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ExtructGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: scrapinghub
+        package_version:
+          index_url: https://pypi.org/simple
+          name: extruct
+        repository: extruct
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Redshift-connectorGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: aws
+        package_version:
+          index_url: https://pypi.org/simple
+          name: redshift-connector
+        repository: amazon-redshift-python-driver
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

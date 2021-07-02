@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PysnmpGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: etingof
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pysnmp
+        repository: pysnmp
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Python-twitterGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: bear
+        package_version:
+          index_url: https://pypi.org/simple
+          name: python-twitter
+        repository: python-twitter
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

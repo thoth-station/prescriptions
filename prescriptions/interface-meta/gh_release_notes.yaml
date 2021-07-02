@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Interface-metaGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: matthewwardrop
+        package_version:
+          index_url: https://pypi.org/simple
+          name: interface-meta
+        repository: interface_meta
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: WatchtowerGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: kislyuk
+        package_version:
+          index_url: https://pypi.org/simple
+          name: watchtower
+        repository: watchtower
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

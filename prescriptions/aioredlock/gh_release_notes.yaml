@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AioredlockGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: joanvila
+        package_version:
+          index_url: https://pypi.org/simple
+          name: aioredlock
+        repository: aioredlock
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

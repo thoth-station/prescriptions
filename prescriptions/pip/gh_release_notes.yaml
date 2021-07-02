@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: PipGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pypa
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pip
+        repository: pip
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

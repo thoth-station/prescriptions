@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: AwslambdaricGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: aws
+        package_version:
+          index_url: https://pypi.org/simple
+          name: awslambdaric
+        repository: aws-lambda-python-runtime-interface-client
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

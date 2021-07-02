@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: HexbytesGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: ethereum
+        package_version:
+          index_url: https://pypi.org/simple
+          name: hexbytes
+        repository: hexbytes
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

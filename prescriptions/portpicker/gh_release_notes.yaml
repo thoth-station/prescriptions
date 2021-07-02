@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PortpickerGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: google
+        package_version:
+          index_url: https://pypi.org/simple
+          name: portpicker
+        repository: python_portpicker
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

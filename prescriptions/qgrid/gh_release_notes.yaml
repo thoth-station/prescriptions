@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: QgridGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: quantopian
+        package_version:
+          index_url: https://pypi.org/simple
+          name: qgrid
+        repository: qgrid
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

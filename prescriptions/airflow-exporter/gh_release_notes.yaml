@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Airflow-exporterGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: epoch8
+        package_version:
+          index_url: https://pypi.org/simple
+          name: airflow-exporter
+        repository: airflow-exporter
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

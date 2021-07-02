@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: TwineGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pypa
+        package_version:
+          index_url: https://pypi.org/simple
+          name: twine
+        repository: twine
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

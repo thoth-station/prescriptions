@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GrimpGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: seddonym
+        package_version:
+          index_url: https://pypi.org/simple
+          name: grimp
+        repository: grimp
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

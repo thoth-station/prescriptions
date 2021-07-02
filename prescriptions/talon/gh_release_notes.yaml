@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TalonGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: mailgun
+        package_version:
+          index_url: https://pypi.org/simple
+          name: talon
+        repository: talon
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

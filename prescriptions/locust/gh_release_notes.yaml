@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: LocustGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: locustio
+        package_version:
+          index_url: https://pypi.org/simple
+          name: locust
+        repository: locust
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

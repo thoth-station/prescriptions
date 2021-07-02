@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: ModinGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: modin-project
+        package_version:
+          index_url: https://pypi.org/simple
+          name: modin
+        repository: modin
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

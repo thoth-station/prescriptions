@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PathspecGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: cpburnz
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pathspec
+        repository: python-path-specification
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

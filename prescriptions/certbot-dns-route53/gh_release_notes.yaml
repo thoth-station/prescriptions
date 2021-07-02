@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Certbot-dns-route53GitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: certbot
+        package_version:
+          index_url: https://pypi.org/simple
+          name: certbot-dns-route53
+        repository: certbot
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

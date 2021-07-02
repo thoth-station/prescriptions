@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Jaraco-textGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: jaraco
+        package_version:
+          index_url: https://pypi.org/simple
+          name: jaraco-text
+        repository: jaraco.text
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

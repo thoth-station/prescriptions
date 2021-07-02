@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Base58GitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: keis
+        package_version:
+          index_url: https://pypi.org/simple
+          name: base58
+        repository: base58
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

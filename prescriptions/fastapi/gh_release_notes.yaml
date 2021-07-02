@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: FastapiGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: tiangolo
+        package_version:
+          index_url: https://pypi.org/simple
+          name: fastapi
+        repository: fastapi
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes
