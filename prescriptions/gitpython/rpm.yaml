@@ -8,8 +8,9 @@ units:
           rpm_packages:
             not:
               - package_name: git
-        match:
-          package_name: gitpython
+      match:
+        - package_version:
+            name: gitpython
       run:
         log:
           message: "Package 'gitpython' requires Git present in the runtime environment"
