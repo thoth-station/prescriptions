@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DatalabGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: googledatalab
+        package_version:
+          index_url: https://pypi.org/simple
+          name: datalab
+        repository: pydatalab
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

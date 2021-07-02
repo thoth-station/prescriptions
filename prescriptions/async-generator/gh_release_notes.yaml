@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Async-generatorGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: python-trio
+        package_version:
+          index_url: https://pypi.org/simple
+          name: async-generator
+        repository: async_generator
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

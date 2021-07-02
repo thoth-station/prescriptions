@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pytest-runnerGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pytest-dev
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pytest-runner
+        repository: pytest-runner
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

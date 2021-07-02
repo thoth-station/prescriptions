@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: ScrapyGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: scrapy
+        package_version:
+          index_url: https://pypi.org/simple
+          name: scrapy
+        repository: scrapy
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

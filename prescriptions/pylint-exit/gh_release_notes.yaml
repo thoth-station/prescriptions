@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pylint-exitGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: jongracecox
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pylint-exit
+        repository: pylint-exit
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

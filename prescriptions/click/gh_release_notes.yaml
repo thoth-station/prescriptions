@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: ClickGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pallets
+        package_version:
+          index_url: https://pypi.org/simple
+          name: click
+        repository: click
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: OnnxmltoolsGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: onnx
+        package_version:
+          index_url: https://pypi.org/simple
+          name: onnxmltools
+        repository: onnxmltools
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Graphql-relayGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: graphql-python
+        package_version:
+          index_url: https://pypi.org/simple
+          name: graphql-relay
+        repository: graphql-relay-py
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

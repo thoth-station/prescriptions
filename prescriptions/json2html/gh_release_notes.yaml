@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Json2htmlGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: softvar
+        package_version:
+          index_url: https://pypi.org/simple
+          name: json2html
+        repository: json2html
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

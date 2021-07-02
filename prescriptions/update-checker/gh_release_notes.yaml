@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Update-checkerGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: bboe
+        package_version:
+          index_url: https://pypi.org/simple
+          name: update-checker
+        repository: update_checker
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

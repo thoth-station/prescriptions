@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ScipyGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: scipy
+        package_version:
+          index_url: https://pypi.org/simple
+          name: scipy
+        repository: scipy
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

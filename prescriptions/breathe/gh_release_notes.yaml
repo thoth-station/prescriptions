@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BreatheGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: michaeljones
+        package_version:
+          index_url: https://pypi.org/simple
+          name: breathe
+        repository: breathe
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

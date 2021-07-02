@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: DatabasesGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: encode
+        package_version:
+          index_url: https://pypi.org/simple
+          name: databases
+        repository: databases
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

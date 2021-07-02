@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PymispGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: MISP
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pymisp
+        repository: PyMISP
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CherrypyGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: cherrypy
+        package_version:
+          index_url: https://pypi.org/simple
+          name: cherrypy
+        repository: cherrypy
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

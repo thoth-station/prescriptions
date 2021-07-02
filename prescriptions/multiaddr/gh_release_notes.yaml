@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MultiaddrGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: multiformats
+        package_version:
+          index_url: https://pypi.org/simple
+          name: multiaddr
+        repository: py-multiaddr
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

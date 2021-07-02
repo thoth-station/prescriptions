@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: ArrowGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: arrow-py
+        package_version:
+          index_url: https://pypi.org/simple
+          name: arrow
+        repository: arrow
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

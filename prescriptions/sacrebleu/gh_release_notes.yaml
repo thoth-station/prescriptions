@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SacrebleuGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: mjpost
+        package_version:
+          index_url: https://pypi.org/simple
+          name: sacrebleu
+        repository: sacrebleu
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

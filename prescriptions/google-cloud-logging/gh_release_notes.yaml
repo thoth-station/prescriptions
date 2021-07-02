@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Google-cloud-loggingGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: googleapis
+        package_version:
+          index_url: https://pypi.org/simple
+          name: google-cloud-logging
+        repository: python-logging
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

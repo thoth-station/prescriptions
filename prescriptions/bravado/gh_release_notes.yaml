@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BravadoGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: Yelp
+        package_version:
+          index_url: https://pypi.org/simple
+          name: bravado
+        repository: bravado
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

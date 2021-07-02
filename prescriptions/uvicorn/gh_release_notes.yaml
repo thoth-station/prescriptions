@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: UvicornGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: encode
+        package_version:
+          index_url: https://pypi.org/simple
+          name: uvicorn
+        repository: uvicorn
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

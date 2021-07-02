@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Invenio-dbGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: inveniosoftware
+        package_version:
+          index_url: https://pypi.org/simple
+          name: invenio-db
+        repository: invenio-db
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

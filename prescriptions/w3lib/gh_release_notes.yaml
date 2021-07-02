@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: W3libGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: scrapy
+        package_version:
+          index_url: https://pypi.org/simple
+          name: w3lib
+        repository: w3lib
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

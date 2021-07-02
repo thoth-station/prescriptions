@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PandasGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pandas-dev
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pandas
+        repository: pandas
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

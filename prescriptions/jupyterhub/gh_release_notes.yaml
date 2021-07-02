@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: JupyterhubGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: jupyterhub
+        package_version:
+          index_url: https://pypi.org/simple
+          name: jupyterhub
+        repository: jupyterhub
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

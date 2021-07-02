@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JsonschemaGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: Julian
+        package_version:
+          index_url: https://pypi.org/simple
+          name: jsonschema
+        repository: jsonschema
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

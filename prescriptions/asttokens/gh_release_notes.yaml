@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AsttokensGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: gristlabs
+        package_version:
+          index_url: https://pypi.org/simple
+          name: asttokens
+        repository: asttokens
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Parallel-sshGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: ParallelSSH
+        package_version:
+          index_url: https://pypi.org/simple
+          name: parallel-ssh
+        repository: parallel-ssh
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

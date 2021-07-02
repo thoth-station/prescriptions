@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PatsyGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pydata
+        package_version:
+          index_url: https://pypi.org/simple
+          name: patsy
+        repository: patsy
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

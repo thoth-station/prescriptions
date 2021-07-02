@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: ValidatorsGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: kvesteri
+        package_version:
+          index_url: https://pypi.org/simple
+          name: validators
+        repository: validators
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

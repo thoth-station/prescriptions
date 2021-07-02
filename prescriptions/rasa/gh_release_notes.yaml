@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: RasaGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: rasahq
+        package_version:
+          index_url: https://pypi.org/simple
+          name: rasa
+        repository: rasa
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

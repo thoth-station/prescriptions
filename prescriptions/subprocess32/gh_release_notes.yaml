@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Subprocess32GitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: google
+        package_version:
+          index_url: https://pypi.org/simple
+          name: subprocess32
+        repository: python-subprocess32
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

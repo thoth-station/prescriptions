@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LogdnaGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: logdna
+        package_version:
+          index_url: https://pypi.org/simple
+          name: logdna
+        repository: python
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

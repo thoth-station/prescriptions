@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JdcalGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: phn
+        package_version:
+          index_url: https://pypi.org/simple
+          name: jdcal
+        repository: jdcal
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

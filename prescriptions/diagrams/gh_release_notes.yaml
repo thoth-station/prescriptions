@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DiagramsGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: mingrammer
+        package_version:
+          index_url: https://pypi.org/simple
+          name: diagrams
+        repository: diagrams
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

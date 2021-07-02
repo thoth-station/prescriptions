@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AvGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: PyAV-Org
+        package_version:
+          index_url: https://pypi.org/simple
+          name: av
+        repository: PyAV
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Elastic-apmGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: elastic
+        package_version:
+          index_url: https://pypi.org/simple
+          name: elastic-apm
+        repository: apm-agent-python
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

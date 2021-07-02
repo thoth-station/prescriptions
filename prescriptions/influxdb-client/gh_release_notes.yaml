@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Influxdb-clientGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: influxdata
+        package_version:
+          index_url: https://pypi.org/simple
+          name: influxdb-client
+        repository: influxdb-client-python
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

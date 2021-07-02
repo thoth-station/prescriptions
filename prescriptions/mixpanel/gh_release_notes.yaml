@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: MixpanelGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: mixpanel
+        package_version:
+          index_url: https://pypi.org/simple
+          name: mixpanel
+        repository: mixpanel-python
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

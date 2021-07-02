@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TemporaGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: jaraco
+        package_version:
+          index_url: https://pypi.org/simple
+          name: tempora
+        repository: tempora
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

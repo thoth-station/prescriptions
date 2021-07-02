@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FireGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: google
+        package_version:
+          index_url: https://pypi.org/simple
+          name: fire
+        repository: python-fire
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Import-linterGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: seddonym
+        package_version:
+          index_url: https://pypi.org/simple
+          name: import-linter
+        repository: import-linter
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Ec2-metadataGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: adamchainz
+        package_version:
+          index_url: https://pypi.org/simple
+          name: ec2-metadata
+        repository: ec2-metadata
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

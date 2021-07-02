@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TorchelasticGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pytorch
+        package_version:
+          index_url: https://pypi.org/simple
+          name: torchelastic
+        repository: elastic
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

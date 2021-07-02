@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DockerptyGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: d11wtq
+        package_version:
+          index_url: https://pypi.org/simple
+          name: dockerpty
+        repository: dockerpty
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

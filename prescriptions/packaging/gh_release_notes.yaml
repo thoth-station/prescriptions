@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: PackagingGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pypa
+        package_version:
+          index_url: https://pypi.org/simple
+          name: packaging
+        repository: packaging
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

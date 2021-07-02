@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PriorityGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: python-hyper
+        package_version:
+          index_url: https://pypi.org/simple
+          name: priority
+        repository: priority
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

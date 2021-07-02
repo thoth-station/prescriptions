@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: CouchdbGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: djc
+        package_version:
+          index_url: https://pypi.org/simple
+          name: couchdb
+        repository: couchdb-python
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

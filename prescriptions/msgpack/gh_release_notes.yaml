@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MsgpackGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: msgpack
+        package_version:
+          index_url: https://pypi.org/simple
+          name: msgpack
+        repository: msgpack-python
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

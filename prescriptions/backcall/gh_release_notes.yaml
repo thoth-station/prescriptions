@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: BackcallGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: takluyver
+        package_version:
+          index_url: https://pypi.org/simple
+          name: backcall
+        repository: backcall
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

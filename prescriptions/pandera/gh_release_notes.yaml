@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PanderaGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: pandera-dev
+        package_version:
+          index_url: https://pypi.org/simple
+          name: pandera
+        repository: pandera
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

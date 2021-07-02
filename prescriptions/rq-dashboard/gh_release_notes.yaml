@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Rq-dashboardGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: Parallels
+        package_version:
+          index_url: https://pypi.org/simple
+          name: rq-dashboard
+        repository: rq-dashboard
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

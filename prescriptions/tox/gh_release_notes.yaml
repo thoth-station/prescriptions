@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: ToxGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: tox-dev
+        package_version:
+          index_url: https://pypi.org/simple
+          name: tox
+        repository: tox
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CfnresponseGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: gene1wood
+        package_version:
+          index_url: https://pypi.org/simple
+          name: cfnresponse
+        repository: cfnresponse
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

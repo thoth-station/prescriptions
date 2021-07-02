@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Ciso8601GitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: closeio
+        package_version:
+          index_url: https://pypi.org/simple
+          name: ciso8601
+        repository: ciso8601
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes

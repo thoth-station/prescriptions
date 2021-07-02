@@ -1,0 +1,13 @@
+units:
+  wraps:
+  - name: Mailjet-restGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: mailjet
+        package_version:
+          index_url: https://pypi.org/simple
+          name: mailjet-rest
+        repository: mailjet-apiv3-python
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes
