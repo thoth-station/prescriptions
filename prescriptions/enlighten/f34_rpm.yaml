@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: EnlightenFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: enlighten
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'enlighten' is packaged as an RPM in Fedora 34 as 'python3-enlighten'"
+            link: https://src.fedoraproject.org/rpms/python3-enlighten

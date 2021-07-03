@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: Ciso8601Fedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: ciso8601
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'ciso8601' is packaged as an RPM in Fedora 34 as 'python3-ciso8601'"
+            link: https://src.fedoraproject.org/rpms/python3-ciso8601

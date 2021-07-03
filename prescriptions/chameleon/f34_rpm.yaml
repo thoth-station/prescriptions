@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: ChameleonFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: chameleon
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'chameleon' is packaged as an RPM in Fedora 34 as 'python3-chameleon'"
+            link: https://src.fedoraproject.org/rpms/python3-chameleon

@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: WiffiFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: wiffi
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'wiffi' is packaged as an RPM in Fedora 34 as 'python3-wiffi'"
+            link: https://src.fedoraproject.org/rpms/python3-wiffi

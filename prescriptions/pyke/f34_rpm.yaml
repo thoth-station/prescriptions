@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: PykeFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pyke
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'pyke' is packaged as an RPM in Fedora 34 as 'python3-pyke'"
+            link: https://src.fedoraproject.org/rpms/python3-pyke

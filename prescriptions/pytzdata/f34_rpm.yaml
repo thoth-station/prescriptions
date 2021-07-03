@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: PytzdataFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pytzdata
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'pytzdata' is packaged as an RPM in Fedora 34 as 'python3-pytzdata'"
+            link: https://src.fedoraproject.org/rpms/python3-pytzdata

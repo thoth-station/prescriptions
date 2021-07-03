@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: FixturesFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: fixtures
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'fixtures' is packaged as an RPM in Fedora 34 as 'python3-fixtures'"
+            link: https://src.fedoraproject.org/rpms/python3-fixtures

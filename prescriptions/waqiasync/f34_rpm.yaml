@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: WaqiasyncFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: waqiasync
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'waqiasync' is packaged as an RPM in Fedora 34 as 'python3-waqiasync'"
+            link: https://src.fedoraproject.org/rpms/python3-waqiasync

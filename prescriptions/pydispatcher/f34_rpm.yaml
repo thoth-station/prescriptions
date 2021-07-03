@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: PydispatcherFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pydispatcher
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'pydispatcher' is packaged as an RPM in Fedora 34 as 'python3-pydispatcher'"
+            link: https://src.fedoraproject.org/rpms/python3-pydispatcher

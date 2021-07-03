@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: Op1repackerFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: op1repacker
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'op1repacker' is packaged as an RPM in Fedora 34 as 'op1repacker'"
+            link: https://src.fedoraproject.org/rpms/op1repacker

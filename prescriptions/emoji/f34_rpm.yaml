@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: EmojiFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: emoji
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'emoji' is packaged as an RPM in Fedora 34 as 'python3-emoji'"
+            link: https://src.fedoraproject.org/rpms/python3-emoji

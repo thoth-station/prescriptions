@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: JsonschemaFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: jsonschema
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'jsonschema' is packaged as an RPM in Fedora 34 as 'python3-jsonschema'"
+            link: https://src.fedoraproject.org/rpms/python3-jsonschema

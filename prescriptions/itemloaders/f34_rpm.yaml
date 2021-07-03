@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: ItemloadersFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: itemloaders
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'itemloaders' is packaged as an RPM in Fedora 34 as 'python3-itemloaders'"
+            link: https://src.fedoraproject.org/rpms/python3-itemloaders
