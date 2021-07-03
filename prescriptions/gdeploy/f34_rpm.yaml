@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: GdeployFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: gdeploy
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'gdeploy' is packaged as an RPM in Fedora 34 as 'gdeploy'"
+            link: https://src.fedoraproject.org/rpms/gdeploy

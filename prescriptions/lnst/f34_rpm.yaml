@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: LnstFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: lnst
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'lnst' is packaged as an RPM in Fedora 34 as 'lnst'"
+            link: https://src.fedoraproject.org/rpms/lnst

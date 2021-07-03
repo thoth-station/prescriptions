@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: GcovrFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: gcovr
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'gcovr' is packaged as an RPM in Fedora 34 as 'gcovr'"
+            link: https://src.fedoraproject.org/rpms/gcovr

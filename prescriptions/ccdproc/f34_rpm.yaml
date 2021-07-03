@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: CcdprocFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: ccdproc
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'ccdproc' is packaged as an RPM in Fedora 34 as 'python3-ccdproc'"
+            link: https://src.fedoraproject.org/rpms/python3-ccdproc

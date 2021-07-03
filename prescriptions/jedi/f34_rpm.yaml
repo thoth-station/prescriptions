@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: JediFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: jedi
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'jedi' is packaged as an RPM in Fedora 34 as 'python3-jedi'"
+            link: https://src.fedoraproject.org/rpms/python3-jedi

@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: GuakeFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: guake
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'guake' is packaged as an RPM in Fedora 34 as 'guake'"
+            link: https://src.fedoraproject.org/rpms/guake

@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: Keystoneauth1Fedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: keystoneauth1
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'keystoneauth1' is packaged as an RPM in Fedora 34 as 'python3-keystoneauth1'"
+            link: https://src.fedoraproject.org/rpms/python3-keystoneauth1

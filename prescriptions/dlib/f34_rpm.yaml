@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: DlibFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: dlib
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'dlib' is packaged as an RPM in Fedora 34 as 'python3-dlib'"
+            link: https://src.fedoraproject.org/rpms/python3-dlib

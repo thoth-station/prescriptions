@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: ConstantlyFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: constantly
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'constantly' is packaged as an RPM in Fedora 34 as 'python3-constantly'"
+            link: https://src.fedoraproject.org/rpms/python3-constantly

@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: GabbiFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: gabbi
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'gabbi' is packaged as an RPM in Fedora 34 as 'python3-gabbi'"
+            link: https://src.fedoraproject.org/rpms/python3-gabbi

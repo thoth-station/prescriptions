@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: MycliFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: mycli
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'mycli' is packaged as an RPM in Fedora 34 as 'mycli'"
+            link: https://src.fedoraproject.org/rpms/mycli

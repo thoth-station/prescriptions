@@ -1,0 +1,16 @@
+units:
+  wraps:
+    - name: Yaml2icalFedora34RPMWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: yaml2ical
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'yaml2ical' is packaged as an RPM in Fedora 34 as 'python3-yaml2ical'"
+            link: https://src.fedoraproject.org/rpms/python3-yaml2ical
