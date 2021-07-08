@@ -1,0 +1,26 @@
+units:
+  sieves:
+    - name: Pillow380NewArraySieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        dependency_monkey_pipeline: true
+        recommendation_types:
+          - performance
+          - security
+          - stable
+          - latest
+          - test
+      match:
+        - package_version:
+            name: pillow
+            version: "3.8.0"
+            index_url: "https://pypi.org/simple"
+      run:
+        log:
+          message: "Pillow in version 3.8.0 introduced a new array that did not match all numpy array parameters."
+          type: WARNING
+        stack_info:
+          - type: WARNING
+            message: "Pillow in version 3.8.0 filtered out"
+            link: pillow_380
