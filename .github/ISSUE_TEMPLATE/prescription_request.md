@@ -1,7 +1,7 @@
 ---
 name: Prescription request
 about: Suggest a prescription for the resolution process
-labels: "enhancement, kind/feature, prescription"
+labels: "kind/feature, area/prescription"
 ---
 
 **Is your feature request related to a problem? Please describe.**

@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve prescriptions
-labels: kind/bug, triage/needs-information
+labels: kind/bug
 ---
 
 **Describe the bug**
