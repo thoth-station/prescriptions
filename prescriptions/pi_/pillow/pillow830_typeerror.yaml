@@ -1,0 +1,38 @@
+units:
+  steps:
+    - name: Pillow830TypeErrorStep
+      type: step
+      should_include:
+        adviser_pipeline: true
+      match:
+        package_version:
+          name: pillow
+          version: "==8.3.0"
+          index_url: "https://pypi.org/simple"
+        state:
+          resolved_dependencies:
+            - name: numpy
+      run:
+        not_acceptable: "Pillow in version 8.3.0 does not work with NumPy"
+        stack_info:
+          - type: WARNING
+            message: "Pillow in version 8.3.0 does not work with NumPy"
+            link: https://github.com/python-pillow/Pillow/issues/5571
+    - name: Pillow830TypeErrorInvStep
+      type: step
+      should_include:
+        adviser_pipeline: true
+      match:
+        package_version:
+          name: numpy
+        state:
+          resolved_dependencies:
+            - name: pillow
+              version: "==8.3.0"
+              index_url: "https://pypi.org/simple"
+      run:
+        not_acceptable: "Pillow in version 8.3.0 does not work with NumPy"
+        stack_info:
+          - type: WARNING
+            message: "Pillow in version 8.3.0 does not work with NumPy"
+            link: https://github.com/python-pillow/Pillow/issues/5571
