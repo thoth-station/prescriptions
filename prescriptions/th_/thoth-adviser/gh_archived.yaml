@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ThothAdviserGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: thoth-adviser
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'thoth-adviser' is marked as archived on GitHub"
+            link: "https://github.com/thoth-station/adviser"
