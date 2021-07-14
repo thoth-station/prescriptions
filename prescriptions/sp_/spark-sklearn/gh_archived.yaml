@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SparkSklearnGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: spark-sklearn
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'spark-sklearn' is marked as archived on GitHub"
+            link: "https://github.com/databricks/spark-sklearn"
