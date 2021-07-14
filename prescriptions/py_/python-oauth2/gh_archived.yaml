@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonOauth2GitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-oauth2
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'python-oauth2' is marked as archived on GitHub"
+            link: "https://github.com/wndhydrnt/python-oauth2"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TimesGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: times
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'times' is marked as archived on GitHub"
+            link: "https://github.com/nvie/times"

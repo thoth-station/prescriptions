@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ColorclassGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: colorclass
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'colorclass' is marked as archived on GitHub"
+            link: "https://github.com/Robpol86/colorclass"

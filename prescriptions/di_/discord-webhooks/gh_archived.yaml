@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DiscordWebhooksGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: discord-webhooks
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'discord-webhooks' is marked as archived on GitHub"
+            link: "https://github.com/JamesIves/discord-webhooks"

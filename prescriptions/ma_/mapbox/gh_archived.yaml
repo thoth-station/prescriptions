@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MapboxGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: mapbox
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'mapbox' is marked as archived on GitHub"
+            link: "https://github.com/mapbox/mapbox-sdk-py"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CodacyCoverageGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: codacy-coverage
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'codacy-coverage' is marked as archived on GitHub"
+            link: "https://github.com/codacy/python-codacy-coverage"

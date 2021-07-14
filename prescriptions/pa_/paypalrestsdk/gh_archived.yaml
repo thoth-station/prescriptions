@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PaypalrestsdkGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: paypalrestsdk
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'paypalrestsdk' is marked as archived on GitHub"
+            link: "https://github.com/paypal/PayPal-Python-SDK"

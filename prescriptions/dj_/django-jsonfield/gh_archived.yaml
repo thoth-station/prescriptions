@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoJsonfieldGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-jsonfield
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'django-jsonfield' is marked as archived on GitHub"
+            link: "https://github.com/adamchainz/django-jsonfield"

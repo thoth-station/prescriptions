@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TrolliusGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: trollius
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'trollius' is marked as archived on GitHub"
+            link: "https://github.com/jamadden/trollius"
