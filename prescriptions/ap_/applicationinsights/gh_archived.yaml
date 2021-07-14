@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ApplicationinsightsGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: applicationinsights
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'applicationinsights' is marked as archived on GitHub"
+            link: "https://github.com/Microsoft/ApplicationInsights-Python"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CircleciGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: circleci
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'circleci' is marked as archived on GitHub"
+            link: "https://github.com/levlaz/circleci.py"
