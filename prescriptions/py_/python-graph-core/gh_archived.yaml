@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonGraphCoreGitHubArchivedWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-graph-core
+      run:
+        justification:
+          - type: WARNING
+            message: "Package 'python-graph-core' is marked as archived on GitHub"
+            link: "https://github.com/pmatiello/python-graph"
