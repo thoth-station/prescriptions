@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PylibdmtxGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pylibdmtx
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pylibdmtx' is hosted on GitHub"
+            link: "https://github.com/NaturalHistoryMuseum/pylibdmtx"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: IcecreamGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: icecream
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'icecream' is hosted on GitHub"
+            link: "https://github.com/gruns/icecream"

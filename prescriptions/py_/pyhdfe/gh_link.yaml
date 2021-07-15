@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyhdfeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyhdfe
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyhdfe' is hosted on GitHub"
+            link: "https://github.com/jeffgortmaker/pyhdfe"

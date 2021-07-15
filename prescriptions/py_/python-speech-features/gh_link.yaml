@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonSpeechFeaturesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-speech-features
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-speech-features' is hosted on GitHub"
+            link: "https://github.com/jameslyons/python_speech_features"

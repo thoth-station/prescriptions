@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestBlackGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-black
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-black' is hosted on GitHub"
+            link: "https://github.com/shopkeep/pytest-black"

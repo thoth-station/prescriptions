@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Num2wordsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: num2words
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'num2words' is hosted on GitHub"
+            link: "https://github.com/savoirfairelinux/num2words"

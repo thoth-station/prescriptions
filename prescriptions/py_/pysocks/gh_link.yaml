@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PysocksGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pysocks
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pysocks' is hosted on GitHub"
+            link: "https://github.com/Anorov/PySocks"

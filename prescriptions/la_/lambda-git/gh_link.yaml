@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LambdaGitGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: lambda-git
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'lambda-git' is hosted on GitHub"
+            link: "https://github.com/eredi93/lambda-git"

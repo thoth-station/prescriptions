@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Stix2PatternsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: stix2-patterns
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'stix2-patterns' is hosted on GitHub"
+            link: "https://github.com/oasis-open/cti-pattern-validator"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CachedPropertyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: cached-property
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'cached-property' is hosted on GitHub"
+            link: "https://github.com/pydanny/cached-property"

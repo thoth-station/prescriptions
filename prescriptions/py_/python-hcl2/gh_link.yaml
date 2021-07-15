@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonHcl2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-hcl2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-hcl2' is hosted on GitHub"
+            link: "https://github.com/amplify-education/python-hcl2"

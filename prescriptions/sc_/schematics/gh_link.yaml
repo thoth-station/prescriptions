@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SchematicsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: schematics
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'schematics' is hosted on GitHub"
+            link: "https://github.com/schematics/schematics"

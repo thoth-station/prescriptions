@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CymysqlGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: cymysql
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'cymysql' is hosted on GitHub"
+            link: "https://github.com/nakagami/CyMySQL"

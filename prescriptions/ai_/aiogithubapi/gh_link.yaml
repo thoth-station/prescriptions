@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AiogithubapiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aiogithubapi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aiogithubapi' is hosted on GitHub"
+            link: "https://github.com/ludeeus/aiogithubapi"

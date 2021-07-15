@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RdflibGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: rdflib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'rdflib' is hosted on GitHub"
+            link: "https://github.com/RDFLib/rdflib"

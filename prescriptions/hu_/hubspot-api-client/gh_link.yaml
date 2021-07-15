@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: HubspotApiClientGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: hubspot-api-client
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'hubspot-api-client' is hosted on GitHub"
+            link: "https://github.com/HubSpot/hubspot-api-python"

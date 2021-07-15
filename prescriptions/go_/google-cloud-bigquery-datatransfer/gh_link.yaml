@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GoogleCloudBigqueryDatatransferGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: google-cloud-bigquery-datatransfer
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'google-cloud-bigquery-datatransfer' is hosted on GitHub"
+            link: "https://github.com/googleapis/python-bigquery-datatransfer"

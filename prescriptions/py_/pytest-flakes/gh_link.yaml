@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestFlakesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-flakes
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-flakes' is hosted on GitHub"
+            link: "https://github.com/asmeurer/pytest-flakes"

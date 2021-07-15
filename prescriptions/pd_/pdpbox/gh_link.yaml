@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PdpboxGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pdpbox
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pdpbox' is hosted on GitHub"
+            link: "https://github.com/SauceCat/PDPbox"

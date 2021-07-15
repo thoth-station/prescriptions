@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyobjcFrameworkCorelocationGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyobjc-framework-corelocation
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyobjc-framework-corelocation' is hosted on GitHub"
+            link: "https://github.com/ronaldoussoren/pyobjc"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SlackerLogHandlerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: slacker-log-handler
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'slacker-log-handler' is hosted on GitHub"
+            link: "https://github.com/mathiasose/slacker_log_handler"

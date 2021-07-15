@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AssertpyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: assertpy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'assertpy' is hosted on GitHub"
+            link: "https://github.com/assertpy/assertpy"

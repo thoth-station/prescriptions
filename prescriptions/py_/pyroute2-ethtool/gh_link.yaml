@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Pyroute2EthtoolGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyroute2-ethtool
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyroute2-ethtool' is hosted on GitHub"
+            link: "https://github.com/svinota/pyroute2"

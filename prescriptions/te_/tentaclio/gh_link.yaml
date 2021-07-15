@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TentaclioGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tentaclio
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tentaclio' is hosted on GitHub"
+            link: "https://github.com/octoenergy/tentaclio"

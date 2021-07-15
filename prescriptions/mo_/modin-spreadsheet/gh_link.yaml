@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ModinSpreadsheetGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: modin-spreadsheet
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'modin-spreadsheet' is hosted on GitHub"
+            link: "https://github.com/modin-project/modin-spreadsheet"

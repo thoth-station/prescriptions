@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: InvenioDbGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: invenio-db
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'invenio-db' is hosted on GitHub"
+            link: "https://github.com/inveniosoftware/invenio-db"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AiohttpRetryGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aiohttp-retry
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aiohttp-retry' is hosted on GitHub"
+            link: "https://github.com/inyutin/aiohttp_retry"

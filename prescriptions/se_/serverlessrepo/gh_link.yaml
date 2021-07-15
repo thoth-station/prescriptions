@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ServerlessrepoGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: serverlessrepo
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'serverlessrepo' is hosted on GitHub"
+            link: "https://github.com/awslabs/aws-serverlessrepo-python"

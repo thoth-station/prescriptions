@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CloudsplainingGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: cloudsplaining
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'cloudsplaining' is hosted on GitHub"
+            link: "https://github.com/salesforce/cloudsplaining"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DtwGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dtw
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dtw' is hosted on GitHub"
+            link: "https://github.com/pierre-rouanet/dtw"

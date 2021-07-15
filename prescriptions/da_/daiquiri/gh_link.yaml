@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DaiquiriGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: daiquiri
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'daiquiri' is hosted on GitHub"
+            link: "https://github.com/jd/daiquiri"

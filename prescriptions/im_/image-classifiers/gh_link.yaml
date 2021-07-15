@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ImageClassifiersGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: image-classifiers
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'image-classifiers' is hosted on GitHub"
+            link: "https://github.com/qubvel/classification_models"

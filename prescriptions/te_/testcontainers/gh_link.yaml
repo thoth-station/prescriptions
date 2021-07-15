@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TestcontainersGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: testcontainers
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'testcontainers' is hosted on GitHub"
+            link: "https://github.com/testcontainers/testcontainers-python"

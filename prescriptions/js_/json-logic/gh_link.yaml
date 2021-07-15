@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JsonLogicGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: json-logic
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'json-logic' is hosted on GitHub"
+            link: "https://github.com/nadirizr/json-logic-py"

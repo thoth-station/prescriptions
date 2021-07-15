@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SktimeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: sktime
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'sktime' is hosted on GitHub"
+            link: "https://github.com/alan-turing-institute/sktime"

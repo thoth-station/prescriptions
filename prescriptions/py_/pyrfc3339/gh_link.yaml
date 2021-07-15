@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Pyrfc3339GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyrfc3339
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyrfc3339' is hosted on GitHub"
+            link: "https://github.com/kurtraschke/pyRFC3339"

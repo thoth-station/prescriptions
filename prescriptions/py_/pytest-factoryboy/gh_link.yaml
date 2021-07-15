@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestFactoryboyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-factoryboy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-factoryboy' is hosted on GitHub"
+            link: "https://github.com/pytest-dev/pytest-factoryboy"

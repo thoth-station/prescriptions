@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestOrderingGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-ordering
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-ordering' is hosted on GitHub"
+            link: "https://github.com/ftobia/pytest-ordering"

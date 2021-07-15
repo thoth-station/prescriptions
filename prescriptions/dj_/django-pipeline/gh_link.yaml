@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoPipelineGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-pipeline
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-pipeline' is hosted on GitHub"
+            link: "https://github.com/jazzband/django-pipeline"

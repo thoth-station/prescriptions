@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StestrGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: stestr
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'stestr' is hosted on GitHub"
+            link: "https://github.com/mtreinish/stestr"

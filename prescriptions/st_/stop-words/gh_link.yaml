@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StopWordsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: stop-words
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'stop-words' is hosted on GitHub"
+            link: "https://github.com/Alir3z4/python-stop-words"

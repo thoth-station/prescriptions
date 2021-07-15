@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyobjcFrameworkCoremediaGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyobjc-framework-coremedia
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyobjc-framework-coremedia' is hosted on GitHub"
+            link: "https://github.com/ronaldoussoren/pyobjc"

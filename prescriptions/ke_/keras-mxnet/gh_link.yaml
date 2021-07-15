@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: KerasMxnetGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: keras-mxnet
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'keras-mxnet' is hosted on GitHub"
+            link: "https://github.com/awslabs/keras-apache-mxnet"

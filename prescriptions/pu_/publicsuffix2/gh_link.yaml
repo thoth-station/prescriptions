@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Publicsuffix2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: publicsuffix2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'publicsuffix2' is hosted on GitHub"
+            link: "https://github.com/nexb/python-publicsuffix2"

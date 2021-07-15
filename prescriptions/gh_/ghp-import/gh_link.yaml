@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GhpImportGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ghp-import
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ghp-import' is hosted on GitHub"
+            link: "https://github.com/c-w/ghp-import"

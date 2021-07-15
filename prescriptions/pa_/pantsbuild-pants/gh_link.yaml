@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PantsbuildPantsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pantsbuild-pants
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pantsbuild-pants' is hosted on GitHub"
+            link: "https://github.com/pantsbuild/pants"

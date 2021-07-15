@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoCacheMemoizeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-cache-memoize
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-cache-memoize' is hosted on GitHub"
+            link: "https://github.com/peterbe/django-cache-memoize"

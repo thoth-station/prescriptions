@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LiefGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: lief
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'lief' is hosted on GitHub"
+            link: "https://github.com/lief-project/LIEF"

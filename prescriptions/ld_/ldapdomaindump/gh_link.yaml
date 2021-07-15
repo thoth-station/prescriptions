@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LdapdomaindumpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ldapdomaindump
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ldapdomaindump' is hosted on GitHub"
+            link: "https://github.com/dirkjanm/ldapdomaindump"

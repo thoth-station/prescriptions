@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LivereloadGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: livereload
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'livereload' is hosted on GitHub"
+            link: "https://github.com/lepture/python-livereload"

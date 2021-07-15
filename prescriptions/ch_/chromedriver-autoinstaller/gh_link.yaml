@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ChromedriverAutoinstallerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: chromedriver-autoinstaller
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'chromedriver-autoinstaller' is hosted on GitHub"
+            link: "https://github.com/yeongbin-jo/python-chromedriver-autoinstaller"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoTables2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-tables2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-tables2' is hosted on GitHub"
+            link: "https://github.com/jieter/django-tables2"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TqdmGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tqdm
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tqdm' is hosted on GitHub"
+            link: "https://github.com/tqdm/tqdm"

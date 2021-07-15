@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Pep562GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pep562
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pep562' is hosted on GitHub"
+            link: "https://github.com/facelessuser/pep562"

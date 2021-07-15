@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonBidiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-bidi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-bidi' is hosted on GitHub"
+            link: "https://github.com/MeirKriheli/python-bidi"

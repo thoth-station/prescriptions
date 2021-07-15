@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ColconCmakeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: colcon-cmake
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'colcon-cmake' is hosted on GitHub"
+            link: "https://github.com/colcon/colcon-cmake"

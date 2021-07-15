@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: NtcTemplatesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ntc-templates
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ntc-templates' is hosted on GitHub"
+            link: "https://github.com/networktocode/ntc-templates"

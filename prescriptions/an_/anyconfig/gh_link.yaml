@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AnyconfigGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: anyconfig
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'anyconfig' is hosted on GitHub"
+            link: "https://github.com/ssato/python-anyconfig"

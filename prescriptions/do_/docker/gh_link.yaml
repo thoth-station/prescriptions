@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DockerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: docker
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'docker' is hosted on GitHub"
+            link: "https://github.com/docker/docker-py"

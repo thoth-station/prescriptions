@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DynamodbJsonGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dynamodb-json
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dynamodb-json' is hosted on GitHub"
+            link: "https://github.com/Alonreznik/dynamodb-json"

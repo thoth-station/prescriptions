@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Ip2locationGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ip2location
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ip2location' is hosted on GitHub"
+            link: "https://github.com/ip2location/ip2location-python"

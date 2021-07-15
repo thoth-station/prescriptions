@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: YaspinGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: yaspin
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'yaspin' is hosted on GitHub"
+            link: "https://github.com/pavdmyt/yaspin"

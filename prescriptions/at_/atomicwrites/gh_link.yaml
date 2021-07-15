@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AtomicwritesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: atomicwrites
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'atomicwrites' is hosted on GitHub"
+            link: "https://github.com/untitaker/python-atomicwrites"

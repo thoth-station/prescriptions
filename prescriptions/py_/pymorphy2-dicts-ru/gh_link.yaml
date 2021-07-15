@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Pymorphy2DictsRuGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pymorphy2-dicts-ru
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pymorphy2-dicts-ru' is hosted on GitHub"
+            link: "https://github.com/kmike/pymorphy2-dicts"

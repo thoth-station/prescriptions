@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Flake8ColorsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flake8-colors
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flake8-colors' is hosted on GitHub"
+            link: "https://github.com/and3rson/flake8-colors"

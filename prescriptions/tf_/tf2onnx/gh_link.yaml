@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Tf2onnxGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tf2onnx
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tf2onnx' is hosted on GitHub"
+            link: "https://github.com/onnx/tensorflow-onnx"

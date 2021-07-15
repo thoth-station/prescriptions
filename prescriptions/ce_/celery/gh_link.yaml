@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CeleryGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: celery
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'celery' is hosted on GitHub"
+            link: "https://github.com/celery/celery"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CheckManifestGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: check-manifest
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'check-manifest' is hosted on GitHub"
+            link: "https://github.com/mgedmin/check-manifest"

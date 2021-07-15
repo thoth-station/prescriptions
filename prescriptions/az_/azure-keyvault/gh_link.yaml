@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AzureKeyvaultGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: azure-keyvault
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'azure-keyvault' is hosted on GitHub"
+            link: "https://github.com/Azure/azure-sdk-for-python"

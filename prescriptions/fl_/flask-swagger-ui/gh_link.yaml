@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FlaskSwaggerUiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flask-swagger-ui
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flask-swagger-ui' is hosted on GitHub"
+            link: "https://github.com/sveint/flask-swagger-ui"

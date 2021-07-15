@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Elasticsearch6GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: elasticsearch6
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'elasticsearch6' is hosted on GitHub"
+            link: "https://github.com/elastic/elasticsearch-py"

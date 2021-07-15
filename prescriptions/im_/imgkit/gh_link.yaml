@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ImgkitGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: imgkit
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'imgkit' is hosted on GitHub"
+            link: "https://github.com/jarrekk/imgkit"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Flake8PrintGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flake8-print
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flake8-print' is hosted on GitHub"
+            link: "https://github.com/jbkahn/flake8-print"

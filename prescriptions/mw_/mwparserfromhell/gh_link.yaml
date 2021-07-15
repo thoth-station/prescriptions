@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MwparserfromhellGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: mwparserfromhell
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'mwparserfromhell' is hosted on GitHub"
+            link: "https://github.com/earwig/mwparserfromhell"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LangidGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: langid
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'langid' is hosted on GitHub"
+            link: "https://github.com/saffsd/langid.py"

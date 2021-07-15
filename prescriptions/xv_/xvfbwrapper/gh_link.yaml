@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: XvfbwrapperGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: xvfbwrapper
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'xvfbwrapper' is hosted on GitHub"
+            link: "https://github.com/cgoldberg/xvfbwrapper"

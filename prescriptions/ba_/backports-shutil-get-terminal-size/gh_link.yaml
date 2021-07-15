@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: BackportsShutilGetTerminalSizeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: backports-shutil-get-terminal-size
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'backports-shutil-get-terminal-size' is hosted on GitHub"
+            link: "https://github.com/chrippa/backports.shutil_get_terminal_size"

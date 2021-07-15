@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ParmapGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: parmap
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'parmap' is hosted on GitHub"
+            link: "https://github.com/zeehio/parmap"

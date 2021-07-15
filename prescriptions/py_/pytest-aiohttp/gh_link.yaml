@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestAiohttpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-aiohttp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-aiohttp' is hosted on GitHub"
+            link: "https://github.com/aio-libs/pytest-aiohttp"

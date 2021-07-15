@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PlexapiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: plexapi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'plexapi' is hosted on GitHub"
+            link: "https://github.com/pkkid/python-plexapi"

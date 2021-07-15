@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MagicattrGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: magicattr
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'magicattr' is hosted on GitHub"
+            link: "https://github.com/frmdstryr/magicattr"

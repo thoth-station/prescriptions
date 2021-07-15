@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PysparkStubsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyspark-stubs
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyspark-stubs' is hosted on GitHub"
+            link: "https://github.com/zero323/pyspark-stubs"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RadishBddGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: radish-bdd
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'radish-bdd' is hosted on GitHub"
+            link: "https://github.com/radish-bdd/radish"

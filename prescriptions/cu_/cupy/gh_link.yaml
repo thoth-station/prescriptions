@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CupyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: cupy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'cupy' is hosted on GitHub"
+            link: "https://github.com/cupy/cupy"

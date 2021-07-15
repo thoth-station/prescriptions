@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CausalmlGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: causalml
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'causalml' is hosted on GitHub"
+            link: "https://github.com/uber/causalml"

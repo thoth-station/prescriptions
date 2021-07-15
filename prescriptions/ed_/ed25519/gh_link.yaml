@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Ed25519GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ed25519
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ed25519' is hosted on GitHub"
+            link: "https://github.com/warner/python-ed25519"

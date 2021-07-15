@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CudfGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: cudf
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'cudf' is hosted on GitHub"
+            link: "https://github.com/rapidsai/dask-cuda"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FortnitepyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: fortnitepy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'fortnitepy' is hosted on GitHub"
+            link: "https://github.com/Terbau/fortnitepy"

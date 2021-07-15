@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SetuptoolsGitGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: setuptools-git
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'setuptools-git' is hosted on GitHub"
+            link: "https://github.com/msabramo/setuptools-git"

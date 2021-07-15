@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoLibsassGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-libsass
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-libsass' is hosted on GitHub"
+            link: "https://github.com/torchbox/django-libsass"

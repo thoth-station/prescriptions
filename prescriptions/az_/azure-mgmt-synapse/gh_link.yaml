@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AzureMgmtSynapseGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: azure-mgmt-synapse
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'azure-mgmt-synapse' is hosted on GitHub"
+            link: "https://github.com/Azure/azure-sdk-for-python"

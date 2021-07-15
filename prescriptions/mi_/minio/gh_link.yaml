@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MinioGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: minio
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'minio' is hosted on GitHub"
+            link: "https://github.com/minio/minio-py"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RootpathGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: rootpath
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'rootpath' is hosted on GitHub"
+            link: "https://github.com/grimen/python-rootpath"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AwsCdkAwsElasticloadbalancingGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aws-cdk-aws-elasticloadbalancing
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aws-cdk-aws-elasticloadbalancing' is hosted on GitHub"
+            link: "https://github.com/aws/aws-cdk"

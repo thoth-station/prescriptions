@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AsyncinitGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: asyncinit
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'asyncinit' is hosted on GitHub"
+            link: "https://github.com/kchmck/pyasyncinit"

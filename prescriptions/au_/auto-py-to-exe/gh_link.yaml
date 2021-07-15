@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AutoPyToExeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: auto-py-to-exe
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'auto-py-to-exe' is hosted on GitHub"
+            link: "https://github.com/brentvollebregt/auto-py-to-exe"

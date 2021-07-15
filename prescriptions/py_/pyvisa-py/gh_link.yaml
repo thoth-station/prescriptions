@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyvisaPyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyvisa-py
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyvisa-py' is hosted on GitHub"
+            link: "https://github.com/pyvisa/pyvisa-py"

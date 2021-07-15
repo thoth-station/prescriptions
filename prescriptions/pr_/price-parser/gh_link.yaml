@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PriceParserGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: price-parser
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'price-parser' is hosted on GitHub"
+            link: "https://github.com/scrapinghub/price-parser"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ArgparseAddonsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: argparse-addons
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'argparse-addons' is hosted on GitHub"
+            link: "https://github.com/eerimoq/argparse_addons"

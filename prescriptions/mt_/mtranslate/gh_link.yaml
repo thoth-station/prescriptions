@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MtranslateGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: mtranslate
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'mtranslate' is hosted on GitHub"
+            link: "https://github.com/mouuff/mtranslate"

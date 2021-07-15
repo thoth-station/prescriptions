@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StringdistGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: stringdist
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'stringdist' is hosted on GitHub"
+            link: "https://github.com/obulkin/string-dist"

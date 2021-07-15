@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyfigletGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyfiglet
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyfiglet' is hosted on GitHub"
+            link: "https://github.com/pwaller/pyfiglet"

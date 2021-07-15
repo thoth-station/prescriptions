@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PydataGoogleAuthGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pydata-google-auth
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pydata-google-auth' is hosted on GitHub"
+            link: "https://github.com/pydata/pydata-google-auth"

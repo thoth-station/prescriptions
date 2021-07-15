@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SnuggsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: snuggs
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'snuggs' is hosted on GitHub"
+            link: "https://github.com/mapbox/snuggs"

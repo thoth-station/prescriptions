@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: KeplerglGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: keplergl
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'keplergl' is hosted on GitHub"
+            link: "https://github.com/keplergl/kepler.gl"

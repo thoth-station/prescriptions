@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SacremosesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: sacremoses
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'sacremoses' is hosted on GitHub"
+            link: "https://github.com/alvations/sacremoses"

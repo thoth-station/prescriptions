@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Base36GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: base36
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'base36' is hosted on GitHub"
+            link: "https://github.com/tonyseek/python-base36"

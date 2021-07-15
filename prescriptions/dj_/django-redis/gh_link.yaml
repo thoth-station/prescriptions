@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoRedisGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-redis
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-redis' is hosted on GitHub"
+            link: "https://github.com/jazzband/django-redis"

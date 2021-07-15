@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SafetyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: safety
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'safety' is hosted on GitHub"
+            link: "https://github.com/pyupio/safety"

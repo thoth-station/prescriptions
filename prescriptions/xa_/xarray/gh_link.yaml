@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: XarrayGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: xarray
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'xarray' is hosted on GitHub"
+            link: "https://github.com/pydata/xarray"

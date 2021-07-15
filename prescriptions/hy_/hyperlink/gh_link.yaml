@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: HyperlinkGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: hyperlink
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'hyperlink' is hosted on GitHub"
+            link: "https://github.com/python-hyper/hyperlink"

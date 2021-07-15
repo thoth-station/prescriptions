@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SmtpapiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: smtpapi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'smtpapi' is hosted on GitHub"
+            link: "https://github.com/sendgrid/smtpapi-python"

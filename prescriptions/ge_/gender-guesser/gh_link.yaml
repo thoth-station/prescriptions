@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GenderGuesserGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: gender-guesser
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'gender-guesser' is hosted on GitHub"
+            link: "https://github.com/lead-ratings/gender-guesser"

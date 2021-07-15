@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Functools32GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: functools32
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'functools32' is hosted on GitHub"
+            link: "https://github.com/MiCHiLU/python-functools32"

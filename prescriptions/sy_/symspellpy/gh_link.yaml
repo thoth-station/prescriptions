@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SymspellpyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: symspellpy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'symspellpy' is hosted on GitHub"
+            link: "https://github.com/mammothb/symspellpy"

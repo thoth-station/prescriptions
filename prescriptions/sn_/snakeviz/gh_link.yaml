@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SnakevizGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: snakeviz
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'snakeviz' is hosted on GitHub"
+            link: "https://github.com/jiffyclub/snakeviz"

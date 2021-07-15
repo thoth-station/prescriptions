@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LaunchdarklyServerSdkGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: launchdarkly-server-sdk
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'launchdarkly-server-sdk' is hosted on GitHub"
+            link: "https://github.com/launchdarkly/python-server-sdk"

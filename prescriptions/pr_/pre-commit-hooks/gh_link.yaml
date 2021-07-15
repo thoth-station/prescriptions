@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PreCommitHooksGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pre-commit-hooks
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pre-commit-hooks' is hosted on GitHub"
+            link: "https://github.com/pre-commit/pre-commit-hooks"

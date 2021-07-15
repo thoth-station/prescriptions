@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MultiKeyDictGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: multi-key-dict
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'multi-key-dict' is hosted on GitHub"
+            link: "https://github.com/formiaczek/multi_key_dict"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Flake8DeprecatedGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flake8-deprecated
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flake8-deprecated' is hosted on GitHub"
+            link: "https://github.com/gforcada/flake8-deprecated"

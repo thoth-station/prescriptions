@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MysqlclientGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: mysqlclient
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'mysqlclient' is hosted on GitHub"
+            link: "https://github.com/PyMySQL/mysqlclient"

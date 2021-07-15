@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TypesClickGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: types-click
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'types-click' is hosted on GitHub"
+            link: "https://github.com/python/typeshed"

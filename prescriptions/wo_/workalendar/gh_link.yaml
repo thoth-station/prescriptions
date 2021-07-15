@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: WorkalendarGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: workalendar
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'workalendar' is hosted on GitHub"
+            link: "https://github.com/workalendar/workalendar"

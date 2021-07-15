@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: HttpxGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: httpx
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'httpx' is hosted on GitHub"
+            link: "https://github.com/encode/httpx"

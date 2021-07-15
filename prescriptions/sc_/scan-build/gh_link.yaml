@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ScanBuildGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: scan-build
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'scan-build' is hosted on GitHub"
+            link: "https://github.com/rizsotto/scan-build"

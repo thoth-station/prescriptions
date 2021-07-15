@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RestructuredtextLintGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: restructuredtext-lint
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'restructuredtext-lint' is hosted on GitHub"
+            link: "https://github.com/twolfson/restructuredtext-lint"

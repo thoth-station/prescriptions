@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Flake8BlindExceptGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flake8-blind-except
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flake8-blind-except' is hosted on GitHub"
+            link: "https://github.com/elijahandrews/flake8-blind-except"

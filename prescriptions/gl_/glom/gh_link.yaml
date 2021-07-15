@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GlomGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: glom
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'glom' is hosted on GitHub"
+            link: "https://github.com/mahmoud/glom"

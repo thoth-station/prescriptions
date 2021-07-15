@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GitdbGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: gitdb
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'gitdb' is hosted on GitHub"
+            link: "https://github.com/gitpython-developers/gitdb"

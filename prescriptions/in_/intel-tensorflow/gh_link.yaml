@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: IntelTensorflowGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: intel-tensorflow
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'intel-tensorflow' is hosted on GitHub"
+            link: "https://github.com/tensorflow/tensorflow"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ImgtagGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: imgtag
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'imgtag' is hosted on GitHub"
+            link: "https://github.com/nimaid/python-imgtag"

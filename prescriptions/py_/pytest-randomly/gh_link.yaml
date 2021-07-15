@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestRandomlyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-randomly
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-randomly' is hosted on GitHub"
+            link: "https://github.com/pytest-dev/pytest-randomly"

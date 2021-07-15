@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ThothStoragesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: thoth-storages
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'thoth-storages' is hosted on GitHub"
+            link: "https://github.com/thoth-station/storages"

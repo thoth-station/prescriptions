@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SparqlwrapperGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: sparqlwrapper
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'sparqlwrapper' is hosted on GitHub"
+            link: "https://github.com/RDFLib/sparqlwrapper"

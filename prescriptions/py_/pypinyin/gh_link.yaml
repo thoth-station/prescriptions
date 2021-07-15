@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PypinyinGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pypinyin
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pypinyin' is hosted on GitHub"
+            link: "https://github.com/mozillazg/python-pinyin"

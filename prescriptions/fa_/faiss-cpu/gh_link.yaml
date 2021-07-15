@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FaissCpuGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: faiss-cpu
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'faiss-cpu' is hosted on GitHub"
+            link: "https://github.com/kyamagu/faiss-wheels"

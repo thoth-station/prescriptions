@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PymispGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pymisp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pymisp' is hosted on GitHub"
+            link: "https://github.com/MISP/PyMISP"

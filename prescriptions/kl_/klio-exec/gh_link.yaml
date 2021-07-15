@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: KlioExecGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: klio-exec
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'klio-exec' is hosted on GitHub"
+            link: "https://github.com/spotify/klio"

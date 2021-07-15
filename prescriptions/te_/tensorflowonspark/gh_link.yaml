@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TensorflowonsparkGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tensorflowonspark
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tensorflowonspark' is hosted on GitHub"
+            link: "https://github.com/yahoo/TensorFlowOnSpark"

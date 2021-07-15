@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ArrowGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: arrow
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'arrow' is hosted on GitHub"
+            link: "https://github.com/arrow-py/arrow"

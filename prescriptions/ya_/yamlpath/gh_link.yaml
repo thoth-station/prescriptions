@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: YamlpathGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: yamlpath
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'yamlpath' is hosted on GitHub"
+            link: "https://github.com/wwkimball/yamlpath"

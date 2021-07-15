@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MultidictGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: multidict
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'multidict' is hosted on GitHub"
+            link: "https://github.com/aio-libs/multidict"

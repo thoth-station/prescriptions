@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SoupsieveGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: soupsieve
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'soupsieve' is hosted on GitHub"
+            link: "https://github.com/facelessuser/soupsieve"

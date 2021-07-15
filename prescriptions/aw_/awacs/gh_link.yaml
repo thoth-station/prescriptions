@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AwacsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: awacs
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'awacs' is hosted on GitHub"
+            link: "https://github.com/cloudtools/awacs"

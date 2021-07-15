@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ThincGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: thinc
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'thinc' is hosted on GitHub"
+            link: "https://github.com/explosion/thinc"

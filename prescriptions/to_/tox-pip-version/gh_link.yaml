@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ToxPipVersionGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tox-pip-version
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tox-pip-version' is hosted on GitHub"
+            link: "https://github.com/pglass/tox-pip-version"

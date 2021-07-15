@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PygdbmiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pygdbmi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pygdbmi' is hosted on GitHub"
+            link: "https://github.com/cs01/pygdbmi"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Word2vecGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: word2vec
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'word2vec' is hosted on GitHub"
+            link: "https://github.com/danielfrg/word2vec"

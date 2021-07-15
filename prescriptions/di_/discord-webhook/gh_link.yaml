@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DiscordWebhookGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: discord-webhook
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'discord-webhook' is hosted on GitHub"
+            link: "https://github.com/lovvskillz/python-discord-webhook"

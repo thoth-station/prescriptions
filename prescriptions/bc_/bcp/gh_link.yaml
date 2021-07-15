@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: BcpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: bcp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'bcp' is hosted on GitHub"
+            link: "https://github.com/fivestack/bcp"

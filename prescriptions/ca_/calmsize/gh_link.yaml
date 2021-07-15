@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CalmsizeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: calmsize
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'calmsize' is hosted on GitHub"
+            link: "https://github.com/Stonesjtu/calmsize"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AnsibleTowerCliGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ansible-tower-cli
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ansible-tower-cli' is hosted on GitHub"
+            link: "https://github.com/ansible/tower-cli"

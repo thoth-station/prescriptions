@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AvroGenGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: avro-gen
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'avro-gen' is hosted on GitHub"
+            link: "https://github.com/rbystrit/avro_gen"

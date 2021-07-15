@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DockerfileParseGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dockerfile-parse
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dockerfile-parse' is hosted on GitHub"
+            link: "https://github.com/containerbuildsystem/dockerfile-parse"

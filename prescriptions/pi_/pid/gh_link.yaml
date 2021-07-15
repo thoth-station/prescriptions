@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PidGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pid
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pid' is hosted on GitHub"
+            link: "https://github.com/trbs/pid"

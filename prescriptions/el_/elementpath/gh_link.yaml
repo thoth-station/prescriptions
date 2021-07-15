@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ElementpathGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: elementpath
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'elementpath' is hosted on GitHub"
+            link: "https://github.com/sissaschool/elementpath"

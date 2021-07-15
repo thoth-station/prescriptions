@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoNestedAdminGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-nested-admin
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-nested-admin' is hosted on GitHub"
+            link: "https://github.com/theatlantic/django-nested-admin"

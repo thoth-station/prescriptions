@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CxOracleGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: cx-oracle
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'cx-oracle' is hosted on GitHub"
+            link: "https://github.com/oracle/python-cx_Oracle"

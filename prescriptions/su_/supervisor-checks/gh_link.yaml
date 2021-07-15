@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SupervisorChecksGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: supervisor-checks
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'supervisor-checks' is hosted on GitHub"
+            link: "https://github.com/vovanec/supervisor_checks"

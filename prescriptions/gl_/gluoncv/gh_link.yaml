@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GluoncvGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: gluoncv
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'gluoncv' is hosted on GitHub"
+            link: "https://github.com/dmlc/gluon-cv"

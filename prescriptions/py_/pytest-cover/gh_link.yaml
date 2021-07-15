@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestCoverGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-cover
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-cover' is hosted on GitHub"
+            link: "https://github.com/ionelmc/pytest-cover"

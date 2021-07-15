@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GitpythonGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: gitpython
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'gitpython' is hosted on GitHub"
+            link: "https://github.com/gitpython-developers/GitPython"

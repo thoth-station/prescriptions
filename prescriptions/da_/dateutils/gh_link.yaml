@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DateutilsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dateutils
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dateutils' is hosted on GitHub"
+            link: "https://github.com/jmcantrell/python-dateutils"

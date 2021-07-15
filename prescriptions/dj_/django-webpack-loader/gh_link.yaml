@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoWebpackLoaderGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-webpack-loader
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-webpack-loader' is hosted on GitHub"
+            link: "https://github.com/django-webpack/django-webpack-loader"

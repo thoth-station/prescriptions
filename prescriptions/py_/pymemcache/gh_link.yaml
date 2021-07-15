@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PymemcacheGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pymemcache
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pymemcache' is hosted on GitHub"
+            link: "https://github.com/pinterest/pymemcache"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GoogleCloudDnsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: google-cloud-dns
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'google-cloud-dns' is hosted on GitHub"
+            link: "https://github.com/googleapis/python-dns"

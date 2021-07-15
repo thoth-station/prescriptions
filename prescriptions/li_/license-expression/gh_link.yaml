@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LicenseExpressionGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: license-expression
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'license-expression' is hosted on GitHub"
+            link: "https://github.com/nexB/license-expression"

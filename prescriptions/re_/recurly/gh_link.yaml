@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RecurlyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: recurly
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'recurly' is hosted on GitHub"
+            link: "https://github.com/recurly/recurly-client-python"

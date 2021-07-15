@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: NodeSemverGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: node-semver
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'node-semver' is hosted on GitHub"
+            link: "https://github.com/podhmo/python-semver"

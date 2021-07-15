@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StompPyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: stomp-py
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'stomp-py' is hosted on GitHub"
+            link: "https://github.com/jasonrbriggs/stomp.py"

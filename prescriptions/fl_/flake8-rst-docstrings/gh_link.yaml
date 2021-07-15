@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Flake8RstDocstringsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flake8-rst-docstrings
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flake8-rst-docstrings' is hosted on GitHub"
+            link: "https://github.com/peterjc/flake8-rst-docstrings"

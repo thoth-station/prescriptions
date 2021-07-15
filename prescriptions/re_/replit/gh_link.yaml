@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ReplitGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: replit
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'replit' is hosted on GitHub"
+            link: "https://github.com/replit/replit-py"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyobjcFrameworkCoretextGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyobjc-framework-coretext
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyobjc-framework-coretext' is hosted on GitHub"
+            link: "https://github.com/ronaldoussoren/pyobjc"

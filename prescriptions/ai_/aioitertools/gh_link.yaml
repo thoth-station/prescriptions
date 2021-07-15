@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AioitertoolsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aioitertools
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aioitertools' is hosted on GitHub"
+            link: "https://github.com/omnilib/aioitertools"

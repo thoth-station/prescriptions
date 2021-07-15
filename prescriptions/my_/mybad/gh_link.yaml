@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MybadGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: mybad
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'mybad' is hosted on GitHub"
+            link: "https://github.com/grimen/python-mybad"

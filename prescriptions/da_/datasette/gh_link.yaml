@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DatasetteGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: datasette
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'datasette' is hosted on GitHub"
+            link: "https://github.com/simonw/datasette"

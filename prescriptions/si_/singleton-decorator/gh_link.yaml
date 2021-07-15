@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SingletonDecoratorGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: singleton-decorator
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'singleton-decorator' is hosted on GitHub"
+            link: "https://github.com/Kemaweyan/singleton_decorator"

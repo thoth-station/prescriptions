@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AiocometdGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aiocometd
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aiocometd' is hosted on GitHub"
+            link: "https://github.com/robertmrk/aiocometd"

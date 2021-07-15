@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LogzioPythonHandlerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: logzio-python-handler
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'logzio-python-handler' is hosted on GitHub"
+            link: "https://github.com/logzio/logzio-python-handler"

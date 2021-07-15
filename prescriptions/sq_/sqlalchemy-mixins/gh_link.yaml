@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SqlalchemyMixinsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: sqlalchemy-mixins
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'sqlalchemy-mixins' is hosted on GitHub"
+            link: "https://github.com/absent1706/sqlalchemy-mixins"

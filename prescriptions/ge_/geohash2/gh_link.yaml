@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Geohash2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: geohash2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'geohash2' is hosted on GitHub"
+            link: "https://github.com/dbarthe/geohash"

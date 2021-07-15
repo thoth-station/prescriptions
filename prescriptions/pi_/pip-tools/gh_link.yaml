@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PipToolsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pip-tools
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pip-tools' is hosted on GitHub"
+            link: "https://github.com/jazzband/pip-tools"

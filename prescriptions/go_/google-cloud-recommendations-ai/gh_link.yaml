@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GoogleCloudRecommendationsAiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: google-cloud-recommendations-ai
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'google-cloud-recommendations-ai' is hosted on GitHub"
+            link: "https://github.com/googleapis/python-recommendations-ai"

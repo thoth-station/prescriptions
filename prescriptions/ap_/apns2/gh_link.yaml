@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Apns2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: apns2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'apns2' is hosted on GitHub"
+            link: "https://github.com/Pr0Ger/PyAPNs2"

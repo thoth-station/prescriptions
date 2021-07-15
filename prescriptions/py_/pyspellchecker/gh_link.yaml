@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyspellcheckerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyspellchecker
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyspellchecker' is hosted on GitHub"
+            link: "https://github.com/barrust/pyspellchecker"

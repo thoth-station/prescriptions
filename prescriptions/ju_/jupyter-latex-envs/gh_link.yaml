@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JupyterLatexEnvsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: jupyter-latex-envs
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'jupyter-latex-envs' is hosted on GitHub"
+            link: "https://github.com/jfbercher/jupyter_latex_envs"

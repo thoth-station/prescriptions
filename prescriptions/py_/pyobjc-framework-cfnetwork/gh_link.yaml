@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyobjcFrameworkCfnetworkGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyobjc-framework-cfnetwork
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyobjc-framework-cfnetwork' is hosted on GitHub"
+            link: "https://github.com/ronaldoussoren/pyobjc"

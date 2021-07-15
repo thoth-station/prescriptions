@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ZenlogGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: zenlog
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'zenlog' is hosted on GitHub"
+            link: "https://github.com/ManufacturaInd/python-zenlog"

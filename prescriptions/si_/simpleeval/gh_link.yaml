@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SimpleevalGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: simpleeval
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'simpleeval' is hosted on GitHub"
+            link: "https://github.com/danthedeckie/simpleeval"

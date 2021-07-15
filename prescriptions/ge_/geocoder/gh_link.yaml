@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GeocoderGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: geocoder
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'geocoder' is hosted on GitHub"
+            link: "https://github.com/DenisCarriere/geocoder"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: OrderedmultidictGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: orderedmultidict
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'orderedmultidict' is hosted on GitHub"
+            link: "https://github.com/gruns/orderedmultidict"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: QiskitAerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: qiskit-aer
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'qiskit-aer' is hosted on GitHub"
+            link: "https://github.com/Qiskit/qiskit-aer"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjrillGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: djrill
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'djrill' is hosted on GitHub"
+            link: "https://github.com/brack3t/Djrill"

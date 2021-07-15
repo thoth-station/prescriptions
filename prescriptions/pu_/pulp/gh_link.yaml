@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PulpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pulp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pulp' is hosted on GitHub"
+            link: "https://github.com/coin-or/pulp"

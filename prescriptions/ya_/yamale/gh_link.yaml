@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: YamaleGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: yamale
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'yamale' is hosted on GitHub"
+            link: "https://github.com/23andMe/Yamale"

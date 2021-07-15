@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyinstallerHooksContribGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyinstaller-hooks-contrib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyinstaller-hooks-contrib' is hosted on GitHub"
+            link: "https://github.com/pyinstaller/pyinstaller-hooks-contrib"

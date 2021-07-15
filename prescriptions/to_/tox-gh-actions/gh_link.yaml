@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ToxGhActionsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tox-gh-actions
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tox-gh-actions' is hosted on GitHub"
+            link: "https://github.com/ymyzk/tox-gh-actions"

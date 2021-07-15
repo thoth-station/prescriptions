@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Py3PinterestGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: py3-pinterest
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'py3-pinterest' is hosted on GitHub"
+            link: "https://github.com/bstoilov/py3-pinterest"

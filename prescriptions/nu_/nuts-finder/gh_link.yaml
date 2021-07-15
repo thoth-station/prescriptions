@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: NutsFinderGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: nuts-finder
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'nuts-finder' is hosted on GitHub"
+            link: "https://github.com/nestauk/nuts_finder"

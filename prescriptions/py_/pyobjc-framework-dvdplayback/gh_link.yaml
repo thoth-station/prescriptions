@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyobjcFrameworkDvdplaybackGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyobjc-framework-dvdplayback
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyobjc-framework-dvdplayback' is hosted on GitHub"
+            link: "https://github.com/ronaldoussoren/pyobjc"

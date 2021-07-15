@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ParamikoGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: paramiko
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'paramiko' is hosted on GitHub"
+            link: "https://github.com/paramiko/paramiko"

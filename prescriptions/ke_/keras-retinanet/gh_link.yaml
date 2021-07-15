@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: KerasRetinanetGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: keras-retinanet
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'keras-retinanet' is hosted on GitHub"
+            link: "https://github.com/fizyr/keras-retinanet"

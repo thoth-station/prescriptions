@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RequestsCredsspGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: requests-credssp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'requests-credssp' is hosted on GitHub"
+            link: "https://github.com/jborean93/requests-credssp"

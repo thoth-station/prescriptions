@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonJsonrpcServerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-jsonrpc-server
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-jsonrpc-server' is hosted on GitHub"
+            link: "https://github.com/palantir/python-jsonrpc-server"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SuperlanceGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: superlance
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'superlance' is hosted on GitHub"
+            link: "https://github.com/Supervisor/superlance"

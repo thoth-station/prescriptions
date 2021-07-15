@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: WikipediaGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: wikipedia
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'wikipedia' is hosted on GitHub"
+            link: "https://github.com/goldsmith/Wikipedia"

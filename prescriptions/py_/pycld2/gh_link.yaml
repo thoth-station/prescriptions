@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Pycld2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pycld2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pycld2' is hosted on GitHub"
+            link: "https://github.com/aboSamoor/pycld2"

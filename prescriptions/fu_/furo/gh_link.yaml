@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FuroGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: furo
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'furo' is hosted on GitHub"
+            link: "https://github.com/pradyunsg/furo"

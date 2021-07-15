@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: EbooklibGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ebooklib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ebooklib' is hosted on GitHub"
+            link: "https://github.com/aerkalov/ebooklib"

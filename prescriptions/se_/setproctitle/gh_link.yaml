@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SetproctitleGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: setproctitle
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'setproctitle' is hosted on GitHub"
+            link: "https://github.com/dvarrazzo/py-setproctitle"

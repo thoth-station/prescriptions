@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Pyroute2IpsetGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyroute2-ipset
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyroute2-ipset' is hosted on GitHub"
+            link: "https://github.com/svinota/pyroute2"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AiopgGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aiopg
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aiopg' is hosted on GitHub"
+            link: "https://github.com/aio-libs/aiopg"

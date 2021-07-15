@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ItemadapterGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: itemadapter
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'itemadapter' is hosted on GitHub"
+            link: "https://github.com/scrapy/itemadapter"

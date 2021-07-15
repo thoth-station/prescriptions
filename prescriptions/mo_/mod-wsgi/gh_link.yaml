@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ModWsgiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: mod-wsgi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'mod-wsgi' is hosted on GitHub"
+            link: "https://github.com/GrahamDumpleton/mod_wsgi"

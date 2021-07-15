@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Config2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: config2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'config2' is hosted on GitHub"
+            link: "https://github.com/grimen/python-config2"

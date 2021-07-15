@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DockerComposeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: docker-compose
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'docker-compose' is hosted on GitHub"
+            link: "https://github.com/docker/compose"

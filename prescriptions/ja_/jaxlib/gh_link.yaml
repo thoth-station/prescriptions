@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JaxlibGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: jaxlib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'jaxlib' is hosted on GitHub"
+            link: "https://github.com/google/jax"

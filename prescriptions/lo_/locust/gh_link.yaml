@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LocustGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: locust
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'locust' is hosted on GitHub"
+            link: "https://github.com/locustio/locust"

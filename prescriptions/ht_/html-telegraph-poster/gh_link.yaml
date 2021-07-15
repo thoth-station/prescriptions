@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: HtmlTelegraphPosterGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: html-telegraph-poster
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'html-telegraph-poster' is hosted on GitHub"
+            link: "https://github.com/mercuree/html-telegraph-poster"

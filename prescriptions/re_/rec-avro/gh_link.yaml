@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RecAvroGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: rec-avro
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'rec-avro' is hosted on GitHub"
+            link: "https://github.com/bmizhen/rec-avro"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Bz2fileGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: bz2file
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'bz2file' is hosted on GitHub"
+            link: "https://github.com/nvawda/bz2file"
