@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TabulatorGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tabulator
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tabulator' is hosted on GitHub"
+            link: "https://github.com/frictionlessdata/tabulator-py"

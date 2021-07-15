@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SocialAuthCoreGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: social-auth-core
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'social-auth-core' is hosted on GitHub"
+            link: "https://github.com/python-social-auth/social-core"

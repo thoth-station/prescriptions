@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ScrapbookGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: scrapbook
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'scrapbook' is hosted on GitHub"
+            link: "https://github.com/nteract/scrapbook"

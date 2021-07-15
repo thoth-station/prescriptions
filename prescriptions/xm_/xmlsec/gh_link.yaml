@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: XmlsecGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: xmlsec
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'xmlsec' is hosted on GitHub"
+            link: "https://github.com/mehcode/python-xmlsec"

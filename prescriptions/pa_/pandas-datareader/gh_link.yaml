@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PandasDatareaderGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pandas-datareader
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pandas-datareader' is hosted on GitHub"
+            link: "https://github.com/pydata/pandas-datareader"

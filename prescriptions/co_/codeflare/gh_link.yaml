@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CodeflareGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: codeflare
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'codeflare' is hosted on GitHub"
+            link: "https://github.com/project-codeflare/codeflare"

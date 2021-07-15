@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyngrokGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyngrok
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyngrok' is hosted on GitHub"
+            link: "https://github.com/alexdlaird/pyngrok"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestHelpersNamespaceGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-helpers-namespace
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-helpers-namespace' is hosted on GitHub"
+            link: "https://github.com/saltstack/pytest-helpers-namespace"

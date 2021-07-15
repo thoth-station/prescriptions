@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ColconCdGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: colcon-cd
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'colcon-cd' is hosted on GitHub"
+            link: "https://github.com/colcon/colcon-cd"

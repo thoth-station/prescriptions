@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: OpentelemetryApiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: opentelemetry-api
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'opentelemetry-api' is hosted on GitHub"
+            link: "https://github.com/open-telemetry/opentelemetry-python"

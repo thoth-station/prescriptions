@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DiscordPrettyHelpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: discord-pretty-help
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'discord-pretty-help' is hosted on GitHub"
+            link: "https://github.com/stroupbslayen/discord-pretty-help"

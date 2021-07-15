@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GeogGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: geog
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'geog' is hosted on GitHub"
+            link: "https://github.com/jwass/geog"

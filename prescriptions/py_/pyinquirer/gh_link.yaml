@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyinquirerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyinquirer
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyinquirer' is hosted on GitHub"
+            link: "https://github.com/CITGuru/PyInquirer"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoRqGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-rq
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-rq' is hosted on GitHub"
+            link: "https://github.com/rq/django-rq"

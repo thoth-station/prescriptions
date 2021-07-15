@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TasksGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tasks
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tasks' is hosted on GitHub"
+            link: "https://github.com/pb-/tasks"

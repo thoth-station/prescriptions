@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: NdjsonGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ndjson
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ndjson' is hosted on GitHub"
+            link: "https://github.com/rhgrant10/ndjson"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoHijackGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-hijack
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-hijack' is hosted on GitHub"
+            link: "https://github.com/django-hijack/django-hijack"

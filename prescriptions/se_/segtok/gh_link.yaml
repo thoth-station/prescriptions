@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SegtokGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: segtok
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'segtok' is hosted on GitHub"
+            link: "https://github.com/fnl/segtok"

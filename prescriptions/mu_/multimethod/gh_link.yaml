@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MultimethodGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: multimethod
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'multimethod' is hosted on GitHub"
+            link: "https://github.com/coady/multimethod"

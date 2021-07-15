@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PathosGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pathos
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pathos' is hosted on GitHub"
+            link: "https://github.com/uqfoundation/pathos"

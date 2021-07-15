@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MsalGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: msal
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'msal' is hosted on GitHub"
+            link: "https://github.com/AzureAD/microsoft-authentication-library-for-python"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonDynamodbLockGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-dynamodb-lock
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-dynamodb-lock' is hosted on GitHub"
+            link: "https://github.com/mohankishore/python_dynamodb_lock"

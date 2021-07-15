@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PylatexencGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pylatexenc
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pylatexenc' is hosted on GitHub"
+            link: "https://github.com/phfaist/pylatexenc"

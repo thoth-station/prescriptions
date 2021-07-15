@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Uncompyle6GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: uncompyle6
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'uncompyle6' is hosted on GitHub"
+            link: "https://github.com/rocky/python-uncompyle6"

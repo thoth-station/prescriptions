@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TelethonGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: telethon
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'telethon' is hosted on GitHub"
+            link: "https://github.com/LonamiWebs/Telethon"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DottedDictGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dotted-dict
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dotted-dict' is hosted on GitHub"
+            link: "https://github.com/josh-paul/dotted_dict"

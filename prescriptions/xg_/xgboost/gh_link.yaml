@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: XgboostGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: xgboost
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'xgboost' is hosted on GitHub"
+            link: "https://github.com/dmlc/xgboost"

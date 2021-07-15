@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ClvmToolsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: clvm-tools
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'clvm-tools' is hosted on GitHub"
+            link: "https://github.com/Chia-Network/clvm_tools"

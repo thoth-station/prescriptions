@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FastaiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: fastai
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'fastai' is hosted on GitHub"
+            link: "https://github.com/fastai/fastai"

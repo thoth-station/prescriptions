@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyxlsbGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyxlsb
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyxlsb' is hosted on GitHub"
+            link: "https://github.com/willtrnr/pyxlsb"

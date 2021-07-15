@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ParamzGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: paramz
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'paramz' is hosted on GitHub"
+            link: "https://github.com/sods/paramz"

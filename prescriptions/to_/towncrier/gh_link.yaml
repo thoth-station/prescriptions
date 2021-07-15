@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TowncrierGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: towncrier
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'towncrier' is hosted on GitHub"
+            link: "https://github.com/twisted/towncrier"

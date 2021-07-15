@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MultisetGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: multiset
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'multiset' is hosted on GitHub"
+            link: "https://github.com/wheerd/multiset"

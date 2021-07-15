@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DecopatchGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: decopatch
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'decopatch' is hosted on GitHub"
+            link: "https://github.com/smarie/python-decopatch"

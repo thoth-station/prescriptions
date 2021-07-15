@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Boto3TypeAnnotationsWithDocsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: boto3-type-annotations-with-docs
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'boto3-type-annotations-with-docs' is hosted on GitHub"
+            link: "https://github.com/alliefitter/boto3_type_annotations"

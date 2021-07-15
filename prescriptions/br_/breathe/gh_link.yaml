@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: BreatheGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: breathe
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'breathe' is hosted on GitHub"
+            link: "https://github.com/michaeljones/breathe"

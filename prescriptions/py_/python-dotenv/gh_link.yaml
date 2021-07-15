@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonDotenvGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-dotenv
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-dotenv' is hosted on GitHub"
+            link: "https://github.com/theskumar/python-dotenv"

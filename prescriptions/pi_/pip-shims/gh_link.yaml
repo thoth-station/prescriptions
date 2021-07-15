@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PipShimsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pip-shims
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pip-shims' is hosted on GitHub"
+            link: "https://github.com/sarugaku/pip-shims"

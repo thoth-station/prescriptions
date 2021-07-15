@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoCryptographyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-cryptography
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-cryptography' is hosted on GitHub"
+            link: "https://github.com/georgemarshall/django-cryptography"

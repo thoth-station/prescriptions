@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FlaskTalismanGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flask-talisman
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flask-talisman' is hosted on GitHub"
+            link: "https://github.com/wntrblm/flask-talisman"

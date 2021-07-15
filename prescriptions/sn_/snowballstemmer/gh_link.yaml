@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SnowballstemmerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: snowballstemmer
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'snowballstemmer' is hosted on GitHub"
+            link: "https://github.com/snowballstem/snowball"

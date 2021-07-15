@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Feedfinder2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: feedfinder2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'feedfinder2' is hosted on GitHub"
+            link: "https://github.com/dfm/feedfinder2"

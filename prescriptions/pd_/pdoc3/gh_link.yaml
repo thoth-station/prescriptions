@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Pdoc3GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pdoc3
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pdoc3' is hosted on GitHub"
+            link: "https://github.com/pdoc3/pdoc"

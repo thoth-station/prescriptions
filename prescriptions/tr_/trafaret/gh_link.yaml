@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TrafaretGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: trafaret
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'trafaret' is hosted on GitHub"
+            link: "https://github.com/Deepwalker/trafaret"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PymacaroonsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pymacaroons
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pymacaroons' is hosted on GitHub"
+            link: "https://github.com/ecordell/pymacaroons"

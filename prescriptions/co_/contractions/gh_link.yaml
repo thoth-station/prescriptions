@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ContractionsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: contractions
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'contractions' is hosted on GitHub"
+            link: "https://github.com/kootenpv/contractions"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GttsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: gtts
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'gtts' is hosted on GitHub"
+            link: "https://github.com/pndurette/gTTS"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: KoalasGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: koalas
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'koalas' is hosted on GitHub"
+            link: "https://github.com/databricks/koalas"

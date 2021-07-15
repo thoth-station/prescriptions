@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PandarallelGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pandarallel
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pandarallel' is hosted on GitHub"
+            link: "https://github.com/nalepae/pandarallel"

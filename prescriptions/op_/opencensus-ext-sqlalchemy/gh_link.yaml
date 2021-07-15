@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: OpencensusExtSqlalchemyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: opencensus-ext-sqlalchemy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'opencensus-ext-sqlalchemy' is hosted on GitHub"
+            link: "https://github.com/census-instrumentation/opencensus-python"

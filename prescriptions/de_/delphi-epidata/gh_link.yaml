@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DelphiEpidataGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: delphi-epidata
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'delphi-epidata' is hosted on GitHub"
+            link: "https://github.com/cmu-delphi/delphi-epidata"

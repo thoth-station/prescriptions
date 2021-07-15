@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: VdmsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: vdms
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'vdms' is hosted on GitHub"
+            link: "https://github.com/IntelLabs/vdms"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GoogleCloudOsLoginGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: google-cloud-os-login
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'google-cloud-os-login' is hosted on GitHub"
+            link: "https://github.com/googleapis/python-oslogin"

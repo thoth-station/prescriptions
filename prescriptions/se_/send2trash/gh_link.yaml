@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Send2trashGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: send2trash
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'send2trash' is hosted on GitHub"
+            link: "https://github.com/arsenetar/send2trash"

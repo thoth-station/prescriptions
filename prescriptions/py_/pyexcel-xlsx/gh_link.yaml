@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyexcelXlsxGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyexcel-xlsx
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyexcel-xlsx' is hosted on GitHub"
+            link: "https://github.com/pyexcel/pyexcel-xlsx"

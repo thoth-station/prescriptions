@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoPartialIndexGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-partial-index
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-partial-index' is hosted on GitHub"
+            link: "https://github.com/mattiaslinnap/django-partial-index"

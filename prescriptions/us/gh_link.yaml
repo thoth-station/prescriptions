@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: UsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: us
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'us' is hosted on GitHub"
+            link: "https://github.com/unitedstates/python-us"

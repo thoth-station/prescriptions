@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Rfc3339ValidatorGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: rfc3339-validator
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'rfc3339-validator' is hosted on GitHub"
+            link: "https://github.com/naimetti/rfc3339-validator"

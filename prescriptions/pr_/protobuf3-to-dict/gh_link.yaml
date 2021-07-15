@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Protobuf3ToDictGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: protobuf3-to-dict
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'protobuf3-to-dict' is hosted on GitHub"
+            link: "https://github.com/kaporzhu/protobuf-to-dict"

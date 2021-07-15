@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GoogleTransNewGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: google-trans-new
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'google-trans-new' is hosted on GitHub"
+            link: "https://github.com/lushan88a/google_trans_new"

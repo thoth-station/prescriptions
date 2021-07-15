@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PandasGbqGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pandas-gbq
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pandas-gbq' is hosted on GitHub"
+            link: "https://github.com/pydata/pandas-gbq"

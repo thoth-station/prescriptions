@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DaskGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dask
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dask' is hosted on GitHub"
+            link: "https://github.com/dask/dask"

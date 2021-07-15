@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyrebaseGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyrebase
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyrebase' is hosted on GitHub"
+            link: "https://github.com/thisbejim/Pyrebase"

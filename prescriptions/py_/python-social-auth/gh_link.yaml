@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonSocialAuthGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-social-auth
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-social-auth' is hosted on GitHub"
+            link: "https://github.com/omab/python-social-auth"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonCanGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-can
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-can' is hosted on GitHub"
+            link: "https://github.com/hardbyte/python-can"

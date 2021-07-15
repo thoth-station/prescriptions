@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AtlassianPythonApiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: atlassian-python-api
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'atlassian-python-api' is hosted on GitHub"
+            link: "https://github.com/atlassian-api/atlassian-python-api"

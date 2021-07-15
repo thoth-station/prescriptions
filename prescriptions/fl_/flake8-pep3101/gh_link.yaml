@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Flake8Pep3101GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flake8-pep3101
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flake8-pep3101' is hosted on GitHub"
+            link: "https://github.com/gforcada/flake8-pep3101"

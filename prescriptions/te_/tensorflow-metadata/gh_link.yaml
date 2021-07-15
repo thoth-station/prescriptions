@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TensorflowMetadataGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tensorflow-metadata
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tensorflow-metadata' is hosted on GitHub"
+            link: "https://github.com/tensorflow/metadata"

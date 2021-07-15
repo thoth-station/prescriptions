@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TfEstimatorNightlyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tf-estimator-nightly
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tf-estimator-nightly' is hosted on GitHub"
+            link: "https://github.com/tensorflow/estimator"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CoreapiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: coreapi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'coreapi' is hosted on GitHub"
+            link: "https://github.com/core-api/python-client"

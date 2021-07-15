@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PylibsrtpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pylibsrtp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pylibsrtp' is hosted on GitHub"
+            link: "https://github.com/aiortc/pylibsrtp"

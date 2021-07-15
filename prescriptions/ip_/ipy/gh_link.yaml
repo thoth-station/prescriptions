@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: IpyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ipy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ipy' is hosted on GitHub"
+            link: "https://github.com/autocracy/python-ipy"

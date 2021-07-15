@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Static3GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: static3
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'static3' is hosted on GitHub"
+            link: "https://github.com/rmohr/static3"

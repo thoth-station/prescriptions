@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoTwoFactorAuthGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-two-factor-auth
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-two-factor-auth' is hosted on GitHub"
+            link: "https://github.com/Bouke/django-two-factor-auth"

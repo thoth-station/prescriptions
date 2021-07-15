@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AdalGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: adal
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'adal' is hosted on GitHub"
+            link: "https://github.com/AzureAD/azure-activedirectory-library-for-python"

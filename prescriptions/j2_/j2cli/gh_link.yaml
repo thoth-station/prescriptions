@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: J2cliGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: j2cli
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'j2cli' is hosted on GitHub"
+            link: "https://github.com/kolypto/j2cli"

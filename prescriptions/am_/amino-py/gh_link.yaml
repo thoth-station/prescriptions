@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AminoPyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: amino-py
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'amino-py' is hosted on GitHub"
+            link: "https://github.com/Slimakoi/Amino.py"

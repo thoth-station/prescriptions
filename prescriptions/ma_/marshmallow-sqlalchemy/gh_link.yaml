@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MarshmallowSqlalchemyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: marshmallow-sqlalchemy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'marshmallow-sqlalchemy' is hosted on GitHub"
+            link: "https://github.com/marshmallow-code/marshmallow-sqlalchemy"

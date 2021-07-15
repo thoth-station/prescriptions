@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: BingadsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: bingads
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'bingads' is hosted on GitHub"
+            link: "https://github.com/BingAds/BingAds-Python-SDK"

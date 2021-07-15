@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: InfluxdbClientGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: influxdb-client
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'influxdb-client' is hosted on GitHub"
+            link: "https://github.com/influxdata/influxdb-client-python"

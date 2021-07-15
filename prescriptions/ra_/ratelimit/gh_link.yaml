@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RatelimitGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ratelimit
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ratelimit' is hosted on GitHub"
+            link: "https://github.com/tomasbasham/ratelimit"

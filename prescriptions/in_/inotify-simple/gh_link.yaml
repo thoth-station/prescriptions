@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: InotifySimpleGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: inotify-simple
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'inotify-simple' is hosted on GitHub"
+            link: "https://github.com/chrisjbillington/inotify_simple"

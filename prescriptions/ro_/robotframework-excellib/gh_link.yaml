@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RobotframeworkExcellibGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: robotframework-excellib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'robotframework-excellib' is hosted on GitHub"
+            link: "https://github.com/peterservice-rnd/robotframework-excellib"

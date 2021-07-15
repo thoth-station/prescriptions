@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DlibGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dlib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dlib' is hosted on GitHub"
+            link: "https://github.com/davisking/dlib"

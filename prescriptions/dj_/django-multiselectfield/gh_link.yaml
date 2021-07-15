@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoMultiselectfieldGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-multiselectfield
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-multiselectfield' is hosted on GitHub"
+            link: "https://github.com/goinnn/django-multiselectfield"

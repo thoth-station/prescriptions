@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LogfuryGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: logfury
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'logfury' is hosted on GitHub"
+            link: "https://github.com/ppolewicz/logfury"

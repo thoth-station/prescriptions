@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: UserAgentsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: user-agents
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'user-agents' is hosted on GitHub"
+            link: "https://github.com/selwin/python-user-agents"

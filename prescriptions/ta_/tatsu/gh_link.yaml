@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TatsuGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tatsu
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tatsu' is hosted on GitHub"
+            link: "https://github.com/neogeny/tatsu"

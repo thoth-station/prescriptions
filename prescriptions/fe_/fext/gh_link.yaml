@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FextGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: fext
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'fext' is hosted on GitHub"
+            link: "https://github.com/thoth-station/fext"

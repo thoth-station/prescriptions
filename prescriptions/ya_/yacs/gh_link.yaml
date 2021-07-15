@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: YacsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: yacs
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'yacs' is hosted on GitHub"
+            link: "https://github.com/rbgirshick/yacs"

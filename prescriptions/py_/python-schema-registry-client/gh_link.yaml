@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonSchemaRegistryClientGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-schema-registry-client
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-schema-registry-client' is hosted on GitHub"
+            link: "https://github.com/marcosschroh/python-schema-registry-client"

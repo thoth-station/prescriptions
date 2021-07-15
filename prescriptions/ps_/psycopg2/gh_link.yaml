@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Psycopg2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: psycopg2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'psycopg2' is hosted on GitHub"
+            link: "https://github.com/psycopg/psycopg2"

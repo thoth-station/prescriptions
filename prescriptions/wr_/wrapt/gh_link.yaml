@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: WraptGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: wrapt
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'wrapt' is hosted on GitHub"
+            link: "https://github.com/GrahamDumpleton/wrapt"

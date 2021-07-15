@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AwsLambdaPowertoolsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aws-lambda-powertools
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aws-lambda-powertools' is hosted on GitHub"
+            link: "https://github.com/awslabs/aws-lambda-powertools-python"

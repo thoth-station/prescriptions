@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DnslibGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dnslib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dnslib' is hosted on GitHub"
+            link: "https://github.com/paulc/dnslib"

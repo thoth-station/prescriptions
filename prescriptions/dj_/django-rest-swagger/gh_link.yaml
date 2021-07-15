@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoRestSwaggerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-rest-swagger
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-rest-swagger' is hosted on GitHub"
+            link: "https://github.com/marcgibbons/django-rest-swagger"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DiscordExtSlashGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: discord-ext-slash
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'discord-ext-slash' is hosted on GitHub"
+            link: "https://github.com/Kenny2github/discord-ext-slash"

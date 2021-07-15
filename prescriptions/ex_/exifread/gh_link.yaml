@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ExifreadGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: exifread
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'exifread' is hosted on GitHub"
+            link: "https://github.com/ianare/exif-py"

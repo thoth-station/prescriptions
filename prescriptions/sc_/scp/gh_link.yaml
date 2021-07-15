@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ScpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: scp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'scp' is hosted on GitHub"
+            link: "https://github.com/jbardin/scp.py"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JupyterContribNbextensionsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: jupyter-contrib-nbextensions
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'jupyter-contrib-nbextensions' is hosted on GitHub"
+            link: "https://github.com/ipython-contrib/jupyter_contrib_nbextensions"

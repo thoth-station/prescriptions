@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FlaskGraphqlGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flask-graphql
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flask-graphql' is hosted on GitHub"
+            link: "https://github.com/graphql-python/flask-graphql"

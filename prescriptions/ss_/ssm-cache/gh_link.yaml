@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SsmCacheGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ssm-cache
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ssm-cache' is hosted on GitHub"
+            link: "https://github.com/alexcasalboni/ssm-cache-python"

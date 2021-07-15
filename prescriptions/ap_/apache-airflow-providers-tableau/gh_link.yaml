@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ApacheAirflowProvidersTableauGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: apache-airflow-providers-tableau
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'apache-airflow-providers-tableau' is hosted on GitHub"
+            link: "https://github.com/apache/airflow"

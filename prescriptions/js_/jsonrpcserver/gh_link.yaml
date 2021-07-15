@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JsonrpcserverGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: jsonrpcserver
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'jsonrpcserver' is hosted on GitHub"
+            link: "https://github.com/bcb/jsonrpcserver"

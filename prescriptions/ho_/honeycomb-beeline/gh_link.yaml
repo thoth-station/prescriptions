@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: HoneycombBeelineGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: honeycomb-beeline
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'honeycomb-beeline' is hosted on GitHub"
+            link: "https://github.com/honeycombio/beeline-python"

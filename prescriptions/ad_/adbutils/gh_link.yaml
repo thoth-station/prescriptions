@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AdbutilsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: adbutils
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'adbutils' is hosted on GitHub"
+            link: "https://github.com/openatx/adbutils"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PrometheusApiClientGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: prometheus-api-client
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'prometheus-api-client' is hosted on GitHub"
+            link: "https://github.com/AICoE/prometheus-api-client-python"

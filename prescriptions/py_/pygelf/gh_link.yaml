@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PygelfGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pygelf
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pygelf' is hosted on GitHub"
+            link: "https://github.com/keeprocking/pygelf"

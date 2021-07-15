@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonXlibGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-xlib
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-xlib' is hosted on GitHub"
+            link: "https://github.com/python-xlib/python-xlib"

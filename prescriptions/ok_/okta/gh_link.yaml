@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: OktaGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: okta
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'okta' is hosted on GitHub"
+            link: "https://github.com/okta/okta-sdk-python"

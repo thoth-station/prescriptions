@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonRedmineGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-redmine
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-redmine' is hosted on GitHub"
+            link: "https://github.com/maxtepkeev/python-redmine"

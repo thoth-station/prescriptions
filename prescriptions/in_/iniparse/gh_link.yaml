@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: IniparseGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: iniparse
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'iniparse' is hosted on GitHub"
+            link: "https://github.com/candlepin/python-iniparse"

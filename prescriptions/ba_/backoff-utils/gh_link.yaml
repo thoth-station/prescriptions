@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: BackoffUtilsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: backoff-utils
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'backoff-utils' is hosted on GitHub"
+            link: "https://github.com/insightindustry/backoff-utils"

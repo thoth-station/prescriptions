@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PylintPytestGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pylint-pytest
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pylint-pytest' is hosted on GitHub"
+            link: "https://github.com/reverbc/pylint-pytest"

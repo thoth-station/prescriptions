@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GoogleEndpointsApiManagementGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: google-endpoints-api-management
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'google-endpoints-api-management' is hosted on GitHub"
+            link: "https://github.com/cloudendpoints/endpoints-management-python"

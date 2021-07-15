@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CompoundWordSplitterGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: compound-word-splitter
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'compound-word-splitter' is hosted on GitHub"
+            link: "https://github.com/TimKam/compound-word-splitter"

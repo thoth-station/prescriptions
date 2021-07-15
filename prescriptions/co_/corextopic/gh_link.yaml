@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CorextopicGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: corextopic
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'corextopic' is hosted on GitHub"
+            link: "https://github.com/gregversteeg/corex_topic"

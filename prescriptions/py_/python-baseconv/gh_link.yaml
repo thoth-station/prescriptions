@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PythonBaseconvGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: python-baseconv
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'python-baseconv' is hosted on GitHub"
+            link: "https://github.com/semente/python-baseconv"

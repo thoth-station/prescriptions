@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JunitparserGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: junitparser
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'junitparser' is hosted on GitHub"
+            link: "https://github.com/weiwei/junitparser"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoSendgridV5GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-sendgrid-v5
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-sendgrid-v5' is hosted on GitHub"
+            link: "https://github.com/sklarsa/django-sendgrid-v5"

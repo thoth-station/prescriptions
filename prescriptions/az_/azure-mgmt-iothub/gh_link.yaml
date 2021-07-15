@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AzureMgmtIothubGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: azure-mgmt-iothub
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'azure-mgmt-iothub' is hosted on GitHub"
+            link: "https://github.com/Azure/azure-sdk-for-python"

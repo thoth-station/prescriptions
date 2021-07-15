@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Jpype1GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: jpype1
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'jpype1' is hosted on GitHub"
+            link: "https://github.com/jpype-project/jpype"

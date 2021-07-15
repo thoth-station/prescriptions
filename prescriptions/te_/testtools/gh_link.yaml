@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TesttoolsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: testtools
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'testtools' is hosted on GitHub"
+            link: "https://github.com/testing-cabal/testtools"

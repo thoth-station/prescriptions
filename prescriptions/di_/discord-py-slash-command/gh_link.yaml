@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DiscordPySlashCommandGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: discord-py-slash-command
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'discord-py-slash-command' is hosted on GitHub"
+            link: "https://github.com/discord-py-slash-commands/discord-py-interactions"

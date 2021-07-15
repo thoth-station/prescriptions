@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: KfpServerApiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: kfp-server-api
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'kfp-server-api' is hosted on GitHub"
+            link: "https://github.com/kubeflow/pipelines"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MatrixClientGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: matrix-client
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'matrix-client' is hosted on GitHub"
+            link: "https://github.com/matrix-org/matrix-python-sdk"

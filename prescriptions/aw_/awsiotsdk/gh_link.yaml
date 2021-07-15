@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AwsiotsdkGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: awsiotsdk
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'awsiotsdk' is hosted on GitHub"
+            link: "https://github.com/aws/aws-iot-device-sdk-python-v2"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CrashtestGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: crashtest
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'crashtest' is hosted on GitHub"
+            link: "https://github.com/sdispater/crashtest"

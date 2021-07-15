@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SlackBoltGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: slack-bolt
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'slack-bolt' is hosted on GitHub"
+            link: "https://github.com/slackapi/bolt-python"

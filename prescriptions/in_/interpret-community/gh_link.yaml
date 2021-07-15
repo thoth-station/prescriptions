@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: InterpretCommunityGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: interpret-community
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'interpret-community' is hosted on GitHub"
+            link: "https://github.com/interpretml/interpret-community"

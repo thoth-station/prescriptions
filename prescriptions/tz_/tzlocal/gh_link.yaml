@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TzlocalGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tzlocal
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tzlocal' is hosted on GitHub"
+            link: "https://github.com/regebro/tzlocal"

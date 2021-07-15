@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Tempmail2GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tempmail2
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tempmail2' is hosted on GitHub"
+            link: "https://github.com/CITGuru/tempmail"

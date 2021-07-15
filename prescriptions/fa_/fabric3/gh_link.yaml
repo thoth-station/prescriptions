@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Fabric3GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: fabric3
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'fabric3' is hosted on GitHub"
+            link: "https://github.com/mathiasertl/fabric"

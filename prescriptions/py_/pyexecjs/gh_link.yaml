@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyexecjsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyexecjs
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyexecjs' is hosted on GitHub"
+            link: "https://github.com/doloopwhile/PyExecJS"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Goose3GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: goose3
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'goose3' is hosted on GitHub"
+            link: "https://github.com/goose3/goose3"

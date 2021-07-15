@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GoogleApiPythonClientGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: google-api-python-client
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'google-api-python-client' is hosted on GitHub"
+            link: "https://github.com/googleapis/google-api-python-client"

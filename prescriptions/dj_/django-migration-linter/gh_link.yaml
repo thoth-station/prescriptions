@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoMigrationLinterGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-migration-linter
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-migration-linter' is hosted on GitHub"
+            link: "https://github.com/3YOURMIND/django-migration-linter"

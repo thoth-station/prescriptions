@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: O365GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: o365
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'o365' is hosted on GitHub"
+            link: "https://github.com/O365/python-o365"

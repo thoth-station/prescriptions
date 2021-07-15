@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AutogluonCoreGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: autogluon-core
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'autogluon-core' is hosted on GitHub"
+            link: "https://github.com/awslabs/autogluon"

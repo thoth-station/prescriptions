@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: IncrementalGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: incremental
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'incremental' is hosted on GitHub"
+            link: "https://github.com/twisted/incremental"

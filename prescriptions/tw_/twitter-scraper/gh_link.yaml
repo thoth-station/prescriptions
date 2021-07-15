@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TwitterScraperGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: twitter-scraper
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'twitter-scraper' is hosted on GitHub"
+            link: "https://github.com/bisguzar/twitter-scraper"

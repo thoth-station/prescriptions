@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: BackportsCsvGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: backports-csv
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'backports-csv' is hosted on GitHub"
+            link: "https://github.com/ryanhiebert/backports.csv"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SelfGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: self
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'self' is hosted on GitHub"
+            link: "https://github.com/andrewp-as-is/self.py"

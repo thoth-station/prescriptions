@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GraphvizGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: graphviz
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'graphviz' is hosted on GitHub"
+            link: "https://github.com/xflr6/graphviz"

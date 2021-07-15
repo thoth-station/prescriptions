@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: M3u8GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: m3u8
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'm3u8' is hosted on GitHub"
+            link: "https://github.com/globocom/m3u8"

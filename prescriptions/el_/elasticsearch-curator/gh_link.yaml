@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ElasticsearchCuratorGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: elasticsearch-curator
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'elasticsearch-curator' is hosted on GitHub"
+            link: "https://github.com/elastic/curator"

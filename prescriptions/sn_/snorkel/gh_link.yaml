@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SnorkelGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: snorkel
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'snorkel' is hosted on GitHub"
+            link: "https://github.com/snorkel-team/snorkel"

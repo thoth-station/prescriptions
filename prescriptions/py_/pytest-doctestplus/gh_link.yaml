@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestDoctestplusGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-doctestplus
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-doctestplus' is hosted on GitHub"
+            link: "https://github.com/astropy/pytest-doctestplus"

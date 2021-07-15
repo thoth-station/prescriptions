@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestLazyFixtureGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-lazy-fixture
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-lazy-fixture' is hosted on GitHub"
+            link: "https://github.com/tvorog/pytest-lazy-fixture"

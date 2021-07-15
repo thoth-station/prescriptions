@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Aria2pGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aria2p
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aria2p' is hosted on GitHub"
+            link: "https://github.com/pawamoy/aria2p"

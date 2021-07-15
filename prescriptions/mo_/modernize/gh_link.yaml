@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ModernizeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: modernize
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'modernize' is hosted on GitHub"
+            link: "https://github.com/PyCQA/modernize"

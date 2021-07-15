@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: BiopythonGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: biopython
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'biopython' is hosted on GitHub"
+            link: "https://github.com/biopython/biopython"

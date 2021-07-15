@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoModeltranslationGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-modeltranslation
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-modeltranslation' is hosted on GitHub"
+            link: "https://github.com/deschler/django-modeltranslation"

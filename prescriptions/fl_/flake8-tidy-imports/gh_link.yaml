@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Flake8TidyImportsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flake8-tidy-imports
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flake8-tidy-imports' is hosted on GitHub"
+            link: "https://github.com/adamchainz/flake8-tidy-imports"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ItemGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: item
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'item' is hosted on GitHub"
+            link: "https://github.com/lorien/item"

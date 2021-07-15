@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RemotePdbGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: remote-pdb
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'remote-pdb' is hosted on GitHub"
+            link: "https://github.com/ionelmc/python-remote-pdb"

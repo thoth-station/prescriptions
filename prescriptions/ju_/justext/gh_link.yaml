@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JustextGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: justext
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'justext' is hosted on GitHub"
+            link: "https://github.com/miso-belica/jusText"

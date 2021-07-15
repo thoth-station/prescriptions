@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CachepathGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: cachepath
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'cachepath' is hosted on GitHub"
+            link: "https://github.com/haydenflinner/cachepath"

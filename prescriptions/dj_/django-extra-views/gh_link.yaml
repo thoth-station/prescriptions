@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoExtraViewsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-extra-views
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-extra-views' is hosted on GitHub"
+            link: "https://github.com/AndrewIngram/django-extra-views"

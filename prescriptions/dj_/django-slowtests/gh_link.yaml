@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoSlowtestsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-slowtests
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-slowtests' is hosted on GitHub"
+            link: "https://github.com/realpython/django-slow-tests"

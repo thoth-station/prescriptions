@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: XgboostRayGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: xgboost-ray
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'xgboost-ray' is hosted on GitHub"
+            link: "https://github.com/ray-project/xgboost_ray"

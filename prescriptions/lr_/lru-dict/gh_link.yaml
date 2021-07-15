@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LruDictGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: lru-dict
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'lru-dict' is hosted on GitHub"
+            link: "https://github.com/amitdev/lru-dict"

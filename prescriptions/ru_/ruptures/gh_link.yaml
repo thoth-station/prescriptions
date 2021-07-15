@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RupturesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: ruptures
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'ruptures' is hosted on GitHub"
+            link: "https://github.com/deepcharles/ruptures"

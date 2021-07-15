@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyMiniRacerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: py-mini-racer
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'py-mini-racer' is hosted on GitHub"
+            link: "https://github.com/sqreen/PyMiniRacer"

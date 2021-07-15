@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GowerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: gower
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'gower' is hosted on GitHub"
+            link: "https://github.com/wwwjk366/gower"

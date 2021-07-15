@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytestRunnerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytest-runner
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pytest-runner' is hosted on GitHub"
+            link: "https://github.com/pytest-dev/pytest-runner"

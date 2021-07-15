@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoOtpGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-otp
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-otp' is hosted on GitHub"
+            link: "https://github.com/django-otp/django-otp"

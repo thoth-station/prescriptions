@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DopamineRlGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: dopamine-rl
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'dopamine-rl' is hosted on GitHub"
+            link: "https://github.com/google/dopamine"

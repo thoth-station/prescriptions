@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FastenersGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: fasteners
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'fasteners' is hosted on GitHub"
+            link: "https://github.com/harlowja/fasteners"

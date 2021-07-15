@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LuminolGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: luminol
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'luminol' is hosted on GitHub"
+            link: "https://github.com/linkedin/luminol"

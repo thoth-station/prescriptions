@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ZakeGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: zake
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'zake' is hosted on GitHub"
+            link: "https://github.com/yahoo/Zake"

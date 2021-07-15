@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PlotnineGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: plotnine
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'plotnine' is hosted on GitHub"
+            link: "https://github.com/has2k1/plotnine"

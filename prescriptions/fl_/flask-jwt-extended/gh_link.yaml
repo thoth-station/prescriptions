@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FlaskJwtExtendedGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: flask-jwt-extended
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'flask-jwt-extended' is hosted on GitHub"
+            link: "https://github.com/vimalloc/flask-jwt-extended"

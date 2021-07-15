@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ShopifyapiGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: shopifyapi
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'shopifyapi' is hosted on GitHub"
+            link: "https://github.com/Shopify/shopify_python_api"

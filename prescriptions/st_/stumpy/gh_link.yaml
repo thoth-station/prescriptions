@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StumpyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: stumpy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'stumpy' is hosted on GitHub"
+            link: "https://github.com/TDAmeritrade/stumpy"

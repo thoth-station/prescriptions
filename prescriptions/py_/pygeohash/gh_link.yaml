@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PygeohashGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pygeohash
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pygeohash' is hosted on GitHub"
+            link: "https://github.com/wdm0006/pygeohash"

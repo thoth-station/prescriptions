@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DeprecatedGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: deprecated
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'deprecated' is hosted on GitHub"
+            link: "https://github.com/tantale/deprecated"

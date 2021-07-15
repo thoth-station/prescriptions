@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoUrlShorteningGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-url-shortening
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-url-shortening' is hosted on GitHub"
+            link: "https://github.com/doubletapp/django-url-shortening"

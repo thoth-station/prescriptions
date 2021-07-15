@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: L18nGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: l18n
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'l18n' is hosted on GitHub"
+            link: "https://github.com/tkhyn/l18n"

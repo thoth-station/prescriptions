@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StructlogGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: structlog
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'structlog' is hosted on GitHub"
+            link: "https://github.com/hynek/structlog"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Caniusepython3GitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: caniusepython3
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'caniusepython3' is hosted on GitHub"
+            link: "https://github.com/brettcannon/caniusepython3"

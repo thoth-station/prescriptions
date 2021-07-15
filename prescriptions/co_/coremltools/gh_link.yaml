@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CoremltoolsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: coremltools
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'coremltools' is hosted on GitHub"
+            link: "https://github.com/apple/coremltools"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TabulateGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tabulate
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'tabulate' is hosted on GitHub"
+            link: "https://github.com/astanin/python-tabulate"

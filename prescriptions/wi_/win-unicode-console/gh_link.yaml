@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: WinUnicodeConsoleGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: win-unicode-console
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'win-unicode-console' is hosted on GitHub"
+            link: "https://github.com/Drekin/win-unicode-console"

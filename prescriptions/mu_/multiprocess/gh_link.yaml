@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MultiprocessGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: multiprocess
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'multiprocess' is hosted on GitHub"
+            link: "https://github.com/uqfoundation/multiprocess"

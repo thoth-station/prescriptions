@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: ReadcharGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: readchar
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'readchar' is hosted on GitHub"
+            link: "https://github.com/magmax/python-readchar"

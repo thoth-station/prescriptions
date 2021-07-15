@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: HomeassistantGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: homeassistant
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'homeassistant' is hosted on GitHub"
+            link: "https://github.com/home-assistant/core"

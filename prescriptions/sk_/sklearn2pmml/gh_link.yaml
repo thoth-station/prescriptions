@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: Sklearn2pmmlGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: sklearn2pmml
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'sklearn2pmml' is hosted on GitHub"
+            link: "https://github.com/jpmml/sklearn2pmml"

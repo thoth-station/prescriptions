@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: TypesRequestsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: types-requests
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'types-requests' is hosted on GitHub"
+            link: "https://github.com/python/typeshed"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DocformatterGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: docformatter
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'docformatter' is hosted on GitHub"
+            link: "https://github.com/myint/docformatter"

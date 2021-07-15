@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LazyObjectProxyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: lazy-object-proxy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'lazy-object-proxy' is hosted on GitHub"
+            link: "https://github.com/ionelmc/python-lazy-object-proxy"

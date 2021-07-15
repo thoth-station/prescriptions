@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: CodecovGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: codecov
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'codecov' is hosted on GitHub"
+            link: "https://github.com/codecov/codecov-python"

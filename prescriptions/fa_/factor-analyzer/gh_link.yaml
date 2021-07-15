@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: FactorAnalyzerGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: factor-analyzer
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'factor-analyzer' is hosted on GitHub"
+            link: "https://github.com/EducationalTestingService/factor_analyzer"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: MxnetMklGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: mxnet-mkl
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'mxnet-mkl' is hosted on GitHub"
+            link: "https://github.com/apache/incubator-mxnet"

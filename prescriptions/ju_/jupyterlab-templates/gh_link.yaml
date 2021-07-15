@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: JupyterlabTemplatesGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: jupyterlab-templates
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'jupyterlab-templates' is hosted on GitHub"
+            link: "https://github.com/jpmorganchase/jupyterlab_templates"

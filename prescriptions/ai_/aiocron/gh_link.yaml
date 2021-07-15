@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AiocronGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: aiocron
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'aiocron' is hosted on GitHub"
+            link: "https://github.com/gawel/aiocron"

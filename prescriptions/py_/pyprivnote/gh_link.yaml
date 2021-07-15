@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyprivnoteGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pyprivnote
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pyprivnote' is hosted on GitHub"
+            link: "https://github.com/intelligentguy/pyPrivnote"

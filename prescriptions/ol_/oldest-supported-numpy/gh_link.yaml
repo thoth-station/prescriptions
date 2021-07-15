@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: OldestSupportedNumpyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: oldest-supported-numpy
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'oldest-supported-numpy' is hosted on GitHub"
+            link: "https://github.com/scipy/oldest-supported-numpy"

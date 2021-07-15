@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RetryingGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: retrying
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'retrying' is hosted on GitHub"
+            link: "https://github.com/rholder/retrying"

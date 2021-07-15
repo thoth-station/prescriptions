@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoModelUtilsGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-model-utils
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-model-utils' is hosted on GitHub"
+            link: "https://github.com/jazzband/django-model-utils"

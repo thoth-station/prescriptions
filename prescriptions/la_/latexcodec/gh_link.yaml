@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: LatexcodecGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: latexcodec
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'latexcodec' is hosted on GitHub"
+            link: "https://github.com/mcmtroffaes/latexcodec"

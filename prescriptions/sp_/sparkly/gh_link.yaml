@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SparklyGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: sparkly
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'sparkly' is hosted on GitHub"
+            link: "https://github.com/Tubular/sparkly"

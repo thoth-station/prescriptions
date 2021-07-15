@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: AzureMgmtLogicGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: azure-mgmt-logic
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'azure-mgmt-logic' is hosted on GitHub"
+            link: "https://github.com/Azure/azure-sdk-for-python"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: DjangoStatsdMozillaGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: django-statsd-mozilla
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'django-statsd-mozilla' is hosted on GitHub"
+            link: "https://github.com/django-statsd/django-statsd"

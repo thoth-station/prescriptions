@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PandasFlavorGitHubURWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pandas-flavor
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Package 'pandas-flavor' is hosted on GitHub"
+            link: "https://github.com/Zsailer/pandas_flavor"
