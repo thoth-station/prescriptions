@@ -1,0 +1,26 @@
+units:
+  boots:
+    - name: NoCPUModelsBoot
+      type: boot
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          hardware:
+            - cpu_models: [null]
+      run:
+        stack_info:
+          - type: WARNING
+            message: "No CPU model provided, please state CPU model in your .thoth.yaml configuration file to have recommendations optimized for your runtime environment"
+            link: "no_cpu"
+    - name: NoCPUFamilyBoot
+      type: boot
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          hardware:
+            - cpu_families: [null]
+      run:
+        stack_info:
+          - type: WARNING
+            message: "No CPU family provided, please state CPU family in your .thoth.yaml configuration file to have recommendations optimized for your runtime environment"
+            link: "no_cpu"
