@@ -1,0 +1,28 @@
+units:
+  boots:
+  - name: TensorFlowGPUNoGPUBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: null
+    match:
+      package_name: tensorflow-gpu
+    run:
+      stack_info:
+      - type: WARNING
+        message: "No CUDA detected but 'tensorflow-gpu' is installed, use 'tensorflow-cpu' for non-GPU enabled environments that provides smaller package"
+        link: "https://pypi.org/project/tensorflow-gpu/"
+  - name: TensorFlowNoGPUBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: null
+    match:
+      package_name: tensorflow
+    run:
+      stack_info:
+      - type: WARNING
+        message: "No CUDA detected but 'tensorflow' is installed, use 'tensorflow-cpu' for non-GPU enabled environments that provides smaller package"
+        link: "https://pypi.org/project/tensorflow-gpu/"
