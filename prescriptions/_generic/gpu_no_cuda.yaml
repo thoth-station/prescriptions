@@ -1,0 +1,16 @@
+units:
+  boots:
+    - name: GPUNoCUDABoot
+      type: boot
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: [null]
+          hardware:
+            - gpu_models:
+               not: [null]
+      run:
+        stack_info:
+          - type: WARNING
+            message: "A GPU is available but no CUDA is installed, use CUDA enabled runtime environments to utilize GPU"
+            link: "gpu_no_cuda"
