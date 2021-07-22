@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: RichGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: rich
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'rich' is hosted on GitHub"
+            link: "https://github.com/willmcgugan/rich"

@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowPyTestTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pytest
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for PyTest"
+            link: https://stackoverflow.com/questions/tagged/pytest

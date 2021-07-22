@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: WerkzeugGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: werkzeug
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'werkzeug' is hosted on GitHub"
+            link: "https://github.com/pallets/werkzeug"

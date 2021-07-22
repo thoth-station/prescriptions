@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyTestDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pytest
+      run:
+        justification:
+          - type: INFO
+            message: "See PyTest project documentation"
+            link: "https://docs.pytest.org/"

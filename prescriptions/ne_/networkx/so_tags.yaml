@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowNetworkXTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: networkx
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for NetworkX"
+            link: https://stackoverflow.com/questions/tagged/networkx

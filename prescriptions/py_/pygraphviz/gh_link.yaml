@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PyGraphvizGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pygraphviz
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'pygraphviz' is hosted on GitHub"
+            link: "https://github.com/pygraphviz/pygraphviz"

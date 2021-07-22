@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowWerkzeugTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: werkzeug
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for Werkzeug"
+            link: https://stackoverflow.com/questions/tagged/werkzeug

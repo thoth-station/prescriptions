@@ -1,0 +1,54 @@
+units:
+  wraps:
+    - name: TensorFlowGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tensorflow
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'tensorflow' is hosted on GitHub"
+            link: "https://github.com/tensorflow/tensorflow"
+    - name: IntelTensorFlowGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: intel-tensorflow
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'intel-tensorflow' is hosted on GitHub"
+            link: "https://github.com/tensorflow/tensorflow"
+    - name: TensorFlowCPUGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tensorflow-cpu
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'tensorflow-cpu' is hosted on GitHub"
+            link: "https://github.com/tensorflow/tensorflow"
+    - name: TensorFlowGPUGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: tensorflow-gpu
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'tensorflow-gpu' is hosted on GitHub"
+            link: "https://github.com/tensorflow/tensorflow"

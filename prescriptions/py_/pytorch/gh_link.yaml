@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PytorchGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: pytorch
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'pytorch' is hosted on GitHub"
+            link: "https://github.com/pytorch/pytorch"

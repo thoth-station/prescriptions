@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowPyMongoTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pymongo
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for PyMongo"
+            link: https://stackoverflow.com/questions/tagged/pymongo

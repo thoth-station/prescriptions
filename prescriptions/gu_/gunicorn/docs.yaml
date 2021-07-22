@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: GunicornDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: gunicorn
+      run:
+        justification:
+          - type: INFO
+            message: "See Gunicorn project documentation"
+            link: https://gunicorn.org/#docs
