@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowPytzTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pytz
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for pytz"
+            link: https://stackoverflow.com/questions/tagged/pytz

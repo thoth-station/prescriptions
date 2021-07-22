@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowKubernetesTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: kubernetes
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for Kubernetes"
+            link: https://stackoverflow.com/questions/tagged/kubernetes+python

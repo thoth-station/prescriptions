@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SciPyGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: scipy
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'scipy' is hosted on GitHub"
+            link: "https://github.com/scipy/scipy"

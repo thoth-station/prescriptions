@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: H5PyGitHubURLWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        - state:
+            resolved_dependencies:
+              - name: h5py
+      run:
+        stack_info:
+          - type: INFO
+            message: "Package 'h5py' is hosted on GitHub"
+            link: "https://github.com/h5py/h5py"

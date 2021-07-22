@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowPandasTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pandas
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for Pandas"
+            link: https://stackoverflow.com/questions/tagged/pandas

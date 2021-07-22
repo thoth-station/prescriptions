@@ -1,0 +1,54 @@
+units:
+  wraps:
+    - name: TensorFlowDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: tensorflow
+      run:
+        justification:
+          - type: INFO
+            message: "See TensorFlow project documentation"
+            link: "https://www.tensorflow.org/versions"
+    - name: IntelTensorFlowDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: intel-tensorflow
+      run:
+        justification:
+          - type: INFO
+            message: "See TensorFlow project documentation"
+            link: "https://www.tensorflow.org/versions"
+    - name: TensorFlowCPUDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: tensorflow-cpu
+      run:
+        justification:
+          - type: INFO
+            message: "See TensorFlow project documentation"
+            link: "https://www.tensorflow.org/versions"
+    - name: TensorFlowGPUDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: tensorflow-gpu
+      run:
+        justification:
+          - type: INFO
+            message: "See TensorFlow project documentation"
+            link: "https://www.tensorflow.org/versions"

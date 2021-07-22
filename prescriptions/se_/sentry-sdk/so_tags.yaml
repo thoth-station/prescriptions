@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowSentryTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: sentry-sdk
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for Sentry"
+            link: https://stackoverflow.com/questions/tagged/sentry+python

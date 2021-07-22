@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: StackOverflowMatplotlibTagWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: matplotlib
+      run:
+        justification:
+          - type: INFO
+            message: "See StackOverflow tags specific for Matplotlib"
+            link: https://stackoverflow.com/questions/tagged/matplotlib

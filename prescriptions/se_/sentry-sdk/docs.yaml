@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: SentrySDKDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: sentry-sdk
+      run:
+        justification:
+          - type: INFO
+            message: "See Sentry Python SDK project documentation"
+            link: "https://docs.sentry.io/platforms/python/"

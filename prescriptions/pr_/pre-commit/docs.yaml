@@ -1,0 +1,15 @@
+units:
+  wraps:
+    - name: PreCommitDocsWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+      match:
+        state:
+          resolved_dependencies:
+            - name: pre-commit
+      run:
+        justification:
+          - type: INFO
+            message: "See pre-commit project documentation"
+            link: "https://pre-commit.com/"

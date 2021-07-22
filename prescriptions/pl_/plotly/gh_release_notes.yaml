@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PlotlyGitHubReleaseNotesWrap
+    run:
+      release_notes:
+      - organization: plotly
+        package_version:
+          index_url: https://pypi.org/simple
+          name: plotly
+        repository: plotly.py
+        tag_version_prefix: v
+    should_include:
+      adviser_pipeline: true
+    type: wrap.GitHubReleaseNotes
