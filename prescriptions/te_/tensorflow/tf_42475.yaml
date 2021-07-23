@@ -14,18 +14,19 @@ units:
                 version: <=2.4
         - state:
             resolved_dependencies:
-              - name: tensorflowCpu
+              - name: tensorflow-cpu
                 version: <=2.4
         - state:
             resolved_dependencies:
-              - name: tensorflowGpu
+              - name: tensorflow-gpu
                 version: <=2.4
         - state:
             resolved_dependencies:
-              - name: intelTensorflow
+              - name: intel-tensorflow
                 version: <=2.4
       run:
         justification:
           - type: WARNING
             message: TensorFlow in version <=2.4 is slow when tf.keras.layers.Embedding is used
             link: tf_42475
+            package_name: tensorflow

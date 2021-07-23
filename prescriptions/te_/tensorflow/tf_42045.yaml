@@ -11,18 +11,19 @@ units:
                   version: "~=2.3.0"
           - state:
               resolved_dependencies:
-                - name: tensorflowCpu
+                - name: tensorflow-cpu
                   version: "~=2.3.0"
           - state:
               resolved_dependencies:
-                - name: tensorflowGpu
+                - name: tensorflow-gpu
                   version: "~=2.3.0"
           - state:
               resolved_dependencies:
-                - name: intelTensorflow
+                - name: intel-tensorflow
                   version: "~=2.3.0"
         run:
           justification:
             - type: WARNING
               message: "tensorflow in version 2.3 produces wrong model accuracy when the model is serialized using `accuracy`, use `sparse_categorical_accuracy` instead"
               link: tf_42045
+              package_name: tensorflow

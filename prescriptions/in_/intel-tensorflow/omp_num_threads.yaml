@@ -7,7 +7,7 @@ units:
         match:
           state:
             resolved_dependencies:
-              - name: intelTensorflow
+              - name: intel-tensorflow
         run:
           justification:
             - type: WARNING
@@ -15,10 +15,12 @@ units:
                 one or more libraries use Intel's MKL that does not detect correctly
                 resource allocation in the cluster
               link: mkl_threads
+              package_name: intel-tensorflow
             - type: WARNING
               message: Make sure your environment has proper Intel Performance Libraries when using
                 Intel TensorFlow builds
               link: mkl_libs
+              package_name: intel-tensorflow
           advised_manifest_changes:
             apiVersion: apps.openshift.io/v1
             kind: DeploymentConfig
