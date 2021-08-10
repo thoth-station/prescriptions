@@ -1,0 +1,14 @@
+units:
+  wraps:
+    - name: TempfileSecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        library_usage:
+          tempfile:
+            - tempfile.mktemp
+      run:
+        stack_info:
+          - type: ERROR
+            message: "mktemp is deprecated due to vulnerability to race conditions"
+            link: "https://docs.python.org/3.11/library/tempfile.html#tempfile-mktemp-deprecated"

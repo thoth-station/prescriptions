@@ -1,0 +1,14 @@
+units:
+  wraps:
+    - name: PickleSecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        library_usage:
+          pickle:
+            - pickle.*
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Consider restricting globals when using pickle"
+            link: "https://docs.python.org/3.11/library/pickle.html#pickle-restrict"

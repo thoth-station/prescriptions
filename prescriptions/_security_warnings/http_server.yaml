@@ -1,0 +1,14 @@
+units:
+  wraps:
+    - name: HTTPServerSecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        library_usage:
+          http:
+            - http.server
+      run:
+        stack_info:
+          - type: WARNING
+            message: "http.server is not suitable for production use, only implementing basic security checks"
+            link: "https://docs.python.org/3.11/library/http.server.html#module-http.server"

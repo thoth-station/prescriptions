@@ -1,0 +1,14 @@
+units:
+  wraps:
+    - name: SubprocessSecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        library_usage:
+          subprocess:
+            - subprocess.*
+      run:
+        stack_info:
+          - type: WARNING
+            message: "See suprocess related security considerations"
+            link: "https://docs.python.org/3.11/library/subprocess.html#subprocess-security"

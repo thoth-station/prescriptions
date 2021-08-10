@@ -1,0 +1,14 @@
+units:
+  wraps:
+    - name: MultiprocessingPickleSecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        library_usage:
+          multiprocessing:
+            - multiprocessing.pickle
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Connection.recv() uses pickle"
+            link: "https://docs.python.org/3.11/library/multiprocessing.html#multiprocessing-recv-pickle-security"

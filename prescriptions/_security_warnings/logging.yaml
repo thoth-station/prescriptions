@@ -1,0 +1,14 @@
+units:
+  wraps:
+    - name: LoggingSecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        library_usage:
+          logging:
+            - logging.*
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Logging configuration uses eval()"
+            link: "https://docs.python.org/3.11/library/logging.config.html#logging-eval-security"
