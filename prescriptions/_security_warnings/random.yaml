@@ -1,14 +1,33 @@
 units:
   wraps:
-    - name: RandomSecurityWarnings
+    - name: RandomWSecurityWarnings
       type: wrap
       should_include:
         adviser_pipeline: true
+        recommendation_types:
+          - latest
+          - performance
+          - stable
+          - testing
         library_usage:
           random:
             - random.*
       run:
         stack_info:
           - type: WARNING
+            message: "random shouldn’t be used for security purposes, use secrets instead"
+            link: "https://docs.python.org/3.11/library/secrets.html#module-secrets"
+    - name: RandomESecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        recommendation_types:
+          - security
+        library_usage:
+          random:
+            - random.*
+      run:
+        stack_info:
+          - type: ERROR
             message: "random shouldn’t be used for security purposes, use secrets instead"
             link: "https://docs.python.org/3.11/library/secrets.html#module-secrets"
