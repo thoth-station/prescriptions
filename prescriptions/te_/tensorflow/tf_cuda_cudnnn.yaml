@@ -1,0 +1,38 @@
+units:
+  wraps:
+    - name: TensorFlowCUDANocuDNNWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions:
+            not: [null]
+          cudnn_versions: [null]
+      match: &match
+        - state:
+            resolved_dependencies:
+              - name: tensorflow
+        - state:
+            resolved_dependencies:
+              - name: tensorflow-gpu
+      run:
+        stack_info:
+          - type: WARNING
+            message: "CUDA version provided but no cuDNN version supplied"
+            link: https://www.tensorflow.org/install/source#linux
+
+    - name: TensorFlowcuDNNNoCUDAWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: [null]
+          cudnn_versions:
+            not: [null]
+      match:
+        <<: *match
+      run:
+        stack_info:
+          - type: WARNING
+            message: "cuDNN version provided but no cuDNN version supplied"
+            link: https://www.tensorflow.org/install/source#linux
