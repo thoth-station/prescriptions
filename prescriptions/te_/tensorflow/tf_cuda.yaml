@@ -1,0 +1,107 @@
+units:
+  sieves:
+    - name: TensorFlowGPUCUDA8Sieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["8"]
+      match:
+        package_version:
+          name: tensorflow-gpu
+          version: "<1.0,>1.4"
+      run:
+        stack_info:
+          - type: INFO
+            message: "CUDA 8 works with tensorflow-gpu >=1.0.0,<1.5.0"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowGPUCUDA9Sieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["9"]
+      match:
+        package_version:
+          name: tensorflow-gpu
+          version: "<1.5,>1.12"
+      run:
+        stack_info:
+          - type: INFO
+            message: "CUDA 9 works with tensorflow-gpu >=1.5.0,<1.13.0"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowGPUCUDA100Sieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["10.0"]
+      match:
+        package_version:
+          name: tensorflow-gpu
+          version: "<1.13,>1.15"
+      run:
+        stack_info:
+          - type: INFO
+            message: "CUDA 10.0 works with tensorflow-gpu >=1.13.0,<1.15.0"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowCUDA100Sieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["10.0"]
+      match:
+        package_version:
+          name: tensorflow
+          version: ">2.0.0,<2.0.0"
+      run:
+        stack_info:
+          - type: INFO
+            message: "CUDA 10.0 works with tensorflow ~=2.0.0"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowCUDA101Sieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["10.0"]
+      match:
+        package_version:
+          name: tensorflow
+          version: ">2.0.0,<2.0.0"
+      run:
+        stack_info:
+          - type: INFO
+            message: "CUDA 10.0 works with tensorflow ~=2.0.0"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowCUDA110Sieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["11.0"]
+      match:
+        package_version:
+          name: tensorflow
+          version: ">2.4.0,<2.4.0"
+      run:
+        stack_info:
+          - type: INFO
+            message: "CUDA 11.0 works with tensorflow ~=2.4.0"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowCUDA112Sieve
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["11.2"]
+      match:
+        package_version:
+          name: tensorflow
+          version: ">2.5.0,<2.5.0"
+      run:
+        stack_info:
+          - type: INFO
+            message: "CUDA 11.2 works with tensorflow ~=2.5.0"
+            link: https://www.tensorflow.org/install/source#gpu
