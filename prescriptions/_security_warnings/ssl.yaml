@@ -1,0 +1,14 @@
+units:
+  wraps:
+    - name: SSLSecurityWarnings
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        library_usage:
+          ssl:
+            - ssl.*
+      run:
+        stack_info:
+          - type: WARNING
+            message: "See SSL/TLS security considerations"
+            link: "https://docs.python.org/3.11/library/ssl.html#ssl-security"
