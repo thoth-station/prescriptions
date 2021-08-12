@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KubernetesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kubernetes-client
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kubernetes
-        repository: python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kubernetes
+    run:
+      release_notes:
+        organization: kubernetes-client
+        repository: python
+        tag_version_prefix: v

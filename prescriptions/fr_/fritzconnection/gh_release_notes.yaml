@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FritzconnectionGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kbr
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fritzconnection
-        repository: fritzconnection
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fritzconnection
+    run:
+      release_notes:
+        organization: kbr
+        repository: fritzconnection

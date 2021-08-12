@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ZopeEventGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zopefoundation
-        package_version:
-          index_url: https://pypi.org/simple
-          name: zope-event
-        repository: zope.event
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: zope-event
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.event

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AllurePytestGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: allure-framework
-        package_version:
-          index_url: https://pypi.org/simple
-          name: allure-pytest
-        repository: allure-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: allure-pytest
+    run:
+      release_notes:
+        organization: allure-framework
+        repository: allure-python

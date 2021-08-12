@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ClickCompletionGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: click-contrib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: click-completion
-        repository: click-completion
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: click-completion
+    run:
+      release_notes:
+        organization: click-contrib
+        repository: click-completion
+        tag_version_prefix: v

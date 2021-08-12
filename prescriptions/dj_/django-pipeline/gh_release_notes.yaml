@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoPipelineGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jazzband
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-pipeline
-        repository: django-pipeline
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-pipeline
+    run:
+      release_notes:
+        organization: jazzband
+        repository: django-pipeline

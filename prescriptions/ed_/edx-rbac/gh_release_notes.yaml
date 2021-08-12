@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: EdxRbacGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: edx
-        package_version:
-          index_url: https://pypi.org/simple
-          name: edx-rbac
-        repository: edx-rbac
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: edx-rbac
+    run:
+      release_notes:
+        organization: edx
+        repository: edx-rbac

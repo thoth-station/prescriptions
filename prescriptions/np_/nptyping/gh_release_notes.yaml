@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NptypingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ramonhagenaars
-        package_version:
-          index_url: https://pypi.org/simple
-          name: nptyping
-        repository: nptyping
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: nptyping
+    run:
+      release_notes:
+        organization: ramonhagenaars
+        repository: nptyping
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoPushNotificationsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jazzband
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-push-notifications
-        repository: django-push-notifications
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-push-notifications
+    run:
+      release_notes:
+        organization: jazzband
+        repository: django-push-notifications

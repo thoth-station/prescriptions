@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FakeredisGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jamesls
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fakeredis
-        repository: fakeredis
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fakeredis
+    run:
+      release_notes:
+        organization: jamesls
+        repository: fakeredis

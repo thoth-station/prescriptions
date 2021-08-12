@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RadishBddGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: radish-bdd
-        package_version:
-          index_url: https://pypi.org/simple
-          name: radish-bdd
-        repository: radish
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: radish-bdd
+    run:
+      release_notes:
+        organization: radish-bdd
+        repository: radish
+        tag_version_prefix: v

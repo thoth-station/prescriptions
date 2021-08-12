@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TypeguardGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: agronholm
-        package_version:
-          index_url: https://pypi.org/simple
-          name: typeguard
-        repository: typeguard
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: typeguard
+    run:
+      release_notes:
+        organization: agronholm
+        repository: typeguard

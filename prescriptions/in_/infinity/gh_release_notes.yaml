@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: InfinityGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kvesteri
-        package_version:
-          index_url: https://pypi.org/simple
-          name: infinity
-        repository: infinity
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: infinity
+    run:
+      release_notes:
+        organization: kvesteri
+        repository: infinity

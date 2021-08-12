@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pyrfc3339GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kurtraschke
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyrfc3339
-        repository: pyRFC3339
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyrfc3339
+    run:
+      release_notes:
+        organization: kurtraschke
+        repository: pyRFC3339
+        tag_version_prefix: v

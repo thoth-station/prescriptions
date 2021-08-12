@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Smmap2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: gitpython-developers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: smmap2
-        repository: smmap
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: smmap2
+    run:
+      release_notes:
+        organization: gitpython-developers
+        repository: smmap
+        tag_version_prefix: v

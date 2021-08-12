@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: BentomlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: bentoml
-        package_version:
-          index_url: https://pypi.org/simple
-          name: bentoml
-        repository: BentoML
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: bentoml
+    run:
+      release_notes:
+        organization: bentoml
+        repository: BentoML
+        tag_version_prefix: v

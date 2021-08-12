@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SvgPathGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: regebro
-        package_version:
-          index_url: https://pypi.org/simple
-          name: svg-path
-        repository: svg.path
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: svg-path
+    run:
+      release_notes:
+        organization: regebro
+        repository: svg.path

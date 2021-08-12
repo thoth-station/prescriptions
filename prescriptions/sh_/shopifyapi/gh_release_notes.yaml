@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ShopifyapiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Shopify
-        package_version:
-          index_url: https://pypi.org/simple
-          name: shopifyapi
-        repository: shopify_python_api
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: shopifyapi
+    run:
+      release_notes:
+        organization: Shopify
+        repository: shopify_python_api
+        tag_version_prefix: v

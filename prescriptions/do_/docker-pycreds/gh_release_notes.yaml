@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DockerPycredsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: shin-
-        package_version:
-          index_url: https://pypi.org/simple
-          name: docker-pycreds
-        repository: dockerpy-creds
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: docker-pycreds
+    run:
+      release_notes:
+        organization: shin-
+        repository: dockerpy-creds

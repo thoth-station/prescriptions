@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JsonpathRwGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kennknowles
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jsonpath-rw
-        repository: python-jsonpath-rw
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jsonpath-rw
+    run:
+      release_notes:
+        organization: kennknowles
+        repository: python-jsonpath-rw

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Flake8ComprehensionsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: adamchainz
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-comprehensions
-        repository: flake8-comprehensions
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-comprehensions
+    run:
+      release_notes:
+        organization: adamchainz
+        repository: flake8-comprehensions

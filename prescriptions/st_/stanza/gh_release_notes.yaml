@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: StanzaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: stanfordnlp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: stanza
-        repository: stanza
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: stanza
+    run:
+      release_notes:
+        organization: stanfordnlp
+        repository: stanza
+        tag_version_prefix: v

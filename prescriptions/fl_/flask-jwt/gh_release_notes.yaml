@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FlaskJwtGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mattupstate
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-jwt
-        repository: flask-jwt
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-jwt
+    run:
+      release_notes:
+        organization: mattupstate
+        repository: flask-jwt

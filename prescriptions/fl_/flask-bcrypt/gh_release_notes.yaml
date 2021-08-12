@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FlaskBcryptGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: maxcountryman
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-bcrypt
-        repository: flask-bcrypt
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-bcrypt
+    run:
+      release_notes:
+        organization: maxcountryman
+        repository: flask-bcrypt

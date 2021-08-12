@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: GitdbGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: gitpython-developers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gitdb
-        repository: gitdb
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gitdb
+    run:
+      release_notes:
+        organization: gitpython-developers
+        repository: gitdb

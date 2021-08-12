@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BitstructGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: eerimoq
-        package_version:
-          index_url: https://pypi.org/simple
-          name: bitstruct
-        repository: bitstruct
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: bitstruct
+    run:
+      release_notes:
+        organization: eerimoq
+        repository: bitstruct

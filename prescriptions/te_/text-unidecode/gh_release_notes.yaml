@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TextUnidecodeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kmike
-        package_version:
-          index_url: https://pypi.org/simple
-          name: text-unidecode
-        repository: text-unidecode
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: text-unidecode
+    run:
+      release_notes:
+        organization: kmike
+        repository: text-unidecode

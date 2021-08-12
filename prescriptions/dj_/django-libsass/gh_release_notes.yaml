@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoLibsassGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: torchbox
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-libsass
-        repository: django-libsass
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-libsass
+    run:
+      release_notes:
+        organization: torchbox
+        repository: django-libsass
+        tag_version_prefix: v

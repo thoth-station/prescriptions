@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: EdxDjangoUtilsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: edx
-        package_version:
-          index_url: https://pypi.org/simple
-          name: edx-django-utils
-        repository: edx-django-utils
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: edx-django-utils
+    run:
+      release_notes:
+        organization: edx
+        repository: edx-django-utils

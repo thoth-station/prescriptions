@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RetryingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rholder
-        package_version:
-          index_url: https://pypi.org/simple
-          name: retrying
-        repository: retrying
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: retrying
+    run:
+      release_notes:
+        organization: rholder
+        repository: retrying
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyprojGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pyproj4
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyproj
-        repository: pyproj
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyproj
+    run:
+      release_notes:
+        organization: pyproj4
+        repository: pyproj

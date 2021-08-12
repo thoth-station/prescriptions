@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SpeedtestCliGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sivel
-        package_version:
-          index_url: https://pypi.org/simple
-          name: speedtest-cli
-        repository: speedtest-cli
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: speedtest-cli
+    run:
+      release_notes:
+        organization: sivel
+        repository: speedtest-cli
+        tag_version_prefix: v

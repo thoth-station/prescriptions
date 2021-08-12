@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonGflagsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: google
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-gflags
-        repository: python-gflags
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-gflags
+    run:
+      release_notes:
+        organization: google
+        repository: python-gflags

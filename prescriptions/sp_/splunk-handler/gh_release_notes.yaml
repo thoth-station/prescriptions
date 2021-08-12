@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SplunkHandlerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zach-taylor
-        package_version:
-          index_url: https://pypi.org/simple
-          name: splunk-handler
-        repository: splunk_handler
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: splunk-handler
+    run:
+      release_notes:
+        organization: zach-taylor
+        repository: splunk_handler
+        tag_version_prefix: v

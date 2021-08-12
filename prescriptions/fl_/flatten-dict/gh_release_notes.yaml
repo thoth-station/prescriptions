@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FlattenDictGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ianlini
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flatten-dict
-        repository: flatten-dict
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flatten-dict
+    run:
+      release_notes:
+        organization: ianlini
+        repository: flatten-dict

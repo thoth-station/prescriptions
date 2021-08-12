@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: LineProfilerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pyutils
-        package_version:
-          index_url: https://pypi.org/simple
-          name: line-profiler
-        repository: line_profiler
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: line-profiler
+    run:
+      release_notes:
+        organization: pyutils
+        repository: line_profiler

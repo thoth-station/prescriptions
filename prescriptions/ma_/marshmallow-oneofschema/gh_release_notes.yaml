@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MarshmallowOneofschemaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: marshmallow-code
-        package_version:
-          index_url: https://pypi.org/simple
-          name: marshmallow-oneofschema
-        repository: marshmallow-oneofschema
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: marshmallow-oneofschema
+    run:
+      release_notes:
+        organization: marshmallow-code
+        repository: marshmallow-oneofschema

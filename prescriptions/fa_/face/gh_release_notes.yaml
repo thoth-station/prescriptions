@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FaceGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mahmoud
-        package_version:
-          index_url: https://pypi.org/simple
-          name: face
-        repository: face
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: face
+    run:
+      release_notes:
+        organization: mahmoud
+        repository: face
+        tag_version_prefix: v

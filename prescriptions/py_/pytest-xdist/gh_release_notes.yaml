@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestXdistGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pytest-dev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-xdist
-        repository: pytest-xdist
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-xdist
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-xdist
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoAdminListFilterDropdownGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mrts
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-admin-list-filter-dropdown
-        repository: django-admin-list-filter-dropdown
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-admin-list-filter-dropdown
+    run:
+      release_notes:
+        organization: mrts
+        repository: django-admin-list-filter-dropdown
+        tag_version_prefix: v

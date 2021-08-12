@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BasictracerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: opentracing
-        package_version:
-          index_url: https://pypi.org/simple
-          name: basictracer
-        repository: basictracer-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: basictracer
+    run:
+      release_notes:
+        organization: opentracing
+        repository: basictracer-python

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PulumiAwsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pulumi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pulumi-aws
-        repository: pulumi-aws
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pulumi-aws
+    run:
+      release_notes:
+        organization: pulumi
+        repository: pulumi-aws
+        tag_version_prefix: v

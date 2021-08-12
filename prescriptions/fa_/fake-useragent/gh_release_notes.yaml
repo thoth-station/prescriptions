@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FakeUseragentGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: hellysmile
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fake-useragent
-        repository: fake-useragent
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fake-useragent
+    run:
+      release_notes:
+        organization: hellysmile
+        repository: fake-useragent

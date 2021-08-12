@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SetuptoolsGitVersioningGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dolfinus
-        package_version:
-          index_url: https://pypi.org/simple
-          name: setuptools-git-versioning
-        repository: setuptools-git-versioning
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: setuptools-git-versioning
+    run:
+      release_notes:
+        organization: dolfinus
+        repository: setuptools-git-versioning
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: EbooklibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aerkalov
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ebooklib
-        repository: ebooklib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ebooklib
+    run:
+      release_notes:
+        organization: aerkalov
+        repository: ebooklib
+        tag_version_prefix: v

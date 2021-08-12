@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JsiiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aws
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jsii
-        repository: jsii
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jsii
+    run:
+      release_notes:
+        organization: aws
+        repository: jsii
+        tag_version_prefix: v

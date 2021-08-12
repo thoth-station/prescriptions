@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AiostreamGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: vxgmichel
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aiostream
-        repository: aiostream
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aiostream
+    run:
+      release_notes:
+        organization: vxgmichel
+        repository: aiostream
+        tag_version_prefix: v

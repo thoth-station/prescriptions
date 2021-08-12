@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MditPyPluginsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: executablebooks
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mdit-py-plugins
-        repository: mdit-py-plugins
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mdit-py-plugins
+    run:
+      release_notes:
+        organization: executablebooks
+        repository: mdit-py-plugins
+        tag_version_prefix: v

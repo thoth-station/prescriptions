@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SocialAuthAppDjangoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-social-auth
-        package_version:
-          index_url: https://pypi.org/simple
-          name: social-auth-app-django
-        repository: social-app-django
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: social-auth-app-django
+    run:
+      release_notes:
+        organization: python-social-auth
+        repository: social-app-django

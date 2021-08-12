@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SixGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: benjaminp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: six
-        repository: six
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: six
+    run:
+      release_notes:
+        organization: benjaminp
+        repository: six

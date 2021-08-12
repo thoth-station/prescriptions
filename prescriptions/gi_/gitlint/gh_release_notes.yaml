@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GitlintGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jorisroovers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gitlint
-        repository: gitlint
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gitlint
+    run:
+      release_notes:
+        organization: jorisroovers
+        repository: gitlint
+        tag_version_prefix: v

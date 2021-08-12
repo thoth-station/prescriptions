@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PortForGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kmike
-        package_version:
-          index_url: https://pypi.org/simple
-          name: port-for
-        repository: port-for
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: port-for
+    run:
+      release_notes:
+        organization: kmike
+        repository: port-for
+        tag_version_prefix: v

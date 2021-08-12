@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Flake8HtmlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lordmauve
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-html
-        repository: flake8-html
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-html
+    run:
+      release_notes:
+        organization: lordmauve
+        repository: flake8-html
+        tag_version_prefix: v

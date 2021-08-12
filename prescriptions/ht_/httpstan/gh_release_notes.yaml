@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: HttpstanGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: stan-dev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: httpstan
-        repository: httpstan
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: httpstan
+    run:
+      release_notes:
+        organization: stan-dev
+        repository: httpstan

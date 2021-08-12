@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FutureFstringsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: asottile
-        package_version:
-          index_url: https://pypi.org/simple
-          name: future-fstrings
-        repository: future-fstrings
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: future-fstrings
+    run:
+      release_notes:
+        organization: asottile
+        repository: future-fstrings
+        tag_version_prefix: v

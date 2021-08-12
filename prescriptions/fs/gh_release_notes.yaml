@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: PyFilesystem
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fs
-        repository: pyfilesystem2
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fs
+    run:
+      release_notes:
+        organization: PyFilesystem
+        repository: pyfilesystem2
+        tag_version_prefix: v

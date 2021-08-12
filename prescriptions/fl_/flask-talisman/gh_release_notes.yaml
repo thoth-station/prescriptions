@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskTalismanGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wntrblm
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-talisman
-        repository: flask-talisman
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-talisman
+    run:
+      release_notes:
+        organization: wntrblm
+        repository: flask-talisman
+        tag_version_prefix: v

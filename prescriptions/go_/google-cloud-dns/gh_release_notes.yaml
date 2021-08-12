@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudDnsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-dns
-        repository: python-dns
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-dns
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-dns
+        tag_version_prefix: v

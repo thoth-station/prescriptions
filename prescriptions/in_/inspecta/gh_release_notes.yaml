@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: InspectaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: grimen
-        package_version:
-          index_url: https://pypi.org/simple
-          name: inspecta
-        repository: python-inspecta
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: inspecta
+    run:
+      release_notes:
+        organization: grimen
+        repository: python-inspecta
+        tag_version_prefix: v

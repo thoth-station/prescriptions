@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: OpentelemetryExporterOtlpProtoGrpcGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: open-telemetry
-        package_version:
-          index_url: https://pypi.org/simple
-          name: opentelemetry-exporter-otlp-proto-grpc
-        repository: opentelemetry-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: opentelemetry-exporter-otlp-proto-grpc
+    run:
+      release_notes:
+        organization: open-telemetry
+        repository: opentelemetry-python
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MatrixprofileGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: matrix-profile-foundation
-        package_version:
-          index_url: https://pypi.org/simple
-          name: matrixprofile
-        repository: matrixprofile
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: matrixprofile
+    run:
+      release_notes:
+        organization: matrix-profile-foundation
+        repository: matrixprofile
+        tag_version_prefix: v

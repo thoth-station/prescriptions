@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyCpuinfoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: workhorsy
-        package_version:
-          index_url: https://pypi.org/simple
-          name: py-cpuinfo
-        repository: py-cpuinfo
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: py-cpuinfo
+    run:
+      release_notes:
+        organization: workhorsy
+        repository: py-cpuinfo
+        tag_version_prefix: v

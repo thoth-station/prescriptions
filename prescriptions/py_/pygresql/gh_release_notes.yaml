@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PygresqlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: PyGreSQL
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pygresql
-        repository: PyGreSQL
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pygresql
+    run:
+      release_notes:
+        organization: PyGreSQL
+        repository: PyGreSQL

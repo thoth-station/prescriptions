@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: StupsCliSupportGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zalando-stups
-        package_version:
-          index_url: https://pypi.org/simple
-          name: stups-cli-support
-        repository: stups-cli-support
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: stups-cli-support
+    run:
+      release_notes:
+        organization: zalando-stups
+        repository: stups-cli-support

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoCeleryResultsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: celery
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-celery-results
-        repository: django-celery-results
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-celery-results
+    run:
+      release_notes:
+        organization: celery
+        repository: django-celery-results
+        tag_version_prefix: v

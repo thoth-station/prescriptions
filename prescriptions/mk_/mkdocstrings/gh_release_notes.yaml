@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MkdocstringsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mkdocstrings
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mkdocstrings
-        repository: mkdocstrings
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mkdocstrings
+    run:
+      release_notes:
+        organization: mkdocstrings
+        repository: mkdocstrings

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MwparserfromhellGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: earwig
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mwparserfromhell
-        repository: mwparserfromhell
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mwparserfromhell
+    run:
+      release_notes:
+        organization: earwig
+        repository: mwparserfromhell
+        tag_version_prefix: v

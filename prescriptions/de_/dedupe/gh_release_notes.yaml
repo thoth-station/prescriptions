@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DedupeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dedupeio
-        package_version:
-          index_url: https://pypi.org/simple
-          name: dedupe
-        repository: dedupe
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: dedupe
+    run:
+      release_notes:
+        organization: dedupeio
+        repository: dedupe
+        tag_version_prefix: v

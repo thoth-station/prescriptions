@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PronouncingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aparrish
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pronouncing
-        repository: pronouncingpy
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pronouncing
+    run:
+      release_notes:
+        organization: aparrish
+        repository: pronouncingpy

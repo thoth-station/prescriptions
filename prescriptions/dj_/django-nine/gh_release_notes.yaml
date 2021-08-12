@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoNineGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: barseghyanartur
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-nine
-        repository: django-nine
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-nine
+    run:
+      release_notes:
+        organization: barseghyanartur
+        repository: django-nine

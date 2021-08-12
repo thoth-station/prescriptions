@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PylintQuotesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: edaniszewski
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pylint-quotes
-        repository: pylint-quotes
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pylint-quotes
+    run:
+      release_notes:
+        organization: edaniszewski
+        repository: pylint-quotes

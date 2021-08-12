@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PidGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: trbs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pid
-        repository: pid
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pid
+    run:
+      release_notes:
+        organization: trbs
+        repository: pid

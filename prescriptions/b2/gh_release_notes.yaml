@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: B2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Backblaze
-        package_version:
-          index_url: https://pypi.org/simple
-          name: b2
-        repository: B2_Command_Line_Tool
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: b2
+    run:
+      release_notes:
+        organization: Backblaze
+        repository: B2_Command_Line_Tool
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PdocGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mitmproxy
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pdoc
-        repository: pdoc
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pdoc
+    run:
+      release_notes:
+        organization: mitmproxy
+        repository: pdoc
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AiohttpCorsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aio-libs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aiohttp-cors
-        repository: aiohttp-cors
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aiohttp-cors
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: aiohttp-cors
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestXprocessGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pytest-dev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-xprocess
-        repository: pytest-xprocess
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-xprocess
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-xprocess

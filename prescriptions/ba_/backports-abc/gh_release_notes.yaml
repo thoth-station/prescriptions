@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BackportsAbcGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cython
-        package_version:
-          index_url: https://pypi.org/simple
-          name: backports-abc
-        repository: backports_abc
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: backports-abc
+    run:
+      release_notes:
+        organization: cython
+        repository: backports_abc

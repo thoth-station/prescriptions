@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CryptographyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pyca
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cryptography
-        repository: cryptography
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cryptography
+    run:
+      release_notes:
+        organization: pyca
+        repository: cryptography

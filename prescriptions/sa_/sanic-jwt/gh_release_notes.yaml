@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SanicJwtGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ahopkins
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sanic-jwt
-        repository: sanic-jwt
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sanic-jwt
+    run:
+      release_notes:
+        organization: ahopkins
+        repository: sanic-jwt
+        tag_version_prefix: v

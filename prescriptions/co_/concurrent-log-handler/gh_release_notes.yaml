@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ConcurrentLogHandlerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Preston-Landers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: concurrent-log-handler
-        repository: concurrent-log-handler
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: concurrent-log-handler
+    run:
+      release_notes:
+        organization: Preston-Landers
+        repository: concurrent-log-handler

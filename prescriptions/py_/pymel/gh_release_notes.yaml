@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PymelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Lumapictures
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pymel
-        repository: pymel
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pymel
+    run:
+      release_notes:
+        organization: Lumapictures
+        repository: pymel

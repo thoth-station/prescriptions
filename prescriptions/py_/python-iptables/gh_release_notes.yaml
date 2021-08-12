@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonIptablesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ldx
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-iptables
-        repository: python-iptables
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-iptables
+    run:
+      release_notes:
+        organization: ldx
+        repository: python-iptables
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CodeownersGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sbdchd
-        package_version:
-          index_url: https://pypi.org/simple
-          name: codeowners
-        repository: codeowners
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: codeowners
+    run:
+      release_notes:
+        organization: sbdchd
+        repository: codeowners
+        tag_version_prefix: v

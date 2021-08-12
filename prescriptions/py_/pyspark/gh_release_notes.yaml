@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PysparkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: apache
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyspark
-        repository: spark
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyspark
+    run:
+      release_notes:
+        organization: apache
+        repository: spark
+        tag_version_prefix: v

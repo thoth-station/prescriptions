@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FastapiUtilsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dmontagu
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fastapi-utils
-        repository: fastapi-utils
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fastapi-utils
+    run:
+      release_notes:
+        organization: dmontagu
+        repository: fastapi-utils
+        tag_version_prefix: v

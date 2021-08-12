@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskSslifyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kennethreitz
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-sslify
-        repository: flask-sslify
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-sslify
+    run:
+      release_notes:
+        organization: kennethreitz
+        repository: flask-sslify
+        tag_version_prefix: v

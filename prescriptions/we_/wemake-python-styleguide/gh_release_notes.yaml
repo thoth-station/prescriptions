@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: WemakePythonStyleguideGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wemake-services
-        package_version:
-          index_url: https://pypi.org/simple
-          name: wemake-python-styleguide
-        repository: wemake-python-styleguide
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: wemake-python-styleguide
+    run:
+      release_notes:
+        organization: wemake-services
+        repository: wemake-python-styleguide

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JwtGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: GehirnInc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jwt
-        repository: python-jwt
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jwt
+    run:
+      release_notes:
+        organization: GehirnInc
+        repository: python-jwt
+        tag_version_prefix: v

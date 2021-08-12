@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PokedexPyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: PokeDevs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pokedex-py
-        repository: pokedex.py
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pokedex-py
+    run:
+      release_notes:
+        organization: PokeDevs
+        repository: pokedex.py
+        tag_version_prefix: v

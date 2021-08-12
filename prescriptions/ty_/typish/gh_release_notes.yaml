@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TypishGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ramonhagenaars
-        package_version:
-          index_url: https://pypi.org/simple
-          name: typish
-        repository: typish
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: typish
+    run:
+      release_notes:
+        organization: ramonhagenaars
+        repository: typish
+        tag_version_prefix: v

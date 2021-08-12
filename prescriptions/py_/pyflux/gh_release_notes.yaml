@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyfluxGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rjt1990
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyflux
-        repository: pyflux
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyflux
+    run:
+      release_notes:
+        organization: rjt1990
+        repository: pyflux

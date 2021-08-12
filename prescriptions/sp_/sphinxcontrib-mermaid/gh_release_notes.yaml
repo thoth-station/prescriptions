@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SphinxcontribMermaidGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mgaitan
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sphinxcontrib-mermaid
-        repository: sphinxcontrib-mermaid
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sphinxcontrib-mermaid
+    run:
+      release_notes:
+        organization: mgaitan
+        repository: sphinxcontrib-mermaid

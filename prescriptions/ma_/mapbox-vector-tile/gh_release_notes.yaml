@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MapboxVectorTileGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tilezen
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mapbox-vector-tile
-        repository: mapbox-vector-tile
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mapbox-vector-tile
+    run:
+      release_notes:
+        organization: tilezen
+        repository: mapbox-vector-tile
+        tag_version_prefix: v

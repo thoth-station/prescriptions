@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pywin32CtypesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: enthought
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pywin32-ctypes
-        repository: pywin32-ctypes
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pywin32-ctypes
+    run:
+      release_notes:
+        organization: enthought
+        repository: pywin32-ctypes
+        tag_version_prefix: v

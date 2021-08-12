@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PycaretGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pycaret
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pycaret
-        repository: pycaret
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pycaret
+    run:
+      release_notes:
+        organization: pycaret
+        repository: pycaret

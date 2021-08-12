@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonTelegramBotGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-telegram-bot
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-telegram-bot
-        repository: python-telegram-bot
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-telegram-bot
+    run:
+      release_notes:
+        organization: python-telegram-bot
+        repository: python-telegram-bot

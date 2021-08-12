@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Py3PinterestGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: bstoilov
-        package_version:
-          index_url: https://pypi.org/simple
-          name: py3-pinterest
-        repository: py3-pinterest
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: py3-pinterest
+    run:
+      release_notes:
+        organization: bstoilov
+        repository: py3-pinterest

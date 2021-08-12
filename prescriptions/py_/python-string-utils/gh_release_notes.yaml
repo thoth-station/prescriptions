@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonStringUtilsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: daveoncode
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-string-utils
-        repository: python-string-utils
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-string-utils
+    run:
+      release_notes:
+        organization: daveoncode
+        repository: python-string-utils
+        tag_version_prefix: v

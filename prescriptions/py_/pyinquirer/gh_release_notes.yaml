@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyinquirerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: CITGuru
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyinquirer
-        repository: PyInquirer
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyinquirer
+    run:
+      release_notes:
+        organization: CITGuru
+        repository: PyInquirer

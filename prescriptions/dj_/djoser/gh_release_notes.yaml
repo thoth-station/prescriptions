@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjoserGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sunscrapers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: djoser
-        repository: djoser
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: djoser
+    run:
+      release_notes:
+        organization: sunscrapers
+        repository: djoser

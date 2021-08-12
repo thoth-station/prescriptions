@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SqlacodegenGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: agronholm
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sqlacodegen
-        repository: sqlacodegen
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sqlacodegen
+    run:
+      release_notes:
+        organization: agronholm
+        repository: sqlacodegen

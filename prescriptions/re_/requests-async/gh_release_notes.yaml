@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RequestsAsyncGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: encode
-        package_version:
-          index_url: https://pypi.org/simple
-          name: requests-async
-        repository: requests-async
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: requests-async
+    run:
+      release_notes:
+        organization: encode
+        repository: requests-async

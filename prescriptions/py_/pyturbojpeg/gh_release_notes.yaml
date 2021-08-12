@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyturbojpegGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lilohuang
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyturbojpeg
-        repository: PyTurboJPEG
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyturbojpeg
+    run:
+      release_notes:
+        organization: lilohuang
+        repository: PyTurboJPEG
+        tag_version_prefix: v

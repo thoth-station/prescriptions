@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Tf2crfGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: xuxingya
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tf2crf
-        repository: tf2crf
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tf2crf
+    run:
+      release_notes:
+        organization: xuxingya
+        repository: tf2crf
+        tag_version_prefix: v

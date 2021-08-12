@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: OpentracingInstrumentationGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: uber-common
-        package_version:
-          index_url: https://pypi.org/simple
-          name: opentracing-instrumentation
-        repository: opentracing-python-instrumentation
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: opentracing-instrumentation
+    run:
+      release_notes:
+        organization: uber-common
+        repository: opentracing-python-instrumentation

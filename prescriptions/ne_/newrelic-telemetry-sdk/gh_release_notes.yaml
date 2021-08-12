@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NewrelicTelemetrySdkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: newrelic
-        package_version:
-          index_url: https://pypi.org/simple
-          name: newrelic-telemetry-sdk
-        repository: newrelic-telemetry-sdk-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: newrelic-telemetry-sdk
+    run:
+      release_notes:
+        organization: newrelic
+        repository: newrelic-telemetry-sdk-python
+        tag_version_prefix: v

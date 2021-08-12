@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JupyterSphinxGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jupyter
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jupyter-sphinx
-        repository: jupyter-sphinx
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jupyter-sphinx
+    run:
+      release_notes:
+        organization: jupyter
+        repository: jupyter-sphinx
+        tag_version_prefix: v

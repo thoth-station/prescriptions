@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ScryptGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: holgern
-        package_version:
-          index_url: https://pypi.org/simple
-          name: scrypt
-        repository: py-scrypt
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: scrypt
+    run:
+      release_notes:
+        organization: holgern
+        repository: py-scrypt
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ParselGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scrapy
-        package_version:
-          index_url: https://pypi.org/simple
-          name: parsel
-        repository: parsel
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: parsel
+    run:
+      release_notes:
+        organization: scrapy
+        repository: parsel
+        tag_version_prefix: v

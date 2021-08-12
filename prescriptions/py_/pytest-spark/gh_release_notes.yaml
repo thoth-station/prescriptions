@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestSparkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: malexer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-spark
-        repository: pytest-spark
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-spark
+    run:
+      release_notes:
+        organization: malexer
+        repository: pytest-spark

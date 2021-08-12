@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: GvizApiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: google
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gviz-api
-        repository: google-visualization-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gviz-api
+    run:
+      release_notes:
+        organization: google
+        repository: google-visualization-python

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FissixGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jreese
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fissix
-        repository: fissix
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fissix
+    run:
+      release_notes:
+        organization: jreese
+        repository: fissix
+        tag_version_prefix: v

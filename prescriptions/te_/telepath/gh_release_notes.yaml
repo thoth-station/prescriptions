@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TelepathGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wagtail
-        package_version:
-          index_url: https://pypi.org/simple
-          name: telepath
-        repository: telepath
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: telepath
+    run:
+      release_notes:
+        organization: wagtail
+        repository: telepath
+        tag_version_prefix: v

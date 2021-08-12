@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SklearnPandasGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scikit-learn-contrib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sklearn-pandas
-        repository: sklearn-pandas
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sklearn-pandas
+    run:
+      release_notes:
+        organization: scikit-learn-contrib
+        repository: sklearn-pandas
+        tag_version_prefix: v

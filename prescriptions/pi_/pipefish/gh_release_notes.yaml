@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PipefishGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pytest-buildkite
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pipefish
-        repository: pipefish
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pipefish
+    run:
+      release_notes:
+        organization: pytest-buildkite
+        repository: pipefish

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: WorkalendarGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: workalendar
-        package_version:
-          index_url: https://pypi.org/simple
-          name: workalendar
-        repository: workalendar
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: workalendar
+    run:
+      release_notes:
+        organization: workalendar
+        repository: workalendar

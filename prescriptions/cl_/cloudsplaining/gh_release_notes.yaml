@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CloudsplainingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: salesforce
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cloudsplaining
-        repository: cloudsplaining
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cloudsplaining
+    run:
+      release_notes:
+        organization: salesforce
+        repository: cloudsplaining

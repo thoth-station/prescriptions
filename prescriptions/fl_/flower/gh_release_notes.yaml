@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlowerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mher
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flower
-        repository: flower
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flower
+    run:
+      release_notes:
+        organization: mher
+        repository: flower
+        tag_version_prefix: v

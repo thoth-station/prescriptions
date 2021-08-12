@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CloudantGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cloudant
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cloudant
-        repository: python-cloudant
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cloudant
+    run:
+      release_notes:
+        organization: cloudant
+        repository: python-cloudant

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: KafkaPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dpkp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kafka-python
-        repository: kafka-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kafka-python
+    run:
+      release_notes:
+        organization: dpkp
+        repository: kafka-python

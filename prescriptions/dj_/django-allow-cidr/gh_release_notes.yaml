@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoAllowCidrGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mozmeao
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-allow-cidr
-        repository: django-allow-cidr
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-allow-cidr
+    run:
+      release_notes:
+        organization: mozmeao
+        repository: django-allow-cidr
+        tag_version_prefix: v

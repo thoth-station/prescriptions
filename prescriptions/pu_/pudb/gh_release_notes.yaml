@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PudbGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: inducer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pudb
-        repository: pudb
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pudb
+    run:
+      release_notes:
+        organization: inducer
+        repository: pudb
+        tag_version_prefix: v

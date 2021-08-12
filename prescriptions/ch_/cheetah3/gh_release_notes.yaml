@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Cheetah3GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: CheetahTemplate3
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cheetah3
-        repository: cheetah3
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cheetah3
+    run:
+      release_notes:
+        organization: CheetahTemplate3
+        repository: cheetah3

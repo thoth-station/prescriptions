@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: GastGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: serge-sans-paille
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gast
-        repository: gast
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gast
+    run:
+      release_notes:
+        organization: serge-sans-paille
+        repository: gast

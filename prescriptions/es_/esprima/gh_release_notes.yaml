@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: EsprimaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Kronuz
-        package_version:
-          index_url: https://pypi.org/simple
-          name: esprima
-        repository: esprima-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: esprima
+    run:
+      release_notes:
+        organization: Kronuz
+        repository: esprima-python
+        tag_version_prefix: v

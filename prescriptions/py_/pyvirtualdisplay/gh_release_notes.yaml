@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyvirtualdisplayGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ponty
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyvirtualdisplay
-        repository: pyvirtualdisplay
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyvirtualdisplay
+    run:
+      release_notes:
+        organization: ponty
+        repository: pyvirtualdisplay

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PandarallelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: nalepae
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pandarallel
-        repository: pandarallel
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pandarallel
+    run:
+      release_notes:
+        organization: nalepae
+        repository: pandarallel
+        tag_version_prefix: v

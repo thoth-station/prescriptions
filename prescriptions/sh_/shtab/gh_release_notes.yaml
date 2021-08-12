@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ShtabGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: iterative
-        package_version:
-          index_url: https://pypi.org/simple
-          name: shtab
-        repository: shtab
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: shtab
+    run:
+      release_notes:
+        organization: iterative
+        repository: shtab
+        tag_version_prefix: v

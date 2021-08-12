@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CommentjsonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: vaidik
-        package_version:
-          index_url: https://pypi.org/simple
-          name: commentjson
-        repository: commentjson
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: commentjson
+    run:
+      release_notes:
+        organization: vaidik
+        repository: commentjson
+        tag_version_prefix: v

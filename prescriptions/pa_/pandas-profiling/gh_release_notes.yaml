@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PandasProfilingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pandas-profiling
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pandas-profiling
-        repository: pandas-profiling
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pandas-profiling
+    run:
+      release_notes:
+        organization: pandas-profiling
+        repository: pandas-profiling
+        tag_version_prefix: v

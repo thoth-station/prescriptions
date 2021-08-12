@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoHealthCheckGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: KristianOellegaard
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-health-check
-        repository: django-health-check
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-health-check
+    run:
+      release_notes:
+        organization: KristianOellegaard
+        repository: django-health-check

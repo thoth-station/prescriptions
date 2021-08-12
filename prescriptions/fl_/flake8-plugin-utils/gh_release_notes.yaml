@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Flake8PluginUtilsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: afonasev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-plugin-utils
-        repository: flake8-plugin-utils
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-plugin-utils
+    run:
+      release_notes:
+        organization: afonasev
+        repository: flake8-plugin-utils
+        tag_version_prefix: v

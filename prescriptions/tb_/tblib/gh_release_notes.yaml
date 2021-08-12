@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TblibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ionelmc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tblib
-        repository: python-tblib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tblib
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-tblib
+        tag_version_prefix: v

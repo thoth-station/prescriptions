@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: KeyringGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jaraco
-        package_version:
-          index_url: https://pypi.org/simple
-          name: keyring
-        repository: keyring
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: keyring
+    run:
+      release_notes:
+        organization: jaraco
+        repository: keyring

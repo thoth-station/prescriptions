@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TrioWebsocketGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: HyperionGray
-        package_version:
-          index_url: https://pypi.org/simple
-          name: trio-websocket
-        repository: trio-websocket
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: trio-websocket
+    run:
+      release_notes:
+        organization: HyperionGray
+        repository: trio-websocket

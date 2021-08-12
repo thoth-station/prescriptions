@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AwsEncryptionSdkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aws
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aws-encryption-sdk
-        repository: aws-encryption-sdk-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aws-encryption-sdk
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-encryption-sdk-python
+        tag_version_prefix: v

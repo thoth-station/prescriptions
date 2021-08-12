@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoFakeModelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: erm0l0v
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-fake-model
-        repository: django-fake-model
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-fake-model
+    run:
+      release_notes:
+        organization: erm0l0v
+        repository: django-fake-model

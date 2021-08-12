@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ZeroconfGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jstasiak
-        package_version:
-          index_url: https://pypi.org/simple
-          name: zeroconf
-        repository: python-zeroconf
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: zeroconf
+    run:
+      release_notes:
+        organization: jstasiak
+        repository: python-zeroconf

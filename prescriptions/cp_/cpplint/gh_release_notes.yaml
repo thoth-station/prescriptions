@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CpplintGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cpplint
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cpplint
-        repository: cpplint
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cpplint
+    run:
+      release_notes:
+        organization: cpplint
+        repository: cpplint

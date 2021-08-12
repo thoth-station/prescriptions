@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestSanicGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: yunstanford
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-sanic
-        repository: pytest-sanic
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-sanic
+    run:
+      release_notes:
+        organization: yunstanford
+        repository: pytest-sanic
+        tag_version_prefix: v

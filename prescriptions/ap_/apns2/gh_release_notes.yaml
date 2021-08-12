@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Apns2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Pr0Ger
-        package_version:
-          index_url: https://pypi.org/simple
-          name: apns2
-        repository: PyAPNs2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: apns2
+    run:
+      release_notes:
+        organization: Pr0Ger
+        repository: PyAPNs2

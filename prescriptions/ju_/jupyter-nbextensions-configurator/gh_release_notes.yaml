@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JupyterNbextensionsConfiguratorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jupyter-contrib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jupyter-nbextensions-configurator
-        repository: jupyter_nbextensions_configurator
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jupyter-nbextensions-configurator
+    run:
+      release_notes:
+        organization: jupyter-contrib
+        repository: jupyter_nbextensions_configurator

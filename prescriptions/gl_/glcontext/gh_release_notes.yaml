@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: GlcontextGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: moderngl
-        package_version:
-          index_url: https://pypi.org/simple
-          name: glcontext
-        repository: glcontext
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: glcontext
+    run:
+      release_notes:
+        organization: moderngl
+        repository: glcontext

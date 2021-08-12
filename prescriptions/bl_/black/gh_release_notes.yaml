@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BlackGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: psf
-        package_version:
-          index_url: https://pypi.org/simple
-          name: black
-        repository: black
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: black
+    run:
+      release_notes:
+        organization: psf
+        repository: black

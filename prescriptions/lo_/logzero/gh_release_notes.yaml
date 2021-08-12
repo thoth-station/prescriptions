@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: LogzeroGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: metachris
-        package_version:
-          index_url: https://pypi.org/simple
-          name: logzero
-        repository: logzero
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: logzero
+    run:
+      release_notes:
+        organization: metachris
+        repository: logzero
+        tag_version_prefix: v

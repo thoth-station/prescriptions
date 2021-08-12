@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PysparkStubsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zero323
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyspark-stubs
-        repository: pyspark-stubs
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyspark-stubs
+    run:
+      release_notes:
+        organization: zero323
+        repository: pyspark-stubs

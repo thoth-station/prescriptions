@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TimesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: nvie
-        package_version:
-          index_url: https://pypi.org/simple
-          name: times
-        repository: times
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: times
+    run:
+      release_notes:
+        organization: nvie
+        repository: times

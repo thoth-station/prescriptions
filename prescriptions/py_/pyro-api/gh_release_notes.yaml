@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyroApiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pyro-ppl
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyro-api
-        repository: pyro-api
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyro-api
+    run:
+      release_notes:
+        organization: pyro-ppl
+        repository: pyro-api

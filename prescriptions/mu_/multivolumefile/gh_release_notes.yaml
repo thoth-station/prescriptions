@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MultivolumefileGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: miurahr
-        package_version:
-          index_url: https://pypi.org/simple
-          name: multivolumefile
-        repository: multivolume
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: multivolumefile
+    run:
+      release_notes:
+        organization: miurahr
+        repository: multivolume
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AriadneGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mirumee
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ariadne
-        repository: ariadne
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ariadne
+    run:
+      release_notes:
+        organization: mirumee
+        repository: ariadne

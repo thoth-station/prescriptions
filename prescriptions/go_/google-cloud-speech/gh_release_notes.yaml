@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudSpeechGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-speech
-        repository: python-speech
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-speech
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-speech
+        tag_version_prefix: v

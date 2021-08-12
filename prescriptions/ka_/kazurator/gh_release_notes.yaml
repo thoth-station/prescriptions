@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: KazuratorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pseudomuto
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kazurator
-        repository: kazurator
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kazurator
+    run:
+      release_notes:
+        organization: pseudomuto
+        repository: kazurator

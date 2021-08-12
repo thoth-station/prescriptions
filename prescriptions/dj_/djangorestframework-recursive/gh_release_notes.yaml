@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangorestframeworkRecursiveGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: heywbj
-        package_version:
-          index_url: https://pypi.org/simple
-          name: djangorestframework-recursive
-        repository: django-rest-framework-recursive
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: djangorestframework-recursive
+    run:
+      release_notes:
+        organization: heywbj
+        repository: django-rest-framework-recursive

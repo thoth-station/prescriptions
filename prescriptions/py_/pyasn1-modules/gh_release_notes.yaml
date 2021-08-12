@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pyasn1ModulesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: etingof
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyasn1-modules
-        repository: pyasn1-modules
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyasn1-modules
+    run:
+      release_notes:
+        organization: etingof
+        repository: pyasn1-modules
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AvroGenGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rbystrit
-        package_version:
-          index_url: https://pypi.org/simple
-          name: avro-gen
-        repository: avro_gen
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: avro-gen
+    run:
+      release_notes:
+        organization: rbystrit
+        repository: avro_gen

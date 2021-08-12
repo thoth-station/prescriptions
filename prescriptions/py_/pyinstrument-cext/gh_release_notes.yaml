@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyinstrumentCextGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: joerick
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyinstrument-cext
-        repository: pyinstrument_cext
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyinstrument-cext
+    run:
+      release_notes:
+        organization: joerick
+        repository: pyinstrument_cext
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestCasesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: smarie
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-cases
-        repository: python-pytest-cases
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-cases
+    run:
+      release_notes:
+        organization: smarie
+        repository: python-pytest-cases

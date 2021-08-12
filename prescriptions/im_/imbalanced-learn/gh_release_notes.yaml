@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ImbalancedLearnGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scikit-learn-contrib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: imbalanced-learn
-        repository: imbalanced-learn
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: imbalanced-learn
+    run:
+      release_notes:
+        organization: scikit-learn-contrib
+        repository: imbalanced-learn

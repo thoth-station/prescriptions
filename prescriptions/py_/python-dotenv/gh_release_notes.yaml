@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonDotenvGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: theskumar
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-dotenv
-        repository: python-dotenv
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-dotenv
+    run:
+      release_notes:
+        organization: theskumar
+        repository: python-dotenv
+        tag_version_prefix: v

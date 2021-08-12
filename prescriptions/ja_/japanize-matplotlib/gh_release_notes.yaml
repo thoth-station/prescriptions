@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JapanizeMatplotlibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: uehara1414
-        package_version:
-          index_url: https://pypi.org/simple
-          name: japanize-matplotlib
-        repository: japanize-matplotlib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: japanize-matplotlib
+    run:
+      release_notes:
+        organization: uehara1414
+        repository: japanize-matplotlib
+        tag_version_prefix: v

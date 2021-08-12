@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PywaveletsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: PyWavelets
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pywavelets
-        repository: pywt
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pywavelets
+    run:
+      release_notes:
+        organization: PyWavelets
+        repository: pywt
+        tag_version_prefix: v

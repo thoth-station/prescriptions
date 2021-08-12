@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MarshmallowJsonapiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: marshmallow-code
-        package_version:
-          index_url: https://pypi.org/simple
-          name: marshmallow-jsonapi
-        repository: marshmallow-jsonapi
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: marshmallow-jsonapi
+    run:
+      release_notes:
+        organization: marshmallow-code
+        repository: marshmallow-jsonapi

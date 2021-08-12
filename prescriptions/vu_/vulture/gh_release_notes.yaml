@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: VultureGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jendrikseipp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: vulture
-        repository: vulture
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: vulture
+    run:
+      release_notes:
+        organization: jendrikseipp
+        repository: vulture
+        tag_version_prefix: v

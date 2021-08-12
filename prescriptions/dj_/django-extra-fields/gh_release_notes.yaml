@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoExtraFieldsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Hipo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-extra-fields
-        repository: drf-extra-fields
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-extra-fields
+    run:
+      release_notes:
+        organization: Hipo
+        repository: drf-extra-fields
+        tag_version_prefix: v

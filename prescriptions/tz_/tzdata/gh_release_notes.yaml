@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TzdataGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tzdata
-        repository: tzdata
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tzdata
+    run:
+      release_notes:
+        organization: python
+        repository: tzdata

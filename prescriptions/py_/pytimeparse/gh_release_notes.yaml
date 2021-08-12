@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytimeparseGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wroberts
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytimeparse
-        repository: pytimeparse
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytimeparse
+    run:
+      release_notes:
+        organization: wroberts
+        repository: pytimeparse

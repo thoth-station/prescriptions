@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonOwaspZapV2-4GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zaproxy
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-owasp-zap-v2-4
-        repository: zap-api-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-owasp-zap-v2-4
+    run:
+      release_notes:
+        organization: zaproxy
+        repository: zap-api-python

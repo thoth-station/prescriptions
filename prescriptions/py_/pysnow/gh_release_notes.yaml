@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PysnowGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rbw
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pysnow
-        repository: pysnow
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pysnow
+    run:
+      release_notes:
+        organization: rbw
+        repository: pysnow

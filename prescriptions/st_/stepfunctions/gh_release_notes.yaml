@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: StepfunctionsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aws
-        package_version:
-          index_url: https://pypi.org/simple
-          name: stepfunctions
-        repository: aws-step-functions-data-science-sdk-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: stepfunctions
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-step-functions-data-science-sdk-python
+        tag_version_prefix: v

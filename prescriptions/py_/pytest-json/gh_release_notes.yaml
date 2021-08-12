@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestJsonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mattcl
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-json
-        repository: pytest-json
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-json
+    run:
+      release_notes:
+        organization: mattcl
+        repository: pytest-json

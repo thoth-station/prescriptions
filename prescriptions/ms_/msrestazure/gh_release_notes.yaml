@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MsrestazureGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Azure
-        package_version:
-          index_url: https://pypi.org/simple
-          name: msrestazure
-        repository: msrestazure-for-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: msrestazure
+    run:
+      release_notes:
+        organization: Azure
+        repository: msrestazure-for-python
+        tag_version_prefix: v

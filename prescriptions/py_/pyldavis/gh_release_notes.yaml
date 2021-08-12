@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyldavisGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: bmabey
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyldavis
-        repository: pyLDAvis
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyldavis
+    run:
+      release_notes:
+        organization: bmabey
+        repository: pyLDAvis

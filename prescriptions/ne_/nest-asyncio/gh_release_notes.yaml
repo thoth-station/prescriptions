@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NestAsyncioGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: erdewit
-        package_version:
-          index_url: https://pypi.org/simple
-          name: nest-asyncio
-        repository: nest_asyncio
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: nest-asyncio
+    run:
+      release_notes:
+        organization: erdewit
+        repository: nest_asyncio
+        tag_version_prefix: v

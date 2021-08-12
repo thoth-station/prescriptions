@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PwlfGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cjekel
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pwlf
-        repository: piecewise_linear_fit_py
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pwlf
+    run:
+      release_notes:
+        organization: cjekel
+        repository: piecewise_linear_fit_py
+        tag_version_prefix: v

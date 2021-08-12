@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MatrixClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: matrix-org
-        package_version:
-          index_url: https://pypi.org/simple
-          name: matrix-client
-        repository: matrix-python-sdk
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: matrix-client
+    run:
+      release_notes:
+        organization: matrix-org
+        repository: matrix-python-sdk
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TelebotGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: KyleJamesWalker
-        package_version:
-          index_url: https://pypi.org/simple
-          name: telebot
-        repository: telebot
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: telebot
+    run:
+      release_notes:
+        organization: KyleJamesWalker
+        repository: telebot
+        tag_version_prefix: v

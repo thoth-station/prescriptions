@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AsammdfGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: danielhrisca
-        package_version:
-          index_url: https://pypi.org/simple
-          name: asammdf
-        repository: asammdf
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: asammdf
+    run:
+      release_notes:
+        organization: danielhrisca
+        repository: asammdf

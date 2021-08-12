@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PetastormGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: uber
-        package_version:
-          index_url: https://pypi.org/simple
-          name: petastorm
-        repository: petastorm
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: petastorm
+    run:
+      release_notes:
+        organization: uber
+        repository: petastorm
+        tag_version_prefix: v

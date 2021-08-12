@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PillowGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-pillow
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pillow
-        repository: Pillow
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pillow
+    run:
+      release_notes:
+        organization: python-pillow
+        repository: Pillow

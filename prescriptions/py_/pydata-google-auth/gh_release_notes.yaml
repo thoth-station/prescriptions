@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PydataGoogleAuthGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pydata
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pydata-google-auth
-        repository: pydata-google-auth
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pydata-google-auth
+    run:
+      release_notes:
+        organization: pydata
+        repository: pydata-google-auth

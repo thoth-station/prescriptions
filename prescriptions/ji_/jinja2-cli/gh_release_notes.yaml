@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Jinja2CliGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mattrobenolt
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jinja2-cli
-        repository: jinja2-cli
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jinja2-cli
+    run:
+      release_notes:
+        organization: mattrobenolt
+        repository: jinja2-cli

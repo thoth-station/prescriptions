@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GspreadGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: burnash
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gspread
-        repository: gspread
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gspread
+    run:
+      release_notes:
+        organization: burnash
+        repository: gspread
+        tag_version_prefix: v

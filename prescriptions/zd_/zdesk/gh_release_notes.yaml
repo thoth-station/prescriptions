@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ZdeskGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: fprimex
-        package_version:
-          index_url: https://pypi.org/simple
-          name: zdesk
-        repository: zdesk
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: zdesk
+    run:
+      release_notes:
+        organization: fprimex
+        repository: zdesk

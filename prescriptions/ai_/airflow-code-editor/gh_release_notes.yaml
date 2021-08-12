@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AirflowCodeEditorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: andreax79
-        package_version:
-          index_url: https://pypi.org/simple
-          name: airflow-code-editor
-        repository: airflow-code-editor
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: airflow-code-editor
+    run:
+      release_notes:
+        organization: andreax79
+        repository: airflow-code-editor
+        tag_version_prefix: v

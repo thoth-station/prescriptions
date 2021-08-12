@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyhumpsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: nficano
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyhumps
-        repository: humps
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyhumps
+    run:
+      release_notes:
+        organization: nficano
+        repository: humps
+        tag_version_prefix: v

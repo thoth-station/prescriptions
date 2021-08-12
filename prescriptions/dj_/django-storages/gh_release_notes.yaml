@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoStoragesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jschneier
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-storages
-        repository: django-storages
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-storages
+    run:
+      release_notes:
+        organization: jschneier
+        repository: django-storages

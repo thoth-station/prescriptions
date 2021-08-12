@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudNdbGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-ndb
-        repository: python-ndb
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-ndb
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-ndb
+        tag_version_prefix: v

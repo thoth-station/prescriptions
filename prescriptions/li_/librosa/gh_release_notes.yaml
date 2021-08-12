@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: LibrosaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: librosa
-        package_version:
-          index_url: https://pypi.org/simple
-          name: librosa
-        repository: librosa
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: librosa
+    run:
+      release_notes:
+        organization: librosa
+        repository: librosa

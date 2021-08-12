@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AwesomeversionGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ludeeus
-        package_version:
-          index_url: https://pypi.org/simple
-          name: awesomeversion
-        repository: awesomeversion
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: awesomeversion
+    run:
+      release_notes:
+        organization: ludeeus
+        repository: awesomeversion

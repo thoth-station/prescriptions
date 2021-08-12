@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SorlThumbnailGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jazzband
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sorl-thumbnail
-        repository: sorl-thumbnail
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sorl-thumbnail
+    run:
+      release_notes:
+        organization: jazzband
+        repository: sorl-thumbnail
+        tag_version_prefix: v

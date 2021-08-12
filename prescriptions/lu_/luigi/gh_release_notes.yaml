@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: LuigiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: spotify
-        package_version:
-          index_url: https://pypi.org/simple
-          name: luigi
-        repository: luigi
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: luigi
+    run:
+      release_notes:
+        organization: spotify
+        repository: luigi

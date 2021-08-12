@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AwsCdkPipelinesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aws
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aws-cdk-pipelines
-        repository: aws-cdk
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aws-cdk-pipelines
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-cdk
+        tag_version_prefix: v

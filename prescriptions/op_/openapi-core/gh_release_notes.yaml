@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: OpenapiCoreGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: p1c2u
-        package_version:
-          index_url: https://pypi.org/simple
-          name: openapi-core
-        repository: openapi-core
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: openapi-core
+    run:
+      release_notes:
+        organization: p1c2u
+        repository: openapi-core

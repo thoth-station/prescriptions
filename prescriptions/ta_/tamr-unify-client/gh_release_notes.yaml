@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TamrUnifyClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Datatamer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tamr-unify-client
-        repository: tamr-client
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tamr-unify-client
+    run:
+      release_notes:
+        organization: Datatamer
+        repository: tamr-client
+        tag_version_prefix: v

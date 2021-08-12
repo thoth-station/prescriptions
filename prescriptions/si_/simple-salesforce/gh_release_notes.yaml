@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SimpleSalesforceGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: simple-salesforce
-        package_version:
-          index_url: https://pypi.org/simple
-          name: simple-salesforce
-        repository: simple-salesforce
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: simple-salesforce
+    run:
+      release_notes:
+        organization: simple-salesforce
+        repository: simple-salesforce
+        tag_version_prefix: v

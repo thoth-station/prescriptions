@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonBidiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: MeirKriheli
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-bidi
-        repository: python-bidi
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-bidi
+    run:
+      release_notes:
+        organization: MeirKriheli
+        repository: python-bidi
+        tag_version_prefix: v

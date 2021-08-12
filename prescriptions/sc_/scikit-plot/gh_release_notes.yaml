@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ScikitPlotGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: reiinakano
-        package_version:
-          index_url: https://pypi.org/simple
-          name: scikit-plot
-        repository: scikit-plot
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: scikit-plot
+    run:
+      release_notes:
+        organization: reiinakano
+        repository: scikit-plot
+        tag_version_prefix: v

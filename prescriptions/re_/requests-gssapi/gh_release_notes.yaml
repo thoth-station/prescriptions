@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RequestsGssapiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pythongssapi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: requests-gssapi
-        repository: requests-gssapi
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: requests-gssapi
+    run:
+      release_notes:
+        organization: pythongssapi
+        repository: requests-gssapi
+        tag_version_prefix: v

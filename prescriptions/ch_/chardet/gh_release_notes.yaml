@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ChardetGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: chardet
-        package_version:
-          index_url: https://pypi.org/simple
-          name: chardet
-        repository: chardet
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: chardet
+    run:
+      release_notes:
+        organization: chardet
+        repository: chardet

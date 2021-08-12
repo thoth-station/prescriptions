@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: GrapheneFederationGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: preply
-        package_version:
-          index_url: https://pypi.org/simple
-          name: graphene-federation
-        repository: graphene-federation
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: graphene-federation
+    run:
+      release_notes:
+        organization: preply
+        repository: graphene-federation

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: NwdiagGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: blockdiag
-        package_version:
-          index_url: https://pypi.org/simple
-          name: nwdiag
-        repository: nwdiag
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: nwdiag
+    run:
+      release_notes:
+        organization: blockdiag
+        repository: nwdiag

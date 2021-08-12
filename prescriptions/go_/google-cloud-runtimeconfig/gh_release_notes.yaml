@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudRuntimeconfigGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-runtimeconfig
-        repository: python-runtimeconfig
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-runtimeconfig
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-runtimeconfig
+        tag_version_prefix: v

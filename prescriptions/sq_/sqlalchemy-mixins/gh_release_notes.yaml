@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SqlalchemyMixinsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: absent1706
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sqlalchemy-mixins
-        repository: sqlalchemy-mixins
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sqlalchemy-mixins
+    run:
+      release_notes:
+        organization: absent1706
+        repository: sqlalchemy-mixins
+        tag_version_prefix: v

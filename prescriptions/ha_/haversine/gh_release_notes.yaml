@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: HaversineGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mapado
-        package_version:
-          index_url: https://pypi.org/simple
-          name: haversine
-        repository: haversine
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: haversine
+    run:
+      release_notes:
+        organization: mapado
+        repository: haversine
+        tag_version_prefix: v

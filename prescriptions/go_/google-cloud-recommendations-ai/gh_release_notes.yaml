@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudRecommendationsAiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-recommendations-ai
-        repository: python-recommendations-ai
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-recommendations-ai
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-recommendations-ai
+        tag_version_prefix: v

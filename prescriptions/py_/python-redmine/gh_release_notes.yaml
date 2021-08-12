@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonRedmineGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: maxtepkeev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-redmine
-        repository: python-redmine
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-redmine
+    run:
+      release_notes:
+        organization: maxtepkeev
+        repository: python-redmine
+        tag_version_prefix: v

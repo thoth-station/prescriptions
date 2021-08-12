@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PdftotextGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jalan
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pdftotext
-        repository: pdftotext
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pdftotext
+    run:
+      release_notes:
+        organization: jalan
+        repository: pdftotext
+        tag_version_prefix: v

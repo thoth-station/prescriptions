@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pdf2imageGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Belval
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pdf2image
-        repository: pdf2image
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pdf2image
+    run:
+      release_notes:
+        organization: Belval
+        repository: pdf2image
+        tag_version_prefix: v

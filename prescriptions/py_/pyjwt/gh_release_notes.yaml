@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyjwtGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jpadilla
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyjwt
-        repository: pyjwt
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyjwt
+    run:
+      release_notes:
+        organization: jpadilla
+        repository: pyjwt

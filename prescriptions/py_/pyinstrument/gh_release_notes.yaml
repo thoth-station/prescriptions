@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyinstrumentGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: joerick
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyinstrument
-        repository: pyinstrument
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyinstrument
+    run:
+      release_notes:
+        organization: joerick
+        repository: pyinstrument
+        tag_version_prefix: v

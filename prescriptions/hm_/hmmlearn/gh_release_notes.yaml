@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: HmmlearnGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: hmmlearn
-        package_version:
-          index_url: https://pypi.org/simple
-          name: hmmlearn
-        repository: hmmlearn
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: hmmlearn
+    run:
+      release_notes:
+        organization: hmmlearn
+        repository: hmmlearn

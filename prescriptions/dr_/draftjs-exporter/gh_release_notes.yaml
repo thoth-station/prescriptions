@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DraftjsExporterGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: springload
-        package_version:
-          index_url: https://pypi.org/simple
-          name: draftjs-exporter
-        repository: draftjs_exporter
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: draftjs-exporter
+    run:
+      release_notes:
+        organization: springload
+        repository: draftjs_exporter
+        tag_version_prefix: v

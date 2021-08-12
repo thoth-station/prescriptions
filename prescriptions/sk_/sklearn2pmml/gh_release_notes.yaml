@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Sklearn2pmmlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jpmml
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sklearn2pmml
-        repository: sklearn2pmml
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sklearn2pmml
+    run:
+      release_notes:
+        organization: jpmml
+        repository: sklearn2pmml

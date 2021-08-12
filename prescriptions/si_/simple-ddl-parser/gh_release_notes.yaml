@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SimpleDdlParserGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: xnuinside
-        package_version:
-          index_url: https://pypi.org/simple
-          name: simple-ddl-parser
-        repository: simple-ddl-parser
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: simple-ddl-parser
+    run:
+      release_notes:
+        organization: xnuinside
+        repository: simple-ddl-parser
+        tag_version_prefix: v

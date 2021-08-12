@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TensorflowTransformGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tensorflow
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tensorflow-transform
-        repository: transform
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tensorflow-transform
+    run:
+      release_notes:
+        organization: tensorflow
+        repository: transform
+        tag_version_prefix: v

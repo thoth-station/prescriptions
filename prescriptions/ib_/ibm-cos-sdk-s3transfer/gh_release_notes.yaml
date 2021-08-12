@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: IbmCosSdkS3transferGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: IBM
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ibm-cos-sdk-s3transfer
-        repository: ibm-cos-sdk-python-s3transfer
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ibm-cos-sdk-s3transfer
+    run:
+      release_notes:
+        organization: IBM
+        repository: ibm-cos-sdk-python-s3transfer

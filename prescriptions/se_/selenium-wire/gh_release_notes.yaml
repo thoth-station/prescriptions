@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SeleniumWireGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wkeeling
-        package_version:
-          index_url: https://pypi.org/simple
-          name: selenium-wire
-        repository: selenium-wire
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: selenium-wire
+    run:
+      release_notes:
+        organization: wkeeling
+        repository: selenium-wire

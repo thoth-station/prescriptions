@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PiexifGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: hMatoba
-        package_version:
-          index_url: https://pypi.org/simple
-          name: piexif
-        repository: Piexif
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: piexif
+    run:
+      release_notes:
+        organization: hMatoba
+        repository: Piexif

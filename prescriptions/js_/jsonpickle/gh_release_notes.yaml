@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JsonpickleGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jsonpickle
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jsonpickle
-        repository: jsonpickle
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jsonpickle
+    run:
+      release_notes:
+        organization: jsonpickle
+        repository: jsonpickle
+        tag_version_prefix: v

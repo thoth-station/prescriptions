@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlakyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: box
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flaky
-        repository: flaky
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flaky
+    run:
+      release_notes:
+        organization: box
+        repository: flaky
+        tag_version_prefix: v

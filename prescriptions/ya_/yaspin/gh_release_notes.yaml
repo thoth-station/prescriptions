@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: YaspinGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pavdmyt
-        package_version:
-          index_url: https://pypi.org/simple
-          name: yaspin
-        repository: yaspin
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: yaspin
+    run:
+      release_notes:
+        organization: pavdmyt
+        repository: yaspin
+        tag_version_prefix: v

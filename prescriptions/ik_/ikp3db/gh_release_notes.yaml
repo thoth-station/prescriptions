@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Ikp3dbGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cmorisse
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ikp3db
-        repository: ikp3db
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ikp3db
+    run:
+      release_notes:
+        organization: cmorisse
+        repository: ikp3db
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: WsgiRequestLoggerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pklaus
-        package_version:
-          index_url: https://pypi.org/simple
-          name: wsgi-request-logger
-        repository: wsgi-request-logger
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: wsgi-request-logger
+    run:
+      release_notes:
+        organization: pklaus
+        repository: wsgi-request-logger
+        tag_version_prefix: v

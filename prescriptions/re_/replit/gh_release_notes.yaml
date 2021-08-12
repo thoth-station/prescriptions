@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ReplitGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: replit
-        package_version:
-          index_url: https://pypi.org/simple
-          name: replit
-        repository: replit-py
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: replit
+    run:
+      release_notes:
+        organization: replit
+        repository: replit-py
+        tag_version_prefix: v

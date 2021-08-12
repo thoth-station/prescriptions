@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: VoluptuousGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: alecthomas
-        package_version:
-          index_url: https://pypi.org/simple
-          name: voluptuous
-        repository: voluptuous
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: voluptuous
+    run:
+      release_notes:
+        organization: alecthomas
+        repository: voluptuous

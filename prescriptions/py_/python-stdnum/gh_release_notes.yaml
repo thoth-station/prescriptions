@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonStdnumGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: arthurdejong
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-stdnum
-        repository: python-stdnum
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-stdnum
+    run:
+      release_notes:
+        organization: arthurdejong
+        repository: python-stdnum

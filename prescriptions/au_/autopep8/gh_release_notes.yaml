@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Autopep8GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: hhatto
-        package_version:
-          index_url: https://pypi.org/simple
-          name: autopep8
-        repository: autopep8
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: autopep8
+    run:
+      release_notes:
+        organization: hhatto
+        repository: autopep8
+        tag_version_prefix: v

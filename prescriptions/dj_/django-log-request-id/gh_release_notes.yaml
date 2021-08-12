@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoLogRequestIdGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dabapps
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-log-request-id
-        repository: django-log-request-id
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-log-request-id
+    run:
+      release_notes:
+        organization: dabapps
+        repository: django-log-request-id

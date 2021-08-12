@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: HttmockGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: patrys
-        package_version:
-          index_url: https://pypi.org/simple
-          name: httmock
-        repository: httmock
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: httmock
+    run:
+      release_notes:
+        organization: patrys
+        repository: httmock

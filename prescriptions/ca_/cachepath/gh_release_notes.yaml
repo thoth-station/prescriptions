@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CachepathGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: haydenflinner
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cachepath
-        repository: cachepath
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cachepath
+    run:
+      release_notes:
+        organization: haydenflinner
+        repository: cachepath
+        tag_version_prefix: v

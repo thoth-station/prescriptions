@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Flake8LoggingFormatGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: globality-corp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-logging-format
-        repository: flake8-logging-format
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-logging-format
+    run:
+      release_notes:
+        organization: globality-corp
+        repository: flake8-logging-format

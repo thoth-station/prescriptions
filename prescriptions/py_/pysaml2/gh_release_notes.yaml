@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pysaml2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: IdentityPython
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pysaml2
-        repository: pysaml2
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pysaml2
+    run:
+      release_notes:
+        organization: IdentityPython
+        repository: pysaml2
+        tag_version_prefix: v

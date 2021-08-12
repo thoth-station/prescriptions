@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PydocMarkdownGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: NiklasRosenstein
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pydoc-markdown
-        repository: pydoc-markdown
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pydoc-markdown
+    run:
+      release_notes:
+        organization: NiklasRosenstein
+        repository: pydoc-markdown
+        tag_version_prefix: v

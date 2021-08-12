@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyinstallerHooksContribGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pyinstaller
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyinstaller-hooks-contrib
-        repository: pyinstaller-hooks-contrib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyinstaller-hooks-contrib
+    run:
+      release_notes:
+        organization: pyinstaller
+        repository: pyinstaller-hooks-contrib
+        tag_version_prefix: v

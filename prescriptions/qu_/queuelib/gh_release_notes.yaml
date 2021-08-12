@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: QueuelibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scrapy
-        package_version:
-          index_url: https://pypi.org/simple
-          name: queuelib
-        repository: queuelib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: queuelib
+    run:
+      release_notes:
+        organization: scrapy
+        repository: queuelib
+        tag_version_prefix: v

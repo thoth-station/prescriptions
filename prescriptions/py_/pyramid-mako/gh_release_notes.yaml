@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyramidMakoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Pylons
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyramid-mako
-        repository: pyramid_mako
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyramid-mako
+    run:
+      release_notes:
+        organization: Pylons
+        repository: pyramid_mako

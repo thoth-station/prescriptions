@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoCrispyFormsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-crispy-forms
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-crispy-forms
-        repository: django-crispy-forms
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-crispy-forms
+    run:
+      release_notes:
+        organization: django-crispy-forms
+        repository: django-crispy-forms

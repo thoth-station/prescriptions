@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TexttableGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: foutaise
-        package_version:
-          index_url: https://pypi.org/simple
-          name: texttable
-        repository: texttable
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: texttable
+    run:
+      release_notes:
+        organization: foutaise
+        repository: texttable
+        tag_version_prefix: v

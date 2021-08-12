@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JustextGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: miso-belica
-        package_version:
-          index_url: https://pypi.org/simple
-          name: justext
-        repository: jusText
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: justext
+    run:
+      release_notes:
+        organization: miso-belica
+        repository: jusText
+        tag_version_prefix: v

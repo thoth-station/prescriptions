@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ModWsgiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: GrahamDumpleton
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mod-wsgi
-        repository: mod_wsgi
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mod-wsgi
+    run:
+      release_notes:
+        organization: GrahamDumpleton
+        repository: mod_wsgi

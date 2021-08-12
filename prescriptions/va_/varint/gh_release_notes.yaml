@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: VarintGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: fmoo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: varint
-        repository: python-varint
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: varint
+    run:
+      release_notes:
+        organization: fmoo
+        repository: python-varint

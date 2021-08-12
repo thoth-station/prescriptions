@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PydicomGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pydicom
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pydicom
-        repository: pydicom
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pydicom
+    run:
+      release_notes:
+        organization: pydicom
+        repository: pydicom
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ZenpyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: facetoe
-        package_version:
-          index_url: https://pypi.org/simple
-          name: zenpy
-        repository: zenpy
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: zenpy
+    run:
+      release_notes:
+        organization: facetoe
+        repository: zenpy

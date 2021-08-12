@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CairosvgGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Kozea
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cairosvg
-        repository: CairoSVG
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cairosvg
+    run:
+      release_notes:
+        organization: Kozea
+        repository: CairoSVG

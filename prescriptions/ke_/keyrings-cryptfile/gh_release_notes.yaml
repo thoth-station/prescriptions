@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KeyringsCryptfileGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: frispete
-        package_version:
-          index_url: https://pypi.org/simple
-          name: keyrings-cryptfile
-        repository: keyrings.cryptfile
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: keyrings-cryptfile
+    run:
+      release_notes:
+        organization: frispete
+        repository: keyrings.cryptfile
+        tag_version_prefix: v

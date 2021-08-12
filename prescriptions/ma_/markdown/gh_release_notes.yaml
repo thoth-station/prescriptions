@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MarkdownGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Python-Markdown
-        package_version:
-          index_url: https://pypi.org/simple
-          name: markdown
-        repository: markdown
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: markdown
+    run:
+      release_notes:
+        organization: Python-Markdown
+        repository: markdown

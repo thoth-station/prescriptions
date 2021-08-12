@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PlaywrightGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Microsoft
-        package_version:
-          index_url: https://pypi.org/simple
-          name: playwright
-        repository: playwright-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: playwright
+    run:
+      release_notes:
+        organization: Microsoft
+        repository: playwright-python
+        tag_version_prefix: v

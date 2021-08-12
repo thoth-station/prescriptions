@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CheckManifestGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mgedmin
-        package_version:
-          index_url: https://pypi.org/simple
-          name: check-manifest
-        repository: check-manifest
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: check-manifest
+    run:
+      release_notes:
+        organization: mgedmin
+        repository: check-manifest

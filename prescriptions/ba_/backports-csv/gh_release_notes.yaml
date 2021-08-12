@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BackportsCsvGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ryanhiebert
-        package_version:
-          index_url: https://pypi.org/simple
-          name: backports-csv
-        repository: backports.csv
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: backports-csv
+    run:
+      release_notes:
+        organization: ryanhiebert
+        repository: backports.csv

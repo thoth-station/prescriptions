@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NutterGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: microsoft
-        package_version:
-          index_url: https://pypi.org/simple
-          name: nutter
-        repository: nutter
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: nutter
+    run:
+      release_notes:
+        organization: microsoft
+        repository: nutter
+        tag_version_prefix: v

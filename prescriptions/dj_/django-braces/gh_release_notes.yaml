@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoBracesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: brack3t
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-braces
-        repository: django-braces
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-braces
+    run:
+      release_notes:
+        organization: brack3t
+        repository: django-braces

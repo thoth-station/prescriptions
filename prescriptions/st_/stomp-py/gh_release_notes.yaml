@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: StompPyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jasonrbriggs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: stomp-py
-        repository: stomp.py
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: stomp-py
+    run:
+      release_notes:
+        organization: jasonrbriggs
+        repository: stomp.py
+        tag_version_prefix: v

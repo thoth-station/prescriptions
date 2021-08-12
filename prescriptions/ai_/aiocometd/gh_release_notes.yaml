@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AiocometdGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: robertmrk
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aiocometd
-        repository: aiocometd
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aiocometd
+    run:
+      release_notes:
+        organization: robertmrk
+        repository: aiocometd

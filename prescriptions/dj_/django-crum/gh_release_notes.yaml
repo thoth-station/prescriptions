@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoCrumGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ninemoreminutes
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-crum
-        repository: django-crum
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-crum
+    run:
+      release_notes:
+        organization: ninemoreminutes
+        repository: django-crum

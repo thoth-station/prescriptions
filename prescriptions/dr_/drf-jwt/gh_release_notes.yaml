@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DrfJwtGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Styria-Digital
-        package_version:
-          index_url: https://pypi.org/simple
-          name: drf-jwt
-        repository: django-rest-framework-jwt
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: drf-jwt
+    run:
+      release_notes:
+        organization: Styria-Digital
+        repository: django-rest-framework-jwt

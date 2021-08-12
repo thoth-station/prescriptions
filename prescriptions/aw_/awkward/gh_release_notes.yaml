@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AwkwardGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scikit-hep
-        package_version:
-          index_url: https://pypi.org/simple
-          name: awkward
-        repository: awkward-1.0
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: awkward
+    run:
+      release_notes:
+        organization: scikit-hep
+        repository: awkward-1.0

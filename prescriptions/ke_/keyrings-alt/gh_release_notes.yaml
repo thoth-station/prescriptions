@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KeyringsAltGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jaraco
-        package_version:
-          index_url: https://pypi.org/simple
-          name: keyrings-alt
-        repository: keyrings.alt
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: keyrings-alt
+    run:
+      release_notes:
+        organization: jaraco
+        repository: keyrings.alt
+        tag_version_prefix: v

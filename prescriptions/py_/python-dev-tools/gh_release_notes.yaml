@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonDevToolsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: vpoulailleau
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-dev-tools
-        repository: python-dev-tools
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-dev-tools
+    run:
+      release_notes:
+        organization: vpoulailleau
+        repository: python-dev-tools
+        tag_version_prefix: v

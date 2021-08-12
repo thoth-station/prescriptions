@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskCachingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sh4nks
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-caching
-        repository: flask-caching
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-caching
+    run:
+      release_notes:
+        organization: sh4nks
+        repository: flask-caching
+        tag_version_prefix: v

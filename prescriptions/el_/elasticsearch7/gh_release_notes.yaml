@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Elasticsearch7GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: elastic
-        package_version:
-          index_url: https://pypi.org/simple
-          name: elasticsearch7
-        repository: elasticsearch-py
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: elasticsearch7
+    run:
+      release_notes:
+        organization: elastic
+        repository: elasticsearch-py

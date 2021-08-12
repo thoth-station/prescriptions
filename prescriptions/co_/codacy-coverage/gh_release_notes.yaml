@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CodacyCoverageGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: codacy
-        package_version:
-          index_url: https://pypi.org/simple
-          name: codacy-coverage
-        repository: python-codacy-coverage
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: codacy-coverage
+    run:
+      release_notes:
+        organization: codacy
+        repository: python-codacy-coverage

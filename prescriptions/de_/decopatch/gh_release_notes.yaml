@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DecopatchGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: smarie
-        package_version:
-          index_url: https://pypi.org/simple
-          name: decopatch
-        repository: python-decopatch
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: decopatch
+    run:
+      release_notes:
+        organization: smarie
+        repository: python-decopatch

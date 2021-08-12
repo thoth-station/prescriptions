@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: WolframalphaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jaraco
-        package_version:
-          index_url: https://pypi.org/simple
-          name: wolframalpha
-        repository: wolframalpha
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: wolframalpha
+    run:
+      release_notes:
+        organization: jaraco
+        repository: wolframalpha
+        tag_version_prefix: v

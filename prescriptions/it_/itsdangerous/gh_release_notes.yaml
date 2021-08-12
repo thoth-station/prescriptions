@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ItsdangerousGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pallets
-        package_version:
-          index_url: https://pypi.org/simple
-          name: itsdangerous
-        repository: itsdangerous
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: itsdangerous
+    run:
+      release_notes:
+        organization: pallets
+        repository: itsdangerous

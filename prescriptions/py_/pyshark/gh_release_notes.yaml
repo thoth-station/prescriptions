@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PysharkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: KimiNewt
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyshark
-        repository: pyshark
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyshark
+    run:
+      release_notes:
+        organization: KimiNewt
+        repository: pyshark
+        tag_version_prefix: v

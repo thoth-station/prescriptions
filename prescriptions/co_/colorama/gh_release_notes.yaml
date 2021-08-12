@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ColoramaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tartley
-        package_version:
-          index_url: https://pypi.org/simple
-          name: colorama
-        repository: colorama
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: colorama
+    run:
+      release_notes:
+        organization: tartley
+        repository: colorama

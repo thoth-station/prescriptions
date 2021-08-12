@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: XgboostRayGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ray-project
-        package_version:
-          index_url: https://pypi.org/simple
-          name: xgboost-ray
-        repository: xgboost_ray
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: xgboost-ray
+    run:
+      release_notes:
+        organization: ray-project
+        repository: xgboost_ray
+        tag_version_prefix: v

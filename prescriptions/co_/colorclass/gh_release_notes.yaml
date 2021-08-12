@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ColorclassGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Robpol86
-        package_version:
-          index_url: https://pypi.org/simple
-          name: colorclass
-        repository: colorclass
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: colorclass
+    run:
+      release_notes:
+        organization: Robpol86
+        repository: colorclass
+        tag_version_prefix: v

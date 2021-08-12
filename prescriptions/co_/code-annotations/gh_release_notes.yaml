@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CodeAnnotationsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: edx
-        package_version:
-          index_url: https://pypi.org/simple
-          name: code-annotations
-        repository: code-annotations
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: code-annotations
+    run:
+      release_notes:
+        organization: edx
+        repository: code-annotations

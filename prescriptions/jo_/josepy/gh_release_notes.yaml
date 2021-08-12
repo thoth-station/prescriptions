@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JosepyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: certbot
-        package_version:
-          index_url: https://pypi.org/simple
-          name: josepy
-        repository: josepy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: josepy
+    run:
+      release_notes:
+        organization: certbot
+        repository: josepy
+        tag_version_prefix: v

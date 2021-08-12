@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CerberusPythonClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Nike-Inc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cerberus-python-client
-        repository: cerberus-python-client
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cerberus-python-client
+    run:
+      release_notes:
+        organization: Nike-Inc
+        repository: cerberus-python-client
+        tag_version_prefix: v

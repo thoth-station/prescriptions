@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: EasyocrGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jaidedai
-        package_version:
-          index_url: https://pypi.org/simple
-          name: easyocr
-        repository: easyocr
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: easyocr
+    run:
+      release_notes:
+        organization: jaidedai
+        repository: easyocr
+        tag_version_prefix: v

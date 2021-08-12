@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TorchGeometricGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rusty1s
-        package_version:
-          index_url: https://pypi.org/simple
-          name: torch-geometric
-        repository: pytorch_geometric
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: torch-geometric
+    run:
+      release_notes:
+        organization: rusty1s
+        repository: pytorch_geometric

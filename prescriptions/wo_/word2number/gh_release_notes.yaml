@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Word2numberGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: akshaynagpal
-        package_version:
-          index_url: https://pypi.org/simple
-          name: word2number
-        repository: w2n
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: word2number
+    run:
+      release_notes:
+        organization: akshaynagpal
+        repository: w2n

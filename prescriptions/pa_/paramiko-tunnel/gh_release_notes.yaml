@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ParamikoTunnelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: adamdelman
-        package_version:
-          index_url: https://pypi.org/simple
-          name: paramiko-tunnel
-        repository: paramiko_tunnel
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: paramiko-tunnel
+    run:
+      release_notes:
+        organization: adamdelman
+        repository: paramiko_tunnel

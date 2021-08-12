@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: StathamSchemaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jacksmith15
-        package_version:
-          index_url: https://pypi.org/simple
-          name: statham-schema
-        repository: statham-schema
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: statham-schema
+    run:
+      release_notes:
+        organization: jacksmith15
+        repository: statham-schema

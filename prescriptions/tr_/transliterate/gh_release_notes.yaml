@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TransliterateGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: barseghyanartur
-        package_version:
-          index_url: https://pypi.org/simple
-          name: transliterate
-        repository: transliterate
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: transliterate
+    run:
+      release_notes:
+        organization: barseghyanartur
+        repository: transliterate

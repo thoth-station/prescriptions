@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MistuneGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lepture
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mistune
-        repository: mistune
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mistune
+    run:
+      release_notes:
+        organization: lepture
+        repository: mistune
+        tag_version_prefix: v

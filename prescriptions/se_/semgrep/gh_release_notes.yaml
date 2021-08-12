@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SemgrepGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: returntocorp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: semgrep
-        repository: semgrep
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: semgrep
+    run:
+      release_notes:
+        organization: returntocorp
+        repository: semgrep
+        tag_version_prefix: v

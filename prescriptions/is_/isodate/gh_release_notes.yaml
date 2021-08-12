@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: IsodateGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: gweis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: isodate
-        repository: isodate
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: isodate
+    run:
+      release_notes:
+        organization: gweis
+        repository: isodate

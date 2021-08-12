@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PipReviewGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jgonggrijp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pip-review
-        repository: pip-review
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pip-review
+    run:
+      release_notes:
+        organization: jgonggrijp
+        repository: pip-review

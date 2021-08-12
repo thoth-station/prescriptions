@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RequestsOauthlibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: requests
-        package_version:
-          index_url: https://pypi.org/simple
-          name: requests-oauthlib
-        repository: requests-oauthlib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: requests-oauthlib
+    run:
+      release_notes:
+        organization: requests
+        repository: requests-oauthlib
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudSecretManagerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-secret-manager
-        repository: python-secret-manager
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-secret-manager
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-secret-manager
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ForexPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: MicroPyramid
-        package_version:
-          index_url: https://pypi.org/simple
-          name: forex-python
-        repository: forex-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: forex-python
+    run:
+      release_notes:
+        organization: MicroPyramid
+        repository: forex-python

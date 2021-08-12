@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoWidgetTweaksGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jazzband
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-widget-tweaks
-        repository: django-widget-tweaks
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-widget-tweaks
+    run:
+      release_notes:
+        organization: jazzband
+        repository: django-widget-tweaks

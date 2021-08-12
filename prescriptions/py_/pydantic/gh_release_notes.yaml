@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PydanticGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: samuelcolvin
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pydantic
-        repository: pydantic
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pydantic
+    run:
+      release_notes:
+        organization: samuelcolvin
+        repository: pydantic
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ExchangelibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ecederstrand
-        package_version:
-          index_url: https://pypi.org/simple
-          name: exchangelib
-        repository: exchangelib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: exchangelib
+    run:
+      release_notes:
+        organization: ecederstrand
+        repository: exchangelib
+        tag_version_prefix: v

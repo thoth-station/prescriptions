@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonGitlabGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-gitlab
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-gitlab
-        repository: python-gitlab
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-gitlab
+    run:
+      release_notes:
+        organization: python-gitlab
+        repository: python-gitlab
+        tag_version_prefix: v

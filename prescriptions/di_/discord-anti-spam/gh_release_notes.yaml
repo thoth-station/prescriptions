@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DiscordAntiSpamGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Skelmis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: discord-anti-spam
-        repository: DPY-Anti-Spam
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: discord-anti-spam
+    run:
+      release_notes:
+        organization: Skelmis
+        repository: DPY-Anti-Spam
+        tag_version_prefix: v

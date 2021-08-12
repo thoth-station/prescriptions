@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: XmldiffGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Shoobx
-        package_version:
-          index_url: https://pypi.org/simple
-          name: xmldiff
-        repository: xmldiff
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: xmldiff
+    run:
+      release_notes:
+        organization: Shoobx
+        repository: xmldiff

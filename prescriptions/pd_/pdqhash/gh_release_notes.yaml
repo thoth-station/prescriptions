@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PdqhashGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: faustomorales
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pdqhash
-        repository: pdqhash-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pdqhash
+    run:
+      release_notes:
+        organization: faustomorales
+        repository: pdqhash-python
+        tag_version_prefix: v

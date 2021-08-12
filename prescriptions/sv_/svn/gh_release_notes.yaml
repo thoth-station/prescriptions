@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SvnGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dsoprea
-        package_version:
-          index_url: https://pypi.org/simple
-          name: svn
-        repository: PySvn
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: svn
+    run:
+      release_notes:
+        organization: dsoprea
+        repository: PySvn

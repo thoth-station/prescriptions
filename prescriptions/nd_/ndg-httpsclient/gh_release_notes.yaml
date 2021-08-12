@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: NdgHttpsclientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cedadev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ndg-httpsclient
-        repository: ndg_httpsclient
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ndg-httpsclient
+    run:
+      release_notes:
+        organization: cedadev
+        repository: ndg_httpsclient

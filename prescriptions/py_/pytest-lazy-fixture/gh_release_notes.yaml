@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestLazyFixtureGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tvorog
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-lazy-fixture
-        repository: pytest-lazy-fixture
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-lazy-fixture
+    run:
+      release_notes:
+        organization: tvorog
+        repository: pytest-lazy-fixture
+        tag_version_prefix: v

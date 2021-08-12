@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TfSlimGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: google-research
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tf-slim
-        repository: tf-slim
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tf-slim
+    run:
+      release_notes:
+        organization: google-research
+        repository: tf-slim
+        tag_version_prefix: v

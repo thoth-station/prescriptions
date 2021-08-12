@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PoetryCoreGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-poetry
-        package_version:
-          index_url: https://pypi.org/simple
-          name: poetry-core
-        repository: poetry-core
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: poetry-core
+    run:
+      release_notes:
+        organization: python-poetry
+        repository: poetry-core

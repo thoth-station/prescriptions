@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AnalyticsPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: segmentio
-        package_version:
-          index_url: https://pypi.org/simple
-          name: analytics-python
-        repository: analytics-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: analytics-python
+    run:
+      release_notes:
+        organization: segmentio
+        repository: analytics-python

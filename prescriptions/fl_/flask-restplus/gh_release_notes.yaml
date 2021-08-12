@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FlaskRestplusGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: noirbizarre
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-restplus
-        repository: flask-restplus
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-restplus
+    run:
+      release_notes:
+        organization: noirbizarre
+        repository: flask-restplus

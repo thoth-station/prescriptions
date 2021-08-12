@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestSplitGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jerry-git
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-split
-        repository: pytest-split
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-split
+    run:
+      release_notes:
+        organization: jerry-git
+        repository: pytest-split

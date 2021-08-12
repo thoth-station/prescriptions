@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ZopeDeprecationGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zopefoundation
-        package_version:
-          index_url: https://pypi.org/simple
-          name: zope-deprecation
-        repository: zope.deprecation
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: zope-deprecation
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.deprecation

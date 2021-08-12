@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: HidapiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: trezor
-        package_version:
-          index_url: https://pypi.org/simple
-          name: hidapi
-        repository: cython-hidapi
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: hidapi
+    run:
+      release_notes:
+        organization: trezor
+        repository: cython-hidapi

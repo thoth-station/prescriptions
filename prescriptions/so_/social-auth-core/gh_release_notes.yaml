@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SocialAuthCoreGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-social-auth
-        package_version:
-          index_url: https://pypi.org/simple
-          name: social-auth-core
-        repository: social-core
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: social-auth-core
+    run:
+      release_notes:
+        organization: python-social-auth
+        repository: social-core

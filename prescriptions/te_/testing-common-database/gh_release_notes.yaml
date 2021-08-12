@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TestingCommonDatabaseGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tk0miya
-        package_version:
-          index_url: https://pypi.org/simple
-          name: testing-common-database
-        repository: testing.common.database
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: testing-common-database
+    run:
+      release_notes:
+        organization: tk0miya
+        repository: testing.common.database

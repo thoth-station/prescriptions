@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Fpdf2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: PyFPDF
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fpdf2
-        repository: fpdf2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fpdf2
+    run:
+      release_notes:
+        organization: PyFPDF
+        repository: fpdf2

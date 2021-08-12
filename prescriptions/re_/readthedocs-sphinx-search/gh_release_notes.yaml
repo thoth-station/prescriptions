@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ReadthedocsSphinxSearchGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: readthedocs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: readthedocs-sphinx-search
-        repository: readthedocs-sphinx-search
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: readthedocs-sphinx-search
+    run:
+      release_notes:
+        organization: readthedocs
+        repository: readthedocs-sphinx-search

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestMypyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dbader
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-mypy
-        repository: pytest-mypy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-mypy
+    run:
+      release_notes:
+        organization: dbader
+        repository: pytest-mypy
+        tag_version_prefix: v

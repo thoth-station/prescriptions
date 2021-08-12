@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoGraphqlJwtGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: flavors
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-graphql-jwt
-        repository: django-graphql-jwt
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-graphql-jwt
+    run:
+      release_notes:
+        organization: flavors
+        repository: django-graphql-jwt

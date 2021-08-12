@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestReraiseGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: bjoluc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-reraise
-        repository: pytest-reraise
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-reraise
+    run:
+      release_notes:
+        organization: bjoluc
+        repository: pytest-reraise
+        tag_version_prefix: v

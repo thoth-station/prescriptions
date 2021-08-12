@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SwaggerUiBundleGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dtkav
-        package_version:
-          index_url: https://pypi.org/simple
-          name: swagger-ui-bundle
-        repository: swagger_ui_bundle
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: swagger-ui-bundle
+    run:
+      release_notes:
+        organization: dtkav
+        repository: swagger_ui_bundle
+        tag_version_prefix: v

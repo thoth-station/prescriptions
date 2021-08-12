@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyspnegoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jborean93
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyspnego
-        repository: pyspnego
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyspnego
+    run:
+      release_notes:
+        organization: jborean93
+        repository: pyspnego
+        tag_version_prefix: v

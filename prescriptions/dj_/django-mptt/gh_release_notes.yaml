@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoMpttGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-mptt
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-mptt
-        repository: django-mptt
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-mptt
+    run:
+      release_notes:
+        organization: django-mptt
+        repository: django-mptt

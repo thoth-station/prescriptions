@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MistletoeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: miyuchina
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mistletoe
-        repository: mistletoe
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mistletoe
+    run:
+      release_notes:
+        organization: miyuchina
+        repository: mistletoe
+        tag_version_prefix: v

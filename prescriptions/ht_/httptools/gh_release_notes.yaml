@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: HttptoolsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: MagicStack
-        package_version:
-          index_url: https://pypi.org/simple
-          name: httptools
-        repository: httptools
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: httptools
+    run:
+      release_notes:
+        organization: MagicStack
+        repository: httptools
+        tag_version_prefix: v

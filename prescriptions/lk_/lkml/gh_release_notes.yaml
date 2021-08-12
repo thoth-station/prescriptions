@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: LkmlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: joshtemple
-        package_version:
-          index_url: https://pypi.org/simple
-          name: lkml
-        repository: lkml
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: lkml
+    run:
+      release_notes:
+        organization: joshtemple
+        repository: lkml
+        tag_version_prefix: v

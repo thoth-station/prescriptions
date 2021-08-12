@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: WebrtcvadWheelsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: daanzu
-        package_version:
-          index_url: https://pypi.org/simple
-          name: webrtcvad-wheels
-        repository: py-webrtcvad-wheels
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: webrtcvad-wheels
+    run:
+      release_notes:
+        organization: daanzu
+        repository: py-webrtcvad-wheels

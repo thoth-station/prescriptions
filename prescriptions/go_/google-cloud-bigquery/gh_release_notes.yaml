@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudBigqueryGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-bigquery
-        repository: python-bigquery
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-bigquery
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-bigquery
+        tag_version_prefix: v

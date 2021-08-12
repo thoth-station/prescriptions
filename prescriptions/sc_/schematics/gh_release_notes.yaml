@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SchematicsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: schematics
-        package_version:
-          index_url: https://pypi.org/simple
-          name: schematics
-        repository: schematics
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: schematics
+    run:
+      release_notes:
+        organization: schematics
+        repository: schematics
+        tag_version_prefix: v

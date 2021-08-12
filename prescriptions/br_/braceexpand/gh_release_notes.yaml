@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: BraceexpandGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: trendels
-        package_version:
-          index_url: https://pypi.org/simple
-          name: braceexpand
-        repository: braceexpand
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: braceexpand
+    run:
+      release_notes:
+        organization: trendels
+        repository: braceexpand
+        tag_version_prefix: v

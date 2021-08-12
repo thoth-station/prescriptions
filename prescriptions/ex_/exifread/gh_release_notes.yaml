@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ExifreadGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ianare
-        package_version:
-          index_url: https://pypi.org/simple
-          name: exifread
-        repository: exif-py
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: exifread
+    run:
+      release_notes:
+        organization: ianare
+        repository: exif-py

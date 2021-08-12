@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PansiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: technige
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pansi
-        repository: pansi
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pansi
+    run:
+      release_notes:
+        organization: technige
+        repository: pansi

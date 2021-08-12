@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestDependencyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: RKrahl
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-dependency
-        repository: pytest-dependency
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-dependency
+    run:
+      release_notes:
+        organization: RKrahl
+        repository: pytest-dependency

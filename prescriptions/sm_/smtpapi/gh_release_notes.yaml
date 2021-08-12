@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SmtpapiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sendgrid
-        package_version:
-          index_url: https://pypi.org/simple
-          name: smtpapi
-        repository: smtpapi-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: smtpapi
+    run:
+      release_notes:
+        organization: sendgrid
+        repository: smtpapi-python

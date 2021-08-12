@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytorchLightningGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: PyTorchLightning
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytorch-lightning
-        repository: pytorch-lightning
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytorch-lightning
+    run:
+      release_notes:
+        organization: PyTorchLightning
+        repository: pytorch-lightning

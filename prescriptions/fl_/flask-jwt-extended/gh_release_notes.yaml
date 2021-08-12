@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FlaskJwtExtendedGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: vimalloc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-jwt-extended
-        repository: flask-jwt-extended
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-jwt-extended
+    run:
+      release_notes:
+        organization: vimalloc
+        repository: flask-jwt-extended

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CoverallsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: TheKevJames
-        package_version:
-          index_url: https://pypi.org/simple
-          name: coveralls
-        repository: coveralls-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: coveralls
+    run:
+      release_notes:
+        organization: TheKevJames
+        repository: coveralls-python

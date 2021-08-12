@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoStubsExtGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: typeddjango
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-stubs-ext
-        repository: django-stubs
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-stubs-ext
+    run:
+      release_notes:
+        organization: typeddjango
+        repository: django-stubs
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ImportlibMetadataGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python
-        package_version:
-          index_url: https://pypi.org/simple
-          name: importlib-metadata
-        repository: importlib_metadata
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: importlib-metadata
+    run:
+      release_notes:
+        organization: python
+        repository: importlib_metadata
+        tag_version_prefix: v

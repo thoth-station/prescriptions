@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DatacompyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: capitalone
-        package_version:
-          index_url: https://pypi.org/simple
-          name: datacompy
-        repository: datacompy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: datacompy
+    run:
+      release_notes:
+        organization: capitalone
+        repository: datacompy
+        tag_version_prefix: v
