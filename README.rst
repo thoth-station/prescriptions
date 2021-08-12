@@ -40,4 +40,4 @@ Public License v3.0 or later
 more info.
 
 Copyright © 2021 AICoE Project `Thoth
-<https://khemenu.thoth-station.ninja/>`__; Red Hat Inc.
+<https://thoth-station.ninja/>`__; Red Hat Inc.
