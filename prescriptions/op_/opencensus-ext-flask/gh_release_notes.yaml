@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: OpencensusExtFlaskGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: census-instrumentation
-        package_version:
-          index_url: https://pypi.org/simple
-          name: opencensus-ext-flask
-        repository: opencensus-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: opencensus-ext-flask
+    run:
+      release_notes:
+        organization: census-instrumentation
+        repository: opencensus-python
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DunamaiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mtkennerly
-        package_version:
-          index_url: https://pypi.org/simple
-          name: dunamai
-        repository: dunamai
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: dunamai
+    run:
+      release_notes:
+        organization: mtkennerly
+        repository: dunamai
+        tag_version_prefix: v

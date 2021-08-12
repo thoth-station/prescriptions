@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: EthKeysGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ethereum
-        package_version:
-          index_url: https://pypi.org/simple
-          name: eth-keys
-        repository: eth-keys
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: eth-keys
+    run:
+      release_notes:
+        organization: ethereum
+        repository: eth-keys
+        tag_version_prefix: v

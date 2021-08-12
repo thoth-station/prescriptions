@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ChangepyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ruipgil
-        package_version:
-          index_url: https://pypi.org/simple
-          name: changepy
-        repository: changepy
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: changepy
+    run:
+      release_notes:
+        organization: ruipgil
+        repository: changepy

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SqlalchemyContinuumGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kvesteri
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sqlalchemy-continuum
-        repository: sqlalchemy-continuum
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sqlalchemy-continuum
+    run:
+      release_notes:
+        organization: kvesteri
+        repository: sqlalchemy-continuum

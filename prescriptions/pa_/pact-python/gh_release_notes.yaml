@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PactPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pact-foundation
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pact-python
-        repository: pact-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pact-python
+    run:
+      release_notes:
+        organization: pact-foundation
+        repository: pact-python
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AlchemyMockGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: miki725
-        package_version:
-          index_url: https://pypi.org/simple
-          name: alchemy-mock
-        repository: alchemy-mock
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: alchemy-mock
+    run:
+      release_notes:
+        organization: miki725
+        repository: alchemy-mock

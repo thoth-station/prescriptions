@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BoltonsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mahmoud
-        package_version:
-          index_url: https://pypi.org/simple
-          name: boltons
-        repository: boltons
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: boltons
+    run:
+      release_notes:
+        organization: mahmoud
+        repository: boltons

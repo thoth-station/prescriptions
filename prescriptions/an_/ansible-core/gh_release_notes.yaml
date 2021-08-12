@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AnsibleCoreGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ansible
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ansible-core
-        repository: ansible
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ansible-core
+    run:
+      release_notes:
+        organization: ansible
+        repository: ansible
+        tag_version_prefix: v

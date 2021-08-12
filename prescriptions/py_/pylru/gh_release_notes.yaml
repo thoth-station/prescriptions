@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PylruGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jlhutch
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pylru
-        repository: pylru
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pylru
+    run:
+      release_notes:
+        organization: jlhutch
+        repository: pylru
+        tag_version_prefix: v

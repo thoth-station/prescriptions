@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RemotePdbGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ionelmc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: remote-pdb
-        repository: python-remote-pdb
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: remote-pdb
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-remote-pdb
+        tag_version_prefix: v

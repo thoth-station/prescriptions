@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TabulatorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: frictionlessdata
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tabulator
-        repository: tabulator-py
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tabulator
+    run:
+      release_notes:
+        organization: frictionlessdata
+        repository: tabulator-py
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AstunparseGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: simonpercivall
-        package_version:
-          index_url: https://pypi.org/simple
-          name: astunparse
-        repository: astunparse
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: astunparse
+    run:
+      release_notes:
+        organization: simonpercivall
+        repository: astunparse
+        tag_version_prefix: v

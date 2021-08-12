@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DtaleGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: man-group
-        package_version:
-          index_url: https://pypi.org/simple
-          name: dtale
-        repository: dtale
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: dtale
+    run:
+      release_notes:
+        organization: man-group
+        repository: dtale
+        tag_version_prefix: v

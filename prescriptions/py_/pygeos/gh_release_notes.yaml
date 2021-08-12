@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PygeosGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pygeos
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pygeos
-        repository: pygeos
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pygeos
+    run:
+      release_notes:
+        organization: pygeos
+        repository: pygeos

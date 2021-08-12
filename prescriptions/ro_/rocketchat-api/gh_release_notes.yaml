@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RocketchatApiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jadolg
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rocketchat-api
-        repository: rocketchat_API
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rocketchat-api
+    run:
+      release_notes:
+        organization: jadolg
+        repository: rocketchat_API

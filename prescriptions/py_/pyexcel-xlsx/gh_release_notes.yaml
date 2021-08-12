@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyexcelXlsxGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pyexcel
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyexcel-xlsx
-        repository: pyexcel-xlsx
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyexcel-xlsx
+    run:
+      release_notes:
+        organization: pyexcel
+        repository: pyexcel-xlsx
+        tag_version_prefix: v

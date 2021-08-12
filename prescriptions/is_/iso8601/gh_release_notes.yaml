@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Iso8601GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: micktwomey
-        package_version:
-          index_url: https://pypi.org/simple
-          name: iso8601
-        repository: pyiso8601
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: iso8601
+    run:
+      release_notes:
+        organization: micktwomey
+        repository: pyiso8601

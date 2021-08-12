@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: StructlogGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: hynek
-        package_version:
-          index_url: https://pypi.org/simple
-          name: structlog
-        repository: structlog
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: structlog
+    run:
+      release_notes:
+        organization: hynek
+        repository: structlog

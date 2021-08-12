@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: H11GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-hyper
-        package_version:
-          index_url: https://pypi.org/simple
-          name: h11
-        repository: h11
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: h11
+    run:
+      release_notes:
+        organization: python-hyper
+        repository: h11
+        tag_version_prefix: v

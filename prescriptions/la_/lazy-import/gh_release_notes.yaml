@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: LazyImportGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mnmelo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: lazy-import
-        repository: lazy_import
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: lazy-import
+    run:
+      release_notes:
+        organization: mnmelo
+        repository: lazy_import
+        tag_version_prefix: v

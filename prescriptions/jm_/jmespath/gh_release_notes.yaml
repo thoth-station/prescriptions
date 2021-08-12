@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JmespathGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jmespath
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jmespath
-        repository: jmespath.py
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jmespath
+    run:
+      release_notes:
+        organization: jmespath
+        repository: jmespath.py

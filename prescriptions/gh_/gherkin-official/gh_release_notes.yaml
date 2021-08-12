@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GherkinOfficialGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cucumber
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gherkin-official
-        repository: gherkin-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gherkin-official
+    run:
+      release_notes:
+        organization: cucumber
+        repository: gherkin-python
+        tag_version_prefix: v

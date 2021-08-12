@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FakerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: joke2k
-        package_version:
-          index_url: https://pypi.org/simple
-          name: faker
-        repository: faker
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: faker
+    run:
+      release_notes:
+        organization: joke2k
+        repository: faker
+        tag_version_prefix: v

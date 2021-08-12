@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoCkeditorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-ckeditor
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-ckeditor
-        repository: django-ckeditor
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-ckeditor
+    run:
+      release_notes:
+        organization: django-ckeditor
+        repository: django-ckeditor

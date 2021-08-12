@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyobjcFrameworkApplescriptkitGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ronaldoussoren
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyobjc-framework-applescriptkit
-        repository: pyobjc
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyobjc-framework-applescriptkit
+    run:
+      release_notes:
+        organization: ronaldoussoren
+        repository: pyobjc
+        tag_version_prefix: v

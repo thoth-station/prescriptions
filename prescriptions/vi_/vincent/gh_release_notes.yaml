@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: VincentGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wrobstory
-        package_version:
-          index_url: https://pypi.org/simple
-          name: vincent
-        repository: vincent
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: vincent
+    run:
+      release_notes:
+        organization: wrobstory
+        repository: vincent
+        tag_version_prefix: v

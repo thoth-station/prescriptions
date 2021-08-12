@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MultidictGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aio-libs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: multidict
-        repository: multidict
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: multidict
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: multidict
+        tag_version_prefix: v

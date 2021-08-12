@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: EasyprocessGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ponty
-        package_version:
-          index_url: https://pypi.org/simple
-          name: easyprocess
-        repository: easyprocess
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: easyprocess
+    run:
+      release_notes:
+        organization: ponty
+        repository: easyprocess

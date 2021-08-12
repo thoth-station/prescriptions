@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: BackportsDatetimeFromisoformatGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: movermeyer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: backports-datetime-fromisoformat
-        repository: backports.datetime_fromisoformat
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: backports-datetime-fromisoformat
+    run:
+      release_notes:
+        organization: movermeyer
+        repository: backports.datetime_fromisoformat
+        tag_version_prefix: v

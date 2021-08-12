@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FiscalyearGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: adamjstewart
-        package_version:
-          index_url: https://pypi.org/simple
-          name: fiscalyear
-        repository: fiscalyear
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: fiscalyear
+    run:
+      release_notes:
+        organization: adamjstewart
+        repository: fiscalyear
+        tag_version_prefix: v

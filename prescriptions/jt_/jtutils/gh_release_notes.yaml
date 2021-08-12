@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JtutilsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jasontrigg0
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jtutils
-        repository: jtutils
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jtutils
+    run:
+      release_notes:
+        organization: jasontrigg0
+        repository: jtutils

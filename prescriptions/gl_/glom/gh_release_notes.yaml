@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GlomGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mahmoud
-        package_version:
-          index_url: https://pypi.org/simple
-          name: glom
-        repository: glom
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: glom
+    run:
+      release_notes:
+        organization: mahmoud
+        repository: glom
+        tag_version_prefix: v

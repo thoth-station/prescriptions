@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: NeptuneClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: neptune-ai
-        package_version:
-          index_url: https://pypi.org/simple
-          name: neptune-client
-        repository: neptune-client
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: neptune-client
+    run:
+      release_notes:
+        organization: neptune-ai
+        repository: neptune-client

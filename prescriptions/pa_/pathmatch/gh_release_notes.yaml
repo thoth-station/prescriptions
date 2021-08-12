@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PathmatchGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: demurgos
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pathmatch
-        repository: py-pathmatch
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pathmatch
+    run:
+      release_notes:
+        organization: demurgos
+        repository: py-pathmatch
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ArabicReshaperGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mpcabd
-        package_version:
-          index_url: https://pypi.org/simple
-          name: arabic-reshaper
-        repository: python-arabic-reshaper
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: arabic-reshaper
+    run:
+      release_notes:
+        organization: mpcabd
+        repository: python-arabic-reshaper
+        tag_version_prefix: v

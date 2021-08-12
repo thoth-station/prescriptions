@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PymdownExtensionsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: facelessuser
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pymdown-extensions
-        repository: pymdown-extensions
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pymdown-extensions
+    run:
+      release_notes:
+        organization: facelessuser
+        repository: pymdown-extensions

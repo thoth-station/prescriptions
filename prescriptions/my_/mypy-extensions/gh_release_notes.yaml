@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MypyExtensionsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mypy-extensions
-        repository: mypy_extensions
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mypy-extensions
+    run:
+      release_notes:
+        organization: python
+        repository: mypy_extensions

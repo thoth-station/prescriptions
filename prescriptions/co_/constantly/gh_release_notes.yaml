@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ConstantlyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: twisted
-        package_version:
-          index_url: https://pypi.org/simple
-          name: constantly
-        repository: constantly
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: constantly
+    run:
+      release_notes:
+        organization: twisted
+        repository: constantly

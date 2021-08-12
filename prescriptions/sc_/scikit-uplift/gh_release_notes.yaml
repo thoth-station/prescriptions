@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ScikitUpliftGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: maks-sh
-        package_version:
-          index_url: https://pypi.org/simple
-          name: scikit-uplift
-        repository: scikit-uplift
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: scikit-uplift
+    run:
+      release_notes:
+        organization: maks-sh
+        repository: scikit-uplift
+        tag_version_prefix: v

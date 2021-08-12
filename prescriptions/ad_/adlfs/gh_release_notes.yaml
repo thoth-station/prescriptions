@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AdlfsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dask
-        package_version:
-          index_url: https://pypi.org/simple
-          name: adlfs
-        repository: adlfs
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: adlfs
+    run:
+      release_notes:
+        organization: dask
+        repository: adlfs
+        tag_version_prefix: v

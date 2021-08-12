@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GluonnlpGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dmlc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gluonnlp
-        repository: gluon-nlp
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gluonnlp
+    run:
+      release_notes:
+        organization: dmlc
+        repository: gluon-nlp
+        tag_version_prefix: v

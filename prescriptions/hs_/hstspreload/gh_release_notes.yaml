@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: HstspreloadGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sethmlarson
-        package_version:
-          index_url: https://pypi.org/simple
-          name: hstspreload
-        repository: hstspreload
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: hstspreload
+    run:
+      release_notes:
+        organization: sethmlarson
+        repository: hstspreload

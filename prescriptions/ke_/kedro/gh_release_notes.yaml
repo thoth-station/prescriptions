@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: KedroGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: quantumblacklabs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kedro
-        repository: kedro
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kedro
+    run:
+      release_notes:
+        organization: quantumblacklabs
+        repository: kedro

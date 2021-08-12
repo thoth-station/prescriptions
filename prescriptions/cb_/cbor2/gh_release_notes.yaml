@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Cbor2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: agronholm
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cbor2
-        repository: cbor2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cbor2
+    run:
+      release_notes:
+        organization: agronholm
+        repository: cbor2

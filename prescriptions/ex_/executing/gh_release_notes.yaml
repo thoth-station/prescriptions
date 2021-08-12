@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ExecutingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: alexmojaki
-        package_version:
-          index_url: https://pypi.org/simple
-          name: executing
-        repository: executing
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: executing
+    run:
+      release_notes:
+        organization: alexmojaki
+        repository: executing
+        tag_version_prefix: v

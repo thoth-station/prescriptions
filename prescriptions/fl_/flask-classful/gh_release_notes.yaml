@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskClassfulGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: teracyhq
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-classful
-        repository: flask-classful
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-classful
+    run:
+      release_notes:
+        organization: teracyhq
+        repository: flask-classful
+        tag_version_prefix: v

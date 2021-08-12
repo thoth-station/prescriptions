@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FaissGpuGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kyamagu
-        package_version:
-          index_url: https://pypi.org/simple
-          name: faiss-gpu
-        repository: faiss-wheels
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: faiss-gpu
+    run:
+      release_notes:
+        organization: kyamagu
+        repository: faiss-wheels
+        tag_version_prefix: v

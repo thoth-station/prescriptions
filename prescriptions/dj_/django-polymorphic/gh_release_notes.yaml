@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoPolymorphicGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-polymorphic
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-polymorphic
-        repository: django-polymorphic
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-polymorphic
+    run:
+      release_notes:
+        organization: django-polymorphic
+        repository: django-polymorphic

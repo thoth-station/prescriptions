@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SnapshottestGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: syrusakbary
-        package_version:
-          index_url: https://pypi.org/simple
-          name: snapshottest
-        repository: snapshottest
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: snapshottest
+    run:
+      release_notes:
+        organization: syrusakbary
+        repository: snapshottest

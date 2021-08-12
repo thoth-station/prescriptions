@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SqliteUtilsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: simonw
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sqlite-utils
-        repository: sqlite-utils
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sqlite-utils
+    run:
+      release_notes:
+        organization: simonw
+        repository: sqlite-utils

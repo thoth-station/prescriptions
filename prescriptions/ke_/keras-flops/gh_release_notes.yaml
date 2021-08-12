@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: KerasFlopsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tokusumi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: keras-flops
-        repository: keras-flops
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: keras-flops
+    run:
+      release_notes:
+        organization: tokusumi
+        repository: keras-flops

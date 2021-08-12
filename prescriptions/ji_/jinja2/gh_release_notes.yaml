@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Jinja2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pallets
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jinja2
-        repository: jinja
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jinja2
+    run:
+      release_notes:
+        organization: pallets
+        repository: jinja

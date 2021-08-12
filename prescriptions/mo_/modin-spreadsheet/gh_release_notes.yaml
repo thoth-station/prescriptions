@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ModinSpreadsheetGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: modin-project
-        package_version:
-          index_url: https://pypi.org/simple
-          name: modin-spreadsheet
-        repository: modin-spreadsheet
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: modin-spreadsheet
+    run:
+      release_notes:
+        organization: modin-project
+        repository: modin-spreadsheet
+        tag_version_prefix: v

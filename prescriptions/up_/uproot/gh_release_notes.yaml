@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: UprootGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scikit-hep
-        package_version:
-          index_url: https://pypi.org/simple
-          name: uproot
-        repository: uproot4
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: uproot
+    run:
+      release_notes:
+        organization: scikit-hep
+        repository: uproot4

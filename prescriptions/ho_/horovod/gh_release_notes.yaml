@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: HorovodGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: horovod
-        package_version:
-          index_url: https://pypi.org/simple
-          name: horovod
-        repository: horovod
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: horovod
+    run:
+      release_notes:
+        organization: horovod
+        repository: horovod
+        tag_version_prefix: v

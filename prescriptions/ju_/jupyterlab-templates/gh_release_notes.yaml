@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JupyterlabTemplatesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jpmorganchase
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jupyterlab-templates
-        repository: jupyterlab_templates
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jupyterlab-templates
+    run:
+      release_notes:
+        organization: jpmorganchase
+        repository: jupyterlab_templates
+        tag_version_prefix: v

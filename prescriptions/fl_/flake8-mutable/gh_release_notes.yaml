@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Flake8MutableGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ebeweber
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-mutable
-        repository: flake8-mutable
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-mutable
+    run:
+      release_notes:
+        organization: ebeweber
+        repository: flake8-mutable
+        tag_version_prefix: v

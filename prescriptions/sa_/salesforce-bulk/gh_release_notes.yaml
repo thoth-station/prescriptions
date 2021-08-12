@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SalesforceBulkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: heroku
-        package_version:
-          index_url: https://pypi.org/simple
-          name: salesforce-bulk
-        repository: salesforce-bulk
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: salesforce-bulk
+    run:
+      release_notes:
+        organization: heroku
+        repository: salesforce-bulk
+        tag_version_prefix: v

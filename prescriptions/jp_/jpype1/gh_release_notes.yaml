@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Jpype1GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jpype-project
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jpype1
-        repository: jpype
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jpype1
+    run:
+      release_notes:
+        organization: jpype-project
+        repository: jpype
+        tag_version_prefix: v

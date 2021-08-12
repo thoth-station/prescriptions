@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JanusGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aio-libs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: janus
-        repository: janus
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: janus
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: janus
+        tag_version_prefix: v

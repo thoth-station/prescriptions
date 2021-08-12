@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyddqGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: FRosner
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyddq
-        repository: drunken-data-quality
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyddq
+    run:
+      release_notes:
+        organization: FRosner
+        repository: drunken-data-quality

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Pydrive2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: iterative
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pydrive2
-        repository: PyDrive2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pydrive2
+    run:
+      release_notes:
+        organization: iterative
+        repository: PyDrive2

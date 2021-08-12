@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ProphetGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: facebook
-        package_version:
-          index_url: https://pypi.org/simple
-          name: prophet
-        repository: prophet
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: prophet
+    run:
+      release_notes:
+        organization: facebook
+        repository: prophet
+        tag_version_prefix: v

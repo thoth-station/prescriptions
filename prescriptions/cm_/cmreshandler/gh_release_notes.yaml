@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CmreshandlerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cmanaha
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cmreshandler
-        repository: python-elasticsearch-logger
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cmreshandler
+    run:
+      release_notes:
+        organization: cmanaha
+        repository: python-elasticsearch-logger

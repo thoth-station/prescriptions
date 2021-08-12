@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PymodbusGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: riptideio
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pymodbus
-        repository: pymodbus
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pymodbus
+    run:
+      release_notes:
+        organization: riptideio
+        repository: pymodbus
+        tag_version_prefix: v

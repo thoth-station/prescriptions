@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Ansi2htmlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pycontribs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ansi2html
-        repository: ansi2html
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ansi2html
+    run:
+      release_notes:
+        organization: pycontribs
+        repository: ansi2html

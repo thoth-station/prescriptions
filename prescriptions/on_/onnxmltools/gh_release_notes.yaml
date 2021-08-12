@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: OnnxmltoolsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: onnx
-        package_version:
-          index_url: https://pypi.org/simple
-          name: onnxmltools
-        repository: onnxmltools
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: onnxmltools
+    run:
+      release_notes:
+        organization: onnx
+        repository: onnxmltools
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CowpyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jeffbuttars
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cowpy
-        repository: cowpy
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cowpy
+    run:
+      release_notes:
+        organization: jeffbuttars
+        repository: cowpy

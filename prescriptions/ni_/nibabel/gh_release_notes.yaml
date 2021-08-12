@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: NibabelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: nipy
-        package_version:
-          index_url: https://pypi.org/simple
-          name: nibabel
-        repository: nibabel
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: nibabel
+    run:
+      release_notes:
+        organization: nipy
+        repository: nibabel

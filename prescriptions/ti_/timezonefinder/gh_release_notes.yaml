@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TimezonefinderGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jannikmi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: timezonefinder
-        repository: timezonefinder
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: timezonefinder
+    run:
+      release_notes:
+        organization: jannikmi
+        repository: timezonefinder
+        tag_version_prefix: v

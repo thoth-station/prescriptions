@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: VcrpyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kevin1024
-        package_version:
-          index_url: https://pypi.org/simple
-          name: vcrpy
-        repository: vcrpy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: vcrpy
+    run:
+      release_notes:
+        organization: kevin1024
+        repository: vcrpy
+        tag_version_prefix: v

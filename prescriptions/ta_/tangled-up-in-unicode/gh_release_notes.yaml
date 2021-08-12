@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TangledUpInUnicodeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dylan-profiler
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tangled-up-in-unicode
-        repository: tangled-up-in-unicode
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tangled-up-in-unicode
+    run:
+      release_notes:
+        organization: dylan-profiler
+        repository: tangled-up-in-unicode
+        tag_version_prefix: v

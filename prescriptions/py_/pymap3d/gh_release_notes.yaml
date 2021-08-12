@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pymap3dGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: geospace-code
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pymap3d
-        repository: pymap3d
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pymap3d
+    run:
+      release_notes:
+        organization: geospace-code
+        repository: pymap3d
+        tag_version_prefix: v

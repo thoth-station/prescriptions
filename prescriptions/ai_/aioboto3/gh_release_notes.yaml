@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Aioboto3GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: terrycain
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aioboto3
-        repository: aioboto3
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aioboto3
+    run:
+      release_notes:
+        organization: terrycain
+        repository: aioboto3
+        tag_version_prefix: v

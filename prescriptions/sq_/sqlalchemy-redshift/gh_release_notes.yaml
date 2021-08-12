@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SqlalchemyRedshiftGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sqlalchemy-redshift
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sqlalchemy-redshift
-        repository: sqlalchemy-redshift
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sqlalchemy-redshift
+    run:
+      release_notes:
+        organization: sqlalchemy-redshift
+        repository: sqlalchemy-redshift

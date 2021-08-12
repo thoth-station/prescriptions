@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PygeoipGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: appliedsec
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pygeoip
-        repository: pygeoip
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pygeoip
+    run:
+      release_notes:
+        organization: appliedsec
+        repository: pygeoip
+        tag_version_prefix: v

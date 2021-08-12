@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JishakuGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Gorialis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jishaku
-        repository: jishaku
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jishaku
+    run:
+      release_notes:
+        organization: Gorialis
+        repository: jishaku

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PlyvelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wbolster
-        package_version:
-          index_url: https://pypi.org/simple
-          name: plyvel
-        repository: plyvel
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: plyvel
+    run:
+      release_notes:
+        organization: wbolster
+        repository: plyvel

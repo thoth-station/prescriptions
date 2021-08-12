@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SeqevalGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: chakki-works
-        package_version:
-          index_url: https://pypi.org/simple
-          name: seqeval
-        repository: seqeval
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: seqeval
+    run:
+      release_notes:
+        organization: chakki-works
+        repository: seqeval
+        tag_version_prefix: v

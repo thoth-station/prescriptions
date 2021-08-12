@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ChromedriverBinaryGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: danielkaiser
-        package_version:
-          index_url: https://pypi.org/simple
-          name: chromedriver-binary
-        repository: python-chromedriver-binary
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: chromedriver-binary
+    run:
+      release_notes:
+        organization: danielkaiser
+        repository: python-chromedriver-binary
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TypepyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: thombashi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: typepy
-        repository: typepy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: typepy
+    run:
+      release_notes:
+        organization: thombashi
+        repository: typepy
+        tag_version_prefix: v

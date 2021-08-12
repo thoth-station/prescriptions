@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyprindGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rasbt
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyprind
-        repository: pyprind
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyprind
+    run:
+      release_notes:
+        organization: rasbt
+        repository: pyprind
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RayGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ray-project
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ray
-        repository: ray
-        tag_version_prefix: ray-
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ray
+    run:
+      release_notes:
+        organization: ray-project
+        repository: ray
+        tag_version_prefix: ray-

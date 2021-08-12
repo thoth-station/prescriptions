@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TrymeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: bryanwb
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tryme
-        repository: tryme
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tryme
+    run:
+      release_notes:
+        organization: bryanwb
+        repository: tryme

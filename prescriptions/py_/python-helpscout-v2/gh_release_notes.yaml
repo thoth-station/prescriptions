@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonHelpscoutV2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: santiher
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-helpscout-v2
-        repository: python-helpscout-v2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-helpscout-v2
+    run:
+      release_notes:
+        organization: santiher
+        repository: python-helpscout-v2

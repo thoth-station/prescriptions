@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: NietGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: openuado
-        package_version:
-          index_url: https://pypi.org/simple
-          name: niet
-        repository: niet
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: niet
+    run:
+      release_notes:
+        organization: openuado
+        repository: niet

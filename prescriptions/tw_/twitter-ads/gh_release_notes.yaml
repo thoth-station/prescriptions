@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TwitterAdsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: twitterdev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: twitter-ads
-        repository: twitter-python-ads-sdk
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: twitter-ads
+    run:
+      release_notes:
+        organization: twitterdev
+        repository: twitter-python-ads-sdk
+        tag_version_prefix: v

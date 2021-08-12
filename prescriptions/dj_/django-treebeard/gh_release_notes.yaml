@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoTreebeardGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-treebeard
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-treebeard
-        repository: django-treebeard
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-treebeard
+    run:
+      release_notes:
+        organization: django-treebeard
+        repository: django-treebeard

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Flake8RstDocstringsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: peterjc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-rst-docstrings
-        repository: flake8-rst-docstrings
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-rst-docstrings
+    run:
+      release_notes:
+        organization: peterjc
+        repository: flake8-rst-docstrings
+        tag_version_prefix: v

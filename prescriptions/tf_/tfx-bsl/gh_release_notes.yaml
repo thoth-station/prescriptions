@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TfxBslGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tensorflow
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tfx-bsl
-        repository: tfx-bsl
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tfx-bsl
+    run:
+      release_notes:
+        organization: tensorflow
+        repository: tfx-bsl
+        tag_version_prefix: v

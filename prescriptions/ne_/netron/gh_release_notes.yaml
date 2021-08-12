@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NetronGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lutzroeder
-        package_version:
-          index_url: https://pypi.org/simple
-          name: netron
-        repository: netron
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: netron
+    run:
+      release_notes:
+        organization: lutzroeder
+        repository: netron
+        tag_version_prefix: v

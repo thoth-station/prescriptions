@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoFlatThemeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: elky
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-flat-theme
-        repository: django-flat-theme
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-flat-theme
+    run:
+      release_notes:
+        organization: elky
+        repository: django-flat-theme

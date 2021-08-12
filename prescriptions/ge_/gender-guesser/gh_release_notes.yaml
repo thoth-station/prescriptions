@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GenderGuesserGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lead-ratings
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gender-guesser
-        repository: gender-guesser
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gender-guesser
+    run:
+      release_notes:
+        organization: lead-ratings
+        repository: gender-guesser
+        tag_version_prefix: v

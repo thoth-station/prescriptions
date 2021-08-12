@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: HdxPythonUtilitiesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: OCHA-DAP
-        package_version:
-          index_url: https://pypi.org/simple
-          name: hdx-python-utilities
-        repository: hdx-python-utilities
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: hdx-python-utilities
+    run:
+      release_notes:
+        organization: OCHA-DAP
+        repository: hdx-python-utilities
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: WtformsComponentsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kvesteri
-        package_version:
-          index_url: https://pypi.org/simple
-          name: wtforms-components
-        repository: wtforms-components
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: wtforms-components
+    run:
+      release_notes:
+        organization: kvesteri
+        repository: wtforms-components

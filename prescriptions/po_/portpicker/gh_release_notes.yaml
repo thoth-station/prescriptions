@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PortpickerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: google
-        package_version:
-          index_url: https://pypi.org/simple
-          name: portpicker
-        repository: python_portpicker
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: portpicker
+    run:
+      release_notes:
+        organization: google
+        repository: python_portpicker
+        tag_version_prefix: v

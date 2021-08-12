@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MattermostwrapperGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: btotharye
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mattermostwrapper
-        repository: mattermostwrapper
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mattermostwrapper
+    run:
+      release_notes:
+        organization: btotharye
+        repository: mattermostwrapper

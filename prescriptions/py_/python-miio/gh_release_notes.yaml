@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonMiioGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rytilahti
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-miio
-        repository: python-miio
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-miio
+    run:
+      release_notes:
+        organization: rytilahti
+        repository: python-miio

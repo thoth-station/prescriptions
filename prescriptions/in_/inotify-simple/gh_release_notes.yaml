@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: InotifySimpleGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: chrisjbillington
-        package_version:
-          index_url: https://pypi.org/simple
-          name: inotify-simple
-        repository: inotify_simple
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: inotify-simple
+    run:
+      release_notes:
+        organization: chrisjbillington
+        repository: inotify_simple

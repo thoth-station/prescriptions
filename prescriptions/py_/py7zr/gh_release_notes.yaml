@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Py7zrGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: miurahr
-        package_version:
-          index_url: https://pypi.org/simple
-          name: py7zr
-        repository: py7zr
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: py7zr
+    run:
+      release_notes:
+        organization: miurahr
+        repository: py7zr
+        tag_version_prefix: v

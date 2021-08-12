@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: HassNabucasaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: NabuCasa
-        package_version:
-          index_url: https://pypi.org/simple
-          name: hass-nabucasa
-        repository: hass-nabucasa
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: hass-nabucasa
+    run:
+      release_notes:
+        organization: NabuCasa
+        repository: hass-nabucasa

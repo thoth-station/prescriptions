@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PretendGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: alex
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pretend
-        repository: pretend
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pretend
+    run:
+      release_notes:
+        organization: alex
+        repository: pretend
+        tag_version_prefix: v

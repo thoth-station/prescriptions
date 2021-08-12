@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ApacheAirflowProvidersAmazonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: apache
-        package_version:
-          index_url: https://pypi.org/simple
-          name: apache-airflow-providers-amazon
-        repository: airflow
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: apache-airflow-providers-amazon
+    run:
+      release_notes:
+        organization: apache
+        repository: airflow

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: OptEinsumGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dgasmith
-        package_version:
-          index_url: https://pypi.org/simple
-          name: opt-einsum
-        repository: opt_einsum
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: opt-einsum
+    run:
+      release_notes:
+        organization: dgasmith
+        repository: opt_einsum
+        tag_version_prefix: v

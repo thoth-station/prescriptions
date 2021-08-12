@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SphinxcontribOpenapiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sphinx-contrib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sphinxcontrib-openapi
-        repository: openapi
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sphinxcontrib-openapi
+    run:
+      release_notes:
+        organization: sphinx-contrib
+        repository: openapi

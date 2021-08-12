@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TatsuGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: neogeny
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tatsu
-        repository: tatsu
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tatsu
+    run:
+      release_notes:
+        organization: neogeny
+        repository: tatsu
+        tag_version_prefix: v

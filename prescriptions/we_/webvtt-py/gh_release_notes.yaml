@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: WebvttPyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: glut23
-        package_version:
-          index_url: https://pypi.org/simple
-          name: webvtt-py
-        repository: webvtt-py
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: webvtt-py
+    run:
+      release_notes:
+        organization: glut23
+        repository: webvtt-py

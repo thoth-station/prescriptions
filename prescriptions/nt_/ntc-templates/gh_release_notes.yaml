@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NtcTemplatesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: networktocode
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ntc-templates
-        repository: ntc-templates
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ntc-templates
+    run:
+      release_notes:
+        organization: networktocode
+        repository: ntc-templates
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudContainerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-container
-        repository: python-container
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-container
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-container
+        tag_version_prefix: v

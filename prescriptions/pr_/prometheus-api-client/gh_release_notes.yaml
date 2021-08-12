@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PrometheusApiClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: AICoE
-        package_version:
-          index_url: https://pypi.org/simple
-          name: prometheus-api-client
-        repository: prometheus-api-client-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: prometheus-api-client
+    run:
+      release_notes:
+        organization: AICoE
+        repository: prometheus-api-client-python
+        tag_version_prefix: v

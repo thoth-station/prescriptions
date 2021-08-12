@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BayesianOptimizationGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: fmfn
-        package_version:
-          index_url: https://pypi.org/simple
-          name: bayesian-optimization
-        repository: BayesianOptimization
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: bayesian-optimization
+    run:
+      release_notes:
+        organization: fmfn
+        repository: BayesianOptimization

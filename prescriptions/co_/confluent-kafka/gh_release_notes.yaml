@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ConfluentKafkaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: confluentinc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: confluent-kafka
-        repository: confluent-kafka-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: confluent-kafka
+    run:
+      release_notes:
+        organization: confluentinc
+        repository: confluent-kafka-python
+        tag_version_prefix: v

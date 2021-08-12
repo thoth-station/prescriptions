@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PygithubGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pygithub
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pygithub
-        repository: pygithub
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pygithub
+    run:
+      release_notes:
+        organization: pygithub
+        repository: pygithub
+        tag_version_prefix: v

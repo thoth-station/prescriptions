@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PusherGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pusher
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pusher
-        repository: pusher-http-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pusher
+    run:
+      release_notes:
+        organization: pusher
+        repository: pusher-http-python
+        tag_version_prefix: v

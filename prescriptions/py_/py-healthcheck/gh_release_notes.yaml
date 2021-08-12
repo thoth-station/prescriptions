@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyHealthcheckGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ateliedocodigo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: py-healthcheck
-        repository: py-healthcheck
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: py-healthcheck
+    run:
+      release_notes:
+        organization: ateliedocodigo
+        repository: py-healthcheck

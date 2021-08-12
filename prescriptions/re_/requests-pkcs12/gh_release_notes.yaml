@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RequestsPkcs12GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: m-click
-        package_version:
-          index_url: https://pypi.org/simple
-          name: requests-pkcs12
-        repository: requests_pkcs12
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: requests-pkcs12
+    run:
+      release_notes:
+        organization: m-click
+        repository: requests_pkcs12

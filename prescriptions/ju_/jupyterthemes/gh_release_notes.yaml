@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JupyterthemesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dunovank
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jupyterthemes
-        repository: jupyter-themes
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jupyterthemes
+    run:
+      release_notes:
+        organization: dunovank
+        repository: jupyter-themes
+        tag_version_prefix: v

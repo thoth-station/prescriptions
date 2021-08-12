@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KubernetesAsyncioGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tomplus
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kubernetes-asyncio
-        repository: kubernetes_asyncio
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kubernetes-asyncio
+    run:
+      release_notes:
+        organization: tomplus
+        repository: kubernetes_asyncio
+        tag_version_prefix: v

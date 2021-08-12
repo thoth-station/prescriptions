@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PathPyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jaraco
-        package_version:
-          index_url: https://pypi.org/simple
-          name: path-py
-        repository: path
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: path-py
+    run:
+      release_notes:
+        organization: jaraco
+        repository: path

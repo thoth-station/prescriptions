@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SqlparseGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: andialbrecht
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sqlparse
-        repository: sqlparse
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sqlparse
+    run:
+      release_notes:
+        organization: andialbrecht
+        repository: sqlparse

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FoliumGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-visualization
-        package_version:
-          index_url: https://pypi.org/simple
-          name: folium
-        repository: folium
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: folium
+    run:
+      release_notes:
+        organization: python-visualization
+        repository: folium
+        tag_version_prefix: v

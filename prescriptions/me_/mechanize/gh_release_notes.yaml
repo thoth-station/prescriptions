@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MechanizeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-mechanize
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mechanize
-        repository: mechanize
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mechanize
+    run:
+      release_notes:
+        organization: python-mechanize
+        repository: mechanize
+        tag_version_prefix: v

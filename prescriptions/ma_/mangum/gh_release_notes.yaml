@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MangumGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jordaneremieff
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mangum
-        repository: mangum
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mangum
+    run:
+      release_notes:
+        organization: jordaneremieff
+        repository: mangum

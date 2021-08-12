@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DatabricksCliGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: databricks
-        package_version:
-          index_url: https://pypi.org/simple
-          name: databricks-cli
-        repository: databricks-cli
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: databricks-cli
+    run:
+      release_notes:
+        organization: databricks
+        repository: databricks-cli

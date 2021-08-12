@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoFlatResponsiveGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: elky
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-flat-responsive
-        repository: django-flat-responsive
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-flat-responsive
+    run:
+      release_notes:
+        organization: elky
+        repository: django-flat-responsive

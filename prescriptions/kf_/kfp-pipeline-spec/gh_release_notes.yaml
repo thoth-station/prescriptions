@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: KfpPipelineSpecGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kubeflow
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kfp-pipeline-spec
-        repository: pipelines
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kfp-pipeline-spec
+    run:
+      release_notes:
+        organization: kubeflow
+        repository: pipelines

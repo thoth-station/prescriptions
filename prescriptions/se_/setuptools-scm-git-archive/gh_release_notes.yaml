@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SetuptoolsScmGitArchiveGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Changaco
-        package_version:
-          index_url: https://pypi.org/simple
-          name: setuptools-scm-git-archive
-        repository: setuptools_scm_git_archive
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: setuptools-scm-git-archive
+    run:
+      release_notes:
+        organization: Changaco
+        repository: setuptools_scm_git_archive

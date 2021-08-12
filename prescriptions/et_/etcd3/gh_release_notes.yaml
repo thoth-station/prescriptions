@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Etcd3GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kragniz
-        package_version:
-          index_url: https://pypi.org/simple
-          name: etcd3
-        repository: python-etcd3
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: etcd3
+    run:
+      release_notes:
+        organization: kragniz
+        repository: python-etcd3
+        tag_version_prefix: v

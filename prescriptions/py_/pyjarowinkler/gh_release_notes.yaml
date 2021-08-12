@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyjarowinklerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: nap
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyjarowinkler
-        repository: jaro-winkler-distance
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyjarowinkler
+    run:
+      release_notes:
+        organization: nap
+        repository: jaro-winkler-distance
+        tag_version_prefix: v

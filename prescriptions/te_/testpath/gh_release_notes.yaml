@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TestpathGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jupyter
-        package_version:
-          index_url: https://pypi.org/simple
-          name: testpath
-        repository: testpath
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: testpath
+    run:
+      release_notes:
+        organization: jupyter
+        repository: testpath

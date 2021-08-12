@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SnitunGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: NabuCasa
-        package_version:
-          index_url: https://pypi.org/simple
-          name: snitun
-        repository: snitun
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: snitun
+    run:
+      release_notes:
+        organization: NabuCasa
+        repository: snitun

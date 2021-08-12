@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DatadogGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: DataDog
-        package_version:
-          index_url: https://pypi.org/simple
-          name: datadog
-        repository: datadogpy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: datadog
+    run:
+      release_notes:
+        organization: DataDog
+        repository: datadogpy
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: XgboostGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dmlc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: xgboost
-        repository: xgboost
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: xgboost
+    run:
+      release_notes:
+        organization: dmlc
+        repository: xgboost
+        tag_version_prefix: v

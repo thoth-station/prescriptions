@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RazorpayGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: razorpay
-        package_version:
-          index_url: https://pypi.org/simple
-          name: razorpay
-        repository: razorpay-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: razorpay
+    run:
+      release_notes:
+        organization: razorpay
+        repository: razorpay-python

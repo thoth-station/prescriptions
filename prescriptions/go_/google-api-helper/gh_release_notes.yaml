@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleApiHelperGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: r00tat
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-api-helper
-        repository: google-api-helper
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-api-helper
+    run:
+      release_notes:
+        organization: r00tat
+        repository: google-api-helper
+        tag_version_prefix: v

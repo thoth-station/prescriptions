@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PybigqueryGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pybigquery
-        repository: python-bigquery-sqlalchemy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pybigquery
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-bigquery-sqlalchemy
+        tag_version_prefix: v

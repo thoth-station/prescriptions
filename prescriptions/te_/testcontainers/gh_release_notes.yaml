@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TestcontainersGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: testcontainers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: testcontainers
-        repository: testcontainers-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: testcontainers
+    run:
+      release_notes:
+        organization: testcontainers
+        repository: testcontainers-python
+        tag_version_prefix: v

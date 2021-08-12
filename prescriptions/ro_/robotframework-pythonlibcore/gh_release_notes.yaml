@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RobotframeworkPythonlibcoreGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: robotframework
-        package_version:
-          index_url: https://pypi.org/simple
-          name: robotframework-pythonlibcore
-        repository: PythonLibCore
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: robotframework-pythonlibcore
+    run:
+      release_notes:
+        organization: robotframework
+        repository: PythonLibCore
+        tag_version_prefix: v

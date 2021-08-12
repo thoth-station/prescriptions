@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ColinGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: user-cont
-        package_version:
-          index_url: https://pypi.org/simple
-          name: colin
-        repository: colin
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: colin
+    run:
+      release_notes:
+        organization: user-cont
+        repository: colin

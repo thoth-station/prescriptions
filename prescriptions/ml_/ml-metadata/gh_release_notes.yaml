@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MlMetadataGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: google
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ml-metadata
-        repository: ml-metadata
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ml-metadata
+    run:
+      release_notes:
+        organization: google
+        repository: ml-metadata
+        tag_version_prefix: v

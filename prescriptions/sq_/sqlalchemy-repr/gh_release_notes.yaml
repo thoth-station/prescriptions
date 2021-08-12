@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SqlalchemyReprGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: manicmaniac
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sqlalchemy-repr
-        repository: sqlalchemy-repr
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sqlalchemy-repr
+    run:
+      release_notes:
+        organization: manicmaniac
+        repository: sqlalchemy-repr

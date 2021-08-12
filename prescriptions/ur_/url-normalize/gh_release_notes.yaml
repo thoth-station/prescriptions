@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: UrlNormalizeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: niksite
-        package_version:
-          index_url: https://pypi.org/simple
-          name: url-normalize
-        repository: url-normalize
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: url-normalize
+    run:
+      release_notes:
+        organization: niksite
+        repository: url-normalize

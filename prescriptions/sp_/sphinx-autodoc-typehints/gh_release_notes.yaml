@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SphinxAutodocTypehintsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: agronholm
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sphinx-autodoc-typehints
-        repository: sphinx-autodoc-typehints
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sphinx-autodoc-typehints
+    run:
+      release_notes:
+        organization: agronholm
+        repository: sphinx-autodoc-typehints

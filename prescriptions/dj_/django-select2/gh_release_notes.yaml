@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoSelect2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: codingjoe
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-select2
-        repository: django-select2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-select2
+    run:
+      release_notes:
+        organization: codingjoe
+        repository: django-select2

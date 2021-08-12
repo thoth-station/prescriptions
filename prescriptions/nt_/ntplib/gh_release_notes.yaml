@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: NtplibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cf-natali
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ntplib
-        repository: ntplib
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ntplib
+    run:
+      release_notes:
+        organization: cf-natali
+        repository: ntplib

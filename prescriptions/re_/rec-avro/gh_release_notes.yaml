@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RecAvroGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: bmizhen
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rec-avro
-        repository: rec-avro
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rec-avro
+    run:
+      release_notes:
+        organization: bmizhen
+        repository: rec-avro

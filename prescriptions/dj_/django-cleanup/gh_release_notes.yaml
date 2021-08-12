@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoCleanupGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: un1t
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-cleanup
-        repository: django-cleanup
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-cleanup
+    run:
+      release_notes:
+        organization: un1t
+        repository: django-cleanup

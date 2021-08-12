@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SphinxcontribHttpdomainGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sphinx-contrib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sphinxcontrib-httpdomain
-        repository: httpdomain
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sphinxcontrib-httpdomain
+    run:
+      release_notes:
+        organization: sphinx-contrib
+        repository: httpdomain

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Rfc3339ValidatorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: naimetti
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rfc3339-validator
-        repository: rfc3339-validator
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rfc3339-validator
+    run:
+      release_notes:
+        organization: naimetti
+        repository: rfc3339-validator
+        tag_version_prefix: v

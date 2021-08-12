@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonHttpClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sendgrid
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-http-client
-        repository: python-http-client
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-http-client
+    run:
+      release_notes:
+        organization: sendgrid
+        repository: python-http-client

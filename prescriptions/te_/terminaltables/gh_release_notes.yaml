@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TerminaltablesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Robpol86
-        package_version:
-          index_url: https://pypi.org/simple
-          name: terminaltables
-        repository: terminaltables
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: terminaltables
+    run:
+      release_notes:
+        organization: Robpol86
+        repository: terminaltables
+        tag_version_prefix: v

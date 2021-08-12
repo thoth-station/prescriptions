@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonGraphqlClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: prodigyeducation
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-graphql-client
-        repository: python-graphql-client
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-graphql-client
+    run:
+      release_notes:
+        organization: prodigyeducation
+        repository: python-graphql-client
+        tag_version_prefix: v

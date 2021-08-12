@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyngrokGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: alexdlaird
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyngrok
-        repository: pyngrok
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyngrok
+    run:
+      release_notes:
+        organization: alexdlaird
+        repository: pyngrok

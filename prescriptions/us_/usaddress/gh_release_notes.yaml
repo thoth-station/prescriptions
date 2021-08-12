@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: UsaddressGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: datamade
-        package_version:
-          index_url: https://pypi.org/simple
-          name: usaddress
-        repository: usaddress
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: usaddress
+    run:
+      release_notes:
+        organization: datamade
+        repository: usaddress
+        tag_version_prefix: v

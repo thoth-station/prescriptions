@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CookiecutterGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cookiecutter
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cookiecutter
-        repository: cookiecutter
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cookiecutter
+    run:
+      release_notes:
+        organization: cookiecutter
+        repository: cookiecutter

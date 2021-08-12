@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NtlmAuthGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jborean93
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ntlm-auth
-        repository: ntlm-auth
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ntlm-auth
+    run:
+      release_notes:
+        organization: jborean93
+        repository: ntlm-auth
+        tag_version_prefix: v

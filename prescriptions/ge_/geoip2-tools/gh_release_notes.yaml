@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Geoip2ToolsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Nekmo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: geoip2-tools
-        repository: geoip2-tools
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: geoip2-tools
+    run:
+      release_notes:
+        organization: Nekmo
+        repository: geoip2-tools
+        tag_version_prefix: v

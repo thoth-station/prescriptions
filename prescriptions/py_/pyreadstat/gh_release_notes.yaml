@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyreadstatGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Roche
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyreadstat
-        repository: pyreadstat
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyreadstat
+    run:
+      release_notes:
+        organization: Roche
+        repository: pyreadstat
+        tag_version_prefix: v

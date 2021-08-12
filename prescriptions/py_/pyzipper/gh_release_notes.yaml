@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyzipperGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: danifus
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyzipper
-        repository: pyzipper
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyzipper
+    run:
+      release_notes:
+        organization: danifus
+        repository: pyzipper
+        tag_version_prefix: v

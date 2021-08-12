@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TableauserverclientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tableau
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tableauserverclient
-        repository: server-client-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tableauserverclient
+    run:
+      release_notes:
+        organization: tableau
+        repository: server-client-python
+        tag_version_prefix: v

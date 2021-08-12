@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ThothPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: thoth-station
-        package_version:
-          index_url: https://pypi.org/simple
-          name: thoth-python
-        repository: python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: thoth-python
+    run:
+      release_notes:
+        organization: thoth-station
+        repository: python

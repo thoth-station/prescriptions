@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ConfigspaceGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: automl
-        package_version:
-          index_url: https://pypi.org/simple
-          name: configspace
-        repository: ConfigSpace
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: configspace
+    run:
+      release_notes:
+        organization: automl
+        repository: ConfigSpace
+        tag_version_prefix: v

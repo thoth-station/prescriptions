@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RednoseGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: JBKahn
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rednose
-        repository: rednose
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rednose
+    run:
+      release_notes:
+        organization: JBKahn
+        repository: rednose

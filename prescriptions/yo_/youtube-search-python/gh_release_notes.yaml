@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: YoutubeSearchPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: alexmercerind
-        package_version:
-          index_url: https://pypi.org/simple
-          name: youtube-search-python
-        repository: youtube-search-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: youtube-search-python
+    run:
+      release_notes:
+        organization: alexmercerind
+        repository: youtube-search-python
+        tag_version_prefix: v

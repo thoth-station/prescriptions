@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoBitfieldGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: disqus
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-bitfield
-        repository: django-bitfield
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-bitfield
+    run:
+      release_notes:
+        organization: disqus
+        repository: django-bitfield

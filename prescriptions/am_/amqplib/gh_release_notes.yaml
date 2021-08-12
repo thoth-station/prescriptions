@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AmqplibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: barryp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: amqplib
-        repository: py-amqplib
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: amqplib
+    run:
+      release_notes:
+        organization: barryp
+        repository: py-amqplib

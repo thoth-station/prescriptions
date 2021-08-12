@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JsonRefDictGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jacksmith15
-        package_version:
-          index_url: https://pypi.org/simple
-          name: json-ref-dict
-        repository: json-ref-dict
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: json-ref-dict
+    run:
+      release_notes:
+        organization: jacksmith15
+        repository: json-ref-dict

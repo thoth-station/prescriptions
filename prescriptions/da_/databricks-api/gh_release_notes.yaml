@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DatabricksApiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: crflynn
-        package_version:
-          index_url: https://pypi.org/simple
-          name: databricks-api
-        repository: databricks-api
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: databricks-api
+    run:
+      release_notes:
+        organization: crflynn
+        repository: databricks-api

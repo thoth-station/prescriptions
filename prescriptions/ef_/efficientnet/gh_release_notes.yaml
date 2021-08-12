@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: EfficientnetGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: qubvel
-        package_version:
-          index_url: https://pypi.org/simple
-          name: efficientnet
-        repository: efficientnet
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: efficientnet
+    run:
+      release_notes:
+        organization: qubvel
+        repository: efficientnet
+        tag_version_prefix: v

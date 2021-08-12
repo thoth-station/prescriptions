@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SetuptoolsGitGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: msabramo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: setuptools-git
-        repository: setuptools-git
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: setuptools-git
+    run:
+      release_notes:
+        organization: msabramo
+        repository: setuptools-git

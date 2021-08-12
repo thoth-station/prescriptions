@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestLoggerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aurzenligl
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-logger
-        repository: pytest-logger
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-logger
+    run:
+      release_notes:
+        organization: aurzenligl
+        repository: pytest-logger

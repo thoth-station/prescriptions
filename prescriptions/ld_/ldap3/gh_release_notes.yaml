@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Ldap3GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cannatag
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ldap3
-        repository: ldap3
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ldap3
+    run:
+      release_notes:
+        organization: cannatag
+        repository: ldap3
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PlexapiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pkkid
-        package_version:
-          index_url: https://pypi.org/simple
-          name: plexapi
-        repository: python-plexapi
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: plexapi
+    run:
+      release_notes:
+        organization: pkkid
+        repository: python-plexapi

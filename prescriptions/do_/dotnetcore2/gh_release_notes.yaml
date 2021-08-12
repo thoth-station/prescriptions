@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Dotnetcore2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dotnet
-        package_version:
-          index_url: https://pypi.org/simple
-          name: dotnetcore2
-        repository: core
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: dotnetcore2
+    run:
+      release_notes:
+        organization: dotnet
+        repository: core
+        tag_version_prefix: v

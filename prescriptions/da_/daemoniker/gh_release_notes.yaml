@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DaemonikerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Muterra
-        package_version:
-          index_url: https://pypi.org/simple
-          name: daemoniker
-        repository: py_daemoniker
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: daemoniker
+    run:
+      release_notes:
+        organization: Muterra
+        repository: py_daemoniker

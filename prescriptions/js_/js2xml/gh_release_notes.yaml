@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Js2xmlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scrapinghub
-        package_version:
-          index_url: https://pypi.org/simple
-          name: js2xml
-        repository: js2xml
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: js2xml
+    run:
+      release_notes:
+        organization: scrapinghub
+        repository: js2xml
+        tag_version_prefix: v

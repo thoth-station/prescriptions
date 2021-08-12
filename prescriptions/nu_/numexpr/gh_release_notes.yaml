@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NumexprGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pydata
-        package_version:
-          index_url: https://pypi.org/simple
-          name: numexpr
-        repository: numexpr
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: numexpr
+    run:
+      release_notes:
+        organization: pydata
+        repository: numexpr
+        tag_version_prefix: v

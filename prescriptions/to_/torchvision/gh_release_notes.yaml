@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TorchvisionGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pytorch
-        package_version:
-          index_url: https://pypi.org/simple
-          name: torchvision
-        repository: vision
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: torchvision
+    run:
+      release_notes:
+        organization: pytorch
+        repository: vision
+        tag_version_prefix: v

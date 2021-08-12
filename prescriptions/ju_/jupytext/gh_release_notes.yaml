@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JupytextGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mwouts
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jupytext
-        repository: jupytext
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jupytext
+    run:
+      release_notes:
+        organization: mwouts
+        repository: jupytext
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: YqGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kislyuk
-        package_version:
-          index_url: https://pypi.org/simple
-          name: yq
-        repository: yq
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: yq
+    run:
+      release_notes:
+        organization: kislyuk
+        repository: yq
+        tag_version_prefix: v

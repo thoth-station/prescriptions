@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonGiltGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: retr0h
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-gilt
-        repository: gilt
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-gilt
+    run:
+      release_notes:
+        organization: retr0h
+        repository: gilt
+        tag_version_prefix: v

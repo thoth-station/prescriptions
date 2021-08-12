@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PandasDatareaderGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pydata
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pandas-datareader
-        repository: pandas-datareader
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pandas-datareader
+    run:
+      release_notes:
+        organization: pydata
+        repository: pandas-datareader
+        tag_version_prefix: v

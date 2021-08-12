@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoTastypieGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-tastypie
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-tastypie
-        repository: django-tastypie
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-tastypie
+    run:
+      release_notes:
+        organization: django-tastypie
+        repository: django-tastypie
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AiodockerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aio-libs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aiodocker
-        repository: aiodocker
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aiodocker
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: aiodocker
+        tag_version_prefix: v

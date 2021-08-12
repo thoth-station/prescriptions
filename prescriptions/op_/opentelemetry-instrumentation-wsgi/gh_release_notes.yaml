@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: OpentelemetryInstrumentationWsgiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: open-telemetry
-        package_version:
-          index_url: https://pypi.org/simple
-          name: opentelemetry-instrumentation-wsgi
-        repository: opentelemetry-python-contrib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: opentelemetry-instrumentation-wsgi
+    run:
+      release_notes:
+        organization: open-telemetry
+        repository: opentelemetry-python-contrib
+        tag_version_prefix: v

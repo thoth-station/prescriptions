@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ClickLogGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: click-contrib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: click-log
-        repository: click-log
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: click-log
+    run:
+      release_notes:
+        organization: click-contrib
+        repository: click-log

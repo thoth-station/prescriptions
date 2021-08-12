@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Flake8ClassNewlineGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: AlexanderVanEck
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-class-newline
-        repository: flake8-class-newline
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-class-newline
+    run:
+      release_notes:
+        organization: AlexanderVanEck
+        repository: flake8-class-newline

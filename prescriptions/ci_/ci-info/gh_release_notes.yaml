@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CiInfoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mgxd
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ci-info
-        repository: ci-info
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ci-info
+    run:
+      release_notes:
+        organization: mgxd
+        repository: ci-info

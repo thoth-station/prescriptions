@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Meld3GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: supervisor
-        package_version:
-          index_url: https://pypi.org/simple
-          name: meld3
-        repository: meld3
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: meld3
+    run:
+      release_notes:
+        organization: supervisor
+        repository: meld3

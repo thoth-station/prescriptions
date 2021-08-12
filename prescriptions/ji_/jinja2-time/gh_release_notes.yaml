@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Jinja2TimeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: hackebrot
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jinja2-time
-        repository: jinja2-time
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jinja2-time
+    run:
+      release_notes:
+        organization: hackebrot
+        repository: jinja2-time

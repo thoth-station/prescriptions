@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SnorkelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: snorkel-team
-        package_version:
-          index_url: https://pypi.org/simple
-          name: snorkel
-        repository: snorkel
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: snorkel
+    run:
+      release_notes:
+        organization: snorkel-team
+        repository: snorkel
+        tag_version_prefix: v

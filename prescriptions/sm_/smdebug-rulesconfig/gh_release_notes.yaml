@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SmdebugRulesconfigGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: awslabs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: smdebug-rulesconfig
-        repository: sagemaker-debugger-rulesconfig
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: smdebug-rulesconfig
+    run:
+      release_notes:
+        organization: awslabs
+        repository: sagemaker-debugger-rulesconfig

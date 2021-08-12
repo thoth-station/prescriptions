@@ -1,46 +1,54 @@
 units:
   wraps:
   - name: TensorFlowGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tensorflow
-        package_version:
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
           name: tensorflow
+    run:
+      release_notes:
+        organization: tensorflow
         repository: tensorflow
         tag_version_prefix: v
-    should_include:
-      adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
   - name: IntelTensorFlowGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tensorflow
-        package_version:
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
           name: intel-tensorflow
+    run:
+      release_notes:
+        organization: tensorflow
         repository: tensorflow
         tag_version_prefix: v
-    should_include:
-      adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
   - name: TensorFlowCPUGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tensorflow
-        package_version:
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
           name: tensorflow-cpu
-        repository: tensorflow
-        tag_version_prefix: v
-    should_include:
-      adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
-  - name: TensorFlowGPUGitHubReleaseNotesWrap
     run:
       release_notes:
-      - organization: tensorflow
-        package_version:
-          name: tensorflow-gpu
+        organization: tensorflow
         repository: tensorflow
         tag_version_prefix: v
+  - name: TensorFlowGPUGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tensorflow-gpu
+    run:
+      release_notes:
+        organization: tensorflow
+        repository: tensorflow
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AsyncExitStackGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: sorcio
-        package_version:
-          index_url: https://pypi.org/simple
-          name: async-exit-stack
-        repository: async_exit_stack
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: async-exit-stack
+    run:
+      release_notes:
+        organization: sorcio
+        repository: async_exit_stack

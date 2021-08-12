@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Hdf5storageGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: frejanordsiek
-        package_version:
-          index_url: https://pypi.org/simple
-          name: hdf5storage
-        repository: hdf5storage
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: hdf5storage
+    run:
+      release_notes:
+        organization: frejanordsiek
+        repository: hdf5storage

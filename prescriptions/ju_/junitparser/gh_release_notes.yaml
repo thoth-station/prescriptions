@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JunitparserGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: weiwei
-        package_version:
-          index_url: https://pypi.org/simple
-          name: junitparser
-        repository: junitparser
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: junitparser
+    run:
+      release_notes:
+        organization: weiwei
+        repository: junitparser

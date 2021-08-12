@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: VmprofGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: vmprof
-        package_version:
-          index_url: https://pypi.org/simple
-          name: vmprof
-        repository: vmprof-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: vmprof
+    run:
+      release_notes:
+        organization: vmprof
+        repository: vmprof-python

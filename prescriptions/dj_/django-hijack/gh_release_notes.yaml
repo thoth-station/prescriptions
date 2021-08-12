@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoHijackGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-hijack
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-hijack
-        repository: django-hijack
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-hijack
+    run:
+      release_notes:
+        organization: django-hijack
+        repository: django-hijack

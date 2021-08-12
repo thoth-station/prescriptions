@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoPhonenumberFieldGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: stefanfoulis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-phonenumber-field
-        repository: django-phonenumber-field
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-phonenumber-field
+    run:
+      release_notes:
+        organization: stefanfoulis
+        repository: django-phonenumber-field

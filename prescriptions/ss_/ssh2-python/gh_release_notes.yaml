@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Ssh2PythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ParallelSSH
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ssh2-python
-        repository: ssh2-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ssh2-python
+    run:
+      release_notes:
+        organization: ParallelSSH
+        repository: ssh2-python

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonMimeparseGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dbtsai
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-mimeparse
-        repository: python-mimeparse
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-mimeparse
+    run:
+      release_notes:
+        organization: dbtsai
+        repository: python-mimeparse

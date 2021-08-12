@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: NewlinejsonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: geowurster
-        package_version:
-          index_url: https://pypi.org/simple
-          name: newlinejson
-        repository: NewlineJSON
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: newlinejson
+    run:
+      release_notes:
+        organization: geowurster
+        repository: NewlineJSON

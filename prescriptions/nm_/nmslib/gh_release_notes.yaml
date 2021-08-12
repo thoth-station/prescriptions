@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: NmslibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: nmslib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: nmslib
-        repository: nmslib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: nmslib
+    run:
+      release_notes:
+        organization: nmslib
+        repository: nmslib
+        tag_version_prefix: v

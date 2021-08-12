@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PdfminerSixGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pdfminer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pdfminer-six
-        repository: pdfminer.six
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pdfminer-six
+    run:
+      release_notes:
+        organization: pdfminer
+        repository: pdfminer.six

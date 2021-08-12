@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Pybars3GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wbond
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pybars3
-        repository: pybars3
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pybars3
+    run:
+      release_notes:
+        organization: wbond
+        repository: pybars3

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PymannkendallGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mmhs013
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pymannkendall
-        repository: pymannkendall
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pymannkendall
+    run:
+      release_notes:
+        organization: mmhs013
+        repository: pymannkendall
+        tag_version_prefix: v

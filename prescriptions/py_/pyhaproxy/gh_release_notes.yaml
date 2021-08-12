@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyhaproxyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: imjoey
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyhaproxy
-        repository: pyhaproxy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyhaproxy
+    run:
+      release_notes:
+        organization: imjoey
+        repository: pyhaproxy
+        tag_version_prefix: v

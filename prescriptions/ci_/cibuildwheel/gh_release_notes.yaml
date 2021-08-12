@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CibuildwheelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pypa
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cibuildwheel
-        repository: cibuildwheel
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cibuildwheel
+    run:
+      release_notes:
+        organization: pypa
+        repository: cibuildwheel
+        tag_version_prefix: v

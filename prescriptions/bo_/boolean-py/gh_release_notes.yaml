@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: BooleanPyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: bastikr
-        package_version:
-          index_url: https://pypi.org/simple
-          name: boolean-py
-        repository: boolean.py
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: boolean-py
+    run:
+      release_notes:
+        organization: bastikr
+        repository: boolean.py
+        tag_version_prefix: v

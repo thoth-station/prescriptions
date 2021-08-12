@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DiscordWebhooksGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: JamesIves
-        package_version:
-          index_url: https://pypi.org/simple
-          name: discord-webhooks
-        repository: discord-webhooks
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: discord-webhooks
+    run:
+      release_notes:
+        organization: JamesIves
+        repository: discord-webhooks

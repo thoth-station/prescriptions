@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ToolzGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pytoolz
-        package_version:
-          index_url: https://pypi.org/simple
-          name: toolz
-        repository: toolz
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: toolz
+    run:
+      release_notes:
+        organization: pytoolz
+        repository: toolz

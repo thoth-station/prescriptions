@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestParallelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: browsertron
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-parallel
-        repository: pytest-parallel
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-parallel
+    run:
+      release_notes:
+        organization: browsertron
+        repository: pytest-parallel

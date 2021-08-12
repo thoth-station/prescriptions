@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RqSchedulerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rq
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rq-scheduler
-        repository: rq-scheduler
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rq-scheduler
+    run:
+      release_notes:
+        organization: rq
+        repository: rq-scheduler
+        tag_version_prefix: v

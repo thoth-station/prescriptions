@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: EmailReplyParserGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zapier
-        package_version:
-          index_url: https://pypi.org/simple
-          name: email-reply-parser
-        repository: email-reply-parser
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: email-reply-parser
+    run:
+      release_notes:
+        organization: zapier
+        repository: email-reply-parser
+        tag_version_prefix: v

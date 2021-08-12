@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: HomeassistantGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: home-assistant
-        package_version:
-          index_url: https://pypi.org/simple
-          name: homeassistant
-        repository: core
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: homeassistant
+    run:
+      release_notes:
+        organization: home-assistant
+        repository: core

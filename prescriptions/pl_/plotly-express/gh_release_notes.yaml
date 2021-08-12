@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PlotlyExpressGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: plotly
-        package_version:
-          index_url: https://pypi.org/simple
-          name: plotly-express
-        repository: plotly_express
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: plotly-express
+    run:
+      release_notes:
+        organization: plotly
+        repository: plotly_express
+        tag_version_prefix: v

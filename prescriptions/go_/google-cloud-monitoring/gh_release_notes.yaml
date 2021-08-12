@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudMonitoringGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-monitoring
-        repository: python-monitoring
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-monitoring
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-monitoring
+        tag_version_prefix: v

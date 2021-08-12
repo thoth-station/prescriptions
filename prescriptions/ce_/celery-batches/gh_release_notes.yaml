@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CeleryBatchesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: clokep
-        package_version:
-          index_url: https://pypi.org/simple
-          name: celery-batches
-        repository: celery-batches
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: celery-batches
+    run:
+      release_notes:
+        organization: clokep
+        repository: celery-batches
+        tag_version_prefix: v

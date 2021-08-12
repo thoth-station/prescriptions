@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: GoogleadsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleads
-        package_version:
-          index_url: https://pypi.org/simple
-          name: googleads
-        repository: googleads-python-lib
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: googleads
+    run:
+      release_notes:
+        organization: googleads
+        repository: googleads-python-lib

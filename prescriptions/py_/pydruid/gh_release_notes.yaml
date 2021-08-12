@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PydruidGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: druid-io
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pydruid
-        repository: pydruid
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pydruid
+    run:
+      release_notes:
+        organization: druid-io
+        repository: pydruid

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ModelBakeryGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: model-bakers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: model-bakery
-        repository: model_bakery
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: model-bakery
+    run:
+      release_notes:
+        organization: model-bakers
+        repository: model_bakery

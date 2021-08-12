@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ColconDevtoolsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: colcon
-        package_version:
-          index_url: https://pypi.org/simple
-          name: colcon-devtools
-        repository: colcon-devtools
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: colcon-devtools
+    run:
+      release_notes:
+        organization: colcon
+        repository: colcon-devtools

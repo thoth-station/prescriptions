@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TensorflowonsparkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: yahoo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tensorflowonspark
-        repository: TensorFlowOnSpark
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tensorflowonspark
+    run:
+      release_notes:
+        organization: yahoo
+        repository: TensorFlowOnSpark
+        tag_version_prefix: v

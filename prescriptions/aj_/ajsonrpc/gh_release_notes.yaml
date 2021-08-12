@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AjsonrpcGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pavlov99
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ajsonrpc
-        repository: ajsonrpc
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ajsonrpc
+    run:
+      release_notes:
+        organization: pavlov99
+        repository: ajsonrpc

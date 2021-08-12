@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: JsonlinesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: wbolster
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jsonlines
-        repository: jsonlines
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jsonlines
+    run:
+      release_notes:
+        organization: wbolster
+        repository: jsonlines

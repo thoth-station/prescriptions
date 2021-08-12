@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PipxGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pypa
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pipx
-        repository: pipx
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pipx
+    run:
+      release_notes:
+        organization: pypa
+        repository: pipx

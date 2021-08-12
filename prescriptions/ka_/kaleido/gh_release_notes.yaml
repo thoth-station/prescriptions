@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KaleidoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: plotly
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kaleido
-        repository: Kaleido
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kaleido
+    run:
+      release_notes:
+        organization: plotly
+        repository: Kaleido
+        tag_version_prefix: v

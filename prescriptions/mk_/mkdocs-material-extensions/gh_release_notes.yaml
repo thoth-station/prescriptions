@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MkdocsMaterialExtensionsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: facelessuser
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mkdocs-material-extensions
-        repository: mkdocs-material-extensions
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mkdocs-material-extensions
+    run:
+      release_notes:
+        organization: facelessuser
+        repository: mkdocs-material-extensions

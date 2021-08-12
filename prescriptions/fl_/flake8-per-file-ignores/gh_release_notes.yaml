@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Flake8PerFileIgnoresGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: snoack
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-per-file-ignores
-        repository: flake8-per-file-ignores
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-per-file-ignores
+    run:
+      release_notes:
+        organization: snoack
+        repository: flake8-per-file-ignores

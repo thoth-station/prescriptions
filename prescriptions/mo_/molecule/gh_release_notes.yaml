@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MoleculeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ansible-community
-        package_version:
-          index_url: https://pypi.org/simple
-          name: molecule
-        repository: molecule
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: molecule
+    run:
+      release_notes:
+        organization: ansible-community
+        repository: molecule

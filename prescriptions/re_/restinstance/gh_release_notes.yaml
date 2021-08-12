@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RestinstanceGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: asyrjasalo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: restinstance
-        repository: RESTinstance
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: restinstance
+    run:
+      release_notes:
+        organization: asyrjasalo
+        repository: RESTinstance

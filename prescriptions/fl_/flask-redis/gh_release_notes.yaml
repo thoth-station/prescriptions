@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskRedisGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: underyx
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-redis
-        repository: flask-redis
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-redis
+    run:
+      release_notes:
+        organization: underyx
+        repository: flask-redis
+        tag_version_prefix: v

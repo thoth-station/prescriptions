@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ZerorpcGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: 0rpc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: zerorpc
-        repository: zerorpc-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: zerorpc
+    run:
+      release_notes:
+        organization: 0rpc
+        repository: zerorpc-python
+        tag_version_prefix: v

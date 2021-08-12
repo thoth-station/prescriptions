@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: HtmlTelegraphPosterGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mercuree
-        package_version:
-          index_url: https://pypi.org/simple
-          name: html-telegraph-poster
-        repository: html-telegraph-poster
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: html-telegraph-poster
+    run:
+      release_notes:
+        organization: mercuree
+        repository: html-telegraph-poster
+        tag_version_prefix: v

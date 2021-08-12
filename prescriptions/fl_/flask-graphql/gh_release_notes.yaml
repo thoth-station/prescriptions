@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskGraphqlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: graphql-python
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-graphql
-        repository: flask-graphql
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-graphql
+    run:
+      release_notes:
+        organization: graphql-python
+        repository: flask-graphql
+        tag_version_prefix: v

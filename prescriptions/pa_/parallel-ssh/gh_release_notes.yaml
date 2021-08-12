@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ParallelSshGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ParallelSSH
-        package_version:
-          index_url: https://pypi.org/simple
-          name: parallel-ssh
-        repository: parallel-ssh
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: parallel-ssh
+    run:
+      release_notes:
+        organization: ParallelSSH
+        repository: parallel-ssh

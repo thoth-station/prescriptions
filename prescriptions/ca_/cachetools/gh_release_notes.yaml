@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CachetoolsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tkem
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cachetools
-        repository: cachetools
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cachetools
+    run:
+      release_notes:
+        organization: tkem
+        repository: cachetools
+        tag_version_prefix: v

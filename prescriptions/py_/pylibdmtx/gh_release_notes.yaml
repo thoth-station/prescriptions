@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PylibdmtxGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: NaturalHistoryMuseum
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pylibdmtx
-        repository: pylibdmtx
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pylibdmtx
+    run:
+      release_notes:
+        organization: NaturalHistoryMuseum
+        repository: pylibdmtx
+        tag_version_prefix: v

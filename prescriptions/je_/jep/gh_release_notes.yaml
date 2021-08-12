@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JepGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ninia
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jep
-        repository: jep
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jep
+    run:
+      release_notes:
+        organization: ninia
+        repository: jep
+        tag_version_prefix: v

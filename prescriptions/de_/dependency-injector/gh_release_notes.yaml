@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DependencyInjectorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ets-labs
-        package_version:
-          index_url: https://pypi.org/simple
-          name: dependency-injector
-        repository: python-dependency-injector
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: dependency-injector
+    run:
+      release_notes:
+        organization: ets-labs
+        repository: python-dependency-injector

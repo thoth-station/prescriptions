@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: LunardateGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lidaobing
-        package_version:
-          index_url: https://pypi.org/simple
-          name: lunardate
-        repository: python-lunardate
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: lunardate
+    run:
+      release_notes:
+        organization: lidaobing
+        repository: python-lunardate
+        tag_version_prefix: v

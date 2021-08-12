@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ImageioFfmpegGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: imageio
-        package_version:
-          index_url: https://pypi.org/simple
-          name: imageio-ffmpeg
-        repository: imageio-ffmpeg
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: imageio-ffmpeg
+    run:
+      release_notes:
+        organization: imageio
+        repository: imageio-ffmpeg
+        tag_version_prefix: v

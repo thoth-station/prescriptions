@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MemoryProfilerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pythonprofilers
-        package_version:
-          index_url: https://pypi.org/simple
-          name: memory-profiler
-        repository: memory_profiler
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: memory-profiler
+    run:
+      release_notes:
+        organization: pythonprofilers
+        repository: memory_profiler

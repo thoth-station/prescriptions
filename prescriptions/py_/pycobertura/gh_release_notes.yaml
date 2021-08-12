@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PycoberturaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aconrad
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pycobertura
-        repository: pycobertura
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pycobertura
+    run:
+      release_notes:
+        organization: aconrad
+        repository: pycobertura
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MlflowSkinnyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mlflow
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mlflow-skinny
-        repository: mlflow
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mlflow-skinny
+    run:
+      release_notes:
+        organization: mlflow
+        repository: mlflow
+        tag_version_prefix: v

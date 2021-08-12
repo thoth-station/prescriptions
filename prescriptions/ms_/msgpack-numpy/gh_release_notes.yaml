@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MsgpackNumpyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lebedov
-        package_version:
-          index_url: https://pypi.org/simple
-          name: msgpack-numpy
-        repository: msgpack-numpy
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: msgpack-numpy
+    run:
+      release_notes:
+        organization: lebedov
+        repository: msgpack-numpy

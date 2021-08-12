@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RtreeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Toblerity
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rtree
-        repository: rtree
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rtree
+    run:
+      release_notes:
+        organization: Toblerity
+        repository: rtree

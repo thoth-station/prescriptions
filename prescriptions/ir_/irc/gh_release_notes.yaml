@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: IrcGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jaraco
-        package_version:
-          index_url: https://pypi.org/simple
-          name: irc
-        repository: irc
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: irc
+    run:
+      release_notes:
+        organization: jaraco
+        repository: irc

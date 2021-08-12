@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyctGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pyviz-dev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyct
-        repository: pyct
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyct
+    run:
+      release_notes:
+        organization: pyviz-dev
+        repository: pyct
+        tag_version_prefix: v

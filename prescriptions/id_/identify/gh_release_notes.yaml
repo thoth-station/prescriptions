@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: IdentifyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pre-commit
-        package_version:
-          index_url: https://pypi.org/simple
-          name: identify
-        repository: identify
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: identify
+    run:
+      release_notes:
+        organization: pre-commit
+        repository: identify
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SphinxMarkdownTablesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ryanfox
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sphinx-markdown-tables
-        repository: sphinx-markdown-tables
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sphinx-markdown-tables
+    run:
+      release_notes:
+        organization: ryanfox
+        repository: sphinx-markdown-tables
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AredisGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: NoneGG
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aredis
-        repository: aredis
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aredis
+    run:
+      release_notes:
+        organization: NoneGG
+        repository: aredis
+        tag_version_prefix: v

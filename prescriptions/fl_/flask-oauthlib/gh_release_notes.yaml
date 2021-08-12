@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskOauthlibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lepture
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-oauthlib
-        repository: flask-oauthlib
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-oauthlib
+    run:
+      release_notes:
+        organization: lepture
+        repository: flask-oauthlib
+        tag_version_prefix: v

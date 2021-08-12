@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: UtmGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Turbo87
-        package_version:
-          index_url: https://pypi.org/simple
-          name: utm
-        repository: utm
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: utm
+    run:
+      release_notes:
+        organization: Turbo87
+        repository: utm
+        tag_version_prefix: v

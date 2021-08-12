@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: OptimizelySdkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: optimizely
-        package_version:
-          index_url: https://pypi.org/simple
-          name: optimizely-sdk
-        repository: python-sdk
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: optimizely-sdk
+    run:
+      release_notes:
+        organization: optimizely
+        repository: python-sdk

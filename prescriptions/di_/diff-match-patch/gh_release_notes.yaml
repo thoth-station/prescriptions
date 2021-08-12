@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DiffMatchPatchGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: diff-match-patch-python
-        package_version:
-          index_url: https://pypi.org/simple
-          name: diff-match-patch
-        repository: diff-match-patch
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: diff-match-patch
+    run:
+      release_notes:
+        organization: diff-match-patch-python
+        repository: diff-match-patch
+        tag_version_prefix: v

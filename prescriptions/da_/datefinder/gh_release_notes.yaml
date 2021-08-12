@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DatefinderGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: akoumjian
-        package_version:
-          index_url: https://pypi.org/simple
-          name: datefinder
-        repository: datefinder
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: datefinder
+    run:
+      release_notes:
+        organization: akoumjian
+        repository: datefinder
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SchemaSaladGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: common-workflow-language
-        package_version:
-          index_url: https://pypi.org/simple
-          name: schema-salad
-        repository: schema_salad
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: schema-salad
+    run:
+      release_notes:
+        organization: common-workflow-language
+        repository: schema_salad

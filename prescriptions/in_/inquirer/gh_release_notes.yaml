@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: InquirerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: magmax
-        package_version:
-          index_url: https://pypi.org/simple
-          name: inquirer
-        repository: python-inquirer
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: inquirer
+    run:
+      release_notes:
+        organization: magmax
+        repository: python-inquirer

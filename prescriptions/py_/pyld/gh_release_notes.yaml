@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyldGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: digitalbazaar
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyld
-        repository: pyld
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyld
+    run:
+      release_notes:
+        organization: digitalbazaar
+        repository: pyld

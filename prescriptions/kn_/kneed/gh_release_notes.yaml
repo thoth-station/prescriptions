@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KneedGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: arvkevi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kneed
-        repository: kneed
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kneed
+    run:
+      release_notes:
+        organization: arvkevi
+        repository: kneed
+        tag_version_prefix: v

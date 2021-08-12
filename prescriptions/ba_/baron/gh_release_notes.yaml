@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: BaronGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: PyCQA
-        package_version:
-          index_url: https://pypi.org/simple
-          name: baron
-        repository: baron
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: baron
+    run:
+      release_notes:
+        organization: PyCQA
+        repository: baron

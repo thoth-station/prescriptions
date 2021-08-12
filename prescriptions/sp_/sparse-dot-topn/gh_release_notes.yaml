@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SparseDotTopnGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ing-bank
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sparse-dot-topn
-        repository: sparse_dot_topn
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sparse-dot-topn
+    run:
+      release_notes:
+        organization: ing-bank
+        repository: sparse_dot_topn
+        tag_version_prefix: v

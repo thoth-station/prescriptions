@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MarkdownIncludeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cmacmackin
-        package_version:
-          index_url: https://pypi.org/simple
-          name: markdown-include
-        repository: markdown-include
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: markdown-include
+    run:
+      release_notes:
+        organization: cmacmackin
+        repository: markdown-include
+        tag_version_prefix: v

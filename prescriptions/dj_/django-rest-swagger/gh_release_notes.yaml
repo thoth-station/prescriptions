@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoRestSwaggerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: marcgibbons
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-rest-swagger
-        repository: django-rest-swagger
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-rest-swagger
+    run:
+      release_notes:
+        organization: marcgibbons
+        repository: django-rest-swagger

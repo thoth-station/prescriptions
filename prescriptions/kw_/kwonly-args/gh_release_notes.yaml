@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KwonlyArgsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pasztorpisti
-        package_version:
-          index_url: https://pypi.org/simple
-          name: kwonly-args
-        repository: kwonly-args
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: kwonly-args
+    run:
+      release_notes:
+        organization: pasztorpisti
+        repository: kwonly-args
+        tag_version_prefix: v

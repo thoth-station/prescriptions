@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Flake8ExecutableGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: xuhdev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-executable
-        repository: flake8-executable
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-executable
+    run:
+      release_notes:
+        organization: xuhdev
+        repository: flake8-executable
+        tag_version_prefix: v

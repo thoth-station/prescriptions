@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: WsaccelGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: methane
-        package_version:
-          index_url: https://pypi.org/simple
-          name: wsaccel
-        repository: wsaccel
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: wsaccel
+    run:
+      release_notes:
+        organization: methane
+        repository: wsaccel
+        tag_version_prefix: v

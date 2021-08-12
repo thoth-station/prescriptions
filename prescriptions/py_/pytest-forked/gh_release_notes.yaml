@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestForkedGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pytest-dev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-forked
-        repository: pytest-forked
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-forked
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-forked
+        tag_version_prefix: v

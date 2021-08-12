@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TinydbGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: msiemens
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tinydb
-        repository: tinydb
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tinydb
+    run:
+      release_notes:
+        organization: msiemens
+        repository: tinydb
+        tag_version_prefix: v

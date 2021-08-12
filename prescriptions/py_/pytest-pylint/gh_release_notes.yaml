@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestPylintGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: carsongee
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-pylint
-        repository: pytest-pylint
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-pylint
+    run:
+      release_notes:
+        organization: carsongee
+        repository: pytest-pylint
+        tag_version_prefix: v

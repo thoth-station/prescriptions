@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AzureDatalakeStoreGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Azure
-        package_version:
-          index_url: https://pypi.org/simple
-          name: azure-datalake-store
-        repository: azure-data-lake-store-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: azure-datalake-store
+    run:
+      release_notes:
+        organization: Azure
+        repository: azure-data-lake-store-python
+        tag_version_prefix: v

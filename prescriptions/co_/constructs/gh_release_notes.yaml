@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: ConstructsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aws
-        package_version:
-          index_url: https://pypi.org/simple
-          name: constructs
-        repository: constructs
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: constructs
+    run:
+      release_notes:
+        organization: aws
+        repository: constructs
+        tag_version_prefix: v

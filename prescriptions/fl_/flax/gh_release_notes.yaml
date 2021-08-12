@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaxGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: google
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flax
-        repository: flax
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flax
+    run:
+      release_notes:
+        organization: google
+        repository: flax
+        tag_version_prefix: v

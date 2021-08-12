@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: EvdevGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: gvalkov
-        package_version:
-          index_url: https://pypi.org/simple
-          name: evdev
-        repository: python-evdev
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: evdev
+    run:
+      release_notes:
+        organization: gvalkov
+        repository: python-evdev
+        tag_version_prefix: v

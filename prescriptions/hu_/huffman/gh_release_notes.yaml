@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: HuffmanGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: nicktimko
-        package_version:
-          index_url: https://pypi.org/simple
-          name: huffman
-        repository: huffman
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: huffman
+    run:
+      release_notes:
+        organization: nicktimko
+        repository: huffman
+        tag_version_prefix: v

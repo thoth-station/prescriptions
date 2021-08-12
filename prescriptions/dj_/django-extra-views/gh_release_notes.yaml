@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoExtraViewsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: AndrewIngram
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-extra-views
-        repository: django-extra-views
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-extra-views
+    run:
+      release_notes:
+        organization: AndrewIngram
+        repository: django-extra-views

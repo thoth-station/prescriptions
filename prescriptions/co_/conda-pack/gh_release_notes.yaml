@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CondaPackGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: conda
-        package_version:
-          index_url: https://pypi.org/simple
-          name: conda-pack
-        repository: conda-pack
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: conda-pack
+    run:
+      release_notes:
+        organization: conda
+        repository: conda-pack

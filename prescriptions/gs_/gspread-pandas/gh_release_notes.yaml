@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GspreadPandasGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aiguofer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gspread-pandas
-        repository: gspread-pandas
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gspread-pandas
+    run:
+      release_notes:
+        organization: aiguofer
+        repository: gspread-pandas
+        tag_version_prefix: v

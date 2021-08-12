@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoAnnoyingGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: skorokithakis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-annoying
-        repository: django-annoying
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-annoying
+    run:
+      release_notes:
+        organization: skorokithakis
+        repository: django-annoying
+        tag_version_prefix: v

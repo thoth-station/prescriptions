@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DrfNestedRoutersGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: alanjds
-        package_version:
-          index_url: https://pypi.org/simple
-          name: drf-nested-routers
-        repository: drf-nested-routers
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: drf-nested-routers
+    run:
+      release_notes:
+        organization: alanjds
+        repository: drf-nested-routers
+        tag_version_prefix: v

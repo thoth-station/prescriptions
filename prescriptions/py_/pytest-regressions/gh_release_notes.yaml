@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PytestRegressionsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ESSS
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-regressions
-        repository: pytest-regressions
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-regressions
+    run:
+      release_notes:
+        organization: ESSS
+        repository: pytest-regressions

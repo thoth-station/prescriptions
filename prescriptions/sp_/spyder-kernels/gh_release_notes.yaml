@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SpyderKernelsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: spyder-ide
-        package_version:
-          index_url: https://pypi.org/simple
-          name: spyder-kernels
-        repository: spyder-kernels
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: spyder-kernels
+    run:
+      release_notes:
+        organization: spyder-ide
+        repository: spyder-kernels
+        tag_version_prefix: v

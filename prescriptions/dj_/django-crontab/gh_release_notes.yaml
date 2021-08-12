@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoCrontabGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kraiz
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-crontab
-        repository: django-crontab
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-crontab
+    run:
+      release_notes:
+        organization: kraiz
+        repository: django-crontab

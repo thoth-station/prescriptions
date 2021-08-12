@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestVariablesGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pytest-dev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-variables
-        repository: pytest-variables
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-variables
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-variables
+        tag_version_prefix: v

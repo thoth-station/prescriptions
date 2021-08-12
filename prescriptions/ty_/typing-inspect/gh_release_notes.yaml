@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TypingInspectGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ilevkivskyi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: typing-inspect
-        repository: typing_inspect
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: typing-inspect
+    run:
+      release_notes:
+        organization: ilevkivskyi
+        repository: typing_inspect

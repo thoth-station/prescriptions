@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AwsiotsdkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aws
-        package_version:
-          index_url: https://pypi.org/simple
-          name: awsiotsdk
-        repository: aws-iot-device-sdk-python-v2
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: awsiotsdk
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-iot-device-sdk-python-v2
+        tag_version_prefix: v

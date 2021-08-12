@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyaescryptGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: marcobellaccini
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyaescrypt
-        repository: pyAesCrypt
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyaescrypt
+    run:
+      release_notes:
+        organization: marcobellaccini
+        repository: pyAesCrypt

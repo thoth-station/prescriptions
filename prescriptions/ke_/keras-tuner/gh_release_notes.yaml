@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: KerasTunerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: keras-team
-        package_version:
-          index_url: https://pypi.org/simple
-          name: keras-tuner
-        repository: keras-tuner
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: keras-tuner
+    run:
+      release_notes:
+        organization: keras-team
+        repository: keras-tuner

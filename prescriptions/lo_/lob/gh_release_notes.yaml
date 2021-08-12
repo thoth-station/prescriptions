@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: LobGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: lob
-        package_version:
-          index_url: https://pypi.org/simple
-          name: lob
-        repository: lob-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: lob
+    run:
+      release_notes:
+        organization: lob
+        repository: lob-python
+        tag_version_prefix: v

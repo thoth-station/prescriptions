@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TraitletsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ipython
-        package_version:
-          index_url: https://pypi.org/simple
-          name: traitlets
-        repository: traitlets
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: traitlets
+    run:
+      release_notes:
+        organization: ipython
+        repository: traitlets

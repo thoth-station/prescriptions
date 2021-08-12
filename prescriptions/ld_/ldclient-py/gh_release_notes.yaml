@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: LdclientPyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: launchdarkly
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ldclient-py
-        repository: python-server-sdk
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ldclient-py
+    run:
+      release_notes:
+        organization: launchdarkly
+        repository: python-server-sdk

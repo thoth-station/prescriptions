@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: VoilaGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: voila-dashboards
-        package_version:
-          index_url: https://pypi.org/simple
-          name: voila
-        repository: voila
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: voila
+    run:
+      release_notes:
+        organization: voila-dashboards
+        repository: voila

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FilterpyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rlabbe
-        package_version:
-          index_url: https://pypi.org/simple
-          name: filterpy
-        repository: filterpy
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: filterpy
+    run:
+      release_notes:
+        organization: rlabbe
+        repository: filterpy

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SentenceTransformersGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: UKPLab
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sentence-transformers
-        repository: sentence-transformers
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sentence-transformers
+    run:
+      release_notes:
+        organization: UKPLab
+        repository: sentence-transformers
+        tag_version_prefix: v

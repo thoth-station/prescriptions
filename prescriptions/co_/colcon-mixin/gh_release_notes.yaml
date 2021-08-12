@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ColconMixinGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: colcon
-        package_version:
-          index_url: https://pypi.org/simple
-          name: colcon-mixin
-        repository: colcon-mixin
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: colcon-mixin
+    run:
+      release_notes:
+        organization: colcon
+        repository: colcon-mixin

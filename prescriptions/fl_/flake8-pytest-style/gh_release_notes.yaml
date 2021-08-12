@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Flake8PytestStyleGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: m-burst
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-pytest-style
-        repository: flake8-pytest-style
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-pytest-style
+    run:
+      release_notes:
+        organization: m-burst
+        repository: flake8-pytest-style
+        tag_version_prefix: v

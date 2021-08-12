@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: CalleeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Xion
-        package_version:
-          index_url: https://pypi.org/simple
-          name: callee
-        repository: callee
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: callee
+    run:
+      release_notes:
+        organization: Xion
+        repository: callee

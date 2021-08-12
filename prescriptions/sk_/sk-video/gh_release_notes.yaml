@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SkVideoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scikit-video
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sk-video
-        repository: scikit-video
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sk-video
+    run:
+      release_notes:
+        organization: scikit-video
+        repository: scikit-video

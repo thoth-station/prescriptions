@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: VirustotalPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dbrennand
-        package_version:
-          index_url: https://pypi.org/simple
-          name: virustotal-python
-        repository: virustotal-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: virustotal-python
+    run:
+      release_notes:
+        organization: dbrennand
+        repository: virustotal-python

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Goose3GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: goose3
-        package_version:
-          index_url: https://pypi.org/simple
-          name: goose3
-        repository: goose3
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: goose3
+    run:
+      release_notes:
+        organization: goose3
+        repository: goose3
+        tag_version_prefix: v

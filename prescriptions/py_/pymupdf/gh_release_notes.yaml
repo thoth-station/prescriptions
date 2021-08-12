@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PymupdfGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pymupdf
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pymupdf
-        repository: PyMuPDF
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pymupdf
+    run:
+      release_notes:
+        organization: pymupdf
+        repository: PyMuPDF
+        tag_version_prefix: v

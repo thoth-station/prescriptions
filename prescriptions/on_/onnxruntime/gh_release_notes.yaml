@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: OnnxruntimeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: microsoft
-        package_version:
-          index_url: https://pypi.org/simple
-          name: onnxruntime
-        repository: onnxruntime
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: onnxruntime
+    run:
+      release_notes:
+        organization: microsoft
+        repository: onnxruntime
+        tag_version_prefix: v

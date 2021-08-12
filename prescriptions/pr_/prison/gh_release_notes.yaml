@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PrisonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: betodealmeida
-        package_version:
-          index_url: https://pypi.org/simple
-          name: prison
-        repository: python-rison
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: prison
+    run:
+      release_notes:
+        organization: betodealmeida
+        repository: python-rison

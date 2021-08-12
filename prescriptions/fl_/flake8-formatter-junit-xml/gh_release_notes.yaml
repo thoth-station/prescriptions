@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Flake8FormatterJunitXmlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: astj
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flake8-formatter-junit-xml
-        repository: flake8-formatter-junit-xml
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flake8-formatter-junit-xml
+    run:
+      release_notes:
+        organization: astj
+        repository: flake8-formatter-junit-xml
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: StrsimGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: luozhouyang
-        package_version:
-          index_url: https://pypi.org/simple
-          name: strsim
-        repository: python-string-similarity
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: strsim
+    run:
+      release_notes:
+        organization: luozhouyang
+        repository: python-string-similarity
+        tag_version_prefix: v

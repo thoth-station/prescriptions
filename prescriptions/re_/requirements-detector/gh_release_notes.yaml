@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RequirementsDetectorGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: landscapeio
-        package_version:
-          index_url: https://pypi.org/simple
-          name: requirements-detector
-        repository: requirements-detector
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: requirements-detector
+    run:
+      release_notes:
+        organization: landscapeio
+        repository: requirements-detector

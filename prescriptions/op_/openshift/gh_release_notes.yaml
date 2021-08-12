@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: OpenshiftGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: openshift
-        package_version:
-          index_url: https://pypi.org/simple
-          name: openshift
-        repository: openshift-restclient-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: openshift
+    run:
+      release_notes:
+        organization: openshift
+        repository: openshift-restclient-python
+        tag_version_prefix: v

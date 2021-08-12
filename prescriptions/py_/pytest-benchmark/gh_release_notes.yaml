@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PytestBenchmarkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ionelmc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pytest-benchmark
-        repository: pytest-benchmark
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pytest-benchmark
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: pytest-benchmark
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RequestsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: psf
-        package_version:
-          index_url: https://pypi.org/simple
-          name: requests
-        repository: requests
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: requests
+    run:
+      release_notes:
+        organization: psf
+        repository: requests
+        tag_version_prefix: v

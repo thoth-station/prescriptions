@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PipfileGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pypa
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pipfile
-        repository: pipfile
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pipfile
+    run:
+      release_notes:
+        organization: pypa
+        repository: pipfile
+        tag_version_prefix: v

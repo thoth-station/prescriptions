@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoAjaxSelectsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: crucialfelix
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-ajax-selects
-        repository: django-ajax-selects
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-ajax-selects
+    run:
+      release_notes:
+        organization: crucialfelix
+        repository: django-ajax-selects

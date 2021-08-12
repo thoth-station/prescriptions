@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: BravadoCoreGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Yelp
-        package_version:
-          index_url: https://pypi.org/simple
-          name: bravado-core
-        repository: bravado-core
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: bravado-core
+    run:
+      release_notes:
+        organization: Yelp
+        repository: bravado-core
+        tag_version_prefix: v

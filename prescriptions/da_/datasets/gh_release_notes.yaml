@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DatasetsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: huggingface
-        package_version:
-          index_url: https://pypi.org/simple
-          name: datasets
-        repository: datasets
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: datasets
+    run:
+      release_notes:
+        organization: huggingface
+        repository: datasets

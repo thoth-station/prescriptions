@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: SanicCorsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ashleysommer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sanic-cors
-        repository: sanic-cors
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sanic-cors
+    run:
+      release_notes:
+        organization: ashleysommer
+        repository: sanic-cors

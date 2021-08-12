@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PythonEasyconfigGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: RussellLuo
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-easyconfig
-        repository: easyconfig
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-easyconfig
+    run:
+      release_notes:
+        organization: RussellLuo
+        repository: easyconfig
+        tag_version_prefix: v

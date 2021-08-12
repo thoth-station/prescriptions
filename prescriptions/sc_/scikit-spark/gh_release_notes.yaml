@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ScikitSparkGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: scikit-spark
-        package_version:
-          index_url: https://pypi.org/simple
-          name: scikit-spark
-        repository: scikit-spark
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: scikit-spark
+    run:
+      release_notes:
+        organization: scikit-spark
+        repository: scikit-spark

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GoogleCloudLanguageGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: googleapis
-        package_version:
-          index_url: https://pypi.org/simple
-          name: google-cloud-language
-        repository: python-language
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: google-cloud-language
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-language
+        tag_version_prefix: v

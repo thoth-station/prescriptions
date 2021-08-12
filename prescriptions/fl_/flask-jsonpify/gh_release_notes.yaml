@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskJsonpifyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: CoryDolphin
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-jsonpify
-        repository: flask-jsonpify
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-jsonpify
+    run:
+      release_notes:
+        organization: CoryDolphin
+        repository: flask-jsonpify
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DeepdiffGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: seperman
-        package_version:
-          index_url: https://pypi.org/simple
-          name: deepdiff
-        repository: deepdiff
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: deepdiff
+    run:
+      release_notes:
+        organization: seperman
+        repository: deepdiff

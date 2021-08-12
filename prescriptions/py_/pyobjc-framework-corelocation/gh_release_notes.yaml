@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyobjcFrameworkCorelocationGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ronaldoussoren
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyobjc-framework-corelocation
-        repository: pyobjc
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyobjc-framework-corelocation
+    run:
+      release_notes:
+        organization: ronaldoussoren
+        repository: pyobjc
+        tag_version_prefix: v

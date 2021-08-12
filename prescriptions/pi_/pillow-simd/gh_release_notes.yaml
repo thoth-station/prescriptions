@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PillowSimdGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: uploadcare
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pillow-simd
-        repository: pillow-simd
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pillow-simd
+    run:
+      release_notes:
+        organization: uploadcare
+        repository: pillow-simd
+        tag_version_prefix: v

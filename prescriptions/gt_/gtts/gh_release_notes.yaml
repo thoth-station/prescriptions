@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GttsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pndurette
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gtts
-        repository: gTTS
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gtts
+    run:
+      release_notes:
+        organization: pndurette
+        repository: gTTS
+        tag_version_prefix: v

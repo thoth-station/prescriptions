@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AlibiGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: SeldonIO
-        package_version:
-          index_url: https://pypi.org/simple
-          name: alibi
-        repository: alibi
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: alibi
+    run:
+      release_notes:
+        organization: SeldonIO
+        repository: alibi
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CmdstanpyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: stan-dev
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cmdstanpy
-        repository: cmdstanpy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cmdstanpy
+    run:
+      release_notes:
+        organization: stan-dev
+        repository: cmdstanpy
+        tag_version_prefix: v

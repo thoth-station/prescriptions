@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SphinxPanelsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: executablebooks
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sphinx-panels
-        repository: sphinx-panels
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sphinx-panels
+    run:
+      release_notes:
+        organization: executablebooks
+        repository: sphinx-panels
+        tag_version_prefix: v

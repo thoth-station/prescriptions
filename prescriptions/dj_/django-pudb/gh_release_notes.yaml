@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoPudbGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: akanouras
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-pudb
-        repository: django-pudb
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-pudb
+    run:
+      release_notes:
+        organization: akanouras
+        repository: django-pudb

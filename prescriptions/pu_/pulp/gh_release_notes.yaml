@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PulpGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: coin-or
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pulp
-        repository: pulp
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pulp
+    run:
+      release_notes:
+        organization: coin-or
+        repository: pulp

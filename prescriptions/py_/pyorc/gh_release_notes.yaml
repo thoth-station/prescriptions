@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PyorcGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: noirello
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pyorc
-        repository: pyorc
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pyorc
+    run:
+      release_notes:
+        organization: noirello
+        repository: pyorc
+        tag_version_prefix: v

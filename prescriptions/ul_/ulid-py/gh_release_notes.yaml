@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: UlidPyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ahawker
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ulid-py
-        repository: ulid
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ulid-py
+    run:
+      release_notes:
+        organization: ahawker
+        repository: ulid
+        tag_version_prefix: v

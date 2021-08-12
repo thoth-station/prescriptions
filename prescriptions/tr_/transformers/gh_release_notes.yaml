@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TransformersGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: huggingface
-        package_version:
-          index_url: https://pypi.org/simple
-          name: transformers
-        repository: transformers
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: transformers
+    run:
+      release_notes:
+        organization: huggingface
+        repository: transformers
+        tag_version_prefix: v

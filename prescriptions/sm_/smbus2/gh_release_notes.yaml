@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Smbus2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kplindegaard
-        package_version:
-          index_url: https://pypi.org/simple
-          name: smbus2
-        repository: smbus2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: smbus2
+    run:
+      release_notes:
+        organization: kplindegaard
+        repository: smbus2

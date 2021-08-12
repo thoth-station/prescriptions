@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoAdminAutocompleteFilterGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: farhan0581
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-admin-autocomplete-filter
-        repository: django-admin-autocomplete-filter
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-admin-autocomplete-filter
+    run:
+      release_notes:
+        organization: farhan0581
+        repository: django-admin-autocomplete-filter

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RiotGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: DataDog
-        package_version:
-          index_url: https://pypi.org/simple
-          name: riot
-        repository: riot
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: riot
+    run:
+      release_notes:
+        organization: DataDog
+        repository: riot

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoRqGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: rq
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-rq
-        repository: django-rq
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-rq
+    run:
+      release_notes:
+        organization: rq
+        repository: django-rq
+        tag_version_prefix: v

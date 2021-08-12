@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GcsOauth2BotoPluginGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: GoogleCloudPlatform
-        package_version:
-          index_url: https://pypi.org/simple
-          name: gcs-oauth2-boto-plugin
-        repository: gcs-oauth2-boto-plugin
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: gcs-oauth2-boto-plugin
+    run:
+      release_notes:
+        organization: GoogleCloudPlatform
+        repository: gcs-oauth2-boto-plugin
+        tag_version_prefix: v

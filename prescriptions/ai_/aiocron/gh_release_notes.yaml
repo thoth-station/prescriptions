@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: AiocronGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: gawel
-        package_version:
-          index_url: https://pypi.org/simple
-          name: aiocron
-        repository: aiocron
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: aiocron
+    run:
+      release_notes:
+        organization: gawel
+        repository: aiocron

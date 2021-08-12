@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: WebsocketClientGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: websocket-client
-        package_version:
-          index_url: https://pypi.org/simple
-          name: websocket-client
-        repository: websocket-client
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: websocket-client
+    run:
+      release_notes:
+        organization: websocket-client
+        repository: websocket-client
+        tag_version_prefix: v

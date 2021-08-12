@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SnowflakeConnectorPythonGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: snowflakedb
-        package_version:
-          index_url: https://pypi.org/simple
-          name: snowflake-connector-python
-        repository: snowflake-connector-python
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: snowflake-connector-python
+    run:
+      release_notes:
+        organization: snowflakedb
+        repository: snowflake-connector-python
+        tag_version_prefix: v

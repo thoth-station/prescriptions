@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MtscompGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: int-brain-lab
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mtscomp
-        repository: mtscomp
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mtscomp
+    run:
+      release_notes:
+        organization: int-brain-lab
+        repository: mtscomp

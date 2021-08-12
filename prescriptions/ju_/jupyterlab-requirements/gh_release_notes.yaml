@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: JupyterlabRequirementsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: thoth-station
-        package_version:
-          index_url: https://pypi.org/simple
-          name: jupyterlab-requirements
-        repository: jupyterlab-requirements
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: jupyterlab-requirements
+    run:
+      release_notes:
+        organization: thoth-station
+        repository: jupyterlab-requirements
+        tag_version_prefix: v

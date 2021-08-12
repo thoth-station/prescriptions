@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Pygerrit2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dpursehouse
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pygerrit2
-        repository: pygerrit2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pygerrit2
+    run:
+      release_notes:
+        organization: dpursehouse
+        repository: pygerrit2

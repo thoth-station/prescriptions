@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DjangoTables2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jieter
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-tables2
-        repository: django-tables2
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-tables2
+    run:
+      release_notes:
+        organization: jieter
+        repository: django-tables2
+        tag_version_prefix: v

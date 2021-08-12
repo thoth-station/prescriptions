@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: LinearTsvGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: solidsnack
-        package_version:
-          index_url: https://pypi.org/simple
-          name: linear-tsv
-        repository: tsv
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: linear-tsv
+    run:
+      release_notes:
+        organization: solidsnack
+        repository: tsv

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: TqdmGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tqdm
-        package_version:
-          index_url: https://pypi.org/simple
-          name: tqdm
-        repository: tqdm
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: tqdm
+    run:
+      release_notes:
+        organization: tqdm
+        repository: tqdm
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: KerasCrfGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: luozhouyang
-        package_version:
-          index_url: https://pypi.org/simple
-          name: keras-crf
-        repository: keras-crf
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: keras-crf
+    run:
+      release_notes:
+        organization: luozhouyang
+        repository: keras-crf
+        tag_version_prefix: v

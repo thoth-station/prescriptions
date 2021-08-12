@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RarfileGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: markokr
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rarfile
-        repository: rarfile
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rarfile
+    run:
+      release_notes:
+        organization: markokr
+        repository: rarfile
+        tag_version_prefix: v

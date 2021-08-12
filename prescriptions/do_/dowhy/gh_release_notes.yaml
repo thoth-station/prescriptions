@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DowhyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: microsoft
-        package_version:
-          index_url: https://pypi.org/simple
-          name: dowhy
-        repository: dowhy
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: dowhy
+    run:
+      release_notes:
+        organization: microsoft
+        repository: dowhy
+        tag_version_prefix: v

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: MailcheckerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: FGRibreau
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mailchecker
-        repository: mailchecker
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mailchecker
+    run:
+      release_notes:
+        organization: FGRibreau
+        repository: mailchecker
+        tag_version_prefix: v

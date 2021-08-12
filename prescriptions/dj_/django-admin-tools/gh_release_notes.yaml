@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoAdminToolsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: django-admin-tools
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-admin-tools
-        repository: django-admin-tools
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-admin-tools
+    run:
+      release_notes:
+        organization: django-admin-tools
+        repository: django-admin-tools

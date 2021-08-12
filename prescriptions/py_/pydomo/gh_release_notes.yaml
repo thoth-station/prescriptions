@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: PydomoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: domoinc
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pydomo
-        repository: domo-python-sdk
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pydomo
+    run:
+      release_notes:
+        organization: domoinc
+        repository: domo-python-sdk
+        tag_version_prefix: v

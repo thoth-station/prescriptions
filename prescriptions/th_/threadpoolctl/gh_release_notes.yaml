@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: ThreadpoolctlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: joblib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: threadpoolctl
-        repository: threadpoolctl
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: threadpoolctl
+    run:
+      release_notes:
+        organization: joblib
+        repository: threadpoolctl

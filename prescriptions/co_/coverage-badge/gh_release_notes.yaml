@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: CoverageBadgeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: dbrgn
-        package_version:
-          index_url: https://pypi.org/simple
-          name: coverage-badge
-        repository: coverage-badge
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: coverage-badge
+    run:
+      release_notes:
+        organization: dbrgn
+        repository: coverage-badge
+        tag_version_prefix: v

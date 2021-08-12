@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pybind11GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pybind
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pybind11
-        repository: pybind11
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pybind11
+    run:
+      release_notes:
+        organization: pybind
+        repository: pybind11
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: VersioneerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: python-versioneer
-        package_version:
-          index_url: https://pypi.org/simple
-          name: versioneer
-        repository: python-versioneer
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: versioneer
+    run:
+      release_notes:
+        organization: python-versioneer
+        repository: python-versioneer

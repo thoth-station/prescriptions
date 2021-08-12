@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: UnicodecsvGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jdunck
-        package_version:
-          index_url: https://pypi.org/simple
-          name: unicodecsv
-        repository: python-unicodecsv
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: unicodecsv
+    run:
+      release_notes:
+        organization: jdunck
+        repository: python-unicodecsv

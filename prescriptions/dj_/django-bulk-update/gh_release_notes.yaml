@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoBulkUpdateGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: aykut
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-bulk-update
-        repository: django-bulk-update
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-bulk-update
+    run:
+      release_notes:
+        organization: aykut
+        repository: django-bulk-update

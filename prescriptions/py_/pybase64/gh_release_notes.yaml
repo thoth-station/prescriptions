@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: Pybase64GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mayeut
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pybase64
-        repository: pybase64
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pybase64
+    run:
+      release_notes:
+        organization: mayeut
+        repository: pybase64
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Cssselect2GitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Kozea
-        package_version:
-          index_url: https://pypi.org/simple
-          name: cssselect2
-        repository: cssselect2
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: cssselect2
+    run:
+      release_notes:
+        organization: Kozea
+        repository: cssselect2

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FuncparserlibGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: vlasovskikh
-        package_version:
-          index_url: https://pypi.org/simple
-          name: funcparserlib
-        repository: funcparserlib
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: funcparserlib
+    run:
+      release_notes:
+        organization: vlasovskikh
+        repository: funcparserlib

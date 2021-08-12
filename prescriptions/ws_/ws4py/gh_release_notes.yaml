@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Ws4pyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: Lawouach
-        package_version:
-          index_url: https://pypi.org/simple
-          name: ws4py
-        repository: WebSocket-for-Python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: ws4py
+    run:
+      release_notes:
+        organization: Lawouach
+        repository: WebSocket-for-Python

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PamqpGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: gmr
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pamqp
-        repository: pamqp
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pamqp
+    run:
+      release_notes:
+        organization: gmr
+        repository: pamqp

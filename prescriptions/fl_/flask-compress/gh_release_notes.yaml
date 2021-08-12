@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: FlaskCompressGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: colour-science
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-compress
-        repository: flask-compress
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-compress
+    run:
+      release_notes:
+        organization: colour-science
+        repository: flask-compress
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: MockitoGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: kaste
-        package_version:
-          index_url: https://pypi.org/simple
-          name: mockito
-        repository: mockito-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: mockito
+    run:
+      release_notes:
+        organization: kaste
+        repository: mockito-python

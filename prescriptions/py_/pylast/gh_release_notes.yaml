@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PylastGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: pylast
-        package_version:
-          index_url: https://pypi.org/simple
-          name: pylast
-        repository: pylast
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: pylast
+    run:
+      release_notes:
+        organization: pylast
+        repository: pylast

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: OpencensusExtSqlalchemyGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: census-instrumentation
-        package_version:
-          index_url: https://pypi.org/simple
-          name: opencensus-ext-sqlalchemy
-        repository: opencensus-python
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: opencensus-ext-sqlalchemy
+    run:
+      release_notes:
+        organization: census-instrumentation
+        repository: opencensus-python

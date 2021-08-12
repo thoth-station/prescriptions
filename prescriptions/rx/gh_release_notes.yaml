@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: RxGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: ReactiveX
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rx
-        repository: RxPY
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rx
+    run:
+      release_notes:
+        organization: ReactiveX
+        repository: RxPY
+        tag_version_prefix: v

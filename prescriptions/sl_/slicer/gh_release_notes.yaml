@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SlicerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: interpretml
-        package_version:
-          index_url: https://pypi.org/simple
-          name: slicer
-        repository: slicer
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: slicer
+    run:
+      release_notes:
+        organization: interpretml
+        repository: slicer
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: XmlsecGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mehcode
-        package_version:
-          index_url: https://pypi.org/simple
-          name: xmlsec
-        repository: python-xmlsec
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: xmlsec
+    run:
+      release_notes:
+        organization: mehcode
+        repository: python-xmlsec

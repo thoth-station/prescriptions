@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PyGfmGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: zopieux
-        package_version:
-          index_url: https://pypi.org/simple
-          name: py-gfm
-        repository: py-gfm
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: py-gfm
+    run:
+      release_notes:
+        organization: zopieux
+        repository: py-gfm

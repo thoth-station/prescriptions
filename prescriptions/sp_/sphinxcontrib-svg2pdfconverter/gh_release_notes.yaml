@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: SphinxcontribSvg2pdfconverterGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: missinglinkelectronics
-        package_version:
-          index_url: https://pypi.org/simple
-          name: sphinxcontrib-svg2pdfconverter
-        repository: sphinxcontrib-svg2pdfconverter
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: sphinxcontrib-svg2pdfconverter
+    run:
+      release_notes:
+        organization: missinglinkelectronics
+        repository: sphinxcontrib-svg2pdfconverter
+        tag_version_prefix: v

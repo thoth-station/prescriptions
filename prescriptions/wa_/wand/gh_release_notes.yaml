@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: WandGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: emcconville
-        package_version:
-          index_url: https://pypi.org/simple
-          name: wand
-        repository: wand
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: wand
+    run:
+      release_notes:
+        organization: emcconville
+        repository: wand

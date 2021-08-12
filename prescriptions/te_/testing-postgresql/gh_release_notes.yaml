@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: TestingPostgresqlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: tk0miya
-        package_version:
-          index_url: https://pypi.org/simple
-          name: testing-postgresql
-        repository: testing.postgresql
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: testing-postgresql
+    run:
+      release_notes:
+        organization: tk0miya
+        repository: testing.postgresql

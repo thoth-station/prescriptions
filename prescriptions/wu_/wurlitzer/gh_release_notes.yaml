@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: WurlitzerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: minrk
-        package_version:
-          index_url: https://pypi.org/simple
-          name: wurlitzer
-        repository: wurlitzer
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: wurlitzer
+    run:
+      release_notes:
+        organization: minrk
+        repository: wurlitzer

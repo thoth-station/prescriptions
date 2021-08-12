@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: PythonLogstashAsyncGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: eht16
-        package_version:
-          index_url: https://pypi.org/simple
-          name: python-logstash-async
-        repository: python-logstash-async
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: python-logstash-async
+    run:
+      release_notes:
+        organization: eht16
+        repository: python-logstash-async

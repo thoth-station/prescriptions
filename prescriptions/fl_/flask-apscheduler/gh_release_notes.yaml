@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: FlaskApschedulerGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: viniciuschiele
-        package_version:
-          index_url: https://pypi.org/simple
-          name: flask-apscheduler
-        repository: flask-apscheduler
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: flask-apscheduler
+    run:
+      release_notes:
+        organization: viniciuschiele
+        repository: flask-apscheduler

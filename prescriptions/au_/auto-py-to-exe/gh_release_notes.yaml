@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: AutoPyToExeGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: brentvollebregt
-        package_version:
-          index_url: https://pypi.org/simple
-          name: auto-py-to-exe
-        repository: auto-py-to-exe
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: auto-py-to-exe
+    run:
+      release_notes:
+        organization: brentvollebregt
+        repository: auto-py-to-exe
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: LatexcodecGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: mcmtroffaes
-        package_version:
-          index_url: https://pypi.org/simple
-          name: latexcodec
-        repository: latexcodec
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: latexcodec
+    run:
+      release_notes:
+        organization: mcmtroffaes
+        repository: latexcodec

@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: DelphiEpidataGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: cmu-delphi
-        package_version:
-          index_url: https://pypi.org/simple
-          name: delphi-epidata
-        repository: delphi-epidata
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: delphi-epidata
+    run:
+      release_notes:
+        organization: cmu-delphi
+        repository: delphi-epidata
+        tag_version_prefix: v

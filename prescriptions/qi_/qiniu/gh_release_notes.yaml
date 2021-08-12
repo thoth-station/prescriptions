@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: QiniuGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: qiniu
-        package_version:
-          index_url: https://pypi.org/simple
-          name: qiniu
-        repository: python-sdk
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: qiniu
+    run:
+      release_notes:
+        organization: qiniu
+        repository: python-sdk
+        tag_version_prefix: v

@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: RdflibJsonldGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: RDFLib
-        package_version:
-          index_url: https://pypi.org/simple
-          name: rdflib-jsonld
-        repository: rdflib-jsonld
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: rdflib-jsonld
+    run:
+      release_notes:
+        organization: RDFLib
+        repository: rdflib-jsonld

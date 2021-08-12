@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DjangoStructlogGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jrobichaud
-        package_version:
-          index_url: https://pypi.org/simple
-          name: django-structlog
-        repository: django-structlog
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: django-structlog
+    run:
+      release_notes:
+        organization: jrobichaud
+        repository: django-structlog

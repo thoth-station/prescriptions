@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: Py3nvmlGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: fbcotter
-        package_version:
-          index_url: https://pypi.org/simple
-          name: py3nvml
-        repository: py3nvml
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: py3nvml
+    run:
+      release_notes:
+        organization: fbcotter
+        repository: py3nvml

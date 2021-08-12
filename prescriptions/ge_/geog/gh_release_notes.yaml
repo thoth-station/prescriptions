@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: GeogGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: jwass
-        package_version:
-          index_url: https://pypi.org/simple
-          name: geog
-        repository: geog
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: geog
+    run:
+      release_notes:
+        organization: jwass
+        repository: geog
+        tag_version_prefix: v

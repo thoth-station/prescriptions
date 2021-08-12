@@ -1,13 +1,14 @@
 units:
   wraps:
   - name: DeprecationGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: briancurtin
-        package_version:
-          index_url: https://pypi.org/simple
-          name: deprecation
-        repository: deprecation
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: deprecation
+    run:
+      release_notes:
+        organization: briancurtin
+        repository: deprecation

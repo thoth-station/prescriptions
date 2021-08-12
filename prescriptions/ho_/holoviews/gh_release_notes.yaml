@@ -1,14 +1,15 @@
 units:
   wraps:
   - name: HoloviewsGitHubReleaseNotesWrap
-    run:
-      release_notes:
-      - organization: holoviz
-        package_version:
-          index_url: https://pypi.org/simple
-          name: holoviews
-        repository: holoviews
-        tag_version_prefix: v
+    type: wrap.GHReleaseNotes
     should_include:
       adviser_pipeline: true
-    type: wrap.GitHubReleaseNotes
+    match:
+      state:
+        resolved_dependencies:
+          name: holoviews
+    run:
+      release_notes:
+        organization: holoviz
+        repository: holoviews
+        tag_version_prefix: v
