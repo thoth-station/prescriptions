@@ -1,0 +1,21 @@
+units:
+  sieves:
+    - name: TorchvisionCPUIndex
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: [null]
+      match:
+        - package_version:
+            name: torchvision
+            index_url:
+              not: https://download.pytorch.org/whl/cpu
+      run:
+        log:
+          message: "Using torchvision releases from Torch CPU Python Package index"
+          type: INFO
+        stack_info:
+          - type: INFO
+            message: "Using torchvision releases from Torch CPU Python Package index"
+            link: https://github.com/pytorch/pytorch/issues/25639

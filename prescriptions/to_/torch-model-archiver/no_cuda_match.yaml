@@ -1,0 +1,21 @@
+units:
+  sieves:
+    - name: TorchModelArchiverNoCUDAMatch
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions:
+            not: ["11.1"]
+      match:
+        - package_version:
+            name: torch-model-archiver
+            index_url: https://download.pytorch.org/whl/cu111
+      run:
+        log:
+          message: "torch-model-archiver requires CUDA version 11.1"
+          type: WARNING
+        stack_info:
+          - type: WARNING
+            message: "torch-model-archiver requires CUDA version 11.1"
+            link: https://github.com/pytorch/pytorch/issues/25639

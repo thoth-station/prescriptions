@@ -1,0 +1,21 @@
+units:
+  sieves:
+    - name: TorchModelArchiverCPUIndex
+      type: sieve
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: [null]
+      match:
+        - package_version:
+            name: torch-model-archiver
+            index_url:
+              not: https://download.pytorch.org/whl/cpu
+      run:
+        log:
+          message: "Using torch-model-archiver releases from Torch CPU Python Package index"
+          type: INFO
+        stack_info:
+          - type: INFO
+            message: "Using torch-model-archiver releases from Torch CPU Python Package index"
+            link: https://github.com/pytorch/pytorch/issues/25639
