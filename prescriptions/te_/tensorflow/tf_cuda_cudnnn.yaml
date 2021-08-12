@@ -8,7 +8,7 @@ units:
           cuda_versions:
             not: [null]
           cudnn_versions: [null]
-      match: &match
+      match: &matchDependencies
         - state:
             resolved_dependencies:
               - name: tensorflow
@@ -20,7 +20,6 @@ units:
           - type: WARNING
             message: "CUDA version provided but no cuDNN version supplied"
             link: https://www.tensorflow.org/install/source#linux
-
     - name: TensorFlowcuDNNNoCUDAWrap
       type: wrap
       should_include:
@@ -30,9 +29,99 @@ units:
           cudnn_versions:
             not: [null]
       match:
-        <<: *match
+        <<: *matchDependencies
       run:
         stack_info:
           - type: WARNING
             message: "cuDNN version provided but no cuDNN version supplied"
             link: https://www.tensorflow.org/install/source#linux
+    - name: TensorFlowcuDNNCUDA112MatchWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["11.2"]
+          cudnn_versions:
+            not: ["8.1"]
+      match:
+        <<: *matchDependencies
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Unsupported cuDNN version configured with CUDA 11.2 for TensorFlow, it is recommended to use cuDNN 8.1"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowcuDNNCUDA110MatchWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["11.0"]
+          cudnn_versions:
+            not: ["8.0"]
+      match:
+        <<: *matchDependencies
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Unsupported cuDNN version configured with CUDA 11.0 for TensorFlow, it is recommended to use cuDNN 8.0"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowcuDNNCUDA101MatchWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["10.1"]
+          cudnn_versions:
+            not: ["7.6"]
+      match:
+        <<: *matchDependencies
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Unsupported cuDNN version configured with CUDA 10.1 for TensorFlow, it is recommended to use cuDNN 7.6"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowcuDNNCUDA100MatchWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["10.0"]
+          cudnn_versions:
+            not: ["7.4"]
+      match:
+        <<: *matchDependencies
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Unsupported cuDNN version configured with CUDA 10.1 for TensorFlow, it is recommended to use cuDNN 7.4"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowcuDNNCUDA9MatchWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["9"]
+          cudnn_versions:
+            not: ["7"]
+      match:
+        <<: *matchDependencies
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Unsupported cuDNN version configured with CUDA 9 for TensorFlow, it is recommended to use cuDNN 7"
+            link: https://www.tensorflow.org/install/source#gpu
+    - name: TensorFlowcuDNNCUDA8MatchWrap
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          cuda_versions: ["8"]
+          cudnn_versions:
+            not: ["6", "5.1"]
+      match:
+        <<: *matchDependencies
+      run:
+        stack_info:
+          - type: WARNING
+            message: "Unsupported cuDNN version configured with CUDA 8 for TensorFlow, it is recommended to use cuDNN 6 or 5.1"
+            link: https://www.tensorflow.org/install/source#gpu
