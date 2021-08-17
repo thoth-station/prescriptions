@@ -5,9 +5,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions:
-            not: [null]
-          cudnn_versions: [null]
+          cuda_version: ">=0.0"
+          cudnn_version: null
       match: &matchDependencies
         - state:
             resolved_dependencies:
@@ -25,9 +24,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions: [null]
-          cudnn_versions:
-            not: [null]
+          cuda_version: null
+          cudnn_version: ">=0.0"
       match:
         <<: *matchDependencies
       run:
@@ -40,9 +38,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions: ["11.2"]
-          cudnn_versions:
-            not: ["8.1"]
+          cuda_version: "==11.2"
+          cudnn_version: "!=8.1"
       match:
         <<: *matchDependencies
       run:
@@ -55,9 +52,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions: ["11.0"]
-          cudnn_versions:
-            not: ["8.0"]
+          cuda_version: "==11.0"
+          cudnn_version: "!=8.0"
       match:
         <<: *matchDependencies
       run:
@@ -70,9 +66,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions: ["10.1"]
-          cudnn_versions:
-            not: ["7.6"]
+          cuda_version: "==10.1"
+          cudnn_version: "!=7.6"
       match:
         <<: *matchDependencies
       run:
@@ -85,9 +80,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions: ["10.0"]
-          cudnn_versions:
-            not: ["7.4"]
+          cuda_version: "==10.0"
+          cudnn_version: "!=7.4"
       match:
         <<: *matchDependencies
       run:
@@ -100,9 +94,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions: ["9"]
-          cudnn_versions:
-            not: ["7"]
+          cuda_version: "==9"
+          cudnn_version: "!=7"
       match:
         <<: *matchDependencies
       run:
@@ -115,9 +108,8 @@ units:
       should_include:
         adviser_pipeline: true
         runtime_environments:
-          cuda_versions: ["8"]
-          cudnn_versions:
-            not: ["6", "5.1"]
+          cuda_version: "==8"
+          cudnn_version: "!=6,!=5.1"
       match:
         <<: *matchDependencies
       run:
