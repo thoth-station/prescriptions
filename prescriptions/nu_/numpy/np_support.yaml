@@ -1,0 +1,44 @@
+units:
+  steps:
+  - name: NumPySupportStep
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      - stable
+    match:
+      package_version:
+        name: numpy
+        version: "<=1.18"
+    run:
+      multi_package_resolution: true
+      log:
+        message: "Penalizing NumPy<=1.18 as it is no longer supported by NumPy upstream"
+        type: WARNING
+      justification:
+      - type: WARNING
+        message: "Used NumPy is no longer supported by NumPy upstream"
+        link: "https://numpy.org/neps/nep-0029-deprecation_policy.html#drop-schedule"
+        package_name: numpy
+      score: -0.1
+  wraps:
+  - name: NumPySupportWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - testing
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy
+          version: "<=1.18"
+    run:
+      justification:
+      - type: WARNING
+        message: "Used NumPy is no longer supported by NumPy upstream"
+        link: "https://numpy.org/neps/nep-0029-deprecation_policy.html#drop-schedule"
+        package_name: numpy
