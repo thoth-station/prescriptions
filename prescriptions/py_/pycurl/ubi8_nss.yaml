@@ -1,0 +1,22 @@
+units:
+  wraps:
+    - name: PycurlUbi8SSL
+      type: wrap
+      should_include:
+        adviser_pipeline: true
+        runtime_environments:
+          operating_systems:
+            - name: rhel
+              version: "8"
+      match:
+        state:
+          resolved_dependencies:
+            - name: pycurl
+              index_url: 'https://pypi.org/simple'
+      run:
+        stack_info:
+          - type: INFO
+            message: >
+              "Package 'pycurl' require 'libcurl' to be built against as the runtime,"
+              "pycurl require pip args `--install-option="--with-nss"` to determine SSL library"
+            link: http://pycurl.io/docs/latest/install.html#ssl
