@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: NumPyRandomDocsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        numpy:
+        - numpy.random.*
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy
+    run:
+      justification:
+      - type: INFO
+        message: "See NEP-19 for more information on NumPy's random generator"
+        link: https://numpy.org/neps/nep-0019-rng-policy.html#numpy-random
+        package_name: numpy
