@@ -1,0 +1,91 @@
+units:
+  steps:
+  - name: NumPyPython37SupportStep
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - stable
+      runtime_environments:
+        python_version: "<3.7"
+    match:
+      package_version:
+        name: numpy
+        version: ">=1.15,<=1.19"
+    run:
+      log:
+        type: WARNING
+        message: "Penalizing NumPy>=1.15,<=1.19 as it requires newer Python interpreter version"
+      justification:
+      - type: WARNING
+        message: "Used NumPy requires Python version 3.7+"
+        link: "https://numpy.org/neps/nep-0029-deprecation_policy.html#support-table"
+        package_name: numpy
+      score: -0.1
+  - name: NumPyPython38SupportStep
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - stable
+      runtime_environments:
+        python_version: "<3.8"
+    match:
+      package_version:
+        name: numpy
+        version: ">=1.19,<=1.20"
+    run:
+      log:
+        type: WARNING
+        message: "Penalizing NumPy>=1.19,<=1.20 as it requires newer Python interpreter version"
+      justification:
+      - type: WARNING
+        message: "Used NumPy requires Python version 3.8+"
+        link: "https://numpy.org/neps/nep-0029-deprecation_policy.html#support-table"
+        package_name: numpy
+      score: -0.1
+  wraps:
+  - name: NumPyPython37SupportWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - security
+      - testing
+      runtime_environments:
+        python_version: "<3.7"
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy
+          version: ">=1.15,<=1.19"
+    run:
+      justification:
+      - type: WARNING
+        message: "Used NumPy requires Python version 3.7+"
+        link: "https://numpy.org/neps/nep-0029-deprecation_policy.html#support-table"
+        package_name: numpy
+  - name: NumPyPython38SupportWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - security
+      - testing
+      runtime_environments:
+        python_version: "<3.8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy
+          version: ">=1.19,<=1.20"
+    run:
+      justification:
+      - type: WARNING
+        message: "Used NumPy requires Python 3.8+"
+        link: "https://numpy.org/neps/nep-0029-deprecation_policy.html#support-table"
+        package_name: numpy
