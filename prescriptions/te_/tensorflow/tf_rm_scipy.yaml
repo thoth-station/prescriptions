@@ -1,0 +1,18 @@
+units:
+  steps:
+  - name: TensorFlowRMSciPyStep
+    type: step.SkipPackage
+    should_include:
+      adviser_pipeline: true
+    match:
+      package_version:
+        name: scipy
+      state:
+        package_version_from:
+        - name: tensorflow
+          version: ">2.1,<=2.3"
+    run:
+      stack_info:
+      - type: WARNING
+        message: "TensorFlow in versions >=2.1,<=2.3 stated SciPy as a dependency but it is not used in the codebase"
+        link: tf_rm_scipy
