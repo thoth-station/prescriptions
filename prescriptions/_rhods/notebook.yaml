@@ -1,0 +1,23 @@
+units:
+  sieves:
+  - match:
+      package_version:
+        index_url: https://pypi.org/simple
+        name: notebook
+        version: '!=6.3.0'
+    name: RHODSNotebookSieve
+    run:
+      log:
+        message: Removing package 'notebook' as version does not match product version
+          expected '==6.3.0'
+        type: WARNING
+      stack_info:
+      - link: https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-data-science
+        message: Removing package 'notebook' as version does not match product version
+          expected '==6.3.0'
+        type: WARNING
+    should_include:
+      adviser_pipeline: true
+      labels:
+        consumer: rhods
+    type: sieve
