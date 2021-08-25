@@ -11,7 +11,7 @@ What are prescriptions?
 
 This repository keeps a database of known issues in Python open-source
 projects. The database is used in `Thoth
-<https://khemenu.thoth-station.ninja/>`__ to resolve high quality Python
+<https://thoth-station.ninja/>`__ to resolve high quality Python
 software stacks.
 
 See `the linked presentation
