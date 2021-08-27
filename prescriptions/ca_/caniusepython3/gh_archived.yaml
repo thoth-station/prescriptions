@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Caniusepython3GitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: caniusepython3
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'caniusepython3' is marked as archived on GitHub"
-            link: "https://github.com/brettcannon/caniusepython3"
-            package_name: caniusepython3
+  - name: Caniusepython3GitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: caniusepython3
+    run:
+      justification:
+      - type: WARNING
+        message: "Package 'caniusepython3' is marked as archived on GitHub"
+        link: "https://github.com/brettcannon/caniusepython3"
+        package_name: caniusepython3
