@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AdextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adext
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'adext' is hosted on GitHub"
+        link: "https://github.com/ajschmidt8/adext"
+        package_name: adext
