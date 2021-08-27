@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CoreapiGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: coreapi
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'coreapi' is marked as archived on GitHub"
-            link: "https://github.com/core-api/python-client"
-            package_name: coreapi
+  - name: CoreapiGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreapi
+    run:
+      justification:
+      - type: WARNING
+        message: "Package 'coreapi' is marked as archived on GitHub"
+        link: "https://github.com/core-api/python-client"
+        package_name: coreapi
