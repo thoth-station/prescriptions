@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZodbpickleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+    - state:
+        resolved_dependencies:
+        - name: zodbpickle
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'zodbpickle' is hosted on GitHub"
+        link: "https://github.com/zopefoundation/zodbpickle"
+        package_name: zodbpickle
