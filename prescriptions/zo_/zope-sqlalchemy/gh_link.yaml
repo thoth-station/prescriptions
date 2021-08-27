@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeSqlalchemyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+    - state:
+        resolved_dependencies:
+        - name: zope-sqlalchemy
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'zope-sqlalchemy' is hosted on GitHub"
+        link: "https://github.com/zopefoundation/zope.sqlalchemy"
+        package_name: zope-sqlalchemy
