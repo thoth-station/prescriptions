@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ZakeGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: zake
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'zake' is marked as archived on GitHub"
-            link: "https://github.com/yahoo/Zake"
-            package_name: zake
+  - name: ZakeGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zake
+    run:
+      justification:
+      - type: WARNING
+        message: "Package 'zake' is marked as archived on GitHub"
+        link: "https://github.com/yahoo/Zake"
+        package_name: zake
