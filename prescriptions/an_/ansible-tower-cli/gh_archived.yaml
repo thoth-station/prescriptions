@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AnsibleTowerCliGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ansible-tower-cli
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'ansible-tower-cli' is marked as archived on GitHub"
-            link: "https://github.com/ansible/tower-cli"
-            package_name: ansible-tower-cli
+  - name: AnsibleTowerCliGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-tower-cli
+    run:
+      justification:
+      - type: WARNING
+        message: "Package 'ansible-tower-cli' is marked as archived on GitHub"
+        link: "https://github.com/ansible/tower-cli"
+        package_name: ansible-tower-cli
