@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeEventGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+    - state:
+        resolved_dependencies:
+        - name: zope-event
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'zope-event' is hosted on GitHub"
+        link: "https://github.com/zopefoundation/zope.event"
+        package_name: zope-event
