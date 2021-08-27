@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZstdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+    - state:
+        resolved_dependencies:
+        - name: zstd
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'zstd' is hosted on GitHub"
+        link: "https://github.com/sergey-dryabzhinsky/python-zstd"
+        package_name: zstd
