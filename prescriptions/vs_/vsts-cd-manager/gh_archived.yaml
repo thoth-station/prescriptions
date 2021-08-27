@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VstsCdManagerGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: vsts-cd-manager
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'vsts-cd-manager' is marked as archived on GitHub"
-            link: "https://github.com/microsoft/vsts-cd-manager"
-            package_name: vsts-cd-manager
+  - name: VstsCdManagerGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsts-cd-manager
+    run:
+      justification:
+      - type: WARNING
+        message: "Package 'vsts-cd-manager' is marked as archived on GitHub"
+        link: "https://github.com/microsoft/vsts-cd-manager"
+        package_name: vsts-cd-manager
