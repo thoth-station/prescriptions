@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AccumulationTreeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: accumulation-tree
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'accumulation-tree' is hosted on GitHub"
-            link: "https://github.com/tkluck/accumulation_tree"
-            package_name: accumulation-tree
+  - name: AccumulationTreeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: accumulation-tree
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'accumulation-tree' is hosted on GitHub"
+        link: "https://github.com/tkluck/accumulation_tree"
+        package_name: accumulation-tree
