@@ -10,9 +10,10 @@ What are prescriptions?
 =======================
 
 This repository keeps a database of known issues in Python open-source
-projects as well as suggestions for the Python ecosystem. The database is
-used in `Thoth <https://thoth-station.ninja/>`__ to resolve high quality
-Python software stacks.
+projects as well as suggestions for Python libraries and runtime
+environments they can run in. The database is used in 
+`Thoth <https://thoth-station.ninja/>`__ to resolve high quality Python
+software stacks.
 
 See `the linked presentation
 <https://github.com/thoth-station/prescriptions/blob/master/Documentation/presentation.pdf>`__
