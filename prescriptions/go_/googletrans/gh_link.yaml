@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogletransGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: googletrans
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'googletrans' is hosted on GitHub"
-            link: "https://github.com/ssut/py-googletrans"
-            package_name: googletrans
+  - name: GoogletransGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googletrans
+    run:
+      justification:
+      - type: INFO
+        message: Package 'googletrans' is hosted on GitHub
+        link: https://github.com/ssut/py-googletrans
+        package_name: googletrans

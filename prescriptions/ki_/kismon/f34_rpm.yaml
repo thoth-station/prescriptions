@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: KismonFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: kismon
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kismon' is packaged as an RPM in Fedora 34 as 'kismon'"
-            link: https://src.fedoraproject.org/rpms/kismon
-            package_name: kismon
+  - name: KismonFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: kismon
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kismon' is packaged as an RPM in Fedora 34 as 'kismon'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: kismon

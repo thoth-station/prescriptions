@@ -1,23 +1,25 @@
 units:
   wraps:
-    - name: IntelTensorFlowWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          platforms: ["linux-x86_64"]
-          hardware:
-            - cpu_families: [13]
-              cpu_models: [6]
-            - cpu_families: [10]
-              cpu_models: [6]
-      match:
-        state:
-          resolved_dependencies:
-            - name: tensorflow
-      run:
-        justification:
-          - type: INFO
-            message: "Consider using intel-tensorflow which is optimized for CPU detected in your environment"
-            link: intel_tensorflow
-            package_name: tensorflow
+  - name: IntelTensorFlowWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        platforms: [linux-x86_64]
+        hardware:
+        - cpu_families: [13]
+          cpu_models: [6]
+        - cpu_families: [10]
+          cpu_models: [6]
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using intel-tensorflow which is optimized
+          for CPU detected in your environment
+        link: intel_tensorflow
+        package_name: tensorflow

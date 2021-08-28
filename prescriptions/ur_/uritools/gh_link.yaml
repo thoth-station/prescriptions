@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UritoolsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: uritools
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'uritools' is hosted on GitHub"
-            link: "https://github.com/tkem/uritools"
-            package_name: uritools
+  - name: UritoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uritools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'uritools' is hosted on GitHub
+        link: https://github.com/tkem/uritools
+        package_name: uritools

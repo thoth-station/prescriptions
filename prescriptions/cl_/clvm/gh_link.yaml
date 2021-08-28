@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ClvmGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: clvm
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'clvm' is hosted on GitHub"
-            link: "https://github.com/Chia-Network/clvm"
-            package_name: clvm
+  - name: ClvmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clvm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'clvm' is hosted on GitHub
+        link: https://github.com/Chia-Network/clvm
+        package_name: clvm

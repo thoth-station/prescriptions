@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: CytoolzFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: cytoolz
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cytoolz' is packaged as an RPM in Fedora 34 as 'python-cytoolz'"
-            link: https://src.fedoraproject.org/rpms/python-cytoolz
-            package_name: cytoolz
+  - name: CytoolzFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: cytoolz
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cytoolz' is packaged as an RPM in Fedora 34 as 'python-cytoolz'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: cytoolz

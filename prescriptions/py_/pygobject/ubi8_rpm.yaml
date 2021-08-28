@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PygobjectUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pygobject
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygobject' is packaged as an RPM in UBI8 as 'python3-gobject-base'"
-            link: rpm
-            package_name: pygobject
+  - name: PygobjectUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygobject
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygobject' is packaged as an RPM in UBI8 as 'python3-gobject-base'
+        link: rpm
+        package_name: pygobject

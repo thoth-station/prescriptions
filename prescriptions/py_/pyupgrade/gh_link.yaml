@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyupgradeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyupgrade
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyupgrade' is hosted on GitHub"
-            link: "https://github.com/asottile/pyupgrade"
-            package_name: pyupgrade
+  - name: PyupgradeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyupgrade
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyupgrade' is hosted on GitHub
+        link: https://github.com/asottile/pyupgrade
+        package_name: pyupgrade

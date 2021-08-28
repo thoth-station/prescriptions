@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DynamodbEncryptionSdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dynamodb-encryption-sdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dynamodb-encryption-sdk' is hosted on GitHub"
-            link: "https://github.com/aws/aws-dynamodb-encryption-python"
-            package_name: dynamodb-encryption-sdk
+  - name: DynamodbEncryptionSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynamodb-encryption-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dynamodb-encryption-sdk' is hosted on GitHub
+        link: https://github.com/aws/aws-dynamodb-encryption-python
+        package_name: dynamodb-encryption-sdk

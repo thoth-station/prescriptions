@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RequestsKerberosGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: requests-kerberos
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'requests-kerberos' is hosted on GitHub"
-            link: "https://github.com/requests/requests-kerberos"
-            package_name: requests-kerberos
+  - name: RequestsKerberosGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-kerberos
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-kerberos' is hosted on GitHub
+        link: https://github.com/requests/requests-kerberos
+        package_name: requests-kerberos

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureStorageBlobGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-storage-blob
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-storage-blob' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-storage-blob
+  - name: AzureStorageBlobGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-blob
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-storage-blob' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-storage-blob

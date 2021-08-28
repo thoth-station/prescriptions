@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WandGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: wand
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'wand' is hosted on GitHub"
-            link: "https://github.com/emcconville/wand"
-            package_name: wand
+  - name: WandGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wand
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wand' is hosted on GitHub
+        link: https://github.com/emcconville/wand
+        package_name: wand

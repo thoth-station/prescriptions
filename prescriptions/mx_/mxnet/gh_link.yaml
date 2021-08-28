@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MxnetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mxnet
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mxnet' is hosted on GitHub"
-            link: "https://github.com/apache/incubator-mxnet"
-            package_name: mxnet
+  - name: MxnetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mxnet
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mxnet' is hosted on GitHub
+        link: https://github.com/apache/incubator-mxnet
+        package_name: mxnet

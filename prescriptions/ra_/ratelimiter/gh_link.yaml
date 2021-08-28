@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RatelimiterGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ratelimiter
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ratelimiter' is hosted on GitHub"
-            link: "https://github.com/RazerM/ratelimiter"
-            package_name: ratelimiter
+  - name: RatelimiterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimiter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ratelimiter' is hosted on GitHub
+        link: https://github.com/RazerM/ratelimiter
+        package_name: ratelimiter

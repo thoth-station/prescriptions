@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BezierGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bezier
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bezier' is hosted on GitHub"
-            link: "https://github.com/dhermes/bezier"
-            package_name: bezier
+  - name: BezierGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bezier
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bezier' is hosted on GitHub
+        link: https://github.com/dhermes/bezier
+        package_name: bezier

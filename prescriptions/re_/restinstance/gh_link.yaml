@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RestinstanceGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: restinstance
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'restinstance' is hosted on GitHub"
-            link: "https://github.com/asyrjasalo/RESTinstance"
-            package_name: restinstance
+  - name: RestinstanceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restinstance
+    run:
+      justification:
+      - type: INFO
+        message: Package 'restinstance' is hosted on GitHub
+        link: https://github.com/asyrjasalo/RESTinstance
+        package_name: restinstance

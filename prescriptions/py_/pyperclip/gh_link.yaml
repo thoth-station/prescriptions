@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyperclipGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyperclip
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyperclip' is hosted on GitHub"
-            link: "https://github.com/asweigart/pyperclip"
-            package_name: pyperclip
+  - name: PyperclipGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyperclip
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyperclip' is hosted on GitHub
+        link: https://github.com/asweigart/pyperclip
+        package_name: pyperclip

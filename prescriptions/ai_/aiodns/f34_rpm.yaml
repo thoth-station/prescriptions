@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: AiodnsFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: aiodns
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiodns' is packaged as an RPM in Fedora 34 as 'python-aiodns'"
-            link: https://src.fedoraproject.org/rpms/python-aiodns
-            package_name: aiodns
+  - name: AiodnsFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiodns
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiodns' is packaged as an RPM in Fedora 34 as 'python-aiodns'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: aiodns

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GrpclibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: grpclib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'grpclib' is hosted on GitHub"
-            link: "https://github.com/vmagamedov/grpclib"
-            package_name: grpclib
+  - name: GrpclibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpclib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'grpclib' is hosted on GitHub
+        link: https://github.com/vmagamedov/grpclib
+        package_name: grpclib

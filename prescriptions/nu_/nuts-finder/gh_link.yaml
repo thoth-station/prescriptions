@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NutsFinderGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nuts-finder
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nuts-finder' is hosted on GitHub"
-            link: "https://github.com/nestauk/nuts_finder"
-            package_name: nuts-finder
+  - name: NutsFinderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nuts-finder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nuts-finder' is hosted on GitHub
+        link: https://github.com/nestauk/nuts_finder
+        package_name: nuts-finder

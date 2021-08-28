@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ExecutingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: executing
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'executing' is hosted on GitHub"
-            link: "https://github.com/alexmojaki/executing"
-            package_name: executing
+  - name: ExecutingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: executing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'executing' is hosted on GitHub
+        link: https://github.com/alexmojaki/executing
+        package_name: executing

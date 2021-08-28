@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PywaveletsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pywavelets
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pywavelets' is hosted on GitHub"
-            link: "https://github.com/PyWavelets/pywt"
-            package_name: pywavelets
+  - name: PywaveletsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywavelets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pywavelets' is hosted on GitHub
+        link: https://github.com/PyWavelets/pywt
+        package_name: pywavelets

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PendulumGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pendulum
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pendulum' is hosted on GitHub"
-            link: "https://github.com/sdispater/pendulum"
-            package_name: pendulum
+  - name: PendulumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pendulum
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pendulum' is hosted on GitHub
+        link: https://github.com/sdispater/pendulum
+        package_name: pendulum

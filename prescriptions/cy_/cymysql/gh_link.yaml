@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CymysqlGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cymysql
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cymysql' is hosted on GitHub"
-            link: "https://github.com/nakagami/CyMySQL"
-            package_name: cymysql
+  - name: CymysqlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cymysql
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cymysql' is hosted on GitHub
+        link: https://github.com/nakagami/CyMySQL
+        package_name: cymysql

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoPrettyjsonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-prettyjson
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-prettyjson' is hosted on GitHub"
-            link: "https://github.com/kevinmickey/django-prettyjson"
-            package_name: django-prettyjson
+  - name: DjangoPrettyjsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-prettyjson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-prettyjson' is hosted on GitHub
+        link: https://github.com/kevinmickey/django-prettyjson
+        package_name: django-prettyjson

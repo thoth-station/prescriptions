@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DatabandGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: databand
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'databand' is hosted on GitHub"
-            link: "https://github.com/databand-ai/dbnd"
-            package_name: databand
+  - name: DatabandGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databand
+    run:
+      justification:
+      - type: INFO
+        message: Package 'databand' is hosted on GitHub
+        link: https://github.com/databand-ai/dbnd
+        package_name: databand

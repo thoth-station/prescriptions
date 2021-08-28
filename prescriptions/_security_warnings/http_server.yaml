@@ -1,33 +1,37 @@
 units:
   wraps:
-    - name: HTTPServerWSecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - latest
-          - performance
-          - stable
-          - testing
-        library_usage:
-          http:
-            - http.server
-      run:
-        stack_info:
-          - type: WARNING
-            message: "http.server is not suitable for production use, only implementing basic security checks"
-            link: "https://docs.python.org/3.11/library/http.server.html#module-http.server"
-    - name: HTTPServerESecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - security
-        library_usage:
-          http:
-            - http.server
-      run:
-        stack_info:
-          - type: ERROR
-            message: "http.server is not suitable for production use, only implementing basic security checks"
-            link: "https://docs.python.org/3.11/library/http.server.html#module-http.server"
+  - name: HTTPServerWSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - stable
+      - testing
+      library_usage:
+        http:
+        - http.server
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          http.server is not suitable for production use, only
+          implementing basic security checks
+        link: https://docs.python.org/3.11/library/http.server.html#module-http.server
+  - name: HTTPServerESecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      library_usage:
+        http:
+        - http.server
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          http.server is not suitable for production use, only implementing
+          basic security checks
+        link: https://docs.python.org/3.11/library/http.server.html#module-http.server

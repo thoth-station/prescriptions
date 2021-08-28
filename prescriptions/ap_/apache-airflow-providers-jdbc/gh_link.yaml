@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ApacheAirflowProvidersJdbcGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: apache-airflow-providers-jdbc
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'apache-airflow-providers-jdbc' is hosted on GitHub"
-            link: "https://github.com/apache/airflow"
-            package_name: apache-airflow-providers-jdbc
+  - name: ApacheAirflowProvidersJdbcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-jdbc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apache-airflow-providers-jdbc' is hosted on GitHub
+        link: https://github.com/apache/airflow
+        package_name: apache-airflow-providers-jdbc

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PynlplFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pynlpl
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pynlpl' is packaged as an RPM in Fedora 34 as 'python-pynlpl'"
-            link: https://src.fedoraproject.org/rpms/python-pynlpl
-            package_name: pynlpl
+  - name: PynlplFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynlpl
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pynlpl' is packaged as an RPM in Fedora 34 as 'python-pynlpl'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pynlpl

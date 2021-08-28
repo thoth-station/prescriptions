@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BlackduckGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: blackduck
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'blackduck' is hosted on GitHub"
-            link: "https://github.com/blackducksoftware/hub-rest-api-python"
-            package_name: blackduck
+  - name: BlackduckGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blackduck
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blackduck' is hosted on GitHub
+        link: https://github.com/blackducksoftware/hub-rest-api-python
+        package_name: blackduck

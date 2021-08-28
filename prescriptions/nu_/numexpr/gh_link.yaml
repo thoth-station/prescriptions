@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NumexprGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: numexpr
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'numexpr' is hosted on GitHub"
-            link: "https://github.com/pydata/numexpr"
-            package_name: numexpr
+  - name: NumexprGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numexpr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'numexpr' is hosted on GitHub
+        link: https://github.com/pydata/numexpr
+        package_name: numexpr

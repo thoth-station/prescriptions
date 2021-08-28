@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AutovizwidgetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: autovizwidget
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'autovizwidget' is hosted on GitHub"
-            link: "https://github.com/jupyter-incubator/sparkmagic"
-            package_name: autovizwidget
+  - name: AutovizwidgetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autovizwidget
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autovizwidget' is hosted on GitHub
+        link: https://github.com/jupyter-incubator/sparkmagic
+        package_name: autovizwidget

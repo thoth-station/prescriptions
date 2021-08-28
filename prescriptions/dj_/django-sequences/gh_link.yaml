@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoSequencesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-sequences
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-sequences' is hosted on GitHub"
-            link: "https://github.com/aaugustin/django-sequences"
-            package_name: django-sequences
+  - name: DjangoSequencesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sequences
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-sequences' is hosted on GitHub
+        link: https://github.com/aaugustin/django-sequences
+        package_name: django-sequences

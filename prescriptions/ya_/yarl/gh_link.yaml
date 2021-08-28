@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: YarlGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: yarl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'yarl' is hosted on GitHub"
-            link: "https://github.com/aio-libs/yarl"
-            package_name: yarl
+  - name: YarlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yarl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yarl' is hosted on GitHub
+        link: https://github.com/aio-libs/yarl
+        package_name: yarl

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Auth0PythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: auth0-python
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'auth0-python' is hosted on GitHub"
-            link: "https://github.com/auth0/auth0-python"
-            package_name: auth0-python
+  - name: Auth0PythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: auth0-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'auth0-python' is hosted on GitHub
+        link: https://github.com/auth0/auth0-python
+        package_name: auth0-python

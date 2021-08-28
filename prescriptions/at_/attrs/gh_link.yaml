@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AttrsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: attrs
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'attrs' is hosted on GitHub"
-            link: "https://github.com/python-attrs/attrs"
-            package_name: attrs
+  - name: AttrsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'attrs' is hosted on GitHub
+        link: https://github.com/python-attrs/attrs
+        package_name: attrs

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OpencensusExtRequestsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: opencensus-ext-requests
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'opencensus-ext-requests' is hosted on GitHub"
-            link: "https://github.com/census-instrumentation/opencensus-python"
-            package_name: opencensus-ext-requests
+  - name: OpencensusExtRequestsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus-ext-requests
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opencensus-ext-requests' is hosted on GitHub
+        link: https://github.com/census-instrumentation/opencensus-python
+        package_name: opencensus-ext-requests

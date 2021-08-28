@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Crc32cGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: crc32c
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'crc32c' is hosted on GitHub"
-            link: "https://github.com/ICRAR/crc32c"
-            package_name: crc32c
+  - name: Crc32cGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crc32c
+    run:
+      justification:
+      - type: INFO
+        message: Package 'crc32c' is hosted on GitHub
+        link: https://github.com/ICRAR/crc32c
+        package_name: crc32c

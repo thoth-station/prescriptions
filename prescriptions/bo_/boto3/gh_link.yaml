@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Boto3GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: boto3
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'boto3' is hosted on GitHub"
-            link: "https://github.com/boto/boto3"
-            package_name: boto3
+  - name: Boto3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boto3' is hosted on GitHub
+        link: https://github.com/boto/boto3
+        package_name: boto3

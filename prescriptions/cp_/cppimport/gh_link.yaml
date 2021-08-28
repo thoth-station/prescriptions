@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CppimportGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cppimport
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cppimport' is hosted on GitHub"
-            link: "https://github.com/tbenthompson/cppimport"
-            package_name: cppimport
+  - name: CppimportGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cppimport
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cppimport' is hosted on GitHub
+        link: https://github.com/tbenthompson/cppimport
+        package_name: cppimport

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StrsimpyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: strsimpy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'strsimpy' is hosted on GitHub"
-            link: "https://github.com/luozhouyang/python-string-similarity"
-            package_name: strsimpy
+  - name: StrsimpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: strsimpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'strsimpy' is hosted on GitHub
+        link: https://github.com/luozhouyang/python-string-similarity
+        package_name: strsimpy

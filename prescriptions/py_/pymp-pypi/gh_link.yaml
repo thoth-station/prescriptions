@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PympPypiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pymp-pypi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymp-pypi' is hosted on GitHub"
-            link: "https://github.com/classner/pymp"
-            package_name: pymp-pypi
+  - name: PympPypiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymp-pypi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymp-pypi' is hosted on GitHub
+        link: https://github.com/classner/pymp
+        package_name: pymp-pypi

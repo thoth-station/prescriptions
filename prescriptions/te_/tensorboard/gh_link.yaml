@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TensorboardGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tensorboard
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tensorboard' is hosted on GitHub"
-            link: "https://github.com/tensorflow/tensorboard"
-            package_name: tensorboard
+  - name: TensorboardGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorboard' is hosted on GitHub
+        link: https://github.com/tensorflow/tensorboard
+        package_name: tensorboard

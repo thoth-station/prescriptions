@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VstsCdManagerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: vsts-cd-manager
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'vsts-cd-manager' is hosted on GitHub"
-            link: "https://github.com/microsoft/vsts-cd-manager"
-            package_name: vsts-cd-manager
+  - name: VstsCdManagerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsts-cd-manager
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vsts-cd-manager' is hosted on GitHub
+        link: https://github.com/microsoft/vsts-cd-manager
+        package_name: vsts-cd-manager

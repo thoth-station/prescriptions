@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Pdoc3GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pdoc3
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pdoc3' is hosted on GitHub"
-            link: "https://github.com/pdoc3/pdoc"
-            package_name: pdoc3
+  - name: Pdoc3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdoc3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pdoc3' is hosted on GitHub
+        link: https://github.com/pdoc3/pdoc
+        package_name: pdoc3

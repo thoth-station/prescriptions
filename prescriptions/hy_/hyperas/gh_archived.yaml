@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HyperasGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: hyperas
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'hyperas' is marked as archived on GitHub"
-            link: "https://github.com/maxpumperla/hyperas"
-            package_name: hyperas
+  - name: HyperasGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hyperas
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hyperas' is marked as archived on GitHub
+        link: https://github.com/maxpumperla/hyperas
+        package_name: hyperas

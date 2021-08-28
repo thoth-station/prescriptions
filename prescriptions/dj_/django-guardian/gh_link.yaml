@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoGuardianGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-guardian
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-guardian' is hosted on GitHub"
-            link: "https://github.com/django-guardian/django-guardian"
-            package_name: django-guardian
+  - name: DjangoGuardianGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-guardian
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-guardian' is hosted on GitHub
+        link: https://github.com/django-guardian/django-guardian
+        package_name: django-guardian

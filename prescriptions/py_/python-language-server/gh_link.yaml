@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonLanguageServerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-language-server
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-language-server' is hosted on GitHub"
-            link: "https://github.com/palantir/python-language-server"
-            package_name: python-language-server
+  - name: PythonLanguageServerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-language-server
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-language-server' is hosted on GitHub
+        link: https://github.com/palantir/python-language-server
+        package_name: python-language-server

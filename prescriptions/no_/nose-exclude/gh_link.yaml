@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NoseExcludeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nose-exclude
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nose-exclude' is hosted on GitHub"
-            link: "https://github.com/kgrandis/nose-exclude"
-            package_name: nose-exclude
+  - name: NoseExcludeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-exclude
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nose-exclude' is hosted on GitHub
+        link: https://github.com/kgrandis/nose-exclude
+        package_name: nose-exclude

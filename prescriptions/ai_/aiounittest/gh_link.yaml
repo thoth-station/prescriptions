@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AiounittestGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aiounittest
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiounittest' is hosted on GitHub"
-            link: "https://github.com/kwarunek/aiounittest"
-            package_name: aiounittest
+  - name: AiounittestGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiounittest
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiounittest' is hosted on GitHub
+        link: https://github.com/kwarunek/aiounittest
+        package_name: aiounittest

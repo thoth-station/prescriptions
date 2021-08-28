@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonIptablesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-iptables
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-iptables' is hosted on GitHub"
-            link: "https://github.com/ldx/python-iptables"
-            package_name: python-iptables
+  - name: PythonIptablesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-iptables
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-iptables' is hosted on GitHub
+        link: https://github.com/ldx/python-iptables
+        package_name: python-iptables

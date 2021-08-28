@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EpiweeksGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: epiweeks
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'epiweeks' is hosted on GitHub"
-            link: "https://github.com/dralshehri/epiweeks"
-            package_name: epiweeks
+  - name: EpiweeksGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epiweeks
+    run:
+      justification:
+      - type: INFO
+        message: Package 'epiweeks' is hosted on GitHub
+        link: https://github.com/dralshehri/epiweeks
+        package_name: epiweeks

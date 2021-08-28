@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TrimeshGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: trimesh
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'trimesh' is hosted on GitHub"
-            link: "https://github.com/mikedh/trimesh"
-            package_name: trimesh
+  - name: TrimeshGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trimesh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'trimesh' is hosted on GitHub
+        link: https://github.com/mikedh/trimesh
+        package_name: trimesh

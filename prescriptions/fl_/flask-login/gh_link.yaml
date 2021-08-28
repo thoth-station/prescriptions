@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FlaskLoginGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flask-login
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flask-login' is hosted on GitHub"
-            link: "https://github.com/maxcountryman/flask-login"
-            package_name: flask-login
+  - name: FlaskLoginGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-login
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-login' is hosted on GitHub
+        link: https://github.com/maxcountryman/flask-login
+        package_name: flask-login

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AiodockerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aiodocker
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiodocker' is hosted on GitHub"
-            link: "https://github.com/aio-libs/aiodocker"
-            package_name: aiodocker
+  - name: AiodockerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiodocker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiodocker' is hosted on GitHub
+        link: https://github.com/aio-libs/aiodocker
+        package_name: aiodocker

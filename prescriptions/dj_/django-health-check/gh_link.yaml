@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoHealthCheckGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-health-check
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-health-check' is hosted on GitHub"
-            link: "https://github.com/KristianOellegaard/django-health-check"
-            package_name: django-health-check
+  - name: DjangoHealthCheckGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-health-check
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-health-check' is hosted on GitHub
+        link: https://github.com/KristianOellegaard/django-health-check
+        package_name: django-health-check

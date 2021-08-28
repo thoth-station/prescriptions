@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DmSonnetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dm-sonnet
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dm-sonnet' is hosted on GitHub"
-            link: "https://github.com/deepmind/sonnet"
-            package_name: dm-sonnet
+  - name: DmSonnetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dm-sonnet
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dm-sonnet' is hosted on GitHub
+        link: https://github.com/deepmind/sonnet
+        package_name: dm-sonnet

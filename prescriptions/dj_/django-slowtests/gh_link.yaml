@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoSlowtestsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-slowtests
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-slowtests' is hosted on GitHub"
-            link: "https://github.com/realpython/django-slow-tests"
-            package_name: django-slowtests
+  - name: DjangoSlowtestsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-slowtests
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-slowtests' is hosted on GitHub
+        link: https://github.com/realpython/django-slow-tests
+        package_name: django-slowtests

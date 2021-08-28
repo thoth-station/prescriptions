@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CouchdbGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: couchdb
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'couchdb' is marked as archived on GitHub"
-            link: "https://github.com/djc/couchdb-python"
-            package_name: couchdb
+  - name: CouchdbGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: couchdb
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'couchdb' is marked as archived on GitHub
+        link: https://github.com/djc/couchdb-python
+        package_name: couchdb

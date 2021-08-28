@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EnvisageGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: envisage
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'envisage' is hosted on GitHub"
-            link: "https://github.com/enthought/envisage"
-            package_name: envisage
+  - name: EnvisageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: envisage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'envisage' is hosted on GitHub
+        link: https://github.com/enthought/envisage
+        package_name: envisage

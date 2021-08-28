@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: D2to1Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: d2to1
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'd2to1' is packaged as an RPM in Fedora 34 as 'python-d2to1'"
-            link: https://src.fedoraproject.org/rpms/python-d2to1
-            package_name: d2to1
+  - name: D2to1Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: d2to1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'd2to1' is packaged as an RPM in Fedora 34 as 'python-d2to1'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: d2to1

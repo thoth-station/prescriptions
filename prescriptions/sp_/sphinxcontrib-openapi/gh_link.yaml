@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SphinxcontribOpenapiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sphinxcontrib-openapi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sphinxcontrib-openapi' is hosted on GitHub"
-            link: "https://github.com/sphinx-contrib/openapi"
-            package_name: sphinxcontrib-openapi
+  - name: SphinxcontribOpenapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-openapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinxcontrib-openapi' is hosted on GitHub
+        link: https://github.com/sphinx-contrib/openapi
+        package_name: sphinxcontrib-openapi

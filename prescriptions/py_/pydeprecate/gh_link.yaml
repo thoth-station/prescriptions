@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PydeprecateGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pydeprecate
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pydeprecate' is hosted on GitHub"
-            link: "https://github.com/Borda/pyDeprecate"
-            package_name: pydeprecate
+  - name: PydeprecateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydeprecate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydeprecate' is hosted on GitHub
+        link: https://github.com/Borda/pyDeprecate
+        package_name: pydeprecate

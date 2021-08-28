@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CeleryRedbeatGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: celery-redbeat
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'celery-redbeat' is hosted on GitHub"
-            link: "https://github.com/sibson/redbeat"
-            package_name: celery-redbeat
+  - name: CeleryRedbeatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: celery-redbeat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'celery-redbeat' is hosted on GitHub
+        link: https://github.com/sibson/redbeat
+        package_name: celery-redbeat

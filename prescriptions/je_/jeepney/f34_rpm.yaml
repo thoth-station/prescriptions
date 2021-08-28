@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: JeepneyFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: jeepney
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jeepney' is packaged as an RPM in Fedora 34 as 'python-jeepney'"
-            link: https://src.fedoraproject.org/rpms/python-jeepney
-            package_name: jeepney
+  - name: JeepneyFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: jeepney
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jeepney' is packaged as an RPM in Fedora 34 as 'python-jeepney'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: jeepney

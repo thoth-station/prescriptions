@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PydevdGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pydevd
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pydevd' is hosted on GitHub"
-            link: "https://github.com/fabioz/PyDev.Debugger"
-            package_name: pydevd
+  - name: PydevdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydevd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydevd' is hosted on GitHub
+        link: https://github.com/fabioz/PyDev.Debugger
+        package_name: pydevd

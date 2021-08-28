@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureServicefabricGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-servicefabric
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-servicefabric' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-servicefabric
+  - name: AzureServicefabricGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-servicefabric
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-servicefabric' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-servicefabric

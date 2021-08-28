@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsCdkCoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws-cdk-core
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws-cdk-core' is hosted on GitHub"
-            link: "https://github.com/aws/aws-cdk"
-            package_name: aws-cdk-core
+  - name: AwsCdkCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-core' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-core

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ZeroconfGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: zeroconf
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'zeroconf' is hosted on GitHub"
-            link: "https://github.com/jstasiak/python-zeroconf"
-            package_name: zeroconf
+  - name: ZeroconfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zeroconf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zeroconf' is hosted on GitHub
+        link: https://github.com/jstasiak/python-zeroconf
+        package_name: zeroconf

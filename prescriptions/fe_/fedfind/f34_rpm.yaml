@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: FedfindFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: fedfind
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fedfind' is packaged as an RPM in Fedora 34 as 'fedfind'"
-            link: https://src.fedoraproject.org/rpms/fedfind
-            package_name: fedfind
+  - name: FedfindFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: fedfind
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fedfind' is packaged as an RPM in Fedora 34 as 'fedfind'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: fedfind

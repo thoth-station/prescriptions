@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JsonTricksGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: json-tricks
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'json-tricks' is hosted on GitHub"
-            link: "https://github.com/mverleg/pyjson_tricks"
-            package_name: json-tricks
+  - name: JsonTricksGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-tricks
+    run:
+      justification:
+      - type: INFO
+        message: Package 'json-tricks' is hosted on GitHub
+        link: https://github.com/mverleg/pyjson_tricks
+        package_name: json-tricks

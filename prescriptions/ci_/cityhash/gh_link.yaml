@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CityhashGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cityhash
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cityhash' is hosted on GitHub"
-            link: "https://github.com/escherba/python-cityhash"
-            package_name: cityhash
+  - name: CityhashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cityhash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cityhash' is hosted on GitHub
+        link: https://github.com/escherba/python-cityhash
+        package_name: cityhash

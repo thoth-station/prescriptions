@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FakeUseragentGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fake-useragent
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fake-useragent' is hosted on GitHub"
-            link: "https://github.com/hellysmile/fake-useragent"
-            package_name: fake-useragent
+  - name: FakeUseragentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fake-useragent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fake-useragent' is hosted on GitHub
+        link: https://github.com/hellysmile/fake-useragent
+        package_name: fake-useragent

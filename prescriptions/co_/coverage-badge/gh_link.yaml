@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CoverageBadgeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: coverage-badge
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'coverage-badge' is hosted on GitHub"
-            link: "https://github.com/dbrgn/coverage-badge"
-            package_name: coverage-badge
+  - name: CoverageBadgeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage-badge
+    run:
+      justification:
+      - type: INFO
+        message: Package 'coverage-badge' is hosted on GitHub
+        link: https://github.com/dbrgn/coverage-badge
+        package_name: coverage-badge

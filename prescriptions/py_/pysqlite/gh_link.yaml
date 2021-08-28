@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PySQLiteGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pysqlite
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pysqlite' is hosted on GitHub"
-            link: https://github.com/ghaering/pysqlite
-            package_name: pysqlite
+  - name: PySQLiteGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysqlite
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pysqlite' is hosted on GitHub
+        link: https://github.com/ghaering/pysqlite
+        package_name: pysqlite

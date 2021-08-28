@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EnlightenGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: enlighten
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'enlighten' is hosted on GitHub"
-            link: "https://github.com/Rockhopper-Technologies/enlighten"
-            package_name: enlighten
+  - name: EnlightenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enlighten
+    run:
+      justification:
+      - type: INFO
+        message: Package 'enlighten' is hosted on GitHub
+        link: https://github.com/Rockhopper-Technologies/enlighten
+        package_name: enlighten

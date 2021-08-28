@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureCommonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-common
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-common' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-common
+  - name: AzureCommonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-common
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-common' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-common

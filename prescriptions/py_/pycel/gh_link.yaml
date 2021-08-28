@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PycelGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pycel
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pycel' is hosted on GitHub"
-            link: "https://github.com/stephenrauch/pycel"
-            package_name: pycel
+  - name: PycelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycel' is hosted on GitHub
+        link: https://github.com/stephenrauch/pycel
+        package_name: pycel

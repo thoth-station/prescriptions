@@ -1,14 +1,16 @@
 units:
   wraps:
-    - name: HashlibSecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        library_usage:
-          hashlib:
-            - hashlib.*
-      run:
-        stack_info:
-          - type: WARNING
-            message: "All hashlib constructors take a 'usedforsecurity' keyword-only argument disabling known insecure and blocked algorithms"
-            link: "https://docs.python.org/3.11/library/hashlib.html#hashlib-usedforsecurity"
+  - name: HashlibSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        hashlib:
+        - hashlib.*
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          All hashlib constructors take a 'usedforsecurity' keyword-only argument
+          disabling known insecure and blocked algorithms
+        link: https://docs.python.org/3.11/library/hashlib.html#hashlib-usedforsecurity

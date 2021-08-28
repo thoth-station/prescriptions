@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyastronomyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyastronomy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyastronomy' is hosted on GitHub"
-            link: "https://github.com/sczesla/PyAstronomy"
-            package_name: pyastronomy
+  - name: PyastronomyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyastronomy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyastronomy' is hosted on GitHub
+        link: https://github.com/sczesla/PyAstronomy
+        package_name: pyastronomy

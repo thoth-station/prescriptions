@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: RecommonmarkFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: recommonmark
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'recommonmark' is packaged as an RPM in Fedora 34 as 'python-recommonmark'"
-            link: https://src.fedoraproject.org/rpms/python-recommonmark
-            package_name: recommonmark
+  - name: RecommonmarkFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: recommonmark
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'recommonmark' is packaged as an RPM in Fedora 34 as 'python-recommonmark'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: recommonmark

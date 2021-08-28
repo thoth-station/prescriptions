@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KeyringsCryptfileGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: keyrings-cryptfile
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'keyrings-cryptfile' is hosted on GitHub"
-            link: "https://github.com/frispete/keyrings.cryptfile"
-            package_name: keyrings-cryptfile
+  - name: KeyringsCryptfileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyrings-cryptfile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keyrings-cryptfile' is hosted on GitHub
+        link: https://github.com/frispete/keyrings.cryptfile
+        package_name: keyrings-cryptfile

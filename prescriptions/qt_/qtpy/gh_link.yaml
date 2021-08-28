@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: QtpyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: qtpy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'qtpy' is hosted on GitHub"
-            link: "https://github.com/spyder-ide/qtpy"
-            package_name: qtpy
+  - name: QtpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qtpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'qtpy' is hosted on GitHub
+        link: https://github.com/spyder-ide/qtpy
+        package_name: qtpy

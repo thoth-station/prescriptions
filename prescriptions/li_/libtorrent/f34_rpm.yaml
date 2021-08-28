@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: LibtorrentFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: libtorrent
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'libtorrent' is packaged as an RPM in Fedora 34 as 'rb_libtorrent'"
-            link: https://src.fedoraproject.org/rpms/rb_libtorrent
-            package_name: libtorrent
+  - name: LibtorrentFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: libtorrent
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'libtorrent' is packaged as an RPM in Fedora 34 as 'rb_libtorrent'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: libtorrent

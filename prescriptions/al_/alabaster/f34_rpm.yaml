@@ -1,21 +1,23 @@
 units:
   wraps:
-    - name: AlabasterFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: alabaster
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'alabaster' is packaged as an RPM in Fedora 34 as 'python-sphinx-theme-alabaster'"
-            link: https://src.fedoraproject.org/rpms/python-sphinx-theme-alabaster
-            package_name: alabaster
+  - name: AlabasterFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: alabaster
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'alabaster' is packaged as an RPM in
+          Fedora 34 as 'python-sphinx-theme-alabaster'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: alabaster

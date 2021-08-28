@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: RgwFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: rgw
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rgw' is packaged as an RPM in Fedora 34 as 'ceph'"
-            link: https://src.fedoraproject.org/rpms/ceph
-            package_name: rgw
+  - name: RgwFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rgw
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rgw' is packaged as an RPM in Fedora 34 as 'ceph'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: rgw

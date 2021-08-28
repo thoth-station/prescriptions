@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DiagramsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: diagrams
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'diagrams' is hosted on GitHub"
-            link: "https://github.com/mingrammer/diagrams"
-            package_name: diagrams
+  - name: DiagramsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diagrams
+    run:
+      justification:
+      - type: INFO
+        message: Package 'diagrams' is hosted on GitHub
+        link: https://github.com/mingrammer/diagrams
+        package_name: diagrams

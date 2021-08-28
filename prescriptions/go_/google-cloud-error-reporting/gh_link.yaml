@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleCloudErrorReportingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-cloud-error-reporting
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-cloud-error-reporting' is hosted on GitHub"
-            link: "https://github.com/googleapis/python-error-reporting"
-            package_name: google-cloud-error-reporting
+  - name: GoogleCloudErrorReportingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-error-reporting
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-error-reporting' is hosted on GitHub
+        link: https://github.com/googleapis/python-error-reporting
+        package_name: google-cloud-error-reporting

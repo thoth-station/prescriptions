@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Autopep8GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: autopep8
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'autopep8' is hosted on GitHub"
-            link: "https://github.com/hhatto/autopep8"
-            package_name: autopep8
+  - name: Autopep8GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autopep8
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autopep8' is hosted on GitHub
+        link: https://github.com/hhatto/autopep8
+        package_name: autopep8

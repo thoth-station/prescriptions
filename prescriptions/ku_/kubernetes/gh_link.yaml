@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KubernetesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: kubernetes
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kubernetes' is hosted on GitHub"
-            link: "https://github.com/kubernetes-client/python"
-            package_name: kubernetes
+  - name: KubernetesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kubernetes' is hosted on GitHub
+        link: https://github.com/kubernetes-client/python
+        package_name: kubernetes

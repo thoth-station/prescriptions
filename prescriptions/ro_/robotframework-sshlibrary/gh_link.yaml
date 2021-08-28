@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RobotframeworkSshlibraryGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: robotframework-sshlibrary
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'robotframework-sshlibrary' is hosted on GitHub"
-            link: "https://github.com/robotframework/SSHLibrary"
-            package_name: robotframework-sshlibrary
+  - name: RobotframeworkSshlibraryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-sshlibrary
+    run:
+      justification:
+      - type: INFO
+        message: Package 'robotframework-sshlibrary' is hosted on GitHub
+        link: https://github.com/robotframework/SSHLibrary
+        package_name: robotframework-sshlibrary

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AnsibleModulesHashivaultGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ansible-modules-hashivault
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ansible-modules-hashivault' is hosted on GitHub"
-            link: "https://github.com/TerryHowe/ansible-modules-hashivault"
-            package_name: ansible-modules-hashivault
+  - name: AnsibleModulesHashivaultGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-modules-hashivault
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ansible-modules-hashivault' is hosted on GitHub
+        link: https://github.com/TerryHowe/ansible-modules-hashivault
+        package_name: ansible-modules-hashivault

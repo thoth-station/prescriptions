@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HttpxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: httpx
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'httpx' is hosted on GitHub"
-            link: "https://github.com/encode/httpx"
-            package_name: httpx
+  - name: HttpxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'httpx' is hosted on GitHub
+        link: https://github.com/encode/httpx
+        package_name: httpx

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OpenShiftGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: openshift
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'openshift' is hosted on GitHub"
-            link: "https://github.com/openshift/openshift-restclient-python"
-            package_name: openshift
+  - name: OpenShiftGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openshift
+    run:
+      justification:
+      - type: INFO
+        message: Package 'openshift' is hosted on GitHub
+        link: https://github.com/openshift/openshift-restclient-python
+        package_name: openshift

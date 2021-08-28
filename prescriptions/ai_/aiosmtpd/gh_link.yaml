@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AiosmtpdGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aiosmtpd
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiosmtpd' is hosted on GitHub"
-            link: "https://github.com/aio-libs/aiosmtpd"
-            package_name: aiosmtpd
+  - name: AiosmtpdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosmtpd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiosmtpd' is hosted on GitHub
+        link: https://github.com/aio-libs/aiosmtpd
+        package_name: aiosmtpd

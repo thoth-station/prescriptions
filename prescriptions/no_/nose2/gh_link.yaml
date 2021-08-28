@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Nose2GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nose2
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nose2' is hosted on GitHub"
-            link: "https://github.com/nose-devs/nose2"
-            package_name: nose2
+  - name: Nose2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nose2' is hosted on GitHub
+        link: https://github.com/nose-devs/nose2
+        package_name: nose2

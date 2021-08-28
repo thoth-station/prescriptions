@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SharepyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sharepy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sharepy' is hosted on GitHub"
-            link: "https://github.com/JonathanHolvey/sharepy"
-            package_name: sharepy
+  - name: SharepyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sharepy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sharepy' is hosted on GitHub
+        link: https://github.com/JonathanHolvey/sharepy
+        package_name: sharepy

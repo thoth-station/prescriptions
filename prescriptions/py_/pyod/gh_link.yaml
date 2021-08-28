@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyodGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyod
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyod' is hosted on GitHub"
-            link: "https://github.com/yzhao062/pyod"
-            package_name: pyod
+  - name: PyodGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyod
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyod' is hosted on GitHub
+        link: https://github.com/yzhao062/pyod
+        package_name: pyod

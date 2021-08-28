@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TbatsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tbats
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tbats' is hosted on GitHub"
-            link: "https://github.com/intive-DataScience/tbats"
-            package_name: tbats
+  - name: TbatsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tbats
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tbats' is hosted on GitHub
+        link: https://github.com/intive-DataScience/tbats
+        package_name: tbats

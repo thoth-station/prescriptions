@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ta
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ta' is hosted on GitHub"
-            link: "https://github.com/bukosabino/ta"
-            package_name: ta
+  - name: TaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ta
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ta' is hosted on GitHub
+        link: https://github.com/bukosabino/ta
+        package_name: ta

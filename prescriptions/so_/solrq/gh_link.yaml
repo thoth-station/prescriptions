@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SolrqGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: solrq
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'solrq' is hosted on GitHub"
-            link: "https://github.com/swistakm/solrq"
-            package_name: solrq
+  - name: SolrqGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: solrq
+    run:
+      justification:
+      - type: INFO
+        message: Package 'solrq' is hosted on GitHub
+        link: https://github.com/swistakm/solrq
+        package_name: solrq

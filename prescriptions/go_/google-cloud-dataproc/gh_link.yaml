@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleCloudDataprocGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-cloud-dataproc
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-cloud-dataproc' is hosted on GitHub"
-            link: "https://github.com/googleapis/python-dataproc"
-            package_name: google-cloud-dataproc
+  - name: GoogleCloudDataprocGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-dataproc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-dataproc' is hosted on GitHub
+        link: https://github.com/googleapis/python-dataproc
+        package_name: google-cloud-dataproc

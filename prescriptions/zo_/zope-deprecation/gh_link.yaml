@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ZopeDeprecationGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: zope-deprecation
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'zope-deprecation' is hosted on GitHub"
-            link: "https://github.com/zopefoundation/zope.deprecation"
-            package_name: zope-deprecation
+  - name: ZopeDeprecationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-deprecation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-deprecation' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.deprecation
+        package_name: zope-deprecation

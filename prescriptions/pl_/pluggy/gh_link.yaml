@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PluggyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pluggy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pluggy' is hosted on GitHub"
-            link: "https://github.com/pytest-dev/pluggy"
-            package_name: pluggy
+  - name: PluggyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pluggy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pluggy' is hosted on GitHub
+        link: https://github.com/pytest-dev/pluggy
+        package_name: pluggy

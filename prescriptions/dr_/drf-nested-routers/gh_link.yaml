@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DrfNestedRoutersGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: drf-nested-routers
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'drf-nested-routers' is hosted on GitHub"
-            link: "https://github.com/alanjds/drf-nested-routers"
-            package_name: drf-nested-routers
+  - name: DrfNestedRoutersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drf-nested-routers
+    run:
+      justification:
+      - type: INFO
+        message: Package 'drf-nested-routers' is hosted on GitHub
+        link: https://github.com/alanjds/drf-nested-routers
+        package_name: drf-nested-routers

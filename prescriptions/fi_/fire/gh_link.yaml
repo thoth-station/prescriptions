@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FireGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fire
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fire' is hosted on GitHub"
-            link: "https://github.com/google/python-fire"
-            package_name: fire
+  - name: FireGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fire
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fire' is hosted on GitHub
+        link: https://github.com/google/python-fire
+        package_name: fire

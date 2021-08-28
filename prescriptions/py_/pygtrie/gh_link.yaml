@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PygtrieGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pygtrie
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygtrie' is hosted on GitHub"
-            link: "https://github.com/mina86/pygtrie"
-            package_name: pygtrie
+  - name: PygtrieGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygtrie
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygtrie' is hosted on GitHub
+        link: https://github.com/mina86/pygtrie
+        package_name: pygtrie

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GlfwGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: glfw
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'glfw' is hosted on GitHub"
-            link: "https://github.com/FlorianRhiem/pyGLFW"
-            package_name: glfw
+  - name: GlfwGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glfw
+    run:
+      justification:
+      - type: INFO
+        message: Package 'glfw' is hosted on GitHub
+        link: https://github.com/FlorianRhiem/pyGLFW
+        package_name: glfw

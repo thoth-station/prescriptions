@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Flake8EradicateGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flake8-eradicate
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flake8-eradicate' is hosted on GitHub"
-            link: "https://github.com/wemake-services/flake8-eradicate"
-            package_name: flake8-eradicate
+  - name: Flake8EradicateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-eradicate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-eradicate' is hosted on GitHub
+        link: https://github.com/wemake-services/flake8-eradicate
+        package_name: flake8-eradicate

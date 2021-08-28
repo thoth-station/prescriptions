@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MonotonicGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: monotonic
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'monotonic' is marked as archived on GitHub"
-            link: "https://github.com/atdt/monotonic"
-            package_name: monotonic
+  - name: MonotonicGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: monotonic
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'monotonic' is marked as archived on GitHub
+        link: https://github.com/atdt/monotonic
+        package_name: monotonic

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CoreschemaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: coreschema
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'coreschema' is hosted on GitHub"
-            link: "https://github.com/core-api/python-coreschema"
-            package_name: coreschema
+  - name: CoreschemaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreschema
+    run:
+      justification:
+      - type: INFO
+        message: Package 'coreschema' is hosted on GitHub
+        link: https://github.com/core-api/python-coreschema
+        package_name: coreschema

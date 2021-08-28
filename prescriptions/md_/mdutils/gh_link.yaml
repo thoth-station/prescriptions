@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MdutilsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mdutils
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mdutils' is hosted on GitHub"
-            link: "https://github.com/didix21/"
-            package_name: mdutils
+  - name: MdutilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mdutils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mdutils' is hosted on GitHub
+        link: https://github.com/didix21/
+        package_name: mdutils

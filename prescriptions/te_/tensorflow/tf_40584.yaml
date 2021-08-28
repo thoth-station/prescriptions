@@ -1,46 +1,46 @@
 units:
   steps:
-    - name: TensorFlow22ProbabilityStep
-      type: step
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-      match:
-        - package_version:
-            name: tensorflow-probability
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow
-                version: "~=2.2.0"
-        - package_version:
-            name: tensorflow-probability
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow-cpu
-                version: "~=2.2.0"
-        - package_version:
-            name: tensorflow-probability
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow-gpu
-                version: "~=2.2.0"
-        - package_version:
-            name: tensorflow-probability
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: intel-tensorflow
-                version: "~=2.2.0"
-      run:
-        multi_package_resolution: false
-        stack_info:
-          - type: WARNING
-            message: "tensorflow in version 2.2 and tensorflow-probability cause runtime errors"
-            link: tf_40584
-        not_acceptable: "tensorflow in version 2.2 and tensorflow-probability cause runtime errors"
+  - name: TensorFlow22ProbabilityStep
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+    match:
+    - package_version:
+        name: tensorflow-probability
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ~=2.2.0
+    - package_version:
+        name: tensorflow-probability
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+          version: ~=2.2.0
+    - package_version:
+        name: tensorflow-probability
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+          version: ~=2.2.0
+    - package_version:
+        name: tensorflow-probability
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+          version: ~=2.2.0
+    run:
+      multi_package_resolution: false
+      stack_info:
+      - type: WARNING
+        message: tensorflow in version 2.2 and tensorflow-probability cause runtime errors
+        link: tf_40584
+      not_acceptable: tensorflow in version 2.2 and tensorflow-probability cause runtime errors

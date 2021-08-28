@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ColconCoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: colcon-core
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'colcon-core' is hosted on GitHub"
-            link: "https://github.com/colcon/colcon-core"
-            package_name: colcon-core
+  - name: ColconCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-core' is hosted on GitHub
+        link: https://github.com/colcon/colcon-core
+        package_name: colcon-core

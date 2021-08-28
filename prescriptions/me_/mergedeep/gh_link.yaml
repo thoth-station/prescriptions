@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MergedeepGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mergedeep
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mergedeep' is hosted on GitHub"
-            link: "https://github.com/clarketm/mergedeep"
-            package_name: mergedeep
+  - name: MergedeepGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mergedeep
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mergedeep' is hosted on GitHub
+        link: https://github.com/clarketm/mergedeep
+        package_name: mergedeep

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyjarowinklerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyjarowinkler
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyjarowinkler' is hosted on GitHub"
-            link: "https://github.com/nap/jaro-winkler-distance"
-            package_name: pyjarowinkler
+  - name: PyjarowinklerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyjarowinkler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyjarowinkler' is hosted on GitHub
+        link: https://github.com/nap/jaro-winkler-distance
+        package_name: pyjarowinkler

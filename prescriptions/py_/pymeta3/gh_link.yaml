@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Pymeta3GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pymeta3
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymeta3' is hosted on GitHub"
-            link: "https://github.com/wbond/pymeta3"
-            package_name: pymeta3
+  - name: Pymeta3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymeta3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymeta3' is hosted on GitHub
+        link: https://github.com/wbond/pymeta3
+        package_name: pymeta3

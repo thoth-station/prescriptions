@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OffspringGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: offspring
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'offspring' is hosted on GitHub"
-            link: "https://github.com/borgstrom/offspring"
-            package_name: offspring
+  - name: OffspringGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: offspring
+    run:
+      justification:
+      - type: INFO
+        message: Package 'offspring' is hosted on GitHub
+        link: https://github.com/borgstrom/offspring
+        package_name: offspring

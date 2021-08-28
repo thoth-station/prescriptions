@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: RarfileFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: rarfile
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rarfile' is packaged as an RPM in Fedora 34 as 'python-rarfile'"
-            link: https://src.fedoraproject.org/rpms/python-rarfile
-            package_name: rarfile
+  - name: RarfileFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rarfile
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rarfile' is packaged as an RPM in Fedora 34 as 'python-rarfile'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: rarfile

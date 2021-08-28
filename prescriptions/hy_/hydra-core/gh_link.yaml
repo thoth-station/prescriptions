@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HydraCoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: hydra-core
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'hydra-core' is hosted on GitHub"
-            link: "https://github.com/facebookresearch/hydra"
-            package_name: hydra-core
+  - name: HydraCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hydra-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hydra-core' is hosted on GitHub
+        link: https://github.com/facebookresearch/hydra
+        package_name: hydra-core

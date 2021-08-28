@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PylintFailUnderGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pylint-fail-under
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pylint-fail-under' is marked as archived on GitHub"
-            link: "https://github.com/TNThieding/pylint-fail-under"
-            package_name: pylint-fail-under
+  - name: PylintFailUnderGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-fail-under
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylint-fail-under' is marked as archived on GitHub
+        link: https://github.com/TNThieding/pylint-fail-under
+        package_name: pylint-fail-under

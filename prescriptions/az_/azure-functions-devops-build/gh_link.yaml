@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureFunctionsDevopsBuildGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-functions-devops-build
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-functions-devops-build' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-functions-devops-build"
-            package_name: azure-functions-devops-build
+  - name: AzureFunctionsDevopsBuildGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-functions-devops-build
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-functions-devops-build' is hosted on GitHub
+        link: https://github.com/Azure/azure-functions-devops-build
+        package_name: azure-functions-devops-build

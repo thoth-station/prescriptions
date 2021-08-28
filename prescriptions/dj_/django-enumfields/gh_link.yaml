@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoEnumfieldsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-enumfields
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-enumfields' is hosted on GitHub"
-            link: "https://github.com/hzdg/django-enumfields"
-            package_name: django-enumfields
+  - name: DjangoEnumfieldsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-enumfields
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-enumfields' is hosted on GitHub
+        link: https://github.com/hzdg/django-enumfields
+        package_name: django-enumfields

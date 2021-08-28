@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: YoutubeSearchPythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: youtube-search-python
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'youtube-search-python' is hosted on GitHub"
-            link: "https://github.com/alexmercerind/youtube-search-python"
-            package_name: youtube-search-python
+  - name: YoutubeSearchPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: youtube-search-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'youtube-search-python' is hosted on GitHub
+        link: https://github.com/alexmercerind/youtube-search-python
+        package_name: youtube-search-python

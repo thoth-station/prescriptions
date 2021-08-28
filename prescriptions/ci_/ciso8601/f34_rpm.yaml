@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Ciso8601Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: ciso8601
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ciso8601' is packaged as an RPM in Fedora 34 as 'python-ciso8601'"
-            link: https://src.fedoraproject.org/rpms/python-ciso8601
-            package_name: ciso8601
+  - name: Ciso8601Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: ciso8601
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ciso8601' is packaged as an RPM in Fedora 34 as 'python-ciso8601'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: ciso8601

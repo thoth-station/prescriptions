@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JupyterSphinxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jupyter-sphinx
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jupyter-sphinx' is hosted on GitHub"
-            link: "https://github.com/jupyter/jupyter-sphinx"
-            package_name: jupyter-sphinx
+  - name: JupyterSphinxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-sphinx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-sphinx' is hosted on GitHub
+        link: https://github.com/jupyter/jupyter-sphinx
+        package_name: jupyter-sphinx

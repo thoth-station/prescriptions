@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BcpyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bcpy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bcpy' is hosted on GitHub"
-            link: "https://github.com/titan550/bcpy"
-            package_name: bcpy
+  - name: BcpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bcpy' is hosted on GitHub
+        link: https://github.com/titan550/bcpy
+        package_name: bcpy

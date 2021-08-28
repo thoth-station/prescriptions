@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PipupgradeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pipupgrade
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pipupgrade' is hosted on GitHub"
-            link: "https://github.com/achillesrasquinha/pipupgrade"
-            package_name: pipupgrade
+  - name: PipupgradeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipupgrade
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pipupgrade' is hosted on GitHub
+        link: https://github.com/achillesrasquinha/pipupgrade
+        package_name: pipupgrade

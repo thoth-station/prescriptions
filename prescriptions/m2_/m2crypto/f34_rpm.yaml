@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: M2cryptoFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: m2crypto
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'm2crypto' is packaged as an RPM in Fedora 34 as 'm2crypto'"
-            link: https://src.fedoraproject.org/rpms/m2crypto
-            package_name: m2crypto
+  - name: M2cryptoFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: m2crypto
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'm2crypto' is packaged as an RPM in Fedora 34 as 'm2crypto'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: m2crypto

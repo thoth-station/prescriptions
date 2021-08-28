@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HttpstanGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: httpstan
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'httpstan' is hosted on GitHub"
-            link: "https://github.com/stan-dev/httpstan"
-            package_name: httpstan
+  - name: HttpstanGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpstan
+    run:
+      justification:
+      - type: INFO
+        message: Package 'httpstan' is hosted on GitHub
+        link: https://github.com/stan-dev/httpstan
+        package_name: httpstan

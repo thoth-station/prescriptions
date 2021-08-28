@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DurationpyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: durationpy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'durationpy' is hosted on GitHub"
-            link: "https://github.com/icholy/durationpy"
-            package_name: durationpy
+  - name: DurationpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: durationpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'durationpy' is hosted on GitHub
+        link: https://github.com/icholy/durationpy
+        package_name: durationpy

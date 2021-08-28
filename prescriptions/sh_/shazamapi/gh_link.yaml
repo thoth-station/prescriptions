@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ShazamapiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: shazamapi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'shazamapi' is hosted on GitHub"
-            link: "https://github.com/Numenorean/ShazamAPI"
-            package_name: shazamapi
+  - name: ShazamapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shazamapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'shazamapi' is hosted on GitHub
+        link: https://github.com/Numenorean/ShazamAPI
+        package_name: shazamapi

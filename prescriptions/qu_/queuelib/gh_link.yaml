@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: QueuelibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: queuelib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'queuelib' is hosted on GitHub"
-            link: "https://github.com/scrapy/queuelib"
-            package_name: queuelib
+  - name: QueuelibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: queuelib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'queuelib' is hosted on GitHub
+        link: https://github.com/scrapy/queuelib
+        package_name: queuelib

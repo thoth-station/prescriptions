@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PybigqueryGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pybigquery
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pybigquery' is hosted on GitHub"
-            link: "https://github.com/googleapis/python-bigquery-sqlalchemy"
-            package_name: pybigquery
+  - name: PybigqueryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybigquery
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pybigquery' is hosted on GitHub
+        link: https://github.com/googleapis/python-bigquery-sqlalchemy
+        package_name: pybigquery

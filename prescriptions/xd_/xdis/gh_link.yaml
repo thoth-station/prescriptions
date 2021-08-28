@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: XdisGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: xdis
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'xdis' is hosted on GitHub"
-            link: "https://github.com/rocky/python-xdis"
-            package_name: xdis
+  - name: XdisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xdis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xdis' is hosted on GitHub
+        link: https://github.com/rocky/python-xdis
+        package_name: xdis

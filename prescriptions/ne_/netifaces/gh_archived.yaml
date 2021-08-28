@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NetifacesGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: netifaces
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'netifaces' is marked as archived on GitHub"
-            link: "https://github.com/al45tair/netifaces"
-            package_name: netifaces
+  - name: NetifacesGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netifaces
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'netifaces' is marked as archived on GitHub
+        link: https://github.com/al45tair/netifaces
+        package_name: netifaces

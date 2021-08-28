@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KedroVizGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: kedro-viz
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kedro-viz' is hosted on GitHub"
-            link: "https://github.com/quantumblacklabs/kedro-viz"
-            package_name: kedro-viz
+  - name: KedroVizGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kedro-viz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kedro-viz' is hosted on GitHub
+        link: https://github.com/quantumblacklabs/kedro-viz
+        package_name: kedro-viz

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AsyncinitGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: asyncinit
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'asyncinit' is marked as archived on GitHub"
-            link: "https://github.com/kchmck/pyasyncinit"
-            package_name: asyncinit
+  - name: AsyncinitGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncinit
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'asyncinit' is marked as archived on GitHub
+        link: https://github.com/kchmck/pyasyncinit
+        package_name: asyncinit

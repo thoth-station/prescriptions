@@ -1,29 +1,31 @@
 units:
   wraps:
-      - name: TensorFlow23AccuracyWrap
-        type: wrap
-        should_include:
-          adviser_pipeline: true
-        match:
-          - state:
-              resolved_dependencies:
-                - name: tensorflow
-                  version: "~=2.3.0"
-          - state:
-              resolved_dependencies:
-                - name: tensorflow-cpu
-                  version: "~=2.3.0"
-          - state:
-              resolved_dependencies:
-                - name: tensorflow-gpu
-                  version: "~=2.3.0"
-          - state:
-              resolved_dependencies:
-                - name: intel-tensorflow
-                  version: "~=2.3.0"
-        run:
-          justification:
-            - type: WARNING
-              message: "tensorflow in version 2.3 produces wrong model accuracy when the model is serialized using `accuracy`, use `sparse_categorical_accuracy` instead"
-              link: tf_42045
-              package_name: tensorflow
+  - name: TensorFlow23AccuracyWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+    - state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ~=2.3.0
+    - state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+          version: ~=2.3.0
+    - state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+          version: ~=2.3.0
+    - state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+          version: ~=2.3.0
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          tensorflow in version 2.3 produces wrong model accuracy when the model
+          is serialized using `accuracy`, use `sparse_categorical_accuracy` instead
+        link: tf_42045
+        package_name: tensorflow

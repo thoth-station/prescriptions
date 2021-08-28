@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GspreadFormattingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: gspread-formatting
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gspread-formatting' is hosted on GitHub"
-            link: "https://github.com/robin900/gspread-formatting"
-            package_name: gspread-formatting
+  - name: GspreadFormattingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-formatting
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gspread-formatting' is hosted on GitHub
+        link: https://github.com/robin900/gspread-formatting
+        package_name: gspread-formatting

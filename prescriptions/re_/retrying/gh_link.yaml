@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RetryingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: retrying
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'retrying' is hosted on GitHub"
-            link: "https://github.com/rholder/retrying"
-            package_name: retrying
+  - name: RetryingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retrying
+    run:
+      justification:
+      - type: INFO
+        message: Package 'retrying' is hosted on GitHub
+        link: https://github.com/rholder/retrying
+        package_name: retrying

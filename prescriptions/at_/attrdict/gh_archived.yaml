@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AttrdictGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: attrdict
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'attrdict' is marked as archived on GitHub"
-            link: "https://github.com/bcj/AttrDict"
-            package_name: attrdict
+  - name: AttrdictGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrdict
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'attrdict' is marked as archived on GitHub
+        link: https://github.com/bcj/AttrDict
+        package_name: attrdict

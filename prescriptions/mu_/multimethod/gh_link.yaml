@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MultimethodGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: multimethod
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'multimethod' is hosted on GitHub"
-            link: "https://github.com/coady/multimethod"
-            package_name: multimethod
+  - name: MultimethodGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multimethod
+    run:
+      justification:
+      - type: INFO
+        message: Package 'multimethod' is hosted on GitHub
+        link: https://github.com/coady/multimethod
+        package_name: multimethod

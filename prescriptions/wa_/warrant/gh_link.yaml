@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WarrantGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: warrant
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'warrant' is hosted on GitHub"
-            link: "https://github.com/capless/warrant"
-            package_name: warrant
+  - name: WarrantGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: warrant
+    run:
+      justification:
+      - type: INFO
+        message: Package 'warrant' is hosted on GitHub
+        link: https://github.com/capless/warrant
+        package_name: warrant

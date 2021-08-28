@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: XarrayFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: xarray
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'xarray' is packaged as an RPM in Fedora 34 as 'python-xarray'"
-            link: https://src.fedoraproject.org/rpms/python-xarray
-            package_name: xarray
+  - name: XarrayFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: xarray
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xarray' is packaged as an RPM in Fedora 34 as 'python-xarray'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: xarray

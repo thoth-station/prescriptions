@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PdftotextGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pdftotext
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pdftotext' is hosted on GitHub"
-            link: "https://github.com/jalan/pdftotext"
-            package_name: pdftotext
+  - name: PdftotextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdftotext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pdftotext' is hosted on GitHub
+        link: https://github.com/jalan/pdftotext
+        package_name: pdftotext

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MkdocsMaterialExtensionsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mkdocs-material-extensions
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mkdocs-material-extensions' is hosted on GitHub"
-            link: "https://github.com/facelessuser/mkdocs-material-extensions"
-            package_name: mkdocs-material-extensions
+  - name: MkdocsMaterialExtensionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs-material-extensions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mkdocs-material-extensions' is hosted on GitHub
+        link: https://github.com/facelessuser/mkdocs-material-extensions
+        package_name: mkdocs-material-extensions

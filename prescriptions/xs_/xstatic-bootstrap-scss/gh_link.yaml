@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: XstaticBootstrapScssGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: xstatic-bootstrap-scss
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'xstatic-bootstrap-scss' is hosted on GitHub"
-            link: "https://github.com/twbs/bootstrap-sass"
-            package_name: xstatic-bootstrap-scss
+  - name: XstaticBootstrapScssGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xstatic-bootstrap-scss
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xstatic-bootstrap-scss' is hosted on GitHub
+        link: https://github.com/twbs/bootstrap-sass
+        package_name: xstatic-bootstrap-scss

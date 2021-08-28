@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SetuptoolsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: setuptools
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'setuptools' is hosted on GitHub"
-            link: "https://github.com/pypa/setuptools"
-            package_name: setuptools
+  - name: SetuptoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'setuptools' is hosted on GitHub
+        link: https://github.com/pypa/setuptools
+        package_name: setuptools

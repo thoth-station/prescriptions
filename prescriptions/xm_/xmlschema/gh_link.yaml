@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: XmlschemaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: xmlschema
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'xmlschema' is hosted on GitHub"
-            link: "https://github.com/sissaschool/xmlschema"
-            package_name: xmlschema
+  - name: XmlschemaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmlschema
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xmlschema' is hosted on GitHub
+        link: https://github.com/sissaschool/xmlschema
+        package_name: xmlschema

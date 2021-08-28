@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LudwigGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ludwig
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ludwig' is hosted on GitHub"
-            link: "https://github.com/ludwig-ai/ludwig"
-            package_name: ludwig
+  - name: LudwigGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ludwig
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ludwig' is hosted on GitHub
+        link: https://github.com/ludwig-ai/ludwig
+        package_name: ludwig

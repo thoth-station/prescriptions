@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Ed25519GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ed25519
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ed25519' is hosted on GitHub"
-            link: "https://github.com/warner/python-ed25519"
-            package_name: ed25519
+  - name: Ed25519GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ed25519
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ed25519' is hosted on GitHub
+        link: https://github.com/warner/python-ed25519
+        package_name: ed25519

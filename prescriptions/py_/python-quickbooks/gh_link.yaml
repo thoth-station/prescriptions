@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonQuickbooksGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-quickbooks
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-quickbooks' is hosted on GitHub"
-            link: "https://github.com/ej2/python-quickbooks"
-            package_name: python-quickbooks
+  - name: PythonQuickbooksGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-quickbooks
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-quickbooks' is hosted on GitHub
+        link: https://github.com/ej2/python-quickbooks
+        package_name: python-quickbooks

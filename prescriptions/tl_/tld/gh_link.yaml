@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TldGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tld
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tld' is hosted on GitHub"
-            link: "https://github.com/barseghyanartur/tld"
-            package_name: tld
+  - name: TldGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tld
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tld' is hosted on GitHub
+        link: https://github.com/barseghyanartur/tld
+        package_name: tld

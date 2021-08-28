@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Ansi2htmlFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: ansi2html
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ansi2html' is packaged as an RPM in Fedora 34 as 'python-ansi2html'"
-            link: https://src.fedoraproject.org/rpms/python-ansi2html
-            package_name: ansi2html
+  - name: Ansi2htmlFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansi2html
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ansi2html' is packaged as an RPM in Fedora 34 as 'python-ansi2html'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: ansi2html

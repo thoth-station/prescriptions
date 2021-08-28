@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestXprocessGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-xprocess
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-xprocess' is hosted on GitHub"
-            link: "https://github.com/pytest-dev/pytest-xprocess"
-            package_name: pytest-xprocess
+  - name: PytestXprocessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-xprocess
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-xprocess' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-xprocess
+        package_name: pytest-xprocess

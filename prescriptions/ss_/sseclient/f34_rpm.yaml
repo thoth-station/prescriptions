@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: SseclientFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: sseclient
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sseclient' is packaged as an RPM in Fedora 34 as 'python-sseclient'"
-            link: https://src.fedoraproject.org/rpms/python-sseclient
-            package_name: sseclient
+  - name: SseclientFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: sseclient
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sseclient' is packaged as an RPM in Fedora 34 as 'python-sseclient'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: sseclient

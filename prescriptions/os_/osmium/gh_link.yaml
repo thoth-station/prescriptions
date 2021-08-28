@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OsmiumGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: osmium
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'osmium' is hosted on GitHub"
-            link: "https://github.com/osmcode/pyosmium"
-            package_name: osmium
+  - name: OsmiumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: osmium
+    run:
+      justification:
+      - type: INFO
+        message: Package 'osmium' is hosted on GitHub
+        link: https://github.com/osmcode/pyosmium
+        package_name: osmium

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: ReadlikeFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: readlike
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'readlike' is packaged as an RPM in Fedora 34 as 'python-readlike'"
-            link: https://src.fedoraproject.org/rpms/python-readlike
-            package_name: readlike
+  - name: ReadlikeFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: readlike
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'readlike' is packaged as an RPM in Fedora 34 as 'python-readlike'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: readlike

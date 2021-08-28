@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MoleculeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: molecule
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'molecule' is hosted on GitHub"
-            link: "https://github.com/ansible-community/molecule"
-            package_name: molecule
+  - name: MoleculeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: molecule
+    run:
+      justification:
+      - type: INFO
+        message: Package 'molecule' is hosted on GitHub
+        link: https://github.com/ansible-community/molecule
+        package_name: molecule

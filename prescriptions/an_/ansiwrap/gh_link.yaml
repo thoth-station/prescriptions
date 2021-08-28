@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AnsiwrapGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ansiwrap
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ansiwrap' is hosted on GitHub"
-            link: "https://github.com/jonathaneunice/ansiwrap"
-            package_name: ansiwrap
+  - name: AnsiwrapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansiwrap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ansiwrap' is hosted on GitHub
+        link: https://github.com/jonathaneunice/ansiwrap
+        package_name: ansiwrap

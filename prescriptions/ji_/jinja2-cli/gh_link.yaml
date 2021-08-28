@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Jinja2CliGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jinja2-cli
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jinja2-cli' is hosted on GitHub"
-            link: "https://github.com/mattrobenolt/jinja2-cli"
-            package_name: jinja2-cli
+  - name: Jinja2CliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2-cli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jinja2-cli' is hosted on GitHub
+        link: https://github.com/mattrobenolt/jinja2-cli
+        package_name: jinja2-cli

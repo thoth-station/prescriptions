@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PysharkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyshark
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyshark' is hosted on GitHub"
-            link: "https://github.com/KimiNewt/pyshark"
-            package_name: pyshark
+  - name: PysharkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyshark
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyshark' is hosted on GitHub
+        link: https://github.com/KimiNewt/pyshark
+        package_name: pyshark

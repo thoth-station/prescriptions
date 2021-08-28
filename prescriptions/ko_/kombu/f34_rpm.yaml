@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: KombuFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: kombu
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kombu' is packaged as an RPM in Fedora 34 as 'python-kombu'"
-            link: https://src.fedoraproject.org/rpms/python-kombu
-            package_name: kombu
+  - name: KombuFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: kombu
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kombu' is packaged as an RPM in Fedora 34 as 'python-kombu'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: kombu

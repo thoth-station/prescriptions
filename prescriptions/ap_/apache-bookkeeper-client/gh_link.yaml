@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ApacheBookkeeperClientGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: apache-bookkeeper-client
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'apache-bookkeeper-client' is hosted on GitHub"
-            link: "https://github.com/apache/bookkeeper"
-            package_name: apache-bookkeeper-client
+  - name: ApacheBookkeeperClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-bookkeeper-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apache-bookkeeper-client' is hosted on GitHub
+        link: https://github.com/apache/bookkeeper
+        package_name: apache-bookkeeper-client

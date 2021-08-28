@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PymdownExtensionsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pymdown-extensions
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymdown-extensions' is hosted on GitHub"
-            link: "https://github.com/facelessuser/pymdown-extensions"
-            package_name: pymdown-extensions
+  - name: PymdownExtensionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymdown-extensions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymdown-extensions' is hosted on GitHub
+        link: https://github.com/facelessuser/pymdown-extensions
+        package_name: pymdown-extensions

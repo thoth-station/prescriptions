@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Fido2GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fido2
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fido2' is hosted on GitHub"
-            link: "https://github.com/Yubico/python-fido2"
-            package_name: fido2
+  - name: Fido2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fido2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fido2' is hosted on GitHub
+        link: https://github.com/Yubico/python-fido2
+        package_name: fido2

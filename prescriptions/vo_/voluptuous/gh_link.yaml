@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VoluptousGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: voluptuous
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'voluptuous' is hosted on GitHub"
-            link: "https://github.com/alecthomas/voluptuous"
-            package_name: voluptuous
+  - name: VoluptousGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: voluptuous
+    run:
+      justification:
+      - type: INFO
+        message: Package 'voluptuous' is hosted on GitHub
+        link: https://github.com/alecthomas/voluptuous
+        package_name: voluptuous

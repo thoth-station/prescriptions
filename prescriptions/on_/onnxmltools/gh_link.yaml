@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OnnxmltoolsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: onnxmltools
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'onnxmltools' is hosted on GitHub"
-            link: "https://github.com/onnx/onnxmltools"
-            package_name: onnxmltools
+  - name: OnnxmltoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxmltools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'onnxmltools' is hosted on GitHub
+        link: https://github.com/onnx/onnxmltools
+        package_name: onnxmltools

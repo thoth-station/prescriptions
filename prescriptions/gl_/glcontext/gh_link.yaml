@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GlcontextGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: glcontext
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'glcontext' is hosted on GitHub"
-            link: "https://github.com/moderngl/glcontext"
-            package_name: glcontext
+  - name: GlcontextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glcontext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'glcontext' is hosted on GitHub
+        link: https://github.com/moderngl/glcontext
+        package_name: glcontext

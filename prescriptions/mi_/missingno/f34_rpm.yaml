@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MissingnoFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: missingno
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'missingno' is packaged as an RPM in Fedora 34 as 'python-missingno'"
-            link: https://src.fedoraproject.org/rpms/python-missingno
-            package_name: missingno
+  - name: MissingnoFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: missingno
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'missingno' is packaged as an RPM in Fedora 34 as 'python-missingno'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: missingno

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MatrixClientGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: matrix-client
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'matrix-client' is hosted on GitHub"
-            link: "https://github.com/matrix-org/matrix-python-sdk"
-            package_name: matrix-client
+  - name: MatrixClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matrix-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'matrix-client' is hosted on GitHub
+        link: https://github.com/matrix-org/matrix-python-sdk
+        package_name: matrix-client

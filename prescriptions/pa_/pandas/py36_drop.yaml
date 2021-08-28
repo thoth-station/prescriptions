@@ -1,25 +1,25 @@
 units:
   sieves:
-    - name: PandasPy36Sieve
-      type: sieve
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-        runtime_environments:
-          python_version: ">=3.3,<=3.6"
-      match:
-        package_version:
-          name: pandas
-          version: ">=1.2"
-          index_url: "https://pypi.org/simple"
-      run:
-        log:
-          message: "Pandas in versions >=1.2 dropped Python 3.6 support"
-          type: WARNING
-        stack_info:
-          - type: WARNING
-            message: "Pandas in versions >=1.2 dropped Python 3.6 support"
-            link: pandas_py36_drop
+  - name: PandasPy36Sieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+      runtime_environments:
+        python_version: ">=3.3,<=3.6"
+    match:
+      package_version:
+        name: pandas
+        version: ">=1.2"
+        index_url: https://pypi.org/simple
+    run:
+      log:
+        message: Pandas in versions >=1.2 dropped Python 3.6 support
+        type: WARNING
+      stack_info:
+      - type: WARNING
+        message: Pandas in versions >=1.2 dropped Python 3.6 support
+        link: pandas_py36_drop

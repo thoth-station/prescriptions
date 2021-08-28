@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BigflowGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bigflow
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bigflow' is hosted on GitHub"
-            link: "https://github.com/allegro/bigflow"
-            package_name: bigflow
+  - name: BigflowGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bigflow
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bigflow' is hosted on GitHub
+        link: https://github.com/allegro/bigflow
+        package_name: bigflow

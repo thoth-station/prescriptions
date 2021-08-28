@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WcwidthGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: wcwidth
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'wcwidth' is hosted on GitHub"
-            link: "https://github.com/jquast/wcwidth"
-            package_name: wcwidth
+  - name: WcwidthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wcwidth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wcwidth' is hosted on GitHub
+        link: https://github.com/jquast/wcwidth
+        package_name: wcwidth

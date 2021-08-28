@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytzGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytz
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytz' is hosted on GitHub"
-            link: "https://github.com/stub42/pytz"
-            package_name: pytz
+  - name: PytzGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytz' is hosted on GitHub
+        link: https://github.com/stub42/pytz
+        package_name: pytz

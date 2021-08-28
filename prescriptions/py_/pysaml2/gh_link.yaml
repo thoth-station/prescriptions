@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Pysaml2GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pysaml2
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pysaml2' is hosted on GitHub"
-            link: "https://github.com/IdentityPython/pysaml2"
-            package_name: pysaml2
+  - name: Pysaml2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysaml2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pysaml2' is hosted on GitHub
+        link: https://github.com/IdentityPython/pysaml2
+        package_name: pysaml2

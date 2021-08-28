@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyxlsbGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyxlsb
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyxlsb' is hosted on GitHub"
-            link: "https://github.com/willtrnr/pyxlsb"
-            package_name: pyxlsb
+  - name: PyxlsbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxlsb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyxlsb' is hosted on GitHub
+        link: https://github.com/willtrnr/pyxlsb
+        package_name: pyxlsb

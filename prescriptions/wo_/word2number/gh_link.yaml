@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Word2numberGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: word2number
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'word2number' is hosted on GitHub"
-            link: "https://github.com/akshaynagpal/w2n"
-            package_name: word2number
+  - name: Word2numberGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: word2number
+    run:
+      justification:
+      - type: INFO
+        message: Package 'word2number' is hosted on GitHub
+        link: https://github.com/akshaynagpal/w2n
+        package_name: word2number

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PygamGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pygam
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygam' is hosted on GitHub"
-            link: "https://github.com/dswah/pyGAM"
-            package_name: pygam
+  - name: PygamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygam
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygam' is hosted on GitHub
+        link: https://github.com/dswah/pyGAM
+        package_name: pygam

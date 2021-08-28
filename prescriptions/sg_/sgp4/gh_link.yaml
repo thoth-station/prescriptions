@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Sgp4GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sgp4
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sgp4' is hosted on GitHub"
-            link: "https://github.com/brandon-rhodes/python-sgp4"
-            package_name: sgp4
+  - name: Sgp4GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sgp4
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sgp4' is hosted on GitHub
+        link: https://github.com/brandon-rhodes/python-sgp4
+        package_name: sgp4

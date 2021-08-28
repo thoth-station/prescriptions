@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonDaemon3kGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-daemon-3k
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-daemon-3k' is hosted on GitHub"
-            link: "https://github.com/jbvsmo/python-daemon"
-            package_name: python-daemon-3k
+  - name: PythonDaemon3kGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-daemon-3k
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-daemon-3k' is hosted on GitHub
+        link: https://github.com/jbvsmo/python-daemon
+        package_name: python-daemon-3k

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleCloudDatastoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-cloud-datastore
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-cloud-datastore' is hosted on GitHub"
-            link: "https://github.com/googleapis/python-datastore"
-            package_name: google-cloud-datastore
+  - name: GoogleCloudDatastoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-datastore
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-datastore' is hosted on GitHub
+        link: https://github.com/googleapis/python-datastore
+        package_name: google-cloud-datastore

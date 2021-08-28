@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PublicationGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: publication
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'publication' is hosted on GitHub"
-            link: "https://github.com/glyph/publication"
-            package_name: publication
+  - name: PublicationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: publication
+    run:
+      justification:
+      - type: INFO
+        message: Package 'publication' is hosted on GitHub
+        link: https://github.com/glyph/publication
+        package_name: publication

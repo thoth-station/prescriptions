@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LivereloadGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: livereload
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'livereload' is hosted on GitHub"
-            link: "https://github.com/lepture/python-livereload"
-            package_name: livereload
+  - name: LivereloadGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: livereload
+    run:
+      justification:
+      - type: INFO
+        message: Package 'livereload' is hosted on GitHub
+        link: https://github.com/lepture/python-livereload
+        package_name: livereload

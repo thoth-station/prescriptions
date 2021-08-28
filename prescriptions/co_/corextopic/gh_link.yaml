@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CorextopicGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: corextopic
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'corextopic' is hosted on GitHub"
-            link: "https://github.com/gregversteeg/corex_topic"
-            package_name: corextopic
+  - name: CorextopicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: corextopic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'corextopic' is hosted on GitHub
+        link: https://github.com/gregversteeg/corex_topic
+        package_name: corextopic

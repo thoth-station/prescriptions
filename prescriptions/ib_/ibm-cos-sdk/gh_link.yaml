@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IbmCosSdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ibm-cos-sdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ibm-cos-sdk' is hosted on GitHub"
-            link: "https://github.com/ibm/ibm-cos-sdk-python"
-            package_name: ibm-cos-sdk
+  - name: IbmCosSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-cos-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ibm-cos-sdk' is hosted on GitHub
+        link: https://github.com/ibm/ibm-cos-sdk-python
+        package_name: ibm-cos-sdk

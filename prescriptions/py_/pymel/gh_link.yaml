@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PymelGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pymel
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymel' is hosted on GitHub"
-            link: "https://github.com/Lumapictures/pymel"
-            package_name: pymel
+  - name: PymelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymel' is hosted on GitHub
+        link: https://github.com/Lumapictures/pymel
+        package_name: pymel

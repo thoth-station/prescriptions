@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoPglocksGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-pglocks
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-pglocks' is hosted on GitHub"
-            link: "https://github.com/Xof/django-pglocks"
-            package_name: django-pglocks
+  - name: DjangoPglocksGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pglocks
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-pglocks' is hosted on GitHub
+        link: https://github.com/Xof/django-pglocks
+        package_name: django-pglocks

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MakoFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: mako
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mako' is packaged as an RPM in Fedora 34 as 'python-mako'"
-            link: https://src.fedoraproject.org/rpms/python-mako
-            package_name: mako
+  - name: MakoFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: mako
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mako' is packaged as an RPM in Fedora 34 as 'python-mako'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: mako

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Lz4GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: lz4
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lz4' is hosted on GitHub"
-            link: "https://github.com/python-lz4/python-lz4"
-            package_name: lz4
+  - name: Lz4GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lz4
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lz4' is hosted on GitHub
+        link: https://github.com/python-lz4/python-lz4
+        package_name: lz4

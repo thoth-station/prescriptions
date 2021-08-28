@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TypesJinja2GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: types-jinja2
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'types-jinja2' is hosted on GitHub"
-            link: "https://github.com/python/typeshed"
-            package_name: types-jinja2
+  - name: TypesJinja2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-jinja2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'types-jinja2' is hosted on GitHub
+        link: https://github.com/python/typeshed
+        package_name: types-jinja2

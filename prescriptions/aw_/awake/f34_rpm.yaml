@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: AwakeFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: awake
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'awake' is packaged as an RPM in Fedora 34 as 'awake'"
-            link: https://src.fedoraproject.org/rpms/awake
-            package_name: awake
+  - name: AwakeFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: awake
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'awake' is packaged as an RPM in Fedora 34 as 'awake'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: awake

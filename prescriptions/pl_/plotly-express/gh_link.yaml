@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PlotlyExpressGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: plotly-express
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'plotly-express' is hosted on GitHub"
-            link: "https://github.com/plotly/plotly_express"
-            package_name: plotly-express
+  - name: PlotlyExpressGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plotly-express
+    run:
+      justification:
+      - type: INFO
+        message: Package 'plotly-express' is hosted on GitHub
+        link: https://github.com/plotly/plotly_express
+        package_name: plotly-express

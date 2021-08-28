@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EmbeddingsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: embeddings
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'embeddings' is hosted on GitHub"
-            link: "https://github.com/vzhong/embeddings"
-            package_name: embeddings
+  - name: EmbeddingsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: embeddings
+    run:
+      justification:
+      - type: INFO
+        message: Package 'embeddings' is hosted on GitHub
+        link: https://github.com/vzhong/embeddings
+        package_name: embeddings

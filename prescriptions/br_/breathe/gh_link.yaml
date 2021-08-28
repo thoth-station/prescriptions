@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BreatheGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: breathe
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'breathe' is hosted on GitHub"
-            link: "https://github.com/michaeljones/breathe"
-            package_name: breathe
+  - name: BreatheGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: breathe
+    run:
+      justification:
+      - type: INFO
+        message: Package 'breathe' is hosted on GitHub
+        link: https://github.com/michaeljones/breathe
+        package_name: breathe

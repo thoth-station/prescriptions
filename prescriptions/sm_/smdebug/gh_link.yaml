@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SmdebugGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: smdebug
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'smdebug' is hosted on GitHub"
-            link: "https://github.com/awslabs/sagemaker-debugger"
-            package_name: smdebug
+  - name: SmdebugGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smdebug
+    run:
+      justification:
+      - type: INFO
+        message: Package 'smdebug' is hosted on GitHub
+        link: https://github.com/awslabs/sagemaker-debugger
+        package_name: smdebug

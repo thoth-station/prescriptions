@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LbryLibtorrentGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: lbry-libtorrent
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lbry-libtorrent' is hosted on GitHub"
-            link: "https://github.com/lbryio/libtorrent"
-            package_name: lbry-libtorrent
+  - name: LbryLibtorrentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lbry-libtorrent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lbry-libtorrent' is hosted on GitHub
+        link: https://github.com/lbryio/libtorrent
+        package_name: lbry-libtorrent

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AiogithubapiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aiogithubapi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiogithubapi' is hosted on GitHub"
-            link: "https://github.com/ludeeus/aiogithubapi"
-            package_name: aiogithubapi
+  - name: AiogithubapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiogithubapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiogithubapi' is hosted on GitHub
+        link: https://github.com/ludeeus/aiogithubapi
+        package_name: aiogithubapi

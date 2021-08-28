@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IpaddressGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ipaddress
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ipaddress' is hosted on GitHub"
-            link: "https://github.com/phihag/ipaddress"
-            package_name: ipaddress
+  - name: IpaddressGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaddress
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ipaddress' is hosted on GitHub
+        link: https://github.com/phihag/ipaddress
+        package_name: ipaddress

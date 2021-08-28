@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Py2packFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: py2pack
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'py2pack' is packaged as an RPM in Fedora 34 as 'python-py2pack'"
-            link: https://src.fedoraproject.org/rpms/python-py2pack
-            package_name: py2pack
+  - name: Py2packFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: py2pack
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'py2pack' is packaged as an RPM in Fedora 34 as 'python-py2pack'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: py2pack

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OscryptoGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: oscrypto
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'oscrypto' is hosted on GitHub"
-            link: "https://github.com/wbond/oscrypto"
-            package_name: oscrypto
+  - name: OscryptoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oscrypto
+    run:
+      justification:
+      - type: INFO
+        message: Package 'oscrypto' is hosted on GitHub
+        link: https://github.com/wbond/oscrypto
+        package_name: oscrypto

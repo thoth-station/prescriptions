@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MarisaFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: marisa
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'marisa' is packaged as an RPM in Fedora 34 as 'marisa'"
-            link: https://src.fedoraproject.org/rpms/marisa
-            package_name: marisa
+  - name: MarisaFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: marisa
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'marisa' is packaged as an RPM in Fedora 34 as 'marisa'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: marisa

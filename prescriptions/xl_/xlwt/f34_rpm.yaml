@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: XlwtFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: xlwt
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'xlwt' is packaged as an RPM in Fedora 34 as 'python-xlwt'"
-            link: https://src.fedoraproject.org/rpms/python-xlwt
-            package_name: xlwt
+  - name: XlwtFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: xlwt
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xlwt' is packaged as an RPM in Fedora 34 as 'python-xlwt'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: xlwt

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IdnaSslGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: idna-ssl
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'idna-ssl' is marked as archived on GitHub"
-            link: "https://github.com/aio-libs/idna-ssl"
-            package_name: idna-ssl
+  - name: IdnaSslGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna-ssl
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'idna-ssl' is marked as archived on GitHub
+        link: https://github.com/aio-libs/idna-ssl
+        package_name: idna-ssl

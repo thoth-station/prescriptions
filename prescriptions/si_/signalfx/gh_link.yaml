@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SignalfxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: signalfx
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'signalfx' is hosted on GitHub"
-            link: "https://github.com/signalfx/signalfx-python"
-            package_name: signalfx
+  - name: SignalfxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: signalfx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'signalfx' is hosted on GitHub
+        link: https://github.com/signalfx/signalfx-python
+        package_name: signalfx

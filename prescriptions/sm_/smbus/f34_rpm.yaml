@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: SmbusFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: smbus
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'smbus' is packaged as an RPM in Fedora 34 as 'i2c-tools'"
-            link: https://src.fedoraproject.org/rpms/i2c-tools
-            package_name: smbus
+  - name: SmbusFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbus
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'smbus' is packaged as an RPM in Fedora 34 as 'i2c-tools'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: smbus

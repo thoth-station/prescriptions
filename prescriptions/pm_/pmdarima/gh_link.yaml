@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PmdarimaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pmdarima
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pmdarima' is hosted on GitHub"
-            link: "https://github.com/alkaline-ml/pmdarima"
-            package_name: pmdarima
+  - name: PmdarimaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pmdarima
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pmdarima' is hosted on GitHub
+        link: https://github.com/alkaline-ml/pmdarima
+        package_name: pmdarima

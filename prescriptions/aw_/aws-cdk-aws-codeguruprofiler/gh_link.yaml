@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsCdkAwsCodeguruprofilerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws-cdk-aws-codeguruprofiler
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws-cdk-aws-codeguruprofiler' is hosted on GitHub"
-            link: "https://github.com/aws/aws-cdk"
-            package_name: aws-cdk-aws-codeguruprofiler
+  - name: AwsCdkAwsCodeguruprofilerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-codeguruprofiler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-codeguruprofiler' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-codeguruprofiler

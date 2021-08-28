@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleCloudTranslateGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-cloud-translate
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-cloud-translate' is hosted on GitHub"
-            link: "https://github.com/googleapis/python-translate"
-            package_name: google-cloud-translate
+  - name: GoogleCloudTranslateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-translate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-translate' is hosted on GitHub
+        link: https://github.com/googleapis/python-translate
+        package_name: google-cloud-translate

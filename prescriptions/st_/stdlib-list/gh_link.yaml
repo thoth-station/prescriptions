@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StdlibListGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: stdlib-list
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'stdlib-list' is hosted on GitHub"
-            link: "https://github.com/jackmaney/python-stdlib-list"
-            package_name: stdlib-list
+  - name: StdlibListGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlib-list
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stdlib-list' is hosted on GitHub
+        link: https://github.com/jackmaney/python-stdlib-list
+        package_name: stdlib-list

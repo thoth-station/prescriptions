@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ZstandardGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: zstandard
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'zstandard' is hosted on GitHub"
-            link: "https://github.com/indygreg/python-zstandard"
-            package_name: zstandard
+  - name: ZstandardGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zstandard
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zstandard' is hosted on GitHub
+        link: https://github.com/indygreg/python-zstandard
+        package_name: zstandard

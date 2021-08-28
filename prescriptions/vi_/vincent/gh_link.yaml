@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VincentGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: vincent
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'vincent' is hosted on GitHub"
-            link: "https://github.com/wrobstory/vincent"
-            package_name: vincent
+  - name: VincentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vincent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vincent' is hosted on GitHub
+        link: https://github.com/wrobstory/vincent
+        package_name: vincent

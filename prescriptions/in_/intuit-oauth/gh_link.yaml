@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IntuitOauthGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: intuit-oauth
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'intuit-oauth' is hosted on GitHub"
-            link: "https://github.com/intuit/oauth-pythonclient"
-            package_name: intuit-oauth
+  - name: IntuitOauthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intuit-oauth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'intuit-oauth' is hosted on GitHub
+        link: https://github.com/intuit/oauth-pythonclient
+        package_name: intuit-oauth

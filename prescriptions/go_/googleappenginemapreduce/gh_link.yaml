@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleappenginemapreduceGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: googleappenginemapreduce
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'googleappenginemapreduce' is hosted on GitHub"
-            link: "https://github.com/GoogleCloudPlatform/appengine-mapreduce"
-            package_name: googleappenginemapreduce
+  - name: GoogleappenginemapreduceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleappenginemapreduce
+    run:
+      justification:
+      - type: INFO
+        message: Package 'googleappenginemapreduce' is hosted on GitHub
+        link: https://github.com/GoogleCloudPlatform/appengine-mapreduce
+        package_name: googleappenginemapreduce

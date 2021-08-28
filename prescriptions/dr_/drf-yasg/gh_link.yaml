@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DrfYasgGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: drf-yasg
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'drf-yasg' is hosted on GitHub"
-            link: "https://github.com/axnsan12/drf-yasg"
-            package_name: drf-yasg
+  - name: DrfYasgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drf-yasg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'drf-yasg' is hosted on GitHub
+        link: https://github.com/axnsan12/drf-yasg
+        package_name: drf-yasg

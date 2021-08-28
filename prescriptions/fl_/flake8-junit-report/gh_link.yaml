@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Flake8JunitReportGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flake8-junit-report
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flake8-junit-report' is hosted on GitHub"
-            link: "https://github.com/initios/flake8-junit-report"
-            package_name: flake8-junit-report
+  - name: Flake8JunitReportGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-junit-report
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-junit-report' is hosted on GitHub
+        link: https://github.com/initios/flake8-junit-report
+        package_name: flake8-junit-report

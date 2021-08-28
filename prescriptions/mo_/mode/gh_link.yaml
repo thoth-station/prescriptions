@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ModeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mode
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mode' is hosted on GitHub"
-            link: "https://github.com/ask/mode"
-            package_name: mode
+  - name: ModeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mode
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mode' is hosted on GitHub
+        link: https://github.com/ask/mode
+        package_name: mode

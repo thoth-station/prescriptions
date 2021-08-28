@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Iso8601GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: iso8601
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'iso8601' is hosted on GitHub"
-            link: "https://github.com/micktwomey/pyiso8601"
-            package_name: iso8601
+  - name: Iso8601GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iso8601
+    run:
+      justification:
+      - type: INFO
+        message: Package 'iso8601' is hosted on GitHub
+        link: https://github.com/micktwomey/pyiso8601
+        package_name: iso8601

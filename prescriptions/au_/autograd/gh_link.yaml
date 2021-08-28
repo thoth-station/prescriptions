@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AutogradGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: autograd
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'autograd' is hosted on GitHub"
-            link: "https://github.com/HIPS/autograd"
-            package_name: autograd
+  - name: AutogradGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autograd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autograd' is hosted on GitHub
+        link: https://github.com/HIPS/autograd
+        package_name: autograd

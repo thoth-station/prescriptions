@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FlaskBcryptGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flask-bcrypt
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flask-bcrypt' is hosted on GitHub"
-            link: "https://github.com/maxcountryman/flask-bcrypt"
-            package_name: flask-bcrypt
+  - name: FlaskBcryptGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-bcrypt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-bcrypt' is hosted on GitHub
+        link: https://github.com/maxcountryman/flask-bcrypt
+        package_name: flask-bcrypt

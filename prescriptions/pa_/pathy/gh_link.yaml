@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PathyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pathy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pathy' is hosted on GitHub"
-            link: "https://github.com/justindujardin/pathy"
-            package_name: pathy
+  - name: PathyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pathy' is hosted on GitHub
+        link: https://github.com/justindujardin/pathy
+        package_name: pathy

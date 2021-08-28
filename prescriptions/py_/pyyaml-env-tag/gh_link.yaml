@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyyamlEnvTagGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyyaml-env-tag
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyyaml-env-tag' is hosted on GitHub"
-            link: "https://github.com/waylan/pyyaml-env-tag"
-            package_name: pyyaml-env-tag
+  - name: PyyamlEnvTagGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml-env-tag
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyyaml-env-tag' is hosted on GitHub
+        link: https://github.com/waylan/pyyaml-env-tag
+        package_name: pyyaml-env-tag

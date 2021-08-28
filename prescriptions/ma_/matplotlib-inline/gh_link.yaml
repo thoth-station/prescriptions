@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MatplotlibInlineGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: matplotlib-inline
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'matplotlib-inline' is hosted on GitHub"
-            link: "https://github.com/martinRenou/matplotlib-inline"
-            package_name: matplotlib-inline
+  - name: MatplotlibInlineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matplotlib-inline
+    run:
+      justification:
+      - type: INFO
+        message: Package 'matplotlib-inline' is hosted on GitHub
+        link: https://github.com/martinRenou/matplotlib-inline
+        package_name: matplotlib-inline

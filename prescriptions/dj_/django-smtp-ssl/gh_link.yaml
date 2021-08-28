@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoSmtpSslGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-smtp-ssl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-smtp-ssl' is hosted on GitHub"
-            link: "https://github.com/bancek/django-smtp-ssl"
-            package_name: django-smtp-ssl
+  - name: DjangoSmtpSslGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-smtp-ssl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-smtp-ssl' is hosted on GitHub
+        link: https://github.com/bancek/django-smtp-ssl
+        package_name: django-smtp-ssl

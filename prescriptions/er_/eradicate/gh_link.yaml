@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EradicateGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: eradicate
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'eradicate' is hosted on GitHub"
-            link: "https://github.com/myint/eradicate"
-            package_name: eradicate
+  - name: EradicateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eradicate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'eradicate' is hosted on GitHub
+        link: https://github.com/myint/eradicate
+        package_name: eradicate

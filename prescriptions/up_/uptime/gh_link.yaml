@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UptimeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: uptime
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'uptime' is hosted on GitHub"
-            link: "https://github.com/Cairnarvon/uptime"
-            package_name: uptime
+  - name: UptimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uptime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'uptime' is hosted on GitHub
+        link: https://github.com/Cairnarvon/uptime
+        package_name: uptime

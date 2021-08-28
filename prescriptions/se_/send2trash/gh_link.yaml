@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Send2trashGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: send2trash
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'send2trash' is hosted on GitHub"
-            link: "https://github.com/arsenetar/send2trash"
-            package_name: send2trash
+  - name: Send2trashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: send2trash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'send2trash' is hosted on GitHub
+        link: https://github.com/arsenetar/send2trash
+        package_name: send2trash

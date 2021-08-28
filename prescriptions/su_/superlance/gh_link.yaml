@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SuperlanceGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: superlance
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'superlance' is hosted on GitHub"
-            link: "https://github.com/Supervisor/superlance"
-            package_name: superlance
+  - name: SuperlanceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: superlance
+    run:
+      justification:
+      - type: INFO
+        message: Package 'superlance' is hosted on GitHub
+        link: https://github.com/Supervisor/superlance
+        package_name: superlance

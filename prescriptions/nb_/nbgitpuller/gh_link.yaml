@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NbgitpullerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nbgitpuller
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nbgitpuller' is hosted on GitHub"
-            link: "https://github.com/jupyterhub/nbgitpuller"
-            package_name: nbgitpuller
+  - name: NbgitpullerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbgitpuller
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nbgitpuller' is hosted on GitHub
+        link: https://github.com/jupyterhub/nbgitpuller
+        package_name: nbgitpuller

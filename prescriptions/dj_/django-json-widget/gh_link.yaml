@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoJsonWidgetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-json-widget
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-json-widget' is hosted on GitHub"
-            link: "https://github.com/jmrivas86/django-json-widget"
-            package_name: django-json-widget
+  - name: DjangoJsonWidgetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-json-widget
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-json-widget' is hosted on GitHub
+        link: https://github.com/jmrivas86/django-json-widget
+        package_name: django-json-widget

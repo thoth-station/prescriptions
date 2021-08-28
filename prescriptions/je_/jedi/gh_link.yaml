@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JediGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jedi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jedi' is hosted on GitHub"
-            link: "https://github.com/davidhalter/jedi"
-            package_name: jedi
+  - name: JediGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jedi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jedi' is hosted on GitHub
+        link: https://github.com/davidhalter/jedi
+        package_name: jedi

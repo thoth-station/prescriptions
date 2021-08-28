@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NoxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nox
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nox' is hosted on GitHub"
-            link: "https://github.com/theacodes/nox"
-            package_name: nox
+  - name: NoxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nox
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nox' is hosted on GitHub
+        link: https://github.com/theacodes/nox
+        package_name: nox

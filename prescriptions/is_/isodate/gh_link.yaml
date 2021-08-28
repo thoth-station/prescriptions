@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IsodateGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: isodate
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'isodate' is hosted on GitHub"
-            link: "https://github.com/gweis/isodate"
-            package_name: isodate
+  - name: IsodateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isodate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'isodate' is hosted on GitHub
+        link: https://github.com/gweis/isodate
+        package_name: isodate

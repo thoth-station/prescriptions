@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CertvalidatorGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: certvalidator
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'certvalidator' is hosted on GitHub"
-            link: "https://github.com/wbond/certvalidator"
-            package_name: certvalidator
+  - name: CertvalidatorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certvalidator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'certvalidator' is hosted on GitHub
+        link: https://github.com/wbond/certvalidator
+        package_name: certvalidator

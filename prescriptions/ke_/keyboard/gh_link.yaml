@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KeyboardGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: keyboard
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'keyboard' is hosted on GitHub"
-            link: "https://github.com/boppreh/keyboard"
-            package_name: keyboard
+  - name: KeyboardGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyboard
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keyboard' is hosted on GitHub
+        link: https://github.com/boppreh/keyboard
+        package_name: keyboard

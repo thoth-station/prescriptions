@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PlaywrightGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: playwright
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'playwright' is hosted on GitHub"
-            link: "https://github.com/Microsoft/playwright-python"
-            package_name: playwright
+  - name: PlaywrightGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: playwright
+    run:
+      justification:
+      - type: INFO
+        message: Package 'playwright' is hosted on GitHub
+        link: https://github.com/Microsoft/playwright-python
+        package_name: playwright

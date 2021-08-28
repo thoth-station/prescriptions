@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: NetworkxFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: networkx
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'networkx' is packaged as an RPM in Fedora 34 as 'python-networkx'"
-            link: https://src.fedoraproject.org/rpms/python-networkx
-            package_name: networkx
+  - name: NetworkxFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: networkx
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'networkx' is packaged as an RPM in Fedora 34 as 'python-networkx'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: networkx

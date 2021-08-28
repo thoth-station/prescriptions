@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CxFreezeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cx-freeze
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cx-freeze' is hosted on GitHub"
-            link: "https://github.com/marcelotduarte/cx_Freeze"
-            package_name: cx-freeze
+  - name: CxFreezeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cx-freeze
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cx-freeze' is hosted on GitHub
+        link: https://github.com/marcelotduarte/cx_Freeze
+        package_name: cx-freeze

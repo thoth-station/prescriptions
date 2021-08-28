@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ToxTravisGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tox-travis
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tox-travis' is hosted on GitHub"
-            link: "https://github.com/tox-dev/tox-travis"
-            package_name: tox-travis
+  - name: ToxTravisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-travis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tox-travis' is hosted on GitHub
+        link: https://github.com/tox-dev/tox-travis
+        package_name: tox-travis

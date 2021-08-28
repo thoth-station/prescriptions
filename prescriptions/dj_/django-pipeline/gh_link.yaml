@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoPipelineGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-pipeline
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-pipeline' is hosted on GitHub"
-            link: "https://github.com/jazzband/django-pipeline"
-            package_name: django-pipeline
+  - name: DjangoPipelineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pipeline
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-pipeline' is hosted on GitHub
+        link: https://github.com/jazzband/django-pipeline
+        package_name: django-pipeline

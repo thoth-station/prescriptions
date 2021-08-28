@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytdGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytd
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytd' is hosted on GitHub"
-            link: "https://github.com/treasure-data/pytd"
-            package_name: pytd
+  - name: PytdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytd' is hosted on GitHub
+        link: https://github.com/treasure-data/pytd
+        package_name: pytd

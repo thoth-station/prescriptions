@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AtariPyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: atari-py
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'atari-py' is hosted on GitHub"
-            link: "https://github.com/openai/atari-py"
-            package_name: atari-py
+  - name: AtariPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atari-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'atari-py' is hosted on GitHub
+        link: https://github.com/openai/atari-py
+        package_name: atari-py

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ProtoGoogleCloudErrorReportingV1beta1GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: proto-google-cloud-error-reporting-v1beta1
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'proto-google-cloud-error-reporting-v1beta1' is hosted on GitHub"
-            link: "https://github.com/googleapis/googleapis"
-            package_name: proto-google-cloud-error-reporting-v1beta1
+  - name: ProtoGoogleCloudErrorReportingV1beta1GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: proto-google-cloud-error-reporting-v1beta1
+    run:
+      justification:
+      - type: INFO
+        message: Package 'proto-google-cloud-error-reporting-v1beta1' is hosted on GitHub
+        link: https://github.com/googleapis/googleapis
+        package_name: proto-google-cloud-error-reporting-v1beta1

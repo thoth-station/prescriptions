@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EmailsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: emails
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'emails' is hosted on GitHub"
-            link: "https://github.com/lavr/python-emails"
-            package_name: emails
+  - name: EmailsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: emails
+    run:
+      justification:
+      - type: INFO
+        message: Package 'emails' is hosted on GitHub
+        link: https://github.com/lavr/python-emails
+        package_name: emails

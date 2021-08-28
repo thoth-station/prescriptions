@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HttmockGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: httmock
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'httmock' is hosted on GitHub"
-            link: "https://github.com/patrys/httmock"
-            package_name: httmock
+  - name: HttmockGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httmock
+    run:
+      justification:
+      - type: INFO
+        message: Package 'httmock' is hosted on GitHub
+        link: https://github.com/patrys/httmock
+        package_name: httmock

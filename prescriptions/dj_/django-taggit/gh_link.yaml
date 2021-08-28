@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoTaggitGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-taggit
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-taggit' is hosted on GitHub"
-            link: "https://github.com/jazzband/django-taggit"
-            package_name: django-taggit
+  - name: DjangoTaggitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-taggit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-taggit' is hosted on GitHub
+        link: https://github.com/jazzband/django-taggit
+        package_name: django-taggit

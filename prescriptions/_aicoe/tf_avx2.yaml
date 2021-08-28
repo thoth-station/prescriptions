@@ -1,36 +1,38 @@
 units:
   steps:
-    - name: TensorFlowRHEL77AVX2Step
-      type: step
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-        runtime_environments:
-          hardware:
-            - cpu_families: [6]
-              # See:
-              #   https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2
-              #   https://en.wikichip.org/wiki/intel/cpuid
-              # 0x5 Cascade Lake
-              # 0x6 Broadwell, Cannon Lake
-              # 0xA Ice Lake
-              # 0xC Ice Lake, Tiger Lake
-              # 0xD Ice Lake
-              # 0xE Skylake, Kaby Lake, Coffee Lake, Ice Lake, Comet Lake, Whiskey Lake
-              # 0xF Haswell
-              cpu_models: [5, 6, 10, 12, 13, 14, 15, 16]
-      match:
-        package_version:
-          name: tensorflow
-          index_url: "https://tensorflow.pypi.thoth-station.ninja/index/rhel7.7/AVX2/simple"
-      run:
-        multi_package_resolution: false
-        justification:
-          - type: INFO
-            message: "AICoE TensorFlow builds are optimized for AVX2 instruction sets supported in the CPU identified"
-            link: aicoe_tf_avx2
-            package_name: tensorflow
-        score: 0.2
+  - name: TensorFlowRHEL77AVX2Step
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+      runtime_environments:
+        hardware:
+        - cpu_families: [6]
+          # See:
+          #   https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2
+          #   https://en.wikichip.org/wiki/intel/cpuid
+          # 0x5 Cascade Lake
+          # 0x6 Broadwell, Cannon Lake
+          # 0xA Ice Lake
+          # 0xC Ice Lake, Tiger Lake
+          # 0xD Ice Lake
+          # 0xE Skylake, Kaby Lake, Coffee Lake, Ice Lake, Comet Lake, Whiskey Lake
+          # 0xF Haswell
+          cpu_models: [5, 6, 10, 12, 13, 14, 15, 16]
+    match:
+      package_version:
+        name: tensorflow
+        index_url: https://tensorflow.pypi.thoth-station.ninja/index/rhel7.7/AVX2/simple
+    run:
+      multi_package_resolution: false
+      justification:
+      - type: INFO
+        message: >-
+          AICoE TensorFlow builds are optimized for AVX2 instruction sets
+          supported in the CPU identified
+        link: aicoe_tf_avx2
+        package_name: tensorflow
+      score: 0.2

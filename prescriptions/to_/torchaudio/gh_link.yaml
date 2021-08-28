@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TorchaudioGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: torchaudio
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'torchaudio' is hosted on GitHub"
-            link: "https://github.com/pytorch/audio"
-            package_name: torchaudio
+  - name: TorchaudioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchaudio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torchaudio' is hosted on GitHub
+        link: https://github.com/pytorch/audio
+        package_name: torchaudio

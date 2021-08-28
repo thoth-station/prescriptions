@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ItsdangerousGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: itsdangerous
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'itsdangerous' is hosted on GitHub"
-            link: "https://github.com/pallets/itsdangerous"
-            package_name: itsdangerous
+  - name: ItsdangerousGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itsdangerous
+    run:
+      justification:
+      - type: INFO
+        message: Package 'itsdangerous' is hosted on GitHub
+        link: https://github.com/pallets/itsdangerous
+        package_name: itsdangerous

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PyutilFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyutil
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyutil' is packaged as an RPM in Fedora 34 as 'pyutil'"
-            link: https://src.fedoraproject.org/rpms/pyutil
-            package_name: pyutil
+  - name: PyutilFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyutil
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyutil' is packaged as an RPM in Fedora 34 as 'pyutil'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyutil

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RobotframeworkSeleniumlibraryGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: robotframework-seleniumlibrary
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'robotframework-seleniumlibrary' is hosted on GitHub"
-            link: "https://github.com/robotframework/SeleniumLibrary"
-            package_name: robotframework-seleniumlibrary
+  - name: RobotframeworkSeleniumlibraryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-seleniumlibrary
+    run:
+      justification:
+      - type: INFO
+        message: Package 'robotframework-seleniumlibrary' is hosted on GitHub
+        link: https://github.com/robotframework/SeleniumLibrary
+        package_name: robotframework-seleniumlibrary

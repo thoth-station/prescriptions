@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TfrecordLiteGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tfrecord-lite
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tfrecord-lite' is hosted on GitHub"
-            link: "https://github.com/jongwook/tfrecord_lite"
-            package_name: tfrecord-lite
+  - name: TfrecordLiteGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfrecord-lite
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tfrecord-lite' is hosted on GitHub
+        link: https://github.com/jongwook/tfrecord_lite
+        package_name: tfrecord-lite

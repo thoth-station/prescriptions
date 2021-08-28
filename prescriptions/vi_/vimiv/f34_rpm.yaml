@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: VimivFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: vimiv
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'vimiv' is packaged as an RPM in Fedora 34 as 'vimiv-qt'"
-            link: https://src.fedoraproject.org/rpms/vimiv-qt
-            package_name: vimiv
+  - name: VimivFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: vimiv
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vimiv' is packaged as an RPM in Fedora 34 as 'vimiv-qt'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: vimiv

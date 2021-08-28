@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PandasDatareaderGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pandas-datareader
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pandas-datareader' is hosted on GitHub"
-            link: "https://github.com/pydata/pandas-datareader"
-            package_name: pandas-datareader
+  - name: PandasDatareaderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandas-datareader
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pandas-datareader' is hosted on GitHub
+        link: https://github.com/pydata/pandas-datareader
+        package_name: pandas-datareader

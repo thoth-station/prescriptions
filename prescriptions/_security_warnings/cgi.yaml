@@ -1,14 +1,14 @@
 units:
   wraps:
-    - name: CGISecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        library_usage:
-          cgi:
-            - cgi.*
-      run:
-        stack_info:
-          - type: WARNING
-            message: "See CGI security considerations"
-            link: "https://docs.python.org/3.11/library/cgi.html#cgi-security"
+  - name: CGISecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        cgi:
+        - cgi.*
+    run:
+      stack_info:
+      - type: WARNING
+        message: See CGI security considerations
+        link: https://docs.python.org/3.11/library/cgi.html#cgi-security

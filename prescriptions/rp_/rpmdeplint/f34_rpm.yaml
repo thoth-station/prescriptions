@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: RpmdeplintFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: rpmdeplint
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rpmdeplint' is packaged as an RPM in Fedora 34 as 'rpmdeplint'"
-            link: https://src.fedoraproject.org/rpms/rpmdeplint
-            package_name: rpmdeplint
+  - name: RpmdeplintFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpmdeplint
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rpmdeplint' is packaged as an RPM in Fedora 34 as 'rpmdeplint'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: rpmdeplint

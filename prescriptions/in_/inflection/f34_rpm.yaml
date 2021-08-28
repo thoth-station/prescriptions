@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: InflectionFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: inflection
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'inflection' is packaged as an RPM in Fedora 34 as 'python-inflection'"
-            link: https://src.fedoraproject.org/rpms/python-inflection
-            package_name: inflection
+  - name: InflectionFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: inflection
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'inflection' is packaged as an RPM in Fedora 34 as 'python-inflection'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: inflection

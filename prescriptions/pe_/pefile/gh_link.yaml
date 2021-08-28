@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PefileGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pefile
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pefile' is hosted on GitHub"
-            link: "https://github.com/erocarrera/pefile"
-            package_name: pefile
+  - name: PefileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pefile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pefile' is hosted on GitHub
+        link: https://github.com/erocarrera/pefile
+        package_name: pefile

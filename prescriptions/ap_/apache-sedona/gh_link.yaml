@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ApacheSedonaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: apache-sedona
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'apache-sedona' is hosted on GitHub"
-            link: "https://github.com/apache/incubator-sedona"
-            package_name: apache-sedona
+  - name: ApacheSedonaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-sedona
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apache-sedona' is hosted on GitHub
+        link: https://github.com/apache/incubator-sedona
+        package_name: apache-sedona

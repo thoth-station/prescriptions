@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StepfunctionsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: stepfunctions
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'stepfunctions' is hosted on GitHub"
-            link: "https://github.com/aws/aws-step-functions-data-science-sdk-python"
-            package_name: stepfunctions
+  - name: StepfunctionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stepfunctions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stepfunctions' is hosted on GitHub
+        link: https://github.com/aws/aws-step-functions-data-science-sdk-python
+        package_name: stepfunctions

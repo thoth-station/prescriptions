@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SeabornGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: seaborn
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'seaborn' is hosted on GitHub"
-            link: "https://github.com/mwaskom/seaborn"
-            package_name: seaborn
+  - name: SeabornGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: seaborn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'seaborn' is hosted on GitHub
+        link: https://github.com/mwaskom/seaborn
+        package_name: seaborn

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyshpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyshp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyshp' is hosted on GitHub"
-            link: "https://github.com/GeospatialPython/pyshp"
-            package_name: pyshp
+  - name: PyshpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyshp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyshp' is hosted on GitHub
+        link: https://github.com/GeospatialPython/pyshp
+        package_name: pyshp

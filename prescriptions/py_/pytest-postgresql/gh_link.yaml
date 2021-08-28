@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestPostgresqlGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-postgresql
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-postgresql' is hosted on GitHub"
-            link: "https://github.com/ClearcodeHQ/pytest-postgresql"
-            package_name: pytest-postgresql
+  - name: PytestPostgresqlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-postgresql
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-postgresql' is hosted on GitHub
+        link: https://github.com/ClearcodeHQ/pytest-postgresql
+        package_name: pytest-postgresql

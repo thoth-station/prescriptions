@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GithubgqlGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: githubgql
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'githubgql' is hosted on GitHub"
-            link: "https://github.com/actions-automation/githubgql"
-            package_name: githubgql
+  - name: GithubgqlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: githubgql
+    run:
+      justification:
+      - type: INFO
+        message: Package 'githubgql' is hosted on GitHub
+        link: https://github.com/actions-automation/githubgql
+        package_name: githubgql

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LarkParserGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: lark-parser
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lark-parser' is hosted on GitHub"
-            link: "https://github.com/lark-parser/lark"
-            package_name: lark-parser
+  - name: LarkParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lark-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lark-parser' is hosted on GitHub
+        link: https://github.com/lark-parser/lark
+        package_name: lark-parser

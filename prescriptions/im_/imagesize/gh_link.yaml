@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ImagesizeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: imagesize
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'imagesize' is hosted on GitHub"
-            link: "https://github.com/shibukawa/imagesize_py"
-            package_name: imagesize
+  - name: ImagesizeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagesize
+    run:
+      justification:
+      - type: INFO
+        message: Package 'imagesize' is hosted on GitHub
+        link: https://github.com/shibukawa/imagesize_py
+        package_name: imagesize

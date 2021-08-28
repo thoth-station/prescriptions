@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LdapdomaindumpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ldapdomaindump
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ldapdomaindump' is hosted on GitHub"
-            link: "https://github.com/dirkjanm/ldapdomaindump"
-            package_name: ldapdomaindump
+  - name: LdapdomaindumpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ldapdomaindump
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ldapdomaindump' is hosted on GitHub
+        link: https://github.com/dirkjanm/ldapdomaindump
+        package_name: ldapdomaindump

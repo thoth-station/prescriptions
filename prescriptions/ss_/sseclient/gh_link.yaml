@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SseclientGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sseclient
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sseclient' is hosted on GitHub"
-            link: "https://github.com/btubbs/sseclient"
-            package_name: sseclient
+  - name: SseclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sseclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sseclient' is hosted on GitHub
+        link: https://github.com/btubbs/sseclient
+        package_name: sseclient

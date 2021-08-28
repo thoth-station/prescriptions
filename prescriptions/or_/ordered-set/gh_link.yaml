@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OrderedSetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ordered-set
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ordered-set' is hosted on GitHub"
-            link: "https://github.com/LuminosoInsight/ordered-set"
-            package_name: ordered-set
+  - name: OrderedSetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ordered-set
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ordered-set' is hosted on GitHub
+        link: https://github.com/LuminosoInsight/ordered-set
+        package_name: ordered-set

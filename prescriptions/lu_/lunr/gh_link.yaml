@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LunrGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: lunr
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lunr' is hosted on GitHub"
-            link: "https://github.com/yeraydiazdiaz/lunr.py"
-            package_name: lunr
+  - name: LunrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lunr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lunr' is hosted on GitHub
+        link: https://github.com/yeraydiazdiaz/lunr.py
+        package_name: lunr

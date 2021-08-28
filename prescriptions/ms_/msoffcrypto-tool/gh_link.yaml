@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MsoffcryptoToolGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: msoffcrypto-tool
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'msoffcrypto-tool' is hosted on GitHub"
-            link: "https://github.com/nolze/msoffcrypto-tool"
-            package_name: msoffcrypto-tool
+  - name: MsoffcryptoToolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msoffcrypto-tool
+    run:
+      justification:
+      - type: INFO
+        message: Package 'msoffcrypto-tool' is hosted on GitHub
+        link: https://github.com/nolze/msoffcrypto-tool
+        package_name: msoffcrypto-tool

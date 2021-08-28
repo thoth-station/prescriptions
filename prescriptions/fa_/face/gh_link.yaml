@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FaceGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: face
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'face' is hosted on GitHub"
-            link: "https://github.com/mahmoud/face"
-            package_name: face
+  - name: FaceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: face
+    run:
+      justification:
+      - type: INFO
+        message: Package 'face' is hosted on GitHub
+        link: https://github.com/mahmoud/face
+        package_name: face

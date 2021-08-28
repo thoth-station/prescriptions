@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyamlGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyaml
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyaml' is hosted on GitHub"
-            link: "https://github.com/mk-fg/pretty-yaml"
-            package_name: pyaml
+  - name: PyamlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaml
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyaml' is hosted on GitHub
+        link: https://github.com/mk-fg/pretty-yaml
+        package_name: pyaml

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: CerberusFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: cerberus
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cerberus' is packaged as an RPM in Fedora 34 as 'python-cerberus'"
-            link: https://src.fedoraproject.org/rpms/python-cerberus
-            package_name: cerberus
+  - name: CerberusFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: cerberus
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cerberus' is packaged as an RPM in Fedora 34 as 'python-cerberus'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: cerberus

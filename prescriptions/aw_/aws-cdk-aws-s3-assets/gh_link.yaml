@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsCdkAwsS3AssetsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws-cdk-aws-s3-assets
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws-cdk-aws-s3-assets' is hosted on GitHub"
-            link: "https://github.com/aws/aws-cdk"
-            package_name: aws-cdk-aws-s3-assets
+  - name: AwsCdkAwsS3AssetsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-s3-assets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-s3-assets' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-s3-assets

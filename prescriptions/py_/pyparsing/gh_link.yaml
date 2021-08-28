@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyparsingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyparsing
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyparsing' is hosted on GitHub"
-            link: "https://github.com/pyparsing/pyparsing"
-            package_name: pyparsing
+  - name: PyparsingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyparsing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyparsing' is hosted on GitHub
+        link: https://github.com/pyparsing/pyparsing
+        package_name: pyparsing

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: ZdaemonFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: zdaemon
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'zdaemon' is packaged as an RPM in Fedora 34 as 'python-zdaemon'"
-            link: https://src.fedoraproject.org/rpms/python-zdaemon
-            package_name: zdaemon
+  - name: ZdaemonFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: zdaemon
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zdaemon' is packaged as an RPM in Fedora 34 as 'python-zdaemon'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: zdaemon

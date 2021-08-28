@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PandasAccessGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pandas-access
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pandas-access' is hosted on GitHub"
-            link: "https://github.com/jbn/pandas_access"
-            package_name: pandas-access
+  - name: PandasAccessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandas-access
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pandas-access' is hosted on GitHub
+        link: https://github.com/jbn/pandas_access
+        package_name: pandas-access

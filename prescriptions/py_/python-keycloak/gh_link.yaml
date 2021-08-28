@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonKeycloakGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-keycloak
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-keycloak' is hosted on GitHub"
-            link: "https://github.com/marcospereirampj/python-keycloak"
-            package_name: python-keycloak
+  - name: PythonKeycloakGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-keycloak
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-keycloak' is hosted on GitHub
+        link: https://github.com/marcospereirampj/python-keycloak
+        package_name: python-keycloak

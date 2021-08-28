@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TwythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: twython
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'twython' is hosted on GitHub"
-            link: "https://github.com/ryanmcgrath/twython"
-            package_name: twython
+  - name: TwythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twython
+    run:
+      justification:
+      - type: INFO
+        message: Package 'twython' is hosted on GitHub
+        link: https://github.com/ryanmcgrath/twython
+        package_name: twython

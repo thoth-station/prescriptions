@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CloudflareGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cloudflare
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cloudflare' is hosted on GitHub"
-            link: "https://github.com/cloudflare/python-cloudflare"
-            package_name: cloudflare
+  - name: CloudflareGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cloudflare
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cloudflare' is hosted on GitHub
+        link: https://github.com/cloudflare/python-cloudflare
+        package_name: cloudflare

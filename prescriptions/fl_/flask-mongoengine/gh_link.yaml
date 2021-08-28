@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FlaskMongoengineGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flask-mongoengine
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flask-mongoengine' is hosted on GitHub"
-            link: "https://github.com/mongoengine/flask-mongoengine"
-            package_name: flask-mongoengine
+  - name: FlaskMongoengineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-mongoengine
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-mongoengine' is hosted on GitHub
+        link: https://github.com/mongoengine/flask-mongoengine
+        package_name: flask-mongoengine

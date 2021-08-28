@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GcloudAioAuthGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: gcloud-aio-auth
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gcloud-aio-auth' is hosted on GitHub"
-            link: "https://github.com/talkiq/gcloud-aio"
-            package_name: gcloud-aio-auth
+  - name: GcloudAioAuthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcloud-aio-auth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gcloud-aio-auth' is hosted on GitHub
+        link: https://github.com/talkiq/gcloud-aio
+        package_name: gcloud-aio-auth

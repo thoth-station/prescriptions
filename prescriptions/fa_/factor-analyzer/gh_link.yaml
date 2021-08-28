@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FactorAnalyzerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: factor-analyzer
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'factor-analyzer' is hosted on GitHub"
-            link: "https://github.com/EducationalTestingService/factor_analyzer"
-            package_name: factor-analyzer
+  - name: FactorAnalyzerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: factor-analyzer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'factor-analyzer' is hosted on GitHub
+        link: https://github.com/EducationalTestingService/factor_analyzer
+        package_name: factor-analyzer

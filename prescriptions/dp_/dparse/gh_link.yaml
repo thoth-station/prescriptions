@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DparseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dparse
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dparse' is hosted on GitHub"
-            link: "https://github.com/pyupio/dparse"
-            package_name: dparse
+  - name: DparseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dparse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dparse' is hosted on GitHub
+        link: https://github.com/pyupio/dparse
+        package_name: dparse

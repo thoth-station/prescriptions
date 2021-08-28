@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PipShimsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pip-shims
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pip-shims' is hosted on GitHub"
-            link: "https://github.com/sarugaku/pip-shims"
-            package_name: pip-shims
+  - name: PipShimsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-shims
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pip-shims' is hosted on GitHub
+        link: https://github.com/sarugaku/pip-shims
+        package_name: pip-shims

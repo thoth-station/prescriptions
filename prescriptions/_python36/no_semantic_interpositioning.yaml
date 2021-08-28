@@ -1,23 +1,25 @@
 units:
   wraps:
-      - name: NoSemanticInterpositionWrap
-        type: wrap
-        should_include:
-          adviser_pipeline: true
-          runtime_environments:
-            python_version: "==3.6"
-            operating_systems:
-              - name: rhel
-                version: "8.2"
-              - name: ubi
-                version: "8.2"
-            hardware:
-              - cpu_families: [13]
-                cpu_models: [6]
-              - cpu_families: [10]
-                cpu_models: [6]
-        run:
-          justification:
-            - type: INFO
-              message: "Consider using UBI or RHEL 8.2 with Python 3.8 that has optimized Python interpreter with performance gain up to 30%"
-              link: no_semantic_interposition
+  - name: NoSemanticInterpositionWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        python_version: ==3.6
+        operating_systems:
+        - name: rhel
+          version: "8.2"
+        - name: ubi
+          version: "8.2"
+        hardware:
+        - cpu_families: [13]
+          cpu_models: [6]
+        - cpu_families: [10]
+          cpu_models: [6]
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using UBI or RHEL 8.2 with Python 3.8 that has optimized
+          Python interpreter with performance gain up to 30%
+        link: no_semantic_interposition

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HijriConverterGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: hijri-converter
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'hijri-converter' is hosted on GitHub"
-            link: "https://github.com/dralshehri/hijri-converter"
-            package_name: hijri-converter
+  - name: HijriConverterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hijri-converter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hijri-converter' is hosted on GitHub
+        link: https://github.com/dralshehri/hijri-converter
+        package_name: hijri-converter

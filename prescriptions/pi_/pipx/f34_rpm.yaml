@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PipxFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pipx
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pipx' is packaged as an RPM in Fedora 34 as 'pipx'"
-            link: https://src.fedoraproject.org/rpms/pipx
-            package_name: pipx
+  - name: PipxFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipx
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pipx' is packaged as an RPM in Fedora 34 as 'pipx'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pipx

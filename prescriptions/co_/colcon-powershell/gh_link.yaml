@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ColconPowershellGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: colcon-powershell
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'colcon-powershell' is hosted on GitHub"
-            link: "https://github.com/colcon/colcon-powershell"
-            package_name: colcon-powershell
+  - name: ColconPowershellGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-powershell
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-powershell' is hosted on GitHub
+        link: https://github.com/colcon/colcon-powershell
+        package_name: colcon-powershell

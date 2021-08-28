@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: InvenioAdminGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: invenio-admin
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'invenio-admin' is hosted on GitHub"
-            link: "https://github.com/inveniosoftware/invenio-admin"
-            package_name: invenio-admin
+  - name: InvenioAdminGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-admin
+    run:
+      justification:
+      - type: INFO
+        message: Package 'invenio-admin' is hosted on GitHub
+        link: https://github.com/inveniosoftware/invenio-admin
+        package_name: invenio-admin

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyscaffoldGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyscaffold
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyscaffold' is hosted on GitHub"
-            link: "https://github.com/pyscaffold/pyscaffold"
-            package_name: pyscaffold
+  - name: PyscaffoldGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyscaffold
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyscaffold' is hosted on GitHub
+        link: https://github.com/pyscaffold/pyscaffold
+        package_name: pyscaffold

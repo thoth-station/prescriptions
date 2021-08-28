@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ScrampGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: scramp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'scramp' is hosted on GitHub"
-            link: "https://github.com/tlocke/scramp"
-            package_name: scramp
+  - name: ScrampGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scramp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scramp' is hosted on GitHub
+        link: https://github.com/tlocke/scramp
+        package_name: scramp

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: InflectGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: inflect
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'inflect' is hosted on GitHub"
-            link: "https://github.com/jaraco/inflect"
-            package_name: inflect
+  - name: InflectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inflect
+    run:
+      justification:
+      - type: INFO
+        message: Package 'inflect' is hosted on GitHub
+        link: https://github.com/jaraco/inflect
+        package_name: inflect

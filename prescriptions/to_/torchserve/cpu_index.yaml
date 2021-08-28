@@ -1,21 +1,21 @@
 units:
   sieves:
-    - name: TorchserveCPUIndex
-      type: sieve
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          cuda_version: null
-      match:
-        - package_version:
-            name: torchserve
-            index_url:
-              not: https://download.pytorch.org/whl/cpu
-      run:
-        log:
-          message: "Using torchserve releases from Torch CPU Python Package index"
-          type: INFO
-        stack_info:
-          - type: INFO
-            message: "Using torchserve releases from Torch CPU Python Package index"
-            link: https://github.com/pytorch/pytorch/issues/25639
+  - name: TorchserveCPUIndex
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: null
+    match:
+    - package_version:
+        name: torchserve
+        index_url:
+          not: https://download.pytorch.org/whl/cpu
+    run:
+      log:
+        message: Using torchserve releases from Torch CPU Python Package index
+        type: INFO
+      stack_info:
+      - type: INFO
+        message: Using torchserve releases from Torch CPU Python Package index
+        link: https://github.com/pytorch/pytorch/issues/25639

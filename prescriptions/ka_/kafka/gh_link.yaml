@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KafkaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: kafka
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kafka' is hosted on GitHub"
-            link: "https://github.com/dpkp/kafka-python"
-            package_name: kafka
+  - name: KafkaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kafka
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kafka' is hosted on GitHub
+        link: https://github.com/dpkp/kafka-python
+        package_name: kafka

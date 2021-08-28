@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoUrlFilterGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-url-filter
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-url-filter' is hosted on GitHub"
-            link: "https://github.com/miki725/django-url-filter"
-            package_name: django-url-filter
+  - name: DjangoUrlFilterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-url-filter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-url-filter' is hosted on GitHub
+        link: https://github.com/miki725/django-url-filter
+        package_name: django-url-filter

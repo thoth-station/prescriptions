@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PgdbGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pgdb
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pgdb' is hosted on GitHub"
-            link: "https://github.com/KehaoWu/pgdb"
-            package_name: pgdb
+  - name: PgdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgdb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pgdb' is hosted on GitHub
+        link: https://github.com/KehaoWu/pgdb
+        package_name: pgdb

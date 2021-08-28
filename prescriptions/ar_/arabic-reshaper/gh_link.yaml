@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ArabicReshaperGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: arabic-reshaper
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'arabic-reshaper' is hosted on GitHub"
-            link: "https://github.com/mpcabd/python-arabic-reshaper"
-            package_name: arabic-reshaper
+  - name: ArabicReshaperGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arabic-reshaper
+    run:
+      justification:
+      - type: INFO
+        message: Package 'arabic-reshaper' is hosted on GitHub
+        link: https://github.com/mpcabd/python-arabic-reshaper
+        package_name: arabic-reshaper

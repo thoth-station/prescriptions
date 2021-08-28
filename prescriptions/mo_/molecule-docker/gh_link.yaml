@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MoleculeDockerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: molecule-docker
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'molecule-docker' is hosted on GitHub"
-            link: "https://github.com/ansible-community/molecule"
-            package_name: molecule-docker
+  - name: MoleculeDockerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: molecule-docker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'molecule-docker' is hosted on GitHub
+        link: https://github.com/ansible-community/molecule
+        package_name: molecule-docker

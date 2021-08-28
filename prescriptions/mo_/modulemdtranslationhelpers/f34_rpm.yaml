@@ -1,21 +1,23 @@
 units:
   wraps:
-    - name: ModulemdtranslationhelpersFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: modulemdtranslationhelpers
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'modulemdtranslationhelpers' is packaged as an RPM in Fedora 34 as 'python-ModulemdTranslationHelpers'"
-            link: https://src.fedoraproject.org/rpms/python-ModulemdTranslationHelpers
-            package_name: modulemdtranslationhelpers
+  - name: ModulemdtranslationhelpersFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: modulemdtranslationhelpers
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'modulemdtranslationhelpers' is packaged as an
+          RPM in Fedora 34 as 'python-ModulemdTranslationHelpers'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: modulemdtranslationhelpers

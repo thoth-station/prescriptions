@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: SpecFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: spec
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'spec' is packaged as an RPM in Fedora 34 as 'python-spec'"
-            link: https://src.fedoraproject.org/rpms/python-spec
-            package_name: spec
+  - name: SpecFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: spec
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'spec' is packaged as an RPM in Fedora 34 as 'python-spec'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: spec

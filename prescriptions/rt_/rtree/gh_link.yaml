@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RtreeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: rtree
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rtree' is hosted on GitHub"
-            link: "https://github.com/Toblerity/rtree"
-            package_name: rtree
+  - name: RtreeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rtree
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rtree' is hosted on GitHub
+        link: https://github.com/Toblerity/rtree
+        package_name: rtree

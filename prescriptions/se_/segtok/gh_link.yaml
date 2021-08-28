@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SegtokGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: segtok
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'segtok' is hosted on GitHub"
-            link: "https://github.com/fnl/segtok"
-            package_name: segtok
+  - name: SegtokGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: segtok
+    run:
+      justification:
+      - type: INFO
+        message: Package 'segtok' is hosted on GitHub
+        link: https://github.com/fnl/segtok
+        package_name: segtok

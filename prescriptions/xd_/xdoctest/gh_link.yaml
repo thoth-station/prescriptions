@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: XdoctestGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: xdoctest
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'xdoctest' is hosted on GitHub"
-            link: "https://github.com/Erotemic/xdoctest"
-            package_name: xdoctest
+  - name: XdoctestGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xdoctest
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xdoctest' is hosted on GitHub
+        link: https://github.com/Erotemic/xdoctest
+        package_name: xdoctest

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VmprofGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: vmprof
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'vmprof' is hosted on GitHub"
-            link: "https://github.com/vmprof/vmprof-python"
-            package_name: vmprof
+  - name: VmprofGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vmprof
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vmprof' is hosted on GitHub
+        link: https://github.com/vmprof/vmprof-python
+        package_name: vmprof

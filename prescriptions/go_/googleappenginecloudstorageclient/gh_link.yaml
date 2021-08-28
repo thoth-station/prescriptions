@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleappenginecloudstorageclientGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: googleappenginecloudstorageclient
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'googleappenginecloudstorageclient' is hosted on GitHub"
-            link: "https://github.com/GoogleCloudPlatform/appengine-gcs-client"
-            package_name: googleappenginecloudstorageclient
+  - name: GoogleappenginecloudstorageclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleappenginecloudstorageclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'googleappenginecloudstorageclient' is hosted on GitHub
+        link: https://github.com/GoogleCloudPlatform/appengine-gcs-client
+        package_name: googleappenginecloudstorageclient

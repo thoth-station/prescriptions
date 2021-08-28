@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MleapGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mleap
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mleap' is hosted on GitHub"
-            link: "https://github.com/combust/mleap"
-            package_name: mleap
+  - name: MleapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mleap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mleap' is hosted on GitHub
+        link: https://github.com/combust/mleap
+        package_name: mleap

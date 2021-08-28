@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PlaintableFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: plaintable
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'plaintable' is packaged as an RPM in Fedora 34 as 'python-plaintable'"
-            link: https://src.fedoraproject.org/rpms/python-plaintable
-            package_name: plaintable
+  - name: PlaintableFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: plaintable
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'plaintable' is packaged as an RPM in Fedora 34 as 'python-plaintable'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: plaintable

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IbmWatsonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ibm-watson
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ibm-watson' is hosted on GitHub"
-            link: "https://github.com/watson-developer-cloud/python-sdk"
-            package_name: ibm-watson
+  - name: IbmWatsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-watson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ibm-watson' is hosted on GitHub
+        link: https://github.com/watson-developer-cloud/python-sdk
+        package_name: ibm-watson

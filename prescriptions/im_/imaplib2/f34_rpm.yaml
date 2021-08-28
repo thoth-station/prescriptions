@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Imaplib2Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: imaplib2
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'imaplib2' is packaged as an RPM in Fedora 34 as 'offlineimap'"
-            link: https://src.fedoraproject.org/rpms/offlineimap
-            package_name: imaplib2
+  - name: Imaplib2Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: imaplib2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'imaplib2' is packaged as an RPM in Fedora 34 as 'offlineimap'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: imaplib2

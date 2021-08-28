@@ -1,22 +1,26 @@
 units:
   sieves:
-    - name: Enum34BackportSieve
-      type: sieve.SkipPackage
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-        runtime_environments:
-          python_version: ">=3.4,<=3.10"
-      match:
-        package_name: enum34
-      run:
-        log:
-          message: "Dependency 'enum34' removed: emum34 is available in Python standard library starting Python 3.4"
-          type: WARNING
-        stack_info:
-          - type: WARNING
-            message: "Dependency 'enum34' removed: emum34 is available in Python standard library starting Python 3.4"
-            link: backports
+  - name: Enum34BackportSieve
+    type: sieve.SkipPackage
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+      runtime_environments:
+        python_version: ">=3.4,<=3.10"
+    match:
+      package_name: enum34
+    run:
+      log:
+        message: >-
+          Dependency 'enum34' removed: emum34 is available in
+          Python standard library starting Python 3.4
+        type: WARNING
+      stack_info:
+      - type: WARNING
+        message: >-
+          Dependency 'enum34' removed: emum34 is available in
+          Python standard library starting Python 3.4
+        link: backports

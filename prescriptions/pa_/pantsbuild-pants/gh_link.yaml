@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PantsbuildPantsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pantsbuild-pants
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pantsbuild-pants' is hosted on GitHub"
-            link: "https://github.com/pantsbuild/pants"
-            package_name: pantsbuild-pants
+  - name: PantsbuildPantsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pantsbuild-pants
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pantsbuild-pants' is hosted on GitHub
+        link: https://github.com/pantsbuild/pants
+        package_name: pantsbuild-pants

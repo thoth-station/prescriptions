@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleResumableMediaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-resumable-media
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-resumable-media' is hosted on GitHub"
-            link: "https://github.com/googleapis/google-resumable-media-python"
-            package_name: google-resumable-media
+  - name: GoogleResumableMediaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-resumable-media
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-resumable-media' is hosted on GitHub
+        link: https://github.com/googleapis/google-resumable-media-python
+        package_name: google-resumable-media

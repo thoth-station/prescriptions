@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: QdsSdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: qds-sdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'qds-sdk' is hosted on GitHub"
-            link: "https://github.com/qubole/qds-sdk-py"
-            package_name: qds-sdk
+  - name: QdsSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qds-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'qds-sdk' is hosted on GitHub
+        link: https://github.com/qubole/qds-sdk-py
+        package_name: qds-sdk

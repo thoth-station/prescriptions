@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CmreshandlerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cmreshandler
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cmreshandler' is hosted on GitHub"
-            link: "https://github.com/cmanaha/python-elasticsearch-logger"
-            package_name: cmreshandler
+  - name: CmreshandlerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmreshandler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cmreshandler' is hosted on GitHub
+        link: https://github.com/cmanaha/python-elasticsearch-logger
+        package_name: cmreshandler

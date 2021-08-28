@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoCookiesSamesiteGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-cookies-samesite
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-cookies-samesite' is hosted on GitHub"
-            link: "https://github.com/jotes/django-cookies-samesite"
-            package_name: django-cookies-samesite
+  - name: DjangoCookiesSamesiteGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cookies-samesite
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-cookies-samesite' is hosted on GitHub
+        link: https://github.com/jotes/django-cookies-samesite
+        package_name: django-cookies-samesite

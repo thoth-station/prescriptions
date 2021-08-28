@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureMgmtAdvisorGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-mgmt-advisor
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-mgmt-advisor' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-mgmt-advisor
+  - name: AzureMgmtAdvisorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-advisor
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-mgmt-advisor' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-mgmt-advisor

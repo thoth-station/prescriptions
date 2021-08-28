@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NetronGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: netron
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'netron' is hosted on GitHub"
-            link: "https://github.com/lutzroeder/netron"
-            package_name: netron
+  - name: NetronGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netron
+    run:
+      justification:
+      - type: INFO
+        message: Package 'netron' is hosted on GitHub
+        link: https://github.com/lutzroeder/netron
+        package_name: netron

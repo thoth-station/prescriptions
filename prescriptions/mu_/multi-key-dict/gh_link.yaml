@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MultiKeyDictGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: multi-key-dict
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'multi-key-dict' is hosted on GitHub"
-            link: "https://github.com/formiaczek/multi_key_dict"
-            package_name: multi-key-dict
+  - name: MultiKeyDictGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multi-key-dict
+    run:
+      justification:
+      - type: INFO
+        message: Package 'multi-key-dict' is hosted on GitHub
+        link: https://github.com/formiaczek/multi_key_dict
+        package_name: multi-key-dict

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JanusGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: janus
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'janus' is hosted on GitHub"
-            link: "https://github.com/aio-libs/janus"
-            package_name: janus
+  - name: JanusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: janus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'janus' is hosted on GitHub
+        link: https://github.com/aio-libs/janus
+        package_name: janus

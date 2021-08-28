@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AmqplibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: amqplib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'amqplib' is hosted on GitHub"
-            link: "https://github.com/barryp/py-amqplib"
-            package_name: amqplib
+  - name: AmqplibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amqplib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'amqplib' is hosted on GitHub
+        link: https://github.com/barryp/py-amqplib
+        package_name: amqplib

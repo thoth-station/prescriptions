@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MultivolumefileGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: multivolumefile
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'multivolumefile' is hosted on GitHub"
-            link: "https://github.com/miurahr/multivolume"
-            package_name: multivolumefile
+  - name: MultivolumefileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multivolumefile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'multivolumefile' is hosted on GitHub
+        link: https://github.com/miurahr/multivolume
+        package_name: multivolumefile

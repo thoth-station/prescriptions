@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ReadcharGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: readchar
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'readchar' is hosted on GitHub"
-            link: "https://github.com/magmax/python-readchar"
-            package_name: readchar
+  - name: ReadcharGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readchar
+    run:
+      justification:
+      - type: INFO
+        message: Package 'readchar' is hosted on GitHub
+        link: https://github.com/magmax/python-readchar
+        package_name: readchar

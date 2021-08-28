@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SqlalchemyRedshiftGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sqlalchemy-redshift
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sqlalchemy-redshift' is hosted on GitHub"
-            link: "https://github.com/sqlalchemy-redshift/sqlalchemy-redshift"
-            package_name: sqlalchemy-redshift
+  - name: SqlalchemyRedshiftGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-redshift
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlalchemy-redshift' is hosted on GitHub
+        link: https://github.com/sqlalchemy-redshift/sqlalchemy-redshift
+        package_name: sqlalchemy-redshift

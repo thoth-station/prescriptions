@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PygletGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyglet
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyglet' is hosted on GitHub"
-            link: "https://github.com/pyglet/pyglet"
-            package_name: pyglet
+  - name: PygletGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyglet
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyglet' is hosted on GitHub
+        link: https://github.com/pyglet/pyglet
+        package_name: pyglet

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TorchtypingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: torchtyping
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'torchtyping' is hosted on GitHub"
-            link: "https://github.com/patrick-kidger/torchtyping"
-            package_name: torchtyping
+  - name: TorchtypingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchtyping
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torchtyping' is hosted on GitHub
+        link: https://github.com/patrick-kidger/torchtyping
+        package_name: torchtyping

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PymysqlUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pymysql
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymysql' is packaged as an RPM in UBI8 as 'python39-PyMySQL'"
-            link: rpm
-            package_name: pymysql
+  - name: PymysqlUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymysql
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymysql' is packaged as an RPM in UBI8 as 'python39-PyMySQL'
+        link: rpm
+        package_name: pymysql

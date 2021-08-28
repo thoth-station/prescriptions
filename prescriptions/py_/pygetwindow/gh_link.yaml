@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PygetwindowGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pygetwindow
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygetwindow' is hosted on GitHub"
-            link: "https://github.com/asweigart/pygetwindow"
-            package_name: pygetwindow
+  - name: PygetwindowGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygetwindow
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygetwindow' is hosted on GitHub
+        link: https://github.com/asweigart/pygetwindow
+        package_name: pygetwindow

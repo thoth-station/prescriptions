@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PokedexPyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pokedex-py
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pokedex-py' is hosted on GitHub"
-            link: "https://github.com/PokeDevs/pokedex.py"
-            package_name: pokedex-py
+  - name: PokedexPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pokedex-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pokedex-py' is hosted on GitHub
+        link: https://github.com/PokeDevs/pokedex.py
+        package_name: pokedex-py

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TypesFuturesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: types-futures
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'types-futures' is hosted on GitHub"
-            link: "https://github.com/python/typeshed"
-            package_name: types-futures
+  - name: TypesFuturesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-futures
+    run:
+      justification:
+      - type: INFO
+        message: Package 'types-futures' is hosted on GitHub
+        link: https://github.com/python/typeshed
+        package_name: types-futures

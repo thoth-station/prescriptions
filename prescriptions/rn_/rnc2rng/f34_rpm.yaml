@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Rnc2rngFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: rnc2rng
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rnc2rng' is packaged as an RPM in Fedora 34 as 'python-rnc2rng'"
-            link: https://src.fedoraproject.org/rpms/python-rnc2rng
-            package_name: rnc2rng
+  - name: Rnc2rngFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rnc2rng
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rnc2rng' is packaged as an RPM in Fedora 34 as 'python-rnc2rng'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: rnc2rng

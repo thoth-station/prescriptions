@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoChunkatorGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-chunkator
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-chunkator' is hosted on GitHub"
-            link: "https://github.com/peopledoc/django-chunkator"
-            package_name: django-chunkator
+  - name: DjangoChunkatorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-chunkator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-chunkator' is hosted on GitHub
+        link: https://github.com/peopledoc/django-chunkator
+        package_name: django-chunkator

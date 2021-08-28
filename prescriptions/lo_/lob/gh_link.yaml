@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LobGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: lob
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lob' is hosted on GitHub"
-            link: "https://github.com/lob/lob-python"
-            package_name: lob
+  - name: LobGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lob
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lob' is hosted on GitHub
+        link: https://github.com/lob/lob-python
+        package_name: lob

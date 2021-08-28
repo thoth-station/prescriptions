@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ApacheAirflowProvidersSalesforceGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: apache-airflow-providers-salesforce
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'apache-airflow-providers-salesforce' is hosted on GitHub"
-            link: "https://github.com/apache/airflow"
-            package_name: apache-airflow-providers-salesforce
+  - name: ApacheAirflowProvidersSalesforceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-salesforce
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apache-airflow-providers-salesforce' is hosted on GitHub
+        link: https://github.com/apache/airflow
+        package_name: apache-airflow-providers-salesforce

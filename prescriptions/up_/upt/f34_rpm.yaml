@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: UptFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: upt
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'upt' is packaged as an RPM in Fedora 34 as 'upt'"
-            link: https://src.fedoraproject.org/rpms/upt
-            package_name: upt
+  - name: UptFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: upt
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'upt' is packaged as an RPM in Fedora 34 as 'upt'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: upt

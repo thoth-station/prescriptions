@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JupyterlabTemplatesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jupyterlab-templates
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jupyterlab-templates' is hosted on GitHub"
-            link: "https://github.com/jpmorganchase/jupyterlab_templates"
-            package_name: jupyterlab-templates
+  - name: JupyterlabTemplatesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterlab-templates
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyterlab-templates' is hosted on GitHub
+        link: https://github.com/jpmorganchase/jupyterlab_templates
+        package_name: jupyterlab-templates

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TweepyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tweepy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tweepy' is hosted on GitHub"
-            link: "https://github.com/tweepy/tweepy"
-            package_name: tweepy
+  - name: TweepyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tweepy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tweepy' is hosted on GitHub
+        link: https://github.com/tweepy/tweepy
+        package_name: tweepy

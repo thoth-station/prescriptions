@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ChardetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: chardet
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'chardet' is hosted on GitHub"
-            link: "https://github.com/chardet/chardet"
-            package_name: chardet
+  - name: ChardetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chardet
+    run:
+      justification:
+      - type: INFO
+        message: Package 'chardet' is hosted on GitHub
+        link: https://github.com/chardet/chardet
+        package_name: chardet

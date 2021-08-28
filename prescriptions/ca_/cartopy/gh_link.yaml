@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CartopyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cartopy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cartopy' is hosted on GitHub"
-            link: "https://github.com/SciTools/cartopy"
-            package_name: cartopy
+  - name: CartopyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cartopy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cartopy' is hosted on GitHub
+        link: https://github.com/SciTools/cartopy
+        package_name: cartopy

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: GearFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: gear
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gear' is packaged as an RPM in Fedora 34 as 'python-gear'"
-            link: https://src.fedoraproject.org/rpms/python-gear
-            package_name: gear
+  - name: GearFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: gear
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gear' is packaged as an RPM in Fedora 34 as 'python-gear'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: gear

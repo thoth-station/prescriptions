@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyexcelGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyexcel
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyexcel' is hosted on GitHub"
-            link: "https://github.com/pyexcel/pyexcel"
-            package_name: pyexcel
+  - name: PyexcelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexcel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyexcel' is hosted on GitHub
+        link: https://github.com/pyexcel/pyexcel
+        package_name: pyexcel

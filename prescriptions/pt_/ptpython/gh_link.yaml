@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PtpythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ptpython
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ptpython' is hosted on GitHub"
-            link: "https://github.com/prompt-toolkit/ptpython"
-            package_name: ptpython
+  - name: PtpythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptpython
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ptpython' is hosted on GitHub
+        link: https://github.com/prompt-toolkit/ptpython
+        package_name: ptpython

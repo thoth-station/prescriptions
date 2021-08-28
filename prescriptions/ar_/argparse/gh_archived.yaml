@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ArgparseGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: argparse
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'argparse' is marked as archived on GitHub"
-            link: "https://github.com/ThomasWaldmann/argparse"
-            package_name: argparse
+  - name: ArgparseGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argparse
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'argparse' is marked as archived on GitHub
+        link: https://github.com/ThomasWaldmann/argparse
+        package_name: argparse

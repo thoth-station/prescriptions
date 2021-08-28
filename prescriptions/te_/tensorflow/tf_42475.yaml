@@ -1,32 +1,32 @@
 units:
   wraps:
-    - name: TensorFlowSlowKerasEmbedding
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        library_usage:
-          tensorflow:
-            - tensorflow.keras.layers.Embedding
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tensorflow
-                version: <=2.4
-        - state:
-            resolved_dependencies:
-              - name: tensorflow-cpu
-                version: <=2.4
-        - state:
-            resolved_dependencies:
-              - name: tensorflow-gpu
-                version: <=2.4
-        - state:
-            resolved_dependencies:
-              - name: intel-tensorflow
-                version: <=2.4
-      run:
-        justification:
-          - type: WARNING
-            message: TensorFlow in version <=2.4 is slow when tf.keras.layers.Embedding is used
-            link: tf_42475
-            package_name: tensorflow
+  - name: TensorFlowSlowKerasEmbedding
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        tensorflow:
+        - tensorflow.keras.layers.Embedding
+    match:
+    - state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: <=2.4
+    - state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+          version: <=2.4
+    - state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+          version: <=2.4
+    - state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+          version: <=2.4
+    run:
+      justification:
+      - type: WARNING
+        message: TensorFlow in version <=2.4 is slow when tf.keras.layers.Embedding is used
+        link: tf_42475
+        package_name: tensorflow

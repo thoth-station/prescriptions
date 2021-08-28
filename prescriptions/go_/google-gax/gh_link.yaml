@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleGaxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-gax
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-gax' is hosted on GitHub"
-            link: "https://github.com/googleapis/gax-python"
-            package_name: google-gax
+  - name: GoogleGaxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-gax
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-gax' is hosted on GitHub
+        link: https://github.com/googleapis/gax-python
+        package_name: google-gax

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RepltalkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: repltalk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'repltalk' is hosted on GitHub"
-            link: "https://github.com/mat-1/repl-talk-api"
-            package_name: repltalk
+  - name: RepltalkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: repltalk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'repltalk' is hosted on GitHub
+        link: https://github.com/mat-1/repl-talk-api
+        package_name: repltalk

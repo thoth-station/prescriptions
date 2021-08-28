@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ConanPackageToolsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: conan-package-tools
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'conan-package-tools' is hosted on GitHub"
-            link: "https://github.com/conan-io/conan-package-tools"
-            package_name: conan-package-tools
+  - name: ConanPackageToolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conan-package-tools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'conan-package-tools' is hosted on GitHub
+        link: https://github.com/conan-io/conan-package-tools
+        package_name: conan-package-tools

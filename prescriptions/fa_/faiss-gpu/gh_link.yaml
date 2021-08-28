@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FaissGpuGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: faiss-gpu
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'faiss-gpu' is hosted on GitHub"
-            link: "https://github.com/kyamagu/faiss-wheels"
-            package_name: faiss-gpu
+  - name: FaissGpuGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: faiss-gpu
+    run:
+      justification:
+      - type: INFO
+        message: Package 'faiss-gpu' is hosted on GitHub
+        link: https://github.com/kyamagu/faiss-wheels
+        package_name: faiss-gpu

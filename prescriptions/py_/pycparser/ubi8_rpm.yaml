@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PycparserUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pycparser
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pycparser' is packaged as an RPM in UBI8 as 'python39-pycparser'"
-            link: rpm
-            package_name: pycparser
+  - name: PycparserUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycparser
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycparser' is packaged as an RPM in UBI8 as 'python39-pycparser'
+        link: rpm
+        package_name: pycparser

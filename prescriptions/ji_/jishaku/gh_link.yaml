@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JishakuGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jishaku
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jishaku' is hosted on GitHub"
-            link: "https://github.com/Gorialis/jishaku"
-            package_name: jishaku
+  - name: JishakuGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jishaku
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jishaku' is hosted on GitHub
+        link: https://github.com/Gorialis/jishaku
+        package_name: jishaku

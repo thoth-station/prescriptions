@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SauceclientGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sauceclient
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sauceclient' is hosted on GitHub"
-            link: "https://github.com/cgoldberg/sauceclient"
-            package_name: sauceclient
+  - name: SauceclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sauceclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sauceclient' is hosted on GitHub
+        link: https://github.com/cgoldberg/sauceclient
+        package_name: sauceclient

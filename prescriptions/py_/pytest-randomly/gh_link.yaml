@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestRandomlyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-randomly
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-randomly' is hosted on GitHub"
-            link: "https://github.com/pytest-dev/pytest-randomly"
-            package_name: pytest-randomly
+  - name: PytestRandomlyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-randomly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-randomly' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-randomly
+        package_name: pytest-randomly

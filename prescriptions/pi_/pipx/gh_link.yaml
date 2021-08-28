@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PipxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pipx
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pipx' is hosted on GitHub"
-            link: "https://github.com/pypa/pipx"
-            package_name: pipx
+  - name: PipxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pipx' is hosted on GitHub
+        link: https://github.com/pypa/pipx
+        package_name: pipx

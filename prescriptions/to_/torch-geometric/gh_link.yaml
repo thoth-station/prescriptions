@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TorchGeometricGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: torch-geometric
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'torch-geometric' is hosted on GitHub"
-            link: "https://github.com/rusty1s/pytorch_geometric"
-            package_name: torch-geometric
+  - name: TorchGeometricGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch-geometric
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torch-geometric' is hosted on GitHub
+        link: https://github.com/rusty1s/pytorch_geometric
+        package_name: torch-geometric

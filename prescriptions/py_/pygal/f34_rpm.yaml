@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PygalFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pygal
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygal' is packaged as an RPM in Fedora 34 as 'python-pygal'"
-            link: https://src.fedoraproject.org/rpms/python-pygal
-            package_name: pygal
+  - name: PygalFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygal
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygal' is packaged as an RPM in Fedora 34 as 'python-pygal'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pygal

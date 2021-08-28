@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoTestPlusGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-test-plus
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-test-plus' is hosted on GitHub"
-            link: "https://github.com/revsys/django-test-plus"
-            package_name: django-test-plus
+  - name: DjangoTestPlusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-test-plus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-test-plus' is hosted on GitHub
+        link: https://github.com/revsys/django-test-plus
+        package_name: django-test-plus

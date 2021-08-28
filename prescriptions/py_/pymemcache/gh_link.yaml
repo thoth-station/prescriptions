@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PymemcacheGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pymemcache
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymemcache' is hosted on GitHub"
-            link: "https://github.com/pinterest/pymemcache"
-            package_name: pymemcache
+  - name: PymemcacheGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymemcache
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymemcache' is hosted on GitHub
+        link: https://github.com/pinterest/pymemcache
+        package_name: pymemcache

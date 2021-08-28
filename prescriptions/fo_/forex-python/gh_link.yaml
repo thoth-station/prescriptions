@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ForexPythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: forex-python
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'forex-python' is hosted on GitHub"
-            link: "https://github.com/MicroPyramid/forex-python"
-            package_name: forex-python
+  - name: ForexPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: forex-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'forex-python' is hosted on GitHub
+        link: https://github.com/MicroPyramid/forex-python
+        package_name: forex-python

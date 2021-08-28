@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PretrainedmodelsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pretrainedmodels
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pretrainedmodels' is hosted on GitHub"
-            link: "https://github.com/cadene/pretrained-models.pytorch"
-            package_name: pretrainedmodels
+  - name: PretrainedmodelsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretrainedmodels
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pretrainedmodels' is hosted on GitHub
+        link: https://github.com/cadene/pretrained-models.pytorch
+        package_name: pretrainedmodels

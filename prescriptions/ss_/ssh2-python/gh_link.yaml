@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Ssh2PythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ssh2-python
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ssh2-python' is hosted on GitHub"
-            link: "https://github.com/ParallelSSH/ssh2-python"
-            package_name: ssh2-python
+  - name: Ssh2PythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssh2-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ssh2-python' is hosted on GitHub
+        link: https://github.com/ParallelSSH/ssh2-python
+        package_name: ssh2-python

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: CodespellFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: codespell
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'codespell' is packaged as an RPM in Fedora 34 as 'codespell'"
-            link: https://src.fedoraproject.org/rpms/codespell
-            package_name: codespell
+  - name: CodespellFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: codespell
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'codespell' is packaged as an RPM in Fedora 34 as 'codespell'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: codespell

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MysqlPythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mysql-python
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mysql-python' is hosted on GitHub"
-            link: "https://github.com/farcepest/MySQLdb1"
-            package_name: mysql-python
+  - name: MysqlPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysql-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mysql-python' is hosted on GitHub
+        link: https://github.com/farcepest/MySQLdb1
+        package_name: mysql-python

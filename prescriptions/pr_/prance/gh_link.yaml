@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PranceGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: prance
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'prance' is hosted on GitHub"
-            link: "https://github.com/RonnyPfannschmidt/prance"
-            package_name: prance
+  - name: PranceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prance
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prance' is hosted on GitHub
+        link: https://github.com/RonnyPfannschmidt/prance
+        package_name: prance

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsCdkAwsSecretsmanagerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws-cdk-aws-secretsmanager
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws-cdk-aws-secretsmanager' is hosted on GitHub"
-            link: "https://github.com/aws/aws-cdk"
-            package_name: aws-cdk-aws-secretsmanager
+  - name: AwsCdkAwsSecretsmanagerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-secretsmanager
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-secretsmanager' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-secretsmanager

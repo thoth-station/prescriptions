@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AtomicwritesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: atomicwrites
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'atomicwrites' is hosted on GitHub"
-            link: "https://github.com/untitaker/python-atomicwrites"
-            package_name: atomicwrites
+  - name: AtomicwritesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atomicwrites
+    run:
+      justification:
+      - type: INFO
+        message: Package 'atomicwrites' is hosted on GitHub
+        link: https://github.com/untitaker/python-atomicwrites
+        package_name: atomicwrites

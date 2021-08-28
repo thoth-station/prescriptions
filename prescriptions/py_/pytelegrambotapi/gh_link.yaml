@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytelegrambotapiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytelegrambotapi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytelegrambotapi' is hosted on GitHub"
-            link: "https://github.com/eternnoir/pyTelegramBotAPI"
-            package_name: pytelegrambotapi
+  - name: PytelegrambotapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytelegrambotapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytelegrambotapi' is hosted on GitHub
+        link: https://github.com/eternnoir/pyTelegramBotAPI
+        package_name: pytelegrambotapi

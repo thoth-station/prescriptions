@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestPylintGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-pylint
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-pylint' is hosted on GitHub"
-            link: "https://github.com/carsongee/pytest-pylint"
-            package_name: pytest-pylint
+  - name: PytestPylintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-pylint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-pylint' is hosted on GitHub
+        link: https://github.com/carsongee/pytest-pylint
+        package_name: pytest-pylint

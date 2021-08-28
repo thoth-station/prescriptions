@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DaemonizeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: daemonize
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'daemonize' is hosted on GitHub"
-            link: "https://github.com/thesharp/daemonize"
-            package_name: daemonize
+  - name: DaemonizeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: daemonize
+    run:
+      justification:
+      - type: INFO
+        message: Package 'daemonize' is hosted on GitHub
+        link: https://github.com/thesharp/daemonize
+        package_name: daemonize

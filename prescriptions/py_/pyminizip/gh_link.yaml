@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyminizipGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyminizip
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyminizip' is hosted on GitHub"
-            link: "https://github.com/smihica/pyminizip"
-            package_name: pyminizip
+  - name: PyminizipGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyminizip
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyminizip' is hosted on GitHub
+        link: https://github.com/smihica/pyminizip
+        package_name: pyminizip

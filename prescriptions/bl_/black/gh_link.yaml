@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BlackGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: black
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'black' is hosted on GitHub"
-            link: "https://github.com/psf/black"
-            package_name: black
+  - name: BlackGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: black
+    run:
+      justification:
+      - type: INFO
+        message: Package 'black' is hosted on GitHub
+        link: https://github.com/psf/black
+        package_name: black

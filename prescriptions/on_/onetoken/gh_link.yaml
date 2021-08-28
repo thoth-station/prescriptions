@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OnetokenGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: onetoken
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'onetoken' is hosted on GitHub"
-            link: "https://github.com/1token-trade/onetoken-py-sdk"
-            package_name: onetoken
+  - name: OnetokenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onetoken
+    run:
+      justification:
+      - type: INFO
+        message: Package 'onetoken' is hosted on GitHub
+        link: https://github.com/1token-trade/onetoken-py-sdk
+        package_name: onetoken

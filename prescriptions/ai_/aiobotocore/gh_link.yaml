@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AiobotocoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aiobotocore
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiobotocore' is hosted on GitHub"
-            link: "https://github.com/aio-libs/aiobotocore"
-            package_name: aiobotocore
+  - name: AiobotocoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiobotocore
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiobotocore' is hosted on GitHub
+        link: https://github.com/aio-libs/aiobotocore
+        package_name: aiobotocore

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsCdkLambdaLayerKubectlGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws-cdk-lambda-layer-kubectl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws-cdk-lambda-layer-kubectl' is hosted on GitHub"
-            link: "https://github.com/aws/aws-cdk"
-            package_name: aws-cdk-lambda-layer-kubectl
+  - name: AwsCdkLambdaLayerKubectlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-lambda-layer-kubectl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-lambda-layer-kubectl' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-lambda-layer-kubectl

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RopeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: rope
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rope' is hosted on GitHub"
-            link: "https://github.com/python-rope/rope"
-            package_name: rope
+  - name: RopeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rope
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rope' is hosted on GitHub
+        link: https://github.com/python-rope/rope
+        package_name: rope

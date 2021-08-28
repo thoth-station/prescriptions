@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RequirementsDetectorGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: requirements-detector
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'requirements-detector' is hosted on GitHub"
-            link: "https://github.com/landscapeio/requirements-detector"
-            package_name: requirements-detector
+  - name: RequirementsDetectorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requirements-detector
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requirements-detector' is hosted on GitHub
+        link: https://github.com/landscapeio/requirements-detector
+        package_name: requirements-detector

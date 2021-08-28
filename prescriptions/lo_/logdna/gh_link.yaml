@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LogdnaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: logdna
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'logdna' is hosted on GitHub"
-            link: "https://github.com/logdna/python"
-            package_name: logdna
+  - name: LogdnaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logdna
+    run:
+      justification:
+      - type: INFO
+        message: Package 'logdna' is hosted on GitHub
+        link: https://github.com/logdna/python
+        package_name: logdna

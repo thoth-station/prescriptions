@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SoxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sox
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sox' is hosted on GitHub"
-            link: "https://github.com/rabitt/pysox"
-            package_name: sox
+  - name: SoxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sox
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sox' is hosted on GitHub
+        link: https://github.com/rabitt/pysox
+        package_name: sox

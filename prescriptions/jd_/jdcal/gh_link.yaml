@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JdcalGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jdcal
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jdcal' is hosted on GitHub"
-            link: "https://github.com/phn/jdcal"
-            package_name: jdcal
+  - name: JdcalGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jdcal
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jdcal' is hosted on GitHub
+        link: https://github.com/phn/jdcal
+        package_name: jdcal

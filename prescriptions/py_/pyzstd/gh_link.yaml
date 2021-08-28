@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyzstdGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyzstd
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyzstd' is hosted on GitHub"
-            link: "https://github.com/animalize/pyzstd"
-            package_name: pyzstd
+  - name: PyzstdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzstd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyzstd' is hosted on GitHub
+        link: https://github.com/animalize/pyzstd
+        package_name: pyzstd

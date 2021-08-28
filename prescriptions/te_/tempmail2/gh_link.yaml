@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Tempmail2GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tempmail2
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tempmail2' is hosted on GitHub"
-            link: "https://github.com/CITGuru/tempmail"
-            package_name: tempmail2
+  - name: Tempmail2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tempmail2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tempmail2' is hosted on GitHub
+        link: https://github.com/CITGuru/tempmail
+        package_name: tempmail2

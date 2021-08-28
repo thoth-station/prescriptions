@@ -1,14 +1,14 @@
 units:
   wraps:
-    - name: ZipfileSecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        library_usage:
-          zipfile:
-            - zipfile.*
-      run:
-        stack_info:
-          - type: WARNING
-            message: "maliciously prepared .zip files can cause disk volume exhaustion"
-            link: "https://docs.python.org/3.11/library/zipfile.html#zipfile-resources-limitations"
+  - name: ZipfileSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        zipfile:
+        - zipfile.*
+    run:
+      stack_info:
+      - type: WARNING
+        message: maliciously prepared .zip files can cause disk volume exhaustion
+        link: https://docs.python.org/3.11/library/zipfile.html#zipfile-resources-limitations

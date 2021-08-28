@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WalkscoreApiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: walkscore-api
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'walkscore-api' is hosted on GitHub"
-            link: "https://github.com/insightindustry/walkscore-api"
-            package_name: walkscore-api
+  - name: WalkscoreApiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: walkscore-api
+    run:
+      justification:
+      - type: INFO
+        message: Package 'walkscore-api' is hosted on GitHub
+        link: https://github.com/insightindustry/walkscore-api
+        package_name: walkscore-api

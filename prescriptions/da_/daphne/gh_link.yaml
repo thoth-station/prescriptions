@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DaphneGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: daphne
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'daphne' is hosted on GitHub"
-            link: "https://github.com/django/daphne"
-            package_name: daphne
+  - name: DaphneGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: daphne
+    run:
+      justification:
+      - type: INFO
+        message: Package 'daphne' is hosted on GitHub
+        link: https://github.com/django/daphne
+        package_name: daphne

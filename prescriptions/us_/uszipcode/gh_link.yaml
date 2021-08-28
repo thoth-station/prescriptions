@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UszipcodeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: uszipcode
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'uszipcode' is hosted on GitHub"
-            link: "https://github.com/MacHu-GWU/"
-            package_name: uszipcode
+  - name: UszipcodeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uszipcode
+    run:
+      justification:
+      - type: INFO
+        message: Package 'uszipcode' is hosted on GitHub
+        link: https://github.com/MacHu-GWU/
+        package_name: uszipcode

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyautoguiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyautogui
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyautogui' is hosted on GitHub"
-            link: "https://github.com/asweigart/pyautogui"
-            package_name: pyautogui
+  - name: PyautoguiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyautogui
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyautogui' is hosted on GitHub
+        link: https://github.com/asweigart/pyautogui
+        package_name: pyautogui

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RomanGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: roman
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'roman' is hosted on GitHub"
-            link: "https://github.com/zopefoundation/roman"
-            package_name: roman
+  - name: RomanGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: roman
+    run:
+      justification:
+      - type: INFO
+        message: Package 'roman' is hosted on GitHub
+        link: https://github.com/zopefoundation/roman
+        package_name: roman

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CatalogueGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: catalogue
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'catalogue' is hosted on GitHub"
-            link: "https://github.com/explosion/catalogue"
-            package_name: catalogue
+  - name: CatalogueGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catalogue
+    run:
+      justification:
+      - type: INFO
+        message: Package 'catalogue' is hosted on GitHub
+        link: https://github.com/explosion/catalogue
+        package_name: catalogue

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PlaceboGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: placebo
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'placebo' is hosted on GitHub"
-            link: "https://github.com/garnaat/placebo"
-            package_name: placebo
+  - name: PlaceboGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: placebo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'placebo' is hosted on GitHub
+        link: https://github.com/garnaat/placebo
+        package_name: placebo

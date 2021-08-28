@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PygeoipGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pygeoip
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pygeoip' is marked as archived on GitHub"
-            link: "https://github.com/appliedsec/pygeoip"
-            package_name: pygeoip
+  - name: PygeoipGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygeoip
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pygeoip' is marked as archived on GitHub
+        link: https://github.com/appliedsec/pygeoip
+        package_name: pygeoip

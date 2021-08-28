@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PersistentGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: persistent
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'persistent' is hosted on GitHub"
-            link: "https://github.com/zopefoundation/persistent"
-            package_name: persistent
+  - name: PersistentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: persistent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'persistent' is hosted on GitHub
+        link: https://github.com/zopefoundation/persistent
+        package_name: persistent

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DbutilsTypehintGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dbutils-typehint
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dbutils-typehint' is hosted on GitHub"
-            link: "https://github.com/cdeler/dbutils_typehint"
-            package_name: dbutils-typehint
+  - name: DbutilsTypehintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dbutils-typehint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dbutils-typehint' is hosted on GitHub
+        link: https://github.com/cdeler/dbutils_typehint
+        package_name: dbutils-typehint

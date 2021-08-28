@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ChartStudioGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: chart-studio
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'chart-studio' is hosted on GitHub"
-            link: "https://github.com/plotly/plotly.py"
-            package_name: chart-studio
+  - name: ChartStudioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chart-studio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'chart-studio' is hosted on GitHub
+        link: https://github.com/plotly/plotly.py
+        package_name: chart-studio

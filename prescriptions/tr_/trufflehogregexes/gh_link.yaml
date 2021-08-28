@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TrufflehogregexesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: trufflehogregexes
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'trufflehogregexes' is hosted on GitHub"
-            link: "https://github.com/dxa4481/truffleHogRegexes"
-            package_name: trufflehogregexes
+  - name: TrufflehogregexesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trufflehogregexes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'trufflehogregexes' is hosted on GitHub
+        link: https://github.com/dxa4481/truffleHogRegexes
+        package_name: trufflehogregexes

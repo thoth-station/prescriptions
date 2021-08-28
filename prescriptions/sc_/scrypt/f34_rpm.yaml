@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: ScryptFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: scrypt
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'scrypt' is packaged as an RPM in Fedora 34 as 'python-scrypt'"
-            link: https://src.fedoraproject.org/rpms/python-scrypt
-            package_name: scrypt
+  - name: ScryptFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: scrypt
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scrypt' is packaged as an RPM in Fedora 34 as 'python-scrypt'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: scrypt

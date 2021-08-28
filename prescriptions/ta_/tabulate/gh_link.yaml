@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TabulateGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tabulate
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tabulate' is hosted on GitHub"
-            link: "https://github.com/astanin/python-tabulate"
-            package_name: tabulate
+  - name: TabulateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabulate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tabulate' is hosted on GitHub
+        link: https://github.com/astanin/python-tabulate
+        package_name: tabulate

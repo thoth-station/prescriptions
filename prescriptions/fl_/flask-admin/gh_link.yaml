@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FlaskAdminGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flask-admin
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flask-admin' is hosted on GitHub"
-            link: "https://github.com/flask-admin/flask-admin"
-            package_name: flask-admin
+  - name: FlaskAdminGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-admin
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-admin' is hosted on GitHub
+        link: https://github.com/flask-admin/flask-admin
+        package_name: flask-admin

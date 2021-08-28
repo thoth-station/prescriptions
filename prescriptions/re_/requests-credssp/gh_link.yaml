@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RequestsCredsspGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: requests-credssp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'requests-credssp' is hosted on GitHub"
-            link: "https://github.com/jborean93/requests-credssp"
-            package_name: requests-credssp
+  - name: RequestsCredsspGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-credssp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-credssp' is hosted on GitHub
+        link: https://github.com/jborean93/requests-credssp
+        package_name: requests-credssp

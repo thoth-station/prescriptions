@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AiocometdGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aiocometd
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiocometd' is hosted on GitHub"
-            link: "https://github.com/robertmrk/aiocometd"
-            package_name: aiocometd
+  - name: AiocometdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocometd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiocometd' is hosted on GitHub
+        link: https://github.com/robertmrk/aiocometd
+        package_name: aiocometd

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PickleshareFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pickleshare
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pickleshare' is packaged as an RPM in Fedora 34 as 'python-pickleshare'"
-            link: https://src.fedoraproject.org/rpms/python-pickleshare
-            package_name: pickleshare
+  - name: PickleshareFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pickleshare
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pickleshare' is packaged as an RPM in Fedora 34 as 'python-pickleshare'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pickleshare

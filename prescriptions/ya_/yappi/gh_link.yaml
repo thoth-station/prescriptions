@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: YappiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: yappi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'yappi' is hosted on GitHub"
-            link: "https://github.com/sumerc/yappi"
-            package_name: yappi
+  - name: YappiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yappi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yappi' is hosted on GitHub
+        link: https://github.com/sumerc/yappi
+        package_name: yappi

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Random2Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: random2
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'random2' is packaged as an RPM in Fedora 34 as 'python-random2'"
-            link: https://src.fedoraproject.org/rpms/python-random2
-            package_name: random2
+  - name: Random2Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: random2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'random2' is packaged as an RPM in Fedora 34 as 'python-random2'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: random2

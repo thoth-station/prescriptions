@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyldGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyld
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyld' is hosted on GitHub"
-            link: "https://github.com/digitalbazaar/pyld"
-            package_name: pyld
+  - name: PyldGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyld
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyld' is hosted on GitHub
+        link: https://github.com/digitalbazaar/pyld
+        package_name: pyld

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: BlessedFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: blessed
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'blessed' is packaged as an RPM in Fedora 34 as 'python-blessed'"
-            link: https://src.fedoraproject.org/rpms/python-blessed
-            package_name: blessed
+  - name: BlessedFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: blessed
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blessed' is packaged as an RPM in Fedora 34 as 'python-blessed'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: blessed

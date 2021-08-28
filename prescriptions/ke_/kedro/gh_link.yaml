@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KedroGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: kedro
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kedro' is hosted on GitHub"
-            link: "https://github.com/quantumblacklabs/kedro"
-            package_name: kedro
+  - name: KedroGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kedro
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kedro' is hosted on GitHub
+        link: https://github.com/quantumblacklabs/kedro
+        package_name: kedro

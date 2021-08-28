@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SandcalstleGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sandcastle
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sandcastle' is hosted on GitHub"
-            link: "https://github.com/packit/sandcastle"
-            package_name: sandcastle
+  - name: SandcalstleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sandcastle
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sandcastle' is hosted on GitHub
+        link: https://github.com/packit/sandcastle
+        package_name: sandcastle

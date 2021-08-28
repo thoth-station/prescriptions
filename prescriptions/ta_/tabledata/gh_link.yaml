@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TabledataGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tabledata
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tabledata' is hosted on GitHub"
-            link: "https://github.com/thombashi/tabledata"
-            package_name: tabledata
+  - name: TabledataGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabledata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tabledata' is hosted on GitHub
+        link: https://github.com/thombashi/tabledata
+        package_name: tabledata

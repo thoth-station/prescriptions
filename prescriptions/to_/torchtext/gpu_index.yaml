@@ -1,21 +1,21 @@
 units:
   sieves:
-    - name: TorchtextGPUIndex
-      type: sieve
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          cuda_version: "==11.1"
-      match:
-        - package_version:
-            name: torchtext
-            index_url:
-              not: https://download.pytorch.org/whl/cu111
-      run:
-        log:
-          message: "Using torchtext releases from Torch GPU Python Package index for CUDA 11.1"
-          type: INFO
-        stack_info:
-          - type: INFO
-            message: "Using torchtext releases from Torch GPU Python Package index for CUDA 11.1"
-            link: https://github.com/pytorch/pytorch/issues/25639
+  - name: TorchtextGPUIndex
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: ==11.1
+    match:
+    - package_version:
+        name: torchtext
+        index_url:
+          not: https://download.pytorch.org/whl/cu111
+    run:
+      log:
+        message: Using torchtext releases from Torch GPU Python Package index for CUDA 11.1
+        type: INFO
+      stack_info:
+      - type: INFO
+        message: Using torchtext releases from Torch GPU Python Package index for CUDA 11.1
+        link: https://github.com/pytorch/pytorch/issues/25639

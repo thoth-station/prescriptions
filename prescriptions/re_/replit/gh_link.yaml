@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ReplitGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: replit
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'replit' is hosted on GitHub"
-            link: "https://github.com/replit/replit-py"
-            package_name: replit
+  - name: ReplitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: replit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'replit' is hosted on GitHub
+        link: https://github.com/replit/replit-py
+        package_name: replit

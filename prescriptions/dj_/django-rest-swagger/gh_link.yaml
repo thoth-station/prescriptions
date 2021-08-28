@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoRestSwaggerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-rest-swagger
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-rest-swagger' is hosted on GitHub"
-            link: "https://github.com/marcgibbons/django-rest-swagger"
-            package_name: django-rest-swagger
+  - name: DjangoRestSwaggerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-rest-swagger
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-rest-swagger' is hosted on GitHub
+        link: https://github.com/marcgibbons/django-rest-swagger
+        package_name: django-rest-swagger

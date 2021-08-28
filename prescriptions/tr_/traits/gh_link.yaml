@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TraitsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: traits
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'traits' is hosted on GitHub"
-            link: "https://github.com/enthought/traits"
-            package_name: traits
+  - name: TraitsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: traits
+    run:
+      justification:
+      - type: INFO
+        message: Package 'traits' is hosted on GitHub
+        link: https://github.com/enthought/traits
+        package_name: traits

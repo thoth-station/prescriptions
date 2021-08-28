@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestCoverGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-cover
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pytest-cover' is marked as archived on GitHub"
-            link: "https://github.com/ionelmc/pytest-cover"
-            package_name: pytest-cover
+  - name: PytestCoverGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cover
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-cover' is marked as archived on GitHub
+        link: https://github.com/ionelmc/pytest-cover
+        package_name: pytest-cover

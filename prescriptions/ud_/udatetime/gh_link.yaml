@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UdatetimeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: udatetime
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'udatetime' is hosted on GitHub"
-            link: "https://github.com/freach/udatetime"
-            package_name: udatetime
+  - name: UdatetimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: udatetime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'udatetime' is hosted on GitHub
+        link: https://github.com/freach/udatetime
+        package_name: udatetime

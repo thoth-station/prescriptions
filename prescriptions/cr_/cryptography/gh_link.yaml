@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CryptographyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cryptography
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cryptography' is hosted on GitHub"
-            link: "https://github.com/pyca/cryptography"
-            package_name: cryptography
+  - name: CryptographyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cryptography
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cryptography' is hosted on GitHub
+        link: https://github.com/pyca/cryptography
+        package_name: cryptography
