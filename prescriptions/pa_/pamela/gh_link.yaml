@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PamelaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pamela
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pamela' is hosted on GitHub"
-            link: "https://github.com/minrk/pamela"
-            package_name: pamela
+  - name: PamelaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pamela
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pamela' is hosted on GitHub
+        link: https://github.com/minrk/pamela
+        package_name: pamela

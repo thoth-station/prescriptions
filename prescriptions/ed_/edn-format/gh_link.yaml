@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EdnFormatGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: edn-format
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'edn-format' is hosted on GitHub"
-            link: "https://github.com/swaroopch/edn_format"
-            package_name: edn-format
+  - name: EdnFormatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edn-format
+    run:
+      justification:
+      - type: INFO
+        message: Package 'edn-format' is hosted on GitHub
+        link: https://github.com/swaroopch/edn_format
+        package_name: edn-format

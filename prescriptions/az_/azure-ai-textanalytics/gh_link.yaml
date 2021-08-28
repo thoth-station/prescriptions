@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureAiTextanalyticsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-ai-textanalytics
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-ai-textanalytics' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-ai-textanalytics
+  - name: AzureAiTextanalyticsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-ai-textanalytics
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-ai-textanalytics' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-ai-textanalytics

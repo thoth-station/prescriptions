@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KorniaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: kornia
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kornia' is hosted on GitHub"
-            link: "https://github.com/kornia/kornia"
-            package_name: kornia
+  - name: KorniaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kornia
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kornia' is hosted on GitHub
+        link: https://github.com/kornia/kornia
+        package_name: kornia

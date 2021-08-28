@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: WebobFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: webob
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'webob' is packaged as an RPM in Fedora 34 as 'python-webob'"
-            link: https://src.fedoraproject.org/rpms/python-webob
-            package_name: webob
+  - name: WebobFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: webob
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'webob' is packaged as an RPM in Fedora 34 as 'python-webob'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: webob

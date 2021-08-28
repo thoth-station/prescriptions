@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OdfpyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: odfpy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'odfpy' is hosted on GitHub"
-            link: "https://github.com/eea/odfpy"
-            package_name: odfpy
+  - name: OdfpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: odfpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'odfpy' is hosted on GitHub
+        link: https://github.com/eea/odfpy
+        package_name: odfpy

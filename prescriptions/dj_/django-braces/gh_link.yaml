@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoBracesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-braces
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-braces' is hosted on GitHub"
-            link: "https://github.com/brack3t/django-braces"
-            package_name: django-braces
+  - name: DjangoBracesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-braces
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-braces' is hosted on GitHub
+        link: https://github.com/brack3t/django-braces
+        package_name: django-braces

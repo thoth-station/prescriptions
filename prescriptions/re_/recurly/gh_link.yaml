@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RecurlyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: recurly
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'recurly' is hosted on GitHub"
-            link: "https://github.com/recurly/recurly-client-python"
-            package_name: recurly
+  - name: RecurlyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: recurly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'recurly' is hosted on GitHub
+        link: https://github.com/recurly/recurly-client-python
+        package_name: recurly

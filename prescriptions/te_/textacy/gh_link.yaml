@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TextacyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: textacy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'textacy' is hosted on GitHub"
-            link: "https://github.com/chartbeat-labs/textacy"
-            package_name: textacy
+  - name: TextacyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textacy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'textacy' is hosted on GitHub
+        link: https://github.com/chartbeat-labs/textacy
+        package_name: textacy

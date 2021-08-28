@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ColourRunnerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: colour-runner
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'colour-runner' is hosted on GitHub"
-            link: "https://github.com/meshy/colour-runner"
-            package_name: colour-runner
+  - name: ColourRunnerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colour-runner
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colour-runner' is hosted on GitHub
+        link: https://github.com/meshy/colour-runner
+        package_name: colour-runner

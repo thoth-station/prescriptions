@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TabulatorGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tabulator
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tabulator' is hosted on GitHub"
-            link: "https://github.com/frictionlessdata/tabulator-py"
-            package_name: tabulator
+  - name: TabulatorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabulator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tabulator' is hosted on GitHub
+        link: https://github.com/frictionlessdata/tabulator-py
+        package_name: tabulator

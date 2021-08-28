@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AnsibleFlowDocsWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        state:
-          resolved_dependencies:
-            - name: ansible
-      run:
-        justification:
-          - type: INFO
-            message: "See Ansible project documentation"
-            link: "https://docs.ansible.com/"
-            package_name: ansible
+  - name: AnsibleFlowDocsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible
+    run:
+      justification:
+      - type: INFO
+        message: See Ansible project documentation
+        link: https://docs.ansible.com/
+        package_name: ansible

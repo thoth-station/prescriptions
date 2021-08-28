@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GeohashGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: geohash
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'geohash' is hosted on GitHub"
-            link: "https://github.com/vinsci/geohash"
-            package_name: geohash
+  - name: GeohashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geohash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'geohash' is hosted on GitHub
+        link: https://github.com/vinsci/geohash
+        package_name: geohash

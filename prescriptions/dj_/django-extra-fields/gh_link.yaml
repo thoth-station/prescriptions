@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoExtraFieldsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-extra-fields
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-extra-fields' is hosted on GitHub"
-            link: "https://github.com/Hipo/drf-extra-fields"
-            package_name: django-extra-fields
+  - name: DjangoExtraFieldsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-extra-fields
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-extra-fields' is hosted on GitHub
+        link: https://github.com/Hipo/drf-extra-fields
+        package_name: django-extra-fields

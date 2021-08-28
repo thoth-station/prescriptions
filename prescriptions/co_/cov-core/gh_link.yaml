@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CovCoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cov-core
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cov-core' is hosted on GitHub"
-            link: "https://github.com/schlamar/cov-core"
-            package_name: cov-core
+  - name: CovCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cov-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cov-core' is hosted on GitHub
+        link: https://github.com/schlamar/cov-core
+        package_name: cov-core

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Flake8LoggingFormatGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flake8-logging-format
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flake8-logging-format' is hosted on GitHub"
-            link: "https://github.com/globality-corp/flake8-logging-format"
-            package_name: flake8-logging-format
+  - name: Flake8LoggingFormatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-logging-format
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-logging-format' is hosted on GitHub
+        link: https://github.com/globality-corp/flake8-logging-format
+        package_name: flake8-logging-format

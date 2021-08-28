@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Lib389Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: lib389
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lib389' is packaged as an RPM in Fedora 34 as '389-ds-base'"
-            link: https://src.fedoraproject.org/rpms/389-ds-base
-            package_name: lib389
+  - name: Lib389Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: lib389
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lib389' is packaged as an RPM in Fedora 34 as '389-ds-base'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: lib389

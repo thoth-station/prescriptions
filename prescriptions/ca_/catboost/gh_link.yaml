@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CatboostGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: catboost
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'catboost' is hosted on GitHub"
-            link: "https://github.com/catboost/catboost"
-            package_name: catboost
+  - name: CatboostGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catboost
+    run:
+      justification:
+      - type: INFO
+        message: Package 'catboost' is hosted on GitHub
+        link: https://github.com/catboost/catboost
+        package_name: catboost

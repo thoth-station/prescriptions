@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RethinkdbGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: rethinkdb
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rethinkdb' is hosted on GitHub"
-            link: "https://github.com/RethinkDB/rethinkdb-python"
-            package_name: rethinkdb
+  - name: RethinkdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rethinkdb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rethinkdb' is hosted on GitHub
+        link: https://github.com/RethinkDB/rethinkdb-python
+        package_name: rethinkdb

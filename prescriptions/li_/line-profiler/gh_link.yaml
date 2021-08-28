@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LineProfilerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: line-profiler
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'line-profiler' is hosted on GitHub"
-            link: "https://github.com/pyutils/line_profiler"
-            package_name: line-profiler
+  - name: LineProfilerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: line-profiler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'line-profiler' is hosted on GitHub
+        link: https://github.com/pyutils/line_profiler
+        package_name: line-profiler

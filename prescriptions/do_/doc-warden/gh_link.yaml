@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DocWardenGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: doc-warden
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'doc-warden' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-tools"
-            package_name: doc-warden
+  - name: DocWardenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doc-warden
+    run:
+      justification:
+      - type: INFO
+        message: Package 'doc-warden' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-tools
+        package_name: doc-warden

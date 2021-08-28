@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoStoragesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-storages
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-storages' is hosted on GitHub"
-            link: "https://github.com/jschneier/django-storages"
-            package_name: django-storages
+  - name: DjangoStoragesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-storages
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-storages' is hosted on GitHub
+        link: https://github.com/jschneier/django-storages
+        package_name: django-storages

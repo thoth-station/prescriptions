@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PydruidGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pydruid
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pydruid' is hosted on GitHub"
-            link: "https://github.com/druid-io/pydruid"
-            package_name: pydruid
+  - name: PydruidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydruid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydruid' is hosted on GitHub
+        link: https://github.com/druid-io/pydruid
+        package_name: pydruid

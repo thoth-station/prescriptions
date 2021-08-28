@@ -1,15 +1,15 @@
 units:
   wraps:
-    - name: NetworkXReleaseNotesWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: networkx
-      run:
-        stack_info:
-          - type: INFO
-            message: "See 'NetworkX' release notes"
-            link: "https://networkx.org/documentation/stable/news.html"
+  - name: NetworkXReleaseNotesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+    - state:
+        resolved_dependencies:
+        - name: networkx
+    run:
+      stack_info:
+      - type: INFO
+        message: See 'NetworkX' release notes
+        link: https://networkx.org/documentation/stable/news.html

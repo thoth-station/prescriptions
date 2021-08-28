@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PygresqlFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pygresql
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygresql' is packaged as an RPM in Fedora 34 as 'PyGreSQL'"
-            link: https://src.fedoraproject.org/rpms/PyGreSQL
-            package_name: pygresql
+  - name: PygresqlFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygresql
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygresql' is packaged as an RPM in Fedora 34 as 'PyGreSQL'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pygresql

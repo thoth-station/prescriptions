@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: OdfpyFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: odfpy
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'odfpy' is packaged as an RPM in Fedora 34 as 'odfpy'"
-            link: https://src.fedoraproject.org/rpms/odfpy
-            package_name: odfpy
+  - name: OdfpyFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: odfpy
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'odfpy' is packaged as an RPM in Fedora 34 as 'odfpy'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: odfpy

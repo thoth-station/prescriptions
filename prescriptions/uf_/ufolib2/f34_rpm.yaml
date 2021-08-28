@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Ufolib2Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: ufolib2
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ufolib2' is packaged as an RPM in Fedora 34 as 'python-ufoLib2'"
-            link: https://src.fedoraproject.org/rpms/python-ufoLib2
-            package_name: ufolib2
+  - name: Ufolib2Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: ufolib2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ufolib2' is packaged as an RPM in Fedora 34 as 'python-ufoLib2'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: ufolib2

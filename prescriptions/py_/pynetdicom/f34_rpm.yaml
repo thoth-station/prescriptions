@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PynetdicomFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pynetdicom
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pynetdicom' is packaged as an RPM in Fedora 34 as 'python-pynetdicom'"
-            link: https://src.fedoraproject.org/rpms/python-pynetdicom
-            package_name: pynetdicom
+  - name: PynetdicomFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynetdicom
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pynetdicom' is packaged as an RPM in Fedora 34 as 'python-pynetdicom'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pynetdicom

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Json2tableFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: json2table
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'json2table' is packaged as an RPM in Fedora 34 as 'python-json2table'"
-            link: https://src.fedoraproject.org/rpms/python-json2table
-            package_name: json2table
+  - name: Json2tableFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: json2table
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'json2table' is packaged as an RPM in Fedora 34 as 'python-json2table'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: json2table

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MarshmallowDataclassGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: marshmallow-dataclass
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'marshmallow-dataclass' is hosted on GitHub"
-            link: "https://github.com/lovasoa/marshmallow_dataclass"
-            package_name: marshmallow-dataclass
+  - name: MarshmallowDataclassGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-dataclass
+    run:
+      justification:
+      - type: INFO
+        message: Package 'marshmallow-dataclass' is hosted on GitHub
+        link: https://github.com/lovasoa/marshmallow_dataclass
+        package_name: marshmallow-dataclass

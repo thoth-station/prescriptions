@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjrillGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: djrill
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'djrill' is marked as archived on GitHub"
-            link: "https://github.com/brack3t/Djrill"
-            package_name: djrill
+  - name: DjrillGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djrill
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'djrill' is marked as archived on GitHub
+        link: https://github.com/brack3t/Djrill
+        package_name: djrill

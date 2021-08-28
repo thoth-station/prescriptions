@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AiocronGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aiocron
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aiocron' is hosted on GitHub"
-            link: "https://github.com/gawel/aiocron"
-            package_name: aiocron
+  - name: AiocronGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocron
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiocron' is hosted on GitHub
+        link: https://github.com/gawel/aiocron
+        package_name: aiocron

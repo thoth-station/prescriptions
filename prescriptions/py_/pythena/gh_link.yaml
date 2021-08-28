@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythenaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pythena
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pythena' is hosted on GitHub"
-            link: "https://github.com/chrispruitt/pythena"
-            package_name: pythena
+  - name: PythenaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythena
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pythena' is hosted on GitHub
+        link: https://github.com/chrispruitt/pythena
+        package_name: pythena

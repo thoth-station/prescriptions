@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OptimizelySdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: optimizely-sdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'optimizely-sdk' is hosted on GitHub"
-            link: "https://github.com/optimizely/python-sdk"
-            package_name: optimizely-sdk
+  - name: OptimizelySdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optimizely-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'optimizely-sdk' is hosted on GitHub
+        link: https://github.com/optimizely/python-sdk
+        package_name: optimizely-sdk

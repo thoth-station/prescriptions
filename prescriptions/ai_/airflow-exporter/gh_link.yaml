@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AirflowExporterGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: airflow-exporter
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'airflow-exporter' is hosted on GitHub"
-            link: "https://github.com/epoch8/airflow-exporter"
-            package_name: airflow-exporter
+  - name: AirflowExporterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airflow-exporter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'airflow-exporter' is hosted on GitHub
+        link: https://github.com/epoch8/airflow-exporter
+        package_name: airflow-exporter

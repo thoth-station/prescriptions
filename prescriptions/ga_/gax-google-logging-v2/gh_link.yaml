@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GaxGoogleLoggingV2GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: gax-google-logging-v2
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gax-google-logging-v2' is hosted on GitHub"
-            link: "https://github.com/googleapis/googleapis"
-            package_name: gax-google-logging-v2
+  - name: GaxGoogleLoggingV2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gax-google-logging-v2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gax-google-logging-v2' is hosted on GitHub
+        link: https://github.com/googleapis/googleapis
+        package_name: gax-google-logging-v2

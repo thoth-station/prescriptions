@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WmctrlGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: wmctrl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'wmctrl' is hosted on GitHub"
-            link: "https://github.com/antocuni/wmctrl"
-            package_name: wmctrl
+  - name: WmctrlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wmctrl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wmctrl' is hosted on GitHub
+        link: https://github.com/antocuni/wmctrl
+        package_name: wmctrl

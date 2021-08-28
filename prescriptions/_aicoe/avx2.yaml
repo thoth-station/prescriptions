@@ -1,62 +1,68 @@
 units:
   steps:
-    - name: TensorFlowManyLinux2010AVX2Step
-      type: step
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-      match:
-        package_version:
-          name: tensorflow
-          index_url: "https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple"
-      run:
-        multi_package_resolution: false
-        justification:
-          - type: INFO
-            message: "AICoE TensorFlow builds are optimized for AVX2 instruction sets supported in the CPU identified"
-            link: aicoe_tf_avx2
-            package_name: tensorflow
-        score: 0.2
-    - name: TensorFlowRHEL75AVX2Step
-      type: step
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-      match:
-        package_version:
-          name: tensorflow
-          index_url: "https://tensorflow.pypi.thoth-station.ninja/index/rhel7.5/AVX2/simple"
-      run:
-        multi_package_resolution: false
-        justification:
-          - type: INFO
-            message: "AICoE TensorFlow builds are optimized for AVX2 instruction sets supported in the CPU identified"
-            link: aicoe_tf_avx2
-            package_name: tensorflow
-        score: 0.2
-    - name: TensorFlowRHEL76AVX2Step
-      type: step
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-      match:
-        package_version:
-          name: tensorflow
-          index_url: "https://tensorflow.pypi.thoth-station.ninja/index/rhel7.6/AVX2/simple"
-      run:
-        multi_package_resolution: false
-        justification:
-          - type: INFO
-            message: "AICoE TensorFlow builds are optimized for AVX2 instruction sets supported in the CPU identified"
-            link: aicoe_tf_avx2
-            package_name: tensorflow
-        score: 0.2
+  - name: TensorFlowManyLinux2010AVX2Step
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+    match:
+      package_version:
+        name: tensorflow
+        index_url: https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple
+    run:
+      multi_package_resolution: false
+      justification:
+      - type: INFO
+        message: >-
+          AICoE TensorFlow builds are optimized for AVX2 instruction
+          sets supported in the CPU identified
+        link: aicoe_tf_avx2
+        package_name: tensorflow
+      score: 0.2
+  - name: TensorFlowRHEL75AVX2Step
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+    match:
+      package_version:
+        name: tensorflow
+        index_url: https://tensorflow.pypi.thoth-station.ninja/index/rhel7.5/AVX2/simple
+    run:
+      multi_package_resolution: false
+      justification:
+      - type: INFO
+        message: >-
+          AICoE TensorFlow builds are optimized for AVX2 instruction sets
+          supported in the CPU identified
+        link: aicoe_tf_avx2
+        package_name: tensorflow
+      score: 0.2
+  - name: TensorFlowRHEL76AVX2Step
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+    match:
+      package_version:
+        name: tensorflow
+        index_url: https://tensorflow.pypi.thoth-station.ninja/index/rhel7.6/AVX2/simple
+    run:
+      multi_package_resolution: false
+      justification:
+      - type: INFO
+        message: >-
+          AICoE TensorFlow builds are optimized for AVX2 instruction sets
+          supported in the CPU identified
+        link: aicoe_tf_avx2
+        package_name: tensorflow
+      score: 0.2

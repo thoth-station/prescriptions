@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FakeFactoryGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fake-factory
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fake-factory' is hosted on GitHub"
-            link: "https://github.com/joke2k/faker"
-            package_name: fake-factory
+  - name: FakeFactoryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fake-factory
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fake-factory' is hosted on GitHub
+        link: https://github.com/joke2k/faker
+        package_name: fake-factory

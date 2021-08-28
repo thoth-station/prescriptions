@@ -1,21 +1,23 @@
 units:
   wraps:
-    - name: PcicrawlerFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: python-pcicrawler
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-pcicrawler' is packaged as an RPM in Fedora 34 as 'python-pcicrawler'"
-            link: https://src.fedoraproject.org/rpms/python-pcicrawler
-            package_name: pcicrawler
+  - name: PcicrawlerFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-pcicrawler
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'python-pcicrawler' is packaged as an
+          RPM in Fedora 34 as 'python-pcicrawler'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pcicrawler

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FcmDjangoGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fcm-django
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fcm-django' is hosted on GitHub"
-            link: "https://github.com/xtrinch/fcm-django"
-            package_name: fcm-django
+  - name: FcmDjangoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fcm-django
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fcm-django' is hosted on GitHub
+        link: https://github.com/xtrinch/fcm-django
+        package_name: fcm-django

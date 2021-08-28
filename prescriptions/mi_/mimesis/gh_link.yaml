@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MimesisGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mimesis
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mimesis' is hosted on GitHub"
-            link: "https://github.com/lk-geimfari/mimesis"
-            package_name: mimesis
+  - name: MimesisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimesis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mimesis' is hosted on GitHub
+        link: https://github.com/lk-geimfari/mimesis
+        package_name: mimesis

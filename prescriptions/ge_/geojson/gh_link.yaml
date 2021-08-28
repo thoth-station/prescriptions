@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GeojsonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: geojson
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'geojson' is hosted on GitHub"
-            link: "https://github.com/jazzband/geojson"
-            package_name: geojson
+  - name: GeojsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geojson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'geojson' is hosted on GitHub
+        link: https://github.com/jazzband/geojson
+        package_name: geojson

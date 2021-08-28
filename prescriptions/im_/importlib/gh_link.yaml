@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ImportlibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: importlib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'importlib' is hosted on GitHub"
-            link: "https://github.com/brettcannon/importlib"
-            package_name: importlib
+  - name: ImportlibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'importlib' is hosted on GitHub
+        link: https://github.com/brettcannon/importlib
+        package_name: importlib

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FacebookSdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: facebook-sdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'facebook-sdk' is hosted on GitHub"
-            link: "https://github.com/mobolic/facebook-sdk"
-            package_name: facebook-sdk
+  - name: FacebookSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'facebook-sdk' is hosted on GitHub
+        link: https://github.com/mobolic/facebook-sdk
+        package_name: facebook-sdk

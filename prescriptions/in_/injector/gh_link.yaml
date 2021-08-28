@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: InjectorGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: injector
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'injector' is hosted on GitHub"
-            link: "https://github.com/alecthomas/injector"
-            package_name: injector
+  - name: InjectorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: injector
+    run:
+      justification:
+      - type: INFO
+        message: Package 'injector' is hosted on GitHub
+        link: https://github.com/alecthomas/injector
+        package_name: injector

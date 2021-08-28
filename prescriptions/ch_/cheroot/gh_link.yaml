@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CherootGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cheroot
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cheroot' is hosted on GitHub"
-            link: "https://github.com/cherrypy/cheroot"
-            package_name: cheroot
+  - name: CherootGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cheroot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cheroot' is hosted on GitHub
+        link: https://github.com/cherrypy/cheroot
+        package_name: cheroot

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LocustGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: locust
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'locust' is hosted on GitHub"
-            link: "https://github.com/locustio/locust"
-            package_name: locust
+  - name: LocustGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: locust
+    run:
+      justification:
+      - type: INFO
+        message: Package 'locust' is hosted on GitHub
+        link: https://github.com/locustio/locust
+        package_name: locust

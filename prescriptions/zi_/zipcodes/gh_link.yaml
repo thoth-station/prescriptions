@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ZipcodesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: zipcodes
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'zipcodes' is hosted on GitHub"
-            link: "https://github.com/seanpianka/zipcodes"
-            package_name: zipcodes
+  - name: ZipcodesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipcodes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zipcodes' is hosted on GitHub
+        link: https://github.com/seanpianka/zipcodes
+        package_name: zipcodes

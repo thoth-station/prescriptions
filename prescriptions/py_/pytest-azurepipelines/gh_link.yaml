@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestAzurepipelinesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-azurepipelines
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-azurepipelines' is hosted on GitHub"
-            link: "https://github.com/tonybaloney/pytest-azurepipelines"
-            package_name: pytest-azurepipelines
+  - name: PytestAzurepipelinesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-azurepipelines
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-azurepipelines' is hosted on GitHub
+        link: https://github.com/tonybaloney/pytest-azurepipelines
+        package_name: pytest-azurepipelines

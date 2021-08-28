@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoPartialIndexGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-partial-index
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-partial-index' is hosted on GitHub"
-            link: "https://github.com/mattiaslinnap/django-partial-index"
-            package_name: django-partial-index
+  - name: DjangoPartialIndexGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-partial-index
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-partial-index' is hosted on GitHub
+        link: https://github.com/mattiaslinnap/django-partial-index
+        package_name: django-partial-index

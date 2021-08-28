@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ImbalancedLearnGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: imbalanced-learn
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'imbalanced-learn' is hosted on GitHub"
-            link: "https://github.com/scikit-learn-contrib/imbalanced-learn"
-            package_name: imbalanced-learn
+  - name: ImbalancedLearnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imbalanced-learn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'imbalanced-learn' is hosted on GitHub
+        link: https://github.com/scikit-learn-contrib/imbalanced-learn
+        package_name: imbalanced-learn

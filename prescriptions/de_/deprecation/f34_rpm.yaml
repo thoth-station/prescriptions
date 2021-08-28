@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: DeprecationFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: deprecation
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'deprecation' is packaged as an RPM in Fedora 34 as 'python-deprecation'"
-            link: https://src.fedoraproject.org/rpms/python-deprecation
-            package_name: deprecation
+  - name: DeprecationFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deprecation' is packaged as an RPM in Fedora 34 as 'python-deprecation'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: deprecation

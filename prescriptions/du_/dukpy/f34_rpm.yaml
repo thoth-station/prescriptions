@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: DukpyFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: dukpy
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dukpy' is packaged as an RPM in Fedora 34 as 'python-dukpy'"
-            link: https://src.fedoraproject.org/rpms/python-dukpy
-            package_name: dukpy
+  - name: DukpyFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: dukpy
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dukpy' is packaged as an RPM in Fedora 34 as 'python-dukpy'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: dukpy

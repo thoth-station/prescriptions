@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Pyi2cflashFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyi2cflash
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyi2cflash' is packaged as an RPM in Fedora 34 as 'python-pyi2cflash'"
-            link: https://src.fedoraproject.org/rpms/python-pyi2cflash
-            package_name: pyi2cflash
+  - name: Pyi2cflashFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyi2cflash
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyi2cflash' is packaged as an RPM in Fedora 34 as 'python-pyi2cflash'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyi2cflash

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PyyamlUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyyaml
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyyaml' is packaged as an RPM in UBI8 as 'python39-pyyaml'"
-            link: rpm
-            package_name: pyyaml
+  - name: PyyamlUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyyaml' is packaged as an RPM in UBI8 as 'python39-pyyaml'
+        link: rpm
+        package_name: pyyaml

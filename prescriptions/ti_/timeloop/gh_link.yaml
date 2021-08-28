@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TimeloopGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: timeloop
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'timeloop' is hosted on GitHub"
-            link: "https://github.com/sankalpjonn/timeloop"
-            package_name: timeloop
+  - name: TimeloopGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeloop
+    run:
+      justification:
+      - type: INFO
+        message: Package 'timeloop' is hosted on GitHub
+        link: https://github.com/sankalpjonn/timeloop
+        package_name: timeloop

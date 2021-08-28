@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MathlibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mathlib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mathlib' is hosted on GitHub"
-            link: "https://github.com/spapanik/mathlib"
-            package_name: mathlib
+  - name: MathlibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mathlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mathlib' is hosted on GitHub
+        link: https://github.com/spapanik/mathlib
+        package_name: mathlib

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NekosPyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nekos-py
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nekos-py' is hosted on GitHub"
-            link: "https://github.com/Nekos-life/nekos.py"
-            package_name: nekos-py
+  - name: NekosPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nekos-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nekos-py' is hosted on GitHub
+        link: https://github.com/Nekos-life/nekos.py
+        package_name: nekos-py

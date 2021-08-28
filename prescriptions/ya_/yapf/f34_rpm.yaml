@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: YapfFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: yapf
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'yapf' is packaged as an RPM in Fedora 34 as 'python-yapf'"
-            link: https://src.fedoraproject.org/rpms/python-yapf
-            package_name: yapf
+  - name: YapfFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: yapf
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yapf' is packaged as an RPM in Fedora 34 as 'python-yapf'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: yapf

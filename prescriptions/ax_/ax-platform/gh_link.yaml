@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AxPlatformGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ax-platform
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ax-platform' is hosted on GitHub"
-            link: "https://github.com/facebook/Ax"
-            package_name: ax-platform
+  - name: AxPlatformGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ax-platform
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ax-platform' is hosted on GitHub
+        link: https://github.com/facebook/Ax
+        package_name: ax-platform

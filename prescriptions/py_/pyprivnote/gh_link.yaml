@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyprivnoteGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyprivnote
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyprivnote' is hosted on GitHub"
-            link: "https://github.com/intelligentguy/pyPrivnote"
-            package_name: pyprivnote
+  - name: PyprivnoteGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyprivnote
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyprivnote' is hosted on GitHub
+        link: https://github.com/intelligentguy/pyPrivnote
+        package_name: pyprivnote

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MultisetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: multiset
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'multiset' is hosted on GitHub"
-            link: "https://github.com/wheerd/multiset"
-            package_name: multiset
+  - name: MultisetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multiset
+    run:
+      justification:
+      - type: INFO
+        message: Package 'multiset' is hosted on GitHub
+        link: https://github.com/wheerd/multiset
+        package_name: multiset

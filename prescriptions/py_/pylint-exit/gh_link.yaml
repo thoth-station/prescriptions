@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PylintExitGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pylint-exit
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pylint-exit' is hosted on GitHub"
-            link: "https://github.com/jongracecox/pylint-exit"
-            package_name: pylint-exit
+  - name: PylintExitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-exit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylint-exit' is hosted on GitHub
+        link: https://github.com/jongracecox/pylint-exit
+        package_name: pylint-exit

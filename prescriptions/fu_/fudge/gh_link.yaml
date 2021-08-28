@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FudgeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fudge
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fudge' is hosted on GitHub"
-            link: "https://github.com/fudge-py/fudge"
-            package_name: fudge
+  - name: FudgeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fudge
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fudge' is hosted on GitHub
+        link: https://github.com/fudge-py/fudge
+        package_name: fudge

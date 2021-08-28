@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RlpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: rlp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rlp' is hosted on GitHub"
-            link: "https://github.com/ethereum/pyrlp"
-            package_name: rlp
+  - name: RlpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rlp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rlp' is hosted on GitHub
+        link: https://github.com/ethereum/pyrlp
+        package_name: rlp

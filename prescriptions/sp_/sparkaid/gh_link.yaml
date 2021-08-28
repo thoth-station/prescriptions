@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SparkaidGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sparkaid
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sparkaid' is hosted on GitHub"
-            link: "https://github.com/lvhuyen/SparkAid"
-            package_name: sparkaid
+  - name: SparkaidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparkaid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sparkaid' is hosted on GitHub
+        link: https://github.com/lvhuyen/SparkAid
+        package_name: sparkaid

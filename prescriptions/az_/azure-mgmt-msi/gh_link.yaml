@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureMgmtMsiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-mgmt-msi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-mgmt-msi' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-mgmt-msi
+  - name: AzureMgmtMsiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-msi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-mgmt-msi' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-mgmt-msi

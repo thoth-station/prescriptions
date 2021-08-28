@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WebsocketsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: websockets
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'websockets' is hosted on GitHub"
-            link: "https://github.com/aaugustin/websockets"
-            package_name: websockets
+  - name: WebsocketsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websockets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'websockets' is hosted on GitHub
+        link: https://github.com/aaugustin/websockets
+        package_name: websockets

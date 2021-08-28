@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: SepolicyUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: sepolicy
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sepolicy' is packaged as an RPM in UBI8 as 'python3-policycoreutils'"
-            link: rpm
-            package_name: sepolicy
+  - name: SepolicyUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: sepolicy
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sepolicy' is packaged as an RPM in UBI8 as 'python3-policycoreutils'
+        link: rpm
+        package_name: sepolicy

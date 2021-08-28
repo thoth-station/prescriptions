@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SemgrepGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: semgrep
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'semgrep' is hosted on GitHub"
-            link: "https://github.com/returntocorp/semgrep"
-            package_name: semgrep
+  - name: SemgrepGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semgrep
+    run:
+      justification:
+      - type: INFO
+        message: Package 'semgrep' is hosted on GitHub
+        link: https://github.com/returntocorp/semgrep
+        package_name: semgrep

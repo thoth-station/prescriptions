@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PidGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pid
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pid' is hosted on GitHub"
-            link: "https://github.com/trbs/pid"
-            package_name: pid
+  - name: PidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pid' is hosted on GitHub
+        link: https://github.com/trbs/pid
+        package_name: pid

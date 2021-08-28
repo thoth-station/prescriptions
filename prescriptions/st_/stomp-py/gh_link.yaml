@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StompPyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: stomp-py
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'stomp-py' is hosted on GitHub"
-            link: "https://github.com/jasonrbriggs/stomp.py"
-            package_name: stomp-py
+  - name: StompPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stomp-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stomp-py' is hosted on GitHub
+        link: https://github.com/jasonrbriggs/stomp.py
+        package_name: stomp-py

@@ -1,27 +1,28 @@
 units:
   wraps:
-    - name: MKLThreadsTorchWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        state:
-          resolved_dependencies:
-            - name: torch
-      run:
-        justification:
-          - type: WARNING
-            message: Consider adjusting OMP_NUM_THREADS environment variable for containerized deployments,
-              one or more libraries use Intel's MKL that does not correctly detect
-              resource allocation in the cluster
-            link: mkl_threads
-            package_name: torch
-        advised_manifest_changes:
-          apiVersion: apps.openshift.io/v1
-          kind: DeploymentConfig
-          patch:
-            op: add,
-            path: /spec/template/spec/containers/0/env/0
-            value:
-              name: OMP_NUM_THREADS
-              value: "1"
+  - name: MKLThreadsTorchWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Consider adjusting OMP_NUM_THREADS environment variable for containerized
+          deployments, one or more libraries use Intel's MKL that does not correctly
+          detect resource allocation in the cluster
+        link: mkl_threads
+        package_name: torch
+      advised_manifest_changes:
+        apiVersion: apps.openshift.io/v1
+        kind: DeploymentConfig
+        patch:
+          op: add,
+          path: /spec/template/spec/containers/0/env/0
+          value:
+            name: OMP_NUM_THREADS
+            value: "1"

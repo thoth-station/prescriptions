@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DomdfPythonToolsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: domdf-python-tools
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'domdf-python-tools' is hosted on GitHub"
-            link: "https://github.com/domdfcoding/domdf_python_tools"
-            package_name: domdf-python-tools
+  - name: DomdfPythonToolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: domdf-python-tools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'domdf-python-tools' is hosted on GitHub
+        link: https://github.com/domdfcoding/domdf_python_tools
+        package_name: domdf-python-tools

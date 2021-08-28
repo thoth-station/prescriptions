@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonSpeechFeaturesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-speech-features
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-speech-features' is hosted on GitHub"
-            link: "https://github.com/jameslyons/python_speech_features"
-            package_name: python-speech-features
+  - name: PythonSpeechFeaturesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-speech-features
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-speech-features' is hosted on GitHub
+        link: https://github.com/jameslyons/python_speech_features
+        package_name: python-speech-features

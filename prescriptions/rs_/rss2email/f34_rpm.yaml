@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Rss2emailFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: rss2email
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rss2email' is packaged as an RPM in Fedora 34 as 'rss2email'"
-            link: https://src.fedoraproject.org/rpms/rss2email
-            package_name: rss2email
+  - name: Rss2emailFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rss2email
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rss2email' is packaged as an RPM in Fedora 34 as 'rss2email'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: rss2email

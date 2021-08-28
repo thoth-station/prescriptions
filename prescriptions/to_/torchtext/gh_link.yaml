@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TorchtextGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: torchtext
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'torchtext' is hosted on GitHub"
-            link: "https://github.com/pytorch/text"
-            package_name: torchtext
+  - name: TorchtextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchtext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torchtext' is hosted on GitHub
+        link: https://github.com/pytorch/text
+        package_name: torchtext

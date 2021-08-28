@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestDockerComposeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-docker-compose
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-docker-compose' is hosted on GitHub"
-            link: "https://github.com/pytest-docker-compose/pytest-docker-compose"
-            package_name: pytest-docker-compose
+  - name: PytestDockerComposeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-docker-compose
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-docker-compose' is hosted on GitHub
+        link: https://github.com/pytest-docker-compose/pytest-docker-compose
+        package_name: pytest-docker-compose

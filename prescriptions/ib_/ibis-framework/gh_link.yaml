@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IbisFrameworkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ibis-framework
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ibis-framework' is hosted on GitHub"
-            link: "https://github.com/ibis-project/ibis"
-            package_name: ibis-framework
+  - name: IbisFrameworkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibis-framework
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ibis-framework' is hosted on GitHub
+        link: https://github.com/ibis-project/ibis
+        package_name: ibis-framework

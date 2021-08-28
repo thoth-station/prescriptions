@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AioresponsesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aioresponses
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aioresponses' is hosted on GitHub"
-            link: "https://github.com/pnuckowski/aioresponses"
-            package_name: aioresponses
+  - name: AioresponsesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioresponses
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aioresponses' is hosted on GitHub
+        link: https://github.com/pnuckowski/aioresponses
+        package_name: aioresponses

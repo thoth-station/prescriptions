@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JunitparserGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: junitparser
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'junitparser' is hosted on GitHub"
-            link: "https://github.com/weiwei/junitparser"
-            package_name: junitparser
+  - name: JunitparserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: junitparser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'junitparser' is hosted on GitHub
+        link: https://github.com/weiwei/junitparser
+        package_name: junitparser

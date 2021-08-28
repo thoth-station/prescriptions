@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyknpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyknp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyknp' is hosted on GitHub"
-            link: "https://github.com/ku-nlp/pyknp"
-            package_name: pyknp
+  - name: PyknpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyknp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyknp' is hosted on GitHub
+        link: https://github.com/ku-nlp/pyknp
+        package_name: pyknp

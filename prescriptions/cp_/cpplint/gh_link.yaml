@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CpplintGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cpplint
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cpplint' is hosted on GitHub"
-            link: "https://github.com/cpplint/cpplint"
-            package_name: cpplint
+  - name: CpplintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cpplint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cpplint' is hosted on GitHub
+        link: https://github.com/cpplint/cpplint
+        package_name: cpplint

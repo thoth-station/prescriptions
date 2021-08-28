@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VarintGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: varint
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'varint' is hosted on GitHub"
-            link: "https://github.com/fmoo/python-varint"
-            package_name: varint
+  - name: VarintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: varint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'varint' is hosted on GitHub
+        link: https://github.com/fmoo/python-varint
+        package_name: varint

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MbstrdecoderGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mbstrdecoder
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mbstrdecoder' is hosted on GitHub"
-            link: "https://github.com/thombashi/mbstrdecoder"
-            package_name: mbstrdecoder
+  - name: MbstrdecoderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mbstrdecoder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mbstrdecoder' is hosted on GitHub
+        link: https://github.com/thombashi/mbstrdecoder
+        package_name: mbstrdecoder

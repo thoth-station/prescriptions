@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Txt2tagsFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: txt2tags
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'txt2tags' is packaged as an RPM in Fedora 34 as 'txt2tags'"
-            link: https://src.fedoraproject.org/rpms/txt2tags
-            package_name: txt2tags
+  - name: Txt2tagsFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: txt2tags
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'txt2tags' is packaged as an RPM in Fedora 34 as 'txt2tags'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: txt2tags

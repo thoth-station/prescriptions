@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AutopyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: autopy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'autopy' is hosted on GitHub"
-            link: "https://github.com/autopilot-rs/autopy"
-            package_name: autopy
+  - name: AutopyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autopy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autopy' is hosted on GitHub
+        link: https://github.com/autopilot-rs/autopy
+        package_name: autopy

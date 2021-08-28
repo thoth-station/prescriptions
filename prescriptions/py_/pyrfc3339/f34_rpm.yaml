@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Pyrfc3339Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyrfc3339
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyrfc3339' is packaged as an RPM in Fedora 34 as 'python-pyrfc3339'"
-            link: https://src.fedoraproject.org/rpms/python-pyrfc3339
-            package_name: pyrfc3339
+  - name: Pyrfc3339Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrfc3339
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyrfc3339' is packaged as an RPM in Fedora 34 as 'python-pyrfc3339'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyrfc3339

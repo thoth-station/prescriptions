@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AsyncinitGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: asyncinit
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'asyncinit' is hosted on GitHub"
-            link: "https://github.com/kchmck/pyasyncinit"
-            package_name: asyncinit
+  - name: AsyncinitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncinit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'asyncinit' is hosted on GitHub
+        link: https://github.com/kchmck/pyasyncinit
+        package_name: asyncinit

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UnidicGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: unidic
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'unidic' is hosted on GitHub"
-            link: "https://github.com/polm/unidic-py"
-            package_name: unidic
+  - name: UnidicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unidic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'unidic' is hosted on GitHub
+        link: https://github.com/polm/unidic-py
+        package_name: unidic

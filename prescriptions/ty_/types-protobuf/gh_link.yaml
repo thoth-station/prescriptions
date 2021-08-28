@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TypesProtobufGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: types-protobuf
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'types-protobuf' is hosted on GitHub"
-            link: "https://github.com/python/typeshed"
-            package_name: types-protobuf
+  - name: TypesProtobufGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-protobuf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'types-protobuf' is hosted on GitHub
+        link: https://github.com/python/typeshed
+        package_name: types-protobuf

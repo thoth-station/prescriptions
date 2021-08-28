@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: LxmlUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: lxml
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lxml' is packaged as an RPM in UBI8 as 'python39-lxml'"
-            link: rpm
-            package_name: lxml
+  - name: LxmlUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: lxml
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lxml' is packaged as an RPM in UBI8 as 'python39-lxml'
+        link: rpm
+        package_name: lxml

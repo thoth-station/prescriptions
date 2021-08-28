@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SshpubkeysGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sshpubkeys
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sshpubkeys' is hosted on GitHub"
-            link: "https://github.com/ojarva/python-sshpubkeys"
-            package_name: sshpubkeys
+  - name: SshpubkeysGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshpubkeys
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sshpubkeys' is hosted on GitHub
+        link: https://github.com/ojarva/python-sshpubkeys
+        package_name: sshpubkeys

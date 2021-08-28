@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Html2textFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: html2text
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'html2text' is packaged as an RPM in Fedora 34 as 'python-html2text'"
-            link: https://src.fedoraproject.org/rpms/python-html2text
-            package_name: html2text
+  - name: Html2textFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: html2text
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'html2text' is packaged as an RPM in Fedora 34 as 'python-html2text'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: html2text

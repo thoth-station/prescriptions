@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyvirtualdisplayGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyvirtualdisplay
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyvirtualdisplay' is hosted on GitHub"
-            link: "https://github.com/ponty/pyvirtualdisplay"
-            package_name: pyvirtualdisplay
+  - name: PyvirtualdisplayGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvirtualdisplay
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyvirtualdisplay' is hosted on GitHub
+        link: https://github.com/ponty/pyvirtualdisplay
+        package_name: pyvirtualdisplay

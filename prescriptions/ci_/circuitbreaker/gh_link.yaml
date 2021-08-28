@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CircuitbreakerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: circuitbreaker
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'circuitbreaker' is hosted on GitHub"
-            link: "https://github.com/fabfuel/circuitbreaker"
-            package_name: circuitbreaker
+  - name: CircuitbreakerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: circuitbreaker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'circuitbreaker' is hosted on GitHub
+        link: https://github.com/fabfuel/circuitbreaker
+        package_name: circuitbreaker

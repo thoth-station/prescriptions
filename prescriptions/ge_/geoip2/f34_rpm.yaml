@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Geoip2Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: geoip2
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'geoip2' is packaged as an RPM in Fedora 34 as 'python-geoip2'"
-            link: https://src.fedoraproject.org/rpms/python-geoip2
-            package_name: geoip2
+  - name: Geoip2Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoip2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'geoip2' is packaged as an RPM in Fedora 34 as 'python-geoip2'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: geoip2

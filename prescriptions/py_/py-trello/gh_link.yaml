@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyTrelloGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: py-trello
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'py-trello' is hosted on GitHub"
-            link: "https://github.com/sarumont/py-trello"
-            package_name: py-trello
+  - name: PyTrelloGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-trello
+    run:
+      justification:
+      - type: INFO
+        message: Package 'py-trello' is hosted on GitHub
+        link: https://github.com/sarumont/py-trello
+        package_name: py-trello

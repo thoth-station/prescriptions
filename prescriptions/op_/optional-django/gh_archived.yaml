@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OptionalDjangoGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: optional-django
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'optional-django' is marked as archived on GitHub"
-            link: "https://github.com/markfinger/optional-django"
-            package_name: optional-django
+  - name: OptionalDjangoGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optional-django
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'optional-django' is marked as archived on GitHub
+        link: https://github.com/markfinger/optional-django
+        package_name: optional-django

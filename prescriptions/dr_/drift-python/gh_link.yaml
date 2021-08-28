@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DriftPythonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: drift-python
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'drift-python' is hosted on GitHub"
-            link: "https://github.com/Driftt/drift-python"
-            package_name: drift-python
+  - name: DriftPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drift-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'drift-python' is hosted on GitHub
+        link: https://github.com/Driftt/drift-python
+        package_name: drift-python

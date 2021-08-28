@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ShopifyapiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: shopifyapi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'shopifyapi' is hosted on GitHub"
-            link: "https://github.com/Shopify/shopify_python_api"
-            package_name: shopifyapi
+  - name: ShopifyapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shopifyapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'shopifyapi' is hosted on GitHub
+        link: https://github.com/Shopify/shopify_python_api
+        package_name: shopifyapi

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ContractionsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: contractions
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'contractions' is hosted on GitHub"
-            link: "https://github.com/kootenpv/contractions"
-            package_name: contractions
+  - name: ContractionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contractions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'contractions' is hosted on GitHub
+        link: https://github.com/kootenpv/contractions
+        package_name: contractions

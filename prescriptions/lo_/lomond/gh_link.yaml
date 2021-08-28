@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LomondGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: lomond
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lomond' is hosted on GitHub"
-            link: "https://github.com/wildfoundry/dataplicity-lomond"
-            package_name: lomond
+  - name: LomondGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lomond
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lomond' is hosted on GitHub
+        link: https://github.com/wildfoundry/dataplicity-lomond
+        package_name: lomond

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PycryptodomeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pycryptodome
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pycryptodome' is hosted on GitHub"
-            link: "https://github.com/Legrandin/pycryptodome"
-            package_name: pycryptodome
+  - name: PycryptodomeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycryptodome
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycryptodome' is hosted on GitHub
+        link: https://github.com/Legrandin/pycryptodome
+        package_name: pycryptodome

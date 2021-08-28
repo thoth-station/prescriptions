@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: DistgenFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: distgen
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'distgen' is packaged as an RPM in Fedora 34 as 'distgen'"
-            link: https://src.fedoraproject.org/rpms/distgen
-            package_name: distgen
+  - name: DistgenFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: distgen
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'distgen' is packaged as an RPM in Fedora 34 as 'distgen'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: distgen

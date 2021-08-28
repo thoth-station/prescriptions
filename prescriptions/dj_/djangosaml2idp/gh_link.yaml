@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Djangosaml2idpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: djangosaml2idp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'djangosaml2idp' is hosted on GitHub"
-            link: "https://github.com/OTA-Insight/djangosaml2idp"
-            package_name: djangosaml2idp
+  - name: Djangosaml2idpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangosaml2idp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'djangosaml2idp' is hosted on GitHub
+        link: https://github.com/OTA-Insight/djangosaml2idp
+        package_name: djangosaml2idp

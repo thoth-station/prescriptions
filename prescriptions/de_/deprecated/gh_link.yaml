@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DeprecatedGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: deprecated
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'deprecated' is hosted on GitHub"
-            link: "https://github.com/tantale/deprecated"
-            package_name: deprecated
+  - name: DeprecatedGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecated
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deprecated' is hosted on GitHub
+        link: https://github.com/tantale/deprecated
+        package_name: deprecated

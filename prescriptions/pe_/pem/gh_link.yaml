@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PemGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pem
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pem' is hosted on GitHub"
-            link: "https://github.com/hynek/pem"
-            package_name: pem
+  - name: PemGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pem
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pem' is hosted on GitHub
+        link: https://github.com/hynek/pem
+        package_name: pem

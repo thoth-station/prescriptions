@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AutogradGammaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: autograd-gamma
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'autograd-gamma' is hosted on GitHub"
-            link: "https://github.com/CamDavidsonPilon/autograd-gamma"
-            package_name: autograd-gamma
+  - name: AutogradGammaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autograd-gamma
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autograd-gamma' is hosted on GitHub
+        link: https://github.com/CamDavidsonPilon/autograd-gamma
+        package_name: autograd-gamma

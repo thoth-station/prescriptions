@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PyphiFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyphi
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyphi' is packaged as an RPM in Fedora 34 as 'python-pyphi'"
-            link: https://src.fedoraproject.org/rpms/python-pyphi
-            package_name: pyphi
+  - name: PyphiFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyphi
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyphi' is packaged as an RPM in Fedora 34 as 'python-pyphi'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyphi

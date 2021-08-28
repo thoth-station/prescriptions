@@ -1,15 +1,17 @@
 units:
   boots:
-    - name: TensorFlowCPUBoot
-      type: boot
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          cuda_version: null
-      match:
-        package_name: tensorflow
-      run:
-        stack_info:
-          - type: INFO
-            message: "Use 'tensorflow-cpu' instead of 'tensorflow' package for non-GPU enabled environments"
-            link: "https://pypi.org/project/tensorflow-cpu/"
+  - name: TensorFlowCPUBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: null
+    match:
+      package_name: tensorflow
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          Use 'tensorflow-cpu' instead of 'tensorflow' package for
+          non-GPU enabled environments
+        link: https://pypi.org/project/tensorflow-cpu/

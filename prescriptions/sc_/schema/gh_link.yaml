@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SchemaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: schema
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'schema' is hosted on GitHub"
-            link: "https://github.com/keleshev/schema"
-            package_name: schema
+  - name: SchemaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: schema
+    run:
+      justification:
+      - type: INFO
+        message: Package 'schema' is hosted on GitHub
+        link: https://github.com/keleshev/schema
+        package_name: schema

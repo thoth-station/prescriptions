@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StupsZignGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: stups-zign
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'stups-zign' is hosted on GitHub"
-            link: "https://github.com/zalando-stups/zign"
-            package_name: stups-zign
+  - name: StupsZignGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-zign
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stups-zign' is hosted on GitHub
+        link: https://github.com/zalando-stups/zign
+        package_name: stups-zign

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SupervisorChecksGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: supervisor-checks
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'supervisor-checks' is hosted on GitHub"
-            link: "https://github.com/vovanec/supervisor_checks"
-            package_name: supervisor-checks
+  - name: SupervisorChecksGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supervisor-checks
+    run:
+      justification:
+      - type: INFO
+        message: Package 'supervisor-checks' is hosted on GitHub
+        link: https://github.com/vovanec/supervisor_checks
+        package_name: supervisor-checks

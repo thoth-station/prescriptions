@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GraphqlCoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: graphql-core
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'graphql-core' is hosted on GitHub"
-            link: "https://github.com/graphql-python/graphql-core"
-            package_name: graphql-core
+  - name: GraphqlCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphql-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'graphql-core' is hosted on GitHub
+        link: https://github.com/graphql-python/graphql-core
+        package_name: graphql-core

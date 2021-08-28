@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OsSysGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: os-sys
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'os-sys' is hosted on GitHub"
-            link: "https://github.com/Matthijs990/chat"
-            package_name: os-sys
+  - name: OsSysGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: os-sys
+    run:
+      justification:
+      - type: INFO
+        message: Package 'os-sys' is hosted on GitHub
+        link: https://github.com/Matthijs990/chat
+        package_name: os-sys

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FlaskBasicauthGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flask-basicauth
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flask-basicauth' is hosted on GitHub"
-            link: "https://github.com/jpvanhal/flask-basicauth"
-            package_name: flask-basicauth
+  - name: FlaskBasicauthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-basicauth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-basicauth' is hosted on GitHub
+        link: https://github.com/jpvanhal/flask-basicauth
+        package_name: flask-basicauth

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: QuantitiesFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: quantities
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'quantities' is packaged as an RPM in Fedora 34 as 'python-quantities'"
-            link: https://src.fedoraproject.org/rpms/python-quantities
-            package_name: quantities
+  - name: QuantitiesFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: quantities
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'quantities' is packaged as an RPM in Fedora 34 as 'python-quantities'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: quantities

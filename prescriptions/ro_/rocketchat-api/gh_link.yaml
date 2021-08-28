@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RocketchatApiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: rocketchat-api
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rocketchat-api' is hosted on GitHub"
-            link: "https://github.com/jadolg/rocketchat_API"
-            package_name: rocketchat-api
+  - name: RocketchatApiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rocketchat-api
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rocketchat-api' is hosted on GitHub
+        link: https://github.com/jadolg/rocketchat_API
+        package_name: rocketchat-api

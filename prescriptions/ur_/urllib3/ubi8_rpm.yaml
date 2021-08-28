@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Urllib3Ubi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: urllib3
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'urllib3' is packaged as an RPM in UBI8 as 'python39-urllib3'"
-            link: rpm
-            package_name: urllib3
+  - name: Urllib3Ubi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: urllib3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'urllib3' is packaged as an RPM in UBI8 as 'python39-urllib3'
+        link: rpm
+        package_name: urllib3

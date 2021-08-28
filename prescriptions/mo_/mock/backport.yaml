@@ -1,22 +1,26 @@
 units:
   sieves:
-    - name: MockBackportSieve
-      type: sieve.SkipPackage
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-        runtime_environments:
-          python_version: ">=3.3,<=3.10"
-      match:
-        package_name: mock
-      run:
-        log:
-          message: "Dependency 'mock' removed: unittest.mock is available in Python standard library starting Python 3.3"
-          type: WARNING
-        stack_info:
-          - type: WARNING
-            message: "Dependency 'mock' removed: unittest.mock is available in Python standard library starting Python 3.3"
-            link: backports
+  - name: MockBackportSieve
+    type: sieve.SkipPackage
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+      runtime_environments:
+        python_version: ">=3.3,<=3.10"
+    match:
+      package_name: mock
+    run:
+      log:
+        message: >-
+          Dependency 'mock' removed: unittest.mock is available in Python
+          standard library starting Python 3.3"
+        type: WARNING
+      stack_info:
+      - type: WARNING
+        message: >-
+          Dependency 'mock' removed: unittest.mock is available in Python
+          standard library starting Python 3.3"
+        link: backports

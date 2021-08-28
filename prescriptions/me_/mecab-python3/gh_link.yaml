@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MecabPython3GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mecab-python3
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mecab-python3' is hosted on GitHub"
-            link: "https://github.com/SamuraiT/mecab-python3"
-            package_name: mecab-python3
+  - name: MecabPython3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mecab-python3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mecab-python3' is hosted on GitHub
+        link: https://github.com/SamuraiT/mecab-python3
+        package_name: mecab-python3

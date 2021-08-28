@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws' is hosted on GitHub"
-            link: "https://github.com/eofs/aws"
-            package_name: aws
+  - name: AwsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws' is hosted on GitHub
+        link: https://github.com/eofs/aws
+        package_name: aws

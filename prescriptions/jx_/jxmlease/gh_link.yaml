@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JxmleaseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jxmlease
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jxmlease' is hosted on GitHub"
-            link: "https://github.com/Juniper/jxmlease"
-            package_name: jxmlease
+  - name: JxmleaseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jxmlease
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jxmlease' is hosted on GitHub
+        link: https://github.com/Juniper/jxmlease
+        package_name: jxmlease

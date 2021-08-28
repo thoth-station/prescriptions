@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DeltalakeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: deltalake
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'deltalake' is hosted on GitHub"
-            link: "https://github.com/delta-io/delta-rs"
-            package_name: deltalake
+  - name: DeltalakeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deltalake
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deltalake' is hosted on GitHub
+        link: https://github.com/delta-io/delta-rs
+        package_name: deltalake

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VincentGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: vincent
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'vincent' is marked as archived on GitHub"
-            link: "https://github.com/wrobstory/vincent"
-            package_name: vincent
+  - name: VincentGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vincent
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'vincent' is marked as archived on GitHub
+        link: https://github.com/wrobstory/vincent
+        package_name: vincent

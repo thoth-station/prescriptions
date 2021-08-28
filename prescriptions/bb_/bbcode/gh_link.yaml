@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BbcodeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bbcode
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bbcode' is hosted on GitHub"
-            link: "https://github.com/dcwatson/bbcode"
-            package_name: bbcode
+  - name: BbcodeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bbcode
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bbcode' is hosted on GitHub
+        link: https://github.com/dcwatson/bbcode
+        package_name: bbcode

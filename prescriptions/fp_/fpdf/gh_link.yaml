@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FpdfGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fpdf
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fpdf' is hosted on GitHub"
-            link: "https://github.com/reingart/pyfpdf"
-            package_name: fpdf
+  - name: FpdfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fpdf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fpdf' is hosted on GitHub
+        link: https://github.com/reingart/pyfpdf
+        package_name: fpdf

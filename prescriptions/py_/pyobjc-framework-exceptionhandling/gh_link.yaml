@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyobjcFrameworkExceptionhandlingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyobjc-framework-exceptionhandling
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyobjc-framework-exceptionhandling' is hosted on GitHub"
-            link: "https://github.com/ronaldoussoren/pyobjc"
-            package_name: pyobjc-framework-exceptionhandling
+  - name: PyobjcFrameworkExceptionhandlingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-exceptionhandling
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyobjc-framework-exceptionhandling' is hosted on GitHub
+        link: https://github.com/ronaldoussoren/pyobjc
+        package_name: pyobjc-framework-exceptionhandling

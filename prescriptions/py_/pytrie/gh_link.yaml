@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytrieGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytrie
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytrie' is hosted on GitHub"
-            link: "https://github.com/gsakkis/pytrie"
-            package_name: pytrie
+  - name: PytrieGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytrie
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytrie' is hosted on GitHub
+        link: https://github.com/gsakkis/pytrie
+        package_name: pytrie

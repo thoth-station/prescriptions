@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IcalendarGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: icalendar
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'icalendar' is hosted on GitHub"
-            link: "https://github.com/collective/icalendar"
-            package_name: icalendar
+  - name: IcalendarGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: icalendar
+    run:
+      justification:
+      - type: INFO
+        message: Package 'icalendar' is hosted on GitHub
+        link: https://github.com/collective/icalendar
+        package_name: icalendar

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CoverallsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: coveralls
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'coveralls' is hosted on GitHub"
-            link: "https://github.com/TheKevJames/coveralls-python"
-            package_name: coveralls
+  - name: CoverallsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coveralls
+    run:
+      justification:
+      - type: INFO
+        message: Package 'coveralls' is hosted on GitHub
+        link: https://github.com/TheKevJames/coveralls-python
+        package_name: coveralls

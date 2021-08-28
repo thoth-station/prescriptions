@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PipreqsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pipreqs
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pipreqs' is hosted on GitHub"
-            link: "https://github.com/bndr/pipreqs"
-            package_name: pipreqs
+  - name: PipreqsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipreqs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pipreqs' is hosted on GitHub
+        link: https://github.com/bndr/pipreqs
+        package_name: pipreqs

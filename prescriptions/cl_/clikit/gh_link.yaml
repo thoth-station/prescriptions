@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ClikitGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: clikit
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'clikit' is hosted on GitHub"
-            link: "https://github.com/sdispater/clikit"
-            package_name: clikit
+  - name: ClikitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clikit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'clikit' is hosted on GitHub
+        link: https://github.com/sdispater/clikit
+        package_name: clikit

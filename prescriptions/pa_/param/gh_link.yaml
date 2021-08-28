@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ParamGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: param
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'param' is hosted on GitHub"
-            link: "https://github.com/holoviz/param"
-            package_name: param
+  - name: ParamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: param
+    run:
+      justification:
+      - type: INFO
+        message: Package 'param' is hosted on GitHub
+        link: https://github.com/holoviz/param
+        package_name: param

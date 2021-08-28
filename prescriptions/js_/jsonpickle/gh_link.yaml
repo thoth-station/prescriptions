@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JsonpickleGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jsonpickle
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jsonpickle' is hosted on GitHub"
-            link: "https://github.com/jsonpickle/jsonpickle"
-            package_name: jsonpickle
+  - name: JsonpickleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpickle
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jsonpickle' is hosted on GitHub
+        link: https://github.com/jsonpickle/jsonpickle
+        package_name: jsonpickle

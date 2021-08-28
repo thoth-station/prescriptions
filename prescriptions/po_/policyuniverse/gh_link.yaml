@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PolicyuniverseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: policyuniverse
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'policyuniverse' is hosted on GitHub"
-            link: "https://github.com/Netflix-Skunkworks/policyuniverse"
-            package_name: policyuniverse
+  - name: PolicyuniverseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: policyuniverse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'policyuniverse' is hosted on GitHub
+        link: https://github.com/Netflix-Skunkworks/policyuniverse
+        package_name: policyuniverse

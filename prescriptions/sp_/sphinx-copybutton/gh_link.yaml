@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SphinxCopybuttonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sphinx-copybutton
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sphinx-copybutton' is hosted on GitHub"
-            link: "https://github.com/executablebooks/sphinx-copybutton"
-            package_name: sphinx-copybutton
+  - name: SphinxCopybuttonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-copybutton
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-copybutton' is hosted on GitHub
+        link: https://github.com/executablebooks/sphinx-copybutton
+        package_name: sphinx-copybutton

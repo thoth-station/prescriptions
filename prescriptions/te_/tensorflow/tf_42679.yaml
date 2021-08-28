@@ -1,29 +1,29 @@
 units:
   wraps:
-      - name: TensorFlow23DictSummary
-        type: wrap
-        should_include:
-          adviser_pipeline: true
-        match:
-          - state:
-              resolved_dependencies:
-                - name: tensorflow
-                  version: "~=2.3.0"
-          - state:
-              resolved_dependencies:
-                - name: tensorflow-cpu
-                  version: "~=2.3.0"
-          - state:
-              resolved_dependencies:
-                - name: tensorflow-gpu
-                  version: "~=2.3.0"
-          - state:
-              resolved_dependencies:
-                - name: intel-tensorflow
-                  version: "~=2.3.0"
-        run:
-          justification:
-            - type: WARNING
-              message: "tensorflow in version 2.3 can produce misleading output summary"
-              link: tf_42679
-              package_name: tensorflow
+  - name: TensorFlow23DictSummary
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+    - state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ~=2.3.0
+    - state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+          version: ~=2.3.0
+    - state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+          version: ~=2.3.0
+    - state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+          version: ~=2.3.0
+    run:
+      justification:
+      - type: WARNING
+        message: tensorflow in version 2.3 can produce misleading output summary
+        link: tf_42679
+        package_name: tensorflow

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MaildirprocFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: maildirproc
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'maildirproc' is packaged as an RPM in Fedora 34 as 'maildirproc'"
-            link: https://src.fedoraproject.org/rpms/maildirproc
-            package_name: maildirproc
+  - name: MaildirprocFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: maildirproc
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'maildirproc' is packaged as an RPM in Fedora 34 as 'maildirproc'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: maildirproc

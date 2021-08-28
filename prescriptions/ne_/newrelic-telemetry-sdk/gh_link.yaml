@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NewrelicTelemetrySdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: newrelic-telemetry-sdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'newrelic-telemetry-sdk' is hosted on GitHub"
-            link: "https://github.com/newrelic/newrelic-telemetry-sdk-python"
-            package_name: newrelic-telemetry-sdk
+  - name: NewrelicTelemetrySdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: newrelic-telemetry-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'newrelic-telemetry-sdk' is hosted on GitHub
+        link: https://github.com/newrelic/newrelic-telemetry-sdk-python
+        package_name: newrelic-telemetry-sdk

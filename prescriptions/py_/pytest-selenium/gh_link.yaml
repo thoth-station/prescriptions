@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestSeleniumGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-selenium
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-selenium' is hosted on GitHub"
-            link: "https://github.com/pytest-dev/pytest-selenium"
-            package_name: pytest-selenium
+  - name: PytestSeleniumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-selenium
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-selenium' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-selenium
+        package_name: pytest-selenium

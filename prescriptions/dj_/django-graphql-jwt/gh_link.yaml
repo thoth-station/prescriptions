@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoGraphqlJwtGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-graphql-jwt
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-graphql-jwt' is hosted on GitHub"
-            link: "https://github.com/flavors/django-graphql-jwt"
-            package_name: django-graphql-jwt
+  - name: DjangoGraphqlJwtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-graphql-jwt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-graphql-jwt' is hosted on GitHub
+        link: https://github.com/flavors/django-graphql-jwt
+        package_name: django-graphql-jwt

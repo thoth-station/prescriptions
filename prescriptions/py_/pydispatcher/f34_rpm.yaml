@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PydispatcherFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pydispatcher
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pydispatcher' is packaged as an RPM in Fedora 34 as 'python-pydispatcher'"
-            link: https://src.fedoraproject.org/rpms/python-pydispatcher
-            package_name: pydispatcher
+  - name: PydispatcherFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydispatcher
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydispatcher' is packaged as an RPM in Fedora 34 as 'python-pydispatcher'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pydispatcher

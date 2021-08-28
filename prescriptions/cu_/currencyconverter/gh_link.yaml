@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CurrencyconverterGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: currencyconverter
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'currencyconverter' is hosted on GitHub"
-            link: "https://github.com/alexprengere/currencyconverter"
-            package_name: currencyconverter
+  - name: CurrencyconverterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: currencyconverter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'currencyconverter' is hosted on GitHub
+        link: https://github.com/alexprengere/currencyconverter
+        package_name: currencyconverter

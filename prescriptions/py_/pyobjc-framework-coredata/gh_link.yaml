@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyobjcFrameworkCoredataGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyobjc-framework-coredata
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyobjc-framework-coredata' is hosted on GitHub"
-            link: "https://github.com/ronaldoussoren/pyobjc"
-            package_name: pyobjc-framework-coredata
+  - name: PyobjcFrameworkCoredataGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-coredata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyobjc-framework-coredata' is hosted on GitHub
+        link: https://github.com/ronaldoussoren/pyobjc
+        package_name: pyobjc-framework-coredata

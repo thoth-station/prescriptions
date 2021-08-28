@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoCachalotGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-cachalot
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-cachalot' is hosted on GitHub"
-            link: "https://github.com/noripyt/django-cachalot"
-            package_name: django-cachalot
+  - name: DjangoCachalotGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cachalot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-cachalot' is hosted on GitHub
+        link: https://github.com/noripyt/django-cachalot
+        package_name: django-cachalot

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: RpmUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: rpm
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rpm' is packaged as an RPM in UBI8 as 'python3-rpm'"
-            link: rpm
-            package_name: rpm
+  - name: RpmUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpm
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rpm' is packaged as an RPM in UBI8 as 'python3-rpm'
+        link: rpm
+        package_name: rpm

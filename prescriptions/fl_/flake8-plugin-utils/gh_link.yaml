@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Flake8PluginUtilsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flake8-plugin-utils
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flake8-plugin-utils' is hosted on GitHub"
-            link: "https://github.com/afonasev/flake8-plugin-utils"
-            package_name: flake8-plugin-utils
+  - name: Flake8PluginUtilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-plugin-utils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-plugin-utils' is hosted on GitHub
+        link: https://github.com/afonasev/flake8-plugin-utils
+        package_name: flake8-plugin-utils

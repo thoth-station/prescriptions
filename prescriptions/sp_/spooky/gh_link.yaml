@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SpookyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: spooky
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'spooky' is hosted on GitHub"
-            link: "https://github.com/DomainTools/spooky"
-            package_name: spooky
+  - name: SpookyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spooky
+    run:
+      justification:
+      - type: INFO
+        message: Package 'spooky' is hosted on GitHub
+        link: https://github.com/DomainTools/spooky
+        package_name: spooky

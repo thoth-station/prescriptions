@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GunicornGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: gunicorn
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gunicorn' is hosted on GitHub"
-            link: https://github.com/benoitc/gunicorn
-            package_name: gunicorn
+  - name: GunicornGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gunicorn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gunicorn' is hosted on GitHub
+        link: https://github.com/benoitc/gunicorn
+        package_name: gunicorn

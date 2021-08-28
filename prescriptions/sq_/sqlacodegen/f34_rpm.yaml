@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: SqlacodegenFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: sqlacodegen
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sqlacodegen' is packaged as an RPM in Fedora 34 as 'python-sqlacodegen'"
-            link: https://src.fedoraproject.org/rpms/python-sqlacodegen
-            package_name: sqlacodegen
+  - name: SqlacodegenFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlacodegen
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlacodegen' is packaged as an RPM in Fedora 34 as 'python-sqlacodegen'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: sqlacodegen

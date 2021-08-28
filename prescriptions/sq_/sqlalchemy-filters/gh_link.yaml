@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SqlalchemyFiltersGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sqlalchemy-filters
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sqlalchemy-filters' is hosted on GitHub"
-            link: "https://github.com/juliotrigo/sqlalchemy-filters"
-            package_name: sqlalchemy-filters
+  - name: SqlalchemyFiltersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-filters
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlalchemy-filters' is hosted on GitHub
+        link: https://github.com/juliotrigo/sqlalchemy-filters
+        package_name: sqlalchemy-filters

@@ -1,22 +1,26 @@
 units:
   sieves:
-    - name: ImportlibResourcesBackportSieve
-      type: sieve.SkipPackage
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-        runtime_environments:
-          python_version: ">=3.8,<=3.10"
-      match:
-        package_name: importlib-resources
-      run:
-        log:
-          message: "Dependency 'importlib-resources' removed: importlib.resources is available in Python standard library starting Python 3.8"
-          type: WARNING
-        stack_info:
-          - type: WARNING
-            message: "Dependency 'importlib-resources' removed: importlib.resources is available in Python standard library starting Python 3.8"
-            link: backports
+  - name: ImportlibResourcesBackportSieve
+    type: sieve.SkipPackage
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+      runtime_environments:
+        python_version: ">=3.8,<=3.10"
+    match:
+      package_name: importlib-resources
+    run:
+      log:
+        message: >-
+          Dependency 'importlib-resources' removed: importlib.resources is available in
+          Python standard library starting Python 3.8
+        type: WARNING
+      stack_info:
+      - type: WARNING
+        message: >-
+          Dependency 'importlib-resources' removed: importlib.resources is available in
+          Python standard library starting Python 3.8
+        link: backports

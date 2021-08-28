@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonArangoGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-arango
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-arango' is hosted on GitHub"
-            link: "https://github.com/joowani/python-arango"
-            package_name: python-arango
+  - name: PythonArangoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-arango
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-arango' is hosted on GitHub
+        link: https://github.com/joowani/python-arango
+        package_name: python-arango

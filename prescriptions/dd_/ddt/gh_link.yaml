@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DdtGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ddt
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ddt' is hosted on GitHub"
-            link: "https://github.com/datadriventests/ddt"
-            package_name: ddt
+  - name: DdtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ddt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ddt' is hosted on GitHub
+        link: https://github.com/datadriventests/ddt
+        package_name: ddt

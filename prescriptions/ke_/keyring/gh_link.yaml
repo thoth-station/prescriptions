@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KeyringGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: keyring
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'keyring' is hosted on GitHub"
-            link: "https://github.com/jaraco/keyring"
-            package_name: keyring
+  - name: KeyringGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyring
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keyring' is hosted on GitHub
+        link: https://github.com/jaraco/keyring
+        package_name: keyring

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LangdetectGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: langdetect
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'langdetect' is hosted on GitHub"
-            link: "https://github.com/Mimino666/langdetect"
-            package_name: langdetect
+  - name: LangdetectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: langdetect
+    run:
+      justification:
+      - type: INFO
+        message: Package 'langdetect' is hosted on GitHub
+        link: https://github.com/Mimino666/langdetect
+        package_name: langdetect

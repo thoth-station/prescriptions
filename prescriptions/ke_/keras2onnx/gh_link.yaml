@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Keras2onnxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: keras2onnx
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'keras2onnx' is hosted on GitHub"
-            link: "https://github.com/onnx/keras-onnx"
-            package_name: keras2onnx
+  - name: Keras2onnxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras2onnx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keras2onnx' is hosted on GitHub
+        link: https://github.com/onnx/keras-onnx
+        package_name: keras2onnx

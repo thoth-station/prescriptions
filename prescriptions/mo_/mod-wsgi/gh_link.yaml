@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ModWsgiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mod-wsgi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mod-wsgi' is hosted on GitHub"
-            link: "https://github.com/GrahamDumpleton/mod_wsgi"
-            package_name: mod-wsgi
+  - name: ModWsgiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mod-wsgi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mod-wsgi' is hosted on GitHub
+        link: https://github.com/GrahamDumpleton/mod_wsgi
+        package_name: mod-wsgi

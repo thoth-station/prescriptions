@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RasaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: rasa
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rasa' is hosted on GitHub"
-            link: "https://github.com/rasahq/rasa"
-            package_name: rasa
+  - name: RasaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rasa' is hosted on GitHub
+        link: https://github.com/rasahq/rasa
+        package_name: rasa

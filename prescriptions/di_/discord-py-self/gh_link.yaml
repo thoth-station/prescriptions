@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DiscordPySelfGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: discord-py-self
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'discord-py-self' is hosted on GitHub"
-            link: "https://github.com/dolfies/discord.py-self"
-            package_name: discord-py-self
+  - name: DiscordPySelfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-py-self
+    run:
+      justification:
+      - type: INFO
+        message: Package 'discord-py-self' is hosted on GitHub
+        link: https://github.com/dolfies/discord.py-self
+        package_name: discord-py-self

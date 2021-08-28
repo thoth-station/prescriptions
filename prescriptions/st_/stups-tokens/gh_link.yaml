@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StupsTokensGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: stups-tokens
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'stups-tokens' is hosted on GitHub"
-            link: "https://github.com/zalando-stups/python-tokens"
-            package_name: stups-tokens
+  - name: StupsTokensGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-tokens
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stups-tokens' is hosted on GitHub
+        link: https://github.com/zalando-stups/python-tokens
+        package_name: stups-tokens

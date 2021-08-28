@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WebsocketClientGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: websocket-client
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'websocket-client' is hosted on GitHub"
-            link: "https://github.com/websocket-client/websocket-client"
-            package_name: websocket-client
+  - name: WebsocketClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websocket-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'websocket-client' is hosted on GitHub
+        link: https://github.com/websocket-client/websocket-client
+        package_name: websocket-client

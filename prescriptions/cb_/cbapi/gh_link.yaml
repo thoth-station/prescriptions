@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CbapiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cbapi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cbapi' is hosted on GitHub"
-            link: "https://github.com/carbonblack/cbapi-python"
-            package_name: cbapi
+  - name: CbapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cbapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cbapi' is hosted on GitHub
+        link: https://github.com/carbonblack/cbapi-python
+        package_name: cbapi

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CibuildwheelGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cibuildwheel
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cibuildwheel' is hosted on GitHub"
-            link: "https://github.com/pypa/cibuildwheel"
-            package_name: cibuildwheel
+  - name: CibuildwheelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cibuildwheel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cibuildwheel' is hosted on GitHub
+        link: https://github.com/pypa/cibuildwheel
+        package_name: cibuildwheel

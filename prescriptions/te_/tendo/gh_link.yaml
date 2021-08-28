@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TendoGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tendo
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tendo' is hosted on GitHub"
-            link: "https://github.com/pycontribs/tendo"
-            package_name: tendo
+  - name: TendoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tendo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tendo' is hosted on GitHub
+        link: https://github.com/pycontribs/tendo
+        package_name: tendo

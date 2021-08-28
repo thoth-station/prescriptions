@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyteGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyte
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyte' is hosted on GitHub"
-            link: "https://github.com/selectel/pyte"
-            package_name: pyte
+  - name: PyteGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyte
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyte' is hosted on GitHub
+        link: https://github.com/selectel/pyte
+        package_name: pyte

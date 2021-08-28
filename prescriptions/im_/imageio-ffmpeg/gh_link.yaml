@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ImageioFfmpegGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: imageio-ffmpeg
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'imageio-ffmpeg' is hosted on GitHub"
-            link: "https://github.com/imageio/imageio-ffmpeg"
-            package_name: imageio-ffmpeg
+  - name: ImageioFfmpegGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imageio-ffmpeg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'imageio-ffmpeg' is hosted on GitHub
+        link: https://github.com/imageio/imageio-ffmpeg
+        package_name: imageio-ffmpeg

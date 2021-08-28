@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BcpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bcp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bcp' is hosted on GitHub"
-            link: "https://github.com/fivestack/bcp"
-            package_name: bcp
+  - name: BcpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bcp' is hosted on GitHub
+        link: https://github.com/fivestack/bcp
+        package_name: bcp

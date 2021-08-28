@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KaggleGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: kaggle
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kaggle' is hosted on GitHub"
-            link: "https://github.com/Kaggle/kaggle-api"
-            package_name: kaggle
+  - name: KaggleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaggle
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kaggle' is hosted on GitHub
+        link: https://github.com/Kaggle/kaggle-api
+        package_name: kaggle

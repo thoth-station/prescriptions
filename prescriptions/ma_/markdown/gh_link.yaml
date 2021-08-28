@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MarkdownGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: markdown
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'markdown' is hosted on GitHub"
-            link: "https://github.com/Python-Markdown/markdown"
-            package_name: markdown
+  - name: MarkdownGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markdown
+    run:
+      justification:
+      - type: INFO
+        message: Package 'markdown' is hosted on GitHub
+        link: https://github.com/Python-Markdown/markdown
+        package_name: markdown

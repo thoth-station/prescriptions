@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SaspyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: saspy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'saspy' is hosted on GitHub"
-            link: "https://github.com/sassoftware/saspy"
-            package_name: saspy
+  - name: SaspyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: saspy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'saspy' is hosted on GitHub
+        link: https://github.com/sassoftware/saspy
+        package_name: saspy

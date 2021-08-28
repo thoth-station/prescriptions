@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: FontdumpFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: fontdump
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fontdump' is packaged as an RPM in Fedora 34 as 'fontdump'"
-            link: https://src.fedoraproject.org/rpms/fontdump
-            package_name: fontdump
+  - name: FontdumpFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: fontdump
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fontdump' is packaged as an RPM in Fedora 34 as 'fontdump'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: fontdump

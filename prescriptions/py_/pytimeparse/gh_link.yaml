@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytimeparseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytimeparse
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytimeparse' is hosted on GitHub"
-            link: "https://github.com/wroberts/pytimeparse"
-            package_name: pytimeparse
+  - name: PytimeparseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytimeparse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytimeparse' is hosted on GitHub
+        link: https://github.com/wroberts/pytimeparse
+        package_name: pytimeparse

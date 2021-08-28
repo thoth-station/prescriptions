@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleApiHelperGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-api-helper
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-api-helper' is hosted on GitHub"
-            link: "https://github.com/r00tat/google-api-helper"
-            package_name: google-api-helper
+  - name: GoogleApiHelperGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-api-helper
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-api-helper' is hosted on GitHub
+        link: https://github.com/r00tat/google-api-helper
+        package_name: google-api-helper

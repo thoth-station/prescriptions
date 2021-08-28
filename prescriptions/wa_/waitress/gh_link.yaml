@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WaitressGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: waitress
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'waitress' is hosted on GitHub"
-            link: "https://github.com/Pylons/waitress"
-            package_name: waitress
+  - name: WaitressGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waitress
+    run:
+      justification:
+      - type: INFO
+        message: Package 'waitress' is hosted on GitHub
+        link: https://github.com/Pylons/waitress
+        package_name: waitress

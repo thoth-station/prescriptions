@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ScikitLearnGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: scikit-learn
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'scikit-learn' is hosted on GitHub"
-            link: "https://github.com/scikit-learn/scikit-learn"
-            package_name: scikit-learn
+  - name: ScikitLearnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-learn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scikit-learn' is hosted on GitHub
+        link: https://github.com/scikit-learn/scikit-learn
+        package_name: scikit-learn

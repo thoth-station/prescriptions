@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BlisGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: blis
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'blis' is hosted on GitHub"
-            link: "https://github.com/explosion/cython-blis"
-            package_name: blis
+  - name: BlisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blis' is hosted on GitHub
+        link: https://github.com/explosion/cython-blis
+        package_name: blis

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoTastypieGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-tastypie
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-tastypie' is hosted on GitHub"
-            link: "https://github.com/django-tastypie/django-tastypie"
-            package_name: django-tastypie
+  - name: DjangoTastypieGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-tastypie
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-tastypie' is hosted on GitHub
+        link: https://github.com/django-tastypie/django-tastypie
+        package_name: django-tastypie

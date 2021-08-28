@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JupyterlabWidgetsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jupyterlab-widgets
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jupyterlab-widgets' is hosted on GitHub"
-            link: "https://github.com/jupyter-widgets/ipywidgets"
-            package_name: jupyterlab-widgets
+  - name: JupyterlabWidgetsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterlab-widgets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyterlab-widgets' is hosted on GitHub
+        link: https://github.com/jupyter-widgets/ipywidgets
+        package_name: jupyterlab-widgets

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SktimeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sktime
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sktime' is hosted on GitHub"
-            link: "https://github.com/alan-turing-institute/sktime"
-            package_name: sktime
+  - name: SktimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sktime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sktime' is hosted on GitHub
+        link: https://github.com/alan-turing-institute/sktime
+        package_name: sktime

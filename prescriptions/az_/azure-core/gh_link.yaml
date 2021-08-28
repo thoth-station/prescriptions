@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureCoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-core
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-core' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-core
+  - name: AzureCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-core' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-core

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Pywin32GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pywin32
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pywin32' is hosted on GitHub"
-            link: "https://github.com/mhammond/pywin32"
-            package_name: pywin32
+  - name: Pywin32GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywin32
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pywin32' is hosted on GitHub
+        link: https://github.com/mhammond/pywin32
+        package_name: pywin32

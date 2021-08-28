@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PkihealthcheckFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pkihealthcheck
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pkihealthcheck' is packaged as an RPM in Fedora 34 as 'pki-core'"
-            link: https://src.fedoraproject.org/rpms/pki-core
-            package_name: pkihealthcheck
+  - name: PkihealthcheckFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pkihealthcheck
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pkihealthcheck' is packaged as an RPM in Fedora 34 as 'pki-core'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pkihealthcheck

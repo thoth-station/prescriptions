@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ToolzGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: toolz
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'toolz' is hosted on GitHub"
-            link: "https://github.com/pytoolz/toolz"
-            package_name: toolz
+  - name: ToolzGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toolz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'toolz' is hosted on GitHub
+        link: https://github.com/pytoolz/toolz
+        package_name: toolz

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: ProductivityFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: productivity
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'productivity' is packaged as an RPM in Fedora 34 as 'python-productivity'"
-            link: https://src.fedoraproject.org/rpms/python-productivity
-            package_name: productivity
+  - name: ProductivityFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: productivity
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'productivity' is packaged as an RPM in Fedora 34 as 'python-productivity'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: productivity

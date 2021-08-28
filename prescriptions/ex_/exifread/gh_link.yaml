@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ExifreadGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: exifread
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'exifread' is hosted on GitHub"
-            link: "https://github.com/ianare/exif-py"
-            package_name: exifread
+  - name: ExifreadGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exifread
+    run:
+      justification:
+      - type: INFO
+        message: Package 'exifread' is hosted on GitHub
+        link: https://github.com/ianare/exif-py
+        package_name: exifread

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyhclGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyhcl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyhcl' is hosted on GitHub"
-            link: "https://github.com/virtuald/pyhcl"
-            package_name: pyhcl
+  - name: PyhclGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhcl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyhcl' is hosted on GitHub
+        link: https://github.com/virtuald/pyhcl
+        package_name: pyhcl

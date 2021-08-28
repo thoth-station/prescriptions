@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PysocksGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pysocks
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pysocks' is hosted on GitHub"
-            link: "https://github.com/Anorov/PySocks"
-            package_name: pysocks
+  - name: PysocksGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysocks
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pysocks' is hosted on GitHub
+        link: https://github.com/Anorov/PySocks
+        package_name: pysocks

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TwistedGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: twisted
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'twisted' is hosted on GitHub"
-            link: "https://github.com/twisted/twisted"
-            package_name: twisted
+  - name: TwistedGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted
+    run:
+      justification:
+      - type: INFO
+        message: Package 'twisted' is hosted on GitHub
+        link: https://github.com/twisted/twisted
+        package_name: twisted

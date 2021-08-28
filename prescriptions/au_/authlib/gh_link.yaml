@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AuthlibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: authlib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'authlib' is hosted on GitHub"
-            link: "https://github.com/lepture/authlib"
-            package_name: authlib
+  - name: AuthlibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'authlib' is hosted on GitHub
+        link: https://github.com/lepture/authlib
+        package_name: authlib

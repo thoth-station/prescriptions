@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NetworkxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: networkx
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'networkx' is hosted on GitHub"
-            link: "https://github.com/networkx/networkx"
-            package_name: networkx
+  - name: NetworkxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: networkx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'networkx' is hosted on GitHub
+        link: https://github.com/networkx/networkx
+        package_name: networkx

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: TestcloudFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: testcloud
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'testcloud' is packaged as an RPM in Fedora 34 as 'testcloud'"
-            link: https://src.fedoraproject.org/rpms/testcloud
-            package_name: testcloud
+  - name: TestcloudFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: testcloud
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'testcloud' is packaged as an RPM in Fedora 34 as 'testcloud'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: testcloud

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestFaulthandlerGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-faulthandler
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pytest-faulthandler' is marked as archived on GitHub"
-            link: "https://github.com/pytest-dev/pytest-faulthandler"
-            package_name: pytest-faulthandler
+  - name: PytestFaulthandlerGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-faulthandler
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-faulthandler' is marked as archived on GitHub
+        link: https://github.com/pytest-dev/pytest-faulthandler
+        package_name: pytest-faulthandler

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StarletteExporterGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: starlette-exporter
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'starlette-exporter' is hosted on GitHub"
-            link: "https://github.com/stephenhillier/starlette_exporter"
-            package_name: starlette-exporter
+  - name: StarletteExporterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: starlette-exporter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'starlette-exporter' is hosted on GitHub
+        link: https://github.com/stephenhillier/starlette_exporter
+        package_name: starlette-exporter

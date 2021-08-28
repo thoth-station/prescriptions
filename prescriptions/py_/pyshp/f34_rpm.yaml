@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PyshpFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyshp
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyshp' is packaged as an RPM in Fedora 34 as 'pyshp'"
-            link: https://src.fedoraproject.org/rpms/pyshp
-            package_name: pyshp
+  - name: PyshpFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyshp
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyshp' is packaged as an RPM in Fedora 34 as 'pyshp'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyshp

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ApipkgGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: apipkg
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'apipkg' is hosted on GitHub"
-            link: "https://github.com/pytest-dev/apipkg"
-            package_name: apipkg
+  - name: ApipkgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apipkg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apipkg' is hosted on GitHub
+        link: https://github.com/pytest-dev/apipkg
+        package_name: apipkg

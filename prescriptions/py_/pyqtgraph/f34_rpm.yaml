@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PyqtgraphFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyqtgraph
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyqtgraph' is packaged as an RPM in Fedora 34 as 'python-pyqtgraph'"
-            link: https://src.fedoraproject.org/rpms/python-pyqtgraph
-            package_name: pyqtgraph
+  - name: PyqtgraphFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyqtgraph
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyqtgraph' is packaged as an RPM in Fedora 34 as 'python-pyqtgraph'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyqtgraph

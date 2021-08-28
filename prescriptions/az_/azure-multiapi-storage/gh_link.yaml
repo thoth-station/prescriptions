@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureMultiapiStorageGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-multiapi-storage
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-multiapi-storage' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-multiapi-storage-python"
-            package_name: azure-multiapi-storage
+  - name: AzureMultiapiStorageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-multiapi-storage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-multiapi-storage' is hosted on GitHub
+        link: https://github.com/Azure/azure-multiapi-storage-python
+        package_name: azure-multiapi-storage

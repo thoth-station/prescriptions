@@ -1,25 +1,27 @@
 units:
   wraps:
-    - name: TensorFlowOneDNNOptsWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        state:
-          resolved_dependencies:
-            - name: tensorflow
-              version: ">=2.5.0"
-      run:
-        stack_info:
-          - type: INFO
-            message: "oneAPI Deep Neural Network Library (oneDNN) CPU performance optimizations from Intel-optimized TensorFlow can be enabled by setting TF_ENABLE_ONEDNN_OPTS=1"
-            link: https://github.com/tensorflow/tensorflow/releases/tag/v2.5.0
-        advised_manifest_changes:
-          - apiVersion: "apps.openshift.io/v1"
-            kind: DeploymentConfig
-            patch:
-              op: add
-              path: "/spec/template/spec/containers/0/env/0"
-              value:
-                name: "TF_ENABLE_ONEDNN_OPTS"
-                value: "1"
+  - name: TensorFlowOneDNNOptsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ">=2.5.0"
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          oneAPI Deep Neural Network Library (oneDNN) CPU performance optimizations from
+          Intel-optimized TensorFlow can be enabled by setting TF_ENABLE_ONEDNN_OPTS=1
+        link: https://github.com/tensorflow/tensorflow/releases/tag/v2.5.0
+      advised_manifest_changes:
+      - apiVersion: apps.openshift.io/v1
+        kind: DeploymentConfig
+        patch:
+          op: add
+          path: /spec/template/spec/containers/0/env/0
+          value:
+            name: TF_ENABLE_ONEDNN_OPTS
+            value: "1"

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Pdir2Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pdir2
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pdir2' is packaged as an RPM in Fedora 34 as 'python-pdir2'"
-            link: https://src.fedoraproject.org/rpms/python-pdir2
-            package_name: pdir2
+  - name: Pdir2Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdir2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pdir2' is packaged as an RPM in Fedora 34 as 'python-pdir2'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pdir2

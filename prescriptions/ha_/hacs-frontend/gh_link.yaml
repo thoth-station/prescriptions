@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HacsFrontendGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: hacs-frontend
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'hacs-frontend' is hosted on GitHub"
-            link: "https://github.com/hacs/frontend"
-            package_name: hacs-frontend
+  - name: HacsFrontendGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hacs-frontend
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hacs-frontend' is hosted on GitHub
+        link: https://github.com/hacs/frontend
+        package_name: hacs-frontend

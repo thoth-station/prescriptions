@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Boto3Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: boto3
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'boto3' is packaged as an RPM in Fedora 34 as 'python-boto3'"
-            link: https://src.fedoraproject.org/rpms/python-boto3
-            package_name: boto3
+  - name: Boto3Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boto3' is packaged as an RPM in Fedora 34 as 'python-boto3'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: boto3

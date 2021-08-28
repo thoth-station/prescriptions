@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VtPyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: vt-py
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'vt-py' is hosted on GitHub"
-            link: "https://github.com/VirusTotal/vt-py"
-            package_name: vt-py
+  - name: VtPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vt-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vt-py' is hosted on GitHub
+        link: https://github.com/VirusTotal/vt-py
+        package_name: vt-py

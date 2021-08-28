@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TestcontainersGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: testcontainers
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'testcontainers' is hosted on GitHub"
-            link: "https://github.com/testcontainers/testcontainers-python"
-            package_name: testcontainers
+  - name: TestcontainersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testcontainers
+    run:
+      justification:
+      - type: INFO
+        message: Package 'testcontainers' is hosted on GitHub
+        link: https://github.com/testcontainers/testcontainers-python
+        package_name: testcontainers

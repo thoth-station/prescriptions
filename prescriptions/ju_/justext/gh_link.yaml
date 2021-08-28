@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JustextGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: justext
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'justext' is hosted on GitHub"
-            link: "https://github.com/miso-belica/jusText"
-            package_name: justext
+  - name: JustextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: justext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'justext' is hosted on GitHub
+        link: https://github.com/miso-belica/jusText
+        package_name: justext

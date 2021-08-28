@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ShapelyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: shapely
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'shapely' is hosted on GitHub"
-            link: "https://github.com/Toblerity/Shapely"
-            package_name: shapely
+  - name: ShapelyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shapely
+    run:
+      justification:
+      - type: INFO
+        message: Package 'shapely' is hosted on GitHub
+        link: https://github.com/Toblerity/Shapely
+        package_name: shapely

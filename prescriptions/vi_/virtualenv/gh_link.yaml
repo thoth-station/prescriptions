@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: VirtualenvGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: virtualenv
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'virtualenv' is hosted on GitHub"
-            link: "https://github.com/pypa/virtualenv"
-            package_name: virtualenv
+  - name: VirtualenvGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: virtualenv
+    run:
+      justification:
+      - type: INFO
+        message: Package 'virtualenv' is hosted on GitHub
+        link: https://github.com/pypa/virtualenv
+        package_name: virtualenv

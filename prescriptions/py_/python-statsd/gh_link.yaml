@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonStatsdGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-statsd
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-statsd' is hosted on GitHub"
-            link: "https://github.com/WoLpH/python-statsd"
-            package_name: python-statsd
+  - name: PythonStatsdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-statsd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-statsd' is hosted on GitHub
+        link: https://github.com/WoLpH/python-statsd
+        package_name: python-statsd

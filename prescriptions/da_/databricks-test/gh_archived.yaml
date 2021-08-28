@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DatabricksTestGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: databricks-test
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'databricks-test' is marked as archived on GitHub"
-            link: "https://github.com/microsoft/DataOps"
-            package_name: databricks-test
+  - name: DatabricksTestGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databricks-test
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'databricks-test' is marked as archived on GitHub
+        link: https://github.com/microsoft/DataOps
+        package_name: databricks-test

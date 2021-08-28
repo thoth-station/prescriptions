@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AzureMgmtDatalakeStoreGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: azure-mgmt-datalake-store
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'azure-mgmt-datalake-store' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-sdk-for-python"
-            package_name: azure-mgmt-datalake-store
+  - name: AzureMgmtDatalakeStoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-datalake-store
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-mgmt-datalake-store' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-mgmt-datalake-store

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TorchvisionGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: torchvision
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'torchvision' is hosted on GitHub"
-            link: "https://github.com/pytorch/vision"
-            package_name: torchvision
+  - name: TorchvisionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchvision
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torchvision' is hosted on GitHub
+        link: https://github.com/pytorch/vision
+        package_name: torchvision

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyobjcFrameworkSyncservicesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyobjc-framework-syncservices
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyobjc-framework-syncservices' is hosted on GitHub"
-            link: "https://github.com/ronaldoussoren/pyobjc"
-            package_name: pyobjc-framework-syncservices
+  - name: PyobjcFrameworkSyncservicesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-syncservices
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyobjc-framework-syncservices' is hosted on GitHub
+        link: https://github.com/ronaldoussoren/pyobjc
+        package_name: pyobjc-framework-syncservices

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GensimGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: gensim
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gensim' is hosted on GitHub"
-            link: "https://github.com/RaRe-Technologies/gensim"
-            package_name: gensim
+  - name: GensimGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gensim
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gensim' is hosted on GitHub
+        link: https://github.com/RaRe-Technologies/gensim
+        package_name: gensim

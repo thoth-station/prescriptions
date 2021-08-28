@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SqlalchemyStubsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sqlalchemy-stubs
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sqlalchemy-stubs' is hosted on GitHub"
-            link: "https://github.com/dropbox/sqlalchemy-stubs"
-            package_name: sqlalchemy-stubs
+  - name: SqlalchemyStubsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-stubs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlalchemy-stubs' is hosted on GitHub
+        link: https://github.com/dropbox/sqlalchemy-stubs
+        package_name: sqlalchemy-stubs

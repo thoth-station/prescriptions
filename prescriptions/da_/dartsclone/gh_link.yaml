@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DartscloneGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dartsclone
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dartsclone' is hosted on GitHub"
-            link: "https://github.com/rixwew/darts-clone-python"
-            package_name: dartsclone
+  - name: DartscloneGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dartsclone
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dartsclone' is hosted on GitHub
+        link: https://github.com/rixwew/darts-clone-python
+        package_name: dartsclone

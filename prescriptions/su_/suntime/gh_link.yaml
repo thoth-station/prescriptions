@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SuntimeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: suntime
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'suntime' is hosted on GitHub"
-            link: "https://github.com/SatAgro/suntime"
-            package_name: suntime
+  - name: SuntimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: suntime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'suntime' is hosted on GitHub
+        link: https://github.com/SatAgro/suntime
+        package_name: suntime

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: YacsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: yacs
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'yacs' is hosted on GitHub"
-            link: "https://github.com/rbgirshick/yacs"
-            package_name: yacs
+  - name: YacsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yacs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yacs' is hosted on GitHub
+        link: https://github.com/rbgirshick/yacs
+        package_name: yacs

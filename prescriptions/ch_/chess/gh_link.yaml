@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ChessGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: chess
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'chess' is hosted on GitHub"
-            link: "https://github.com/niklasf/python-chess"
-            package_name: chess
+  - name: ChessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chess
+    run:
+      justification:
+      - type: INFO
+        message: Package 'chess' is hosted on GitHub
+        link: https://github.com/niklasf/python-chess
+        package_name: chess

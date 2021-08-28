@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Boto3TypeAnnotationsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: boto3-type-annotations
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'boto3-type-annotations' is hosted on GitHub"
-            link: "https://github.com/alliefitter/boto3_type_annotations"
-            package_name: boto3-type-annotations
+  - name: Boto3TypeAnnotationsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto3-type-annotations
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boto3-type-annotations' is hosted on GitHub
+        link: https://github.com/alliefitter/boto3_type_annotations
+        package_name: boto3-type-annotations

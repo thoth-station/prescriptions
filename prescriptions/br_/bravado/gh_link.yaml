@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BravadoGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bravado
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bravado' is hosted on GitHub"
-            link: "https://github.com/Yelp/bravado"
-            package_name: bravado
+  - name: BravadoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bravado
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bravado' is hosted on GitHub
+        link: https://github.com/Yelp/bravado
+        package_name: bravado

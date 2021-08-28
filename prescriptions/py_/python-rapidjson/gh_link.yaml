@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonRapidjsonGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-rapidjson
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-rapidjson' is hosted on GitHub"
-            link: "https://github.com/python-rapidjson/python-rapidjson"
-            package_name: python-rapidjson
+  - name: PythonRapidjsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-rapidjson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-rapidjson' is hosted on GitHub
+        link: https://github.com/python-rapidjson/python-rapidjson
+        package_name: python-rapidjson

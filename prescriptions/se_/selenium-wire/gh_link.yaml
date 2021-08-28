@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SeleniumWireGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: selenium-wire
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'selenium-wire' is hosted on GitHub"
-            link: "https://github.com/wkeeling/selenium-wire"
-            package_name: selenium-wire
+  - name: SeleniumWireGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selenium-wire
+    run:
+      justification:
+      - type: INFO
+        message: Package 'selenium-wire' is hosted on GitHub
+        link: https://github.com/wkeeling/selenium-wire
+        package_name: selenium-wire

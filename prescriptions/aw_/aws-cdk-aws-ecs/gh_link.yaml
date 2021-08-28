@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsCdkAwsEcsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws-cdk-aws-ecs
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws-cdk-aws-ecs' is hosted on GitHub"
-            link: "https://github.com/aws/aws-cdk"
-            package_name: aws-cdk-aws-ecs
+  - name: AwsCdkAwsEcsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-ecs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-ecs' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-ecs

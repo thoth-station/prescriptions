@@ -1,50 +1,54 @@
 units:
   steps:
-    - name: TensorFlow21Urllib3Step
-      type: step
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-      match:
-        - package_version:
-            name: urllib3
-            version: "<=1.5,>=1.2"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow
-                version: "~=2.1.0"
-        - package_version:
-            name: urllib3
-            version: "<=1.5,>=1.2"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow-cpu
-                version: "~=2.1.0"
-        - package_version:
-            name: urllib3
-            version: "<=1.5,>=1.2"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow-gpu
-                version: "~=2.1.0"
-        - package_version:
-            name: urllib3
-            version: "<=1.5,>=1.2"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: intel-tensorflow
-                version: "~=2.1.0"
-      run:
-        multi_package_resolution: false
-        stack_info:
-          - type: WARNING
-            message: "tensorflow in version 2.1 can cause runtime errors when imported, caused by incompatibility between urllib3 and six packages"
-            link: tf_21_urllib3
-        not_acceptable: "tensorflow in version 2.1 can cause runtime errors when imported, caused by incompatibility between urllib3 and six packages"
+  - name: TensorFlow21Urllib3Step
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+    match:
+    - package_version:
+        name: urllib3
+        version: <=1.5,>=1.2
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ~=2.1.0
+    - package_version:
+        name: urllib3
+        version: <=1.5,>=1.2
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+          version: ~=2.1.0
+    - package_version:
+        name: urllib3
+        version: <=1.5,>=1.2
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+          version: ~=2.1.0
+    - package_version:
+        name: urllib3
+        version: <=1.5,>=1.2
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+          version: ~=2.1.0
+    run:
+      multi_package_resolution: false
+      stack_info:
+      - type: WARNING
+        message: >-
+          tensorflow in version 2.1 can cause runtime errors when imported,
+          caused by incompatibility between urllib3 and six packages
+        link: tf_21_urllib3
+      not_acceptable: >-
+        tensorflow in version 2.1 can cause runtime errors when imported,
+        caused by incompatibility between urllib3 and six packages

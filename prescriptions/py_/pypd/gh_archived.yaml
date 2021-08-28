@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PypdGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pypd
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pypd' is marked as archived on GitHub"
-            link: "https://github.com/PagerDuty/pagerduty-api-python-client"
-            package_name: pypd
+  - name: PypdGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pypd' is marked as archived on GitHub
+        link: https://github.com/PagerDuty/pagerduty-api-python-client
+        package_name: pypd

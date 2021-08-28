@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PygerdutyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pygerduty
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygerduty' is hosted on GitHub"
-            link: "https://github.com/dropbox/pygerduty"
-            package_name: pygerduty
+  - name: PygerdutyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygerduty
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygerduty' is hosted on GitHub
+        link: https://github.com/dropbox/pygerduty
+        package_name: pygerduty

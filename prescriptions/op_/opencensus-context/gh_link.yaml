@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OpencensusContextGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: opencensus-context
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'opencensus-context' is hosted on GitHub"
-            link: "https://github.com/census-instrumentation/opencensus-python"
-            package_name: opencensus-context
+  - name: OpencensusContextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus-context
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opencensus-context' is hosted on GitHub
+        link: https://github.com/census-instrumentation/opencensus-python
+        package_name: opencensus-context

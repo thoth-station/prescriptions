@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: InvenioRecordsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: invenio-records
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'invenio-records' is hosted on GitHub"
-            link: "https://github.com/inveniosoftware/invenio-records"
-            package_name: invenio-records
+  - name: InvenioRecordsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-records
+    run:
+      justification:
+      - type: INFO
+        message: Package 'invenio-records' is hosted on GitHub
+        link: https://github.com/inveniosoftware/invenio-records
+        package_name: invenio-records

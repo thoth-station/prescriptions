@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PyxattrFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyxattr
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyxattr' is packaged as an RPM in Fedora 34 as 'pyxattr'"
-            link: https://src.fedoraproject.org/rpms/pyxattr
-            package_name: pyxattr
+  - name: PyxattrFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxattr
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyxattr' is packaged as an RPM in Fedora 34 as 'pyxattr'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyxattr

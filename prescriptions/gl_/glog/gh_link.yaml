@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GlogGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: glog
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'glog' is hosted on GitHub"
-            link: "https://github.com/benley/python-glog"
-            package_name: glog
+  - name: GlogGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glog
+    run:
+      justification:
+      - type: INFO
+        message: Package 'glog' is hosted on GitHub
+        link: https://github.com/benley/python-glog
+        package_name: glog

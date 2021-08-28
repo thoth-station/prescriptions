@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: TraitletsFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: traitlets
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'traitlets' is packaged as an RPM in Fedora 34 as 'python-traitlets'"
-            link: https://src.fedoraproject.org/rpms/python-traitlets
-            package_name: traitlets
+  - name: TraitletsFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: traitlets
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'traitlets' is packaged as an RPM in Fedora 34 as 'python-traitlets'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: traitlets

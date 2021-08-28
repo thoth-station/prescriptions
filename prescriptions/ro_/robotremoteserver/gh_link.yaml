@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RobotremoteserverGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: robotremoteserver
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'robotremoteserver' is hosted on GitHub"
-            link: "https://github.com/robotframework/PythonRemoteServer"
-            package_name: robotremoteserver
+  - name: RobotremoteserverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotremoteserver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'robotremoteserver' is hosted on GitHub
+        link: https://github.com/robotframework/PythonRemoteServer
+        package_name: robotremoteserver

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CachelibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cachelib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cachelib' is hosted on GitHub"
-            link: "https://github.com/pallets/cachelib"
-            package_name: cachelib
+  - name: CachelibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachelib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cachelib' is hosted on GitHub
+        link: https://github.com/pallets/cachelib
+        package_name: cachelib

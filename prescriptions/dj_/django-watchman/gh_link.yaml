@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoWatchmanGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-watchman
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-watchman' is hosted on GitHub"
-            link: "https://github.com/mwarkentin/django-watchman"
-            package_name: django-watchman
+  - name: DjangoWatchmanGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-watchman
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-watchman' is hosted on GitHub
+        link: https://github.com/mwarkentin/django-watchman
+        package_name: django-watchman

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleadsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: googleads
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'googleads' is hosted on GitHub"
-            link: "https://github.com/googleads/googleads-python-lib"
-            package_name: googleads
+  - name: GoogleadsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleads
+    run:
+      justification:
+      - type: INFO
+        message: Package 'googleads' is hosted on GitHub
+        link: https://github.com/googleads/googleads-python-lib
+        package_name: googleads

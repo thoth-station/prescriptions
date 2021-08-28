@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoCompatGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-compat
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-compat' is hosted on GitHub"
-            link: "https://github.com/arteria/django-compat"
-            package_name: django-compat
+  - name: DjangoCompatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-compat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-compat' is hosted on GitHub
+        link: https://github.com/arteria/django-compat
+        package_name: django-compat

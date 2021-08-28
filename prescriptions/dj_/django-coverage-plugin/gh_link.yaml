@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoCoveragePluginGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-coverage-plugin
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-coverage-plugin' is hosted on GitHub"
-            link: "https://github.com/nedbat/django_coverage_plugin"
-            package_name: django-coverage-plugin
+  - name: DjangoCoveragePluginGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-coverage-plugin
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-coverage-plugin' is hosted on GitHub
+        link: https://github.com/nedbat/django_coverage_plugin
+        package_name: django-coverage-plugin

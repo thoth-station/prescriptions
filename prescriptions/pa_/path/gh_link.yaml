@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PathGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: path
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'path' is hosted on GitHub"
-            link: "https://github.com/jaraco/path"
-            package_name: path
+  - name: PathGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: path
+    run:
+      justification:
+      - type: INFO
+        message: Package 'path' is hosted on GitHub
+        link: https://github.com/jaraco/path
+        package_name: path

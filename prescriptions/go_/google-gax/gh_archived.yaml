@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleGaxGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-gax
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'google-gax' is marked as archived on GitHub"
-            link: "https://github.com/googleapis/gax-python"
-            package_name: google-gax
+  - name: GoogleGaxGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-gax
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'google-gax' is marked as archived on GitHub
+        link: https://github.com/googleapis/gax-python
+        package_name: google-gax

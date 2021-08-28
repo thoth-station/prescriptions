@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: LifetimesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: lifetimes
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'lifetimes' is hosted on GitHub"
-            link: "https://github.com/CamDavidsonPilon/lifetimes"
-            package_name: lifetimes
+  - name: LifetimesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lifetimes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lifetimes' is hosted on GitHub
+        link: https://github.com/CamDavidsonPilon/lifetimes
+        package_name: lifetimes

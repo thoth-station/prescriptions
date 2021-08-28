@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GcsOauth2BotoPluginGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: gcs-oauth2-boto-plugin
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gcs-oauth2-boto-plugin' is hosted on GitHub"
-            link: "https://github.com/GoogleCloudPlatform/gcs-oauth2-boto-plugin"
-            package_name: gcs-oauth2-boto-plugin
+  - name: GcsOauth2BotoPluginGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcs-oauth2-boto-plugin
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gcs-oauth2-boto-plugin' is hosted on GitHub
+        link: https://github.com/GoogleCloudPlatform/gcs-oauth2-boto-plugin
+        package_name: gcs-oauth2-boto-plugin

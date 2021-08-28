@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ElasticApmGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: elastic-apm
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'elastic-apm' is hosted on GitHub"
-            link: "https://github.com/elastic/apm-agent-python"
-            package_name: elastic-apm
+  - name: ElasticApmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elastic-apm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'elastic-apm' is hosted on GitHub
+        link: https://github.com/elastic/apm-agent-python
+        package_name: elastic-apm

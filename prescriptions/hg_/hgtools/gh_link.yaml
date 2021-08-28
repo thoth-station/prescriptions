@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HgtoolsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: hgtools
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'hgtools' is hosted on GitHub"
-            link: "https://github.com/jaraco/hgtools"
-            package_name: hgtools
+  - name: HgtoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hgtools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hgtools' is hosted on GitHub
+        link: https://github.com/jaraco/hgtools
+        package_name: hgtools

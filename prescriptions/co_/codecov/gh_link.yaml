@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CodecovGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: codecov
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'codecov' is hosted on GitHub"
-            link: "https://github.com/codecov/codecov-python"
-            package_name: codecov
+  - name: CodecovGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codecov
+    run:
+      justification:
+      - type: INFO
+        message: Package 'codecov' is hosted on GitHub
+        link: https://github.com/codecov/codecov-python
+        package_name: codecov

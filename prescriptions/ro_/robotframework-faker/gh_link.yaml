@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RobotframeworkFakerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: robotframework-faker
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'robotframework-faker' is hosted on GitHub"
-            link: "https://github.com/guykisel/robotframework-faker"
-            package_name: robotframework-faker
+  - name: RobotframeworkFakerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-faker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'robotframework-faker' is hosted on GitHub
+        link: https://github.com/guykisel/robotframework-faker
+        package_name: robotframework-faker

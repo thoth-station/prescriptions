@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SqlMetadataGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sql-metadata
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sql-metadata' is hosted on GitHub"
-            link: "https://github.com/macbre/sql-metadata"
-            package_name: sql-metadata
+  - name: SqlMetadataGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sql-metadata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sql-metadata' is hosted on GitHub
+        link: https://github.com/macbre/sql-metadata
+        package_name: sql-metadata

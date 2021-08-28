@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BitarrayGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bitarray
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bitarray' is hosted on GitHub"
-            link: "https://github.com/ilanschnell/bitarray"
-            package_name: bitarray
+  - name: BitarrayGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitarray
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bitarray' is hosted on GitHub
+        link: https://github.com/ilanschnell/bitarray
+        package_name: bitarray

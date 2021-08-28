@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ColanderGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: colander
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'colander' is hosted on GitHub"
-            link: "https://github.com/Pylons/colander"
-            package_name: colander
+  - name: ColanderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colander
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colander' is hosted on GitHub
+        link: https://github.com/Pylons/colander
+        package_name: colander

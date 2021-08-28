@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Pg8000Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pg8000
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pg8000' is packaged as an RPM in Fedora 34 as 'python-pg8000'"
-            link: https://src.fedoraproject.org/rpms/python-pg8000
-            package_name: pg8000
+  - name: Pg8000Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pg8000
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pg8000' is packaged as an RPM in Fedora 34 as 'python-pg8000'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pg8000

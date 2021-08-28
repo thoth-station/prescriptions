@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonEasyconfigGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-easyconfig
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-easyconfig' is hosted on GitHub"
-            link: "https://github.com/RussellLuo/easyconfig"
-            package_name: python-easyconfig
+  - name: PythonEasyconfigGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-easyconfig
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-easyconfig' is hosted on GitHub
+        link: https://github.com/RussellLuo/easyconfig
+        package_name: python-easyconfig

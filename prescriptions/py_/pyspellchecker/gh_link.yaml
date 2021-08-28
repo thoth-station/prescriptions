@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyspellcheckerGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyspellchecker
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyspellchecker' is hosted on GitHub"
-            link: "https://github.com/barrust/pyspellchecker"
-            package_name: pyspellchecker
+  - name: PyspellcheckerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspellchecker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyspellchecker' is hosted on GitHub
+        link: https://github.com/barrust/pyspellchecker
+        package_name: pyspellchecker

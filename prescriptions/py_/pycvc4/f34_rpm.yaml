@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Pycvc4Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pycvc4
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pycvc4' is packaged as an RPM in Fedora 34 as 'cvc4'"
-            link: https://src.fedoraproject.org/rpms/cvc4
-            package_name: pycvc4
+  - name: Pycvc4Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycvc4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycvc4' is packaged as an RPM in Fedora 34 as 'cvc4'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pycvc4

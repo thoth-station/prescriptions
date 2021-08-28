@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PlyvelGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: plyvel
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'plyvel' is hosted on GitHub"
-            link: "https://github.com/wbolster/plyvel"
-            package_name: plyvel
+  - name: PlyvelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plyvel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'plyvel' is hosted on GitHub
+        link: https://github.com/wbolster/plyvel
+        package_name: plyvel

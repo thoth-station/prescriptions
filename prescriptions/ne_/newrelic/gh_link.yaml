@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NewrelicGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: newrelic
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'newrelic' is hosted on GitHub"
-            link: "https://github.com/newrelic/newrelic-python-agent"
-            package_name: newrelic
+  - name: NewrelicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: newrelic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'newrelic' is hosted on GitHub
+        link: https://github.com/newrelic/newrelic-python-agent
+        package_name: newrelic

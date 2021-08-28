@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KfpPipelineSpecGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: kfp-pipeline-spec
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'kfp-pipeline-spec' is hosted on GitHub"
-            link: "https://github.com/kubeflow/pipelines"
-            package_name: kfp-pipeline-spec
+  - name: KfpPipelineSpecGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp-pipeline-spec
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kfp-pipeline-spec' is hosted on GitHub
+        link: https://github.com/kubeflow/pipelines
+        package_name: kfp-pipeline-spec

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MatplotlibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: matplotlib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'matplotlib' is hosted on GitHub"
-            link: "https://github.com/matplotlib/matplotlib"
-            package_name: matplotlib
+  - name: MatplotlibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matplotlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'matplotlib' is hosted on GitHub
+        link: https://github.com/matplotlib/matplotlib
+        package_name: matplotlib

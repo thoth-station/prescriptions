@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CoreschemaGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: coreschema
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'coreschema' is marked as archived on GitHub"
-            link: "https://github.com/core-api/python-coreschema"
-            package_name: coreschema
+  - name: CoreschemaGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreschema
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coreschema' is marked as archived on GitHub
+        link: https://github.com/core-api/python-coreschema
+        package_name: coreschema

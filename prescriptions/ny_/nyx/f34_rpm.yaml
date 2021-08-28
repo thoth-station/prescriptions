@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: NyxFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: nyx
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nyx' is packaged as an RPM in Fedora 34 as 'nyx'"
-            link: https://src.fedoraproject.org/rpms/nyx
-            package_name: nyx
+  - name: NyxFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: nyx
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nyx' is packaged as an RPM in Fedora 34 as 'nyx'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: nyx

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestFlake8GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-flake8
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-flake8' is hosted on GitHub"
-            link: "https://github.com/tholo/pytest-flake8"
-            package_name: pytest-flake8
+  - name: PytestFlake8GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flake8
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-flake8' is hosted on GitHub
+        link: https://github.com/tholo/pytest-flake8
+        package_name: pytest-flake8

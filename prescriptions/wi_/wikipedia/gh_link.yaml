@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WikipediaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: wikipedia
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'wikipedia' is hosted on GitHub"
-            link: "https://github.com/goldsmith/Wikipedia"
-            package_name: wikipedia
+  - name: WikipediaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wikipedia
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wikipedia' is hosted on GitHub
+        link: https://github.com/goldsmith/Wikipedia
+        package_name: wikipedia

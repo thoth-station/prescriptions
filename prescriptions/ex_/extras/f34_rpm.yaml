@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: ExtrasFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: extras
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'extras' is packaged as an RPM in Fedora 34 as 'python-extras'"
-            link: https://src.fedoraproject.org/rpms/python-extras
-            package_name: extras
+  - name: ExtrasFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: extras
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'extras' is packaged as an RPM in Fedora 34 as 'python-extras'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: extras

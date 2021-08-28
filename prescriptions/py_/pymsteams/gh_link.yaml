@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PymsteamsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pymsteams
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymsteams' is hosted on GitHub"
-            link: "https://github.com/rveachkc/pymsteams"
-            package_name: pymsteams
+  - name: PymsteamsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymsteams
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymsteams' is hosted on GitHub
+        link: https://github.com/rveachkc/pymsteams
+        package_name: pymsteams

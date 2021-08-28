@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Dxf2gcodeFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: dxf2gcode
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dxf2gcode' is packaged as an RPM in Fedora 34 as 'dxf2gcode'"
-            link: https://src.fedoraproject.org/rpms/dxf2gcode
-            package_name: dxf2gcode
+  - name: Dxf2gcodeFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: dxf2gcode
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dxf2gcode' is packaged as an RPM in Fedora 34 as 'dxf2gcode'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: dxf2gcode

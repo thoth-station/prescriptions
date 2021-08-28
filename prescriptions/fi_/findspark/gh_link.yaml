@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FindsparkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: findspark
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'findspark' is hosted on GitHub"
-            link: "https://github.com/minrk/findspark"
-            package_name: findspark
+  - name: FindsparkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findspark
+    run:
+      justification:
+      - type: INFO
+        message: Package 'findspark' is hosted on GitHub
+        link: https://github.com/minrk/findspark
+        package_name: findspark

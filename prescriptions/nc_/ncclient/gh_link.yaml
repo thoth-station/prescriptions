@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NcclientGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ncclient
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ncclient' is hosted on GitHub"
-            link: "https://github.com/ncclient/ncclient"
-            package_name: ncclient
+  - name: NcclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ncclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ncclient' is hosted on GitHub
+        link: https://github.com/ncclient/ncclient
+        package_name: ncclient

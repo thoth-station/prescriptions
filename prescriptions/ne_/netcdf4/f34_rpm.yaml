@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Netcdf4Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: netcdf4
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'netcdf4' is packaged as an RPM in Fedora 34 as 'netcdf4-python'"
-            link: https://src.fedoraproject.org/rpms/netcdf4-python
-            package_name: netcdf4
+  - name: Netcdf4Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: netcdf4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'netcdf4' is packaged as an RPM in Fedora 34 as 'netcdf4-python'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: netcdf4

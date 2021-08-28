@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Pykcs11GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pykcs11
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pykcs11' is hosted on GitHub"
-            link: "https://github.com/LudovicRousseau/PyKCS11"
-            package_name: pykcs11
+  - name: Pykcs11GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykcs11
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pykcs11' is hosted on GitHub
+        link: https://github.com/LudovicRousseau/PyKCS11
+        package_name: pykcs11

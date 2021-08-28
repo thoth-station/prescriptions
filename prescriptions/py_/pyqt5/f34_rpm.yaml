@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Pyqt5Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pyqt5
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyqt5' is packaged as an RPM in Fedora 34 as 'python-qt5'"
-            link: https://src.fedoraproject.org/rpms/python-qt5
-            package_name: pyqt5
+  - name: Pyqt5Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyqt5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyqt5' is packaged as an RPM in Fedora 34 as 'python-qt5'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pyqt5

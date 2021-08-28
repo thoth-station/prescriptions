@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SocialAuthAppDjangoGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: social-auth-app-django
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'social-auth-app-django' is hosted on GitHub"
-            link: "https://github.com/python-social-auth/social-app-django"
-            package_name: social-auth-app-django
+  - name: SocialAuthAppDjangoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: social-auth-app-django
+    run:
+      justification:
+      - type: INFO
+        message: Package 'social-auth-app-django' is hosted on GitHub
+        link: https://github.com/python-social-auth/social-app-django
+        package_name: social-auth-app-django

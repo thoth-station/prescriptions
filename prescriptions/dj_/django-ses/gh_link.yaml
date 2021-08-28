@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoSesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-ses
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-ses' is hosted on GitHub"
-            link: "https://github.com/django-ses/django-ses"
-            package_name: django-ses
+  - name: DjangoSesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-ses
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-ses' is hosted on GitHub
+        link: https://github.com/django-ses/django-ses
+        package_name: django-ses

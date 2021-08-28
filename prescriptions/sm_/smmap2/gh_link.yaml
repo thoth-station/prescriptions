@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Smmap2GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: smmap2
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'smmap2' is hosted on GitHub"
-            link: "https://github.com/gitpython-developers/smmap"
-            package_name: smmap2
+  - name: Smmap2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smmap2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'smmap2' is hosted on GitHub
+        link: https://github.com/gitpython-developers/smmap
+        package_name: smmap2

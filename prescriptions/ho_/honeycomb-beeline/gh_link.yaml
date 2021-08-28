@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HoneycombBeelineGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: honeycomb-beeline
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'honeycomb-beeline' is hosted on GitHub"
-            link: "https://github.com/honeycombio/beeline-python"
-            package_name: honeycomb-beeline
+  - name: HoneycombBeelineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: honeycomb-beeline
+    run:
+      justification:
+      - type: INFO
+        message: Package 'honeycomb-beeline' is hosted on GitHub
+        link: https://github.com/honeycombio/beeline-python
+        package_name: honeycomb-beeline

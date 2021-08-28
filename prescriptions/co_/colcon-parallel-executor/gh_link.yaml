@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ColconParallelExecutorGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: colcon-parallel-executor
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'colcon-parallel-executor' is hosted on GitHub"
-            link: "https://github.com/colcon/colcon-parallel-executor"
-            package_name: colcon-parallel-executor
+  - name: ColconParallelExecutorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-parallel-executor
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-parallel-executor' is hosted on GitHub
+        link: https://github.com/colcon/colcon-parallel-executor
+        package_name: colcon-parallel-executor

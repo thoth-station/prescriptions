@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MarkdownIncludeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: markdown-include
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'markdown-include' is hosted on GitHub"
-            link: "https://github.com/cmacmackin/markdown-include"
-            package_name: markdown-include
+  - name: MarkdownIncludeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markdown-include
+    run:
+      justification:
+      - type: INFO
+        message: Package 'markdown-include' is hosted on GitHub
+        link: https://github.com/cmacmackin/markdown-include
+        package_name: markdown-include

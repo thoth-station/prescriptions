@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: YfinanceGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: yfinance
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'yfinance' is hosted on GitHub"
-            link: "https://github.com/ranaroussi/yfinance"
-            package_name: yfinance
+  - name: YfinanceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yfinance
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yfinance' is hosted on GitHub
+        link: https://github.com/ranaroussi/yfinance
+        package_name: yfinance

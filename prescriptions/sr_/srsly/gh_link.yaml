@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SrslyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: srsly
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'srsly' is hosted on GitHub"
-            link: "https://github.com/explosion/srsly"
-            package_name: srsly
+  - name: SrslyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: srsly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'srsly' is hosted on GitHub
+        link: https://github.com/explosion/srsly
+        package_name: srsly

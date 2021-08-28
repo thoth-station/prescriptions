@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DtaleGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dtale
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dtale' is hosted on GitHub"
-            link: "https://github.com/man-group/dtale"
-            package_name: dtale
+  - name: DtaleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dtale
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dtale' is hosted on GitHub
+        link: https://github.com/man-group/dtale
+        package_name: dtale

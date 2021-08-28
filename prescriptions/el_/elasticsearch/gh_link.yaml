@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ElasticsearchGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: elasticsearch
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'elasticsearch' is hosted on GitHub"
-            link: "https://github.com/elastic/elasticsearch-py"
-            package_name: elasticsearch
+  - name: ElasticsearchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'elasticsearch' is hosted on GitHub
+        link: https://github.com/elastic/elasticsearch-py
+        package_name: elasticsearch

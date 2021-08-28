@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Pyblake2GitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyblake2
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pyblake2' is marked as archived on GitHub"
-            link: "https://github.com/dchest/pyblake2"
-            package_name: pyblake2
+  - name: Pyblake2GitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyblake2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyblake2' is marked as archived on GitHub
+        link: https://github.com/dchest/pyblake2
+        package_name: pyblake2

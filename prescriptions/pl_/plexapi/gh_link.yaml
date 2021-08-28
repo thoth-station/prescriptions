@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PlexapiGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: plexapi
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'plexapi' is hosted on GitHub"
-            link: "https://github.com/pkkid/python-plexapi"
-            package_name: plexapi
+  - name: PlexapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plexapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'plexapi' is hosted on GitHub
+        link: https://github.com/pkkid/python-plexapi
+        package_name: plexapi

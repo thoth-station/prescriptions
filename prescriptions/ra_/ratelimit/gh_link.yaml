@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RatelimitGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ratelimit
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ratelimit' is hosted on GitHub"
-            link: "https://github.com/tomasbasham/ratelimit"
-            package_name: ratelimit
+  - name: RatelimitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ratelimit' is hosted on GitHub
+        link: https://github.com/tomasbasham/ratelimit
+        package_name: ratelimit

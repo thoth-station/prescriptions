@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ModernglGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: moderngl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'moderngl' is hosted on GitHub"
-            link: "https://github.com/moderngl/moderngl"
-            package_name: moderngl
+  - name: ModernglGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moderngl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'moderngl' is hosted on GitHub
+        link: https://github.com/moderngl/moderngl
+        package_name: moderngl

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestAiohttpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-aiohttp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-aiohttp' is hosted on GitHub"
-            link: "https://github.com/aio-libs/pytest-aiohttp"
-            package_name: pytest-aiohttp
+  - name: PytestAiohttpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-aiohttp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-aiohttp' is hosted on GitHub
+        link: https://github.com/aio-libs/pytest-aiohttp
+        package_name: pytest-aiohttp

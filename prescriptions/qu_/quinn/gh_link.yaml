@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: QuinnGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: quinn
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'quinn' is hosted on GitHub"
-            link: "https://github.com/MrPowers/quinn"
-            package_name: quinn
+  - name: QuinnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: quinn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'quinn' is hosted on GitHub
+        link: https://github.com/MrPowers/quinn
+        package_name: quinn

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FissixGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: fissix
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fissix' is hosted on GitHub"
-            link: "https://github.com/jreese/fissix"
-            package_name: fissix
+  - name: FissixGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fissix
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fissix' is hosted on GitHub
+        link: https://github.com/jreese/fissix
+        package_name: fissix

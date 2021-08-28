@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PplpyFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pplpy
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pplpy' is packaged as an RPM in Fedora 34 as 'python-pplpy'"
-            link: https://src.fedoraproject.org/rpms/python-pplpy
-            package_name: pplpy
+  - name: PplpyFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pplpy
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pplpy' is packaged as an RPM in Fedora 34 as 'python-pplpy'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pplpy

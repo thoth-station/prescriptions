@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyreadstatGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyreadstat
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyreadstat' is hosted on GitHub"
-            link: "https://github.com/Roche/pyreadstat"
-            package_name: pyreadstat
+  - name: PyreadstatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyreadstat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyreadstat' is hosted on GitHub
+        link: https://github.com/Roche/pyreadstat
+        package_name: pyreadstat

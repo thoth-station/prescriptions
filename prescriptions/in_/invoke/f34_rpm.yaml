@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: InvokeFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: invoke
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'invoke' is packaged as an RPM in Fedora 34 as 'python-invoke'"
-            link: https://src.fedoraproject.org/rpms/python-invoke
-            package_name: invoke
+  - name: InvokeFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: invoke
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'invoke' is packaged as an RPM in Fedora 34 as 'python-invoke'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: invoke

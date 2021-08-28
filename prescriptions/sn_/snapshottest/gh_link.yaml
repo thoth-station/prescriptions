@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SnapshottestGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: snapshottest
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'snapshottest' is hosted on GitHub"
-            link: "https://github.com/syrusakbary/snapshottest"
-            package_name: snapshottest
+  - name: SnapshottestGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snapshottest
+    run:
+      justification:
+      - type: INFO
+        message: Package 'snapshottest' is hosted on GitHub
+        link: https://github.com/syrusakbary/snapshottest
+        package_name: snapshottest

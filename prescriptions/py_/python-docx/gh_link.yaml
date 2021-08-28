@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PythonDocxGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: python-docx
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'python-docx' is hosted on GitHub"
-            link: "https://github.com/python-openxml/python-docx"
-            package_name: python-docx
+  - name: PythonDocxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-docx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-docx' is hosted on GitHub
+        link: https://github.com/python-openxml/python-docx
+        package_name: python-docx

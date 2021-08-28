@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ColoramaGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: colorama
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'colorama' is hosted on GitHub"
-            link: "https://github.com/tartley/colorama"
-            package_name: colorama
+  - name: ColoramaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorama
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colorama' is hosted on GitHub
+        link: https://github.com/tartley/colorama
+        package_name: colorama

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Base36GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: base36
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'base36' is hosted on GitHub"
-            link: "https://github.com/tonyseek/python-base36"
-            package_name: base36
+  - name: Base36GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: base36
+    run:
+      justification:
+      - type: INFO
+        message: Package 'base36' is hosted on GitHub
+        link: https://github.com/tonyseek/python-base36
+        package_name: base36

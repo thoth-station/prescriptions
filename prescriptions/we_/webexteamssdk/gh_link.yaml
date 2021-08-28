@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: WebexteamssdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: webexteamssdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'webexteamssdk' is hosted on GitHub"
-            link: "https://github.com/CiscoDevNet/webexteamssdk"
-            package_name: webexteamssdk
+  - name: WebexteamssdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webexteamssdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'webexteamssdk' is hosted on GitHub
+        link: https://github.com/CiscoDevNet/webexteamssdk
+        package_name: webexteamssdk

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AlbumentationsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: albumentations
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'albumentations' is hosted on GitHub"
-            link: "https://github.com/albumentations-team/albumentations"
-            package_name: albumentations
+  - name: AlbumentationsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: albumentations
+    run:
+      justification:
+      - type: INFO
+        message: Package 'albumentations' is hosted on GitHub
+        link: https://github.com/albumentations-team/albumentations
+        package_name: albumentations

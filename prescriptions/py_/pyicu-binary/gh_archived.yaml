@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyicuBinaryGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyicu-binary
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pyicu-binary' is marked as archived on GitHub"
-            link: "https://github.com/ovalhub/pyicu"
-            package_name: pyicu-binary
+  - name: PyicuBinaryGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyicu-binary
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyicu-binary' is marked as archived on GitHub
+        link: https://github.com/ovalhub/pyicu
+        package_name: pyicu-binary

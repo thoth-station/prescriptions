@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NmslibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nmslib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nmslib' is hosted on GitHub"
-            link: "https://github.com/nmslib/nmslib"
-            package_name: nmslib
+  - name: NmslibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nmslib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nmslib' is hosted on GitHub
+        link: https://github.com/nmslib/nmslib
+        package_name: nmslib

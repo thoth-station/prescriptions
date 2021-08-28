@@ -10,23 +10,27 @@ units:
     match:
     - package_version:
         name: tensorflow
-        index_url: "https://pypi.org/simple"
+        index_url: https://pypi.org/simple
     - package_version:
         name: intel-tensorflow
-        index_url: "https://pypi.org/simple"
+        index_url: https://pypi.org/simple
     - package_version:
         name: tensorflow-cpu
-        index_url: "https://pypi.org/simple"
+        index_url: https://pypi.org/simple
     run:
       log:
-        message: Considering also tensorflow-gpu package as the runtime environment used provides CUDA and cuDNN
+        message: >-
+          Considering also tensorflow-gpu package as the runtime environment
+          used provides CUDA and cuDNN
         type: INFO
       stack_info:
       - link: tf_gpu_alt
-        message: Considering also tensorflow-gpu package as the runtime environment used provides CUDA and cuDNN
+        message: >-
+          Considering also tensorflow-gpu package as the runtime environment
+          used provides CUDA and cuDNN
         type: INFO
       yield:
         yield_matched_version: true
         package_version:
           name: tensorflow-gpu
-          index_url: "https://pypi.org/simple"
+          index_url: https://pypi.org/simple

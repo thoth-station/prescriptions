@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OpsgenieSdkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: opsgenie-sdk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'opsgenie-sdk' is hosted on GitHub"
-            link: "https://github.com/opsgenie/opsgenie-python-sdk"
-            package_name: opsgenie-sdk
+  - name: OpsgenieSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opsgenie-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opsgenie-sdk' is hosted on GitHub
+        link: https://github.com/opsgenie/opsgenie-python-sdk
+        package_name: opsgenie-sdk

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TypingGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: typing
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'typing' is hosted on GitHub"
-            link: "https://github.com/python/typing"
-            package_name: typing
+  - name: TypingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'typing' is hosted on GitHub
+        link: https://github.com/python/typing
+        package_name: typing

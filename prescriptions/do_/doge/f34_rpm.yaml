@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: DogeFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: doge
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'doge' is packaged as an RPM in Fedora 34 as 'doge'"
-            link: https://src.fedoraproject.org/rpms/doge
-            package_name: doge
+  - name: DogeFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: doge
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'doge' is packaged as an RPM in Fedora 34 as 'doge'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: doge

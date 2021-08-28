@@ -1,50 +1,54 @@
 units:
   steps:
-    - name: TensorFlow23H5pyStep
-      type: step
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-      match:
-        - package_version:
-            name: h5py
-            version: ">=3"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow
-                version: "~=2.3.0"
-        - package_version:
-            name: h5py
-            version: ">=3"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow-cpu
-                version: "~=2.3.0"
-        - package_version:
-            name: h5py
-            version: ">=3"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: tensorflow-gpu
-                version: "~=2.3.0"
-        - package_version:
-            name: h5py
-            version: ">=3"
-            index_url: "https://pypi.org/simple"
-          state:
-            resolved_dependencies:
-              - name: intel-tensorflow
-                version: "~=2.3.0"
-      run:
-        multi_package_resolution: false
-        stack_info:
-          - type: WARNING
-            message: "tensorflow in versions 2.3 can cause runtime errors when running with h5py>=3 caused by library overpinning"
-            link: tf_23_h5py
-        not_acceptable: "tensorflow in versions 2.3 can cause runtime errors when running with h5py>=3 caused by library overpinning"
+  - name: TensorFlow23H5pyStep
+    type: step
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+    match:
+    - package_version:
+        name: h5py
+        version: ">=3"
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ~=2.3.0
+    - package_version:
+        name: h5py
+        version: ">=3"
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+          version: ~=2.3.0
+    - package_version:
+        name: h5py
+        version: ">=3"
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+          version: ~=2.3.0
+    - package_version:
+        name: h5py
+        version: ">=3"
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+          version: ~=2.3.0
+    run:
+      multi_package_resolution: false
+      stack_info:
+      - type: WARNING
+        message: >-
+          tensorflow in versions 2.3 can cause runtime errors when running
+          with h5py>=3 caused by library overpinning
+        link: tf_23_h5py
+      not_acceptable: >-
+        tensorflow in versions 2.3 can cause runtime errors when running
+        with h5py>=3 caused by library overpinning

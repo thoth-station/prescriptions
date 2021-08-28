@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UamqpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: uamqp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'uamqp' is hosted on GitHub"
-            link: "https://github.com/Azure/azure-uamqp-python"
-            package_name: uamqp
+  - name: UamqpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uamqp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'uamqp' is hosted on GitHub
+        link: https://github.com/Azure/azure-uamqp-python
+        package_name: uamqp

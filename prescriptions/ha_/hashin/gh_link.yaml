@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HashinGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: hashin
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'hashin' is hosted on GitHub"
-            link: "https://github.com/peterbe/hashin"
-            package_name: hashin
+  - name: HashinGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hashin
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hashin' is hosted on GitHub
+        link: https://github.com/peterbe/hashin
+        package_name: hashin

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HuggingfaceHubGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: huggingface-hub
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'huggingface-hub' is hosted on GitHub"
-            link: "https://github.com/huggingface/huggingface_hub"
-            package_name: huggingface-hub
+  - name: HuggingfaceHubGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: huggingface-hub
+    run:
+      justification:
+      - type: INFO
+        message: Package 'huggingface-hub' is hosted on GitHub
+        link: https://github.com/huggingface/huggingface_hub
+        package_name: huggingface-hub

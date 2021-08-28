@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GttsTokenGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: gtts-token
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'gtts-token' is hosted on GitHub"
-            link: "https://github.com/boudewijn26/gTTS-token"
-            package_name: gtts-token
+  - name: GttsTokenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gtts-token
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gtts-token' is hosted on GitHub
+        link: https://github.com/boudewijn26/gTTS-token
+        package_name: gtts-token

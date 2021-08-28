@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoStubsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-stubs
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-stubs' is hosted on GitHub"
-            link: "https://github.com/typeddjango/django-stubs"
-            package_name: django-stubs
+  - name: DjangoStubsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-stubs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-stubs' is hosted on GitHub
+        link: https://github.com/typeddjango/django-stubs
+        package_name: django-stubs

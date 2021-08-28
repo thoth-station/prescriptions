@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoRedisGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-redis
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-redis' is hosted on GitHub"
-            link: "https://github.com/jazzband/django-redis"
-            package_name: django-redis
+  - name: DjangoRedisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-redis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-redis' is hosted on GitHub
+        link: https://github.com/jazzband/django-redis
+        package_name: django-redis

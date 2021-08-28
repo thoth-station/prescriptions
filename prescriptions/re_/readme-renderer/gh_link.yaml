@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ReadmeRendererGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: readme-renderer
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'readme-renderer' is hosted on GitHub"
-            link: "https://github.com/pypa/readme_renderer"
-            package_name: readme-renderer
+  - name: ReadmeRendererGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readme-renderer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'readme-renderer' is hosted on GitHub
+        link: https://github.com/pypa/readme_renderer
+        package_name: readme-renderer

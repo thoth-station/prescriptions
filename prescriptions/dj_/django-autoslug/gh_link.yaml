@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoAutoslugGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-autoslug
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-autoslug' is hosted on GitHub"
-            link: "https://github.com/justinmayer/django-autoslug"
-            package_name: django-autoslug
+  - name: DjangoAutoslugGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-autoslug
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-autoslug' is hosted on GitHub
+        link: https://github.com/justinmayer/django-autoslug
+        package_name: django-autoslug

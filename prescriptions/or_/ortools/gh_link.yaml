@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OrtoolsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ortools
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ortools' is hosted on GitHub"
-            link: "https://github.com/google/or-tools"
-            package_name: ortools
+  - name: OrtoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ortools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ortools' is hosted on GitHub
+        link: https://github.com/google/or-tools
+        package_name: ortools

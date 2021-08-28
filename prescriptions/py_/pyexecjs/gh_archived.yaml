@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyexecjsGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyexecjs
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'pyexecjs' is marked as archived on GitHub"
-            link: "https://github.com/doloopwhile/PyExecJS"
-            package_name: pyexecjs
+  - name: PyexecjsGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexecjs
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyexecjs' is marked as archived on GitHub
+        link: https://github.com/doloopwhile/PyExecJS
+        package_name: pyexecjs

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NltkGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nltk
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nltk' is hosted on GitHub"
-            link: "https://github.com/nltk/nltk"
-            package_name: nltk
+  - name: NltkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nltk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nltk' is hosted on GitHub
+        link: https://github.com/nltk/nltk
+        package_name: nltk

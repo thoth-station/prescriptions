@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BeamNuggetsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: beam-nuggets
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'beam-nuggets' is hosted on GitHub"
-            link: "https://github.com/mohaseeb/beam-nuggets"
-            package_name: beam-nuggets
+  - name: BeamNuggetsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beam-nuggets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'beam-nuggets' is hosted on GitHub
+        link: https://github.com/mohaseeb/beam-nuggets
+        package_name: beam-nuggets

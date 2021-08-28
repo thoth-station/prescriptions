@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ProphetGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: prophet
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'prophet' is hosted on GitHub"
-            link: "https://github.com/facebook/prophet"
-            package_name: prophet
+  - name: ProphetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prophet
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prophet' is hosted on GitHub
+        link: https://github.com/facebook/prophet
+        package_name: prophet

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TensorflowMetadataGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tensorflow-metadata
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tensorflow-metadata' is hosted on GitHub"
-            link: "https://github.com/tensorflow/metadata"
-            package_name: tensorflow-metadata
+  - name: TensorflowMetadataGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-metadata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-metadata' is hosted on GitHub
+        link: https://github.com/tensorflow/metadata
+        package_name: tensorflow-metadata

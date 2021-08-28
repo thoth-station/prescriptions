@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AsgirefGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: asgiref
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'asgiref' is hosted on GitHub"
-            link: "https://github.com/django/asgiref"
-            package_name: asgiref
+  - name: AsgirefGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asgiref
+    run:
+      justification:
+      - type: INFO
+        message: Package 'asgiref' is hosted on GitHub
+        link: https://github.com/django/asgiref
+        package_name: asgiref

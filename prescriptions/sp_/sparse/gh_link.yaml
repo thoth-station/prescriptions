@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SparseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sparse
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sparse' is hosted on GitHub"
-            link: "https://github.com/pydata/sparse"
-            package_name: sparse
+  - name: SparseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sparse' is hosted on GitHub
+        link: https://github.com/pydata/sparse
+        package_name: sparse

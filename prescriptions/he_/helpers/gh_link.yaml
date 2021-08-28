@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: HelpersGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: helpers
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'helpers' is hosted on GitHub"
-            link: "https://github.com/infosmith/helpers"
-            package_name: helpers
+  - name: HelpersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: helpers
+    run:
+      justification:
+      - type: INFO
+        message: Package 'helpers' is hosted on GitHub
+        link: https://github.com/infosmith/helpers
+        package_name: helpers

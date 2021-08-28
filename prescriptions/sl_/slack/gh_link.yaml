@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SlackGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: slack
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'slack' is hosted on GitHub"
-            link: "https://github.com/zweifisch/slack"
-            package_name: slack
+  - name: SlackGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slack
+    run:
+      justification:
+      - type: INFO
+        message: Package 'slack' is hosted on GitHub
+        link: https://github.com/zweifisch/slack
+        package_name: slack

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SetuptoolsScmGitArchiveGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: setuptools-scm-git-archive
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'setuptools-scm-git-archive' is hosted on GitHub"
-            link: "https://github.com/Changaco/setuptools_scm_git_archive"
-            package_name: setuptools-scm-git-archive
+  - name: SetuptoolsScmGitArchiveGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-scm-git-archive
+    run:
+      justification:
+      - type: INFO
+        message: Package 'setuptools-scm-git-archive' is hosted on GitHub
+        link: https://github.com/Changaco/setuptools_scm_git_archive
+        package_name: setuptools-scm-git-archive

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MypyExtensionsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: mypy-extensions
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'mypy-extensions' is hosted on GitHub"
-            link: "https://github.com/python/mypy_extensions"
-            package_name: mypy-extensions
+  - name: MypyExtensionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy-extensions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mypy-extensions' is hosted on GitHub
+        link: https://github.com/python/mypy_extensions
+        package_name: mypy-extensions

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MarshmallowSqlalchemyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: marshmallow-sqlalchemy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'marshmallow-sqlalchemy' is hosted on GitHub"
-            link: "https://github.com/marshmallow-code/marshmallow-sqlalchemy"
-            package_name: marshmallow-sqlalchemy
+  - name: MarshmallowSqlalchemyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-sqlalchemy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'marshmallow-sqlalchemy' is hosted on GitHub
+        link: https://github.com/marshmallow-code/marshmallow-sqlalchemy
+        package_name: marshmallow-sqlalchemy

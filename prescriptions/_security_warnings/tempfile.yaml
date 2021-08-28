@@ -1,33 +1,33 @@
 units:
   wraps:
-    - name: TempfileWSecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - latest
-          - performance
-          - stable
-          - testing
-        library_usage:
-          tempfile:
-            - tempfile.mktemp
-      run:
-        stack_info:
-          - type: WARNING
-            message: "mktemp is deprecated due to vulnerability to race conditions"
-            link: "https://docs.python.org/3.11/library/tempfile.html#tempfile-mktemp-deprecated"
-    - name: TempfileESecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - security
-        library_usage:
-          tempfile:
-            - tempfile.mktemp
-      run:
-        stack_info:
-          - type: ERROR
-            message: "mktemp is deprecated due to vulnerability to race conditions"
-            link: "https://docs.python.org/3.11/library/tempfile.html#tempfile-mktemp-deprecated"
+  - name: TempfileWSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - stable
+      - testing
+      library_usage:
+        tempfile:
+        - tempfile.mktemp
+    run:
+      stack_info:
+      - type: WARNING
+        message: mktemp is deprecated due to vulnerability to race conditions
+        link: https://docs.python.org/3.11/library/tempfile.html#tempfile-mktemp-deprecated
+  - name: TempfileESecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      library_usage:
+        tempfile:
+        - tempfile.mktemp
+    run:
+      stack_info:
+      - type: ERROR
+        message: mktemp is deprecated due to vulnerability to race conditions
+        link: https://docs.python.org/3.11/library/tempfile.html#tempfile-mktemp-deprecated

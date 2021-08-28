@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleappenginecloudstorageclientGitHubArchivedWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: googleappenginecloudstorageclient
-      run:
-        justification:
-          - type: WARNING
-            message: "Package 'googleappenginecloudstorageclient' is marked as archived on GitHub"
-            link: "https://github.com/GoogleCloudPlatform/appengine-gcs-client"
-            package_name: googleappenginecloudstorageclient
+  - name: GoogleappenginecloudstorageclientGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleappenginecloudstorageclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'googleappenginecloudstorageclient' is marked as archived on GitHub
+        link: https://github.com/GoogleCloudPlatform/appengine-gcs-client
+        package_name: googleappenginecloudstorageclient

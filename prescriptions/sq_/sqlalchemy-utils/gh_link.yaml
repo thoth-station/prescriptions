@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SqlalchemyUtilsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: sqlalchemy-utils
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'sqlalchemy-utils' is hosted on GitHub"
-            link: "https://github.com/kvesteri/sqlalchemy-utils"
-            package_name: sqlalchemy-utils
+  - name: SqlalchemyUtilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-utils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlalchemy-utils' is hosted on GitHub
+        link: https://github.com/kvesteri/sqlalchemy-utils
+        package_name: sqlalchemy-utils

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyramidGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyramid
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyramid' is hosted on GitHub"
-            link: "https://github.com/Pylons/pyramid"
-            package_name: pyramid
+  - name: PyramidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyramid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyramid' is hosted on GitHub
+        link: https://github.com/Pylons/pyramid
+        package_name: pyramid

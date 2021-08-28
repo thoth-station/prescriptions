@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MarshmallowFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: marshmallow
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'marshmallow' is packaged as an RPM in Fedora 34 as 'python-marshmallow'"
-            link: https://src.fedoraproject.org/rpms/python-marshmallow
-            package_name: marshmallow
+  - name: MarshmallowFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'marshmallow' is packaged as an RPM in Fedora 34 as 'python-marshmallow'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: marshmallow

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PycodestyleMagicGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pycodestyle-magic
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pycodestyle-magic' is hosted on GitHub"
-            link: "https://github.com/mattijn/pycodestyle_magic"
-            package_name: pycodestyle-magic
+  - name: PycodestyleMagicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycodestyle-magic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycodestyle-magic' is hosted on GitHub
+        link: https://github.com/mattijn/pycodestyle_magic
+        package_name: pycodestyle-magic

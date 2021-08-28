@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: EvdevFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: evdev
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'evdev' is packaged as an RPM in Fedora 34 as 'python-evdev'"
-            link: https://src.fedoraproject.org/rpms/python-evdev
-            package_name: evdev
+  - name: EvdevFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: evdev
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'evdev' is packaged as an RPM in Fedora 34 as 'python-evdev'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: evdev

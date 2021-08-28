@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UncertaintiesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: uncertainties
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'uncertainties' is hosted on GitHub"
-            link: "https://github.com/lebigot/uncertainties"
-            package_name: uncertainties
+  - name: UncertaintiesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uncertainties
+    run:
+      justification:
+      - type: INFO
+        message: Package 'uncertainties' is hosted on GitHub
+        link: https://github.com/lebigot/uncertainties
+        package_name: uncertainties

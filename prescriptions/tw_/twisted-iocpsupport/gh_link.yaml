@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TwistedIocpsupportGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: twisted-iocpsupport
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'twisted-iocpsupport' is hosted on GitHub"
-            link: "https://github.com/twisted/twisted-iocpsupport"
-            package_name: twisted-iocpsupport
+  - name: TwistedIocpsupportGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-iocpsupport
+    run:
+      justification:
+      - type: INFO
+        message: Package 'twisted-iocpsupport' is hosted on GitHub
+        link: https://github.com/twisted/twisted-iocpsupport
+        package_name: twisted-iocpsupport

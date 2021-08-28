@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ImutilsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: imutils
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'imutils' is hosted on GitHub"
-            link: "https://github.com/jrosebr1/imutils"
-            package_name: imutils
+  - name: ImutilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imutils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'imutils' is hosted on GitHub
+        link: https://github.com/jrosebr1/imutils
+        package_name: imutils

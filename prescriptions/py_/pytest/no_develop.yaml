@@ -1,17 +1,17 @@
 units:
   wraps:
-    - name: PyTestNoDevelopWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        state:
-          resolved_dependencies:
-            - name: pytest
-              develop: false
-      run:
-        justification:
-          - type: INFO
-            message: "Consider moving pytest to development dependencies (see thamos --dev flag)"
-            link: https://thoth-station.ninja/docs/developers/thamos/
-            package_name: pytest
+  - name: PyTestNoDevelopWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest
+          develop: false
+    run:
+      justification:
+      - type: INFO
+        message: Consider moving pytest to development dependencies (see thamos --dev flag)
+        link: https://thoth-station.ninja/docs/developers/thamos/
+        package_name: pytest

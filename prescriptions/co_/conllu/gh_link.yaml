@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ConlluGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: conllu
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'conllu' is hosted on GitHub"
-            link: "https://github.com/EmilStenstrom/conllu"
-            package_name: conllu
+  - name: ConlluGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conllu
+    run:
+      justification:
+      - type: INFO
+        message: Package 'conllu' is hosted on GitHub
+        link: https://github.com/EmilStenstrom/conllu
+        package_name: conllu

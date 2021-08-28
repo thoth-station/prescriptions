@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PillowGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pillow
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pillow' is hosted on GitHub"
-            link: "https://github.com/python-pillow/Pillow"
-            package_name: pillow
+  - name: PillowGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pillow
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pillow' is hosted on GitHub
+        link: https://github.com/python-pillow/Pillow
+        package_name: pillow

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: KerasApplicationsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: keras-applications
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'keras-applications' is hosted on GitHub"
-            link: "https://github.com/keras-team/keras-applications"
-            package_name: keras-applications
+  - name: KerasApplicationsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-applications
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keras-applications' is hosted on GitHub
+        link: https://github.com/keras-team/keras-applications
+        package_name: keras-applications

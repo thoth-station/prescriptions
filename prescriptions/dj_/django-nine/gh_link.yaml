@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoNineGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-nine
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-nine' is hosted on GitHub"
-            link: "https://github.com/barseghyanartur/django-nine"
-            package_name: django-nine
+  - name: DjangoNineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-nine
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-nine' is hosted on GitHub
+        link: https://github.com/barseghyanartur/django-nine
+        package_name: django-nine

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OpentelemetryInstrumentationGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: opentelemetry-instrumentation
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'opentelemetry-instrumentation' is hosted on GitHub"
-            link: "https://github.com/open-telemetry/opentelemetry-python-contrib"
-            package_name: opentelemetry-instrumentation
+  - name: OpentelemetryInstrumentationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentelemetry-instrumentation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opentelemetry-instrumentation' is hosted on GitHub
+        link: https://github.com/open-telemetry/opentelemetry-python-contrib
+        package_name: opentelemetry-instrumentation

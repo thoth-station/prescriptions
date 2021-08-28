@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PylslGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pylsl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pylsl' is hosted on GitHub"
-            link: "https://github.com/labstreaminglayer/liblsl-Python"
-            package_name: pylsl
+  - name: PylslGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylsl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylsl' is hosted on GitHub
+        link: https://github.com/labstreaminglayer/liblsl-Python
+        package_name: pylsl

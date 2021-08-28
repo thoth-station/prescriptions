@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: EdxEnterpriseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: edx-enterprise
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'edx-enterprise' is hosted on GitHub"
-            link: "https://github.com/edx/edx-enterprise"
-            package_name: edx-enterprise
+  - name: EdxEnterpriseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edx-enterprise
+    run:
+      justification:
+      - type: INFO
+        message: Package 'edx-enterprise' is hosted on GitHub
+        link: https://github.com/edx/edx-enterprise
+        package_name: edx-enterprise

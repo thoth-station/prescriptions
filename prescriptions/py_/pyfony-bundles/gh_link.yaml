@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyfonyBundlesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyfony-bundles
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyfony-bundles' is hosted on GitHub"
-            link: "https://github.com/pyfony/pyfony-bundles"
-            package_name: pyfony-bundles
+  - name: PyfonyBundlesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfony-bundles
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyfony-bundles' is hosted on GitHub
+        link: https://github.com/pyfony/pyfony-bundles
+        package_name: pyfony-bundles

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PygeoipGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pygeoip
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pygeoip' is hosted on GitHub"
-            link: "https://github.com/appliedsec/pygeoip"
-            package_name: pygeoip
+  - name: PygeoipGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygeoip
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygeoip' is hosted on GitHub
+        link: https://github.com/appliedsec/pygeoip
+        package_name: pygeoip

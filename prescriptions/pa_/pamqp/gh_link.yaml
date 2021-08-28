@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PamqpGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pamqp
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pamqp' is hosted on GitHub"
-            link: "https://github.com/gmr/pamqp"
-            package_name: pamqp
+  - name: PamqpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pamqp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pamqp' is hosted on GitHub
+        link: https://github.com/gmr/pamqp
+        package_name: pamqp

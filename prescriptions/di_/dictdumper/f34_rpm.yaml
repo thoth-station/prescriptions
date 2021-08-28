@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: DictdumperFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: dictdumper
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dictdumper' is packaged as an RPM in Fedora 34 as 'python-dictdumper'"
-            link: https://src.fedoraproject.org/rpms/python-dictdumper
-            package_name: dictdumper
+  - name: DictdumperFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdumper
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dictdumper' is packaged as an RPM in Fedora 34 as 'python-dictdumper'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: dictdumper

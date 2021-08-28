@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ImageioGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: imageio
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'imageio' is hosted on GitHub"
-            link: "https://github.com/imageio/imageio"
-            package_name: imageio
+  - name: ImageioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imageio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'imageio' is hosted on GitHub
+        link: https://github.com/imageio/imageio
+        package_name: imageio

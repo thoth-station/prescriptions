@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ComboGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: combo
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'combo' is hosted on GitHub"
-            link: "https://github.com/yzhao062/combo"
-            package_name: combo
+  - name: ComboGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: combo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'combo' is hosted on GitHub
+        link: https://github.com/yzhao062/combo
+        package_name: combo

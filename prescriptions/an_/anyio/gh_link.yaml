@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AnyioGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: anyio
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'anyio' is hosted on GitHub"
-            link: "https://github.com/agronholm/anyio"
-            package_name: anyio
+  - name: AnyioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anyio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'anyio' is hosted on GitHub
+        link: https://github.com/agronholm/anyio
+        package_name: anyio

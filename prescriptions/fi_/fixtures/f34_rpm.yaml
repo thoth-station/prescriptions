@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: FixturesFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: fixtures
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'fixtures' is packaged as an RPM in Fedora 34 as 'python-fixtures'"
-            link: https://src.fedoraproject.org/rpms/python-fixtures
-            package_name: fixtures
+  - name: FixturesFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: fixtures
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fixtures' is packaged as an RPM in Fedora 34 as 'python-fixtures'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: fixtures

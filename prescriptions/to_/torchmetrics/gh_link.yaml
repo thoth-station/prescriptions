@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TorchmetricsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: torchmetrics
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'torchmetrics' is hosted on GitHub"
-            link: "https://github.com/PyTorchLightning/metrics"
-            package_name: torchmetrics
+  - name: TorchmetricsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchmetrics
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torchmetrics' is hosted on GitHub
+        link: https://github.com/PyTorchLightning/metrics
+        package_name: torchmetrics

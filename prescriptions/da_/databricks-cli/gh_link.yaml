@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DatabricksCliGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: databricks-cli
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'databricks-cli' is hosted on GitHub"
-            link: "https://github.com/databricks/databricks-cli"
-            package_name: databricks-cli
+  - name: DatabricksCliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databricks-cli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'databricks-cli' is hosted on GitHub
+        link: https://github.com/databricks/databricks-cli
+        package_name: databricks-cli

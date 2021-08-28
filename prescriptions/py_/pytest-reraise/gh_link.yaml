@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestReraiseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-reraise
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-reraise' is hosted on GitHub"
-            link: "https://github.com/bjoluc/pytest-reraise"
-            package_name: pytest-reraise
+  - name: PytestReraiseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-reraise
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-reraise' is hosted on GitHub
+        link: https://github.com/bjoluc/pytest-reraise
+        package_name: pytest-reraise

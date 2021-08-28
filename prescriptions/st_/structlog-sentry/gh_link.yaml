@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: StructlogSentryGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: structlog-sentry
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'structlog-sentry' is hosted on GitHub"
-            link: "https://github.com/kiwicom/structlog-sentry"
-            package_name: structlog-sentry
+  - name: StructlogSentryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: structlog-sentry
+    run:
+      justification:
+      - type: INFO
+        message: Package 'structlog-sentry' is hosted on GitHub
+        link: https://github.com/kiwicom/structlog-sentry
+        package_name: structlog-sentry

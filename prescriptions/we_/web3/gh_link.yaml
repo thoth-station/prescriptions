@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Web3GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: web3
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'web3' is hosted on GitHub"
-            link: "https://github.com/ethereum/web3.py"
-            package_name: web3
+  - name: Web3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: web3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'web3' is hosted on GitHub
+        link: https://github.com/ethereum/web3.py
+        package_name: web3

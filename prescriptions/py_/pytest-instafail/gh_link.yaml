@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PytestInstafailGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pytest-instafail
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pytest-instafail' is hosted on GitHub"
-            link: "https://github.com/pytest-dev/pytest-instafail"
-            package_name: pytest-instafail
+  - name: PytestInstafailGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-instafail
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-instafail' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-instafail
+        package_name: pytest-instafail

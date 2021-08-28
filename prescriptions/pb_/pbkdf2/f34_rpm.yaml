@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Pbkdf2Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pbkdf2
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pbkdf2' is packaged as an RPM in Fedora 34 as 'python-pbkdf2'"
-            link: https://src.fedoraproject.org/rpms/python-pbkdf2
-            package_name: pbkdf2
+  - name: Pbkdf2Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pbkdf2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pbkdf2' is packaged as an RPM in Fedora 34 as 'python-pbkdf2'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pbkdf2

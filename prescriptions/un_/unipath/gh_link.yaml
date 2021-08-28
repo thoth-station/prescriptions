@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: UnipathGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: unipath
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'unipath' is hosted on GitHub"
-            link: "https://github.com/mikeorr/Unipath"
-            package_name: unipath
+  - name: UnipathGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unipath
+    run:
+      justification:
+      - type: INFO
+        message: Package 'unipath' is hosted on GitHub
+        link: https://github.com/mikeorr/Unipath
+        package_name: unipath

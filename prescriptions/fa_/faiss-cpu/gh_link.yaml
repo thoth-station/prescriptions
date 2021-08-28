@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FaissCpuGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: faiss-cpu
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'faiss-cpu' is hosted on GitHub"
-            link: "https://github.com/kyamagu/faiss-wheels"
-            package_name: faiss-cpu
+  - name: FaissCpuGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: faiss-cpu
+    run:
+      justification:
+      - type: INFO
+        message: Package 'faiss-cpu' is hosted on GitHub
+        link: https://github.com/kyamagu/faiss-wheels
+        package_name: faiss-cpu

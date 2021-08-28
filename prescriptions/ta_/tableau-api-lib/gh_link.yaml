@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TableauApiLibGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tableau-api-lib
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'tableau-api-lib' is hosted on GitHub"
-            link: "https://github.com/divinorum-webb/tableau-api-lib"
-            package_name: tableau-api-lib
+  - name: TableauApiLibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tableau-api-lib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tableau-api-lib' is hosted on GitHub
+        link: https://github.com/divinorum-webb/tableau-api-lib
+        package_name: tableau-api-lib

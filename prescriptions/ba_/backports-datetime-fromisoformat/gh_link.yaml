@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BackportsDatetimeFromisoformatGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: backports-datetime-fromisoformat
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'backports-datetime-fromisoformat' is hosted on GitHub"
-            link: "https://github.com/movermeyer/backports.datetime_fromisoformat"
-            package_name: backports-datetime-fromisoformat
+  - name: BackportsDatetimeFromisoformatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-datetime-fromisoformat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backports-datetime-fromisoformat' is hosted on GitHub
+        link: https://github.com/movermeyer/backports.datetime_fromisoformat
+        package_name: backports-datetime-fromisoformat

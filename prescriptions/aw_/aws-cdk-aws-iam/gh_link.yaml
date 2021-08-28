@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AwsCdkAwsIamGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: aws-cdk-aws-iam
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'aws-cdk-aws-iam' is hosted on GitHub"
-            link: "https://github.com/aws/aws-cdk"
-            package_name: aws-cdk-aws-iam
+  - name: AwsCdkAwsIamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-iam
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-iam' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-iam

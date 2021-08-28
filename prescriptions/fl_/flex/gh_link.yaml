@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FlexGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flex
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flex' is hosted on GitHub"
-            link: "https://github.com/pipermerriam/flex"
-            package_name: flex
+  - name: FlexGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flex
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flex' is hosted on GitHub
+        link: https://github.com/pipermerriam/flex
+        package_name: flex

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: MlCollectionsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ml-collections
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ml-collections' is hosted on GitHub"
-            link: "https://github.com/google/ml_collections"
-            package_name: ml-collections
+  - name: MlCollectionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ml-collections
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ml-collections' is hosted on GitHub
+        link: https://github.com/google/ml_collections
+        package_name: ml-collections

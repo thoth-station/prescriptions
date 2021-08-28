@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: DputFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: dput
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dput' is packaged as an RPM in Fedora 34 as 'dput-ng'"
-            link: https://src.fedoraproject.org/rpms/dput-ng
-            package_name: dput
+  - name: DputFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: dput
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dput' is packaged as an RPM in Fedora 34 as 'dput-ng'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: dput

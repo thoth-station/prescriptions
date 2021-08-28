@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: IhatemoneyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ihatemoney
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ihatemoney' is hosted on GitHub"
-            link: "https://github.com/spiral-project/ihatemoney"
-            package_name: ihatemoney
+  - name: IhatemoneyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ihatemoney
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ihatemoney' is hosted on GitHub
+        link: https://github.com/spiral-project/ihatemoney
+        package_name: ihatemoney

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RazorpayGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: razorpay
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'razorpay' is hosted on GitHub"
-            link: "https://github.com/razorpay/razorpay-python"
-            package_name: razorpay
+  - name: RazorpayGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: razorpay
+    run:
+      justification:
+      - type: INFO
+        message: Package 'razorpay' is hosted on GitHub
+        link: https://github.com/razorpay/razorpay-python
+        package_name: razorpay

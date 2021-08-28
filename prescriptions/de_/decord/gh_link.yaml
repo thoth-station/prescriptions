@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DecordGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: decord
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'decord' is hosted on GitHub"
-            link: "https://github.com/dmlc/decord"
-            package_name: decord
+  - name: DecordGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: decord
+    run:
+      justification:
+      - type: INFO
+        message: Package 'decord' is hosted on GitHub
+        link: https://github.com/dmlc/decord
+        package_name: decord

@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: B2sdkFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: b2sdk
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'b2sdk' is packaged as an RPM in Fedora 34 as 'python-b2sdk'"
-            link: https://src.fedoraproject.org/rpms/python-b2sdk
-            package_name: b2sdk
+  - name: B2sdkFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: b2sdk
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'b2sdk' is packaged as an RPM in Fedora 34 as 'python-b2sdk'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: b2sdk

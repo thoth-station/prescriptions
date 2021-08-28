@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Rust2rpmFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: rust2rpm
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rust2rpm' is packaged as an RPM in Fedora 34 as 'rust-packaging'"
-            link: https://src.fedoraproject.org/rpms/rust-packaging
-            package_name: rust2rpm
+  - name: Rust2rpmFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rust2rpm
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rust2rpm' is packaged as an RPM in Fedora 34 as 'rust-packaging'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: rust2rpm

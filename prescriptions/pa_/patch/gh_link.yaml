@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PatchGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: patch
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'patch' is hosted on GitHub"
-            link: "https://github.com/techtonik/python-patch"
-            package_name: patch
+  - name: PatchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'patch' is hosted on GitHub
+        link: https://github.com/techtonik/python-patch
+        package_name: patch

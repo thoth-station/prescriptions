@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: SetoolsFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: setools
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'setools' is packaged as an RPM in Fedora 34 as 'setools'"
-            link: https://src.fedoraproject.org/rpms/setools
-            package_name: setools
+  - name: SetoolsFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: setools
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'setools' is packaged as an RPM in Fedora 34 as 'setools'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: setools

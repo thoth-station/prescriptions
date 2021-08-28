@@ -1,14 +1,14 @@
 units:
   wraps:
-    - name: ShelveSecurityWarnings
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        library_usage:
-          shelve:
-            - shelve.*
-      run:
-        stack_info:
-          - type: WARNING
-            message: "shelve is based on pickle and thus unsuitable for dealing with untrusted sources"
-            link: "https://docs.python.org/3.11/library/shelve.html#shelve-security"
+  - name: ShelveSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        shelve:
+        - shelve.*
+    run:
+      stack_info:
+      - type: WARNING
+        message: shelve is based on pickle and thus unsuitable for dealing with untrusted sources
+        link: https://docs.python.org/3.11/library/shelve.html#shelve-security

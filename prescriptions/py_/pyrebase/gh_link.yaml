@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyrebaseGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyrebase
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyrebase' is hosted on GitHub"
-            link: "https://github.com/thisbejim/Pyrebase"
-            package_name: pyrebase
+  - name: PyrebaseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrebase
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyrebase' is hosted on GitHub
+        link: https://github.com/thisbejim/Pyrebase
+        package_name: pyrebase

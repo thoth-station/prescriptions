@@ -1,36 +1,40 @@
 units:
   wraps:
-    - name: TensorFlow22DropRemainder
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          cuda_version: ">=0.0"
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tensorflow
-                version: ">=2.3.0"
-      run:
-        justification:
-          - type: INFO
-            message: "pass drop_remainder=True to dataset batch when running tensorflow>=2.3.0 to improve training performance by 15%"
-            link: https://github.com/tensorflow/tensorflow/issues/41827
-            package_name: tensorflow
-    - name: TensorFlowGPU22DropRemainder
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          cuda_version: ">=0.0"
-      match:
-        - state:
-            resolved_dependencies:
-              - name: tensorflow-gpu
-                version: ">=2.3.0"
-      run:
-        justification:
-          - type: INFO
-            message: "pass drop_remainder=True to dataset batch when running tensorflow>=2.3.0 to improve training performance by 15%"
-            link: https://github.com/tensorflow/tensorflow/issues/41827
-            package_name: tensorflow-gpu
+  - name: TensorFlow22DropRemainder
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: ">=0.0"
+    match:
+    - state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ">=2.3.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          pass drop_remainder=True to dataset batch when running
+          tensorflow>=2.3.0 to improve training performance by 15%
+        link: https://github.com/tensorflow/tensorflow/issues/41827
+        package_name: tensorflow
+  - name: TensorFlowGPU22DropRemainder
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: ">=0.0"
+    match:
+    - state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+          version: ">=2.3.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          pass drop_remainder=True to dataset batch when running
+          tensorflow>=2.3.0 to improve training performance by 15%
+        link: https://github.com/tensorflow/tensorflow/issues/41827
+        package_name: tensorflow-gpu

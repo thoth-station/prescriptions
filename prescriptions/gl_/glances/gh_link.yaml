@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GlancesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: glances
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'glances' is hosted on GitHub"
-            link: "https://github.com/nicolargo/glances"
-            package_name: glances
+  - name: GlancesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glances
+    run:
+      justification:
+      - type: INFO
+        message: Package 'glances' is hosted on GitHub
+        link: https://github.com/nicolargo/glances
+        package_name: glances

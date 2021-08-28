@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoQGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-q
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-q' is hosted on GitHub"
-            link: "https://github.com/koed00/django-q"
-            package_name: django-q
+  - name: DjangoQGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-q
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-q' is hosted on GitHub
+        link: https://github.com/koed00/django-q
+        package_name: django-q

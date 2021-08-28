@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CmaesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cmaes
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cmaes' is hosted on GitHub"
-            link: "https://github.com/CyberAgent/cmaes"
-            package_name: cmaes
+  - name: CmaesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmaes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cmaes' is hosted on GitHub
+        link: https://github.com/CyberAgent/cmaes
+        package_name: cmaes

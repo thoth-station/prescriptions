@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DeprecationGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: deprecation
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'deprecation' is hosted on GitHub"
-            link: "https://github.com/briancurtin/deprecation"
-            package_name: deprecation
+  - name: DeprecationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deprecation' is hosted on GitHub
+        link: https://github.com/briancurtin/deprecation
+        package_name: deprecation

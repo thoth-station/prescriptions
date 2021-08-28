@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PydashGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pydash
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pydash' is hosted on GitHub"
-            link: "https://github.com/dgilland/pydash"
-            package_name: pydash
+  - name: PydashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydash' is hosted on GitHub
+        link: https://github.com/dgilland/pydash
+        package_name: pydash

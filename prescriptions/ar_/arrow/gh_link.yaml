@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ArrowGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: arrow
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'arrow' is hosted on GitHub"
-            link: "https://github.com/arrow-py/arrow"
-            package_name: arrow
+  - name: ArrowGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arrow
+    run:
+      justification:
+      - type: INFO
+        message: Package 'arrow' is hosted on GitHub
+        link: https://github.com/arrow-py/arrow
+        package_name: arrow

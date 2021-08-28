@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: SuodGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: suod
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'suod' is hosted on GitHub"
-            link: "https://github.com/yzhao062/suod"
-            package_name: suod
+  - name: SuodGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: suod
+    run:
+      justification:
+      - type: INFO
+        message: Package 'suod' is hosted on GitHub
+        link: https://github.com/yzhao062/suod
+        package_name: suod

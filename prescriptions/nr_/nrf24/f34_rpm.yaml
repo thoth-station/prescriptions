@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Nrf24Fedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: nrf24
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nrf24' is packaged as an RPM in Fedora 34 as 'python-nrf24'"
-            link: https://src.fedoraproject.org/rpms/python-nrf24
-            package_name: nrf24
+  - name: Nrf24Fedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: nrf24
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nrf24' is packaged as an RPM in Fedora 34 as 'python-nrf24'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: nrf24

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DowhyGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dowhy
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dowhy' is hosted on GitHub"
-            link: "https://github.com/microsoft/dowhy"
-            package_name: dowhy
+  - name: DowhyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dowhy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dowhy' is hosted on GitHub
+        link: https://github.com/microsoft/dowhy
+        package_name: dowhy

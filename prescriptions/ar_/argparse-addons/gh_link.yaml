@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ArgparseAddonsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: argparse-addons
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'argparse-addons' is hosted on GitHub"
-            link: "https://github.com/eerimoq/argparse_addons"
-            package_name: argparse-addons
+  - name: ArgparseAddonsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argparse-addons
+    run:
+      justification:
+      - type: INFO
+        message: Package 'argparse-addons' is hosted on GitHub
+        link: https://github.com/eerimoq/argparse_addons
+        package_name: argparse-addons

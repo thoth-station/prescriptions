@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PylogbeatGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pylogbeat
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pylogbeat' is hosted on GitHub"
-            link: "https://github.com/eht16/pylogbeat"
-            package_name: pylogbeat
+  - name: PylogbeatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylogbeat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylogbeat' is hosted on GitHub
+        link: https://github.com/eht16/pylogbeat
+        package_name: pylogbeat

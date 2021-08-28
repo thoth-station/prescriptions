@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: ContentfulGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: contentful
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'contentful' is hosted on GitHub"
-            link: "https://github.com/contentful/contentful.py"
-            package_name: contentful
+  - name: ContentfulGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contentful
+    run:
+      justification:
+      - type: INFO
+        message: Package 'contentful' is hosted on GitHub
+        link: https://github.com/contentful/contentful.py
+        package_name: contentful

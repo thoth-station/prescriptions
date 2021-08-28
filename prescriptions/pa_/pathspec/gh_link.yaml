@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PathspecGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pathspec
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pathspec' is hosted on GitHub"
-            link: "https://github.com/cpburnz/python-path-specification"
-            package_name: pathspec
+  - name: PathspecGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathspec
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pathspec' is hosted on GitHub
+        link: https://github.com/cpburnz/python-path-specification
+        package_name: pathspec

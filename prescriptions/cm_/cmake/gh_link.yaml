@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CmakeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: cmake
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'cmake' is hosted on GitHub"
-            link: "https://github.com/scikit-build/cmake-python-distributions"
-            package_name: cmake
+  - name: CmakeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmake
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cmake' is hosted on GitHub
+        link: https://github.com/scikit-build/cmake-python-distributions
+        package_name: cmake

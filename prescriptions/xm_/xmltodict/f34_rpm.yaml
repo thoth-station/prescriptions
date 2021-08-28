@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: XmltodictFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: xmltodict
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'xmltodict' is packaged as an RPM in Fedora 34 as 'python-xmltodict'"
-            link: https://src.fedoraproject.org/rpms/python-xmltodict
-            package_name: xmltodict
+  - name: XmltodictFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmltodict
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xmltodict' is packaged as an RPM in Fedora 34 as 'python-xmltodict'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: xmltodict

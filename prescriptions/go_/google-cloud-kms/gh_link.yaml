@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GoogleCloudKmsGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: google-cloud-kms
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'google-cloud-kms' is hosted on GitHub"
-            link: "https://github.com/googleapis/python-kms"
-            package_name: google-cloud-kms
+  - name: GoogleCloudKmsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-kms
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-kms' is hosted on GitHub
+        link: https://github.com/googleapis/python-kms
+        package_name: google-cloud-kms

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BraceexpandGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: braceexpand
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'braceexpand' is hosted on GitHub"
-            link: "https://github.com/trendels/braceexpand"
-            package_name: braceexpand
+  - name: BraceexpandGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: braceexpand
+    run:
+      justification:
+      - type: INFO
+        message: Package 'braceexpand' is hosted on GitHub
+        link: https://github.com/trendels/braceexpand
+        package_name: braceexpand

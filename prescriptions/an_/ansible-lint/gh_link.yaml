@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: AnsibleLintGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: ansible-lint
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ansible-lint' is hosted on GitHub"
-            link: "https://github.com/ansible-community/ansible-lint"
-            package_name: ansible-lint
+  - name: AnsibleLintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-lint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ansible-lint' is hosted on GitHub
+        link: https://github.com/ansible-community/ansible-lint
+        package_name: ansible-lint

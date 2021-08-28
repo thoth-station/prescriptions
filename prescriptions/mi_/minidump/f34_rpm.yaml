@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MinidumpFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: minidump
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'minidump' is packaged as an RPM in Fedora 34 as 'python-minidump'"
-            link: https://src.fedoraproject.org/rpms/python-minidump
-            package_name: minidump
+  - name: MinidumpFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: minidump
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'minidump' is packaged as an RPM in Fedora 34 as 'python-minidump'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: minidump

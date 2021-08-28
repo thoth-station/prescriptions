@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: OverridesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: overrides
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'overrides' is hosted on GitHub"
-            link: "https://github.com/mkorpela/overrides"
-            package_name: overrides
+  - name: OverridesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: overrides
+    run:
+      justification:
+      - type: INFO
+        message: Package 'overrides' is hosted on GitHub
+        link: https://github.com/mkorpela/overrides
+        package_name: overrides

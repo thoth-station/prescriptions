@@ -1,22 +1,26 @@
 units:
   sieves:
-    - name: Functools32BackportSieve
-      type: sieve.SkipPackage
-      should_include:
-        adviser_pipeline: true
-        recommendation_types:
-          - performance
-          - security
-          - stable
-        runtime_environments:
-          python_version: ">=3.2,<=3.10"
-      match:
-        package_name: functools32
-      run:
-        log:
-          message: "Dependency 'functools32' removed: functools is available in Python standard library starting Python 3.2"
-          type: WARNING
-        stack_info:
-          - type: WARNING
-            message: "Dependency 'functools32' removed: functools is available in Python standard library starting Python 3.2"
-            link: backports
+  - name: Functools32BackportSieve
+    type: sieve.SkipPackage
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - performance
+      - security
+      - stable
+      runtime_environments:
+        python_version: ">=3.2,<=3.10"
+    match:
+      package_name: functools32
+    run:
+      log:
+        message: >-
+          Dependency 'functools32' removed: functools is available in Python
+          standard library starting Python 3.2
+        type: WARNING
+      stack_info:
+      - type: WARNING
+        message: >-
+          Dependency 'functools32' removed: functools is available in Python
+          standard library starting Python 3.2
+        link: backports

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DglGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: dgl
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'dgl' is hosted on GitHub"
-            link: "https://github.com/dmlc/dgl"
-            package_name: dgl
+  - name: DglGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dgl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dgl' is hosted on GitHub
+        link: https://github.com/dmlc/dgl
+        package_name: dgl

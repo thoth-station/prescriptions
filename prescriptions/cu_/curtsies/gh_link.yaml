@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: CurtsiesGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: curtsies
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'curtsies' is hosted on GitHub"
-            link: "https://github.com/bpython/curtsies"
-            package_name: curtsies
+  - name: CurtsiesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: curtsies
+    run:
+      justification:
+      - type: INFO
+        message: Package 'curtsies' is hosted on GitHub
+        link: https://github.com/bpython/curtsies
+        package_name: curtsies

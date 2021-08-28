@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MarkupsafeUbi8RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: rhel
-              version: "8"
-      match:
-        state:
-          resolved_dependencies:
-            - name: markupsafe
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'markupsafe' is packaged as an RPM in UBI8 as 'python38-markupsafe'"
-            link: rpm
-            package_name: markupsafe
+  - name: MarkupsafeUbi8RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+    match:
+      state:
+        resolved_dependencies:
+        - name: markupsafe
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'markupsafe' is packaged as an RPM in UBI8 as 'python38-markupsafe'
+        link: rpm
+        package_name: markupsafe

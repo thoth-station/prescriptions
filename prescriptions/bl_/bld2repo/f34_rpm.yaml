@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: Bld2repoFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: bld2repo
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bld2repo' is packaged as an RPM in Fedora 34 as 'modulemd-tools'"
-            link: https://src.fedoraproject.org/rpms/modulemd-tools
-            package_name: bld2repo
+  - name: Bld2repoFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: bld2repo
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bld2repo' is packaged as an RPM in Fedora 34 as 'modulemd-tools'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: bld2repo

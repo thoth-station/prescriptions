@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: PymodbusFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: pymodbus
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pymodbus' is packaged as an RPM in Fedora 34 as 'pymodbus'"
-            link: https://src.fedoraproject.org/rpms/pymodbus
-            package_name: pymodbus
+  - name: PymodbusFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymodbus
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymodbus' is packaged as an RPM in Fedora 34 as 'pymodbus'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: pymodbus

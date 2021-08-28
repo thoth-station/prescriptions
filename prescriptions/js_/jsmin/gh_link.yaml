@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: JsminGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jsmin
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jsmin' is hosted on GitHub"
-            link: "https://github.com/tikitu/jsmin"
-            package_name: jsmin
+  - name: JsminGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsmin
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jsmin' is hosted on GitHub
+        link: https://github.com/tikitu/jsmin
+        package_name: jsmin

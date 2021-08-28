@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: TransliterateGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: transliterate
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'transliterate' is hosted on GitHub"
-            link: "https://github.com/barseghyanartur/transliterate"
-            package_name: transliterate
+  - name: TransliterateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transliterate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'transliterate' is hosted on GitHub
+        link: https://github.com/barseghyanartur/transliterate
+        package_name: transliterate

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: BayesianOptimizationGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: bayesian-optimization
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'bayesian-optimization' is hosted on GitHub"
-            link: "https://github.com/fmfn/BayesianOptimization"
-            package_name: bayesian-optimization
+  - name: BayesianOptimizationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bayesian-optimization
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bayesian-optimization' is hosted on GitHub
+        link: https://github.com/fmfn/BayesianOptimization
+        package_name: bayesian-optimization

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: FlaskUuidGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: flask-uuid
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'flask-uuid' is hosted on GitHub"
-            link: "https://github.com/wbolster/flask-uuid"
-            package_name: flask-uuid
+  - name: FlaskUuidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-uuid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-uuid' is hosted on GitHub
+        link: https://github.com/wbolster/flask-uuid
+        package_name: flask-uuid

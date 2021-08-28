@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: MicrofsFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: microfs
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'microfs' is packaged as an RPM in Fedora 34 as 'python-microfs'"
-            link: https://src.fedoraproject.org/rpms/python-microfs
-            package_name: microfs
+  - name: MicrofsFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: microfs
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'microfs' is packaged as an RPM in Fedora 34 as 'python-microfs'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: microfs

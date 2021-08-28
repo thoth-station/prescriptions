@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: DdtFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: ddt
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'ddt' is packaged as an RPM in Fedora 34 as 'python-ddt'"
-            link: https://src.fedoraproject.org/rpms/python-ddt
-            package_name: ddt
+  - name: DdtFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: ddt
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ddt' is packaged as an RPM in Fedora 34 as 'python-ddt'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: ddt

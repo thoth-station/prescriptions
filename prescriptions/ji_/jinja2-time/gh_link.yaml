@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: Jinja2TimeGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: jinja2-time
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'jinja2-time' is hosted on GitHub"
-            link: "https://github.com/hackebrot/jinja2-time"
-            package_name: jinja2-time
+  - name: Jinja2TimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2-time
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jinja2-time' is hosted on GitHub
+        link: https://github.com/hackebrot/jinja2-time
+        package_name: jinja2-time

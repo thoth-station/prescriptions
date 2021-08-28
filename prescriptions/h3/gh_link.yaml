@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: H3GitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: h3
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'h3' is hosted on GitHub"
-            link: "https://github.com/uber/h3-py"
-            package_name: h3
+  - name: H3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'h3' is hosted on GitHub
+        link: https://github.com/uber/h3-py
+        package_name: h3

@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: DjangoSendfileGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: django-sendfile
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'django-sendfile' is hosted on GitHub"
-            link: "https://github.com/johnsensible/django-sendfile"
-            package_name: django-sendfile
+  - name: DjangoSendfileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sendfile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-sendfile' is hosted on GitHub
+        link: https://github.com/johnsensible/django-sendfile
+        package_name: django-sendfile

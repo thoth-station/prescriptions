@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: RichGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: rich
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'rich' is hosted on GitHub"
-            link: "https://github.com/willmcgugan/rich"
-            package_name: rich
+  - name: RichGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rich
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rich' is hosted on GitHub
+        link: https://github.com/willmcgugan/rich
+        package_name: rich

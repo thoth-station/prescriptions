@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: GetmacGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: getmac
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'getmac' is hosted on GitHub"
-            link: "https://github.com/GhostofGoes/getmac"
-            package_name: getmac
+  - name: GetmacGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: getmac
+    run:
+      justification:
+      - type: INFO
+        message: Package 'getmac' is hosted on GitHub
+        link: https://github.com/GhostofGoes/getmac
+        package_name: getmac

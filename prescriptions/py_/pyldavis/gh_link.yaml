@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: PyldavisGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: pyldavis
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'pyldavis' is hosted on GitHub"
-            link: "https://github.com/bmabey/pyLDAvis"
-            package_name: pyldavis
+  - name: PyldavisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyldavis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyldavis' is hosted on GitHub
+        link: https://github.com/bmabey/pyLDAvis
+        package_name: pyldavis

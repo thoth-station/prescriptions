@@ -1,16 +1,16 @@
 units:
   wraps:
-    - name: NestedLookupGitHubURLWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-      match:
-        - state:
-            resolved_dependencies:
-              - name: nested-lookup
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'nested-lookup' is hosted on GitHub"
-            link: "https://github.com/russellballestrini/nested-lookup"
-            package_name: nested-lookup
+  - name: NestedLookupGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nested-lookup
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nested-lookup' is hosted on GitHub
+        link: https://github.com/russellballestrini/nested-lookup
+        package_name: nested-lookup

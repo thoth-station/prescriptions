@@ -1,21 +1,21 @@
 units:
   wraps:
-    - name: ShortuuidFedora34RPMWrap
-      type: wrap
-      should_include:
-        adviser_pipeline: true
-        runtime_environments:
-          operating_systems:
-            - name: fedora
-              version: "34"
-      match:
-        state:
-          resolved_dependencies:
-            - name: shortuuid
-              index_url: 'https://pypi.org/simple'
-      run:
-        justification:
-          - type: INFO
-            message: "Package 'shortuuid' is packaged as an RPM in Fedora 34 as 'python-shortuuid'"
-            link: https://src.fedoraproject.org/rpms/python-shortuuid
-            package_name: shortuuid
+  - name: ShortuuidFedora34RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "34"
+    match:
+      state:
+        resolved_dependencies:
+        - name: shortuuid
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'shortuuid' is packaged as an RPM in Fedora 34 as 'python-shortuuid'
+        link: https://src.fedoraproject.org/rpms/xrootd
+        package_name: shortuuid
