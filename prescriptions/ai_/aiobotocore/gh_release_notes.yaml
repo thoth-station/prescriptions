@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AiobotocoreGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+          name: aiobotocore
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: aiobotocore
