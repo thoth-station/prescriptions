@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AioitertoolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+          name: aioitertools
+    run:
+      release_notes:
+        organization: omnilib
+        repository: aioitertools
+        tag_version_prefix: v
