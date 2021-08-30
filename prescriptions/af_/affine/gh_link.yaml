@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AffineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: affine
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'affine' is hosted on GitHub"
+        link: "https://github.com/sgillies/affine"
+        package_name: affine
