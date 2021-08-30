@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZdeskGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zdesk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zdesk' is hosted on GitHub
+        link: https://github.com/fprimex/zdesk
+        package_name: zdesk
