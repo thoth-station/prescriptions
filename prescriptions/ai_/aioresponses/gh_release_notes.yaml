@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AioresponsesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+          name: aioresponses
+    run:
+      release_notes:
+        organization: pnuckowski
+        repository: aioresponses
