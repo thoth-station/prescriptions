@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZconfigGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zconfig
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zconfig' is hosted on GitHub
+        link: https://github.com/zopefoundation/ZConfig
+        package_name: zconfig
