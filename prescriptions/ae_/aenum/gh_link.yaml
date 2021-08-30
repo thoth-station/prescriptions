@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AenumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aenum
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'aenum' is hosted on GitHub"
+        link: "https://github.com/ethanfurman/aenum"
+        package_name: aenum
