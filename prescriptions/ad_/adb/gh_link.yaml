@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adb
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'adb' is hosted on GitHub"
+        link: "https://github.com/google/python-adb"
+        package_name: adb
