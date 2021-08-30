@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZipstreamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zipstream' is hosted on GitHub
+        link: https://github.com/allanlei/python-zipstream
+        package_name: zipstream
