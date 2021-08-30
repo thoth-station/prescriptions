@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AfsapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: afsapi
+    run:
+      justification:
+      - type: INFO
+        message: "Package 'afsapi' is hosted on GitHub"
+        link: "https://github.com/zhelev/python-afsapi"
+        package_name: afsapi
