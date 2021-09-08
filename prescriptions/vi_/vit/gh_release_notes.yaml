@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: VitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vit
+    run:
+      release_notes:
+        organization: vit-project
+        repository: vit
+        tag_version_prefix: v
