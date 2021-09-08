@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ResponsesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: responses
+    run:
+      release_notes:
+        organization: getsentry
+        repository: responses
