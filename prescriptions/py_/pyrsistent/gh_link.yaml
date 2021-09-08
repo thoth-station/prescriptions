@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyrsistentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrsistent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyrsistent' is hosted on GitHub
+        link: https://github.com/tobgu/pyrsistent
+        package_name: pyrsistent
