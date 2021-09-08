@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MetarGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metar
+    run:
+      justification:
+      - type: INFO
+        message: Package 'metar' is hosted on GitHub
+        link: https://github.com/python-metar/python-metar
+        package_name: metar
