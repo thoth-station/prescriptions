@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PssGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pss
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pss' is hosted on GitHub
+        link: https://github.com/eliben/pss
+        package_name: pss
