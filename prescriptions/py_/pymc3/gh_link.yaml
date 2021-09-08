@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pymc3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymc3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymc3' is hosted on GitHub
+        link: https://github.com/pymc-devs/pymc3
+        package_name: pymc3
