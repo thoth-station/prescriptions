@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SecretstorageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: secretstorage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'secretstorage' is hosted on GitHub
+        link: https://github.com/mitya57/secretstorage
+        package_name: secretstorage
