@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MssGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mss
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mss' is hosted on GitHub
+        link: https://github.com/BoboTiG/python-mss
+        package_name: mss
