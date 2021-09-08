@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VcrpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vcrpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vcrpy' is hosted on GitHub
+        link: https://github.com/kevin1024/vcrpy
+        package_name: vcrpy
