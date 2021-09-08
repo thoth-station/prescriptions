@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Num2wordsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: num2words
+    run:
+      release_notes:
+        organization: savoirfairelinux
+        repository: num2words
