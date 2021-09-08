@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyctGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyct
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyct' is hosted on GitHub
+        link: https://github.com/pyviz-dev/pyct
+        package_name: pyct
