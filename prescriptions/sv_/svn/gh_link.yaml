@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SvnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: svn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'svn' is hosted on GitHub
+        link: https://github.com/dsoprea/PySvn
+        package_name: svn
