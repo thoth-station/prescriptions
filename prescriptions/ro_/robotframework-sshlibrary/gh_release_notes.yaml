@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RobotframeworkSshlibraryGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-sshlibrary
+    run:
+      release_notes:
+        organization: robotframework
+        repository: SSHLibrary
+        tag_version_prefix: v
