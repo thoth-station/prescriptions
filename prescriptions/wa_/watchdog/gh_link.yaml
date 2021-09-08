@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WatchdogGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watchdog
+    run:
+      justification:
+      - type: INFO
+        message: Package 'watchdog' is hosted on GitHub
+        link: https://github.com/gorakhargosh/watchdog
+        package_name: watchdog
