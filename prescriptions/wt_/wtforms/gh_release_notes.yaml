@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: WtformsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wtforms
+    run:
+      release_notes:
+        organization: wtforms
+        repository: wtforms
