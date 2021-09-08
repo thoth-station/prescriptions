@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TorchModelArchiverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch-model-archiver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torch-model-archiver' is hosted on GitHub
+        link: https://github.com/pytorch/serve
+        package_name: torch-model-archiver
