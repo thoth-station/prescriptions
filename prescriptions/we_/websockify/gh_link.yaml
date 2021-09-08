@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebsockifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websockify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'websockify' is hosted on GitHub
+        link: https://github.com/novnc/websockify
+        package_name: websockify
