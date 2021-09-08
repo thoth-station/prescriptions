@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PetastormGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: petastorm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'petastorm' is hosted on GitHub
+        link: https://github.com/uber/petastorm
+        package_name: petastorm
