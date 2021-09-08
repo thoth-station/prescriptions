@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestTornadoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornado
+    run:
+      release_notes:
+        organization: eugeniy
+        repository: pytest-tornado
+        tag_version_prefix: v
