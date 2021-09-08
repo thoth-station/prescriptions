@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MarshmallowDataclassGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-dataclass
+    run:
+      release_notes:
+        organization: lovasoa
+        repository: marshmallow_dataclass
+        tag_version_prefix: v
