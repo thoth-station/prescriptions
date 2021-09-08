@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonGiltGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-gilt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-gilt' is hosted on GitHub
+        link: https://github.com/retr0h/gilt
+        package_name: python-gilt
