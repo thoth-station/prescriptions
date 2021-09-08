@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TsfreshGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tsfresh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tsfresh' is hosted on GitHub
+        link: https://github.com/blue-yonder/tsfresh
+        package_name: tsfresh
