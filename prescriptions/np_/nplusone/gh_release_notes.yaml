@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NplusoneGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nplusone
+    run:
+      release_notes:
+        organization: jmcarp
+        repository: nplusone
+        tag_version_prefix: v
