@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RestrictedpythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restrictedpython
+    run:
+      justification:
+      - type: INFO
+        message: Package 'restrictedpython' is hosted on GitHub
+        link: https://github.com/zopefoundation/RestrictedPython
+        package_name: restrictedpython
