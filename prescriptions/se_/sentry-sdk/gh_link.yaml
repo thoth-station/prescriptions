@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SentrySdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentry-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sentry-sdk' is hosted on GitHub
+        link: https://github.com/getsentry/sentry-python
+        package_name: sentry-sdk
