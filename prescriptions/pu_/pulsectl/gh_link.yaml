@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PulsectlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pulsectl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pulsectl' is hosted on GitHub
+        link: https://github.com/mk-fg/python-pulse-control
+        package_name: pulsectl
