@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sen
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sen' is hosted on GitHub
+        link: https://github.com/TomasTomecek/sen
+        package_name: sen
