@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintProtobufGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-protobuf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylint-protobuf' is hosted on GitHub
+        link: https://github.com/nelfin/pylint-protobuf
+        package_name: pylint-protobuf
