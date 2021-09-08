@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SconsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scons
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scons' is hosted on GitHub
+        link: https://github.com/SCons/scons
+        package_name: scons
