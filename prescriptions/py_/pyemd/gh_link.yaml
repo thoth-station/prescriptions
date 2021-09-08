@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyemdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyemd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyemd' is hosted on GitHub
+        link: https://github.com/wmayner/pyemd
+        package_name: pyemd
