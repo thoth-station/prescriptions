@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RiotGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'riot' is hosted on GitHub
+        link: https://github.com/DataDog/riot
+        package_name: riot
