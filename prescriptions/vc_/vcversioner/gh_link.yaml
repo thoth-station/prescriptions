@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VcversionerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vcversioner
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vcversioner' is hosted on GitHub
+        link: https://github.com/habnabit/vcversioner
+        package_name: vcversioner
