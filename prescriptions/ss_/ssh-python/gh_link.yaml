@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SshPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssh-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ssh-python' is hosted on GitHub
+        link: https://github.com/ParallelSSH/ssh-python
+        package_name: ssh-python
