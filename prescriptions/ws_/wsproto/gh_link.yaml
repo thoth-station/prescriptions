@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WsprotoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsproto
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wsproto' is hosted on GitHub
+        link: https://github.com/python-hyper/wsproto
+        package_name: wsproto
