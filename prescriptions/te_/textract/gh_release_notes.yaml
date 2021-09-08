@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TextractGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textract
+    run:
+      release_notes:
+        organization: deanmalmgren
+        repository: textract
+        tag_version_prefix: v
