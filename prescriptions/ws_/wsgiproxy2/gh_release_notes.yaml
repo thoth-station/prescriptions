@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Wsgiproxy2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsgiproxy2
+    run:
+      release_notes:
+        organization: gawel
+        repository: WSGIProxy2
