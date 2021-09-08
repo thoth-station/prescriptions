@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: UrlbusterGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlbuster
+    run:
+      release_notes:
+        organization: cytopia
+        repository: urlbuster
