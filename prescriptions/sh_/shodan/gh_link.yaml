@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShodanGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shodan
+    run:
+      justification:
+      - type: INFO
+        message: Package 'shodan' is hosted on GitHub
+        link: https://github.com/achillean/shodan-python
+        package_name: shodan
