@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysrtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysrt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pysrt' is hosted on GitHub
+        link: https://github.com/byroot/pysrt
+        package_name: pysrt
