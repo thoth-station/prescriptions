@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: VolkszaehlerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: volkszaehler
+    run:
+      release_notes:
+        organization: home-assistant-ecosystem
+        repository: python-volkszaehler
