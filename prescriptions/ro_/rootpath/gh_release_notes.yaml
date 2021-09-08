@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RootpathGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rootpath
+    run:
+      release_notes:
+        organization: grimen
+        repository: python-rootpath
+        tag_version_prefix: v
