@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ThothPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'thoth-python' is hosted on GitHub
+        link: https://github.com/thoth-station/python
+        package_name: thoth-python
