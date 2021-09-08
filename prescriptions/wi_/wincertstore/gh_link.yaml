@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WincertstoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wincertstore
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wincertstore' is hosted on GitHub
+        link: https://github.com/tiran/wincertstore
+        package_name: wincertstore
