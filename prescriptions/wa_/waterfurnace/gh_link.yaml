@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WaterfurnaceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waterfurnace
+    run:
+      justification:
+      - type: INFO
+        message: Package 'waterfurnace' is hosted on GitHub
+        link: https://github.com/sdague/waterfurnace
+        package_name: waterfurnace
