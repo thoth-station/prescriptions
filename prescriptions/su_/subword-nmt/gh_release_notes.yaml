@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SubwordNmtGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subword-nmt
+    run:
+      release_notes:
+        organization: rsennrich
+        repository: subword-nmt
+        tag_version_prefix: v
