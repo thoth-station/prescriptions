@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PacpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pacpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pacpy' is hosted on GitHub
+        link: https://github.com/voytekresearch/pacpy
+        package_name: pacpy
