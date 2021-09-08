@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YdiffGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ydiff
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ydiff' is hosted on GitHub
+        link: https://github.com/ymattw/ydiff
+        package_name: ydiff
