@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ServiceIdentityGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: service-identity
+    run:
+      justification:
+      - type: INFO
+        message: Package 'service-identity' is hosted on GitHub
+        link: https://github.com/pyca/service-identity
+        package_name: service-identity
