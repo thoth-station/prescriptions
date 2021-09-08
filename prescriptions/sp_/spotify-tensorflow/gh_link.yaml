@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpotifyTensorflowGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spotify-tensorflow
+    run:
+      justification:
+      - type: INFO
+        message: Package 'spotify-tensorflow' is hosted on GitHub
+        link: https://github.com/spotify/spotify-tensorflow
+        package_name: spotify-tensorflow
