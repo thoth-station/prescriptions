@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VconnectorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vconnector
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vconnector' is hosted on GitHub
+        link: https://github.com/dnaeon/py-vconnector
+        package_name: vconnector
