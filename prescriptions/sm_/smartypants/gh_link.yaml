@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SmartypantsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smartypants
+    run:
+      justification:
+      - type: INFO
+        message: Package 'smartypants' is hosted on GitHub
+        link: https://github.com/leohemsted/smartypants.py
+        package_name: smartypants
