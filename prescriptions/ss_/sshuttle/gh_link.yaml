@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SshuttleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshuttle
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sshuttle' is hosted on GitHub
+        link: https://github.com/sshuttle/sshuttle
+        package_name: sshuttle
