@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UvloopGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uvloop
+    run:
+      justification:
+      - type: INFO
+        message: Package 'uvloop' is hosted on GitHub
+        link: https://github.com/MagicStack/uvloop
+        package_name: uvloop
