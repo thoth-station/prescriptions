@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TunaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tuna
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tuna' is hosted on GitHub
+        link: https://github.com/nschloe/tuna
+        package_name: tuna
