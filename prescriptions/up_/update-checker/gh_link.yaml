@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UpdateCheckerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: update-checker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'update-checker' is hosted on GitHub
+        link: https://github.com/bboe/update_checker
+        package_name: update-checker
