@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: UclGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ucl
+    run:
+      release_notes:
+        organization: vstakhov
+        repository: libucl
