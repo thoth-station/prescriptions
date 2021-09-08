@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VolkszaehlerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: volkszaehler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'volkszaehler' is hosted on GitHub
+        link: https://github.com/home-assistant-ecosystem/python-volkszaehler
+        package_name: volkszaehler
