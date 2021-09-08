@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vine
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vine' is hosted on GitHub
+        link: https://github.com/celery/vine
+        package_name: vine
