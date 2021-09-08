@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TradingCalendarsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trading-calendars
+    run:
+      justification:
+      - type: INFO
+        message: Package 'trading-calendars' is hosted on GitHub
+        link: https://github.com/quantopian/trading_calendars
+        package_name: trading-calendars
