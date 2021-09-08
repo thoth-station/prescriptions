@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ValidatorsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validators
+    run:
+      justification:
+      - type: INFO
+        message: Package 'validators' is hosted on GitHub
+        link: https://github.com/kvesteri/validators
+        package_name: validators
