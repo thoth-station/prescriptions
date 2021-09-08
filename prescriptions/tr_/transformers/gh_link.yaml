@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TransformersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transformers
+    run:
+      justification:
+      - type: INFO
+        message: Package 'transformers' is hosted on GitHub
+        link: https://github.com/huggingface/transformers
+        package_name: transformers
