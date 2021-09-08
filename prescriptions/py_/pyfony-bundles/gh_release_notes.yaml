@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyfonyBundlesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfony-bundles
+    run:
+      release_notes:
+        organization: pyfony
+        repository: pyfony-bundles
+        tag_version_prefix: v
