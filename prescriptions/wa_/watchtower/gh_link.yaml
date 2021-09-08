@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WatchtowerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watchtower
+    run:
+      justification:
+      - type: INFO
+        message: Package 'watchtower' is hosted on GitHub
+        link: https://github.com/kislyuk/watchtower
+        package_name: watchtower
