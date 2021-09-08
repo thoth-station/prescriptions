@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyodbcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyodbc
+    run:
+      release_notes:
+        organization: mkleehammer
+        repository: pyodbc
