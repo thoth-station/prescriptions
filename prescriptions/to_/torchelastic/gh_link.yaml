@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TorchelasticGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchelastic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torchelastic' is hosted on GitHub
+        link: https://github.com/pytorch/elastic
+        package_name: torchelastic
