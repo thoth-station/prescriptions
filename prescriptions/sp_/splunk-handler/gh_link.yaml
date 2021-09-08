@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SplunkHandlerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: splunk-handler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'splunk-handler' is hosted on GitHub
+        link: https://github.com/zach-taylor/splunk_handler
+        package_name: splunk-handler
