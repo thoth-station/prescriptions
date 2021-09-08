@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TortillaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tortilla
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tortilla' is hosted on GitHub
+        link: https://github.com/tortilla/tortilla
+        package_name: tortilla
