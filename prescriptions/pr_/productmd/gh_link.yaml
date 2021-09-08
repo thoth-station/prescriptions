@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductmdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: productmd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'productmd' is hosted on GitHub
+        link: https://github.com/release-engineering/productmd
+        package_name: productmd
