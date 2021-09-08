@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Uncompyle6GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uncompyle6
+    run:
+      release_notes:
+        organization: rocky
+        repository: python-uncompyle6
