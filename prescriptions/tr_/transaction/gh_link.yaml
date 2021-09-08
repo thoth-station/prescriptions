@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TransactionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transaction
+    run:
+      justification:
+      - type: INFO
+        message: Package 'transaction' is hosted on GitHub
+        link: https://github.com/zopefoundation/transaction
+        package_name: transaction
