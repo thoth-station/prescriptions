@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyqueryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyquery
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyquery' is hosted on GitHub
+        link: https://github.com/gawel/pyquery
+        package_name: pyquery
