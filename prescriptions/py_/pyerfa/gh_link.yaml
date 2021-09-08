@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyerfaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyerfa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyerfa' is hosted on GitHub
+        link: https://github.com/liberfa/pyerfa
+        package_name: pyerfa
