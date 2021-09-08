@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycparserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycparser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycparser' is hosted on GitHub
+        link: https://github.com/eliben/pycparser
+        package_name: pycparser
