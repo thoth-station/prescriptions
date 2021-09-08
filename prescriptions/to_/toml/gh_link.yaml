@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TomlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toml
+    run:
+      justification:
+      - type: INFO
+        message: Package 'toml' is hosted on GitHub
+        link: https://github.com/uiri/toml
+        package_name: toml
