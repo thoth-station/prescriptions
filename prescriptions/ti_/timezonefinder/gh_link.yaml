@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TimezonefinderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timezonefinder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'timezonefinder' is hosted on GitHub
+        link: https://github.com/jannikmi/timezonefinder
+        package_name: timezonefinder
