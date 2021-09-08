@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SktimeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sktime
+    run:
+      release_notes:
+        organization: alan-turing-institute
+        repository: sktime
+        tag_version_prefix: v
