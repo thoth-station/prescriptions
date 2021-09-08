@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UrlwatchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlwatch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'urlwatch' is hosted on GitHub
+        link: https://github.com/thp/urlwatch
+        package_name: urlwatch
