@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Metrics2mqttGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metrics2mqtt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'metrics2mqtt' is hosted on GitHub
+        link: https://github.com/jamiebegin/metrics2mqtt
+        package_name: metrics2mqtt
