@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TfSlimGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tf-slim
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tf-slim' is hosted on GitHub
+        link: https://github.com/google-research/tf-slim
+        package_name: tf-slim
