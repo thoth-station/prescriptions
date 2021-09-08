@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PreshedGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: preshed
+    run:
+      release_notes:
+        organization: explosion
+        repository: preshed
+        tag_version_prefix: v
