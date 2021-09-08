@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SacrebleuGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sacrebleu
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sacrebleu' is hosted on GitHub
+        link: https://github.com/mjpost/sacrebleu
+        package_name: sacrebleu
