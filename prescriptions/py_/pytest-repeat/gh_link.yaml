@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestRepeatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-repeat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-repeat' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-repeat
+        package_name: pytest-repeat
