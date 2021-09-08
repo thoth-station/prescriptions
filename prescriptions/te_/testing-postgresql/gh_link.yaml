@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TestingPostgresqlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testing-postgresql
+    run:
+      justification:
+      - type: INFO
+        message: Package 'testing-postgresql' is hosted on GitHub
+        link: https://github.com/tk0miya/testing.postgresql
+        package_name: testing-postgresql
