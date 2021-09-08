@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ZipstreamGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream
+    run:
+      release_notes:
+        organization: allanlei
+        repository: python-zipstream
+        tag_version_prefix: v
