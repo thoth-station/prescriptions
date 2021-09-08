@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TestingCommonDatabaseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testing-common-database
+    run:
+      justification:
+      - type: INFO
+        message: Package 'testing-common-database' is hosted on GitHub
+        link: https://github.com/tk0miya/testing.common.database
+        package_name: testing-common-database
