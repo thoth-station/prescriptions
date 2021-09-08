@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pint' is hosted on GitHub
+        link: https://github.com/hgrecco/pint
+        package_name: pint
