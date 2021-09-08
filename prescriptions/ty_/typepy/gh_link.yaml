@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TypepyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typepy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'typepy' is hosted on GitHub
+        link: https://github.com/thombashi/typepy
+        package_name: typepy
