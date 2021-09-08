@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScrapySplashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scrapy-splash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scrapy-splash' is hosted on GitHub
+        link: https://github.com/scrapy-plugins/scrapy-splash
+        package_name: scrapy-splash
