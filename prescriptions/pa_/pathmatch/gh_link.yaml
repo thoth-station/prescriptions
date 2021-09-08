@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PathmatchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathmatch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pathmatch' is hosted on GitHub
+        link: https://github.com/demurgos/py-pathmatch
+        package_name: pathmatch
