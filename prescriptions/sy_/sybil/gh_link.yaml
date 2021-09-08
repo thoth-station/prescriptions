@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SybilGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sybil
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sybil' is hosted on GitHub
+        link: https://github.com/cjw296/sybil
+        package_name: sybil
