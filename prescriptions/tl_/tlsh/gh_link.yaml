@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TlshGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tlsh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tlsh' is hosted on GitHub
+        link: https://github.com/trendmicro/tlsh
+        package_name: tlsh
