@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'parver' is hosted on GitHub
+        link: https://github.com/RazerM/parver
+        package_name: parver
