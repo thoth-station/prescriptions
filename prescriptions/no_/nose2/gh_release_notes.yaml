@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Nose2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose2
+    run:
+      release_notes:
+        organization: nose-devs
+        repository: nose2
