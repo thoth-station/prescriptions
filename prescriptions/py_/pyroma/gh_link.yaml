@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyromaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyroma
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyroma' is hosted on GitHub
+        link: https://github.com/regebro/pyroma
+        package_name: pyroma
