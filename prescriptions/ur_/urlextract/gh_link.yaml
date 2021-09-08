@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UrlextractGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlextract
+    run:
+      justification:
+      - type: INFO
+        message: Package 'urlextract' is hosted on GitHub
+        link: https://github.com/lipoja/URLExtract
+        package_name: urlextract
