@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YamllintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yamllint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yamllint' is hosted on GitHub
+        link: https://github.com/adrienverge/yamllint
+        package_name: yamllint
