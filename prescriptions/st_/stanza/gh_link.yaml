@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StanzaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stanza
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stanza' is hosted on GitHub
+        link: https://github.com/stanfordnlp/stanza
+        package_name: stanza
