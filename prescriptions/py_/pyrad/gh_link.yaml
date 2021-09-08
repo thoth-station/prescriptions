@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyradGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrad
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyrad' is hosted on GitHub
+        link: https://github.com/pyradius/pyrad
+        package_name: pyrad
