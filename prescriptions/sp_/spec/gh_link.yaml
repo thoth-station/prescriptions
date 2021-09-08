@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpecGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spec
+    run:
+      justification:
+      - type: INFO
+        message: Package 'spec' is hosted on GitHub
+        link: https://github.com/bitprophet/spec
+        package_name: spec
