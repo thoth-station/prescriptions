@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PluginbaseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pluginbase
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pluginbase' is hosted on GitHub
+        link: https://github.com/mitsuhiko/pluginbase
+        package_name: pluginbase
