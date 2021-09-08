@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UserAgentsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: user-agents
+    run:
+      release_notes:
+        organization: selwin
+        repository: python-user-agents
+        tag_version_prefix: v
