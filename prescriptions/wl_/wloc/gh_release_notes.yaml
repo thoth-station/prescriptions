@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WlocGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wloc
+    run:
+      release_notes:
+        organization: xvitaly
+        repository: wloc
+        tag_version_prefix: v
