@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxcontribHttpdomainGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-httpdomain
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinxcontrib-httpdomain' is hosted on GitHub
+        link: https://github.com/sphinx-contrib/httpdomain
+        package_name: sphinxcontrib-httpdomain
