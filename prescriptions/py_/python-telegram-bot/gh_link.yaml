@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonTelegramBotGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-telegram-bot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-telegram-bot' is hosted on GitHub
+        link: https://github.com/python-telegram-bot/python-telegram-bot
+        package_name: python-telegram-bot
