@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XlsxwriterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xlsxwriter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xlsxwriter' is hosted on GitHub
+        link: https://github.com/jmcnamara/XlsxWriter
+        package_name: xlsxwriter
