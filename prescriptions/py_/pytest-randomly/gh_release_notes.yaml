@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestRandomlyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-randomly
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-randomly
