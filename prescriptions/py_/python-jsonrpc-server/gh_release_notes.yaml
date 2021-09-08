@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonJsonrpcServerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-jsonrpc-server
+    run:
+      release_notes:
+        organization: palantir
+        repository: python-jsonrpc-server
