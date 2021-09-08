@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestHelpersNamespaceGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-helpers-namespace
+    run:
+      release_notes:
+        organization: saltstack
+        repository: pytest-helpers-namespace
+        tag_version_prefix: v
