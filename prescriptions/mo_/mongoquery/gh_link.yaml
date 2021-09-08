@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MongoqueryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mongoquery
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mongoquery' is hosted on GitHub
+        link: https://github.com/kapouille/mongoquery
+        package_name: mongoquery
