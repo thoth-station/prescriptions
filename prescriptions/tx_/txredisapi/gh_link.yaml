@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TxredisapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txredisapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'txredisapi' is hosted on GitHub
+        link: https://github.com/IlyaSkriblovsky/txredisapi
+        package_name: txredisapi
