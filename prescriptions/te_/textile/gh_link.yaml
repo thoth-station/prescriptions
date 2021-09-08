@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TextileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'textile' is hosted on GitHub
+        link: https://github.com/textile/python-textile
+        package_name: textile
