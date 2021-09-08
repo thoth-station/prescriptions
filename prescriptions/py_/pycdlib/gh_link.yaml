@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycdlibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycdlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycdlib' is hosted on GitHub
+        link: https://github.com/clalancette/pycdlib
+        package_name: pycdlib
