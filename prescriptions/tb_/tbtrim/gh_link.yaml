@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TbtrimGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tbtrim
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tbtrim' is hosted on GitHub
+        link: https://github.com/gousaiyang/tbtrim
+        package_name: tbtrim
