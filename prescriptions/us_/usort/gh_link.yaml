@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UsortGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: usort
+    run:
+      justification:
+      - type: INFO
+        message: Package 'usort' is hosted on GitHub
+        link: https://github.com/facebookexperimental/usort
+        package_name: usort
