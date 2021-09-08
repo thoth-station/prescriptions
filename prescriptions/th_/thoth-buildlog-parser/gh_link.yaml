@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ThothBuildlogParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-buildlog-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'thoth-buildlog-parser' is hosted on GitHub
+        link: https://github.com/thoth-station/buildlog-parser
+        package_name: thoth-buildlog-parser
