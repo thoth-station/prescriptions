@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OptaxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optax
+    run:
+      justification:
+      - type: INFO
+        message: Package 'optax' is hosted on GitHub
+        link: https://github.com/deepmind/optax
+        package_name: optax
