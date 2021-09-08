@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StathamSchemaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: statham-schema
+    run:
+      justification:
+      - type: INFO
+        message: Package 'statham-schema' is hosted on GitHub
+        link: https://github.com/jacksmith15/statham-schema
+        package_name: statham-schema
