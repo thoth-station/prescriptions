@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UdiskieGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: udiskie
+    run:
+      release_notes:
+        organization: coldfix
+        repository: udiskie
+        tag_version_prefix: v
