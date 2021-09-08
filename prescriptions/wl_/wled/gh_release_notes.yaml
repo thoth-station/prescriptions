@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WledGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wled
+    run:
+      release_notes:
+        organization: frenck
+        repository: python-wled
+        tag_version_prefix: v
