@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylruGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylru
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylru' is hosted on GitHub
+        link: https://github.com/jlhutch/pylru
+        package_name: pylru
