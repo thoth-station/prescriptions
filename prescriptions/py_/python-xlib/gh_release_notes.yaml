@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonXlibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-xlib
+    run:
+      release_notes:
+        organization: python-xlib
+        repository: python-xlib
