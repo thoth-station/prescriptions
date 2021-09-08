@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: VcstoolGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vcstool
+    run:
+      release_notes:
+        organization: dirk-thomas
+        repository: vcstool
