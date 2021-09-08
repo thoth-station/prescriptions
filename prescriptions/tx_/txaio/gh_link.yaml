@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TxaioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txaio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'txaio' is hosted on GitHub
+        link: https://github.com/crossbario/txaio
+        package_name: txaio
