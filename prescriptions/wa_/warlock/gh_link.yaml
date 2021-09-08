@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WarlockGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: warlock
+    run:
+      justification:
+      - type: INFO
+        message: Package 'warlock' is hosted on GitHub
+        link: https://github.com/bcwaldon/warlock
+        package_name: warlock
