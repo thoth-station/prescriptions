@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: WiffiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wiffi
+    run:
+      release_notes:
+        organization: mampfes
+        repository: python-wiffi
