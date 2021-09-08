@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PowerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: power
+    run:
+      justification:
+      - type: INFO
+        message: Package 'power' is hosted on GitHub
+        link: https://github.com/Kentzo/Power
+        package_name: power
