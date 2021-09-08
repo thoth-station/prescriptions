@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TomlkitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tomlkit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tomlkit' is hosted on GitHub
+        link: https://github.com/sdispater/tomlkit
+        package_name: tomlkit
