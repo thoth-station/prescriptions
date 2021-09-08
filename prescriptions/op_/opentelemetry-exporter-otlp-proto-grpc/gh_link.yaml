@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpentelemetryExporterOtlpProtoGrpcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentelemetry-exporter-otlp-proto-grpc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opentelemetry-exporter-otlp-proto-grpc' is hosted on GitHub
+        link: https://github.com/open-telemetry/opentelemetry-python
+        package_name: opentelemetry-exporter-otlp-proto-grpc
