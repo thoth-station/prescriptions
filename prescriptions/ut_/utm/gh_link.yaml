@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UtmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'utm' is hosted on GitHub
+        link: https://github.com/Turbo87/utm
+        package_name: utm
