@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TxawsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txaws
+    run:
+      justification:
+      - type: INFO
+        message: Package 'txaws' is hosted on GitHub
+        link: https://github.com/twisted/txaws
+        package_name: txaws
