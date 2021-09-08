@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BinaryArtifactsXstaticBootstrapScssScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xstatic-bootstrap-scss
+    run:
+      justification:
+      - type: INFO
+        message: Project does not have binary artifacts in the source repository
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: xstatic-bootstrap-scss
