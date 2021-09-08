@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SchemaSaladGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: schema-salad
+    run:
+      justification:
+      - type: INFO
+        message: Package 'schema-salad' is hosted on GitHub
+        link: https://github.com/common-workflow-language/schema_salad
+        package_name: schema-salad
