@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlobjectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlobject
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlobject' is hosted on GitHub
+        link: https://github.com/sqlobject/sqlobject
+        package_name: sqlobject
