@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZdaemonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zdaemon
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zdaemon' is hosted on GitHub
+        link: https://github.com/zopefoundation/zdaemon
+        package_name: zdaemon
