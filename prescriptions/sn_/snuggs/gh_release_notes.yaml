@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SnuggsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snuggs
+    run:
+      release_notes:
+        organization: mapbox
+        repository: snuggs
