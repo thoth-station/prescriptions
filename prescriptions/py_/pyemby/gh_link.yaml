@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyembyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyemby
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyemby' is hosted on GitHub
+        link: https://github.com/mezz64/pyemby
+        package_name: pyemby
