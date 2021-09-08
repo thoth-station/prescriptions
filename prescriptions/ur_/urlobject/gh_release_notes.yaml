@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UrlobjectGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlobject
+    run:
+      release_notes:
+        organization: zacharyvoase
+        repository: urlobject
+        tag_version_prefix: v
