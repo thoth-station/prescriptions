@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SkorchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: skorch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'skorch' is hosted on GitHub
+        link: https://github.com/skorch-dev/skorch
+        package_name: skorch
