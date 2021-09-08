@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TelethonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: telethon
+    run:
+      release_notes:
+        organization: LonamiWebs
+        repository: Telethon
+        tag_version_prefix: v
