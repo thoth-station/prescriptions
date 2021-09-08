@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: VisvisGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visvis
+    run:
+      release_notes:
+        organization: almarklein
+        repository: visvis
+        tag_version_prefix: v
