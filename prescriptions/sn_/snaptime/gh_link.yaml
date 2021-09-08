@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnaptimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snaptime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'snaptime' is hosted on GitHub
+        link: https://github.com/zartstrom/snaptime
+        package_name: snaptime
