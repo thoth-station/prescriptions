@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'slacker' is hosted on GitHub
+        link: https://github.com/os/slacker
+        package_name: slacker
