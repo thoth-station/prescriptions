@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TamrUnifyClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tamr-unify-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tamr-unify-client' is hosted on GitHub
+        link: https://github.com/Datatamer/tamr-client
+        package_name: tamr-unify-client
