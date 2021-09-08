@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PronouncingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pronouncing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pronouncing' is hosted on GitHub
+        link: https://github.com/aparrish/pronouncingpy
+        package_name: pronouncing
