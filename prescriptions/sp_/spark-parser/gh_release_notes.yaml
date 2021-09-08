@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SparkParserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spark-parser
+    run:
+      release_notes:
+        organization: rocky
+        repository: python-spark
