@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SievelibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sievelib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sievelib' is hosted on GitHub
+        link: https://github.com/tonioo/sievelib
+        package_name: sievelib
