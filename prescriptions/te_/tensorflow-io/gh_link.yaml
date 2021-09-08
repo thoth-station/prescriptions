@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowIoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-io
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-io' is hosted on GitHub
+        link: https://github.com/tensorflow/io
+        package_name: tensorflow-io
