@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StupsCliSupportGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-cli-support
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stups-cli-support' is hosted on GitHub
+        link: https://github.com/zalando-stups/stups-cli-support
+        package_name: stups-cli-support
