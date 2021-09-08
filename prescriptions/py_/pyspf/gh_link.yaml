@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyspfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyspf' is hosted on GitHub
+        link: https://github.com/sdgathman/pyspf
+        package_name: pyspf
