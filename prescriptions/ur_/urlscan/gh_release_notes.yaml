@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: UrlscanGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlscan
+    run:
+      release_notes:
+        organization: firecat53
+        repository: urlscan
