@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SparseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparse
+    run:
+      release_notes:
+        organization: pydata
+        repository: sparse
