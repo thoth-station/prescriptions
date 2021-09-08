@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpencensusExtStackdriverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus-ext-stackdriver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opencensus-ext-stackdriver' is hosted on GitHub
+        link: https://github.com/census-instrumentation/opencensus-python
+        package_name: opencensus-ext-stackdriver
