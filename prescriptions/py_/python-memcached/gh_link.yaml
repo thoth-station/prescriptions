@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonMemcachedGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-memcached
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-memcached' is hosted on GitHub
+        link: https://github.com/linsomniac/python-memcached
+        package_name: python-memcached
