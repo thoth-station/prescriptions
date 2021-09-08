@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonDynamodbLockGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dynamodb-lock
+    run:
+      release_notes:
+        organization: mohankishore
+        repository: python_dynamodb_lock
+        tag_version_prefix: v
