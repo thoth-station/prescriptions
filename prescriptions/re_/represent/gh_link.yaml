@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RepresentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: represent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'represent' is hosted on GitHub
+        link: https://github.com/RazerM/represent
+        package_name: represent
