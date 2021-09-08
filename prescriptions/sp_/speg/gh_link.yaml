@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpegGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'speg' is hosted on GitHub
+        link: https://github.com/avakar/speg
+        package_name: speg
