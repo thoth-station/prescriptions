@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NoseExcludeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-exclude
+    run:
+      release_notes:
+        organization: kgrandis
+        repository: nose-exclude
