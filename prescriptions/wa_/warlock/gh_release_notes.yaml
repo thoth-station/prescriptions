@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: WarlockGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: warlock
+    run:
+      release_notes:
+        organization: bcwaldon
+        repository: warlock
