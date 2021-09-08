@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WaterfurnaceGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waterfurnace
+    run:
+      release_notes:
+        organization: sdague
+        repository: waterfurnace
+        tag_version_prefix: v
