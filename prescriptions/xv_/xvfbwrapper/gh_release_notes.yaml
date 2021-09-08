@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: XvfbwrapperGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xvfbwrapper
+    run:
+      release_notes:
+        organization: cgoldberg
+        repository: xvfbwrapper
