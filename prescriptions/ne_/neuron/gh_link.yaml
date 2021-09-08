@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeuronGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neuron
+    run:
+      justification:
+      - type: INFO
+        message: Package 'neuron' is hosted on GitHub
+        link: https://github.com/neuronsimulator/nrn
+        package_name: neuron
