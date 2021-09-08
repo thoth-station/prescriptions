@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RebulkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rebulk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rebulk' is hosted on GitHub
+        link: https://github.com/Toilal/rebulk
+        package_name: rebulk
