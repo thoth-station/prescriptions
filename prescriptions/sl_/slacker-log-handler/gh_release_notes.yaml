@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SlackerLogHandlerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker-log-handler
+    run:
+      release_notes:
+        organization: mathiasose
+        repository: slacker_log_handler
