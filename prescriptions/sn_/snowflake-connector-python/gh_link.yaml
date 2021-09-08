@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnowflakeConnectorPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snowflake-connector-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'snowflake-connector-python' is hosted on GitHub
+        link: https://github.com/snowflakedb/snowflake-connector-python
+        package_name: snowflake-connector-python
