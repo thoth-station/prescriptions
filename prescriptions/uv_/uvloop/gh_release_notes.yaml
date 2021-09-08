@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UvloopGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uvloop
+    run:
+      release_notes:
+        organization: MagicStack
+        repository: uvloop
+        tag_version_prefix: v
