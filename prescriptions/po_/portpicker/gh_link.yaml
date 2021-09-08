@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PortpickerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: portpicker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'portpicker' is hosted on GitHub
+        link: https://github.com/google/python_portpicker
+        package_name: portpicker
