@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PortendGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: portend
+    run:
+      justification:
+      - type: INFO
+        message: Package 'portend' is hosted on GitHub
+        link: https://github.com/jaraco/portend
+        package_name: portend
