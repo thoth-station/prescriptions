@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Tf2onnxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tf2onnx
+    run:
+      release_notes:
+        organization: onnx
+        repository: tensorflow-onnx
+        tag_version_prefix: v
