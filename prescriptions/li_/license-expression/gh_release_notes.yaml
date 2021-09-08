@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LicenseExpressionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: license-expression
+    run:
+      release_notes:
+        organization: nexB
+        repository: license-expression
+        tag_version_prefix: v
