@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MemoryProfilerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: memory-profiler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'memory-profiler' is hosted on GitHub
+        link: https://github.com/pythonprofilers/memory_profiler
+        package_name: memory-profiler
