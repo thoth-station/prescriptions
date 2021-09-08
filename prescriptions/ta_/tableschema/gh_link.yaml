@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TableschemaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tableschema
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tableschema' is hosted on GitHub
+        link: https://github.com/frictionlessdata/tableschema-py
+        package_name: tableschema
