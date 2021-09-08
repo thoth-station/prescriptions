@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyspnegoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspnego
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyspnego' is hosted on GitHub
+        link: https://github.com/jborean93/pyspnego
+        package_name: pyspnego
