@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TracnavGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tracnav
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tracnav' is hosted on GitHub
+        link: https://github.com/thmo/tracnav
+        package_name: tracnav
