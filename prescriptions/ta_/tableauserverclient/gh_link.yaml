@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TableauserverclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tableauserverclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tableauserverclient' is hosted on GitHub
+        link: https://github.com/tableau/server-client-python
+        package_name: tableauserverclient
