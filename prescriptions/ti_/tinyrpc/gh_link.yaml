@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TinyrpcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tinyrpc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tinyrpc' is hosted on GitHub
+        link: https://github.com/mbr/tinyrpc
+        package_name: tinyrpc
