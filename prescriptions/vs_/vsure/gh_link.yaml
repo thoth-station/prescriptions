@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VsureGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsure
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vsure' is hosted on GitHub
+        link: https://github.com/persandstrom/python-verisure
+        package_name: vsure
