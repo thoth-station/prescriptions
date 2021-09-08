@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyflakesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyflakes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyflakes' is hosted on GitHub
+        link: https://github.com/PyCQA/pyflakes
+        package_name: pyflakes
