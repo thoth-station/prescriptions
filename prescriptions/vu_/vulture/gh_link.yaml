@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VultureGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vulture
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vulture' is hosted on GitHub
+        link: https://github.com/jendrikseipp/vulture
+        package_name: vulture
