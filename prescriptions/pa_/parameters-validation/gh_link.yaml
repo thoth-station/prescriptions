@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParametersValidationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parameters-validation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'parameters-validation' is hosted on GitHub
+        link: https://github.com/allrod5/parameters-validation
+        package_name: parameters-validation
