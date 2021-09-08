@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Rss2emailGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rss2email
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rss2email' is hosted on GitHub
+        link: https://github.com/rss2email/rss2email
+        package_name: rss2email
