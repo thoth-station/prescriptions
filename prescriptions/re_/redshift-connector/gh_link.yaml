@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RedshiftConnectorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: redshift-connector
+    run:
+      justification:
+      - type: INFO
+        message: Package 'redshift-connector' is hosted on GitHub
+        link: https://github.com/aws/amazon-redshift-python-driver
+        package_name: redshift-connector
