@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RuffusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruffus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ruffus' is hosted on GitHub
+        link: https://github.com/cgat-developers/ruffus
+        package_name: ruffus
