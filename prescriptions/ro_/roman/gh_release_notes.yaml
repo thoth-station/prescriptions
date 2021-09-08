@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RomanGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: roman
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: roman
