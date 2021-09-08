@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SetuptoolsGitVersionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-git-version
+    run:
+      release_notes:
+        organization: pyfidelity
+        repository: setuptools-git-version
