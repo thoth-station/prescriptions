@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowTransformGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-transform
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-transform' is hosted on GitHub
+        link: https://github.com/tensorflow/transform
+        package_name: tensorflow-transform
