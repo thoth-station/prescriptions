@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TweepyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tweepy
+    run:
+      release_notes:
+        organization: tweepy
+        repository: tweepy
+        tag_version_prefix: v
