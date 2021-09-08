@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: VdirsyncerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vdirsyncer
+    run:
+      release_notes:
+        organization: pimutils
+        repository: vdirsyncer
