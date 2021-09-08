@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XortoolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xortool
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xortool' is hosted on GitHub
+        link: https://github.com/hellman/xortool
+        package_name: xortool
