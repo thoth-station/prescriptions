@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TrimeshGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trimesh
+    run:
+      release_notes:
+        organization: mikedh
+        repository: trimesh
