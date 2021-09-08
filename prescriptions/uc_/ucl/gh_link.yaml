@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UclGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ucl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ucl' is hosted on GitHub
+        link: https://github.com/vstakhov/libucl
+        package_name: ucl
