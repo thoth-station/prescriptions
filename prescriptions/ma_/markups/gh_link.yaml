@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MarkupsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markups
+    run:
+      justification:
+      - type: INFO
+        message: Package 'markups' is hosted on GitHub
+        link: https://github.com/retext-project/pymarkups
+        package_name: markups
