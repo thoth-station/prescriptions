@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OktaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: okta
+    run:
+      release_notes:
+        organization: okta
+        repository: okta-sdk-python
+        tag_version_prefix: v
