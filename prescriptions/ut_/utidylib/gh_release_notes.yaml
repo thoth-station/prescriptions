@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UtidylibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utidylib
+    run:
+      release_notes:
+        organization: nijel
+        repository: utidylib
+        tag_version_prefix: v
