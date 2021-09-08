@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyhamcrestGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhamcrest
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyhamcrest' is hosted on GitHub
+        link: https://github.com/hamcrest/PyHamcrest
+        package_name: pyhamcrest
