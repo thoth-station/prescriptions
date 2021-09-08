@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WatchdogGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watchdog
+    run:
+      release_notes:
+        organization: gorakhargosh
+        repository: watchdog
+        tag_version_prefix: v
