@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8PrintGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-print
+    run:
+      release_notes:
+        organization: jbkahn
+        repository: flake8-print
