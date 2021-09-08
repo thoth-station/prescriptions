@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MistuneGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mistune
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mistune' is hosted on GitHub
+        link: https://github.com/lepture/mistune
+        package_name: mistune
