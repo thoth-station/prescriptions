@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TasklibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tasklib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tasklib' is hosted on GitHub
+        link: https://github.com/robgolding/tasklib
+        package_name: tasklib
