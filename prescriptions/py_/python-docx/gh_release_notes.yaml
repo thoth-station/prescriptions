@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonDocxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-docx
+    run:
+      release_notes:
+        organization: python-openxml
+        repository: python-docx
+        tag_version_prefix: v
