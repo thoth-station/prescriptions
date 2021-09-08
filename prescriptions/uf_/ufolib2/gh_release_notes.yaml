@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Ufolib2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ufolib2
+    run:
+      release_notes:
+        organization: fonttools
+        repository: ufoLib2
+        tag_version_prefix: v
