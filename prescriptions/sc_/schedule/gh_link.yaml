@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScheduleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: schedule
+    run:
+      justification:
+      - type: INFO
+        message: Package 'schedule' is hosted on GitHub
+        link: https://github.com/dbader/schedule
+        package_name: schedule
