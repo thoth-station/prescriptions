@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SplinkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: splink
+    run:
+      justification:
+      - type: INFO
+        message: Package 'splink' is hosted on GitHub
+        link: https://github.com/moj-analytical-services/splink
+        package_name: splink
