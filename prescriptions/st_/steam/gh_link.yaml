@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SteamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: steam
+    run:
+      justification:
+      - type: INFO
+        message: Package 'steam' is hosted on GitHub
+        link: https://github.com/ValvePython/steam
+        package_name: steam
