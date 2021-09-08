@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SmdebugRulesconfigGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smdebug-rulesconfig
+    run:
+      justification:
+      - type: INFO
+        message: Package 'smdebug-rulesconfig' is hosted on GitHub
+        link: https://github.com/awslabs/sagemaker-debugger-rulesconfig
+        package_name: smdebug-rulesconfig
