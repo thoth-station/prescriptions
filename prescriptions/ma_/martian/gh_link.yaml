@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MartianGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: martian
+    run:
+      justification:
+      - type: INFO
+        message: Package 'martian' is hosted on GitHub
+        link: https://github.com/zopefoundation/martian
+        package_name: martian
