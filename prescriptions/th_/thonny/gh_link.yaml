@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ThonnyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thonny
+    run:
+      justification:
+      - type: INFO
+        message: Package 'thonny' is hosted on GitHub
+        link: https://github.com/thonny/thonny
+        package_name: thonny
