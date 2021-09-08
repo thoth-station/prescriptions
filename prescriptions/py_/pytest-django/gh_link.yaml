@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestDjangoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-django
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-django' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-django
+        package_name: pytest-django
