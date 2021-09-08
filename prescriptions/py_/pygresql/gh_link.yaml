@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygresqlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygresql
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygresql' is hosted on GitHub
+        link: https://github.com/PyGreSQL/PyGreSQL
+        package_name: pygresql
