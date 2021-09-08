@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysmiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pysmi' is hosted on GitHub
+        link: https://github.com/etingof/pysmi
+        package_name: pysmi
