@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: StructlogSentryGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: structlog-sentry
+    run:
+      release_notes:
+        organization: kiwicom
+        repository: structlog-sentry
+        tag_version_prefix: v
