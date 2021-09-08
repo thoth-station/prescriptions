@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TfxBslGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfx-bsl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tfx-bsl' is hosted on GitHub
+        link: https://github.com/tensorflow/tfx-bsl
+        package_name: tfx-bsl
