@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SingledispatchGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: singledispatch
+    run:
+      release_notes:
+        organization: jaraco
+        repository: singledispatch
+        tag_version_prefix: v
