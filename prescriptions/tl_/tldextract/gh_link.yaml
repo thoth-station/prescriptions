@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TldextractGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tldextract
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tldextract' is hosted on GitHub
+        link: https://github.com/john-kurkowski/tldextract
+        package_name: tldextract
