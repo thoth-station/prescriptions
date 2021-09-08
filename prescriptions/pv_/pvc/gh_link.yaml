@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PvcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pvc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pvc' is hosted on GitHub
+        link: https://github.com/dnaeon/pvc
+        package_name: pvc
