@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OnionbalanceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onionbalance
+    run:
+      justification:
+      - type: INFO
+        message: Package 'onionbalance' is hosted on GitHub
+        link: https://github.com/asn-d6/onionbalance
+        package_name: onionbalance
