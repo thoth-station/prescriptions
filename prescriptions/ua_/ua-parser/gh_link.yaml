@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UaParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ua-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ua-parser' is hosted on GitHub
+        link: https://github.com/ua-parser/uap-python
+        package_name: ua-parser
