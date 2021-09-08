@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PoochGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pooch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pooch' is hosted on GitHub
+        link: https://github.com/fatiando/pooch
+        package_name: pooch
