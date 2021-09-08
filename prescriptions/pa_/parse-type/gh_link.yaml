@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParseTypeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parse-type
+    run:
+      justification:
+      - type: INFO
+        message: Package 'parse-type' is hosted on GitHub
+        link: https://github.com/jenisys/parse_type
+        package_name: parse-type
