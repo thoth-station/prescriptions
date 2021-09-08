@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlparseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlparse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlparse' is hosted on GitHub
+        link: https://github.com/andialbrecht/sqlparse
+        package_name: sqlparse
