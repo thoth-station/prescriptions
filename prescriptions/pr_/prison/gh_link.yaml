@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrisonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prison
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prison' is hosted on GitHub
+        link: https://github.com/betodealmeida/python-rison
+        package_name: prison
