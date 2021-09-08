@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlacodegenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlacodegen
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlacodegen' is hosted on GitHub
+        link: https://github.com/agronholm/sqlacodegen
+        package_name: sqlacodegen
