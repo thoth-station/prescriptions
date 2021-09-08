@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ModelBakeryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: model-bakery
+    run:
+      justification:
+      - type: INFO
+        message: Package 'model-bakery' is hosted on GitHub
+        link: https://github.com/model-bakers/model_bakery
+        package_name: model-bakery
