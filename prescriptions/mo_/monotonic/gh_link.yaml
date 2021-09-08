@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MonotonicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: monotonic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'monotonic' is hosted on GitHub
+        link: https://github.com/atdt/monotonic
+        package_name: monotonic
