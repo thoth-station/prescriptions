@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TeamcityMessagesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: teamcity-messages
+    run:
+      release_notes:
+        organization: JetBrains
+        repository: teamcity-messages
+        tag_version_prefix: v
