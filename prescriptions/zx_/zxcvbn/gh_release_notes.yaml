@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ZxcvbnGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zxcvbn
+    run:
+      release_notes:
+        organization: dwolfhub
+        repository: zxcvbn-python
+        tag_version_prefix: v
