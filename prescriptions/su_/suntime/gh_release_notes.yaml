@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SuntimeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: suntime
+    run:
+      release_notes:
+        organization: SatAgro
+        repository: suntime
+        tag_version_prefix: v
