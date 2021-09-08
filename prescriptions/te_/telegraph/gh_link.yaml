@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TelegraphGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: telegraph
+    run:
+      justification:
+      - type: INFO
+        message: Package 'telegraph' is hosted on GitHub
+        link: https://github.com/python273/telegraph
+        package_name: telegraph
