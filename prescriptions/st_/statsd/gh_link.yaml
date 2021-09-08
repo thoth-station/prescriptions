@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StatsdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: statsd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'statsd' is hosted on GitHub
+        link: https://github.com/jsocol/pystatsd
+        package_name: statsd
