@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TerminatorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: terminator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'terminator' is hosted on GitHub
+        link: https://github.com/HunterLarco/terminator
+        package_name: terminator
