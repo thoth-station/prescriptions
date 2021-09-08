@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UrhGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urh
+    run:
+      release_notes:
+        organization: jopohl
+        repository: urh
+        tag_version_prefix: v
