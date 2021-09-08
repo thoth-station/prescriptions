@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pykcs11GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykcs11
+    run:
+      release_notes:
+        organization: LudovicRousseau
+        repository: PyKCS11
