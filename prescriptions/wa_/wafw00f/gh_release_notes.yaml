@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Wafw00fGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wafw00f
+    run:
+      release_notes:
+        organization: enablesecurity
+        repository: wafw00f
+        tag_version_prefix: v
