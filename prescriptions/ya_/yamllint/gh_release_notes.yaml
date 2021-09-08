@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: YamllintGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yamllint
+    run:
+      release_notes:
+        organization: adrienverge
+        repository: yamllint
+        tag_version_prefix: v
