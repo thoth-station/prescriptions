@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ScpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scp
+    run:
+      release_notes:
+        organization: jbardin
+        repository: scp.py
+        tag_version_prefix: v
