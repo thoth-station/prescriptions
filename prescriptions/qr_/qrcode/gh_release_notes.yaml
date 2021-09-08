@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: QrcodeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qrcode
+    run:
+      release_notes:
+        organization: lincolnloop
+        repository: python-qrcode
+        tag_version_prefix: v
