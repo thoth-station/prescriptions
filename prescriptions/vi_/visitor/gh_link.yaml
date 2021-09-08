@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VisitorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visitor
+    run:
+      justification:
+      - type: INFO
+        message: Package 'visitor' is hosted on GitHub
+        link: https://github.com/mbr/visitor
+        package_name: visitor
