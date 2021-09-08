@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpeaklaterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speaklater
+    run:
+      justification:
+      - type: INFO
+        message: Package 'speaklater' is hosted on GitHub
+        link: https://github.com/mitsuhiko/speaklater
+        package_name: speaklater
