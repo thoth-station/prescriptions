@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SosGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sos
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sos' is hosted on GitHub
+        link: https://github.com/vatlab/SoS
+        package_name: sos
