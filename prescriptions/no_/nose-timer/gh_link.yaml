@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NoseTimerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-timer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nose-timer' is hosted on GitHub
+        link: https://github.com/mahmoudimus/nose-timer
+        package_name: nose-timer
