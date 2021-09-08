@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonSpeechFeaturesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-speech-features
+    run:
+      release_notes:
+        organization: jameslyons
+        repository: python_speech_features
+        tag_version_prefix: v
