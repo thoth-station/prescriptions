@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RequestsKerberosGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-kerberos
+    run:
+      release_notes:
+        organization: requests
+        repository: requests-kerberos
+        tag_version_prefix: v
