@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SmmapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smmap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'smmap' is hosted on GitHub
+        link: https://github.com/gitpython-developers/smmap
+        package_name: smmap
