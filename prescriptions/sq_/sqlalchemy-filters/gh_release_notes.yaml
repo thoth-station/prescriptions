@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SqlalchemyFiltersGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-filters
+    run:
+      release_notes:
+        organization: juliotrigo
+        repository: sqlalchemy-filters
+        tag_version_prefix: v
