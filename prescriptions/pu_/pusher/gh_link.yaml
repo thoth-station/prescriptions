@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PusherGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pusher
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pusher' is hosted on GitHub
+        link: https://github.com/pusher/pusher-http-python
+        package_name: pusher
