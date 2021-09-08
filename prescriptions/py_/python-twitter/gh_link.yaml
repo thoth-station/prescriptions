@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonTwitterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-twitter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-twitter' is hosted on GitHub
+        link: https://github.com/bear/python-twitter
+        package_name: python-twitter
