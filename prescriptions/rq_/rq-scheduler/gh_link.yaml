@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RqSchedulerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rq-scheduler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rq-scheduler' is hosted on GitHub
+        link: https://github.com/rq/rq-scheduler
+        package_name: rq-scheduler
