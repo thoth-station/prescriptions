@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NitimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nitime' is hosted on GitHub
+        link: https://github.com/nipy/nitime
+        package_name: nitime
