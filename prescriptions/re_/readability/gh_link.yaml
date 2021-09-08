@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReadabilityGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readability
+    run:
+      justification:
+      - type: INFO
+        message: Package 'readability' is hosted on GitHub
+        link: https://github.com/andreasvc/readability
+        package_name: readability
