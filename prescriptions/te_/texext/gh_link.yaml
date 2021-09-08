@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TexextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: texext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'texext' is hosted on GitHub
+        link: https://github.com/matthew-brett/texext
+        package_name: texext
