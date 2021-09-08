@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TwistedIocpsupportGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-iocpsupport
+    run:
+      release_notes:
+        organization: twisted
+        repository: twisted-iocpsupport
+        tag_version_prefix: v
