@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TrustmeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trustme
+    run:
+      justification:
+      - type: INFO
+        message: Package 'trustme' is hosted on GitHub
+        link: https://github.com/python-trio/trustme
+        package_name: trustme
