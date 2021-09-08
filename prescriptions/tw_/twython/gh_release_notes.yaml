@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TwythonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twython
+    run:
+      release_notes:
+        organization: ryanmcgrath
+        repository: twython
+        tag_version_prefix: v
