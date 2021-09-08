@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StatsmodelsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: statsmodels
+    run:
+      justification:
+      - type: INFO
+        message: Package 'statsmodels' is hosted on GitHub
+        link: https://github.com/statsmodels/statsmodels
+        package_name: statsmodels
