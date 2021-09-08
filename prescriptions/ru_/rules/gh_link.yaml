@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RulesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rules
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rules' is hosted on GitHub
+        link: https://github.com/dfunckt/django-rules
+        package_name: rules
