@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpentokGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentok
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opentok' is hosted on GitHub
+        link: https://github.com/opentok/Opentok-Python-SDK
+        package_name: opentok
