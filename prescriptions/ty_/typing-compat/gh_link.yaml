@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TypingCompatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-compat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'typing-compat' is hosted on GitHub
+        link: https://github.com/rossmacarthur/typing-compat
+        package_name: typing-compat
