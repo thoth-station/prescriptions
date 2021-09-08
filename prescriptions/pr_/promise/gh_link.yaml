@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PromiseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: promise
+    run:
+      justification:
+      - type: INFO
+        message: Package 'promise' is hosted on GitHub
+        link: https://github.com/syrusakbary/promise
+        package_name: promise
