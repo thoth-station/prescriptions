@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SnakevizGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snakeviz
+    run:
+      release_notes:
+        organization: jiffyclub
+        repository: snakeviz
+        tag_version_prefix: v
