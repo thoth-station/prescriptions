@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SignalfxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: signalfx
+    run:
+      release_notes:
+        organization: signalfx
+        repository: signalfx-python
+        tag_version_prefix: v
