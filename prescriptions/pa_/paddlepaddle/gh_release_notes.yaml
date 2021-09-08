@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PaddlepaddleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paddlepaddle
+    run:
+      release_notes:
+        organization: paddlepaddle
+        repository: paddle
+        tag_version_prefix: v
