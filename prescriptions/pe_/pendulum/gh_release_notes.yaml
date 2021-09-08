@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PendulumGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pendulum
+    run:
+      release_notes:
+        organization: sdispater
+        repository: pendulum
