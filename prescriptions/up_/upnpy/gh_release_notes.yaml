@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UpnpyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: upnpy
+    run:
+      release_notes:
+        organization: 5kyc0d3r
+        repository: upnpy
+        tag_version_prefix: v
