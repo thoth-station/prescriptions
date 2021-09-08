@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rx' is hosted on GitHub
+        link: https://github.com/ReactiveX/RxPY
+        package_name: rx
