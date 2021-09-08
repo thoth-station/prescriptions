@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrometheusFlaskExporterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-flask-exporter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prometheus-flask-exporter' is hosted on GitHub
+        link: https://github.com/rycus86/prometheus_flask_exporter
+        package_name: prometheus-flask-exporter
