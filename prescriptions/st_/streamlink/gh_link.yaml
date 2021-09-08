@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StreamlinkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: streamlink
+    run:
+      justification:
+      - type: INFO
+        message: Package 'streamlink' is hosted on GitHub
+        link: https://github.com/streamlink/streamlink
+        package_name: streamlink
