@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PygamGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygam
+    run:
+      release_notes:
+        organization: dswah
+        repository: pyGAM
+        tag_version_prefix: v
