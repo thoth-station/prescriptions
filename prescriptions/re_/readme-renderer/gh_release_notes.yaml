@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ReadmeRendererGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readme-renderer
+    run:
+      release_notes:
+        organization: pypa
+        repository: readme_renderer
