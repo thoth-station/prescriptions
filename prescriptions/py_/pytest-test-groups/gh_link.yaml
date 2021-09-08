@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTestGroupsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-test-groups
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-test-groups' is hosted on GitHub
+        link: https://github.com/mark-adams/pytest-test-groups
+        package_name: pytest-test-groups
