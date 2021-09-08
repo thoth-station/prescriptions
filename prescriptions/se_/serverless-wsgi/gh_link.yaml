@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ServerlessWsgiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serverless-wsgi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'serverless-wsgi' is hosted on GitHub
+        link: https://github.com/logandk/serverless-wsgi
+        package_name: serverless-wsgi
