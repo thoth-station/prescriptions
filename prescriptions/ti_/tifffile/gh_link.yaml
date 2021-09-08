@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TifffileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tifffile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tifffile' is hosted on GitHub
+        link: https://github.com/cgohlke/tifffile
+        package_name: tifffile
