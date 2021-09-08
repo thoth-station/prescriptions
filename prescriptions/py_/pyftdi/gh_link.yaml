@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyftdiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyftdi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyftdi' is hosted on GitHub
+        link: https://github.com/eblot/pyftdi
+        package_name: pyftdi
