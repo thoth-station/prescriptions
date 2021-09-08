@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MsgpackNumpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msgpack-numpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'msgpack-numpy' is hosted on GitHub
+        link: https://github.com/lebedov/msgpack-numpy
+        package_name: msgpack-numpy
