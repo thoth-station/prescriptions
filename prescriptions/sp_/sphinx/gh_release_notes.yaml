@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx
+    run:
+      release_notes:
+        organization: sphinx-doc
+        repository: sphinx
+        tag_version_prefix: v
