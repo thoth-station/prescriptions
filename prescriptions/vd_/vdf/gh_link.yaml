@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VdfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vdf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vdf' is hosted on GitHub
+        link: https://github.com/ValvePython/vdf
+        package_name: vdf
