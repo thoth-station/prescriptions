@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: VineGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vine
+    run:
+      release_notes:
+        organization: celery
+        repository: vine
+        tag_version_prefix: v
