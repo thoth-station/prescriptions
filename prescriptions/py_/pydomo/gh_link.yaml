@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydomoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydomo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydomo' is hosted on GitHub
+        link: https://github.com/domoinc/domo-python-sdk
+        package_name: pydomo
