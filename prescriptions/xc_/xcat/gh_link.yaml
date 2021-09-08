@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XcatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xcat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xcat' is hosted on GitHub
+        link: https://github.com/orf/xcat
+        package_name: xcat
