@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TyperGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'typer' is hosted on GitHub
+        link: https://github.com/tiangolo/typer
+        package_name: typer
