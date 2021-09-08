@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: StdlibListGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlib-list
+    run:
+      release_notes:
+        organization: jackmaney
+        repository: python-stdlib-list
+        tag_version_prefix: v
