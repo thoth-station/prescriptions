@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VpollerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vpoller
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vpoller' is hosted on GitHub
+        link: https://github.com/dnaeon/py-vpoller
+        package_name: vpoller
