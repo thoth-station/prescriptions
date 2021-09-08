@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MultimethodGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multimethod
+    run:
+      release_notes:
+        organization: coady
+        repository: multimethod
+        tag_version_prefix: v
