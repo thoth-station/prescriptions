@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NteractScrapbookGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nteract-scrapbook
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nteract-scrapbook' is hosted on GitHub
+        link: https://github.com/nteract/scrapbook
+        package_name: nteract-scrapbook
