@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MongoengineGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mongoengine
+    run:
+      release_notes:
+        organization: MongoEngine
+        repository: mongoengine
+        tag_version_prefix: v
