@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonRedisLockGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-redis-lock
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-redis-lock
+        tag_version_prefix: v
