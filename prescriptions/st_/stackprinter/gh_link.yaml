@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StackprinterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stackprinter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stackprinter' is hosted on GitHub
+        link: https://github.com/cknd/stackprinter
+        package_name: stackprinter
