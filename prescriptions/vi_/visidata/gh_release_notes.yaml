@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: VisidataGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visidata
+    run:
+      release_notes:
+        organization: saulpw
+        repository: visidata
+        tag_version_prefix: v
