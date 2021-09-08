@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RapidfuzzGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rapidfuzz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rapidfuzz' is hosted on GitHub
+        link: https://github.com/maxbachmann/rapidfuzz
+        package_name: rapidfuzz
