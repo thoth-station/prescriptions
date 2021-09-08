@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UserAgentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: user-agent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'user-agent' is hosted on GitHub
+        link: https://github.com/lorien/user_agent
+        package_name: user-agent
