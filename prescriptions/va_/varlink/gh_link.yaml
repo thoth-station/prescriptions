@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VarlinkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: varlink
+    run:
+      justification:
+      - type: INFO
+        message: Package 'varlink' is hosted on GitHub
+        link: https://github.com/varlink/python
+        package_name: varlink
