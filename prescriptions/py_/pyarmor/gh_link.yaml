@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyarmorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyarmor
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyarmor' is hosted on GitHub
+        link: https://github.com/dashingsoft/pyarmor
+        package_name: pyarmor
