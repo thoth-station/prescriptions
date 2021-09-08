@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pymorphy2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymorphy2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymorphy2' is hosted on GitHub
+        link: https://github.com/kmike/pymorphy2
+        package_name: pymorphy2
