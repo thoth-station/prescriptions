@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PartdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: partd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'partd' is hosted on GitHub
+        link: https://github.com/dask/partd
+        package_name: partd
