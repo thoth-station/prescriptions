@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TablibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tablib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tablib' is hosted on GitHub
+        link: https://github.com/jazzband/tablib
+        package_name: tablib
