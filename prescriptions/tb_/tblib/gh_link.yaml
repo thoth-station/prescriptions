@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TblibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tblib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tblib' is hosted on GitHub
+        link: https://github.com/ionelmc/python-tblib
+        package_name: tblib
