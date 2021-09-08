@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TypishGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typish
+    run:
+      justification:
+      - type: INFO
+        message: Package 'typish' is hosted on GitHub
+        link: https://github.com/ramonhagenaars/typish
+        package_name: typish
