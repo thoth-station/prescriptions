@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebthingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webthing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'webthing' is hosted on GitHub
+        link: https://github.com/WebThingsIO/webthing-python
+        package_name: webthing
