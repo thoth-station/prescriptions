@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpeedtestCliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speedtest-cli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'speedtest-cli' is hosted on GitHub
+        link: https://github.com/sivel/speedtest-cli
+        package_name: speedtest-cli
