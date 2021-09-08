@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pygerrit2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygerrit2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygerrit2' is hosted on GitHub
+        link: https://github.com/dpursehouse/pygerrit2
+        package_name: pygerrit2
