@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TootGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'toot' is hosted on GitHub
+        link: https://github.com/ihabunek/toot
+        package_name: toot
