@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YqGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yq
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yq' is hosted on GitHub
+        link: https://github.com/kislyuk/yq
+        package_name: yq
