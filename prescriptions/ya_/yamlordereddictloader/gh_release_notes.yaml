@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: YamlordereddictloaderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yamlordereddictloader
+    run:
+      release_notes:
+        organization: fmenabe
+        repository: python-yamlordereddictloader
