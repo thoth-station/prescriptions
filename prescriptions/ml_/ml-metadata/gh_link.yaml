@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MlMetadataGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ml-metadata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ml-metadata' is hosted on GitHub
+        link: https://github.com/google/ml-metadata
+        package_name: ml-metadata
