@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'parse' is hosted on GitHub
+        link: https://github.com/r1chardj0n3s/parse
+        package_name: parse
