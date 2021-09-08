@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pdf2imageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdf2image
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pdf2image' is hosted on GitHub
+        link: https://github.com/Belval/pdf2image
+        package_name: pdf2image
