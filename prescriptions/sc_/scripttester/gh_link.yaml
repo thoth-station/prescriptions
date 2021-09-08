@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScripttesterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scripttester
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scripttester' is hosted on GitHub
+        link: https://github.com/matthew-brett/scripttester
+        package_name: scripttester
