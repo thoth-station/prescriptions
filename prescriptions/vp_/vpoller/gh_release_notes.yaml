@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: VpollerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vpoller
+    run:
+      release_notes:
+        organization: dnaeon
+        repository: py-vpoller
+        tag_version_prefix: v
