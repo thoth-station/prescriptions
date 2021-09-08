@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PodmanGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: podman
+    run:
+      justification:
+      - type: INFO
+        message: Package 'podman' is hosted on GitHub
+        link: https://github.com/containers/podman-py
+        package_name: podman
