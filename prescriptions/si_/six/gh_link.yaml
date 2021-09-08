@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SixGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: six
+    run:
+      justification:
+      - type: INFO
+        message: Package 'six' is hosted on GitHub
+        link: https://github.com/benjaminp/six
+        package_name: six
