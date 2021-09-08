@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Psycopg2PoolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycopg2-pool
+    run:
+      justification:
+      - type: INFO
+        message: Package 'psycopg2-pool' is hosted on GitHub
+        link: https://github.com/Changaco/psycopg2-pool
+        package_name: psycopg2-pool
