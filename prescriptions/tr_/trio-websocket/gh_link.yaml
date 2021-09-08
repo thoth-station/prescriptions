@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TrioWebsocketGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trio-websocket
+    run:
+      justification:
+      - type: INFO
+        message: Package 'trio-websocket' is hosted on GitHub
+        link: https://github.com/HyperionGray/trio-websocket
+        package_name: trio-websocket
