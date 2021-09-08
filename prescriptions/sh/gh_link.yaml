@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sh' is hosted on GitHub
+        link: https://github.com/amoffat/sh
+        package_name: sh
