@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SelinuxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selinux
+    run:
+      release_notes:
+        organization: pycontribs
+        repository: selinux
