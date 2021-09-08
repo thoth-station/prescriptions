@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SseclientGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sseclient
+    run:
+      release_notes:
+        organization: btubbs
+        repository: sseclient
