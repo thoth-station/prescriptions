@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TubesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tubes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tubes' is hosted on GitHub
+        link: https://github.com/twisted/tubes
+        package_name: tubes
