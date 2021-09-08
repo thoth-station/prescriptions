@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZxcvbnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zxcvbn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zxcvbn' is hosted on GitHub
+        link: https://github.com/dwolfhub/zxcvbn-python
+        package_name: zxcvbn
