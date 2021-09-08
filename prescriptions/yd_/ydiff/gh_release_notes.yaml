@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: YdiffGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ydiff
+    run:
+      release_notes:
+        organization: ymattw
+        repository: ydiff
