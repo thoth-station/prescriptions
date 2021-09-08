@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlfluffGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlfluff
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlfluff' is hosted on GitHub
+        link: https://github.com/sqlfluff/sqlfluff
+        package_name: sqlfluff
