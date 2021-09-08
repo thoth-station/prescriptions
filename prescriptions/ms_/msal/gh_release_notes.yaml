@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MsalGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msal
+    run:
+      release_notes:
+        organization: AzureAD
+        repository: microsoft-authentication-library-for-python
