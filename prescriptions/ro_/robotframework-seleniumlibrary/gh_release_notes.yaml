@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RobotframeworkSeleniumlibraryGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-seleniumlibrary
+    run:
+      release_notes:
+        organization: robotframework
+        repository: SeleniumLibrary
+        tag_version_prefix: v
