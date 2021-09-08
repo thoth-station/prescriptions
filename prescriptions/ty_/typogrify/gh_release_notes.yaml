@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TypogrifyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typogrify
+    run:
+      release_notes:
+        organization: mintchaos
+        repository: typogrify
