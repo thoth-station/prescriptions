@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ScanBuildGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scan-build
+    run:
+      release_notes:
+        organization: rizsotto
+        repository: scan-build
