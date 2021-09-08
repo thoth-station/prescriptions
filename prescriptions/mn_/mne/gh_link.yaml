@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MneGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mne
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mne' is hosted on GitHub
+        link: https://github.com/mne-tools/mne-python
+        package_name: mne
