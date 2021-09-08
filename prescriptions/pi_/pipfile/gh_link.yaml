@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipfileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipfile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pipfile' is hosted on GitHub
+        link: https://github.com/pypa/pipfile
+        package_name: pipfile
