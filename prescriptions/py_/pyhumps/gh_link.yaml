@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyhumpsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhumps
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyhumps' is hosted on GitHub
+        link: https://github.com/nficano/humps
+        package_name: pyhumps
