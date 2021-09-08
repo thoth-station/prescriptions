@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VoilaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: voila
+    run:
+      justification:
+      - type: INFO
+        message: Package 'voila' is hosted on GitHub
+        link: https://github.com/voila-dashboards/voila
+        package_name: voila
