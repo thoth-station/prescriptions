@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TimmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'timm' is hosted on GitHub
+        link: https://github.com/rwightman/pytorch-image-models
+        package_name: timm
