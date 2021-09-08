@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WatchgodGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watchgod
+    run:
+      justification:
+      - type: INFO
+        message: Package 'watchgod' is hosted on GitHub
+        link: https://github.com/samuelcolvin/watchgod
+        package_name: watchgod
