@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SmbpasswdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbpasswd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'smbpasswd' is hosted on GitHub
+        link: https://github.com/barryp/py-smbpasswd
+        package_name: smbpasswd
