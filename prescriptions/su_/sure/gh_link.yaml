@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SureGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sure
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sure' is hosted on GitHub
+        link: https://github.com/gabrielfalcao/sure
+        package_name: sure
