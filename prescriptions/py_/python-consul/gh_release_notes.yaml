@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonConsulGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-consul
+    run:
+      release_notes:
+        organization: cablehead
+        repository: python-consul
+        tag_version_prefix: v
