@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MapsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: maps
+    run:
+      justification:
+      - type: INFO
+        message: Package 'maps' is hosted on GitHub
+        link: https://github.com/pcattori/maps
+        package_name: maps
