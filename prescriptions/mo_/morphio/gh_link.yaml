@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MorphioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: morphio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'morphio' is hosted on GitHub
+        link: https://github.com/BlueBrain/MorphIO
+        package_name: morphio
