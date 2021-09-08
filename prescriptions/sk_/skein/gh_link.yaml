@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SkeinGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: skein
+    run:
+      justification:
+      - type: INFO
+        message: Package 'skein' is hosted on GitHub
+        link: https://github.com/jcrist/skein
+        package_name: skein
