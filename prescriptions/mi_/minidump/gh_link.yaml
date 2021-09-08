@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MinidumpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minidump
+    run:
+      justification:
+      - type: INFO
+        message: Package 'minidump' is hosted on GitHub
+        link: https://github.com/skelsec/minidump
+        package_name: minidump
