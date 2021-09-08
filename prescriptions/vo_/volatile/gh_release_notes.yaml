@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: VolatileGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: volatile
+    run:
+      release_notes:
+        organization: mbr
+        repository: volatile
