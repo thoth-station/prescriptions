@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'oic' is hosted on GitHub
+        link: https://github.com/OpenIDC/pyoidc
+        package_name: oic
