@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonGflagsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-gflags
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-gflags' is hosted on GitHub
+        link: https://github.com/google/python-gflags
+        package_name: python-gflags
