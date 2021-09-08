@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RespxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: respx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'respx' is hosted on GitHub
+        link: https://github.com/lundberg/respx
+        package_name: respx
