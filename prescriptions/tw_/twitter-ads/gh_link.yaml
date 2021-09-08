@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwitterAdsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twitter-ads
+    run:
+      justification:
+      - type: INFO
+        message: Package 'twitter-ads' is hosted on GitHub
+        link: https://github.com/twitterdev/twitter-python-ads-sdk
+        package_name: twitter-ads
