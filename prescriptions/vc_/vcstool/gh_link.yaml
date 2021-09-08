@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VcstoolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vcstool
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vcstool' is hosted on GitHub
+        link: https://github.com/dirk-thomas/vcstool
+        package_name: vcstool
