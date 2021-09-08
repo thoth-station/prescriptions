@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PewGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pew
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pew' is hosted on GitHub
+        link: https://github.com/berdario/pew
+        package_name: pew
