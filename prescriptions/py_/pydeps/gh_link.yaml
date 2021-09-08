@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydepsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydeps
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydeps' is hosted on GitHub
+        link: https://github.com/thebjorn/pydeps
+        package_name: pydeps
