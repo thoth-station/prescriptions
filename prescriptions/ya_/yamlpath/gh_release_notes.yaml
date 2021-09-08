@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: YamlpathGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yamlpath
+    run:
+      release_notes:
+        organization: wwkimball
+        repository: yamlpath
+        tag_version_prefix: v
