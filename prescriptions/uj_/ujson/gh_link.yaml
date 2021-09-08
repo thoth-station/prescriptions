@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UjsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ujson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ujson' is hosted on GitHub
+        link: https://github.com/ultrajson/ultrajson
+        package_name: ujson
