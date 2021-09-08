@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MatrixprofileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matrixprofile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'matrixprofile' is hosted on GitHub
+        link: https://github.com/matrix-profile-foundation/matrixprofile
+        package_name: matrixprofile
