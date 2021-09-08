@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SasutilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sasutils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sasutils' is hosted on GitHub
+        link: https://github.com/stanford-rc/sasutils
+        package_name: sasutils
