@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WebsockifyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websockify
+    run:
+      release_notes:
+        organization: novnc
+        repository: websockify
+        tag_version_prefix: v
