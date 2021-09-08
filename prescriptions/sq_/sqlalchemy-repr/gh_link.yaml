@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlalchemyReprGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-repr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlalchemy-repr' is hosted on GitHub
+        link: https://github.com/manicmaniac/sqlalchemy-repr
+        package_name: sqlalchemy-repr
