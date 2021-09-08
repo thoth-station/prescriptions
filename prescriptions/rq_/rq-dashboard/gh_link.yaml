@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RqDashboardGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rq-dashboard
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rq-dashboard' is hosted on GitHub
+        link: https://github.com/Parallels/rq-dashboard
+        package_name: rq-dashboard
