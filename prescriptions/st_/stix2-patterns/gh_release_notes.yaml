@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Stix2PatternsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stix2-patterns
+    run:
+      release_notes:
+        organization: oasis-open
+        repository: cti-pattern-validator
+        tag_version_prefix: v
