@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SwordGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sword
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sword' is hosted on GitHub
+        link: https://github.com/jweinst1/sword
+        package_name: sword
