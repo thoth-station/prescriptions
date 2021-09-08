@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ZstdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zstd
+    run:
+      release_notes:
+        organization: sergey-dryabzhinsky
+        repository: python-zstd
+        tag_version_prefix: v
