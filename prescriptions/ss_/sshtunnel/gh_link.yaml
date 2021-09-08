@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SshtunnelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshtunnel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sshtunnel' is hosted on GitHub
+        link: https://github.com/pahaz/sshtunnel
+        package_name: sshtunnel
