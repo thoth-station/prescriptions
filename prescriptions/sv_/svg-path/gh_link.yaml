@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SvgPathGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: svg-path
+    run:
+      justification:
+      - type: INFO
+        message: Package 'svg-path' is hosted on GitHub
+        link: https://github.com/regebro/svg.path
+        package_name: svg-path
