@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TftpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tftpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tftpy' is hosted on GitHub
+        link: https://github.com/msoulier/tftpy
+        package_name: tftpy
