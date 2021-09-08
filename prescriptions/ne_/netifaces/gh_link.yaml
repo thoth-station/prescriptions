@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NetifacesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netifaces
+    run:
+      justification:
+      - type: INFO
+        message: Package 'netifaces' is hosted on GitHub
+        link: https://github.com/al45tair/netifaces
+        package_name: netifaces
