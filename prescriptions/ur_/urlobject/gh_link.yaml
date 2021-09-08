@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UrlobjectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlobject
+    run:
+      justification:
+      - type: INFO
+        message: Package 'urlobject' is hosted on GitHub
+        link: https://github.com/zacharyvoase/urlobject
+        package_name: urlobject
