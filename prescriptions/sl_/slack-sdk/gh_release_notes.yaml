@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SlackSdkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slack-sdk
+    run:
+      release_notes:
+        organization: slackapi
+        repository: python-slack-sdk
+        tag_version_prefix: v
