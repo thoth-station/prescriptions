@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpentracingInstrumentationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentracing-instrumentation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opentracing-instrumentation' is hosted on GitHub
+        link: https://github.com/uber-common/opentracing-python-instrumentation
+        package_name: opentracing-instrumentation
