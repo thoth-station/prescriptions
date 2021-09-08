@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MleapGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mleap
+    run:
+      release_notes:
+        organization: combust
+        repository: mleap
+        tag_version_prefix: v
