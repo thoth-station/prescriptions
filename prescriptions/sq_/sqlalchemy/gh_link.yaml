@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlalchemyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlalchemy' is hosted on GitHub
+        link: https://github.com/sqlalchemy/sqlalchemy
+        package_name: sqlalchemy
