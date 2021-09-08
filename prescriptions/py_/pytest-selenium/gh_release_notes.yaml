@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestSeleniumGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-selenium
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-selenium
+        tag_version_prefix: v
