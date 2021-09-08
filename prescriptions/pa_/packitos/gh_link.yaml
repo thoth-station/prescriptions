@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PackitosGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: packitos
+    run:
+      justification:
+      - type: INFO
+        message: Package 'packitos' is hosted on GitHub
+        link: https://github.com/packit/packit
+        package_name: packitos
