@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TinydbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tinydb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tinydb' is hosted on GitHub
+        link: https://github.com/msiemens/tinydb
+        package_name: tinydb
