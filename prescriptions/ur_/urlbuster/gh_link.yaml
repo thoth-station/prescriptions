@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UrlbusterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlbuster
+    run:
+      justification:
+      - type: INFO
+        message: Package 'urlbuster' is hosted on GitHub
+        link: https://github.com/cytopia/urlbuster
+        package_name: urlbuster
