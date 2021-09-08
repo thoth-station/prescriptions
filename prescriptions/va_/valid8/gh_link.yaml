@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Valid8GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: valid8
+    run:
+      justification:
+      - type: INFO
+        message: Package 'valid8' is hosted on GitHub
+        link: https://github.com/smarie/python-valid8
+        package_name: valid8
