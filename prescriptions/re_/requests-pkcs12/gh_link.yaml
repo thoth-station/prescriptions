@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsPkcs12GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-pkcs12
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-pkcs12' is hosted on GitHub
+        link: https://github.com/m-click/requests_pkcs12
+        package_name: requests-pkcs12
