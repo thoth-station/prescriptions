@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SsdpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssdp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ssdp' is hosted on GitHub
+        link: https://github.com/codingjoe/ssdp
+        package_name: ssdp
