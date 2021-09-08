@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: StopWordsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stop-words
+    run:
+      release_notes:
+        organization: Alir3z4
+        repository: python-stop-words
