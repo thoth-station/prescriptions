@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NoseParallelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-parallel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nose-parallel' is hosted on GitHub
+        link: https://github.com/dlanger/nose-parallel
+        package_name: nose-parallel
