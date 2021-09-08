@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TeampullsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: teampulls
+    run:
+      justification:
+      - type: INFO
+        message: Package 'teampulls' is hosted on GitHub
+        link: https://github.com/brejoc/teampulls
+        package_name: teampulls
