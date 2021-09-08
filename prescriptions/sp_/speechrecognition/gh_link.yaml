@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpeechrecognitionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speechrecognition
+    run:
+      justification:
+      - type: INFO
+        message: Package 'speechrecognition' is hosted on GitHub
+        link: https://github.com/Uberi/speech_recognition
+        package_name: speechrecognition
