@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TentaclioGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tentaclio
+    run:
+      release_notes:
+        organization: octoenergy
+        repository: tentaclio
