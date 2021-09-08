@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PylogbeatGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylogbeat
+    run:
+      release_notes:
+        organization: eht16
+        repository: pylogbeat
