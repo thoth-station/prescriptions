@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SparkmagicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparkmagic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sparkmagic' is hosted on GitHub
+        link: https://github.com/jupyter-incubator/sparkmagic
+        package_name: sparkmagic
