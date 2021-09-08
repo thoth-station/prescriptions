@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyinstrumentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinstrument
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyinstrument' is hosted on GitHub
+        link: https://github.com/joerick/pyinstrument
+        package_name: pyinstrument
