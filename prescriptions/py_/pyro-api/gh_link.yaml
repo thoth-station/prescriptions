@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyroApiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyro-api
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyro-api' is hosted on GitHub
+        link: https://github.com/pyro-ppl/pyro-api
+        package_name: pyro-api
