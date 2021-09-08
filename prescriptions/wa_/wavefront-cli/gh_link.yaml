@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WavefrontCliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wavefront-cli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wavefront-cli' is hosted on GitHub
+        link: https://github.com/wavefrontHQ/wavefront-cli
+        package_name: wavefront-cli
