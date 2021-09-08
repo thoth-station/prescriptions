@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XmlrunnerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmlrunner
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xmlrunner' is hosted on GitHub
+        link: https://github.com/pycontribs/xmlrunner
+        package_name: xmlrunner
