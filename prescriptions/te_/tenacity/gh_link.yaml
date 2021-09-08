@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TenacityGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tenacity
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tenacity' is hosted on GitHub
+        link: https://github.com/jd/tenacity
+        package_name: tenacity
