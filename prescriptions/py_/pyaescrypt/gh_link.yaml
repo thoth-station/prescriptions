@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyaescryptGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaescrypt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyaescrypt' is hosted on GitHub
+        link: https://github.com/marcobellaccini/pyAesCrypt
+        package_name: pyaescrypt
