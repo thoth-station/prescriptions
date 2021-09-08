@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycryptosatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycryptosat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycryptosat' is hosted on GitHub
+        link: https://github.com/msoos/cryptominisat
+        package_name: pycryptosat
