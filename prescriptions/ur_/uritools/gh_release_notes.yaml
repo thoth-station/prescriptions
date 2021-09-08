@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UritoolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uritools
+    run:
+      release_notes:
+        organization: tkem
+        repository: uritools
+        tag_version_prefix: v
