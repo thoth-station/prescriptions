@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CmaesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmaes
+    run:
+      release_notes:
+        organization: CyberAgent
+        repository: cmaes
+        tag_version_prefix: v
