@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XblockGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xblock
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xblock' is hosted on GitHub
+        link: https://github.com/edx/XBlock
+        package_name: xblock
