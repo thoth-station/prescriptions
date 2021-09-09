@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BrotherGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: brother
+    run:
+      justification:
+      - type: INFO
+        message: Package 'brother' is hosted on GitHub
+        link: https://github.com/bieniu/brother
+        package_name: brother
