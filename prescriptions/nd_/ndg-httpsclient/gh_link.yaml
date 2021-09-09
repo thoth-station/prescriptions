@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NdgHttpsclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ndg-httpsclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ndg-httpsclient' is hosted on GitHub
+        link: https://github.com/cedadev/ndg_httpsclient
+        package_name: ndg-httpsclient
