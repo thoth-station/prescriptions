@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CairocffiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cairocffi
+    run:
+      release_notes:
+        organization: Kozea
+        repository: cairocffi
+        tag_version_prefix: v
