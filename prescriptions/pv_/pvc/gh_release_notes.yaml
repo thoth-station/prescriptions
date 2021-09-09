@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PvcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pvc
+    run:
+      release_notes:
+        organization: dnaeon
+        repository: pvc
+        tag_version_prefix: v
