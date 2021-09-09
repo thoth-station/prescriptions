@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MangumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mangum
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mangum' is hosted on GitHub
+        link: https://github.com/jordaneremieff/mangum
+        package_name: mangum
