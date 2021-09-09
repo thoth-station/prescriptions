@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GensimGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gensim
+    run:
+      release_notes:
+        organization: RaRe-Technologies
+        repository: gensim
