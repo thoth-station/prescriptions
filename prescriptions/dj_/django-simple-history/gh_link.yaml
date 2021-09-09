@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSimpleHistoryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-simple-history
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-simple-history' is hosted on GitHub
+        link: https://github.com/jazzband/django-simple-history
+        package_name: django-simple-history
