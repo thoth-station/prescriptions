@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnsibleCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ansible-core' is hosted on GitHub
+        link: https://github.com/ansible/ansible
+        package_name: ansible-core
