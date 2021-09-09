@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestMetadataGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-metadata
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-metadata
+        tag_version_prefix: v
