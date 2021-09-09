@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OnnxconverterCommonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxconverter-common
+    run:
+      release_notes:
+        organization: microsoft
+        repository: onnxconverter-common
+        tag_version_prefix: v
