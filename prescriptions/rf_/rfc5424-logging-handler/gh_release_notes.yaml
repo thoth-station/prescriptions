@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Rfc5424LoggingHandlerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc5424-logging-handler
+    run:
+      release_notes:
+        organization: jobec
+        repository: rfc5424-logging-handler
