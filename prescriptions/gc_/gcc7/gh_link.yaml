@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Gcc7GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcc7
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gcc7' is hosted on GitHub
+        link: https://github.com/bh107/python-gcc
+        package_name: gcc7
