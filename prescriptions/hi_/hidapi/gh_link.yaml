@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HidapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hidapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hidapi' is hosted on GitHub
+        link: https://github.com/trezor/cython-hidapi
+        package_name: hidapi
