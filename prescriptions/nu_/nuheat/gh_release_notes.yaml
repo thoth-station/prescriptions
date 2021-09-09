@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NuheatGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nuheat
+    run:
+      release_notes:
+        organization: broox
+        repository: python-nuheat
