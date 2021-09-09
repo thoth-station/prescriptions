@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TyperCliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typer-cli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'typer-cli' is hosted on GitHub
+        link: https://github.com/tiangolo/typer-cli
+        package_name: typer-cli
