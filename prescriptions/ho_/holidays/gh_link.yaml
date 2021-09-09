@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HolidaysGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: holidays
+    run:
+      justification:
+      - type: INFO
+        message: Package 'holidays' is hosted on GitHub
+        link: https://github.com/dr-prodigy/python-holidays
+        package_name: holidays
