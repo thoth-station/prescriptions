@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PykwalifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykwalify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pykwalify' is hosted on GitHub
+        link: https://github.com/grokzen/pykwalify
+        package_name: pykwalify
