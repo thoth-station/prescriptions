@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCrc32cGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-crc32c
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-crc32c' is hosted on GitHub
+        link: https://github.com/googleapis/python-crc32c
+        package_name: google-crc32c
