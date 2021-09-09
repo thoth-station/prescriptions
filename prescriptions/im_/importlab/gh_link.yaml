@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportlabGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlab
+    run:
+      justification:
+      - type: INFO
+        message: Package 'importlab' is hosted on GitHub
+        link: https://github.com/google/importlab
+        package_name: importlab
