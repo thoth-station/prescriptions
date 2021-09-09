@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskSslifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sslify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-sslify' is hosted on GitHub
+        link: https://github.com/kennethreitz/flask-sslify
+        package_name: flask-sslify
