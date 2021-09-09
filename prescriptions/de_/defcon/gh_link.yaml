@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DefconGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: defcon
+    run:
+      justification:
+      - type: INFO
+        message: Package 'defcon' is hosted on GitHub
+        link: https://github.com/robotools/defcon
+        package_name: defcon
