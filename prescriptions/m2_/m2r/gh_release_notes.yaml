@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: M2rGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: m2r
+    run:
+      release_notes:
+        organization: miyakogi
+        repository: m2r
+        tag_version_prefix: v
