@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoWebpackLoaderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-webpack-loader
+    run:
+      release_notes:
+        organization: django-webpack
+        repository: django-webpack-loader
