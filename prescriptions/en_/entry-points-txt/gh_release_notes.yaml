@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EntryPointsTxtGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entry-points-txt
+    run:
+      release_notes:
+        organization: jwodder
+        repository: entry-points-txt
+        tag_version_prefix: v
