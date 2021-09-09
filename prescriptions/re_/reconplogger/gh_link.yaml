@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReconploggerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reconplogger
+    run:
+      justification:
+      - type: INFO
+        message: Package 'reconplogger' is hosted on GitHub
+        link: https://github.com/omni-us/reconplogger
+        package_name: reconplogger
