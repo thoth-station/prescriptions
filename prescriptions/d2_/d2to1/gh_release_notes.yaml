@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: D2to1GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: d2to1
+    run:
+      release_notes:
+        organization: embray
+        repository: d2to1
