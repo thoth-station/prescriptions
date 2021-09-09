@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TextfsmGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textfsm
+    run:
+      release_notes:
+        organization: google
+        repository: textfsm
+        tag_version_prefix: v
