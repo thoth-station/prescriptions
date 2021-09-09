@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwakeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awake
+    run:
+      justification:
+      - type: INFO
+        message: Package 'awake' is hosted on GitHub
+        link: https://github.com/cyraxjoe/awake
+        package_name: awake
