@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HassNabucasaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hass-nabucasa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hass-nabucasa' is hosted on GitHub
+        link: https://github.com/NabuCasa/hass-nabucasa
+        package_name: hass-nabucasa
