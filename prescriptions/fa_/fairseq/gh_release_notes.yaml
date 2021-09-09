@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FairseqGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fairseq
+    run:
+      release_notes:
+        organization: pytorch
+        repository: fairseq
+        tag_version_prefix: v
