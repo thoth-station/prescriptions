@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EasyocrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyocr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'easyocr' is hosted on GitHub
+        link: https://github.com/jaidedai/easyocr
+        package_name: easyocr
