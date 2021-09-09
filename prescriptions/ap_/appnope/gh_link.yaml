@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AppnopeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: appnope
+    run:
+      justification:
+      - type: INFO
+        message: Package 'appnope' is hosted on GitHub
+        link: https://github.com/minrk/appnope
+        package_name: appnope
