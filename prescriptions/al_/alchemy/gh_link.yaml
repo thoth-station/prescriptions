@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AlchemyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alchemy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'alchemy' is hosted on GitHub
+        link: https://github.com/catalyst-team/alchemy
+        package_name: alchemy
