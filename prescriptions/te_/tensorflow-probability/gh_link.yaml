@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowProbabilityGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-probability
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-probability' is hosted on GitHub
+        link: https://github.com/tensorflow/probability
+        package_name: tensorflow-probability
