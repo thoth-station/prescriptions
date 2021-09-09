@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsInspectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-inspect
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backports-inspect' is hosted on GitHub
+        link: https://github.com/agoraplex/backports.inspect
+        package_name: backports-inspect
