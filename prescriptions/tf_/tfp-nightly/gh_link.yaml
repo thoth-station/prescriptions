@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TfpNightlyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfp-nightly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tfp-nightly' is hosted on GitHub
+        link: https://github.com/tensorflow/probability
+        package_name: tfp-nightly
