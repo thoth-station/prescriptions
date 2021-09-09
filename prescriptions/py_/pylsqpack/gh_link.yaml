@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylsqpackGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylsqpack
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylsqpack' is hosted on GitHub
+        link: https://github.com/aiortc/pylsqpack
+        package_name: pylsqpack
