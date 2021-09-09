@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsiiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsii
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jsii' is hosted on GitHub
+        link: https://github.com/aws/jsii
+        package_name: jsii
