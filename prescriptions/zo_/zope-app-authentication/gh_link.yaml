@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppAuthenticationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-authentication
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-authentication' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.authentication
+        package_name: zope-app-authentication
