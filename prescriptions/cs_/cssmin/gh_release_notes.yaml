@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CssminGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cssmin
+    run:
+      release_notes:
+        organization: zacharyvoase
+        repository: cssmin
+        tag_version_prefix: v
