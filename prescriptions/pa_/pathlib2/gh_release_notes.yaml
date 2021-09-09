@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pathlib2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathlib2
+    run:
+      release_notes:
+        organization: mcmtroffaes
+        repository: pathlib2
