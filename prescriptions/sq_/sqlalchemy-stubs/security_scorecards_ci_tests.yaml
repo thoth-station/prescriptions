@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CITestsSqlalchemyStubsScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-stubs
+    run:
+      justification:
+      - type: INFO
+        message: Project runs CI tests before pull requests are merged based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: sqlalchemy-stubs
