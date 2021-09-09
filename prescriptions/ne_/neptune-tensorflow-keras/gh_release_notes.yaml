@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NeptuneTensorflowKerasGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-tensorflow-keras
+    run:
+      release_notes:
+        organization: neptune-ai
+        repository: neptune-tensorflow-keras
