@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColorlogGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorlog
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colorlog' is hosted on GitHub
+        link: https://github.com/borntyping/python-colorlog
+        package_name: colorlog
