@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CertbotDnsRoute53GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certbot-dns-route53
+    run:
+      justification:
+      - type: INFO
+        message: Package 'certbot-dns-route53' is hosted on GitHub
+        link: https://github.com/certbot/certbot
+        package_name: certbot-dns-route53
