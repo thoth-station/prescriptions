@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CfnresponseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfnresponse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cfnresponse' is hosted on GitHub
+        link: https://github.com/gene1wood/cfnresponse
+        package_name: cfnresponse
