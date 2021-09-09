@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AadictGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aadict
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aadict' is hosted on GitHub
+        link: https://github.com/metagriffin/aadict
+        package_name: aadict
