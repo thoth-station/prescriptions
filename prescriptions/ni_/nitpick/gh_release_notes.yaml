@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NitpickGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitpick
+    run:
+      release_notes:
+        organization: andreoliwa
+        repository: nitpick
+        tag_version_prefix: v
