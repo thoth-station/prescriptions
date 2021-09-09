@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncpgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncpg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'asyncpg' is hosted on GitHub
+        link: https://github.com/MagicStack/asyncpg
+        package_name: asyncpg
