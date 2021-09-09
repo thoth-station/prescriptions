@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TokenizersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tokenizers
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tokenizers' is hosted on GitHub
+        link: https://github.com/huggingface/tokenizers
+        package_name: tokenizers
