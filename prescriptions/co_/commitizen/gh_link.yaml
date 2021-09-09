@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CommitizenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commitizen
+    run:
+      justification:
+      - type: INFO
+        message: Package 'commitizen' is hosted on GitHub
+        link: https://github.com/commitizen-tools/commitizen
+        package_name: commitizen
