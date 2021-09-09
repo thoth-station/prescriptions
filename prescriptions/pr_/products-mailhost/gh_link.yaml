@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductsMailhostGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-mailhost
+    run:
+      justification:
+      - type: INFO
+        message: Package 'products-mailhost' is hosted on GitHub
+        link: https://github.com/zopefoundation/Products.MailHost
+        package_name: products-mailhost
