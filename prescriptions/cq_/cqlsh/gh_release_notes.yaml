@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CqlshGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cqlsh
+    run:
+      release_notes:
+        organization: jeffwidman
+        repository: cqlsh
