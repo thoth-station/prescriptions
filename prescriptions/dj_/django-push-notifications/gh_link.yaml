@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPushNotificationsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-push-notifications
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-push-notifications' is hosted on GitHub
+        link: https://github.com/jazzband/django-push-notifications
+        package_name: django-push-notifications
