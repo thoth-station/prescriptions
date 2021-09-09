@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8PerFileIgnoresGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-per-file-ignores
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-per-file-ignores' is hosted on GitHub
+        link: https://github.com/snoack/flake8-per-file-ignores
+        package_name: flake8-per-file-ignores
