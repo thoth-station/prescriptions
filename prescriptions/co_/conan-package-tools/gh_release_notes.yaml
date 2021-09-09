@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ConanPackageToolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conan-package-tools
+    run:
+      release_notes:
+        organization: conan-io
+        repository: conan-package-tools
