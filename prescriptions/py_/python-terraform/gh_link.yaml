@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonTerraformGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-terraform
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-terraform' is hosted on GitHub
+        link: https://github.com/beelit94/python-terraform
+        package_name: python-terraform
