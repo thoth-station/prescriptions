@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeProxyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-proxy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-proxy' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.proxy
+        package_name: zope-proxy
