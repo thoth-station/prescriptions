@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InterfaceMetaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interface-meta
+    run:
+      justification:
+      - type: INFO
+        message: Package 'interface-meta' is hosted on GitHub
+        link: https://github.com/matthewwardrop/interface_meta
+        package_name: interface-meta
