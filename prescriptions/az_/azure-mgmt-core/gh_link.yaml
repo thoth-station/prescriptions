@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureMgmtCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-mgmt-core' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-mgmt-core
