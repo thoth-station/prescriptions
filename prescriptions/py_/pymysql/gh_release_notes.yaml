@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PymysqlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymysql
+    run:
+      release_notes:
+        organization: PyMySQL
+        repository: PyMySQL
+        tag_version_prefix: v
