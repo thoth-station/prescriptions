@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutomatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: automat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'automat' is hosted on GitHub
+        link: https://github.com/glyph/Automat
+        package_name: automat
