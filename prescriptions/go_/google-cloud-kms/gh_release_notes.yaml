@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudKmsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-kms
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-kms
+        tag_version_prefix: v
