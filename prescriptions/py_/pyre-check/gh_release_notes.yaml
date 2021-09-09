@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyreCheckGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyre-check
+    run:
+      release_notes:
+        organization: facebook
+        repository: pyre-check
+        tag_version_prefix: v
