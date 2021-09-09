@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SamplerateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: samplerate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'samplerate' is hosted on GitHub
+        link: https://github.com/tuxu/python-samplerate
+        package_name: samplerate
