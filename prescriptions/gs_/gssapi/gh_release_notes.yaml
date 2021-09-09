@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GssapiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gssapi
+    run:
+      release_notes:
+        organization: pythongssapi
+        repository: python-gssapi
+        tag_version_prefix: v
