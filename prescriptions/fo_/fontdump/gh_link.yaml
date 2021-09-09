@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FontdumpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fontdump
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fontdump' is hosted on GitHub
+        link: https://github.com/glasslion/fontdump
+        package_name: fontdump
