@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BoomGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boom
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boom' is hosted on GitHub
+        link: https://github.com/tarekziade/boom
+        package_name: boom
