@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HupperGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hupper
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hupper' is hosted on GitHub
+        link: https://github.com/Pylons/hupper
+        package_name: hupper
