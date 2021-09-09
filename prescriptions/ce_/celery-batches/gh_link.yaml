@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CeleryBatchesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: celery-batches
+    run:
+      justification:
+      - type: INFO
+        message: Package 'celery-batches' is hosted on GitHub
+        link: https://github.com/clokep/celery-batches
+        package_name: celery-batches
