@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ClvmToolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clvm-tools
+    run:
+      release_notes:
+        organization: Chia-Network
+        repository: clvm_tools
