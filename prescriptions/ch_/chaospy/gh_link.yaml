@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChaospyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chaospy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'chaospy' is hosted on GitHub
+        link: https://github.com/jonathf/chaospy
+        package_name: chaospy
