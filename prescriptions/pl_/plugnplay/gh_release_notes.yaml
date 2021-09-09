@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PlugnplayGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plugnplay
+    run:
+      release_notes:
+        organization: daltonmatos
+        repository: plugnplay
+        tag_version_prefix: v
