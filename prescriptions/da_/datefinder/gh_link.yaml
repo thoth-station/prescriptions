@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatefinderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datefinder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datefinder' is hosted on GitHub
+        link: https://github.com/akoumjian/datefinder
+        package_name: datefinder
