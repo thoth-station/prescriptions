@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DrgnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drgn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'drgn' is hosted on GitHub
+        link: https://github.com/osandov/drgn
+        package_name: drgn
