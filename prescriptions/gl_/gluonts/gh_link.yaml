@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GluontsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gluonts
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gluonts' is hosted on GitHub
+        link: https://github.com/awslabs/gluon-ts
+        package_name: gluonts
