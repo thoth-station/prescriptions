@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HpackGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hpack
+    run:
+      release_notes:
+        organization: python-hyper
+        repository: hpack
+        tag_version_prefix: v
