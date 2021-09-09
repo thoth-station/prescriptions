@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FacebookSdkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-sdk
+    run:
+      release_notes:
+        organization: mobolic
+        repository: facebook-sdk
+        tag_version_prefix: v
