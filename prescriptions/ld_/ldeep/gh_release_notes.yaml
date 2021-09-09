@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LdeepGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ldeep
+    run:
+      release_notes:
+        organization: franc-pentest
+        repository: ldeep
