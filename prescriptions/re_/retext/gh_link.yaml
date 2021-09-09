@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'retext' is hosted on GitHub
+        link: https://github.com/retext-project/retext
+        package_name: retext
