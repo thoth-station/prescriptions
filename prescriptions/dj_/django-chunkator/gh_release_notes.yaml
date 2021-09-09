@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoChunkatorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-chunkator
+    run:
+      release_notes:
+        organization: peopledoc
+        repository: django-chunkator
