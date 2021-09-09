@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AssetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asset
+    run:
+      justification:
+      - type: INFO
+        message: Package 'asset' is hosted on GitHub
+        link: https://github.com/metagriffin/asset
+        package_name: asset
