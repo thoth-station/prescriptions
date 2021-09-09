@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PandocfiltersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandocfilters
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pandocfilters' is hosted on GitHub
+        link: https://github.com/jgm/pandocfilters
+        package_name: pandocfilters
