@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoCorsMiddlewareGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cors-middleware
+    run:
+      release_notes:
+        organization: zestedesavoir
+        repository: django-cors-middleware
