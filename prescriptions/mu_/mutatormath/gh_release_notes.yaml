@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MutatormathGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mutatormath
+    run:
+      release_notes:
+        organization: LettError
+        repository: MutatorMath
