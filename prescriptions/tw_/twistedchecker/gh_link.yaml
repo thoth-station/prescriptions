@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwistedcheckerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twistedchecker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'twistedchecker' is hosted on GitHub
+        link: https://github.com/twisted/twistedchecker
+        package_name: twistedchecker
