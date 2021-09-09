@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lap' is hosted on GitHub
+        link: https://github.com/gatagat/lap
+        package_name: lap
