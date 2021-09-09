@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestEnablerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-enabler
+    run:
+      release_notes:
+        organization: jaraco
+        repository: pytest-enabler
+        tag_version_prefix: v
