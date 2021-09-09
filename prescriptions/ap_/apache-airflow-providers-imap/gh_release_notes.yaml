@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersImapGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-imap
+    run:
+      release_notes:
+        organization: apache
+        repository: airflow
