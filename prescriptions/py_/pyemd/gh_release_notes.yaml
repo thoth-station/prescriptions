@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyemdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyemd
+    run:
+      release_notes:
+        organization: wmayner
+        repository: pyemd
