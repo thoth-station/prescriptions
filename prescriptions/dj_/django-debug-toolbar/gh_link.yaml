@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoDebugToolbarGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-debug-toolbar
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-debug-toolbar' is hosted on GitHub
+        link: https://github.com/jazzband/django-debug-toolbar
+        package_name: django-debug-toolbar
