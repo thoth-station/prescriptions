@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FmfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fmf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fmf' is hosted on GitHub
+        link: https://github.com/psss/fmf
+        package_name: fmf
