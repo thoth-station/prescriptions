@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ColconCmakeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-cmake
+    run:
+      release_notes:
+        organization: colcon
+        repository: colcon-cmake
