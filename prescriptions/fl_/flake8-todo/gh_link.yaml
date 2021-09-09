@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8TodoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-todo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-todo' is hosted on GitHub
+        link: https://github.com/schlamar/flake8-todo
+        package_name: flake8-todo
