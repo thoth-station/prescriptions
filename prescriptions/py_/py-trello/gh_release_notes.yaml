@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyTrelloGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-trello
+    run:
+      release_notes:
+        organization: sarumont
+        repository: py-trello
