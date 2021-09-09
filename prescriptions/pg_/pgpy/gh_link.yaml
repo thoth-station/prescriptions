@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PgpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pgpy' is hosted on GitHub
+        link: https://github.com/SecurityInnovation/PGPy
+        package_name: pgpy
