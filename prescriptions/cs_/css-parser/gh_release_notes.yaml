@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CssParserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: css-parser
+    run:
+      release_notes:
+        organization: ebook-utils
+        repository: css-parser
+        tag_version_prefix: v
