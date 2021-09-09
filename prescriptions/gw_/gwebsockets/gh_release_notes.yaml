@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GwebsocketsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gwebsockets
+    run:
+      release_notes:
+        organization: sugarlabs
+        repository: gwebsockets
+        tag_version_prefix: v
