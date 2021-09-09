@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PipdateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipdate
+    run:
+      release_notes:
+        organization: nschloe
+        repository: pipdate
