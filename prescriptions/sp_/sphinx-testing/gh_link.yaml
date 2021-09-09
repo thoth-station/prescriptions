@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxTestingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-testing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-testing' is hosted on GitHub
+        link: https://github.com/sphinx-doc/sphinx-testing
+        package_name: sphinx-testing
