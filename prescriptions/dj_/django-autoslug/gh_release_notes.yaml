@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoAutoslugGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-autoslug
+    run:
+      release_notes:
+        organization: justinmayer
+        repository: django-autoslug
+        tag_version_prefix: v
