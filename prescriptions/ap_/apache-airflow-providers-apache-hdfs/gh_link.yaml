@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersApacheHdfsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-apache-hdfs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apache-airflow-providers-apache-hdfs' is hosted on GitHub
+        link: https://github.com/apache/airflow
+        package_name: apache-airflow-providers-apache-hdfs
