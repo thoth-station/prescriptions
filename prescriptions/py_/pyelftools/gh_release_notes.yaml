@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyelftoolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyelftools
+    run:
+      release_notes:
+        organization: eliben
+        repository: pyelftools
+        tag_version_prefix: v
