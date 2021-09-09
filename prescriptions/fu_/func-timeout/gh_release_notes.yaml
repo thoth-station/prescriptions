@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FuncTimeoutGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: func-timeout
+    run:
+      release_notes:
+        organization: kata198
+        repository: func_timeout
