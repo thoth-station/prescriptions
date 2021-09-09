@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LoganGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logan
+    run:
+      release_notes:
+        organization: dcramer
+        repository: logan
