@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Op1repackerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: op1repacker
+    run:
+      release_notes:
+        organization: op1hacks
+        repository: op1repacker
