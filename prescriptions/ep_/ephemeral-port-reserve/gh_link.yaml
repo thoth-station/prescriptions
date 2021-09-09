@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EphemeralPortReserveGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ephemeral-port-reserve
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ephemeral-port-reserve' is hosted on GitHub
+        link: https://github.com/Yelp/ephemeral-port-reserve
+        package_name: ephemeral-port-reserve
