@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxHolovizThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-holoviz-theme
+    run:
+      release_notes:
+        organization: pyviz-dev
+        repository: sphinx_holoviz_theme
+        tag_version_prefix: v
