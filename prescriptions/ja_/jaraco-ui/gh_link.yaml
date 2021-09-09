@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoUiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-ui
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-ui' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.ui
+        package_name: jaraco-ui
