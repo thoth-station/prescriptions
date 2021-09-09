@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsFtpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ftp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-ftp' is hosted on GitHub
+        link: https://github.com/Lukasa/requests-ftp
+        package_name: requests-ftp
