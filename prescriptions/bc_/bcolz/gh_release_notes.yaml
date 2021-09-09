@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BcolzGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcolz
+    run:
+      release_notes:
+        organization: Blosc
+        repository: bcolz
