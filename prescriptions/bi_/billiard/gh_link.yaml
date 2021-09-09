@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BilliardGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: billiard
+    run:
+      justification:
+      - type: INFO
+        message: Package 'billiard' is hosted on GitHub
+        link: https://github.com/celery/billiard
+        package_name: billiard
