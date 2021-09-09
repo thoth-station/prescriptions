@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonrefGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonref
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jsonref' is hosted on GitHub
+        link: https://github.com/gazpachoking/jsonref
+        package_name: jsonref
