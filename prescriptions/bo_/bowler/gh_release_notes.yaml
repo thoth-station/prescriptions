@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BowlerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bowler
+    run:
+      release_notes:
+        organization: facebookincubator
+        repository: bowler
+        tag_version_prefix: v
