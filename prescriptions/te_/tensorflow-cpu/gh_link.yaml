@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowCpuGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-cpu' is hosted on GitHub
+        link: https://github.com/tensorflow/tensorflow
+        package_name: tensorflow-cpu
