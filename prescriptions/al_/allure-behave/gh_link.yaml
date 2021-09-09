@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AllureBehaveGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: allure-behave
+    run:
+      justification:
+      - type: INFO
+        message: Package 'allure-behave' is hosted on GitHub
+        link: https://github.com/allure-framework/allure-python
+        package_name: allure-behave
