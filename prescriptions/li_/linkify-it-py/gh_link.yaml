@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LinkifyItPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linkify-it-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'linkify-it-py' is hosted on GitHub
+        link: https://github.com/tsutsu3/linkify-it-py
+        package_name: linkify-it-py
