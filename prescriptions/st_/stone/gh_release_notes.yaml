@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: StoneGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stone
+    run:
+      release_notes:
+        organization: dropbox
+        repository: stone
+        tag_version_prefix: v
