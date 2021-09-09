@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodegenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codegen
+    run:
+      justification:
+      - type: INFO
+        message: Package 'codegen' is hosted on GitHub
+        link: https://github.com/andreif/codegen
+        package_name: codegen
