@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Rnc2rngGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rnc2rng
+    run:
+      release_notes:
+        organization: djc
+        repository: rnc2rng
