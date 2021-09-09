@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TwiggyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twiggy
+    run:
+      release_notes:
+        organization: wearpants
+        repository: twiggy
