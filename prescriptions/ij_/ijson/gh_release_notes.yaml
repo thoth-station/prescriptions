@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: IjsonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ijson
+    run:
+      release_notes:
+        organization: ICRAR
+        repository: ijson
+        tag_version_prefix: v
