@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyxattrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxattr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyxattr' is hosted on GitHub
+        link: https://github.com/iustin/pyxattr
+        package_name: pyxattr
