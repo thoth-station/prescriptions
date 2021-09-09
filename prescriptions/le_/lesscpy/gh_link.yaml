@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LesscpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lesscpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lesscpy' is hosted on GitHub
+        link: https://github.com/lesscpy/lesscpy
+        package_name: lesscpy
