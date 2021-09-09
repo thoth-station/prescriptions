@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestNunitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-nunit
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-nunit
