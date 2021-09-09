@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FlaskOpenidGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-openid
+    run:
+      release_notes:
+        organization: mitsuhiko
+        repository: flask-openid
+        tag_version_prefix: v
