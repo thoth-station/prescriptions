@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MsgpackGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msgpack
+    run:
+      justification:
+      - type: INFO
+        message: Package 'msgpack' is hosted on GitHub
+        link: https://github.com/msgpack/msgpack-python
+        package_name: msgpack
