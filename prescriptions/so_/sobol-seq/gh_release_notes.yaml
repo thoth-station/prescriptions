@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SobolSeqGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sobol-seq
+    run:
+      release_notes:
+        organization: naught101
+        repository: sobol_seq
+        tag_version_prefix: v
