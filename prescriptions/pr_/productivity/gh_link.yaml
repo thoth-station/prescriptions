@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductivityGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: productivity
+    run:
+      justification:
+      - type: INFO
+        message: Package 'productivity' is hosted on GitHub
+        link: https://github.com/numat/productivity
+        package_name: productivity
