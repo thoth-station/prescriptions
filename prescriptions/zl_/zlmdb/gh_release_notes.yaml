@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ZlmdbGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zlmdb
+    run:
+      release_notes:
+        organization: crossbario
+        repository: zlmdb
+        tag_version_prefix: v
