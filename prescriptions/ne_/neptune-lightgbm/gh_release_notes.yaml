@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NeptuneLightgbmGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-lightgbm
+    run:
+      release_notes:
+        organization: neptune-ai
+        repository: neptune-lightgbm
