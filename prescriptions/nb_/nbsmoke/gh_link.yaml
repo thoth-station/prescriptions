@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NbsmokeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbsmoke
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nbsmoke' is hosted on GitHub
+        link: https://github.com/pyviz-dev/nbsmoke
+        package_name: nbsmoke
