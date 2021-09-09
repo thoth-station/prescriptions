@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NumpolyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpoly
+    run:
+      release_notes:
+        organization: jonathf
+        repository: numpoly
+        tag_version_prefix: v
