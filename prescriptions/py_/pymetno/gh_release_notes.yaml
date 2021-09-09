@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PymetnoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymetno
+    run:
+      release_notes:
+        organization: Danielhiversen
+        repository: pyMetno
