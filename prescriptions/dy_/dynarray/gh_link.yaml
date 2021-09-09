@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DynarrayGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynarray
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dynarray' is hosted on GitHub
+        link: https://github.com/maciejkula/dynarray
+        package_name: dynarray
