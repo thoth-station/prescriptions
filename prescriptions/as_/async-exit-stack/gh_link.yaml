@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncExitStackGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: async-exit-stack
+    run:
+      justification:
+      - type: INFO
+        message: Package 'async-exit-stack' is hosted on GitHub
+        link: https://github.com/sorcio/async_exit_stack
+        package_name: async-exit-stack
