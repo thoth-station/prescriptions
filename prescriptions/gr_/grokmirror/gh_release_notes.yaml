@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GrokmirrorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grokmirror
+    run:
+      release_notes:
+        organization: mricon
+        repository: grokmirror
+        tag_version_prefix: v
