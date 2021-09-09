@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyvistaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvista
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyvista' is hosted on GitHub
+        link: https://github.com/pyvista/pyvista
+        package_name: pyvista
