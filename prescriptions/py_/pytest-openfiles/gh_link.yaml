@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestOpenfilesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-openfiles
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-openfiles' is hosted on GitHub
+        link: https://github.com/astropy/pytest-openfiles
+        package_name: pytest-openfiles
