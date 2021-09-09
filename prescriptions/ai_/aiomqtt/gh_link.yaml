@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiomqttGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiomqtt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiomqtt' is hosted on GitHub
+        link: https://github.com/mossblaser/aiomqtt
+        package_name: aiomqtt
