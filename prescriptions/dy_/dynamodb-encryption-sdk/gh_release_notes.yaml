@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DynamodbEncryptionSdkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynamodb-encryption-sdk
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-dynamodb-encryption-python
+        tag_version_prefix: v
