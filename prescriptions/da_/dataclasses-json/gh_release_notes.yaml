@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DataclassesJsonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dataclasses-json
+    run:
+      release_notes:
+        organization: lidatong
+        repository: dataclasses-json
+        tag_version_prefix: v
