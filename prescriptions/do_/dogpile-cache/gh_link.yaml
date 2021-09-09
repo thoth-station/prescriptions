@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DogpileCacheGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dogpile-cache
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dogpile-cache' is hosted on GitHub
+        link: https://github.com/sqlalchemy/dogpile.cache
+        package_name: dogpile-cache
