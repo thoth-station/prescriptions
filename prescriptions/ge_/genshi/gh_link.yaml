@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GenshiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: genshi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'genshi' is hosted on GitHub
+        link: https://github.com/edgewall/genshi
+        package_name: genshi
