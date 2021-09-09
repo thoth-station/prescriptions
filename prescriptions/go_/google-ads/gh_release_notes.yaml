@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GoogleAdsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-ads
+    run:
+      release_notes:
+        organization: googleads
+        repository: google-ads-python
