@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxAutosummaryAccessorsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autosummary-accessors
+    run:
+      release_notes:
+        organization: xarray-contrib
+        repository: sphinx-autosummary-accessors
+        tag_version_prefix: v
