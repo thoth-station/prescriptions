@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyfastnoisesimdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfastnoisesimd
+    run:
+      release_notes:
+        organization: robbmcleod
+        repository: pyfastnoisesimd
+        tag_version_prefix: v
