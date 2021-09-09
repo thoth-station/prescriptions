@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JwtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jwt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jwt' is hosted on GitHub
+        link: https://github.com/GehirnInc/python-jwt
+        package_name: jwt
