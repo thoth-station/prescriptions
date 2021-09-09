@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jc' is hosted on GitHub
+        link: https://github.com/kellyjonbrazil/jc
+        package_name: jc
