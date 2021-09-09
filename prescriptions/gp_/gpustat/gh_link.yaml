@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GpustatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpustat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gpustat' is hosted on GitHub
+        link: https://github.com/wookayin/gpustat
+        package_name: gpustat
