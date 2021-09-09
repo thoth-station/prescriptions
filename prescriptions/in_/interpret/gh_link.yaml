@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InterpretGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interpret
+    run:
+      justification:
+      - type: INFO
+        message: Package 'interpret' is hosted on GitHub
+        link: https://github.com/interpretml/interpret
+        package_name: interpret
