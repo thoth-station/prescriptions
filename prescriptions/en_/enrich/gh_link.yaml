@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnrichGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enrich
+    run:
+      justification:
+      - type: INFO
+        message: Package 'enrich' is hosted on GitHub
+        link: https://github.com/pycontribs/enrich
+        package_name: enrich
