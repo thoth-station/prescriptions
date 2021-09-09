@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyriemannGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyriemann
+    run:
+      release_notes:
+        organization: pyRiemann
+        repository: pyRiemann
+        tag_version_prefix: v
