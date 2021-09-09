@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ProductsMimetoolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-mimetools
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: Products.MIMETools
