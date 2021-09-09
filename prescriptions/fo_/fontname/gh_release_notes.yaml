@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FontnameGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fontname
+    run:
+      release_notes:
+        organization: Asvel
+        repository: fontname
+        tag_version_prefix: v
