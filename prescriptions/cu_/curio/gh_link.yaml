@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CurioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: curio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'curio' is hosted on GitHub
+        link: https://github.com/dabeaz/curio
+        package_name: curio
