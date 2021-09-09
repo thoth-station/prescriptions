@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HabitipyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: habitipy
+    run:
+      release_notes:
+        organization: ASMfreaK
+        repository: habitipy
+        tag_version_prefix: v
