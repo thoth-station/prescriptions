@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FuzzyfinderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzyfinder
+    run:
+      release_notes:
+        organization: amjith
+        repository: fuzzyfinder
