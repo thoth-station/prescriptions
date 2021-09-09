@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CortexGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cortex
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cortex' is hosted on GitHub
+        link: https://github.com/cortexlabs/cortex
+        package_name: cortex
