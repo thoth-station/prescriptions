@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZmqGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zmq
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zmq' is hosted on GitHub
+        link: https://github.com/zeromq/pyzmq
+        package_name: zmq
