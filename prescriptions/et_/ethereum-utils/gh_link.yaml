@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthereumUtilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethereum-utils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ethereum-utils' is hosted on GitHub
+        link: https://github.com/ethereum/eth-utils
+        package_name: ethereum-utils
