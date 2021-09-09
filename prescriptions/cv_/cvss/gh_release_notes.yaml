@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CvssGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cvss
+    run:
+      release_notes:
+        organization: skontar
+        repository: cvss
+        tag_version_prefix: v
