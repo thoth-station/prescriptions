@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FormatsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: formats
+    run:
+      justification:
+      - type: INFO
+        message: Package 'formats' is hosted on GitHub
+        link: https://github.com/redodo/formats
+        package_name: formats
