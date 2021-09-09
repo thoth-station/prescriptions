@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Flake8FixmeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-fixme
+    run:
+      release_notes:
+        organization: tommilligan
+        repository: flake8-fixme
+        tag_version_prefix: v
