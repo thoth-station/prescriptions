@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JsonsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsons
+    run:
+      release_notes:
+        organization: ramonhagenaars
+        repository: jsons
+        tag_version_prefix: v
