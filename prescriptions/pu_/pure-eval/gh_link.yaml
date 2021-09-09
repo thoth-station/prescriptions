@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PureEvalGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pure-eval
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pure-eval' is hosted on GitHub
+        link: https://github.com/alexmojaki/pure_eval
+        package_name: pure-eval
