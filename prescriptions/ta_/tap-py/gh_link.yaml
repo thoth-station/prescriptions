@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TapPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tap-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tap-py' is hosted on GitHub
+        link: https://github.com/python-tap/tappy
+        package_name: tap-py
