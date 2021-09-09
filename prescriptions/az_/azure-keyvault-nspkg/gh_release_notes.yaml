@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AzureKeyvaultNspkgGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-keyvault-nspkg
+    run:
+      release_notes:
+        organization: Azure
+        repository: azure-sdk-for-python
+        tag_version_prefix: v
