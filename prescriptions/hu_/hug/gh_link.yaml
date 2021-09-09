@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HugGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hug
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hug' is hosted on GitHub
+        link: https://github.com/hugapi/hug
+        package_name: hug
