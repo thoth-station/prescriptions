@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DingusGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dingus
+    run:
+      release_notes:
+        organization: garybernhardt
+        repository: dingus
