@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SqlobjectGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlobject
+    run:
+      release_notes:
+        organization: sqlobject
+        repository: sqlobject
