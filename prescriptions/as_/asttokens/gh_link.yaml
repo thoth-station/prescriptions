@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsttokensGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asttokens
+    run:
+      justification:
+      - type: INFO
+        message: Package 'asttokens' is hosted on GitHub
+        link: https://github.com/gristlabs/asttokens
+        package_name: asttokens
