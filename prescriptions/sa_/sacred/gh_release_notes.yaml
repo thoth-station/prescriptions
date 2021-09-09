@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SacredGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sacred
+    run:
+      release_notes:
+        organization: IDSIA
+        repository: sacred
