@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GeventGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gevent
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gevent' is hosted on GitHub
+        link: https://github.com/gevent/gevent
+        package_name: gevent
