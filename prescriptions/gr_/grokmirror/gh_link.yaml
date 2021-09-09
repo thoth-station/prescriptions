@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrokmirrorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grokmirror
+    run:
+      justification:
+      - type: INFO
+        message: Package 'grokmirror' is hosted on GitHub
+        link: https://github.com/mricon/grokmirror
+        package_name: grokmirror
