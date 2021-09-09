@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrettyMidiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretty-midi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pretty-midi' is hosted on GitHub
+        link: https://github.com/craffel/pretty-midi
+        package_name: pretty-midi
