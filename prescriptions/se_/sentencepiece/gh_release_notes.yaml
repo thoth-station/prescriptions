@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SentencepieceGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentencepiece
+    run:
+      release_notes:
+        organization: google
+        repository: sentencepiece
+        tag_version_prefix: v
