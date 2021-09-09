@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AwsXraySdkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-xray-sdk
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-xray-sdk-python
