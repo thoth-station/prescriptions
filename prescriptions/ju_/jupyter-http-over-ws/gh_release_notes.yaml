@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JupyterHttpOverWsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-http-over-ws
+    run:
+      release_notes:
+        organization: googlecolab
+        repository: jupyter_http_over_ws
+        tag_version_prefix: v
