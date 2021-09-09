@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebCompileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: web-compile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'web-compile' is hosted on GitHub
+        link: https://github.com/executablebooks/web-compile
+        package_name: web-compile
