@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonStoreClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-store-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'json-store-client' is hosted on GitHub
+        link: https://github.com/leon332157/json-store-client
+        package_name: json-store-client
