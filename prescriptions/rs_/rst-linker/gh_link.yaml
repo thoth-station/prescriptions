@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RstLinkerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst-linker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rst-linker' is hosted on GitHub
+        link: https://github.com/jaraco/rst.linker
+        package_name: rst-linker
