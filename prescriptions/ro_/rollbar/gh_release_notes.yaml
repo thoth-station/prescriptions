@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RollbarGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rollbar
+    run:
+      release_notes:
+        organization: rollbar
+        repository: pyrollbar
+        tag_version_prefix: v
