@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LangtableGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: langtable
+    run:
+      release_notes:
+        organization: mike-fabian
+        repository: langtable
