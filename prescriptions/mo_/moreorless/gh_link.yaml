@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MoreorlessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moreorless
+    run:
+      justification:
+      - type: INFO
+        message: Package 'moreorless' is hosted on GitHub
+        link: https://github.com/thatch/moreorless
+        package_name: moreorless
