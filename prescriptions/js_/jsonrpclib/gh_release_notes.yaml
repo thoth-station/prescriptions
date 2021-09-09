@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JsonrpclibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonrpclib
+    run:
+      release_notes:
+        organization: joshmarshall
+        repository: jsonrpclib
+        tag_version_prefix: v
