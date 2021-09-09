@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowTextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-text
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-text' is hosted on GitHub
+        link: https://github.com/tensorflow/text
+        package_name: tensorflow-text
