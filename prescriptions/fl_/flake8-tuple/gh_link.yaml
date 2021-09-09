@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8TupleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-tuple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-tuple' is hosted on GitHub
+        link: https://github.com/ar4s/flake8_tuple
+        package_name: flake8-tuple
