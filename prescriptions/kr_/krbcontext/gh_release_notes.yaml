@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KrbcontextGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: krbcontext
+    run:
+      release_notes:
+        organization: krbcontext
+        repository: python-krbcontext
+        tag_version_prefix: v
