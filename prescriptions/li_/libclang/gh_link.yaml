@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibclangGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libclang
+    run:
+      justification:
+      - type: INFO
+        message: Package 'libclang' is hosted on GitHub
+        link: https://github.com/sighingnow/libclang
+        package_name: libclang
