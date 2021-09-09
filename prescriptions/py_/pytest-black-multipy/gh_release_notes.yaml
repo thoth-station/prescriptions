@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestBlackMultipyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-black-multipy
+    run:
+      release_notes:
+        organization: jaraco
+        repository: pytest-black-multipy
+        tag_version_prefix: v
