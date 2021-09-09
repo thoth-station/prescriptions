@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MacfseventsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: macfsevents
+    run:
+      release_notes:
+        organization: malthe
+        repository: macfsevents
