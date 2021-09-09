@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeTalesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-tales
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-tales' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.tales
+        package_name: zope-tales
