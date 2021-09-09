@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PydanfossairGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydanfossair
+    run:
+      release_notes:
+        organization: JonasPed
+        repository: pydanfoss-air
+        tag_version_prefix: v
