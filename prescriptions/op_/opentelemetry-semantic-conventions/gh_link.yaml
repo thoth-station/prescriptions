@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpentelemetrySemanticConventionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentelemetry-semantic-conventions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opentelemetry-semantic-conventions' is hosted on GitHub
+        link: https://github.com/open-telemetry/opentelemetry-python
+        package_name: opentelemetry-semantic-conventions
