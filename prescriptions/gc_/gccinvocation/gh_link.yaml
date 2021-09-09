@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GccinvocationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gccinvocation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gccinvocation' is hosted on GitHub
+        link: https://github.com/fedora-static-analysis/gccinvocation
+        package_name: gccinvocation
