@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MicrofsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: microfs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'microfs' is hosted on GitHub
+        link: https://github.com/ntoll/microfs
+        package_name: microfs
