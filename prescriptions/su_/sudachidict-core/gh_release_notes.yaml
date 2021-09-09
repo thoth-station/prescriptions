@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SudachidictCoreGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sudachidict-core
+    run:
+      release_notes:
+        organization: WorksApplications
+        repository: SudachiDict
+        tag_version_prefix: v
