@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CrepeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crepe
+    run:
+      release_notes:
+        organization: marl
+        repository: crepe
+        tag_version_prefix: v
