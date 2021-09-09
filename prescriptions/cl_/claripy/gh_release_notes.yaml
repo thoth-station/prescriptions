@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ClaripyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: claripy
+    run:
+      release_notes:
+        organization: angr
+        repository: claripy
+        tag_version_prefix: v
