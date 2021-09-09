@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CommandparseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commandparse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'commandparse' is hosted on GitHub
+        link: https://github.com/flgy/commandparse
+        package_name: commandparse
