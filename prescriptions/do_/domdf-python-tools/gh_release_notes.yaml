@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DomdfPythonToolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: domdf-python-tools
+    run:
+      release_notes:
+        organization: domdfcoding
+        repository: domdf_python_tools
+        tag_version_prefix: v
