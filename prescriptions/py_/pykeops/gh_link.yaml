@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PykeopsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykeops
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pykeops' is hosted on GitHub
+        link: https://github.com/getkeops/keops
+        package_name: pykeops
