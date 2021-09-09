@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxTyplogThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-typlog-theme
+    run:
+      release_notes:
+        organization: typlog
+        repository: sphinx-typlog-theme
+        tag_version_prefix: v
