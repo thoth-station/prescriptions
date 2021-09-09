@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RopgadgetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ropgadget
+    run:
+      release_notes:
+        organization: JonathanSalwan
+        repository: ROPgadget
+        tag_version_prefix: v
