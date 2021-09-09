@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FirehoseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: firehose
+    run:
+      release_notes:
+        organization: fedora-static-analysis
+        repository: firehose
