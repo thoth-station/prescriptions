@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FuzzysearchGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzysearch
+    run:
+      release_notes:
+        organization: taleinat
+        repository: fuzzysearch
+        tag_version_prefix: v
