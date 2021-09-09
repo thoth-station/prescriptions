@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsGssapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-gssapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-gssapi' is hosted on GitHub
+        link: https://github.com/pythongssapi/requests-gssapi
+        package_name: requests-gssapi
