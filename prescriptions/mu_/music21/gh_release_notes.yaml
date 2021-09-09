@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Music21GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: music21
+    run:
+      release_notes:
+        organization: cuthbertLab
+        repository: music21
+        tag_version_prefix: v
