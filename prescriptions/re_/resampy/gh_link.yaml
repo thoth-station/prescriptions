@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ResampyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: resampy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'resampy' is hosted on GitHub
+        link: https://github.com/bmcfee/resampy
+        package_name: resampy
