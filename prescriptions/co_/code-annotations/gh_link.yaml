@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodeAnnotationsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: code-annotations
+    run:
+      justification:
+      - type: INFO
+        message: Package 'code-annotations' is hosted on GitHub
+        link: https://github.com/edx/code-annotations
+        package_name: code-annotations
