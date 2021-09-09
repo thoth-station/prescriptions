@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReactionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reaction
+    run:
+      justification:
+      - type: INFO
+        message: Package 'reaction' is hosted on GitHub
+        link: https://github.com/catalyst-team/reaction
+        package_name: reaction
