@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PromptToolkitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prompt-toolkit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prompt-toolkit' is hosted on GitHub
+        link: https://github.com/prompt-toolkit/python-prompt-toolkit
+        package_name: prompt-toolkit
