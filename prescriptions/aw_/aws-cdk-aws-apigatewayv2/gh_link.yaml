@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsApigatewayv2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-apigatewayv2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-apigatewayv2' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-apigatewayv2
