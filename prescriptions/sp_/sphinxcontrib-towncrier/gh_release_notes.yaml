@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxcontribTowncrierGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-towncrier
+    run:
+      release_notes:
+        organization: sphinx-contrib
+        repository: sphinxcontrib-towncrier
+        tag_version_prefix: v
