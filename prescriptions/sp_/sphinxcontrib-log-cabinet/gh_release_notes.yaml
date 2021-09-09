@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxcontribLogCabinetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-log-cabinet
+    run:
+      release_notes:
+        organization: davidism
+        repository: sphinxcontrib-log-cabinet
