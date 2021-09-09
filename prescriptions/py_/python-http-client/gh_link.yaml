@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonHttpClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-http-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-http-client' is hosted on GitHub
+        link: https://github.com/sendgrid/python-http-client
+        package_name: python-http-client
