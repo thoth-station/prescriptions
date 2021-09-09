@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OdmlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: odml
+    run:
+      release_notes:
+        organization: G-Node
+        repository: python-odml
+        tag_version_prefix: v
