@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CollectiveCheckdocsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: collective-checkdocs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'collective-checkdocs' is hosted on GitHub
+        link: https://github.com/collective/collective.checkdocs
+        package_name: collective-checkdocs
