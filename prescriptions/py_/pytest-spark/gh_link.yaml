@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestSparkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-spark
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-spark' is hosted on GitHub
+        link: https://github.com/malexer/pytest-spark
+        package_name: pytest-spark
