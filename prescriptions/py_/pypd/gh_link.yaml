@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pypd' is hosted on GitHub
+        link: https://github.com/PagerDuty/pagerduty-api-python-client
+        package_name: pypd
