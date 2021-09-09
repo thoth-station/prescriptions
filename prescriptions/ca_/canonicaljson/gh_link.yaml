@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CanonicaljsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: canonicaljson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'canonicaljson' is hosted on GitHub
+        link: https://github.com/matrix-org/python-canonicaljson
+        package_name: canonicaljson
