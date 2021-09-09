@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FeatherFormatGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feather-format
+    run:
+      release_notes:
+        organization: wesm
+        repository: feather
+        tag_version_prefix: v
