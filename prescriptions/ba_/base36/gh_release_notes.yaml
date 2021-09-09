@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Base36GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: base36
+    run:
+      release_notes:
+        organization: tonyseek
+        repository: python-base36
+        tag_version_prefix: v
