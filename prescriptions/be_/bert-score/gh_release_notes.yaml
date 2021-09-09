@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BertScoreGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bert-score
+    run:
+      release_notes:
+        organization: Tiiiger
+        repository: bert_score
+        tag_version_prefix: v
