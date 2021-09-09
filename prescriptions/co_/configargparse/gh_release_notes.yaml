@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ConfigargparseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configargparse
+    run:
+      release_notes:
+        organization: bw2
+        repository: ConfigArgParse
