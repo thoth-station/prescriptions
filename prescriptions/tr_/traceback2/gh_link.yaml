@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Traceback2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: traceback2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'traceback2' is hosted on GitHub
+        link: https://github.com/testing-cabal/traceback2
+        package_name: traceback2
