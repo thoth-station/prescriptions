@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PlayitagainsamGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: playitagainsam
+    run:
+      release_notes:
+        organization: rfk
+        repository: playitagainsam
+        tag_version_prefix: v
