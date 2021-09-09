@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydocstyleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydocstyle
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pydocstyle' is hosted on GitHub
+        link: https://github.com/PyCQA/pydocstyle
+        package_name: pydocstyle
