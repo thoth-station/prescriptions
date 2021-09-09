@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CITestsSpidevScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spidev
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT run CI tests before pull requests are merged based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: spidev
