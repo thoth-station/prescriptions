@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AmplyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amply
+    run:
+      justification:
+      - type: INFO
+        message: Package 'amply' is hosted on GitHub
+        link: https://github.com/willu47/amply
+        package_name: amply
