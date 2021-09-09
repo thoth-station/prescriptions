@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: EscapismGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: escapism
+    run:
+      release_notes:
+        organization: minrk
+        repository: escapism
