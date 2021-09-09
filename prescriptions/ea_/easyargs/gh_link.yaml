@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EasyargsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyargs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'easyargs' is hosted on GitHub
+        link: https://github.com/stedmeister/easyargs
+        package_name: easyargs
