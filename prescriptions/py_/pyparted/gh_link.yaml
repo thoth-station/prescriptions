@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypartedGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyparted
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyparted' is hosted on GitHub
+        link: https://github.com/dcantrell/pyparted
+        package_name: pyparted
