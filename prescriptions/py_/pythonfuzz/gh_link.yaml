@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonfuzzGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythonfuzz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pythonfuzz' is hosted on GitHub
+        link: https://github.com/fuzzitdev/pythonfuzz
+        package_name: pythonfuzz
