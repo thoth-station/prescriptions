@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BotorchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: botorch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'botorch' is hosted on GitHub
+        link: https://github.com/pytorch/botorch
+        package_name: botorch
