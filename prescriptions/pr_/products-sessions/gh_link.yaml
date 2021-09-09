@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductsSessionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-sessions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'products-sessions' is hosted on GitHub
+        link: https://github.com/zopefoundation/Products.Sessions
+        package_name: products-sessions
