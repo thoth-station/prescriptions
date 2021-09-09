@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pg8000GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pg8000
+    run:
+      release_notes:
+        organization: tlocke
+        repository: pg8000
