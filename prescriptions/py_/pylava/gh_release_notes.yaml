@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PylavaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylava
+    run:
+      release_notes:
+        organization: pylava
+        repository: pylava
