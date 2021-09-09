@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OpentelemetryApiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentelemetry-api
+    run:
+      release_notes:
+        organization: open-telemetry
+        repository: opentelemetry-python
+        tag_version_prefix: v
