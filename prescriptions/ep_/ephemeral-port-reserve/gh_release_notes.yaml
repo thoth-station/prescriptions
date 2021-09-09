@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EphemeralPortReserveGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ephemeral-port-reserve
+    run:
+      release_notes:
+        organization: Yelp
+        repository: ephemeral-port-reserve
+        tag_version_prefix: v
