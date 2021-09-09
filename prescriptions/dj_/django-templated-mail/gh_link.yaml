@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoTemplatedMailGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-templated-mail
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-templated-mail' is hosted on GitHub
+        link: https://github.com/sunscrapers/django-templated-mail
+        package_name: django-templated-mail
