@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SegmentationModelsPytorchGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: segmentation-models-pytorch
+    run:
+      release_notes:
+        organization: qubvel
+        repository: segmentation_models.pytorch
+        tag_version_prefix: v
