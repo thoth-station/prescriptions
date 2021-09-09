@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeDatetimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-datetime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-datetime' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.datetime
+        package_name: zope-datetime
