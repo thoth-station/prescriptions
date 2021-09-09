@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HvacGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hvac
+    run:
+      release_notes:
+        organization: hvac
+        repository: hvac
+        tag_version_prefix: v
