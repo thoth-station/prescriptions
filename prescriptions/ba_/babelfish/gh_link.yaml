@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BabelfishGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: babelfish
+    run:
+      justification:
+      - type: INFO
+        message: Package 'babelfish' is hosted on GitHub
+        link: https://github.com/Diaoul/babelfish
+        package_name: babelfish
