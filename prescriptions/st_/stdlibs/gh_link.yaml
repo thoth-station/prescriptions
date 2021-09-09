@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StdlibsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlibs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stdlibs' is hosted on GitHub
+        link: https://github.com/jreese/stdlibs
+        package_name: stdlibs
