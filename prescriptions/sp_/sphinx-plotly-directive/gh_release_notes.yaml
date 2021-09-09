@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxPlotlyDirectiveGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-plotly-directive
+    run:
+      release_notes:
+        organization: harupy
+        repository: sphinx-plotly-directive
+        tag_version_prefix: v
