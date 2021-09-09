@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoDynamicFixtureGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-dynamic-fixture
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-dynamic-fixture' is hosted on GitHub
+        link: https://github.com/paulocheque/django-dynamic-fixture
+        package_name: django-dynamic-fixture
