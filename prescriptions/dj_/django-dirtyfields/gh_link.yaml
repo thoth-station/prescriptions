@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoDirtyfieldsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-dirtyfields
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-dirtyfields' is hosted on GitHub
+        link: https://github.com/romgar/django-dirtyfields
+        package_name: django-dirtyfields
