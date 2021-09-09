@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HydraOptunaSweeperGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hydra-optuna-sweeper
+    run:
+      release_notes:
+        organization: facebookresearch
+        repository: hydra
+        tag_version_prefix: v
