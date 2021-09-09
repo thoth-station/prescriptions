@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NatsortGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: natsort
+    run:
+      justification:
+      - type: INFO
+        message: Package 'natsort' is hosted on GitHub
+        link: https://github.com/SethMMorton/natsort
+        package_name: natsort
