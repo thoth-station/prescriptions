@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TmuxpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tmuxp
+    run:
+      release_notes:
+        organization: tmux-python
+        repository: tmuxp
+        tag_version_prefix: v
