@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudMonitoringGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-monitoring
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-monitoring' is hosted on GitHub
+        link: https://github.com/googleapis/python-monitoring
+        package_name: google-cloud-monitoring
