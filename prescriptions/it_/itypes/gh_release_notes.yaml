@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ItypesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itypes
+    run:
+      release_notes:
+        organization: PavanTatikonda
+        repository: itypes
