@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PalletsSphinxThemesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pallets-sphinx-themes
+    run:
+      release_notes:
+        organization: pallets
+        repository: pallets-sphinx-themes
