@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ProtontricksGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: protontricks
+    run:
+      release_notes:
+        organization: Matoking
+        repository: protontricks
