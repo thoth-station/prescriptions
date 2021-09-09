@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudRuntimeconfigGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-runtimeconfig
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-runtimeconfig' is hosted on GitHub
+        link: https://github.com/googleapis/python-runtimeconfig
+        package_name: google-cloud-runtimeconfig
