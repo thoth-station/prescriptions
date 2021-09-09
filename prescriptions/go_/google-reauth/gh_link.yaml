@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleReauthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-reauth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-reauth' is hosted on GitHub
+        link: https://github.com/Google/google-reauth-python
+        package_name: google-reauth
