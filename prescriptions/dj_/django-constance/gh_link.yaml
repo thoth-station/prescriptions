@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoConstanceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-constance
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-constance' is hosted on GitHub
+        link: https://github.com/jazzband/django-constance
+        package_name: django-constance
