@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PwncatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pwncat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pwncat' is hosted on GitHub
+        link: https://github.com/cytopia/pwncat
+        package_name: pwncat
