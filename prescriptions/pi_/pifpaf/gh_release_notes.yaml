@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PifpafGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pifpaf
+    run:
+      release_notes:
+        organization: jd
+        repository: pifpaf
