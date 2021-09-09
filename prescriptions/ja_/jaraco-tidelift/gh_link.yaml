@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoTideliftGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-tidelift
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-tidelift' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.tidelift
+        package_name: jaraco-tidelift
