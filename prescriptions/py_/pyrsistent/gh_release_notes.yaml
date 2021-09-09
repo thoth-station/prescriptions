@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyrsistentGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrsistent
+    run:
+      release_notes:
+        organization: tobgu
+        repository: pyrsistent
+        tag_version_prefix: v
