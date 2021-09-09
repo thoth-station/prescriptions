@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GvizApiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gviz-api
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gviz-api' is hosted on GitHub
+        link: https://github.com/google/google-visualization-python
+        package_name: gviz-api
