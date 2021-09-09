@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ObdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: obd
+    run:
+      release_notes:
+        organization: brendan-w
+        repository: python-OBD
+        tag_version_prefix: v
