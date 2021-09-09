@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8ExecutableGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-executable
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-executable' is hosted on GitHub
+        link: https://github.com/xuhdev/flake8-executable
+        package_name: flake8-executable
