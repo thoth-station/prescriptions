@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DaskGatewayGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask-gateway
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dask-gateway' is hosted on GitHub
+        link: https://github.com/dask/dask-gateway
+        package_name: dask-gateway
