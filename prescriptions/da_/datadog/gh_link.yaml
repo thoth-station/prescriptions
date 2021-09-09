@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatadogGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datadog
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datadog' is hosted on GitHub
+        link: https://github.com/DataDog/datadogpy
+        package_name: datadog
