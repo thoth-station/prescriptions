@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyiqviaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyiqvia
+    run:
+      release_notes:
+        organization: bachya
+        repository: pyiqvia
