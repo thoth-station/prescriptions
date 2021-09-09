@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GpiozeroGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpiozero
+    run:
+      release_notes:
+        organization: gpiozero
+        repository: gpiozero
+        tag_version_prefix: v
