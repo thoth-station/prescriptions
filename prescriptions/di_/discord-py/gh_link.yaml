@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiscordPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'discord-py' is hosted on GitHub
+        link: https://github.com/Rapptz/discord.py
+        package_name: discord-py
