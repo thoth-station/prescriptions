@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrpcGoogleIamV1GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-iam-v1
+    run:
+      justification:
+      - type: INFO
+        message: Package 'grpc-google-iam-v1' is hosted on GitHub
+        link: https://github.com/googleapis/googleapis
+        package_name: grpc-google-iam-v1
