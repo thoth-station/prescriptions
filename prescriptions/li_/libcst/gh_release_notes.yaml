@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LibcstGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libcst
+    run:
+      release_notes:
+        organization: Instagram
+        repository: LibCST
+        tag_version_prefix: v
