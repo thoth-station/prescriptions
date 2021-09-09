@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyEccGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-ecc
+    run:
+      release_notes:
+        organization: ethereum
+        repository: py_ecc
+        tag_version_prefix: v
