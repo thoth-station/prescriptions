@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MotoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moto
+    run:
+      justification:
+      - type: INFO
+        message: Package 'moto' is hosted on GitHub
+        link: https://github.com/spulec/moto
+        package_name: moto
