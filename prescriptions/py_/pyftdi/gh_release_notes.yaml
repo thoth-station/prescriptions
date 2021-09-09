@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyftdiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyftdi
+    run:
+      release_notes:
+        organization: eblot
+        repository: pyftdi
+        tag_version_prefix: v
