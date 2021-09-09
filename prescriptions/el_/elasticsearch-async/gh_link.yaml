@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ElasticsearchAsyncGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-async
+    run:
+      justification:
+      - type: INFO
+        message: Package 'elasticsearch-async' is hosted on GitHub
+        link: https://github.com/elastic/elasticsearch-py-async
+        package_name: elasticsearch-async
