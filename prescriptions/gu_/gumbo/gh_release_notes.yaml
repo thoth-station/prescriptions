@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GumboGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gumbo
+    run:
+      release_notes:
+        organization: google
+        repository: gumbo-parser
+        tag_version_prefix: v
