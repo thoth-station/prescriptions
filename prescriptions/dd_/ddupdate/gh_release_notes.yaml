@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DdupdateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ddupdate
+    run:
+      release_notes:
+        organization: leamas
+        repository: ddupdate
