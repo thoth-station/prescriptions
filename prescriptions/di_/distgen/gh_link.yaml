@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DistgenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distgen
+    run:
+      justification:
+      - type: INFO
+        message: Package 'distgen' is hosted on GitHub
+        link: https://github.com/devexp-db/distgen
+        package_name: distgen
