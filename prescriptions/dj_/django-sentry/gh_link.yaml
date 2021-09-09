@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSentryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sentry
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-sentry' is hosted on GitHub
+        link: https://github.com/dcramer/django-sentry
+        package_name: django-sentry
