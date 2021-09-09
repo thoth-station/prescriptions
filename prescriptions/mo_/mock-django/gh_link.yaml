@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MockDjangoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mock-django
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mock-django' is hosted on GitHub
+        link: https://github.com/dcramer/mock-django
+        package_name: mock-django
