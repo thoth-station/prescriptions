@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SmbpasswdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbpasswd
+    run:
+      release_notes:
+        organization: barryp
+        repository: py-smbpasswd
