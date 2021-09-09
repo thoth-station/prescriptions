@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxPromptGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-prompt
+    run:
+      release_notes:
+        organization: sbrunner
+        repository: sphinx-prompt
