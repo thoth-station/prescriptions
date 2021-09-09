@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JavabridgeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: javabridge
+    run:
+      release_notes:
+        organization: CellProfiler
+        repository: python-javabridge
