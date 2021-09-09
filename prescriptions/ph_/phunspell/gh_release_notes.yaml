@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PhunspellGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phunspell
+    run:
+      release_notes:
+        organization: dvwright
+        repository: phunspell
+        tag_version_prefix: v
