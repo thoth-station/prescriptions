@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymodbusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymodbus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymodbus' is hosted on GitHub
+        link: https://github.com/riptideio/pymodbus
+        package_name: pymodbus
