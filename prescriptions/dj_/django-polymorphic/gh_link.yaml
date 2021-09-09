@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPolymorphicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-polymorphic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-polymorphic' is hosted on GitHub
+        link: https://github.com/django-polymorphic/django-polymorphic
+        package_name: django-polymorphic
