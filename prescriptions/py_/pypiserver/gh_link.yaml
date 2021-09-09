@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypiserverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypiserver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pypiserver' is hosted on GitHub
+        link: https://github.com/pypiserver/pypiserver
+        package_name: pypiserver
