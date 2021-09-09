@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PynisherGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynisher
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pynisher' is hosted on GitHub
+        link: https://github.com/automl/pynisher
+        package_name: pynisher
