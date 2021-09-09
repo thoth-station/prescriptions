@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonMultipartGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-multipart
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-multipart' is hosted on GitHub
+        link: https://github.com/andrew-d/python-multipart
+        package_name: python-multipart
