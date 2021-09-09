@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DynaconfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynaconf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dynaconf' is hosted on GitHub
+        link: https://github.com/rochacbruno/dynaconf
+        package_name: dynaconf
