@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: IpyleafletGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipyleaflet
+    run:
+      release_notes:
+        organization: jupyter-widgets
+        repository: ipyleaflet
