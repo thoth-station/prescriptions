@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoModelUtilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-model-utils
+    run:
+      release_notes:
+        organization: jazzband
+        repository: django-model-utils
