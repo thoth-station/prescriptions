@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ManholeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: manhole
+    run:
+      justification:
+      - type: INFO
+        message: Package 'manhole' is hosted on GitHub
+        link: https://github.com/ionelmc/python-manhole
+        package_name: manhole
