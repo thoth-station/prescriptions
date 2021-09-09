@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyspiflashGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspiflash
+    run:
+      release_notes:
+        organization: eblot
+        repository: pyspiflash
+        tag_version_prefix: v
