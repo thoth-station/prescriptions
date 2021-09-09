@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InvectioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invectio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'invectio' is hosted on GitHub
+        link: https://github.com/thoth-station/invectio
+        package_name: invectio
