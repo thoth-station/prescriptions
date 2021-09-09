@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrettyBadProtocolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretty-bad-protocol
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pretty-bad-protocol' is hosted on GitHub
+        link: https://github.com/isislovecruft/python-gnupg
+        package_name: pretty-bad-protocol
