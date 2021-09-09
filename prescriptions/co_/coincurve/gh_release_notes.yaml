@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CoincurveGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coincurve
+    run:
+      release_notes:
+        organization: ofek
+        repository: coincurve
