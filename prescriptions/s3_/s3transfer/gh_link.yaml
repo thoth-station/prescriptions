@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: S3transferGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: s3transfer
+    run:
+      justification:
+      - type: INFO
+        message: Package 's3transfer' is hosted on GitHub
+        link: https://github.com/boto/s3transfer
+        package_name: s3transfer
