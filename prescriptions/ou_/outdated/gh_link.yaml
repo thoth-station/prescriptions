@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OutdatedGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: outdated
+    run:
+      justification:
+      - type: INFO
+        message: Package 'outdated' is hosted on GitHub
+        link: https://github.com/alexmojaki/outdated
+        package_name: outdated
