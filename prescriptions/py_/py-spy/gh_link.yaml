@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PySpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-spy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'py-spy' is hosted on GitHub
+        link: https://github.com/benfred/py-spy
+        package_name: py-spy
