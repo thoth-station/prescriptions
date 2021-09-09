@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCeleryBeatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-celery-beat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-celery-beat' is hosted on GitHub
+        link: https://github.com/celery/django-celery-beat
+        package_name: django-celery-beat
