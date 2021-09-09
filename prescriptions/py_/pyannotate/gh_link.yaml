@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyannotateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyannotate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyannotate' is hosted on GitHub
+        link: https://github.com/dropbox/pyannotate
+        package_name: pyannotate
