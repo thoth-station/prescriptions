@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ParameterizedGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parameterized
+    run:
+      release_notes:
+        organization: wolever
+        repository: parameterized
+        tag_version_prefix: v
