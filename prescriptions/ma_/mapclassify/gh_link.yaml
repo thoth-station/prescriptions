@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MapclassifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapclassify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mapclassify' is hosted on GitHub
+        link: https://github.com/pysal/mapclassify
+        package_name: mapclassify
