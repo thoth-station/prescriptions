@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PynetdicomGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynetdicom
+    run:
+      release_notes:
+        organization: pydicom
+        repository: pynetdicom
+        tag_version_prefix: v
