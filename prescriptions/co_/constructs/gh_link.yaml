@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConstructsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: constructs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'constructs' is hosted on GitHub
+        link: https://github.com/aws/constructs
+        package_name: constructs
