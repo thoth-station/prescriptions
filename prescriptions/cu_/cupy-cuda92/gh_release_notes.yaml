@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CupyCuda92GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda92
+    run:
+      release_notes:
+        organization: cupy
+        repository: cupy
+        tag_version_prefix: v
