@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MizaniGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mizani
+    run:
+      release_notes:
+        organization: has2k1
+        repository: mizani
+        tag_version_prefix: v
