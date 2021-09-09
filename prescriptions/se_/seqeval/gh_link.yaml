@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SeqevalGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: seqeval
+    run:
+      justification:
+      - type: INFO
+        message: Package 'seqeval' is hosted on GitHub
+        link: https://github.com/chakki-works/seqeval
+        package_name: seqeval
