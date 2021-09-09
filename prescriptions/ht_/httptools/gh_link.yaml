@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HttptoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httptools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'httptools' is hosted on GitHub
+        link: https://github.com/MagicStack/httptools
+        package_name: httptools
