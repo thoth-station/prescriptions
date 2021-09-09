@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SignedTagsTensorflowIoGcsFilesystemScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-io-gcs-filesystem
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT cryptographically sign tags based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: tensorflow-io-gcs-filesystem
