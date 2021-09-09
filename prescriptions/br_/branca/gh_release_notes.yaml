@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BrancaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: branca
+    run:
+      release_notes:
+        organization: python-visualization
+        repository: branca
+        tag_version_prefix: v
