@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PipdeptreeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipdeptree
+    run:
+      release_notes:
+        organization: naiquevin
+        repository: pipdeptree
