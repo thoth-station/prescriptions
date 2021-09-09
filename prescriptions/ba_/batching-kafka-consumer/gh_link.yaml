@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BatchingKafkaConsumerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batching-kafka-consumer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'batching-kafka-consumer' is hosted on GitHub
+        link: https://github.com/getsentry/batching-kafka-consumer
+        package_name: batching-kafka-consumer
