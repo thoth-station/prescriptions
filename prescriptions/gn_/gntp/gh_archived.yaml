@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GntpGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gntp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gntp' is marked as archived on GitHub
+        link: https://github.com/kfdm/gntp
+        package_name: gntp
