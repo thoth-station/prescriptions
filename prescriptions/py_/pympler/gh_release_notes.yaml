@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PymplerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pympler
+    run:
+      release_notes:
+        organization: pympler
+        repository: pympler
