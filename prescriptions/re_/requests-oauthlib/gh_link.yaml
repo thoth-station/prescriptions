@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsOauthlibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-oauthlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-oauthlib' is hosted on GitHub
+        link: https://github.com/requests/requests-oauthlib
+        package_name: requests-oauthlib
