@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RequestsFtpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ftp
+    run:
+      release_notes:
+        organization: Lukasa
+        repository: requests-ftp
+        tag_version_prefix: v
