@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RainbowLoggingHandlerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rainbow-logging-handler
+    run:
+      release_notes:
+        organization: laysakura
+        repository: rainbow_logging_handler
