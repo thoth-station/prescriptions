@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BacklashGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backlash
+    run:
+      release_notes:
+        organization: TurboGears
+        repository: backlash
