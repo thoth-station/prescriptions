@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestPydocstyleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-pydocstyle
+    run:
+      release_notes:
+        organization: henry0312
+        repository: pytest-pydocstyle
+        tag_version_prefix: v
