@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ImportlibResourcesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib-resources
+    run:
+      release_notes:
+        organization: python
+        repository: importlib_resources
+        tag_version_prefix: v
