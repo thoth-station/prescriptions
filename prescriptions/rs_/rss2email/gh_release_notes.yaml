@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Rss2emailGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rss2email
+    run:
+      release_notes:
+        organization: rss2email
+        repository: rss2email
+        tag_version_prefix: v
