@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AmqpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amqp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'amqp' is hosted on GitHub
+        link: https://github.com/celery/py-amqp
+        package_name: amqp
