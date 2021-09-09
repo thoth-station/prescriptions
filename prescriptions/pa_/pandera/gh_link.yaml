@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PanderaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandera
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pandera' is hosted on GitHub
+        link: https://github.com/pandera-dev/pandera
+        package_name: pandera
