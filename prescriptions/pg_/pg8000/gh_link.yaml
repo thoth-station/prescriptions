@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pg8000GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pg8000
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pg8000' is hosted on GitHub
+        link: https://github.com/tlocke/pg8000
+        package_name: pg8000
