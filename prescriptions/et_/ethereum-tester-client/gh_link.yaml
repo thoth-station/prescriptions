@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthereumTesterClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethereum-tester-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ethereum-tester-client' is hosted on GitHub
+        link: https://github.com/pipermerriam/ethereum-tester-client
+        package_name: ethereum-tester-client
