@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GntpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gntp
+    run:
+      release_notes:
+        organization: kfdm
+        repository: gntp
+        tag_version_prefix: v
