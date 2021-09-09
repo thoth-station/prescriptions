@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GpiozeroGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpiozero
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gpiozero' is hosted on GitHub
+        link: https://github.com/gpiozero/gpiozero
+        package_name: gpiozero
