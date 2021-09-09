@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PureEvalGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pure-eval
+    run:
+      release_notes:
+        organization: alexmojaki
+        repository: pure_eval
+        tag_version_prefix: v
