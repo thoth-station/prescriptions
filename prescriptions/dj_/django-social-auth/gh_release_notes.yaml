@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoSocialAuthGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-social-auth
+    run:
+      release_notes:
+        organization: omab
+        repository: django-social-auth
+        tag_version_prefix: v
