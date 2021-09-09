@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleapisCommonProtosGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleapis-common-protos
+    run:
+      justification:
+      - type: INFO
+        message: Package 'googleapis-common-protos' is hosted on GitHub
+        link: https://github.com/googleapis/python-api-common-protos
+        package_name: googleapis-common-protos
