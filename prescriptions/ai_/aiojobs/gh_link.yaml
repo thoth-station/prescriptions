@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiojobsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiojobs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiojobs' is hosted on GitHub
+        link: https://github.com/aio-libs/aiojobs
+        package_name: aiojobs
