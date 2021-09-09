@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RstrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rstr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rstr' is hosted on GitHub
+        link: https://github.com/leapfrogonline/rstr
+        package_name: rstr
