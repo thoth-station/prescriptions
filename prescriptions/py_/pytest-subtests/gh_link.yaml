@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestSubtestsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-subtests
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-subtests' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-subtests
+        package_name: pytest-subtests
