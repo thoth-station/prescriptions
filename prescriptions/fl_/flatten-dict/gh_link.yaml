@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlattenDictGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatten-dict
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flatten-dict' is hosted on GitHub
+        link: https://github.com/ianlini/flatten-dict
+        package_name: flatten-dict
