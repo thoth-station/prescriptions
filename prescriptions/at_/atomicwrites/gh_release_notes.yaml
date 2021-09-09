@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AtomicwritesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atomicwrites
+    run:
+      release_notes:
+        organization: untitaker
+        repository: python-atomicwrites
