@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxAutobuildGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autobuild
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-autobuild' is hosted on GitHub
+        link: https://github.com/executablebooks/sphinx-autobuild
+        package_name: sphinx-autobuild
