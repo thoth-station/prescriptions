@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ImageClassifiersGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: image-classifiers
+    run:
+      release_notes:
+        organization: qubvel
+        repository: classification_models
+        tag_version_prefix: v
