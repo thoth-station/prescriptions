@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylevGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylev
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylev' is hosted on GitHub
+        link: https://github.com/toastdriven/pylev
+        package_name: pylev
