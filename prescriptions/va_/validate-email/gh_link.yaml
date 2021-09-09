@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ValidateEmailGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validate-email
+    run:
+      justification:
+      - type: INFO
+        message: Package 'validate-email' is hosted on GitHub
+        link: https://github.com/syrusakbary/validate_email
+        package_name: validate-email
