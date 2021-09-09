@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Rst2pdfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst2pdf
+    run:
+      release_notes:
+        organization: rst2pdf
+        repository: rst2pdf
