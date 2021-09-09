@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReleasesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: releases
+    run:
+      justification:
+      - type: INFO
+        message: Package 'releases' is hosted on GitHub
+        link: https://github.com/bitprophet/releases
+        package_name: releases
