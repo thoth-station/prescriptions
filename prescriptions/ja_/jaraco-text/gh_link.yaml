@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoTextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-text
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-text' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.text
+        package_name: jaraco-text
