@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Nrf24GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nrf24
+    run:
+      release_notes:
+        organization: bjarne-hansen
+        repository: py-nrf24
+        tag_version_prefix: v
