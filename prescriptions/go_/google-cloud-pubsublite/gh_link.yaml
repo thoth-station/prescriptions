@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudPubsubliteGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-pubsublite
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-pubsublite' is hosted on GitHub
+        link: https://github.com/googleapis/python-pubsublite
+        package_name: google-cloud-pubsublite
