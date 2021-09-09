@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppDependableGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-dependable
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-dependable' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.dependable
+        package_name: zope-app-dependable
