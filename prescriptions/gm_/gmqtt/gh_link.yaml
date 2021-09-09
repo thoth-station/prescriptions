@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GmqttGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gmqtt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gmqtt' is hosted on GitHub
+        link: https://github.com/wialon/gmqtt
+        package_name: gmqtt
