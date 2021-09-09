@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DominateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dominate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dominate' is hosted on GitHub
+        link: https://github.com/Knio/dominate
+        package_name: dominate
