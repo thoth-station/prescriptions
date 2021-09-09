@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MystParserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: myst-parser
+    run:
+      release_notes:
+        organization: executablebooks
+        repository: MyST-Parser
+        tag_version_prefix: v
