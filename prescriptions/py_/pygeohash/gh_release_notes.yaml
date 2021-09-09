@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PygeohashGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygeohash
+    run:
+      release_notes:
+        organization: wdm0006
+        repository: pygeohash
