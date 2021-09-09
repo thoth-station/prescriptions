@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Py9pGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py9p
+    run:
+      release_notes:
+        organization: svinota
+        repository: py9p
