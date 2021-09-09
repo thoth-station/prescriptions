@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjDatabaseUrlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dj-database-url
+    run:
+      release_notes:
+        organization: kennethreitz
+        repository: dj-database-url
+        tag_version_prefix: v
