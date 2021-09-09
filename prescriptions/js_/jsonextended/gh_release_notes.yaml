@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JsonextendedGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonextended
+    run:
+      release_notes:
+        organization: chrisjsewell
+        repository: jsonextended
+        tag_version_prefix: v
