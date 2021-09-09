@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyscssGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyscss
+    run:
+      release_notes:
+        organization: Kronuz
+        repository: pyScss
