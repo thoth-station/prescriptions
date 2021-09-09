@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Python3OpenidGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-openid
+    run:
+      release_notes:
+        organization: necaris
+        repository: python3-openid
+        tag_version_prefix: v
