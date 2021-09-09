@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatacompyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datacompy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datacompy' is hosted on GitHub
+        link: https://github.com/capitalone/datacompy
+        package_name: datacompy
