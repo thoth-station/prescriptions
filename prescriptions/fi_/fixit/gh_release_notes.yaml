@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FixitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fixit
+    run:
+      release_notes:
+        organization: Instagram
+        repository: Fixit
+        tag_version_prefix: v
