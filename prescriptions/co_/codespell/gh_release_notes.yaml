@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CodespellGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codespell
+    run:
+      release_notes:
+        organization: codespell-project
+        repository: codespell
+        tag_version_prefix: v
