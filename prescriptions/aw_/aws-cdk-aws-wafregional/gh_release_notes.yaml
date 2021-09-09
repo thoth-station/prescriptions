@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AwsCdkAwsWafregionalGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-wafregional
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-cdk
+        tag_version_prefix: v
