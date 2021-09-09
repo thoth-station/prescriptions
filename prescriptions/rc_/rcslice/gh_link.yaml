@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RcsliceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rcslice
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rcslice' is hosted on GitHub
+        link: https://github.com/neurobin/rcslice
+        package_name: rcslice
