@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AlibiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alibi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'alibi' is hosted on GitHub
+        link: https://github.com/SeldonIO/alibi
+        package_name: alibi
