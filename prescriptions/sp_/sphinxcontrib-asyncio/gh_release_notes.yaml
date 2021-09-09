@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxcontribAsyncioGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-asyncio
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: sphinxcontrib-asyncio
+        tag_version_prefix: v
