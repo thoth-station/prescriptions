@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconPkgConfigGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-pkg-config
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-pkg-config' is hosted on GitHub
+        link: https://github.com/colcon/colcon-pkg-config
+        package_name: colcon-pkg-config
