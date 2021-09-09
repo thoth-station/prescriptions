@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudVisionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-vision
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-vision' is hosted on GitHub
+        link: https://github.com/googleapis/python-vision
+        package_name: google-cloud-vision
