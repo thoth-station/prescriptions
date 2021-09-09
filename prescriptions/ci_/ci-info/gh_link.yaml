@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CiInfoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ci-info
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ci-info' is hosted on GitHub
+        link: https://github.com/mgxd/ci-info
+        package_name: ci-info
