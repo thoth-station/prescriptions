@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MlpackGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlpack
+    run:
+      release_notes:
+        organization: mlpack
+        repository: mlpack
