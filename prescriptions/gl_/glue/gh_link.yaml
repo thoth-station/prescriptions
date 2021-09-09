@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GlueGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glue
+    run:
+      justification:
+      - type: INFO
+        message: Package 'glue' is hosted on GitHub
+        link: https://github.com/jorgebastida/glue
+        package_name: glue
