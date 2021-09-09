@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FlaskCorsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-cors
+    run:
+      release_notes:
+        organization: corydolphin
+        repository: flask-cors
