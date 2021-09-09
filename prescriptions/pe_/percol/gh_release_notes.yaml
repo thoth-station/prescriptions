@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PercolGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: percol
+    run:
+      release_notes:
+        organization: mooz
+        repository: percol
+        tag_version_prefix: v
