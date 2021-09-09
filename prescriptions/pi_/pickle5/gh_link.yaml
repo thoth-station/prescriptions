@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pickle5GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pickle5
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pickle5' is hosted on GitHub
+        link: https://github.com/pitrou/pickle5-backport
+        package_name: pickle5
