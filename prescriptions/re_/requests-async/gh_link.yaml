@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsAsyncGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-async
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-async' is hosted on GitHub
+        link: https://github.com/encode/requests-async
+        package_name: requests-async
