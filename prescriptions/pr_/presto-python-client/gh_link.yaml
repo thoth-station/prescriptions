@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrestoPythonClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: presto-python-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'presto-python-client' is hosted on GitHub
+        link: https://github.com/prestodb/presto-python-client
+        package_name: presto-python-client
