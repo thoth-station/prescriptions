@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudMemcacheGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-memcache
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-memcache
+        tag_version_prefix: v
