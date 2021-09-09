@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SacredGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sacred
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sacred' is hosted on GitHub
+        link: https://github.com/IDSIA/sacred
+        package_name: sacred
