@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthTestrpcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-testrpc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'eth-testrpc' is hosted on GitHub
+        link: https://github.com/pipermerriam/eth-testrpc
+        package_name: eth-testrpc
