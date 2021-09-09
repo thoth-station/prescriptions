@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ElyraGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elyra
+    run:
+      release_notes:
+        organization: elyra-ai
+        repository: elyra
+        tag_version_prefix: v
