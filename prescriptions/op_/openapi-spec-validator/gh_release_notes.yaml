@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: OpenapiSpecValidatorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openapi-spec-validator
+    run:
+      release_notes:
+        organization: p1c2u
+        repository: openapi-spec-validator
