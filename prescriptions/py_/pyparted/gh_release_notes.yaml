@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PypartedGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyparted
+    run:
+      release_notes:
+        organization: dcantrell
+        repository: pyparted
+        tag_version_prefix: v
