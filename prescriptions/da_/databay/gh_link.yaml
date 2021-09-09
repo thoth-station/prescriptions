@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatabayGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databay
+    run:
+      justification:
+      - type: INFO
+        message: Package 'databay' is hosted on GitHub
+        link: https://github.com/Voyz/databay
+        package_name: databay
