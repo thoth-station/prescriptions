@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoRegistrationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-registration
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-registration' is hosted on GitHub
+        link: https://github.com/ubernostrum/django-registration
+        package_name: django-registration
