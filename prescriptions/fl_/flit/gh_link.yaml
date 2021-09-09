@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flit' is hosted on GitHub
+        link: https://github.com/takluyver/flit
+        package_name: flit
