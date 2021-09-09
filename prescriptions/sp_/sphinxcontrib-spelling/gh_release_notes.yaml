@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxcontribSpellingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-spelling
+    run:
+      release_notes:
+        organization: sphinx-contrib
+        repository: spelling
