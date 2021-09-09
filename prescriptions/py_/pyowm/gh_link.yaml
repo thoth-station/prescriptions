@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyowmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyowm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyowm' is hosted on GitHub
+        link: https://github.com/csparpa/pyowm
+        package_name: pyowm
