@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoverageEnableSubprocessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage-enable-subprocess
+    run:
+      justification:
+      - type: INFO
+        message: Package 'coverage-enable-subprocess' is hosted on GitHub
+        link: https://github.com/bukzor/python-coverage-enable-subprocess
+        package_name: coverage-enable-subprocess
