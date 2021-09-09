@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ParliamentGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parliament
+    run:
+      release_notes:
+        organization: duo-labs
+        repository: parliament
