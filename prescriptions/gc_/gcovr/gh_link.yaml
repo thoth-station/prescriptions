@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GcovrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcovr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gcovr' is hosted on GitHub
+        link: https://github.com/gcovr/gcovr
+        package_name: gcovr
