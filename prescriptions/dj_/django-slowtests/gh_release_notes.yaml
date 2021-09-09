@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoSlowtestsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-slowtests
+    run:
+      release_notes:
+        organization: realpython
+        repository: django-slow-tests
