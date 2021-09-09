@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SteamGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: steam
+    run:
+      release_notes:
+        organization: ValvePython
+        repository: steam
+        tag_version_prefix: v
