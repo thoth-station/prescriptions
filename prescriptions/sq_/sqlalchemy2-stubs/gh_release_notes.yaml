@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Sqlalchemy2StubsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy2-stubs
+    run:
+      release_notes:
+        organization: sqlalchemy
+        repository: sqlalchemy2-stubs
+        tag_version_prefix: v
