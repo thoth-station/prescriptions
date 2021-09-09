@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PymediainfoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymediainfo
+    run:
+      release_notes:
+        organization: sbraz
+        repository: pymediainfo
+        tag_version_prefix: v
