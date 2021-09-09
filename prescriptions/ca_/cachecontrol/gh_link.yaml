@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachecontrolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachecontrol
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cachecontrol' is hosted on GitHub
+        link: https://github.com/ionrock/cachecontrol
+        package_name: cachecontrol
