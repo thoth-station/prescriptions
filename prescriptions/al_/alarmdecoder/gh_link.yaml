@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AlarmdecoderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alarmdecoder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'alarmdecoder' is hosted on GitHub
+        link: https://github.com/nutechsoftware/alarmdecoder
+        package_name: alarmdecoder
