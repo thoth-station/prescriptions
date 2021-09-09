@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StripHintsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: strip-hints
+    run:
+      justification:
+      - type: INFO
+        message: Package 'strip-hints' is hosted on GitHub
+        link: https://github.com/abarker/strip-hints
+        package_name: strip-hints
