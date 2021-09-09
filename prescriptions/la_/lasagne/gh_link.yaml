@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LasagneGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lasagne
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lasagne' is hosted on GitHub
+        link: https://github.com/Lasagne/Lasagne
+        package_name: lasagne
