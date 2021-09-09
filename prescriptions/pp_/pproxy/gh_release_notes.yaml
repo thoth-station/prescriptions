@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PproxyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pproxy
+    run:
+      release_notes:
+        organization: qwj
+        repository: python-proxy
