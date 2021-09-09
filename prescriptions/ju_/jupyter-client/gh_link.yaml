@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-client' is hosted on GitHub
+        link: https://github.com/jupyter/jupyter_client
+        package_name: jupyter-client
