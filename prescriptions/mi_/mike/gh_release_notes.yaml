@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MikeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mike
+    run:
+      release_notes:
+        organization: jimporter
+        repository: mike
+        tag_version_prefix: v
