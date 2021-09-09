@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iml
+    run:
+      justification:
+      - type: INFO
+        message: Package 'iml' is hosted on GitHub
+        link: https://github.com/interpretable-ml/iml
+        package_name: iml
