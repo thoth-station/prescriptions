@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PypiserverGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypiserver
+    run:
+      release_notes:
+        organization: pypiserver
+        repository: pypiserver
+        tag_version_prefix: v
