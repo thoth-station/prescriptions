@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CertipyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certipy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'certipy' is hosted on GitHub
+        link: https://github.com/LLNL/certipy
+        package_name: certipy
