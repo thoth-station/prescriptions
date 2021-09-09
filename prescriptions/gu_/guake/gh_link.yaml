@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GuakeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: guake
+    run:
+      justification:
+      - type: INFO
+        message: Package 'guake' is hosted on GitHub
+        link: https://github.com/Guake/guake
+        package_name: guake
