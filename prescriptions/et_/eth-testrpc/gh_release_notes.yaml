@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EthTestrpcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-testrpc
+    run:
+      release_notes:
+        organization: pipermerriam
+        repository: eth-testrpc
+        tag_version_prefix: v
