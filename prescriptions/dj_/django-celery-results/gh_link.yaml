@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCeleryResultsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-celery-results
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-celery-results' is hosted on GitHub
+        link: https://github.com/celery/django-celery-results
+        package_name: django-celery-results
