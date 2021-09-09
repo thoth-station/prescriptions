@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: InvenioRecordsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-records
+    run:
+      release_notes:
+        organization: inveniosoftware
+        repository: invenio-records
+        tag_version_prefix: v
