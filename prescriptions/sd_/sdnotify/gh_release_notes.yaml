@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SdnotifyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sdnotify
+    run:
+      release_notes:
+        organization: bb4242
+        repository: sdnotify
+        tag_version_prefix: v
