@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZcSourcefactoryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zc-sourcefactory
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zc-sourcefactory' is hosted on GitHub
+        link: https://github.com/zopefoundation/zc.sourcefactory
+        package_name: zc-sourcefactory
