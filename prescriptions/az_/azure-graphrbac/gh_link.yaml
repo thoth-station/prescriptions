@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureGraphrbacGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-graphrbac
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-graphrbac' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-graphrbac
