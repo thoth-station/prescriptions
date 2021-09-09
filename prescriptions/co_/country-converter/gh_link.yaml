@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CountryConverterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: country-converter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'country-converter' is hosted on GitHub
+        link: https://github.com/konstantinstadler/country_converter
+        package_name: country-converter
