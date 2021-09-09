@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwesomeversionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awesomeversion
+    run:
+      justification:
+      - type: INFO
+        message: Package 'awesomeversion' is hosted on GitHub
+        link: https://github.com/ludeeus/awesomeversion
+        package_name: awesomeversion
