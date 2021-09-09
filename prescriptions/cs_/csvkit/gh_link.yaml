@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CsvkitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: csvkit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'csvkit' is hosted on GitHub
+        link: https://github.com/wireservice/csvkit
+        package_name: csvkit
