@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerberoastGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberoast
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kerberoast' is hosted on GitHub
+        link: https://github.com/skelsec/kerberoast
+        package_name: kerberoast
