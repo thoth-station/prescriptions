@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PrettyMidiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretty-midi
+    run:
+      release_notes:
+        organization: craffel
+        repository: pretty-midi
