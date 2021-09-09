@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsSocketpairGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-socketpair
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backports-socketpair' is hosted on GitHub
+        link: https://github.com/mhils/backports.socketpair
+        package_name: backports-socketpair
