@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxcontribApidocGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-apidoc
+    run:
+      release_notes:
+        organization: sphinx-contrib
+        repository: apidoc
