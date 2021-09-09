@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymplerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pympler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pympler' is hosted on GitHub
+        link: https://github.com/pympler/pympler
+        package_name: pympler
