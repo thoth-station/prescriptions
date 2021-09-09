@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScoutApmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scout-apm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scout-apm' is hosted on GitHub
+        link: https://github.com/scoutapp/scout_apm_python
+        package_name: scout-apm
