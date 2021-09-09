@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CssutilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cssutils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cssutils' is hosted on GitHub
+        link: https://github.com/jaraco/cssutils
+        package_name: cssutils
