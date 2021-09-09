@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UntokenizeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: untokenize
+    run:
+      release_notes:
+        organization: myint
+        repository: untokenize
+        tag_version_prefix: v
