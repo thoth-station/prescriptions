@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IjsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ijson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ijson' is hosted on GitHub
+        link: https://github.com/ICRAR/ijson
+        package_name: ijson
