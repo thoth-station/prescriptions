@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleAuthGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-auth
+    run:
+      release_notes:
+        organization: googleapis
+        repository: google-auth-library-python
+        tag_version_prefix: v
