@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PtyprocessGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptyprocess
+    run:
+      release_notes:
+        organization: pexpect
+        repository: ptyprocess
