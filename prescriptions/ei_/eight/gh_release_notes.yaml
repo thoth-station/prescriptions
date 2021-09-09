@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EightGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eight
+    run:
+      release_notes:
+        organization: kislyuk
+        repository: eight
+        tag_version_prefix: v
