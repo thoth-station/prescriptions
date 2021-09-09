@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SubliminalGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subliminal
+    run:
+      release_notes:
+        organization: Diaoul
+        repository: subliminal
