@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastdownloadGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastdownload
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fastdownload' is hosted on GitHub
+        link: https://github.com/fastai/fastdownload
+        package_name: fastdownload
