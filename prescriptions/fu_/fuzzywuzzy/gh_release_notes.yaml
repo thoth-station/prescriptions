@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FuzzywuzzyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzywuzzy
+    run:
+      release_notes:
+        organization: seatgeek
+        repository: fuzzywuzzy
