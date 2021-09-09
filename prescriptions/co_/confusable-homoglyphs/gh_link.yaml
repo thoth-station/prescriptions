@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfusableHomoglyphsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: confusable-homoglyphs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'confusable-homoglyphs' is hosted on GitHub
+        link: https://github.com/vhf/confusable_homoglyphs
+        package_name: confusable-homoglyphs
