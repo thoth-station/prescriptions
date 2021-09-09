@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PykkaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykka
+    run:
+      release_notes:
+        organization: jodal
+        repository: pykka
+        tag_version_prefix: v
