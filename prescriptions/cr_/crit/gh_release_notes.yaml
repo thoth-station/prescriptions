@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CritGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crit
+    run:
+      release_notes:
+        organization: jessielaf
+        repository: crit
+        tag_version_prefix: v
