@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BiscuitsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: biscuits
+    run:
+      justification:
+      - type: INFO
+        message: Package 'biscuits' is hosted on GitHub
+        link: https://github.com/pyrates/biscuits
+        package_name: biscuits
