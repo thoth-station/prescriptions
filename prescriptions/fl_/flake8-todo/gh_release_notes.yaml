@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Flake8TodoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-todo
+    run:
+      release_notes:
+        organization: schlamar
+        repository: flake8-todo
+        tag_version_prefix: v
