@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TinyaesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tinyaes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tinyaes' is hosted on GitHub
+        link: https://github.com/naufraghi/tinyaes-py
+        package_name: tinyaes
