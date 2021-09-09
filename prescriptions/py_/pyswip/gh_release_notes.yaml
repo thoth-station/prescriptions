@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyswipGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyswip
+    run:
+      release_notes:
+        organization: yuce
+        repository: pyswip
+        tag_version_prefix: v
