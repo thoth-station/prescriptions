@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Cmd2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmd2
+    run:
+      release_notes:
+        organization: python-cmd2
+        repository: cmd2
