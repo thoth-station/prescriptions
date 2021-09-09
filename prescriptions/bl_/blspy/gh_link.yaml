@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlspyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blspy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blspy' is hosted on GitHub
+        link: https://github.com/Chia-Network/bls-signatures
+        package_name: blspy
