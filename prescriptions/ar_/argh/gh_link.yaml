@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArghGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'argh' is hosted on GitHub
+        link: https://github.com/neithere/argh
+        package_name: argh
