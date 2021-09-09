@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BleachGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bleach
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bleach' is hosted on GitHub
+        link: https://github.com/mozilla/bleach
+        package_name: bleach
