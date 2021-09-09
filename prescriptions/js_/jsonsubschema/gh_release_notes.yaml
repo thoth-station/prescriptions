@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JsonsubschemaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonsubschema
+    run:
+      release_notes:
+        organization: IBM
+        repository: jsonsubschema
+        tag_version_prefix: v
