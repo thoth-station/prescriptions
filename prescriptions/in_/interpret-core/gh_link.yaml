@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InterpretCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interpret-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'interpret-core' is hosted on GitHub
+        link: https://github.com/interpretml/interpret
+        package_name: interpret-core
