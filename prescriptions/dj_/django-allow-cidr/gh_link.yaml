@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoAllowCidrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-allow-cidr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-allow-cidr' is hosted on GitHub
+        link: https://github.com/mozmeao/django-allow-cidr
+        package_name: django-allow-cidr
