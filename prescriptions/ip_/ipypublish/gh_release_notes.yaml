@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: IpypublishGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipypublish
+    run:
+      release_notes:
+        organization: chrisjsewell
+        repository: ipypublish
+        tag_version_prefix: v
