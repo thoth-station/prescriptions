@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ZopeComponentGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-component
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.component
