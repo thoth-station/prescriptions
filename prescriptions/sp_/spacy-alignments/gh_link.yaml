@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpacyAlignmentsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spacy-alignments
+    run:
+      justification:
+      - type: INFO
+        message: Package 'spacy-alignments' is hosted on GitHub
+        link: https://github.com/explosion/spacy-alignments
+        package_name: spacy-alignments
