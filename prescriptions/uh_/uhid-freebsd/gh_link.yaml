@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UhidFreebsdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uhid-freebsd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'uhid-freebsd' is hosted on GitHub
+        link: https://github.com/grembo/uhid-freebsd
+        package_name: uhid-freebsd
