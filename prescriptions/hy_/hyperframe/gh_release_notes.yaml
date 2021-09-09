@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HyperframeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hyperframe
+    run:
+      release_notes:
+        organization: python-hyper
+        repository: hyperframe
+        tag_version_prefix: v
