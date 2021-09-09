@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyotgwGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyotgw
+    run:
+      release_notes:
+        organization: mvn23
+        repository: pyotgw
