@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoJsonviewGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-jsonview
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-jsonview' is hosted on GitHub
+        link: https://github.com/jsocol/django-jsonview
+        package_name: django-jsonview
