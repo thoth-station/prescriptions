@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BnaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bna
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bna' is hosted on GitHub
+        link: https://github.com/jleclanche/python-bna
+        package_name: bna
