@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KfpTektonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp-tekton
+    run:
+      release_notes:
+        organization: kubeflow
+        repository: kfp-tekton
+        tag_version_prefix: v
