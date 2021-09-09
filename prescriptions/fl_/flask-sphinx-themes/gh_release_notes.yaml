@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FlaskSphinxThemesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sphinx-themes
+    run:
+      release_notes:
+        organization: pallets
+        repository: flask-sphinx-themes
