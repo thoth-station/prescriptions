@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArgoModelsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argo-models
+    run:
+      justification:
+      - type: INFO
+        message: Package 'argo-models' is hosted on GitHub
+        link: https://github.com/e2fyi/argo-models
+        package_name: argo-models
