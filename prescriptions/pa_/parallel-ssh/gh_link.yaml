@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParallelSshGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parallel-ssh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'parallel-ssh' is hosted on GitHub
+        link: https://github.com/ParallelSSH/parallel-ssh
+        package_name: parallel-ssh
