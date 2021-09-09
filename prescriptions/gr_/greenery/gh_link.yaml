@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GreeneryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: greenery
+    run:
+      justification:
+      - type: INFO
+        message: Package 'greenery' is hosted on GitHub
+        link: https://github.com/qntm/greenery
+        package_name: greenery
