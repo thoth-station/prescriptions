@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GetVersionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: get-version
+    run:
+      release_notes:
+        organization: flying-sheep
+        repository: get_version
+        tag_version_prefix: v
