@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowDatasetsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-datasets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-datasets' is hosted on GitHub
+        link: https://github.com/tensorflow/datasets
+        package_name: tensorflow-datasets
