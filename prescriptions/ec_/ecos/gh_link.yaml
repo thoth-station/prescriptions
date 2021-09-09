@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EcosGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ecos
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ecos' is hosted on GitHub
+        link: https://github.com/embotech/ecos
+        package_name: ecos
