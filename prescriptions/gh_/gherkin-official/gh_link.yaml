@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GherkinOfficialGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gherkin-official
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gherkin-official' is hosted on GitHub
+        link: https://github.com/cucumber/gherkin-python
+        package_name: gherkin-official
