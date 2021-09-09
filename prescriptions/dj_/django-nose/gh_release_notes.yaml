@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoNoseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-nose
+    run:
+      release_notes:
+        organization: jazzband
+        repository: django-nose
+        tag_version_prefix: v
