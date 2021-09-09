@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WheelInspectGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-inspect
+    run:
+      release_notes:
+        organization: jwodder
+        repository: wheel-inspect
+        tag_version_prefix: v
