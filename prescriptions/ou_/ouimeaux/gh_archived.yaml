@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OuimeauxGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ouimeaux
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ouimeaux' is marked as archived on GitHub
+        link: https://github.com/iancmcc/ouimeaux
+        package_name: ouimeaux
