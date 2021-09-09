@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FtfyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ftfy
+    run:
+      release_notes:
+        organization: rspeer
+        repository: python-ftfy
+        tag_version_prefix: v
