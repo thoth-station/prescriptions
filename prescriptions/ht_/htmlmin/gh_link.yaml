@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HtmlminGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: htmlmin
+    run:
+      justification:
+      - type: INFO
+        message: Package 'htmlmin' is hosted on GitHub
+        link: https://github.com/mankyd/htmlmin
+        package_name: htmlmin
