@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SupersmootherGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supersmoother
+    run:
+      release_notes:
+        organization: jakevdp
+        repository: supersmoother
+        tag_version_prefix: v
