@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NbdevGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbdev
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nbdev' is hosted on GitHub
+        link: https://github.com/fastai/nbdev
+        package_name: nbdev
