@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SentenceTransformersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentence-transformers
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sentence-transformers' is hosted on GitHub
+        link: https://github.com/UKPLab/sentence-transformers
+        package_name: sentence-transformers
