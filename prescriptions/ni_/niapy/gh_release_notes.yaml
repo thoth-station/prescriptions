@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NiapyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: niapy
+    run:
+      release_notes:
+        organization: NiaOrg
+        repository: NiaPy
