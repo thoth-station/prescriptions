@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TexsoupGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: texsoup
+    run:
+      release_notes:
+        organization: alvinwan
+        repository: TexSoup
