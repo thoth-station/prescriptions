@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ConsoleBundleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: console-bundle
+    run:
+      release_notes:
+        organization: pyfony
+        repository: console-bundle
+        tag_version_prefix: v
