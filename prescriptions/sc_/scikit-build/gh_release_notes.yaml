@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ScikitBuildGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-build
+    run:
+      release_notes:
+        organization: scikit-build
+        repository: scikit-build
