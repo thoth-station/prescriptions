@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KappaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kappa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kappa' is hosted on GitHub
+        link: https://github.com/garnaat/kappa
+        package_name: kappa
