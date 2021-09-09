@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GqlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gql
+    run:
+      release_notes:
+        organization: graphql-python
+        repository: gql
+        tag_version_prefix: v
