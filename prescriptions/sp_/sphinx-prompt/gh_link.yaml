@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxPromptGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-prompt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-prompt' is hosted on GitHub
+        link: https://github.com/sbrunner/sphinx-prompt
+        package_name: sphinx-prompt
