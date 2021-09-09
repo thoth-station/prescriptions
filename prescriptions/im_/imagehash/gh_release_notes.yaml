@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ImagehashGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagehash
+    run:
+      release_notes:
+        organization: JohannesBuchner
+        repository: imagehash
+        tag_version_prefix: v
