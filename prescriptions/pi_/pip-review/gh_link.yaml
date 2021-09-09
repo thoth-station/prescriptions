@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipReviewGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-review
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pip-review' is hosted on GitHub
+        link: https://github.com/jgonggrijp/pip-review
+        package_name: pip-review
