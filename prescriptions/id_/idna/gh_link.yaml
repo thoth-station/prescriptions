@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IdnaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna
+    run:
+      justification:
+      - type: INFO
+        message: Package 'idna' is hosted on GitHub
+        link: https://github.com/kjd/idna
+        package_name: idna
