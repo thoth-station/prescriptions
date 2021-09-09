@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8TupleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-tuple
+    run:
+      release_notes:
+        organization: ar4s
+        repository: flake8_tuple
