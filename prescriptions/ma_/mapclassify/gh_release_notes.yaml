@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MapclassifyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapclassify
+    run:
+      release_notes:
+        organization: pysal
+        repository: mapclassify
+        tag_version_prefix: v
