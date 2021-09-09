@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FlaskWtfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-wtf
+    run:
+      release_notes:
+        organization: wtforms
+        repository: flask-wtf
+        tag_version_prefix: v
