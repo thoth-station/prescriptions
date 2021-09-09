@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Pygit2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygit2
+    run:
+      release_notes:
+        organization: libgit2
+        repository: pygit2
+        tag_version_prefix: v
