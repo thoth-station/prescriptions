@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoCookiesSamesiteGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cookies-samesite
+    run:
+      release_notes:
+        organization: jotes
+        repository: django-cookies-samesite
+        tag_version_prefix: v
