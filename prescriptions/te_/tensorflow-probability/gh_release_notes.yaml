@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TensorflowProbabilityGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-probability
+    run:
+      release_notes:
+        organization: tensorflow
+        repository: probability
+        tag_version_prefix: v
