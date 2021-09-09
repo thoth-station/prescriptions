@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CookiesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cookies
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cookies' is hosted on GitHub
+        link: https://github.com/sashahart/cookies
+        package_name: cookies
