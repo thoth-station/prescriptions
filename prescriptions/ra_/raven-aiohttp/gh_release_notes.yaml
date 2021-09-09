@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RavenAiohttpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: raven-aiohttp
+    run:
+      release_notes:
+        organization: getsentry
+        repository: raven-aiohttp
