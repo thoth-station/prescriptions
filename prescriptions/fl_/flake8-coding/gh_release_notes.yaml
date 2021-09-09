@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8CodingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-coding
+    run:
+      release_notes:
+        organization: tk0miya
+        repository: flake8-coding
