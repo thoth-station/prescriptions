@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PygrocyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygrocy
+    run:
+      release_notes:
+        organization: sebrut
+        repository: pygrocy
+        tag_version_prefix: v
