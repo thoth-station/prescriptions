@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ZopeUntrustedpythonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-untrustedpython
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.untrustedpython
