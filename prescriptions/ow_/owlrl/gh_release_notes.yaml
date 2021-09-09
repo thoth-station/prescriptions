@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OwlrlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: owlrl
+    run:
+      release_notes:
+        organization: RDFLib
+        repository: OWL-RL
+        tag_version_prefix: v
