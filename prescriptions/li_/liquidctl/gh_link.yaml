@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LiquidctlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: liquidctl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'liquidctl' is hosted on GitHub
+        link: https://github.com/liquidctl/liquidctl
+        package_name: liquidctl
