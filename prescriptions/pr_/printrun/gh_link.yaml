@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrintrunGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: printrun
+    run:
+      justification:
+      - type: INFO
+        message: Package 'printrun' is hosted on GitHub
+        link: https://github.com/kliment/Printrun
+        package_name: printrun
