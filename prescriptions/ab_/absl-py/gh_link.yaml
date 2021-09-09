@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AbslPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: absl-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'absl-py' is hosted on GitHub
+        link: https://github.com/abseil/abseil-py
+        package_name: absl-py
