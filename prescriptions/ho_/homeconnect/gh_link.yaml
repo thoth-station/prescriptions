@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HomeconnectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: homeconnect
+    run:
+      justification:
+      - type: INFO
+        message: Package 'homeconnect' is hosted on GitHub
+        link: https://github.com/DavidMStraub/homeconnect
+        package_name: homeconnect
