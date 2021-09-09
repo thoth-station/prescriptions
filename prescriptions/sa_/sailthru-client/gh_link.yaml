@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SailthruClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sailthru-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sailthru-client' is hosted on GitHub
+        link: https://github.com/sailthru/sailthru-python-client
+        package_name: sailthru-client
