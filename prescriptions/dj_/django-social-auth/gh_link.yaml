@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSocialAuthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-social-auth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-social-auth' is hosted on GitHub
+        link: https://github.com/omab/django-social-auth
+        package_name: django-social-auth
