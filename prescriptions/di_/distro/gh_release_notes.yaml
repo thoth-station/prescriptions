@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DistroGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distro
+    run:
+      release_notes:
+        organization: python-distro
+        repository: distro
+        tag_version_prefix: v
