@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MotorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: motor
+    run:
+      release_notes:
+        organization: mongodb
+        repository: motor
