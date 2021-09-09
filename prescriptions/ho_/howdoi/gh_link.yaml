@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HowdoiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: howdoi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'howdoi' is hosted on GitHub
+        link: https://github.com/gleitz/howdoi
+        package_name: howdoi
