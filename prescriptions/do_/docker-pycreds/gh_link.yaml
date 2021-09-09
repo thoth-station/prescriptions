@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DockerPycredsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker-pycreds
+    run:
+      justification:
+      - type: INFO
+        message: Package 'docker-pycreds' is hosted on GitHub
+        link: https://github.com/shin-/dockerpy-creds
+        package_name: docker-pycreds
