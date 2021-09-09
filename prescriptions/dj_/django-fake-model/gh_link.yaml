@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoFakeModelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-fake-model
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-fake-model' is hosted on GitHub
+        link: https://github.com/erm0l0v/django-fake-model
+        package_name: django-fake-model
