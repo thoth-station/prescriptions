@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoMpttGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-mptt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-mptt' is hosted on GitHub
+        link: https://github.com/django-mptt/django-mptt
+        package_name: django-mptt
