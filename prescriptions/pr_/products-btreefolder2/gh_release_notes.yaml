@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ProductsBtreefolder2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-btreefolder2
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: Products.BTreeFolder2
