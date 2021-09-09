@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TokenPermissionsSshtunnelScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshtunnel
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT follow the principle of least privileged in GitHub workflows based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: sshtunnel
