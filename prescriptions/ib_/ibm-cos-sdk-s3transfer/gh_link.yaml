@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IbmCosSdkS3transferGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-cos-sdk-s3transfer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ibm-cos-sdk-s3transfer' is hosted on GitHub
+        link: https://github.com/IBM/ibm-cos-sdk-python-s3transfer
+        package_name: ibm-cos-sdk-s3transfer
