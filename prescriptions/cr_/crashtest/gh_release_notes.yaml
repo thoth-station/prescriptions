@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CrashtestGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crashtest
+    run:
+      release_notes:
+        organization: sdispater
+        repository: crashtest
