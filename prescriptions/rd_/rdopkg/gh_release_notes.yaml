@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RdopkgGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rdopkg
+    run:
+      release_notes:
+        organization: softwarefactory-project
+        repository: rdopkg
