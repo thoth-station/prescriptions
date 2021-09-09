@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JrnlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jrnl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jrnl' is hosted on GitHub
+        link: https://github.com/jrnl-org/jrnl
+        package_name: jrnl
