@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeComponentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-component
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-component' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.component
+        package_name: zope-component
