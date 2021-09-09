@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TorchnetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchnet
+    run:
+      release_notes:
+        organization: pytorch
+        repository: tnt
+        tag_version_prefix: v
