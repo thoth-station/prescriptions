@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytaglibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytaglib
+    run:
+      release_notes:
+        organization: supermihi
+        repository: pytaglib
+        tag_version_prefix: v
