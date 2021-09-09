@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JsonargparseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonargparse
+    run:
+      release_notes:
+        organization: omni-us
+        repository: jsonargparse
+        tag_version_prefix: v
