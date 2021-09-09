@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpenapiSchemaValidatorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openapi-schema-validator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'openapi-schema-validator' is hosted on GitHub
+        link: https://github.com/p1c2u/openapi-schema-validator
+        package_name: openapi-schema-validator
