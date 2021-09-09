@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: KiwisolverGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kiwisolver
+    run:
+      release_notes:
+        organization: nucleic
+        repository: kiwi
