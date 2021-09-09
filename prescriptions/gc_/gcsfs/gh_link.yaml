@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GcsfsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcsfs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gcsfs' is hosted on GitHub
+        link: https://github.com/dask/gcsfs
+        package_name: gcsfs
