@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxRtdThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-rtd-theme
+    run:
+      release_notes:
+        organization: readthedocs
+        repository: sphinx_rtd_theme
