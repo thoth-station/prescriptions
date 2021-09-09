@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DatabayGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databay
+    run:
+      release_notes:
+        organization: Voyz
+        repository: databay
+        tag_version_prefix: v
