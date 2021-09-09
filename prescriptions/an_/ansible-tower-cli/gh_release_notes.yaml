@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AnsibleTowerCliGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-tower-cli
+    run:
+      release_notes:
+        organization: ansible
+        repository: tower-cli
+        tag_version_prefix: v
