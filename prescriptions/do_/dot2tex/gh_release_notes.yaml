@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Dot2texGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dot2tex
+    run:
+      release_notes:
+        organization: kjellmf
+        repository: dot2tex
