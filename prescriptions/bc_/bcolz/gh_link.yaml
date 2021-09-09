@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcolzGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcolz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bcolz' is hosted on GitHub
+        link: https://github.com/Blosc/bcolz
+        package_name: bcolz
