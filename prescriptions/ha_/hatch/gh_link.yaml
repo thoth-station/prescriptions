@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HatchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hatch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hatch' is hosted on GitHub
+        link: https://github.com/ofek/hatch
+        package_name: hatch
