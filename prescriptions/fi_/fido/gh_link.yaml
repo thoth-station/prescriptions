@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FidoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fido
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fido' is hosted on GitHub
+        link: https://github.com/Yelp/fido
+        package_name: fido
