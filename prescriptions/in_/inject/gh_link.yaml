@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InjectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inject
+    run:
+      justification:
+      - type: INFO
+        message: Package 'inject' is hosted on GitHub
+        link: https://github.com/ivankorobkov/python-inject
+        package_name: inject
