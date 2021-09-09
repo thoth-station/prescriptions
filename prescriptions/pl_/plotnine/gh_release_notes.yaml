@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PlotnineGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plotnine
+    run:
+      release_notes:
+        organization: has2k1
+        repository: plotnine
+        tag_version_prefix: v
