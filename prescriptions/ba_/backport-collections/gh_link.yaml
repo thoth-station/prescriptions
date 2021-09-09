@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportCollectionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backport-collections
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backport-collections' is hosted on GitHub
+        link: https://github.com/sk-/backport_collections
+        package_name: backport-collections
