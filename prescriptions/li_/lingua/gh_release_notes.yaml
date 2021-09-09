@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LinguaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lingua
+    run:
+      release_notes:
+        organization: wichert
+        repository: lingua
