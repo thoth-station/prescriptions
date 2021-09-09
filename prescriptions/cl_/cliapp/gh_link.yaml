@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CliappGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cliapp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cliapp' is hosted on GitHub
+        link: https://github.com/zhchang/cliapp
+        package_name: cliapp
