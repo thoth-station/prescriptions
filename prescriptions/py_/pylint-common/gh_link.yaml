@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintCommonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-common
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylint-common' is hosted on GitHub
+        link: https://github.com/landscapeio/pylint-common
+        package_name: pylint-common
