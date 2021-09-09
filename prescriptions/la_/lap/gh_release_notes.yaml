@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LapGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lap
+    run:
+      release_notes:
+        organization: gatagat
+        repository: lap
+        tag_version_prefix: v
