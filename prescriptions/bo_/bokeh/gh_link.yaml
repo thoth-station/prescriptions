@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BokehGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bokeh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bokeh' is hosted on GitHub
+        link: https://github.com/bokeh/bokeh
+        package_name: bokeh
