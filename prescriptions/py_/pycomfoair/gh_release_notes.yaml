@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PycomfoairGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycomfoair
+    run:
+      release_notes:
+        organization: mtdcr
+        repository: pycomfoair
