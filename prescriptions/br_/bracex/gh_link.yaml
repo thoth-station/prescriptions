@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BracexGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bracex
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bracex' is hosted on GitHub
+        link: https://github.com/facelessuser/bracex
+        package_name: bracex
