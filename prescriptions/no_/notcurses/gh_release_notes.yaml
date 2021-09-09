@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NotcursesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notcurses
+    run:
+      release_notes:
+        organization: dankamongmen
+        repository: notcurses
+        tag_version_prefix: v
