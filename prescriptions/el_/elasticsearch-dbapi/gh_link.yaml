@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ElasticsearchDbapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-dbapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'elasticsearch-dbapi' is hosted on GitHub
+        link: https://github.com/preset-io/elasticsearch-dbapi
+        package_name: elasticsearch-dbapi
