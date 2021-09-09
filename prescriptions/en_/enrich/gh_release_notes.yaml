@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: EnrichGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enrich
+    run:
+      release_notes:
+        organization: pycontribs
+        repository: enrich
