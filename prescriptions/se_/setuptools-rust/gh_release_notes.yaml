@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SetuptoolsRustGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-rust
+    run:
+      release_notes:
+        organization: PyO3
+        repository: setuptools-rust
+        tag_version_prefix: v
