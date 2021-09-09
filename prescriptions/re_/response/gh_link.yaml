@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ResponseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: response
+    run:
+      justification:
+      - type: INFO
+        message: Package 'response' is hosted on GitHub
+        link: https://github.com/fhchl/Response
+        package_name: response
