@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ContextvarsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contextvars
+    run:
+      release_notes:
+        organization: MagicStack
+        repository: contextvars
+        tag_version_prefix: v
