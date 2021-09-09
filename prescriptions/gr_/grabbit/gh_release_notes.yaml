@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GrabbitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabbit
+    run:
+      release_notes:
+        organization: grabbles
+        repository: grabbit
