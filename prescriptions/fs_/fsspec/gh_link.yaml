@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FsspecGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fsspec
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fsspec' is hosted on GitHub
+        link: https://github.com/intake/filesystem_spec
+        package_name: fsspec
