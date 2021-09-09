@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestOpenfilesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-openfiles
+    run:
+      release_notes:
+        organization: astropy
+        repository: pytest-openfiles
+        tag_version_prefix: v
