@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PystrayGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pystray
+    run:
+      release_notes:
+        organization: moses-palmer
+        repository: pystray
+        tag_version_prefix: v
