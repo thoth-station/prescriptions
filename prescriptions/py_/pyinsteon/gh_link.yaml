@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyinsteonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinsteon
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyinsteon' is hosted on GitHub
+        link: https://github.com/pyinsteon/pyinsteon
+        package_name: pyinsteon
