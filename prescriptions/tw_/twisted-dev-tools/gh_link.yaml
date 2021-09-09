@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwistedDevToolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-dev-tools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'twisted-dev-tools' is hosted on GitHub
+        link: https://github.com/twisted/twisted-dev-tools
+        package_name: twisted-dev-tools
