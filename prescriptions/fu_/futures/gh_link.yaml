@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuturesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: futures
+    run:
+      justification:
+      - type: INFO
+        message: Package 'futures' is hosted on GitHub
+        link: https://github.com/agronholm/pythonfutures
+        package_name: futures
