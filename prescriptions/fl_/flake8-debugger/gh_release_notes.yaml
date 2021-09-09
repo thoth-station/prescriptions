@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8DebuggerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-debugger
+    run:
+      release_notes:
+        organization: jbkahn
+        repository: flake8-debugger
