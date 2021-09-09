@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Sqlcipher3BinaryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlcipher3-binary
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sqlcipher3-binary' is hosted on GitHub
+        link: https://github.com/coleifer/sqlcipher3
+        package_name: sqlcipher3-binary
