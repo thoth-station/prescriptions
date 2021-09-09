@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RiakGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riak
+    run:
+      justification:
+      - type: INFO
+        message: Package 'riak' is hosted on GitHub
+        link: https://github.com/basho/riak-python-client
+        package_name: riak
