@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FfmpegGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ffmpeg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ffmpeg' is hosted on GitHub
+        link: https://github.com/jiashaokun/ffmpeg
+        package_name: ffmpeg
