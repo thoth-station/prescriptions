@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ProcessTestsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: process-tests
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-process-tests
+        tag_version_prefix: v
