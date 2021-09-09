@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzymatcherGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzymatcher
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fuzzymatcher' is hosted on GitHub
+        link: https://github.com/RobinL/fuzzymatcher
+        package_name: fuzzymatcher
