@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SendgridGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sendgrid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sendgrid' is hosted on GitHub
+        link: https://github.com/sendgrid/sendgrid-python
+        package_name: sendgrid
