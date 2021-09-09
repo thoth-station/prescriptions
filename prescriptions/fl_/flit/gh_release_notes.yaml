@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FlitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flit
+    run:
+      release_notes:
+        organization: takluyver
+        repository: flit
