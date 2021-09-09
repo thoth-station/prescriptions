@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BluepyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bluepy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bluepy' is hosted on GitHub
+        link: https://github.com/IanHarvey/bluepy
+        package_name: bluepy
