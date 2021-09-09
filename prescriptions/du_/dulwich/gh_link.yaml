@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DulwichGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dulwich
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dulwich' is hosted on GitHub
+        link: https://github.com/dulwich/dulwich
+        package_name: dulwich
