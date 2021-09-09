@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxTabsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-tabs
+    run:
+      release_notes:
+        organization: executablebooks
+        repository: sphinx-tabs
+        tag_version_prefix: v
