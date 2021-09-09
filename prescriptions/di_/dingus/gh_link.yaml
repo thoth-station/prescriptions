@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DingusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dingus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dingus' is hosted on GitHub
+        link: https://github.com/garybernhardt/dingus
+        package_name: dingus
