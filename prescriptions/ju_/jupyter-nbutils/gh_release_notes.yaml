@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JupyterNbutilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-nbutils
+    run:
+      release_notes:
+        organization: CermakM
+        repository: jupyter-nbutils
+        tag_version_prefix: v
