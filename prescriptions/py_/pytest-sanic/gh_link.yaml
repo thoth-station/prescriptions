@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestSanicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-sanic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-sanic' is hosted on GitHub
+        link: https://github.com/yunstanford/pytest-sanic
+        package_name: pytest-sanic
