@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudLoggingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-logging
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-logging' is hosted on GitHub
+        link: https://github.com/googleapis/python-logging
+        package_name: google-cloud-logging
