@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymocGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymoc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymoc' is hosted on GitHub
+        link: https://github.com/grahambell/pymoc
+        package_name: pymoc
