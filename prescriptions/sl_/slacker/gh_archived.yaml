@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackerGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'slacker' is marked as archived on GitHub
+        link: https://github.com/os/slacker
+        package_name: slacker
