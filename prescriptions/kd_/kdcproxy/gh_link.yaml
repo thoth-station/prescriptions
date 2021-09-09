@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KdcproxyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kdcproxy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kdcproxy' is hosted on GitHub
+        link: https://github.com/latchset/kdcproxy
+        package_name: kdcproxy
