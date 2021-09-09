@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoSendgridV5GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sendgrid-v5
+    run:
+      release_notes:
+        organization: sklarsa
+        repository: django-sendgrid-v5
+        tag_version_prefix: v
