@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JupyterBokehGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-bokeh
+    run:
+      release_notes:
+        organization: bokeh
+        repository: jupyter_bokeh
