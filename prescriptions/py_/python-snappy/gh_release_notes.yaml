@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonSnappyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-snappy
+    run:
+      release_notes:
+        organization: andrix
+        repository: python-snappy
