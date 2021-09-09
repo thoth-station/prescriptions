@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RemotoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: remoto
+    run:
+      release_notes:
+        organization: alfredodeza
+        repository: remoto
