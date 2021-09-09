@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleApiCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-api-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-api-core' is hosted on GitHub
+        link: https://github.com/googleapis/python-api-core
+        package_name: google-api-core
