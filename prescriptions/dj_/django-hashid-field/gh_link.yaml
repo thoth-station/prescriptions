@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoHashidFieldGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-hashid-field
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-hashid-field' is hosted on GitHub
+        link: https://github.com/nshafer/django-hashid-field
+        package_name: django-hashid-field
