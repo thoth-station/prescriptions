@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: UtilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utils
+    run:
+      release_notes:
+        organization: haaksmash
+        repository: pyutils
