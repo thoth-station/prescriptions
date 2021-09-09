@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAnnotationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-annotation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-annotation' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.annotation
+        package_name: zope-annotation
