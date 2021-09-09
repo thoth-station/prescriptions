@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Ogr2osmGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ogr2osm
+    run:
+      release_notes:
+        organization: roelderickx
+        repository: ogr2osm
+        tag_version_prefix: v
