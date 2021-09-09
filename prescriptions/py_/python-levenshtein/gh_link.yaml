@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonLevenshteinGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-levenshtein
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-levenshtein' is hosted on GitHub
+        link: https://github.com/ztane/python-Levenshtein
+        package_name: python-levenshtein
