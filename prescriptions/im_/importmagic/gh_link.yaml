@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportmagicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importmagic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'importmagic' is hosted on GitHub
+        link: https://github.com/alecthomas/importmagic
+        package_name: importmagic
