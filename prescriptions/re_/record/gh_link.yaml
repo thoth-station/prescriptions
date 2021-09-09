@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RecordGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: record
+    run:
+      justification:
+      - type: INFO
+        message: Package 'record' is hosted on GitHub
+        link: https://github.com/zopefoundation/Record
+        package_name: record
