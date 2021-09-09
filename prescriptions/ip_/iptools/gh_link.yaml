@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IptoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iptools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'iptools' is hosted on GitHub
+        link: https://github.com/bd808/python-iptools
+        package_name: iptools
