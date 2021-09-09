@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestAsyncioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-asyncio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-asyncio' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-asyncio
+        package_name: pytest-asyncio
