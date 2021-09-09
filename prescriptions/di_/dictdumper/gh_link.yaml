@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DictdumperGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdumper
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dictdumper' is hosted on GitHub
+        link: https://github.com/JarryShaw/dictdumper
+        package_name: dictdumper
