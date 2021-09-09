@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NeptuneOptunaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-optuna
+    run:
+      release_notes:
+        organization: neptune-ai
+        repository: neptune-optuna
