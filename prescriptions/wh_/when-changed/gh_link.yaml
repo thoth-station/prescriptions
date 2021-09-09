@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WhenChangedGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: when-changed
+    run:
+      justification:
+      - type: INFO
+        message: Package 'when-changed' is hosted on GitHub
+        link: https://github.com/joh/when-changed
+        package_name: when-changed
