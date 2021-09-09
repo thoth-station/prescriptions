@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NbgitpullerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbgitpuller
+    run:
+      release_notes:
+        organization: jupyterhub
+        repository: nbgitpuller
