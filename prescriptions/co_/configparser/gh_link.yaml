@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfigparserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configparser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'configparser' is hosted on GitHub
+        link: https://github.com/jaraco/configparser
+        package_name: configparser
