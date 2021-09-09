@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PymssqlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymssql
+    run:
+      release_notes:
+        organization: pymssql
+        repository: pymssql
+        tag_version_prefix: v
