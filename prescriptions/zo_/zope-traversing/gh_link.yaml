@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeTraversingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-traversing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-traversing' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.traversing
+        package_name: zope-traversing
