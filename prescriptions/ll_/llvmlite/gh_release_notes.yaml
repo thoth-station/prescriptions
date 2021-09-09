@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LlvmliteGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: llvmlite
+    run:
+      release_notes:
+        organization: numba
+        repository: llvmlite
+        tag_version_prefix: v
