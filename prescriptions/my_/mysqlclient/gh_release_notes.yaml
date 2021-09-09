@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MysqlclientGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysqlclient
+    run:
+      release_notes:
+        organization: PyMySQL
+        repository: mysqlclient
+        tag_version_prefix: v
