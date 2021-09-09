@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NumbaggGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numbagg
+    run:
+      release_notes:
+        organization: numbagg
+        repository: numbagg
+        tag_version_prefix: v
