@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GspreadFormattingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-formatting
+    run:
+      release_notes:
+        organization: robin900
+        repository: gspread-formatting
+        tag_version_prefix: v
