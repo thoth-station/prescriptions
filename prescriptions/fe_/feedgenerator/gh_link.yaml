@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FeedgeneratorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedgenerator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'feedgenerator' is hosted on GitHub
+        link: https://github.com/getpelican/feedgenerator
+        package_name: feedgenerator
