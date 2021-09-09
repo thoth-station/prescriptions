@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BloscGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blosc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blosc' is hosted on GitHub
+        link: https://github.com/blosc/python-blosc
+        package_name: blosc
