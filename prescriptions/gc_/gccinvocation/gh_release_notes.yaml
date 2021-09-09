@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GccinvocationGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gccinvocation
+    run:
+      release_notes:
+        organization: fedora-static-analysis
+        repository: gccinvocation
