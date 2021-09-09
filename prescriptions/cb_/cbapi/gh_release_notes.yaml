@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CbapiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cbapi
+    run:
+      release_notes:
+        organization: carbonblack
+        repository: cbapi-python
