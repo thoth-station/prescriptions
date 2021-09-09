@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: StdlibsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlibs
+    run:
+      release_notes:
+        organization: jreese
+        repository: stdlibs
+        tag_version_prefix: v
