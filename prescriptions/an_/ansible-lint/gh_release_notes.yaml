@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AnsibleLintGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-lint
+    run:
+      release_notes:
+        organization: ansible-community
+        repository: ansible-lint
+        tag_version_prefix: v
