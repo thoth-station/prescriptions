@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MultipartGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multipart
+    run:
+      justification:
+      - type: INFO
+        message: Package 'multipart' is hosted on GitHub
+        link: https://github.com/defnull/multipart
+        package_name: multipart
