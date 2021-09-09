@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PowerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: power
+    run:
+      release_notes:
+        organization: Kentzo
+        repository: Power
+        tag_version_prefix: v
