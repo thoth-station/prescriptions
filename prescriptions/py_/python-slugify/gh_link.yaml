@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonSlugifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-slugify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-slugify' is hosted on GitHub
+        link: https://github.com/un33k/python-slugify
+        package_name: python-slugify
