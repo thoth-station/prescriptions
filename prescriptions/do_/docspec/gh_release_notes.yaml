@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DocspecGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docspec
+    run:
+      release_notes:
+        organization: NiklasRosenstein
+        repository: docspec
