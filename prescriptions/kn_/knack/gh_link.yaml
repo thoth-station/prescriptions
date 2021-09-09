@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KnackGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: knack
+    run:
+      justification:
+      - type: INFO
+        message: Package 'knack' is hosted on GitHub
+        link: https://github.com/microsoft/knack
+        package_name: knack
