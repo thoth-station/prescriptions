@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoCoveragePluginGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-coverage-plugin
+    run:
+      release_notes:
+        organization: nedbat
+        repository: django_coverage_plugin
+        tag_version_prefix: v
