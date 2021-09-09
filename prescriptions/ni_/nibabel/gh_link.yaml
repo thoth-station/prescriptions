@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NibabelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nibabel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nibabel' is hosted on GitHub
+        link: https://github.com/nipy/nibabel
+        package_name: nibabel
