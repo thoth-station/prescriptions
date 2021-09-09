@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StableBaselines3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stable-baselines3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stable-baselines3' is hosted on GitHub
+        link: https://github.com/DLR-RM/stable-baselines3
+        package_name: stable-baselines3
