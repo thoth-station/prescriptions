@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPagingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-paging
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-paging' is hosted on GitHub
+        link: https://github.com/dcramer/django-paging
+        package_name: django-paging
