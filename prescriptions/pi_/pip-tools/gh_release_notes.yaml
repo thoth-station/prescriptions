@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PipToolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-tools
+    run:
+      release_notes:
+        organization: jazzband
+        repository: pip-tools
