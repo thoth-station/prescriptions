@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SignedTagsSphinxAutodocTypehintsScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autodoc-typehints
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT cryptographically sign tags based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: sphinx-autodoc-typehints
