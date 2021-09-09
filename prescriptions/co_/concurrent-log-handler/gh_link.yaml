@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConcurrentLogHandlerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: concurrent-log-handler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'concurrent-log-handler' is hosted on GitHub
+        link: https://github.com/Preston-Landers/concurrent-log-handler
+        package_name: concurrent-log-handler
