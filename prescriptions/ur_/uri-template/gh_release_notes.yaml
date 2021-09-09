@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UriTemplateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uri-template
+    run:
+      release_notes:
+        organization: plinss
+        repository: uri_template
+        tag_version_prefix: v
