@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PoetryGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: poetry
+    run:
+      release_notes:
+        organization: python-poetry
+        repository: poetry
