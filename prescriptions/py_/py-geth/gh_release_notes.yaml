@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyGethGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-geth
+    run:
+      release_notes:
+        organization: ethereum
+        repository: py-geth
+        tag_version_prefix: v
