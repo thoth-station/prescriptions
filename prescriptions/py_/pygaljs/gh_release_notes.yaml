@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PygaljsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygaljs
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-pygaljs
+        tag_version_prefix: v
