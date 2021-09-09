@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RebulkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rebulk
+    run:
+      release_notes:
+        organization: Toilal
+        repository: rebulk
+        tag_version_prefix: v
