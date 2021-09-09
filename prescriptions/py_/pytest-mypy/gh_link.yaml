@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestMypyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-mypy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-mypy' is hosted on GitHub
+        link: https://github.com/dbader/pytest-mypy
+        package_name: pytest-mypy
