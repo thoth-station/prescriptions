@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AtlasclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atlasclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'atlasclient' is hosted on GitHub
+        link: https://github.com/jpoullet2000/atlasclient
+        package_name: atlasclient
