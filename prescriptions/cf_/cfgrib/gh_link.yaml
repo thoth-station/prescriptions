@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CfgribGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfgrib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cfgrib' is hosted on GitHub
+        link: https://github.com/ecmwf/cfgrib
+        package_name: cfgrib
