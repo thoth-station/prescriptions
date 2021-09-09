@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KnackGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: knack
+    run:
+      release_notes:
+        organization: microsoft
+        repository: knack
+        tag_version_prefix: v
