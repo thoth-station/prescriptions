@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiscordAntiSpamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-anti-spam
+    run:
+      justification:
+      - type: INFO
+        message: Package 'discord-anti-spam' is hosted on GitHub
+        link: https://github.com/Skelmis/DPY-Anti-Spam
+        package_name: discord-anti-spam
