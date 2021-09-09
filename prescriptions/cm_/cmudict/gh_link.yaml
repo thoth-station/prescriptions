@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CmudictGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmudict
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cmudict' is hosted on GitHub
+        link: https://github.com/prosegrinder/python-cmudict
+        package_name: cmudict
