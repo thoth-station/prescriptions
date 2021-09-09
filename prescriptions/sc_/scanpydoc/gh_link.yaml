@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScanpydocGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scanpydoc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scanpydoc' is hosted on GitHub
+        link: https://github.com/theislab/scanpydoc
+        package_name: scanpydoc
