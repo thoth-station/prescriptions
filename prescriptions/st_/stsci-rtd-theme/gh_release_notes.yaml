@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: StsciRtdThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stsci-rtd-theme
+    run:
+      release_notes:
+        organization: spacetelescope
+        repository: stsci_rtd_theme
