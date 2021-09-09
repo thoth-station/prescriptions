@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SimplejsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplejson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'simplejson' is hosted on GitHub
+        link: https://github.com/simplejson/simplejson
+        package_name: simplejson
