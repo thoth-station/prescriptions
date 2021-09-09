@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsCodeartifactGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-codeartifact
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-codeartifact' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-codeartifact
