@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AraGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ara
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ara' is hosted on GitHub
+        link: https://github.com/ansible-community/ara
+        package_name: ara
