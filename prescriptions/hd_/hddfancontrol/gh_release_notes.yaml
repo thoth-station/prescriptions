@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: HddfancontrolGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hddfancontrol
+    run:
+      release_notes:
+        organization: desbma
+        repository: hddfancontrol
