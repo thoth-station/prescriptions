@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskOpentracingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-opentracing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-opentracing' is hosted on GitHub
+        link: https://github.com/opentracing-contrib/python-flask
+        package_name: flask-opentracing
