@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TorchcsprngGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchcsprng
+    run:
+      release_notes:
+        organization: pytorch
+        repository: csprng
+        tag_version_prefix: v
