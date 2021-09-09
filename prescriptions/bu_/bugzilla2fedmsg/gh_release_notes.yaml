@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Bugzilla2fedmsgGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bugzilla2fedmsg
+    run:
+      release_notes:
+        organization: fedora-infra
+        repository: bugzilla2fedmsg
