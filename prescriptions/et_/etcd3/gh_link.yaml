@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Etcd3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etcd3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'etcd3' is hosted on GitHub
+        link: https://github.com/kragniz/python-etcd3
+        package_name: etcd3
