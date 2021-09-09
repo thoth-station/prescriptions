@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PtpythonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptpython
+    run:
+      release_notes:
+        organization: prompt-toolkit
+        repository: ptpython
