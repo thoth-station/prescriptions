@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SwaggerSpecValidatorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: swagger-spec-validator
+    run:
+      release_notes:
+        organization: Yelp
+        repository: swagger_spec_validator
+        tag_version_prefix: v
