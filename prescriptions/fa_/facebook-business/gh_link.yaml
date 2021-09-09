@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FacebookBusinessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-business
+    run:
+      justification:
+      - type: INFO
+        message: Package 'facebook-business' is hosted on GitHub
+        link: https://github.com/facebook/facebook-python-business-sdk
+        package_name: facebook-business
