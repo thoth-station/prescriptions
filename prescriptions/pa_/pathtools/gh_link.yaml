@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PathtoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathtools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pathtools' is hosted on GitHub
+        link: https://github.com/gorakhargosh/pathtools
+        package_name: pathtools
