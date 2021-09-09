@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NiaamlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: niaaml
+    run:
+      release_notes:
+        organization: lukapecnik
+        repository: NiaAML
