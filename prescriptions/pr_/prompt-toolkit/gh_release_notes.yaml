@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PromptToolkitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prompt-toolkit
+    run:
+      release_notes:
+        organization: prompt-toolkit
+        repository: python-prompt-toolkit
