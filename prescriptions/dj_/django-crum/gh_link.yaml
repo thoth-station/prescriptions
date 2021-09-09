@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCrumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crum
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-crum' is hosted on GitHub
+        link: https://github.com/ninemoreminutes/django-crum
+        package_name: django-crum
