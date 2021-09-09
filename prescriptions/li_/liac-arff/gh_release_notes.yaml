@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LiacArffGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: liac-arff
+    run:
+      release_notes:
+        organization: renatopp
+        repository: liac-arff
+        tag_version_prefix: v
