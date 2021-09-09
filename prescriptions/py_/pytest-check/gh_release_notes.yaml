@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestCheckGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-check
+    run:
+      release_notes:
+        organization: okken
+        repository: pytest-check
