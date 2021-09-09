@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: art
+    run:
+      justification:
+      - type: INFO
+        message: Package 'art' is hosted on GitHub
+        link: https://github.com/sepandhaghighi/art
+        package_name: art
