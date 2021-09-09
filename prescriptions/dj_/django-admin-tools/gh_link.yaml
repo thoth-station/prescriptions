@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoAdminToolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-admin-tools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-admin-tools' is hosted on GitHub
+        link: https://github.com/django-admin-tools/django-admin-tools
+        package_name: django-admin-tools
