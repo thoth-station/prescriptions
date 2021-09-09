@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthTesterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-tester
+    run:
+      justification:
+      - type: INFO
+        message: Package 'eth-tester' is hosted on GitHub
+        link: https://github.com/ethereum/eth-tester
+        package_name: eth-tester
