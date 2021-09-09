@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FyppGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fypp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fypp' is hosted on GitHub
+        link: https://github.com/aradi/fypp
+        package_name: fypp
