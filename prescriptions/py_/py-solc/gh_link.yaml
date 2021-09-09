@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PySolcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-solc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'py-solc' is hosted on GitHub
+        link: https://github.com/ethereum/py-solc
+        package_name: py-solc
