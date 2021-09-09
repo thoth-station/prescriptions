@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiosaslGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosasl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiosasl' is hosted on GitHub
+        link: https://github.com/horazont/aiosasl
+        package_name: aiosasl
