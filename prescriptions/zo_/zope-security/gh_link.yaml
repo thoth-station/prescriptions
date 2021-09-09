@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeSecurityGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-security
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-security' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.security
+        package_name: zope-security
