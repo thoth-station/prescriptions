@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Z3cRecipeSphinxdocGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: z3c-recipe-sphinxdoc
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: z3c.recipe.sphinxdoc
