@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: IdstoolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idstools
+    run:
+      release_notes:
+        organization: jasonish
+        repository: py-idstools
