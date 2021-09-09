@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SanctionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanction
+    run:
+      release_notes:
+        organization: demianbrecht
+        repository: sanction
