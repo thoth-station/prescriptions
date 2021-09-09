@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: UpnpclientGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: upnpclient
+    run:
+      release_notes:
+        organization: flyte
+        repository: upnpclient
