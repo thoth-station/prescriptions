@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TrustmeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trustme
+    run:
+      release_notes:
+        organization: python-trio
+        repository: trustme
+        tag_version_prefix: v
