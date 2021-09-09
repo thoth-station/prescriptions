@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PexGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pex
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pex' is hosted on GitHub
+        link: https://github.com/pantsbuild/pex
+        package_name: pex
