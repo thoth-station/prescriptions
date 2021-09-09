@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XbrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xbr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xbr' is hosted on GitHub
+        link: https://github.com/crossbario/xbr-protocol
+        package_name: xbr
