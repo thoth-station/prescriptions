@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MypyZopeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy-zope
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mypy-zope' is hosted on GitHub
+        link: https://github.com/Shoobx/mypy-zope
+        package_name: mypy-zope
