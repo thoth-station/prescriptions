@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleApitoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-apitools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-apitools' is hosted on GitHub
+        link: https://github.com/google/apitools
+        package_name: google-apitools
