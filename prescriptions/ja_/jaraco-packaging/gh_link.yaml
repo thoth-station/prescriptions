@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoPackagingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-packaging
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-packaging' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.packaging
+        package_name: jaraco-packaging
