@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DecordGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: decord
+    run:
+      release_notes:
+        organization: dmlc
+        repository: decord
+        tag_version_prefix: v
