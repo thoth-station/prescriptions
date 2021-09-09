@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DocrepGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docrep
+    run:
+      release_notes:
+        organization: Chilipp
+        repository: docrep
+        tag_version_prefix: v
