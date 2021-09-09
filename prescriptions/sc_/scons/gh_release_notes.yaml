@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SconsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scons
+    run:
+      release_notes:
+        organization: SCons
+        repository: scons
