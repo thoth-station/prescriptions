@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: KerasApplicationsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-applications
+    run:
+      release_notes:
+        organization: keras-team
+        repository: keras-applications
