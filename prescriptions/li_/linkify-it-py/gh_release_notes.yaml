@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LinkifyItPyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linkify-it-py
+    run:
+      release_notes:
+        organization: tsutsu3
+        repository: linkify-it-py
+        tag_version_prefix: v
