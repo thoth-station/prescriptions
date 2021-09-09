@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MonkeytypeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: monkeytype
+    run:
+      release_notes:
+        organization: instagram
+        repository: MonkeyType
+        tag_version_prefix: v
