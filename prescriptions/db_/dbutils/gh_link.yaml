@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DbutilsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dbutils
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dbutils' is hosted on GitHub
+        link: https://github.com/WebwareForPython/DBUtils
+        package_name: dbutils
