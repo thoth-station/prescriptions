@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyvmomiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvmomi
+    run:
+      release_notes:
+        organization: vmware
+        repository: pyvmomi
+        tag_version_prefix: v
