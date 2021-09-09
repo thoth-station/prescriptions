@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KopfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kopf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kopf' is hosted on GitHub
+        link: https://github.com/nolar/kopf
+        package_name: kopf
