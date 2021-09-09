@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PackagingTensorboardDataServerScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard-data-server
+    run:
+      justification:
+      - type: WARNING
+        message: Project is NOT published as a package based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: tensorboard-data-server
