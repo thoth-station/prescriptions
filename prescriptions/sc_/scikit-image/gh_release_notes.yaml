@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ScikitImageGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-image
+    run:
+      release_notes:
+        organization: scikit-image
+        repository: scikit-image
+        tag_version_prefix: v
