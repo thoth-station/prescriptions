@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PykeopsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykeops
+    run:
+      release_notes:
+        organization: getkeops
+        repository: keops
+        tag_version_prefix: v
