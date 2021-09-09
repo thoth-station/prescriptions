@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SentryFlake8GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentry-flake8
+    run:
+      release_notes:
+        organization: getsentry
+        repository: sentry-flake8
