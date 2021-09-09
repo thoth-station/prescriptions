@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HikvisionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hikvision
+    run:
+      release_notes:
+        organization: fbradyirl
+        repository: hikvision
+        tag_version_prefix: v
