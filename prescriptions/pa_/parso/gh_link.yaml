@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParsoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parso
+    run:
+      justification:
+      - type: INFO
+        message: Package 'parso' is hosted on GitHub
+        link: https://github.com/davidhalter/parso
+        package_name: parso
