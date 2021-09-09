@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CherrypyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cherrypy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cherrypy' is hosted on GitHub
+        link: https://github.com/cherrypy/cherrypy
+        package_name: cherrypy
