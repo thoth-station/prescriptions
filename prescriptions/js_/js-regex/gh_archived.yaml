@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsRegexGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: js-regex
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'js-regex' is marked as archived on GitHub
+        link: https://github.com/Zac-HD/js-regex
+        package_name: js-regex
