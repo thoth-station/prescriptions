@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskCompressGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-compress
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-compress' is hosted on GitHub
+        link: https://github.com/colour-science/flask-compress
+        package_name: flask-compress
