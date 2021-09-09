@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pep8NamingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pep8-naming
+    run:
+      release_notes:
+        organization: PyCQA
+        repository: pep8-naming
