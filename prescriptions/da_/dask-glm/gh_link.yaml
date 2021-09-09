@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DaskGlmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask-glm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dask-glm' is hosted on GitHub
+        link: https://github.com/dask/dask-glm
+        package_name: dask-glm
