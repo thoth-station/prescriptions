@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoLoggingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-logging
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-logging' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.logging
+        package_name: jaraco-logging
