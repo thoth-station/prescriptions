@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PreprocessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: preprocess
+    run:
+      justification:
+      - type: INFO
+        message: Package 'preprocess' is hosted on GitHub
+        link: https://github.com/doconce/preprocess
+        package_name: preprocess
