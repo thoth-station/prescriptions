@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GearboxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gearbox
+    run:
+      release_notes:
+        organization: TurboGears
+        repository: gearbox
