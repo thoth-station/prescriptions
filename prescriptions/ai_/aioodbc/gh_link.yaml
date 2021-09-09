@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AioodbcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioodbc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aioodbc' is hosted on GitHub
+        link: https://github.com/aio-libs/aioodbc
+        package_name: aioodbc
