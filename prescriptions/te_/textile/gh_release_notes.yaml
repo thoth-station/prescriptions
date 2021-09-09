@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TextileGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textile
+    run:
+      release_notes:
+        organization: textile
+        repository: python-textile
