@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoModelclusterGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-modelcluster
+    run:
+      release_notes:
+        organization: wagtail
+        repository: django-modelcluster
+        tag_version_prefix: v
