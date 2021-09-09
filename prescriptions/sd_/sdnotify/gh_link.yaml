@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SdnotifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sdnotify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sdnotify' is hosted on GitHub
+        link: https://github.com/bb4242/sdnotify
+        package_name: sdnotify
