@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CsvkitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: csvkit
+    run:
+      release_notes:
+        organization: wireservice
+        repository: csvkit
