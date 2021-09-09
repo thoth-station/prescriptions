@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AioiceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioice
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aioice' is hosted on GitHub
+        link: https://github.com/aiortc/aioice
+        package_name: aioice
