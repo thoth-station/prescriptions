@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestCheckdocsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-checkdocs
+    run:
+      release_notes:
+        organization: jaraco
+        repository: pytest-checkdocs
+        tag_version_prefix: v
