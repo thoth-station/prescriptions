@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxTestingGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-testing
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sphinx-testing' is marked as archived on GitHub
+        link: https://github.com/sphinx-doc/sphinx-testing
+        package_name: sphinx-testing
