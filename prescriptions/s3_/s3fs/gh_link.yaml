@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: S3fsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: s3fs
+    run:
+      justification:
+      - type: INFO
+        message: Package 's3fs' is hosted on GitHub
+        link: https://github.com/dask/s3fs
+        package_name: s3fs
