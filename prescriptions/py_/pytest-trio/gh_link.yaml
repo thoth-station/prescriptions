@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTrioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-trio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-trio' is hosted on GitHub
+        link: https://github.com/python-trio/pytest-trio
+        package_name: pytest-trio
