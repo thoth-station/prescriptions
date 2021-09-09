@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PortalockerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: portalocker
+    run:
+      release_notes:
+        organization: WoLpH
+        repository: portalocker
+        tag_version_prefix: v
