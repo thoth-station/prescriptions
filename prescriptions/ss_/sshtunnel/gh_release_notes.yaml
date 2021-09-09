@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SshtunnelGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshtunnel
+    run:
+      release_notes:
+        organization: pahaz
+        repository: sshtunnel
