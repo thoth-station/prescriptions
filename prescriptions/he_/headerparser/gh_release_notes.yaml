@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HeaderparserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: headerparser
+    run:
+      release_notes:
+        organization: jwodder
+        repository: headerparser
+        tag_version_prefix: v
