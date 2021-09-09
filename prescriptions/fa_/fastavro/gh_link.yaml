@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastavroGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastavro
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fastavro' is hosted on GitHub
+        link: https://github.com/fastavro/fastavro
+        package_name: fastavro
