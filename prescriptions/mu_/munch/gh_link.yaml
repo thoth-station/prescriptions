@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MunchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: munch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'munch' is hosted on GitHub
+        link: https://github.com/Infinidat/munch
+        package_name: munch
