@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MypytoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypytools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mypytools' is hosted on GitHub
+        link: https://github.com/nylas/mypy-tools
+        package_name: mypytools
