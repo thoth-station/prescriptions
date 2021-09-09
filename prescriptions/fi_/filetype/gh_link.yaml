@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FiletypeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: filetype
+    run:
+      justification:
+      - type: INFO
+        message: Package 'filetype' is hosted on GitHub
+        link: https://github.com/h2non/filetype.py
+        package_name: filetype
