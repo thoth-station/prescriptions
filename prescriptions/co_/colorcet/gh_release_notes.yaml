@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ColorcetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorcet
+    run:
+      release_notes:
+        organization: holoviz
+        repository: colorcet
+        tag_version_prefix: v
