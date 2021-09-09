@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FisxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fisx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fisx' is hosted on GitHub
+        link: https://github.com/vasole/fisx
+        package_name: fisx
