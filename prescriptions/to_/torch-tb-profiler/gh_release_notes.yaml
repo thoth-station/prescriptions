@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TorchTbProfilerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch-tb-profiler
+    run:
+      release_notes:
+        organization: pytorch
+        repository: kineto
+        tag_version_prefix: v
