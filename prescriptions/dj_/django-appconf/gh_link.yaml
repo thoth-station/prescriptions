@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoAppconfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-appconf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-appconf' is hosted on GitHub
+        link: https://github.com/django-compressor/django-appconf
+        package_name: django-appconf
