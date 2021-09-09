@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Spake2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spake2
+    run:
+      release_notes:
+        organization: warner
+        repository: python-spake2
+        tag_version_prefix: v
