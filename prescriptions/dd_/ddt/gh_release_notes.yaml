@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DdtGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ddt
+    run:
+      release_notes:
+        organization: datadriventests
+        repository: ddt
