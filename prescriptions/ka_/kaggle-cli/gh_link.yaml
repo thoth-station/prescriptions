@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KaggleCliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaggle-cli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kaggle-cli' is hosted on GitHub
+        link: https://github.com/floydwch/kaggle-cli
+        package_name: kaggle-cli
