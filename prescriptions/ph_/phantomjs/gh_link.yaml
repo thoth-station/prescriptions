@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PhantomjsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phantomjs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'phantomjs' is hosted on GitHub
+        link: https://github.com/neurobin/phantomjspy
+        package_name: phantomjs
