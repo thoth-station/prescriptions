@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: InflectGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inflect
+    run:
+      release_notes:
+        organization: jaraco
+        repository: inflect
+        tag_version_prefix: v
