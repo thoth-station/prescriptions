@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RasaSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasa-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rasa-sdk' is hosted on GitHub
+        link: https://github.com/rasahq/rasa-sdk
+        package_name: rasa-sdk
