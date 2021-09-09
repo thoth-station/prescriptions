@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudMemcacheGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-memcache
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-memcache' is hosted on GitHub
+        link: https://github.com/googleapis/python-memcache
+        package_name: google-cloud-memcache
