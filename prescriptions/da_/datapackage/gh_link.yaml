@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatapackageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datapackage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datapackage' is hosted on GitHub
+        link: https://github.com/frictionlessdata/datapackage-py
+        package_name: datapackage
