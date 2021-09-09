@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoEnvironGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-environ
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-environ' is hosted on GitHub
+        link: https://github.com/joke2k/django-environ
+        package_name: django-environ
