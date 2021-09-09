@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpenapiSpecValidatorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openapi-spec-validator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'openapi-spec-validator' is hosted on GitHub
+        link: https://github.com/p1c2u/openapi-spec-validator
+        package_name: openapi-spec-validator
