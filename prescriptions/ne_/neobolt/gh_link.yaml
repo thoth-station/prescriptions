@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeoboltGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neobolt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'neobolt' is hosted on GitHub
+        link: https://github.com/neo4j-drivers/neobolt
+        package_name: neobolt
