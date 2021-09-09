@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AwacsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awacs
+    run:
+      release_notes:
+        organization: cloudtools
+        repository: awacs
