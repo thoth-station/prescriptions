@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeUntrustedpythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-untrustedpython
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-untrustedpython' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.untrustedpython
+        package_name: zope-untrustedpython
