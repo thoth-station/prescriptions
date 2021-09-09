@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MdanalysisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mdanalysis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mdanalysis' is hosted on GitHub
+        link: https://github.com/MDAnalysis/mdanalysis
+        package_name: mdanalysis
