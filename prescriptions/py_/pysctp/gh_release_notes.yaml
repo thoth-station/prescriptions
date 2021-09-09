@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PysctpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysctp
+    run:
+      release_notes:
+        organization: p1sec
+        repository: pysctp
+        tag_version_prefix: v
