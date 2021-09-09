@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Oauth2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauth2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'oauth2' is hosted on GitHub
+        link: https://github.com/joestump/python-oauth2
+        package_name: oauth2
