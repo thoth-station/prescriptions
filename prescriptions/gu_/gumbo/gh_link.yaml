@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GumboGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gumbo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gumbo' is hosted on GitHub
+        link: https://github.com/google/gumbo-parser
+        package_name: gumbo
