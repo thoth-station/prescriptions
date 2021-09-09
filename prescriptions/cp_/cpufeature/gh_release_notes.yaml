@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CpufeatureGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cpufeature
+    run:
+      release_notes:
+        organization: robbmcleod
+        repository: cpufeature
+        tag_version_prefix: v
