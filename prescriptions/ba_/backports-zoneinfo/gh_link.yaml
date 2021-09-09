@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsZoneinfoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-zoneinfo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backports-zoneinfo' is hosted on GitHub
+        link: https://github.com/pganssle/zoneinfo
+        package_name: backports-zoneinfo
