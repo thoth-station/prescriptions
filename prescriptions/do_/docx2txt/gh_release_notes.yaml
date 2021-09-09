@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Docx2txtGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docx2txt
+    run:
+      release_notes:
+        organization: ankushshah89
+        repository: python-docx2txt
