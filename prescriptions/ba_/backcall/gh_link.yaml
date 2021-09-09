@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackcallGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backcall
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backcall' is hosted on GitHub
+        link: https://github.com/takluyver/backcall
+        package_name: backcall
