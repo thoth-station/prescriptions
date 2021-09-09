@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestSocketGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-socket
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-socket' is hosted on GitHub
+        link: https://github.com/miketheman/pytest-socket
+        package_name: pytest-socket
