@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PylibsrtpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibsrtp
+    run:
+      release_notes:
+        organization: aiortc
+        repository: pylibsrtp
