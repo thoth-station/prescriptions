@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestAssumeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-assume
+    run:
+      release_notes:
+        organization: astraw38
+        repository: pytest-assume
+        tag_version_prefix: v
