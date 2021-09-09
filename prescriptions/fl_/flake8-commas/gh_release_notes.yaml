@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8CommasGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-commas
+    run:
+      release_notes:
+        organization: PyCQA
+        repository: flake8-commas
