@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NbconvertGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbconvert
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nbconvert' is hosted on GitHub
+        link: https://github.com/jupyter/nbconvert
+        package_name: nbconvert
