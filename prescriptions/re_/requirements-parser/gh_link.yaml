@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequirementsParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requirements-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requirements-parser' is hosted on GitHub
+        link: https://github.com/davidfischer/requirements-parser
+        package_name: requirements-parser
