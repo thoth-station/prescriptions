@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GspreadGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gspread' is hosted on GitHub
+        link: https://github.com/burnash/gspread
+        package_name: gspread
