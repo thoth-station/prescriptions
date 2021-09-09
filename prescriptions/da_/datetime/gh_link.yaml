@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatetimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datetime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datetime' is hosted on GitHub
+        link: https://github.com/zopefoundation/DateTime
+        package_name: datetime
