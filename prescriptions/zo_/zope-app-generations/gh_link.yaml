@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppGenerationsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-generations
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-generations' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.generations
+        package_name: zope-app-generations
