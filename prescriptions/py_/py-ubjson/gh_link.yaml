@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyUbjsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-ubjson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'py-ubjson' is hosted on GitHub
+        link: https://github.com/Iotic-Labs/py-ubjson
+        package_name: py-ubjson
