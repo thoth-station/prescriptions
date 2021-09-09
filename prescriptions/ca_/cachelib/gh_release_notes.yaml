@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CachelibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachelib
+    run:
+      release_notes:
+        organization: pallets
+        repository: cachelib
