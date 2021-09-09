@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GitlintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitlint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gitlint' is hosted on GitHub
+        link: https://github.com/jorisroovers/gitlint
+        package_name: gitlint
