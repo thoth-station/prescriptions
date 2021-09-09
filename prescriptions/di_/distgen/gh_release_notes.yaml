@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DistgenGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distgen
+    run:
+      release_notes:
+        organization: devexp-db
+        repository: distgen
+        tag_version_prefix: v
