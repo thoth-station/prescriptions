@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestFreezegunGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-freezegun
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-freezegun' is hosted on GitHub
+        link: https://github.com/ktosiek/pytest-freezegun
+        package_name: pytest-freezegun
