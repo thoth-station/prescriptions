@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: VerticaPythonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vertica-python
+    run:
+      release_notes:
+        organization: vertica
+        repository: vertica-python
