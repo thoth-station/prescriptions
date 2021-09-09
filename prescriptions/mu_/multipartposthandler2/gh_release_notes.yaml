@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Multipartposthandler2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multipartposthandler2
+    run:
+      release_notes:
+        organization: sergiomb2
+        repository: MultipartPostHandler2
