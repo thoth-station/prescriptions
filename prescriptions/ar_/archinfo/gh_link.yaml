@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArchinfoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: archinfo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'archinfo' is hosted on GitHub
+        link: https://github.com/angr/archinfo
+        package_name: archinfo
