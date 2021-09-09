@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DogeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doge
+    run:
+      justification:
+      - type: INFO
+        message: Package 'doge' is hosted on GitHub
+        link: https://github.com/thiderman/doge
+        package_name: doge
