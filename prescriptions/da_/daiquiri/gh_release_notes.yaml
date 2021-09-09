@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DaiquiriGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: daiquiri
+    run:
+      release_notes:
+        organization: jd
+        repository: daiquiri
