@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthpmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethpm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ethpm' is hosted on GitHub
+        link: https://github.com/ethpm/py-ethpm
+        package_name: ethpm
