@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FlaskSocketsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sockets
+    run:
+      release_notes:
+        organization: kennethreitz
+        repository: flask-sockets
+        tag_version_prefix: v
