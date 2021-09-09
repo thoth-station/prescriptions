@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxextRediraffeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxext-rediraffe
+    run:
+      release_notes:
+        organization: wpilibsuite
+        repository: sphinxext-rediraffe
+        tag_version_prefix: v
