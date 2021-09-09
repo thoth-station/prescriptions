@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SanicRoutingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic-routing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sanic-routing' is hosted on GitHub
+        link: https://github.com/sanic-org/sanic-routing
+        package_name: sanic-routing
