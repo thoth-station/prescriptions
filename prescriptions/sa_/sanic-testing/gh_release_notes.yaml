@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SanicTestingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic-testing
+    run:
+      release_notes:
+        organization: sanic-org
+        repository: sanic-testing
+        tag_version_prefix: v
