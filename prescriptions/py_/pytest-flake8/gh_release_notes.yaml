@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestFlake8GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flake8
+    run:
+      release_notes:
+        organization: tholo
+        repository: pytest-flake8
