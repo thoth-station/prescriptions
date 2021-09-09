@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutoreprGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autorepr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autorepr' is hosted on GitHub
+        link: https://github.com/wolever/autorepr
+        package_name: autorepr
