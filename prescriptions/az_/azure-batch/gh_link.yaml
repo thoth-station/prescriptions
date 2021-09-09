@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureBatchGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-batch
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-batch' is hosted on GitHub
+        link: https://github.com/Azure/azure-sdk-for-python
+        package_name: azure-batch
