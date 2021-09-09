@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JaracoContextGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-context
+    run:
+      release_notes:
+        organization: jaraco
+        repository: jaraco.context
+        tag_version_prefix: v
