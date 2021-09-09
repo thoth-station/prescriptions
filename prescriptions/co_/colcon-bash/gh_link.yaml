@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconBashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-bash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-bash' is hosted on GitHub
+        link: https://github.com/colcon/colcon-bash
+        package_name: colcon-bash
