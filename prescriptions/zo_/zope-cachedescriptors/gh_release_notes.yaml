@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ZopeCachedescriptorsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-cachedescriptors
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.cachedescriptors
