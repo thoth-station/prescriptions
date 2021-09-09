@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SoxrGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: soxr
+    run:
+      release_notes:
+        organization: dofuuz
+        repository: python-soxr
+        tag_version_prefix: v
