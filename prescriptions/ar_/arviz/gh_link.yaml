@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArvizGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arviz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'arviz' is hosted on GitHub
+        link: https://github.com/arviz-devs/arviz
+        package_name: arviz
