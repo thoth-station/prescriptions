@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MessagingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: messaging
+    run:
+      release_notes:
+        organization: cern-mig
+        repository: python-messaging
+        tag_version_prefix: v
