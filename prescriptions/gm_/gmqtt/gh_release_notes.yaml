@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GmqttGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gmqtt
+    run:
+      release_notes:
+        organization: wialon
+        repository: gmqtt
+        tag_version_prefix: v
