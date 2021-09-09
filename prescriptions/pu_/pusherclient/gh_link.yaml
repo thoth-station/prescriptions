@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PusherclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pusherclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pusherclient' is hosted on GitHub
+        link: https://github.com/ekulyk/PythonPusherClient
+        package_name: pusherclient
