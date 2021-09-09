@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonTranslateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-translate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-translate' is hosted on GitHub
+        link: https://github.com/adamziel/python_translate
+        package_name: python-translate
