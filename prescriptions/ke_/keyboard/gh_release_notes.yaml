@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KeyboardGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyboard
+    run:
+      release_notes:
+        organization: boppreh
+        repository: keyboard
+        tag_version_prefix: v
