@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskJsonpifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-jsonpify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-jsonpify' is hosted on GitHub
+        link: https://github.com/CoryDolphin/flask-jsonpify
+        package_name: flask-jsonpify
