@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudTranslateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-translate
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-translate
+        tag_version_prefix: v
