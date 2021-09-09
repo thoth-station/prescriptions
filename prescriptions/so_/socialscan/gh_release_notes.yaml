@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SocialscanGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: socialscan
+    run:
+      release_notes:
+        organization: iojw
+        repository: socialscan
+        tag_version_prefix: v
