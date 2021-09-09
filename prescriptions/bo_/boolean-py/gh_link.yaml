@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BooleanPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boolean-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boolean-py' is hosted on GitHub
+        link: https://github.com/bastikr/boolean.py
+        package_name: boolean-py
