@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiohttpCorsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-cors
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiohttp-cors' is hosted on GitHub
+        link: https://github.com/aio-libs/aiohttp-cors
+        package_name: aiohttp-cors
