@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MirageGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mirage
+    run:
+      release_notes:
+        organization: spacetelescope
+        repository: mirage
+        tag_version_prefix: v
