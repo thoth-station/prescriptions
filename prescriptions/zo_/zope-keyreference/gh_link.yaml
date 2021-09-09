@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeKeyreferenceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-keyreference
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-keyreference' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.keyreference
+        package_name: zope-keyreference
