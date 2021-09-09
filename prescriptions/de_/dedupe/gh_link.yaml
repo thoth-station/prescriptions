@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DedupeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dedupe
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dedupe' is hosted on GitHub
+        link: https://github.com/dedupeio/dedupe
+        package_name: dedupe
