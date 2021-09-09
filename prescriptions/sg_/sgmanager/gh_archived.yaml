@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SgmanagerGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sgmanager
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sgmanager' is marked as archived on GitHub
+        link: https://github.com/gooddata/sgmanager
+        package_name: sgmanager
