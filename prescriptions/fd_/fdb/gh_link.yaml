@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fdb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fdb' is hosted on GitHub
+        link: https://github.com/FirebirdSQL/fdb
+        package_name: fdb
