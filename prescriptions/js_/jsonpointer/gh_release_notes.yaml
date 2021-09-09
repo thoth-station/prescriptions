@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JsonpointerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpointer
+    run:
+      release_notes:
+        organization: stefankoegl
+        repository: python-json-pointer
+        tag_version_prefix: v
