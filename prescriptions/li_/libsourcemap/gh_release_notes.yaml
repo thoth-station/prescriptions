@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LibsourcemapGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libsourcemap
+    run:
+      release_notes:
+        organization: getsentry
+        repository: libsourcemap
