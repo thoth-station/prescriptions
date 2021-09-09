@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyhiveGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhive
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyhive' is hosted on GitHub
+        link: https://github.com/dropbox/PyHive
+        package_name: pyhive
