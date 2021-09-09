@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TwistedDevToolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-dev-tools
+    run:
+      release_notes:
+        organization: twisted
+        repository: twisted-dev-tools
+        tag_version_prefix: v
