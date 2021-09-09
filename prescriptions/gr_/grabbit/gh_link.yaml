@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrabbitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabbit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'grabbit' is hosted on GitHub
+        link: https://github.com/grabbles/grabbit
+        package_name: grabbit
