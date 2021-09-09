@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PcicrawlerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pcicrawler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pcicrawler' is hosted on GitHub
+        link: https://github.com/facebook/pcicrawler
+        package_name: pcicrawler
