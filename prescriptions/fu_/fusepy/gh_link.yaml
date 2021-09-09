@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FusepyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fusepy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fusepy' is hosted on GitHub
+        link: https://github.com/fusepy/fusepy
+        package_name: fusepy
