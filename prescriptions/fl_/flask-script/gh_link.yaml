@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskScriptGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-script
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-script' is hosted on GitHub
+        link: https://github.com/smurfix/flask-script
+        package_name: flask-script
