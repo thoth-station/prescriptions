@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GatspyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gatspy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gatspy' is hosted on GitHub
+        link: https://github.com/astroml/gatspy
+        package_name: gatspy
