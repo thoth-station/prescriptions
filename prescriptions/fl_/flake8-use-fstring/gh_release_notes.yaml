@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Flake8UseFstringGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-use-fstring
+    run:
+      release_notes:
+        organization: MichaelKim0407
+        repository: flake8-use-fstring
+        tag_version_prefix: v
