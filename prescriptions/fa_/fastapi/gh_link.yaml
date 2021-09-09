@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fastapi' is hosted on GitHub
+        link: https://github.com/tiangolo/fastapi
+        package_name: fastapi
