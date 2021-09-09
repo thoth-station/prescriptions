@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JaracoStructuresGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-structures
+    run:
+      release_notes:
+        organization: jaraco
+        repository: jaraco.structures
+        tag_version_prefix: v
