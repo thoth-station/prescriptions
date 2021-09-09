@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DescribeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: describe
+    run:
+      justification:
+      - type: INFO
+        message: Package 'describe' is hosted on GitHub
+        link: https://github.com/jeffh/describe
+        package_name: describe
