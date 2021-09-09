@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HuggingfaceHubGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: huggingface-hub
+    run:
+      release_notes:
+        organization: huggingface
+        repository: huggingface_hub
+        tag_version_prefix: v
