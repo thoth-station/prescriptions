@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PebbleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pebble
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pebble' is hosted on GitHub
+        link: https://github.com/noxdafox/pebble
+        package_name: pebble
