@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestServicesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-services
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-services
