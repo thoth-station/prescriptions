@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TensorflowDataValidationGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-data-validation
+    run:
+      release_notes:
+        organization: tensorflow
+        repository: data-validation
+        tag_version_prefix: v
