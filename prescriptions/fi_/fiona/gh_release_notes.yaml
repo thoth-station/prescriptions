@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FionaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fiona
+    run:
+      release_notes:
+        organization: Toblerity
+        repository: Fiona
