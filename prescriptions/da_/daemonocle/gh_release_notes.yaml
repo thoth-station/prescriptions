@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DaemonocleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: daemonocle
+    run:
+      release_notes:
+        organization: jnrbsn
+        repository: daemonocle
+        tag_version_prefix: v
