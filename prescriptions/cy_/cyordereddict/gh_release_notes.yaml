@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CyordereddictGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyordereddict
+    run:
+      release_notes:
+        organization: shoyer
+        repository: cyordereddict
+        tag_version_prefix: v
