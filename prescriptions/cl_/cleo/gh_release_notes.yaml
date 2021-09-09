@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CleoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cleo
+    run:
+      release_notes:
+        organization: sdispater
+        repository: cleo
