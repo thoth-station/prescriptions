@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BoltonsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boltons
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boltons' is hosted on GitHub
+        link: https://github.com/mahmoud/boltons
+        package_name: boltons
