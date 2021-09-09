@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonDateutilGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dateutil
+    run:
+      release_notes:
+        organization: dateutil
+        repository: dateutil
