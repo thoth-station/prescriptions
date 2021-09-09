@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ElyraPythonEditorExtensionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elyra-python-editor-extension
+    run:
+      release_notes:
+        organization: elyra-ai
+        repository: elyra
+        tag_version_prefix: v
