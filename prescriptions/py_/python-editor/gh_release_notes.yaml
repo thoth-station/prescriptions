@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonEditorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-editor
+    run:
+      release_notes:
+        organization: fmoo
+        repository: python-editor
