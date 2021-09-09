@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerberosGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberos
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kerberos' is hosted on GitHub
+        link: https://github.com/apple/ccs-pykerberos
+        package_name: kerberos
