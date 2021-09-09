@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Mpi4pyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mpi4py
+    run:
+      release_notes:
+        organization: mpi4py
+        repository: mpi4py
