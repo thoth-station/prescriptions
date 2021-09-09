@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KdcproxyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kdcproxy
+    run:
+      release_notes:
+        organization: latchset
+        repository: kdcproxy
+        tag_version_prefix: v
