@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudPubsubGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-pubsub
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-pubsub
+        tag_version_prefix: v
