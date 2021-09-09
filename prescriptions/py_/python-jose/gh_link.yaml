@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonJoseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-jose
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-jose' is hosted on GitHub
+        link: https://github.com/mpdavis/python-jose
+        package_name: python-jose
