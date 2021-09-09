@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GorillaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gorilla
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gorilla' is hosted on GitHub
+        link: https://github.com/christophercrouzet/gorilla
+        package_name: gorilla
