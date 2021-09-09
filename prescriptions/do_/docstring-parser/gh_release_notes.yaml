@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DocstringParserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docstring-parser
+    run:
+      release_notes:
+        organization: rr-
+        repository: docstring_parser
