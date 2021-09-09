@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DateparserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dateparser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dateparser' is hosted on GitHub
+        link: https://github.com/scrapinghub/dateparser
+        package_name: dateparser
