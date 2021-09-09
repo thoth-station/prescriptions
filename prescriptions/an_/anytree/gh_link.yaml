@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnytreeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anytree
+    run:
+      justification:
+      - type: INFO
+        message: Package 'anytree' is hosted on GitHub
+        link: https://github.com/c0fec0de/anytree
+        package_name: anytree
