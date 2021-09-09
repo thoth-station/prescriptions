@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NrStreamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nr-stream
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nr-stream' is hosted on GitHub
+        link: https://github.com/NiklasRosenstein/nr-python
+        package_name: nr-stream
