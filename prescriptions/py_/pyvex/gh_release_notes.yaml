@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyvexGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvex
+    run:
+      release_notes:
+        organization: angr
+        repository: pyvex
+        tag_version_prefix: v
