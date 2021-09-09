@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InotifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inotify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'inotify' is hosted on GitHub
+        link: https://github.com/dsoprea/PyInotify
+        package_name: inotify
