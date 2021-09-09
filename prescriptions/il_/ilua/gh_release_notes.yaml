@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: IluaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ilua
+    run:
+      release_notes:
+        organization: guysv
+        repository: ilua
