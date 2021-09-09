@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudAuditLogGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-audit-log
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-audit-log
+        tag_version_prefix: v
