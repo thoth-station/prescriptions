@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LmdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lmdb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lmdb' is hosted on GitHub
+        link: https://github.com/jnwatson/py-lmdb
+        package_name: lmdb
