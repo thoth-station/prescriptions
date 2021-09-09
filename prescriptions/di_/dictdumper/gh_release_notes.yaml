@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DictdumperGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdumper
+    run:
+      release_notes:
+        organization: JarryShaw
+        repository: dictdumper
+        tag_version_prefix: v
