@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxJinjaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-jinja
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-jinja' is hosted on GitHub
+        link: https://github.com/tardyp/sphinx-jinja
+        package_name: sphinx-jinja
