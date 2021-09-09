@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxDesignGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-design
+    run:
+      release_notes:
+        organization: executablebooks
+        repository: sphinx-design
+        tag_version_prefix: v
