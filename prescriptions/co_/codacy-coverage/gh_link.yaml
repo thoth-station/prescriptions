@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodacyCoverageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codacy-coverage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'codacy-coverage' is hosted on GitHub
+        link: https://github.com/codacy/python-codacy-coverage
+        package_name: codacy-coverage
