@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CppyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cppy
+    run:
+      release_notes:
+        organization: nucleic
+        repository: cppy
