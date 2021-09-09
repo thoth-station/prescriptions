@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CryptgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cryptg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cryptg' is hosted on GitHub
+        link: https://github.com/cher-nov/cryptg
+        package_name: cryptg
