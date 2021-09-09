@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoCompatGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-compat
+    run:
+      release_notes:
+        organization: arteria
+        repository: django-compat
+        tag_version_prefix: v
