@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Dotnetcore2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotnetcore2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dotnetcore2' is hosted on GitHub
+        link: https://github.com/dotnet/core
+        package_name: dotnetcore2
