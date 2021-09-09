@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NydusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nydus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nydus' is hosted on GitHub
+        link: https://github.com/disqus/nydus
+        package_name: nydus
