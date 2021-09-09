@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestNunitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-nunit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-nunit' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-nunit
+        package_name: pytest-nunit
