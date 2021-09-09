@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SystemdPythonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: systemd-python
+    run:
+      justification:
+      - type: INFO
+        message: Package 'systemd-python' is hosted on GitHub
+        link: https://github.com/systemd/python-systemd
+        package_name: systemd-python
