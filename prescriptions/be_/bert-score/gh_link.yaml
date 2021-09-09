@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BertScoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bert-score
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bert-score' is hosted on GitHub
+        link: https://github.com/Tiiiger/bert_score
+        package_name: bert-score
