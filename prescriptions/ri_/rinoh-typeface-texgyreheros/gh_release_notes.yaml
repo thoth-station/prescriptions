@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RinohTypefaceTexgyreherosGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rinoh-typeface-texgyreheros
+    run:
+      release_notes:
+        organization: brechtm
+        repository: rinoh-typeface-texgyreheros
+        tag_version_prefix: v
