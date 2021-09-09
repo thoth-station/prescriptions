@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReAssertGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: re-assert
+    run:
+      justification:
+      - type: INFO
+        message: Package 're-assert' is hosted on GitHub
+        link: https://github.com/asottile/re-assert
+        package_name: re-assert
