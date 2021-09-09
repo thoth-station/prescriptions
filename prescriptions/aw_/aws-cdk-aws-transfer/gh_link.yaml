@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsTransferGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-transfer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-transfer' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-transfer
