@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiocmdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocmd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiocmd' is hosted on GitHub
+        link: https://github.com/KimiNewt/aiocmd
+        package_name: aiocmd
