@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyshpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyshp
+    run:
+      release_notes:
+        organization: GeospatialPython
+        repository: pyshp
