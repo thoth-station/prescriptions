@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MigenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: migen
+    run:
+      justification:
+      - type: INFO
+        message: Package 'migen' is hosted on GitHub
+        link: https://github.com/m-labs/migen
+        package_name: migen
