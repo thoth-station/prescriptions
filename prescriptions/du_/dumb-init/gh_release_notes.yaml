@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DumbInitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dumb-init
+    run:
+      release_notes:
+        organization: Yelp
+        repository: dumb-init
+        tag_version_prefix: v
