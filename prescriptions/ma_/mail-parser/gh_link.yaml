@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MailParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mail-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mail-parser' is hosted on GitHub
+        link: https://github.com/SpamScope/mail-parser
+        package_name: mail-parser
