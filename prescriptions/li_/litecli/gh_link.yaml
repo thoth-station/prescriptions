@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LitecliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: litecli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'litecli' is hosted on GitHub
+        link: https://github.com/dbcli/litecli
+        package_name: litecli
