@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoDiscoverRunnerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-discover-runner
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-discover-runner' is hosted on GitHub
+        link: https://github.com/jezdez/django-discover-runner
+        package_name: django-discover-runner
