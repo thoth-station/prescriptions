@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoServicesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-services
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-services' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.services
+        package_name: jaraco-services
