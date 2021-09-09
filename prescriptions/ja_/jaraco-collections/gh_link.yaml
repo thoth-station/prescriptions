@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoCollectionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-collections
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-collections' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.collections
+        package_name: jaraco-collections
