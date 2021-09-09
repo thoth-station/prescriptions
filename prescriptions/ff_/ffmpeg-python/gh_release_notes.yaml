@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FfmpegPythonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ffmpeg-python
+    run:
+      release_notes:
+        organization: kkroening
+        repository: ffmpeg-python
