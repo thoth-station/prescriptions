@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TestfixturesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testfixtures
+    run:
+      release_notes:
+        organization: Simplistix
+        repository: testfixtures
