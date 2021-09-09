@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FilelockGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: filelock
+    run:
+      justification:
+      - type: INFO
+        message: Package 'filelock' is hosted on GitHub
+        link: https://github.com/benediktschmitt/py-filelock
+        package_name: filelock
