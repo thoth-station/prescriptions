@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WheelInspectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-inspect
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wheel-inspect' is hosted on GitHub
+        link: https://github.com/jwodder/wheel-inspect
+        package_name: wheel-inspect
