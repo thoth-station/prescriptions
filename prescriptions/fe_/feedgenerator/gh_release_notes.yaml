@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FeedgeneratorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedgenerator
+    run:
+      release_notes:
+        organization: getpelican
+        repository: feedgenerator
