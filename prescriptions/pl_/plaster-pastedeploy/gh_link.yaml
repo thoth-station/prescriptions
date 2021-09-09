@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlasterPastedeployGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plaster-pastedeploy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'plaster-pastedeploy' is hosted on GitHub
+        link: https://github.com/Pylons/plaster_pastedeploy
+        package_name: plaster-pastedeploy
