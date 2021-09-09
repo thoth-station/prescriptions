@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InitgroupsGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: initgroups
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'initgroups' is marked as archived on GitHub
+        link: https://github.com/zopefoundation/initgroups
+        package_name: initgroups
