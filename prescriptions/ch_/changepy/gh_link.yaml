@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChangepyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: changepy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'changepy' is hosted on GitHub
+        link: https://github.com/ruipgil/changepy
+        package_name: changepy
