@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ImagefactoryGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagefactory
+    run:
+      release_notes:
+        organization: jaantollander
+        repository: imagefactory
+        tag_version_prefix: v
