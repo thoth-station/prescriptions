@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyppmdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyppmd
+    run:
+      release_notes:
+        organization: miurahr
+        repository: pyppmd
+        tag_version_prefix: v
