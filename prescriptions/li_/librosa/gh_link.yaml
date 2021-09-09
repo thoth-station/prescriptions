@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibrosaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: librosa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'librosa' is hosted on GitHub
+        link: https://github.com/librosa/librosa
+        package_name: librosa
