@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FixitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fixit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fixit' is hosted on GitHub
+        link: https://github.com/Instagram/Fixit
+        package_name: fixit
