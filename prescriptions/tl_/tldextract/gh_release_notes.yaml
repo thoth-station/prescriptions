@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TldextractGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tldextract
+    run:
+      release_notes:
+        organization: john-kurkowski
+        repository: tldextract
