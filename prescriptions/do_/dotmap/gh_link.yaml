@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DotmapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotmap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dotmap' is hosted on GitHub
+        link: https://github.com/drgrib/dotmap
+        package_name: dotmap
