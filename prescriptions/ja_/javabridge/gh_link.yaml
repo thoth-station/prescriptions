@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JavabridgeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: javabridge
+    run:
+      justification:
+      - type: INFO
+        message: Package 'javabridge' is hosted on GitHub
+        link: https://github.com/CellProfiler/python-javabridge
+        package_name: javabridge
