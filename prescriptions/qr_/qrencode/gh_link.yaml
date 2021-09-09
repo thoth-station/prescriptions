@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QrencodeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qrencode
+    run:
+      justification:
+      - type: INFO
+        message: Package 'qrencode' is hosted on GitHub
+        link: https://github.com/Arachnid/pyqrencode
+        package_name: qrencode
