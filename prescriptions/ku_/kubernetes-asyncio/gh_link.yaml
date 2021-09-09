@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KubernetesAsyncioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes-asyncio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kubernetes-asyncio' is hosted on GitHub
+        link: https://github.com/tomplus/kubernetes_asyncio
+        package_name: kubernetes-asyncio
