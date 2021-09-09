@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestVariablesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-variables
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-variables' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-variables
+        package_name: pytest-variables
