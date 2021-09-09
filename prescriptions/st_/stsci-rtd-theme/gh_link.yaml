@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StsciRtdThemeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stsci-rtd-theme
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stsci-rtd-theme' is hosted on GitHub
+        link: https://github.com/spacetelescope/stsci_rtd_theme
+        package_name: stsci-rtd-theme
