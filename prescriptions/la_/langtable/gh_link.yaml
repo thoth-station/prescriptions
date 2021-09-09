@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LangtableGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: langtable
+    run:
+      justification:
+      - type: INFO
+        message: Package 'langtable' is hosted on GitHub
+        link: https://github.com/mike-fabian/langtable
+        package_name: langtable
