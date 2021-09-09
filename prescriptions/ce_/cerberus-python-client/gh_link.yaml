@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CerberusPythonClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cerberus-python-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cerberus-python-client' is hosted on GitHub
+        link: https://github.com/Nike-Inc/cerberus-python-client
+        package_name: cerberus-python-client
