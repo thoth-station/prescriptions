@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SerpyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serpy
+    run:
+      release_notes:
+        organization: clarkduvall
+        repository: serpy
