@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestAnnotateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-annotate
+    run:
+      release_notes:
+        organization: kensho-technologies
+        repository: pytest-annotate
+        tag_version_prefix: v
