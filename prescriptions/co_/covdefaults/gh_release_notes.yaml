@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CovdefaultsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: covdefaults
+    run:
+      release_notes:
+        organization: asottile
+        repository: covdefaults
+        tag_version_prefix: v
