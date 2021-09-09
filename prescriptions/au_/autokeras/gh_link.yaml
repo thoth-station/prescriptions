@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutokerasGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autokeras
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autokeras' is hosted on GitHub
+        link: https://github.com/keras-team/autokeras
+        package_name: autokeras
