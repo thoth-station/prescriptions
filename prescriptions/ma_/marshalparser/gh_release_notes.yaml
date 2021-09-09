@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MarshalparserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshalparser
+    run:
+      release_notes:
+        organization: fedora-python
+        repository: marshalparser
+        tag_version_prefix: v
