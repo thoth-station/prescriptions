@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PluginbaseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pluginbase
+    run:
+      release_notes:
+        organization: mitsuhiko
+        repository: pluginbase
+        tag_version_prefix: v
