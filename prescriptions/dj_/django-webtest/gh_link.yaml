@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoWebtestGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-webtest
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-webtest' is hosted on GitHub
+        link: https://github.com/django-webtest/django-webtest
+        package_name: django-webtest
