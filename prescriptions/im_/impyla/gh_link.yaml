@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImpylaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: impyla
+    run:
+      justification:
+      - type: INFO
+        message: Package 'impyla' is hosted on GitHub
+        link: https://github.com/cloudera/impyla
+        package_name: impyla
