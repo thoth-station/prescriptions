@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrettyprinterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prettyprinter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prettyprinter' is hosted on GitHub
+        link: https://github.com/tommikaikkonen/prettyprinter
+        package_name: prettyprinter
