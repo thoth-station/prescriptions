@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatapropertyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dataproperty
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dataproperty' is hosted on GitHub
+        link: https://github.com/thombashi/DataProperty
+        package_name: dataproperty
