@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BintreesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bintrees
+    run:
+      release_notes:
+        organization: mozman
+        repository: bintrees
+        tag_version_prefix: v
