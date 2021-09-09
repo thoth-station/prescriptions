@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FindimportsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findimports
+    run:
+      release_notes:
+        organization: mgedmin
+        repository: findimports
