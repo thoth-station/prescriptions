@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Iso3166GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iso3166
+    run:
+      release_notes:
+        organization: deactivated
+        repository: python-iso3166
+        tag_version_prefix: v
