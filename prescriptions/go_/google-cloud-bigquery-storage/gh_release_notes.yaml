@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudBigqueryStorageGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-bigquery-storage
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-bigquery-storage
+        tag_version_prefix: v
