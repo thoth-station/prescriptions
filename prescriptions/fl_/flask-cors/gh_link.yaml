@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskCorsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-cors
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-cors' is hosted on GitHub
+        link: https://github.com/corydolphin/flask-cors
+        package_name: flask-cors
