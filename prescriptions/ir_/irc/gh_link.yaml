@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IrcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: irc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'irc' is hosted on GitHub
+        link: https://github.com/jaraco/irc
+        package_name: irc
