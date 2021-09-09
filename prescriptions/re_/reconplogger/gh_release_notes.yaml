@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ReconploggerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reconplogger
+    run:
+      release_notes:
+        organization: omni-us
+        repository: reconplogger
+        tag_version_prefix: v
