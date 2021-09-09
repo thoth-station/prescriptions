@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LazyObjectProxyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy-object-proxy
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-lazy-object-proxy
+        tag_version_prefix: v
