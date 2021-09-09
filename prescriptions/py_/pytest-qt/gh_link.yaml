@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestQtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-qt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-qt' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-qt
+        package_name: pytest-qt
