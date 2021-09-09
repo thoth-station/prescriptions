@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KazuratorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kazurator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kazurator' is hosted on GitHub
+        link: https://github.com/pseudomuto/kazurator
+        package_name: kazurator
