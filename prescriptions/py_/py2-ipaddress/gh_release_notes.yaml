@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Py2IpaddressGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py2-ipaddress
+    run:
+      release_notes:
+        organization: kwi-dk
+        repository: py2-ipaddress
