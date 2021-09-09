@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EarthpyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: earthpy
+    run:
+      release_notes:
+        organization: earthlab
+        repository: earthpy
+        tag_version_prefix: v
