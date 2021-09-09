@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CaseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: case
+    run:
+      justification:
+      - type: INFO
+        message: Package 'case' is hosted on GitHub
+        link: https://github.com/celery/case
+        package_name: case
