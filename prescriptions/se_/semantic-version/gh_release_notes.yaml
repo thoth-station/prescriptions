@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SemanticVersionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semantic-version
+    run:
+      release_notes:
+        organization: rbarrois
+        repository: python-semanticversion
