@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8ImportOrderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-import-order
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-import-order' is hosted on GitHub
+        link: https://github.com/PyCQA/flake8-import-order
+        package_name: flake8-import-order
