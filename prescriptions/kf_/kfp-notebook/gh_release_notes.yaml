@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KfpNotebookGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp-notebook
+    run:
+      release_notes:
+        organization: elyra-ai
+        repository: elyra
+        tag_version_prefix: v
