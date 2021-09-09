@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PloneTestingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plone-testing
+    run:
+      release_notes:
+        organization: plone
+        repository: plone.testing
