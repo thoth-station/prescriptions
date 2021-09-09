@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BinstructGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binstruct
+    run:
+      release_notes:
+        organization: Jokymon
+        repository: binstruct
+        tag_version_prefix: v
