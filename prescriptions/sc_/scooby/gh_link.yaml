@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScoobyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scooby
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scooby' is hosted on GitHub
+        link: https://github.com/banesullivan/scooby
+        package_name: scooby
