@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: KorniaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kornia
+    run:
+      release_notes:
+        organization: kornia
+        repository: kornia
