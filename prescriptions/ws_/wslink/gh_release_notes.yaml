@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WslinkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wslink
+    run:
+      release_notes:
+        organization: kitware
+        repository: wslink
+        tag_version_prefix: v
