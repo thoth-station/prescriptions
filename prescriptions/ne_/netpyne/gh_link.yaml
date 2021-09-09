@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NetpyneGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netpyne
+    run:
+      justification:
+      - type: INFO
+        message: Package 'netpyne' is hosted on GitHub
+        link: https://github.com/Neurosim-lab/netpyne
+        package_name: netpyne
