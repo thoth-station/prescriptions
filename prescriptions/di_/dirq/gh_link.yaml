@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DirqGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dirq
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dirq' is hosted on GitHub
+        link: https://github.com/cern-mig/python-dirq
+        package_name: dirq
