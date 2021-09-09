@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytomlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytoml
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytoml' is hosted on GitHub
+        link: https://github.com/avakar/pytoml
+        package_name: pytoml
