@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskBabelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-babel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-babel' is hosted on GitHub
+        link: https://github.com/python-babel/flask-babel
+        package_name: flask-babel
