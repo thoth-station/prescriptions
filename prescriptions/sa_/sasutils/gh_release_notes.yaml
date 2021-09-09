@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SasutilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sasutils
+    run:
+      release_notes:
+        organization: stanford-rc
+        repository: sasutils
+        tag_version_prefix: v
