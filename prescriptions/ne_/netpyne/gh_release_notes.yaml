@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NetpyneGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netpyne
+    run:
+      release_notes:
+        organization: Neurosim-lab
+        repository: netpyne
+        tag_version_prefix: v
