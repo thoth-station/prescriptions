@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangorestframeworkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangorestframework
+    run:
+      release_notes:
+        organization: encode
+        repository: django-rest-framework
