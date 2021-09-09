@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlotlyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plotly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'plotly' is hosted on GitHub
+        link: https://github.com/plotly/plotly.py
+        package_name: plotly
