@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NoseCover3GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-cover3
+    run:
+      release_notes:
+        organization: ask
+        repository: nosecover3
+        tag_version_prefix: v
