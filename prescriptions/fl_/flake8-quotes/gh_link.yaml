@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8QuotesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-quotes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-quotes' is hosted on GitHub
+        link: https://github.com/zheller/flake8-quotes
+        package_name: flake8-quotes
