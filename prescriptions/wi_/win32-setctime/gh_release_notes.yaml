@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Win32SetctimeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: win32-setctime
+    run:
+      release_notes:
+        organization: Delgan
+        repository: win32-setctime
