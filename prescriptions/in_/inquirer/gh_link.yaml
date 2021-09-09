@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InquirerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inquirer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'inquirer' is hosted on GitHub
+        link: https://github.com/magmax/python-inquirer
+        package_name: inquirer
