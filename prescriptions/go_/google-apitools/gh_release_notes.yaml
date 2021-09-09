@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleApitoolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-apitools
+    run:
+      release_notes:
+        organization: google
+        repository: apitools
+        tag_version_prefix: v
