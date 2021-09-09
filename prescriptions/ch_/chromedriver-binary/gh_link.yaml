@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChromedriverBinaryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chromedriver-binary
+    run:
+      justification:
+      - type: INFO
+        message: Package 'chromedriver-binary' is hosted on GitHub
+        link: https://github.com/danielkaiser/python-chromedriver-binary
+        package_name: chromedriver-binary
