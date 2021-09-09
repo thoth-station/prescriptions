@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZserverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zserver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zserver' is hosted on GitHub
+        link: https://github.com/zopefoundation/ZServer
+        package_name: zserver
