@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PurlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: purl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'purl' is hosted on GitHub
+        link: https://github.com/codeinthehole/purl
+        package_name: purl
