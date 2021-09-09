@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NumpyroGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpyro
+    run:
+      justification:
+      - type: INFO
+        message: Package 'numpyro' is hosted on GitHub
+        link: https://github.com/pyro-ppl/numpyro
+        package_name: numpyro
