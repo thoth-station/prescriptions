@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: WebtestAiohttpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webtest-aiohttp
+    run:
+      release_notes:
+        organization: sloria
+        repository: webtest-aiohttp
