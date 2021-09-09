@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OmegaconfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: omegaconf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'omegaconf' is hosted on GitHub
+        link: https://github.com/omry/omegaconf
+        package_name: omegaconf
