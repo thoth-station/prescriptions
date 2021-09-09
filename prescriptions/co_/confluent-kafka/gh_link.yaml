@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfluentKafkaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: confluent-kafka
+    run:
+      justification:
+      - type: INFO
+        message: Package 'confluent-kafka' is hosted on GitHub
+        link: https://github.com/confluentinc/confluent-kafka-python
+        package_name: confluent-kafka
