@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyhomematicGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhomematic
+    run:
+      release_notes:
+        organization: danielperna84
+        repository: pyhomematic
