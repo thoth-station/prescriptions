@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Tinycss2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tinycss2
+    run:
+      release_notes:
+        organization: Kozea
+        repository: tinycss2
+        tag_version_prefix: v
