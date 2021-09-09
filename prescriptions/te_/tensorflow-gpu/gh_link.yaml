@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowGpuGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-gpu
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-gpu' is hosted on GitHub
+        link: https://github.com/tensorflow/tensorflow
+        package_name: tensorflow-gpu
