@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonCoverallsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-coveralls
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-coveralls' is hosted on GitHub
+        link: https://github.com/z4r/python-coveralls
+        package_name: python-coveralls
