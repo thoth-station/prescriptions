@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MccabeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mccabe
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mccabe' is hosted on GitHub
+        link: https://github.com/pycqa/mccabe
+        package_name: mccabe
