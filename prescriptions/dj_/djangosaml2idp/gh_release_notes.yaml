@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Djangosaml2idpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangosaml2idp
+    run:
+      release_notes:
+        organization: OTA-Insight
+        repository: djangosaml2idp
