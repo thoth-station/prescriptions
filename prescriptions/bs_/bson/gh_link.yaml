@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bson' is hosted on GitHub
+        link: https://github.com/py-bson/bson
+        package_name: bson
