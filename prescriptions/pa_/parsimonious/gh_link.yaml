@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParsimoniousGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parsimonious
+    run:
+      justification:
+      - type: INFO
+        message: Package 'parsimonious' is hosted on GitHub
+        link: https://github.com/erikrose/parsimonious
+        package_name: parsimonious
