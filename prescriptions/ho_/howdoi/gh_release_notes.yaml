@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HowdoiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: howdoi
+    run:
+      release_notes:
+        organization: gleitz
+        repository: howdoi
+        tag_version_prefix: v
