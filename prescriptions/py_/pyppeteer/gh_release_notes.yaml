@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyppeteerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyppeteer
+    run:
+      release_notes:
+        organization: pyppeteer
+        repository: pyppeteer
