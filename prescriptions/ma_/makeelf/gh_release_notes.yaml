@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MakeelfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: makeelf
+    run:
+      release_notes:
+        organization: v3l0c1r4pt0r
+        repository: makeelf
