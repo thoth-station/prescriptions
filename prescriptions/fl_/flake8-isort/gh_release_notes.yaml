@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8IsortGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-isort
+    run:
+      release_notes:
+        organization: gforcada
+        repository: flake8-isort
