@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymongoAuthAwsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymongo-auth-aws
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymongo-auth-aws' is hosted on GitHub
+        link: https://github.com/mongodb/pymongo-auth-aws
+        package_name: pymongo-auth-aws
