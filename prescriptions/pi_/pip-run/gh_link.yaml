@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipRunGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-run
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pip-run' is hosted on GitHub
+        link: https://github.com/jaraco/pip-run
+        package_name: pip-run
