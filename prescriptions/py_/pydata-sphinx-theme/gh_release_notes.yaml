@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PydataSphinxThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydata-sphinx-theme
+    run:
+      release_notes:
+        organization: pydata
+        repository: pydata-sphinx-theme
+        tag_version_prefix: v
