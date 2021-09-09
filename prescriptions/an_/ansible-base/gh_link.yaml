@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnsibleBaseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-base
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ansible-base' is hosted on GitHub
+        link: https://github.com/ansible/ansible
+        package_name: ansible-base
