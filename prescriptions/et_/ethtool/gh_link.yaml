@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthtoolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethtool
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ethtool' is hosted on GitHub
+        link: https://github.com/fedora-python/python-ethtool
+        package_name: ethtool
