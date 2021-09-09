@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FindlibsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findlibs
+    run:
+      release_notes:
+        organization: ecmwf
+        repository: findlibs
