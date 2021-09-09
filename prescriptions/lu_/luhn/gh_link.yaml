@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LuhnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: luhn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'luhn' is hosted on GitHub
+        link: https://github.com/mmcloughlin/luhn
+        package_name: luhn
