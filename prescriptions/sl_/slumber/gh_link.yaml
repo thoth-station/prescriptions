@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlumberGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slumber
+    run:
+      justification:
+      - type: INFO
+        message: Package 'slumber' is hosted on GitHub
+        link: https://github.com/samgiles/slumber
+        package_name: slumber
