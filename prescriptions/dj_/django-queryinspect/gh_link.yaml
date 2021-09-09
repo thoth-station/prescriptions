@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoQueryinspectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-queryinspect
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-queryinspect' is hosted on GitHub
+        link: https://github.com/dobarkod/django-queryinspect
+        package_name: django-queryinspect
