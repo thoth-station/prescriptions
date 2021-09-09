@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BtestGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btest
+    run:
+      justification:
+      - type: INFO
+        message: Package 'btest' is hosted on GitHub
+        link: https://github.com/zeek/btest
+        package_name: btest
