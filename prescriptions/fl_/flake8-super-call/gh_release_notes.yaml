@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8SuperCallGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-super-call
+    run:
+      release_notes:
+        organization: DragosOprica
+        repository: flake8-super-call
