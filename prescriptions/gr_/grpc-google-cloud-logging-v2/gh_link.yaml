@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrpcGoogleCloudLoggingV2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-cloud-logging-v2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'grpc-google-cloud-logging-v2' is hosted on GitHub
+        link: https://github.com/googleapis/googleapis
+        package_name: grpc-google-cloud-logging-v2
