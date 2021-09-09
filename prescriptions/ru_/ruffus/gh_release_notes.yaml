@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RuffusGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruffus
+    run:
+      release_notes:
+        organization: cgat-developers
+        repository: ruffus
+        tag_version_prefix: v
