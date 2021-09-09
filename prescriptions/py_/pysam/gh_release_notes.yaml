@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PysamGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysam
+    run:
+      release_notes:
+        organization: pysam-developers
+        repository: pysam
+        tag_version_prefix: v
