@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FbSappGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fb-sapp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fb-sapp' is hosted on GitHub
+        link: https://github.com/facebook/sapp
+        package_name: fb-sapp
