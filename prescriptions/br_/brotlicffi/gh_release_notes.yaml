@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BrotlicffiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: brotlicffi
+    run:
+      release_notes:
+        organization: python-hyper
+        repository: brotlicffi
+        tag_version_prefix: v
