@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxTogglebuttonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-togglebutton
+    run:
+      release_notes:
+        organization: executablebooks
+        repository: sphinx-togglebutton
+        tag_version_prefix: v
