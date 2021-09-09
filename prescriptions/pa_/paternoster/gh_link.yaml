@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PaternosterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paternoster
+    run:
+      justification:
+      - type: INFO
+        message: Package 'paternoster' is hosted on GitHub
+        link: https://github.com/uberspace/paternoster
+        package_name: paternoster
