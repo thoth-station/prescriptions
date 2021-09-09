@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JupyterRequireGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-require
+    run:
+      release_notes:
+        organization: CermakM
+        repository: jupyter-require
+        tag_version_prefix: v
