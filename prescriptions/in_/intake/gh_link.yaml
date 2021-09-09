@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IntakeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intake
+    run:
+      justification:
+      - type: INFO
+        message: Package 'intake' is hosted on GitHub
+        link: https://github.com/intake/intake
+        package_name: intake
