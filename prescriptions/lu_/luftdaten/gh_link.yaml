@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LuftdatenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: luftdaten
+    run:
+      justification:
+      - type: INFO
+        message: Package 'luftdaten' is hosted on GitHub
+        link: https://github.com/home-assistant-ecosystem/python-luftdaten
+        package_name: luftdaten
