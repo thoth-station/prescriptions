@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChecklistGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: checklist
+    run:
+      justification:
+      - type: INFO
+        message: Package 'checklist' is hosted on GitHub
+        link: https://github.com/marcotcr/checklist
+        package_name: checklist
