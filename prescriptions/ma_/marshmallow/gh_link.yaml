@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MarshmallowGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow
+    run:
+      justification:
+      - type: INFO
+        message: Package 'marshmallow' is hosted on GitHub
+        link: https://github.com/marshmallow-code/marshmallow
+        package_name: marshmallow
