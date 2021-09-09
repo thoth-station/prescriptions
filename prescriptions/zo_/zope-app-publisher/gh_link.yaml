@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppPublisherGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-publisher
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-publisher' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.publisher
+        package_name: zope-app-publisher
