@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BnaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bna
+    run:
+      release_notes:
+        organization: jleclanche
+        repository: python-bna
