@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DependencyInjectorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dependency-injector
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dependency-injector' is hosted on GitHub
+        link: https://github.com/ets-labs/python-dependency-injector
+        package_name: dependency-injector
