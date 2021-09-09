@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DocumenttemplateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: documenttemplate
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: DocumentTemplate
