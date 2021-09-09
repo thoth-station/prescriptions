@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PinotdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pinotdb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pinotdb' is hosted on GitHub
+        link: https://github.com/python-pinot-dbapi/pinot-dbapi
+        package_name: pinotdb
