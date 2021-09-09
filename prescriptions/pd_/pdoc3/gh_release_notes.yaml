@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Pdoc3GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdoc3
+    run:
+      release_notes:
+        organization: pdoc3
+        repository: pdoc
