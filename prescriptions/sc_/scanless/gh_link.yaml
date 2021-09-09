@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScanlessGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scanless
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scanless' is hosted on GitHub
+        link: https://github.com/vesche/scanless
+        package_name: scanless
