@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyepsgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyepsg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyepsg' is hosted on GitHub
+        link: https://github.com/rhattersley/pyepsg
+        package_name: pyepsg
