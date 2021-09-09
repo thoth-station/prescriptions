@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BotocoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: botocore
+    run:
+      justification:
+      - type: INFO
+        message: Package 'botocore' is hosted on GitHub
+        link: https://github.com/boto/botocore
+        package_name: botocore
