@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudDlpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-dlp
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-dlp
+        tag_version_prefix: v
