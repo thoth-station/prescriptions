@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ScandirGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scandir
+    run:
+      release_notes:
+        organization: benhoyt
+        repository: scandir
+        tag_version_prefix: v
