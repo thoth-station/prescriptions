@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UkpostcodeparserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ukpostcodeparser
+    run:
+      release_notes:
+        organization: hamstah
+        repository: ukpostcodeparser
+        tag_version_prefix: v
