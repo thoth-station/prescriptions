@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DragonmapperGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dragonmapper
+    run:
+      release_notes:
+        organization: tsroten
+        repository: dragonmapper
+        tag_version_prefix: v
