@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BrownieGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: brownie
+    run:
+      justification:
+      - type: INFO
+        message: Package 'brownie' is hosted on GitHub
+        link: https://github.com/DasIch/brownie
+        package_name: brownie
