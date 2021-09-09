@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: J2cliGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: j2cli
+    run:
+      release_notes:
+        organization: kolypto
+        repository: j2cli
+        tag_version_prefix: v
