@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FieldsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fields
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fields' is hosted on GitHub
+        link: https://github.com/ionelmc/python-fields
+        package_name: fields
