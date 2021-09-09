@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ContextvarsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contextvars
+    run:
+      justification:
+      - type: INFO
+        message: Package 'contextvars' is hosted on GitHub
+        link: https://github.com/MagicStack/contextvars
+        package_name: contextvars
