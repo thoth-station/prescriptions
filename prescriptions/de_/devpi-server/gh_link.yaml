@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DevpiServerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devpi-server
+    run:
+      justification:
+      - type: INFO
+        message: Package 'devpi-server' is hosted on GitHub
+        link: https://github.com/devpi/devpi
+        package_name: devpi-server
