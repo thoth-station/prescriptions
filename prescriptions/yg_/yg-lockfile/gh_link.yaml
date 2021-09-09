@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YgLockfileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yg-lockfile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yg-lockfile' is hosted on GitHub
+        link: https://github.com/yougov/yg.lockfile
+        package_name: yg-lockfile
