@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fs' is hosted on GitHub
+        link: https://github.com/PyFilesystem/pyfilesystem2
+        package_name: fs
