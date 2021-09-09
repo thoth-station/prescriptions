@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HkdfGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hkdf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hkdf' is hosted on GitHub
+        link: https://github.com/casebeer/python-hkdf
+        package_name: hkdf
