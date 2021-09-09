@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTestinfraGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-testinfra
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-testinfra' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-testinfra
+        package_name: pytest-testinfra
