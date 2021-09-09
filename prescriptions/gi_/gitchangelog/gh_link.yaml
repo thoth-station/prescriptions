@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GitchangelogGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitchangelog
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gitchangelog' is hosted on GitHub
+        link: https://github.com/vaab/gitchangelog
+        package_name: gitchangelog
