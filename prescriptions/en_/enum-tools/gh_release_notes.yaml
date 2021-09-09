@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EnumToolsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enum-tools
+    run:
+      release_notes:
+        organization: domdfcoding
+        repository: enum_tools
+        tag_version_prefix: v
