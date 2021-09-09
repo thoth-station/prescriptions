@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlessedGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blessed
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blessed' is hosted on GitHub
+        link: https://github.com/jquast/blessed
+        package_name: blessed
