@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TapPyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tap-py
+    run:
+      release_notes:
+        organization: python-tap
+        repository: tappy
+        tag_version_prefix: v
