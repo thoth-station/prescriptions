@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MopidyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mopidy
+    run:
+      release_notes:
+        organization: mopidy
+        repository: mopidy
+        tag_version_prefix: v
