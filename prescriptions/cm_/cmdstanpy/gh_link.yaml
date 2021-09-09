@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CmdstanpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmdstanpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cmdstanpy' is hosted on GitHub
+        link: https://github.com/stan-dev/cmdstanpy
+        package_name: cmdstanpy
