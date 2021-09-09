@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxIssuesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-issues
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-issues' is hosted on GitHub
+        link: https://github.com/sloria/sphinx-issues
+        package_name: sphinx-issues
