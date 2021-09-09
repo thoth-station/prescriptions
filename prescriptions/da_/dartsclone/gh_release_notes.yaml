@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DartscloneGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dartsclone
+    run:
+      release_notes:
+        organization: rixwew
+        repository: darts-clone-python
+        tag_version_prefix: v
