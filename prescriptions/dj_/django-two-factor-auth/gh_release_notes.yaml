@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoTwoFactorAuthGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-two-factor-auth
+    run:
+      release_notes:
+        organization: Bouke
+        repository: django-two-factor-auth
