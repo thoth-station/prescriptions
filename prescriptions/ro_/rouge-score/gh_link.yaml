@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RougeScoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rouge-score
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rouge-score' is hosted on GitHub
+        link: https://github.com/google-research/google-research
+        package_name: rouge-score
