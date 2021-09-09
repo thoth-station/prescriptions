@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoWindowsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-windows
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-windows' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.windows
+        package_name: jaraco-windows
