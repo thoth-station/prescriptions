@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KhardGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: khard
+    run:
+      release_notes:
+        organization: scheibler
+        repository: khard
+        tag_version_prefix: v
