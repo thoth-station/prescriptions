@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskAppbuilderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-appbuilder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-appbuilder' is hosted on GitHub
+        link: https://github.com/dpgaspar/flask-appbuilder
+        package_name: flask-appbuilder
