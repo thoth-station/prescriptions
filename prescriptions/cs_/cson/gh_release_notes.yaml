@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CsonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cson
+    run:
+      release_notes:
+        organization: avakar
+        repository: pycson
