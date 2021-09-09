@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RestflyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restfly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'restfly' is hosted on GitHub
+        link: https://github.com/stevemcgrath/restfly
+        package_name: restfly
