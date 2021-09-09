@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EmailReplyParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: email-reply-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'email-reply-parser' is hosted on GitHub
+        link: https://github.com/zapier/email-reply-parser
+        package_name: email-reply-parser
