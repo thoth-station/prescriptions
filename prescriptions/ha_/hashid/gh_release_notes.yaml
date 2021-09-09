@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HashidGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hashid
+    run:
+      release_notes:
+        organization: psypanda
+        repository: hashID
+        tag_version_prefix: v
