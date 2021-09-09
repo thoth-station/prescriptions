@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jc
+    run:
+      release_notes:
+        organization: kellyjonbrazil
+        repository: jc
+        tag_version_prefix: v
