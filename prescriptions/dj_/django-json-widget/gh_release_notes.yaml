@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoJsonWidgetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-json-widget
+    run:
+      release_notes:
+        organization: jmrivas86
+        repository: django-json-widget
+        tag_version_prefix: v
