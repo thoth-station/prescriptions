@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyGethGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-geth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'py-geth' is hosted on GitHub
+        link: https://github.com/ethereum/py-geth
+        package_name: py-geth
