@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycouchdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycouchdb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycouchdb' is hosted on GitHub
+        link: https://github.com/histrio/py-couchdb
+        package_name: pycouchdb
