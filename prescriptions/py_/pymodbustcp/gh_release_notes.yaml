@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PymodbustcpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymodbustcp
+    run:
+      release_notes:
+        organization: sourceperl
+        repository: pyModbusTCP
+        tag_version_prefix: v
