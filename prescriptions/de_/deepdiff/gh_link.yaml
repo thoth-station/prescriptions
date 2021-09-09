@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeepdiffGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deepdiff
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deepdiff' is hosted on GitHub
+        link: https://github.com/seperman/deepdiff
+        package_name: deepdiff
