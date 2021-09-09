@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RasterioGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasterio
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rasterio' is hosted on GitHub
+        link: https://github.com/mapbox/rasterio
+        package_name: rasterio
