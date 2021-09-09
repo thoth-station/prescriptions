@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MnemonicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mnemonic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mnemonic' is hosted on GitHub
+        link: https://github.com/trezor/python-mnemonic
+        package_name: mnemonic
