@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KrbcontextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: krbcontext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'krbcontext' is hosted on GitHub
+        link: https://github.com/krbcontext/python-krbcontext
+        package_name: krbcontext
