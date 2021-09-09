@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoFilterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-filter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-filter' is hosted on GitHub
+        link: https://github.com/carltongibson/django-filter
+        package_name: django-filter
