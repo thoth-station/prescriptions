@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoDockerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-docker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-docker' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.docker
+        package_name: jaraco-docker
