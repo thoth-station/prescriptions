@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycoberturaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycobertura
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycobertura' is hosted on GitHub
+        link: https://github.com/aconrad/pycobertura
+        package_name: pycobertura
