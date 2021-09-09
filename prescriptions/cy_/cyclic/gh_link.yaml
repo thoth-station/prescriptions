@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CyclicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyclic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cyclic' is hosted on GitHub
+        link: https://github.com/neurobin/cyclic
+        package_name: cyclic
