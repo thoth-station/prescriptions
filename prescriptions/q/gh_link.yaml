@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: q
+    run:
+      justification:
+      - type: INFO
+        message: Package 'q' is hosted on GitHub
+        link: https://github.com/zestyping/q
+        package_name: q
