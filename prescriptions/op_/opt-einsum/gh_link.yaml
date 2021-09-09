@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OptEinsumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opt-einsum
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opt-einsum' is hosted on GitHub
+        link: https://github.com/dgasmith/opt_einsum
+        package_name: opt-einsum
