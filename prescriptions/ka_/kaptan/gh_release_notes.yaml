@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: KaptanGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaptan
+    run:
+      release_notes:
+        organization: emre
+        repository: kaptan
+        tag_version_prefix: v
