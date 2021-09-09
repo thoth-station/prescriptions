@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pyasn1GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyasn1
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyasn1' is hosted on GitHub
+        link: https://github.com/etingof/pyasn1
+        package_name: pyasn1
