@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PreCommitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pre-commit' is hosted on GitHub
+        link: https://github.com/pre-commit/pre-commit
+        package_name: pre-commit
