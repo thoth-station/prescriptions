@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ReadlikeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readlike
+    run:
+      release_notes:
+        organization: jangler
+        repository: readlike
