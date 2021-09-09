@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FonttoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fonttools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fonttools' is hosted on GitHub
+        link: https://github.com/fonttools/fonttools
+        package_name: fonttools
