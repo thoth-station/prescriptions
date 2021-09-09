@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyannotateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyannotate
+    run:
+      release_notes:
+        organization: dropbox
+        repository: pyannotate
+        tag_version_prefix: v
