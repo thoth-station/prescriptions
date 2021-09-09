@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OnnxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'onnx' is hosted on GitHub
+        link: https://github.com/onnx/onnx
+        package_name: onnx
