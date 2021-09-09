@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: StompestGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stompest
+    run:
+      release_notes:
+        organization: nikipore
+        repository: stompest
