@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowHubGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-hub
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorflow-hub' is hosted on GitHub
+        link: https://github.com/tensorflow/hub
+        package_name: tensorflow-hub
