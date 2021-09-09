@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CerberusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cerberus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cerberus' is hosted on GitHub
+        link: https://github.com/pyeve/cerberus
+        package_name: cerberus
