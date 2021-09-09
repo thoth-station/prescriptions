@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytubeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytube
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytube' is hosted on GitHub
+        link: https://github.com/pytube/pytube
+        package_name: pytube
