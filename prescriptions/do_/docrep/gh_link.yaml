@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DocrepGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docrep
+    run:
+      justification:
+      - type: INFO
+        message: Package 'docrep' is hosted on GitHub
+        link: https://github.com/Chilipp/docrep
+        package_name: docrep
