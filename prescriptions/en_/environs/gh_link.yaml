@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnvironsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: environs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'environs' is hosted on GitHub
+        link: https://github.com/sloria/environs
+        package_name: environs
