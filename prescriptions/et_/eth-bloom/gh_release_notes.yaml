@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EthBloomGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-bloom
+    run:
+      release_notes:
+        organization: ethereum
+        repository: eth-bloom
+        tag_version_prefix: v
