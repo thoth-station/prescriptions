@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OpencensusGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus
+    run:
+      release_notes:
+        organization: census-instrumentation
+        repository: opencensus-python
+        tag_version_prefix: v
