@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiormqGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiormq
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiormq' is hosted on GitHub
+        link: https://github.com/mosquito/aiormq
+        package_name: aiormq
