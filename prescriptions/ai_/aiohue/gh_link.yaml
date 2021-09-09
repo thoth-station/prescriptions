@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiohueGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohue
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiohue' is hosted on GitHub
+        link: https://github.com/home-assistant-libs/aiohue
+        package_name: aiohue
