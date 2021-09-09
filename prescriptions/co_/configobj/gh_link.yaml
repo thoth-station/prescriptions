@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfigobjGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configobj
+    run:
+      justification:
+      - type: INFO
+        message: Package 'configobj' is hosted on GitHub
+        link: https://github.com/DiffSK/configobj
+        package_name: configobj
