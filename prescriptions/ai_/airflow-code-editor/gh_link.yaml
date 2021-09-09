@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AirflowCodeEditorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airflow-code-editor
+    run:
+      justification:
+      - type: INFO
+        message: Package 'airflow-code-editor' is hosted on GitHub
+        link: https://github.com/andreax79/airflow-code-editor
+        package_name: airflow-code-editor
