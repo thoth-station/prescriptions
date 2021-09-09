@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PssGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pss
+    run:
+      release_notes:
+        organization: eliben
+        repository: pss
+        tag_version_prefix: v
