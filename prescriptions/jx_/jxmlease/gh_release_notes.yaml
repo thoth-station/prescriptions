@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JxmleaseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jxmlease
+    run:
+      release_notes:
+        organization: Juniper
+        repository: jxmlease
