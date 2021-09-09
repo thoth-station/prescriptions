@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OsbuildGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: osbuild
+    run:
+      justification:
+      - type: INFO
+        message: Package 'osbuild' is hosted on GitHub
+        link: https://github.com/dnarvaez/osbuild
+        package_name: osbuild
