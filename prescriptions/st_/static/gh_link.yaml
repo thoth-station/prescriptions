@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StaticGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: static
+    run:
+      justification:
+      - type: INFO
+        message: Package 'static' is hosted on GitHub
+        link: https://github.com/lukearno/static
+        package_name: static
