@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterhubGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterhub
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyterhub' is hosted on GitHub
+        link: https://github.com/jupyterhub/jupyterhub
+        package_name: jupyterhub
