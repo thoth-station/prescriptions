@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CypyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cypy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cypy' is hosted on GitHub
+        link: https://github.com/cyrus-/cypy
+        package_name: cypy
