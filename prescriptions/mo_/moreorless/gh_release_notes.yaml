@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MoreorlessGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moreorless
+    run:
+      release_notes:
+        organization: thatch
+        repository: moreorless
+        tag_version_prefix: v
