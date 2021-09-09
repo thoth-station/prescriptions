@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RpmspectoolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpmspectool
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rpmspectool' is hosted on GitHub
+        link: https://github.com/nphilipp/rpmspectool
+        package_name: rpmspectool
