@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CleoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cleo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cleo' is hosted on GitHub
+        link: https://github.com/sdispater/cleo
+        package_name: cleo
