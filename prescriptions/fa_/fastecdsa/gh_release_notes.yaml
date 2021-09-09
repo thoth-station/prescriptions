@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FastecdsaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastecdsa
+    run:
+      release_notes:
+        organization: AntonKueltz
+        repository: fastecdsa
+        tag_version_prefix: v
