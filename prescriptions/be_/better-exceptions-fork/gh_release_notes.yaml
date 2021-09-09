@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BetterExceptionsForkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: better-exceptions-fork
+    run:
+      release_notes:
+        organization: delgan
+        repository: better-exceptions
