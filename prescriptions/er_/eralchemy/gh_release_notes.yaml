@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EralchemyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eralchemy
+    run:
+      release_notes:
+        organization: Alexis-benoist
+        repository: eralchemy
+        tag_version_prefix: v
