@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SudachipyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sudachipy
+    run:
+      release_notes:
+        organization: WorksApplications
+        repository: SudachiPy
+        tag_version_prefix: v
