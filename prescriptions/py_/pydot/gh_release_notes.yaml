@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PydotGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydot
+    run:
+      release_notes:
+        organization: pydot
+        repository: pydot
+        tag_version_prefix: v
