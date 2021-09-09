@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OpentsneGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentsne
+    run:
+      release_notes:
+        organization: pavlin-policar
+        repository: openTSNE
+        tag_version_prefix: v
