@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwswranglerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awswrangler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'awswrangler' is hosted on GitHub
+        link: https://github.com/awslabs/aws-data-wrangler
+        package_name: awswrangler
