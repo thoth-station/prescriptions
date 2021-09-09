@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycassaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycassa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycassa' is hosted on GitHub
+        link: https://github.com/pycassa/pycassa
+        package_name: pycassa
