@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxcontribImagesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-images
+    run:
+      release_notes:
+        organization: sphinx-contrib
+        repository: images
