@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetuptoolsRustGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-rust
+    run:
+      justification:
+      - type: INFO
+        message: Package 'setuptools-rust' is hosted on GitHub
+        link: https://github.com/PyO3/setuptools-rust
+        package_name: setuptools-rust
