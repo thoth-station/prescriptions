@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SimplevisorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplevisor
+    run:
+      release_notes:
+        organization: cern-mig
+        repository: python-simplevisor
+        tag_version_prefix: v
