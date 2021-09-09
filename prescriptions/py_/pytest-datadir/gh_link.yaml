@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestDatadirGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-datadir
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-datadir' is hosted on GitHub
+        link: https://github.com/gabrielcnr/pytest-datadir
+        package_name: pytest-datadir
