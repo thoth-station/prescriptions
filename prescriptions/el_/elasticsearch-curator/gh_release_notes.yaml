@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ElasticsearchCuratorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-curator
+    run:
+      release_notes:
+        organization: elastic
+        repository: curator
+        tag_version_prefix: v
