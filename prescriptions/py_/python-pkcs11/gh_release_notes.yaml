@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonPkcs11GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-pkcs11
+    run:
+      release_notes:
+        organization: danni
+        repository: python-pkcs11
+        tag_version_prefix: v
