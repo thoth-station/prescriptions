@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ListparserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: listparser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'listparser' is hosted on GitHub
+        link: https://github.com/kurtmckee/listparser
+        package_name: listparser
