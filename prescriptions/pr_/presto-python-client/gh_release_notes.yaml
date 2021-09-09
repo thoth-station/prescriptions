@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PrestoPythonClientGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: presto-python-client
+    run:
+      release_notes:
+        organization: prestodb
+        repository: presto-python-client
