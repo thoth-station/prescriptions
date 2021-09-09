@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonLspServerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-lsp-server
+    run:
+      release_notes:
+        organization: python-lsp
+        repository: python-lsp-server
+        tag_version_prefix: v
