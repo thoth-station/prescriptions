@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FairlearnGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fairlearn
+    run:
+      release_notes:
+        organization: fairlearn
+        repository: fairlearn
+        tag_version_prefix: v
