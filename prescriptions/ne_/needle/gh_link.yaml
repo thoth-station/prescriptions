@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeedleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: needle
+    run:
+      justification:
+      - type: INFO
+        message: Package 'needle' is hosted on GitHub
+        link: https://github.com/python-needle/needle
+        package_name: needle
