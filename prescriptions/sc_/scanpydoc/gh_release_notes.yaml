@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ScanpydocGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scanpydoc
+    run:
+      release_notes:
+        organization: theislab
+        repository: scanpydoc
+        tag_version_prefix: v
