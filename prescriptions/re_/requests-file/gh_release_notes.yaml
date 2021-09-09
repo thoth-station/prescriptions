@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RequestsFileGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-file
+    run:
+      release_notes:
+        organization: dashea
+        repository: requests-file
