@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WheelFilenameGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-filename
+    run:
+      release_notes:
+        organization: jwodder
+        repository: wheel-filename
+        tag_version_prefix: v
