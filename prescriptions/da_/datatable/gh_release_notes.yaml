@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DatatableGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datatable
+    run:
+      release_notes:
+        organization: h2oai
+        repository: datatable
+        tag_version_prefix: v
