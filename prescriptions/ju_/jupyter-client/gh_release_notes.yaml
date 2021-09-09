@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JupyterClientGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-client
+    run:
+      release_notes:
+        organization: jupyter
+        repository: jupyter_client
+        tag_version_prefix: v
