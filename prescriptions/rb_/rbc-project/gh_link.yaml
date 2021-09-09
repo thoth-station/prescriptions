@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RbcProjectGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rbc-project
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rbc-project' is hosted on GitHub
+        link: https://github.com/xnd-project/rbc
+        package_name: rbc-project
