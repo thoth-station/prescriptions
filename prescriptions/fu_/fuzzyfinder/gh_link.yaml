@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzyfinderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzyfinder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fuzzyfinder' is hosted on GitHub
+        link: https://github.com/amjith/fuzzyfinder
+        package_name: fuzzyfinder
