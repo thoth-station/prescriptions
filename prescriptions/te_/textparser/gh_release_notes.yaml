@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TextparserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textparser
+    run:
+      release_notes:
+        organization: eerimoq
+        repository: textparser
