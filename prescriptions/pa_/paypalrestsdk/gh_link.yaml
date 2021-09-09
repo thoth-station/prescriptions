@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PaypalrestsdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paypalrestsdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'paypalrestsdk' is hosted on GitHub
+        link: https://github.com/paypal/PayPal-Python-SDK
+        package_name: paypalrestsdk
