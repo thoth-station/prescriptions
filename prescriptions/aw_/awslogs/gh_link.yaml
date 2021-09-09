@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwslogsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awslogs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'awslogs' is hosted on GitHub
+        link: https://github.com/jorgebastida/awslogs
+        package_name: awslogs
