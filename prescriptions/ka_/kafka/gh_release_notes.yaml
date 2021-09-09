@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: KafkaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kafka
+    run:
+      release_notes:
+        organization: dpkp
+        repository: kafka-python
