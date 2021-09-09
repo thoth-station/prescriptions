@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NetmikoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netmiko
+    run:
+      release_notes:
+        organization: ktbyers
+        repository: netmiko
+        tag_version_prefix: v
