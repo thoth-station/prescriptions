@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CollectiveCheckdocsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: collective-checkdocs
+    run:
+      release_notes:
+        organization: collective
+        repository: collective.checkdocs
