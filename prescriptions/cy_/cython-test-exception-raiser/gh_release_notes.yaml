@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CythonTestExceptionRaiserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cython-test-exception-raiser
+    run:
+      release_notes:
+        organization: twisted
+        repository: cython-test-exception-raiser
+        tag_version_prefix: v
