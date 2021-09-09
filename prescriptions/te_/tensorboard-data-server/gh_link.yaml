@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorboardDataServerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard-data-server
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorboard-data-server' is hosted on GitHub
+        link: https://github.com/tensorflow/tensorboard
+        package_name: tensorboard-data-server
