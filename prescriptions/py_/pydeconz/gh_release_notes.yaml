@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PydeconzGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydeconz
+    run:
+      release_notes:
+        organization: Kane610
+        repository: deconz
+        tag_version_prefix: v
