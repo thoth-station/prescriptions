@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AwsCdkAwsCodeartifactGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-codeartifact
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-cdk
+        tag_version_prefix: v
