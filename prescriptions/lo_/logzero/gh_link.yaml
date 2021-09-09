@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LogzeroGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logzero
+    run:
+      justification:
+      - type: INFO
+        message: Package 'logzero' is hosted on GitHub
+        link: https://github.com/metachris/logzero
+        package_name: logzero
