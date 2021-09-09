@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppRendererGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-renderer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-renderer' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.renderer
+        package_name: zope-app-renderer
