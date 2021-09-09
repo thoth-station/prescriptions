@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupytextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupytext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupytext' is hosted on GitHub
+        link: https://github.com/mwouts/jupytext
+        package_name: jupytext
