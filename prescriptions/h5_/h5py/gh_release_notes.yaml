@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: H5pyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h5py
+    run:
+      release_notes:
+        organization: h5py
+        repository: h5py
