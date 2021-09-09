@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthtokenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethtoken
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ethtoken' is hosted on GitHub
+        link: https://github.com/carver/ethtoken.py
+        package_name: ethtoken
