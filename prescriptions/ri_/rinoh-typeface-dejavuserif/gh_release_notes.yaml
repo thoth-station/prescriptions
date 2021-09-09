@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RinohTypefaceDejavuserifGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rinoh-typeface-dejavuserif
+    run:
+      release_notes:
+        organization: brechtm
+        repository: rinoh-typeface-dejavuserif
+        tag_version_prefix: v
