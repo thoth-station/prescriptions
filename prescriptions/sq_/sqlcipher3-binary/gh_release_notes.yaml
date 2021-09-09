@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Sqlcipher3BinaryGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlcipher3-binary
+    run:
+      release_notes:
+        organization: coleifer
+        repository: sqlcipher3
