@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AioopensslGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioopenssl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aioopenssl' is hosted on GitHub
+        link: https://github.com/horazont/aioopenssl
+        package_name: aioopenssl
