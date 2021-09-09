@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SentencepieceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentencepiece
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sentencepiece' is hosted on GitHub
+        link: https://github.com/google/sentencepiece
+        package_name: sentencepiece
