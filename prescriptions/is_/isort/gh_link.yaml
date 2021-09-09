@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IsortGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isort
+    run:
+      justification:
+      - type: INFO
+        message: Package 'isort' is hosted on GitHub
+        link: https://github.com/pycqa/isort
+        package_name: isort
