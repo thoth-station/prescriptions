@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DelugeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deluge
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deluge' is hosted on GitHub
+        link: https://github.com/deluge-torrent/deluge
+        package_name: deluge
