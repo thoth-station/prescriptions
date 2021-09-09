@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParamnbGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paramnb
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'paramnb' is marked as archived on GitHub
+        link: https://github.com/ioam/paramnb
+        package_name: paramnb
