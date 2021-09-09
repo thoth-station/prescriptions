@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MeshioGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: meshio
+    run:
+      release_notes:
+        organization: nschloe
+        repository: meshio
