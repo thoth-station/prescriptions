@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CooldictGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cooldict
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cooldict' is hosted on GitHub
+        link: https://github.com/zardus/cooldict
+        package_name: cooldict
