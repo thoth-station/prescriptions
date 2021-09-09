@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DipyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dipy
+    run:
+      release_notes:
+        organization: dipy
+        repository: dipy
