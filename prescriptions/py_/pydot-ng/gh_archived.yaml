@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydotNgGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydot-ng
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pydot-ng' is marked as archived on GitHub
+        link: https://github.com/pydot/pydot-ng
+        package_name: pydot-ng
