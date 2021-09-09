@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatagrepperGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datagrepper
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datagrepper' is hosted on GitHub
+        link: https://github.com/fedora-infra/datagrepper
+        package_name: datagrepper
