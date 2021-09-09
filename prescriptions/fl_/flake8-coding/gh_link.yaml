@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8CodingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-coding
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-coding' is hosted on GitHub
+        link: https://github.com/tk0miya/flake8-coding
+        package_name: flake8-coding
