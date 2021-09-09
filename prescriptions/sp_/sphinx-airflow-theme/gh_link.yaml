@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxAirflowThemeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-airflow-theme
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-airflow-theme' is hosted on GitHub
+        link: https://github.com/apache/airflow-site
+        package_name: sphinx-airflow-theme
