@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleComputeEngineGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-compute-engine
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-compute-engine' is hosted on GitHub
+        link: https://github.com/GoogleCloudPlatform/compute-image-packages
+        package_name: google-compute-engine
