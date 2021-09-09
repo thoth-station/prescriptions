@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DevpiClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devpi-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'devpi-client' is hosted on GitHub
+        link: https://github.com/devpi/devpi
+        package_name: devpi-client
