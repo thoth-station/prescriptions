@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyEthSigUtilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-eth-sig-utils
+    run:
+      release_notes:
+        organization: rmeissner
+        repository: py-eth-sig-utils
+        tag_version_prefix: v
