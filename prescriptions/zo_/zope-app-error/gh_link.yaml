@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppErrorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-error
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-error' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.error
+        package_name: zope-app-error
