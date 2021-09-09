@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AzureMultiapiStorageGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-multiapi-storage
+    run:
+      release_notes:
+        organization: Azure
+        repository: azure-multiapi-storage-python
