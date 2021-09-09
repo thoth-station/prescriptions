@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylastGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylast
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylast' is hosted on GitHub
+        link: https://github.com/pylast/pylast
+        package_name: pylast
