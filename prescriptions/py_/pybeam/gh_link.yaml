@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PybeamGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybeam
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pybeam' is hosted on GitHub
+        link: https://github.com/matwey/pybeam
+        package_name: pybeam
