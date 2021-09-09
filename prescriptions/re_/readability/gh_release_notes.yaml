@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ReadabilityGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readability
+    run:
+      release_notes:
+        organization: andreasvc
+        repository: readability
+        tag_version_prefix: v
