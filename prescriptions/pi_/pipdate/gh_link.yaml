@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipdateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipdate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pipdate' is hosted on GitHub
+        link: https://github.com/nschloe/pipdate
+        package_name: pipdate
