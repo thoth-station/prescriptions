@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FastnumbersGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastnumbers
+    run:
+      release_notes:
+        organization: SethMMorton
+        repository: fastnumbers
