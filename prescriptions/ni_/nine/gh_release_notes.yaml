@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NineGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nine
+    run:
+      release_notes:
+        organization: nandoflorestan
+        repository: nine
+        tag_version_prefix: v
