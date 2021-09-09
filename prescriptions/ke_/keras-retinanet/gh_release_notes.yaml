@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: KerasRetinanetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-retinanet
+    run:
+      release_notes:
+        organization: fizyr
+        repository: keras-retinanet
