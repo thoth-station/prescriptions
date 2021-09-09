@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PymapdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymapd
+    run:
+      release_notes:
+        organization: omnisci
+        repository: pymapd
+        tag_version_prefix: v
