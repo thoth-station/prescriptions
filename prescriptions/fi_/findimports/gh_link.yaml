@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FindimportsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findimports
+    run:
+      justification:
+      - type: INFO
+        message: Package 'findimports' is hosted on GitHub
+        link: https://github.com/mgedmin/findimports
+        package_name: findimports
