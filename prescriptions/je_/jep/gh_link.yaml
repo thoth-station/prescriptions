@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JepGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jep
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jep' is hosted on GitHub
+        link: https://github.com/ninia/jep
+        package_name: jep
