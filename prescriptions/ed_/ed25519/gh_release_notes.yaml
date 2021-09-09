@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Ed25519GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ed25519
+    run:
+      release_notes:
+        organization: warner
+        repository: python-ed25519
