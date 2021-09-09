@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AppriseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apprise
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apprise' is hosted on GitHub
+        link: https://github.com/caronc/apprise
+        package_name: apprise
