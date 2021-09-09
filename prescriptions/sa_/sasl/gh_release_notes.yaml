@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SaslGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sasl
+    run:
+      release_notes:
+        organization: cloudera
+        repository: python-sasl
+        tag_version_prefix: v
