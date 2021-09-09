@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FasttextGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fasttext
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fasttext' is hosted on GitHub
+        link: https://github.com/facebookresearch/fastText
+        package_name: fasttext
