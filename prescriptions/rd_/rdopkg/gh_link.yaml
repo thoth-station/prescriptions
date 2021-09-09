@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RdopkgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rdopkg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rdopkg' is hosted on GitHub
+        link: https://github.com/softwarefactory-project/rdopkg
+        package_name: rdopkg
