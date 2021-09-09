@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InitgroupsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: initgroups
+    run:
+      justification:
+      - type: INFO
+        message: Package 'initgroups' is hosted on GitHub
+        link: https://github.com/zopefoundation/initgroups
+        package_name: initgroups
