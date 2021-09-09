@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsEncryptionSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-encryption-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-encryption-sdk' is hosted on GitHub
+        link: https://github.com/aws/aws-encryption-sdk-python
+        package_name: aws-encryption-sdk
