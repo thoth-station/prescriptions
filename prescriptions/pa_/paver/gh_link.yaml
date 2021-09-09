@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PaverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'paver' is hosted on GitHub
+        link: https://github.com/paver/paver
+        package_name: paver
