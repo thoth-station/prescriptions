@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestBenchmarkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-benchmark
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-benchmark' is hosted on GitHub
+        link: https://github.com/ionelmc/pytest-benchmark
+        package_name: pytest-benchmark
