@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MarshalparserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshalparser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'marshalparser' is hosted on GitHub
+        link: https://github.com/fedora-python/marshalparser
+        package_name: marshalparser
