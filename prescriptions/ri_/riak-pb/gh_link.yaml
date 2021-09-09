@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RiakPbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riak-pb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'riak-pb' is hosted on GitHub
+        link: https://github.com/basho/riak_pb
+        package_name: riak-pb
