@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconNotificationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-notification
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-notification' is hosted on GitHub
+        link: https://github.com/colcon/colcon-notification
+        package_name: colcon-notification
