@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BccGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bcc' is hosted on GitHub
+        link: https://github.com/willsheffler/bcc
+        package_name: bcc
