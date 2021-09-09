@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Box2dPyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: box2d-py
+    run:
+      release_notes:
+        organization: openai
+        repository: box2d-py
