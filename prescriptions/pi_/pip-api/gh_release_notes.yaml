@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PipApiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-api
+    run:
+      release_notes:
+        organization: di
+        repository: pip-api
