@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyscardGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyscard
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyscard' is hosted on GitHub
+        link: https://github.com/LudovicRousseau/pyscard
+        package_name: pyscard
