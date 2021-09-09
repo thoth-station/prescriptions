@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonDocsThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-docs-theme
+    run:
+      release_notes:
+        organization: python
+        repository: python-docs-theme
