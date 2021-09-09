@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestPerfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-perf
+    run:
+      release_notes:
+        organization: jaraco
+        repository: pytest-perf
+        tag_version_prefix: v
