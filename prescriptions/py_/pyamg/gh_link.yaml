@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyamgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyamg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyamg' is hosted on GitHub
+        link: https://github.com/pyamg/pyamg
+        package_name: pyamg
