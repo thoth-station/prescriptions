@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JupyterlabLspGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterlab-lsp
+    run:
+      release_notes:
+        organization: krassowski
+        repository: jupyterlab-lsp
+        tag_version_prefix: v
