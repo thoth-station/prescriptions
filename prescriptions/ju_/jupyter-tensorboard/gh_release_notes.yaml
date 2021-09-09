@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JupyterTensorboardGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-tensorboard
+    run:
+      release_notes:
+        organization: lspvic
+        repository: jupyter_tensorboard
