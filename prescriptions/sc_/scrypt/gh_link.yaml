@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScryptGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scrypt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scrypt' is hosted on GitHub
+        link: https://github.com/holgern/py-scrypt
+        package_name: scrypt
