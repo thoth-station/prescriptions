@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeContainerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-container
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-container' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.container
+        package_name: zope-container
