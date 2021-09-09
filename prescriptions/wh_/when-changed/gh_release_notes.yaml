@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: WhenChangedGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: when-changed
+    run:
+      release_notes:
+        organization: joh
+        repository: when-changed
+        tag_version_prefix: v
