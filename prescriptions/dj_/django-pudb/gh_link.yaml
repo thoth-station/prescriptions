@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPudbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pudb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-pudb' is hosted on GitHub
+        link: https://github.com/akanouras/django-pudb
+        package_name: django-pudb
