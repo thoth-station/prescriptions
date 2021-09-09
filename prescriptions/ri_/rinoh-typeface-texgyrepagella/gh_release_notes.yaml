@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RinohTypefaceTexgyrepagellaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rinoh-typeface-texgyrepagella
+    run:
+      release_notes:
+        organization: brechtm
+        repository: rinoh-typeface-texgyrepagella
+        tag_version_prefix: v
