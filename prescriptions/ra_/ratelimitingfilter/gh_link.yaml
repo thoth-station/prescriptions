@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RatelimitingfilterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimitingfilter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ratelimitingfilter' is hosted on GitHub
+        link: https://github.com/wkeeling/ratelimitingfilter
+        package_name: ratelimitingfilter
