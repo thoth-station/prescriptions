@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Heroku3GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: heroku3
+    run:
+      release_notes:
+        organization: martyzz1
+        repository: heroku3.py
+        tag_version_prefix: v
