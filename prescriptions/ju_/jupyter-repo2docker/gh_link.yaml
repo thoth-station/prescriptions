@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterRepo2dockerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-repo2docker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-repo2docker' is hosted on GitHub
+        link: https://github.com/jupyterhub/repo2docker
+        package_name: jupyter-repo2docker
