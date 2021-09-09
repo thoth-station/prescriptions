@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BottleneckGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bottleneck
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bottleneck' is hosted on GitHub
+        link: https://github.com/pydata/bottleneck
+        package_name: bottleneck
