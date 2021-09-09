@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: IsortGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isort
+    run:
+      release_notes:
+        organization: pycqa
+        repository: isort
