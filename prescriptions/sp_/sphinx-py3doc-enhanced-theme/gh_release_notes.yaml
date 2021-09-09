@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxPy3docEnhancedThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-py3doc-enhanced-theme
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: sphinx-py3doc-enhanced-theme
+        tag_version_prefix: v
