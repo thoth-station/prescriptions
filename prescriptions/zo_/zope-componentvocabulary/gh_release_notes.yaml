@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ZopeComponentvocabularyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-componentvocabulary
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.componentvocabulary
