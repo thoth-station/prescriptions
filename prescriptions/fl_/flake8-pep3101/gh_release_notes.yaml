@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8Pep3101GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-pep3101
+    run:
+      release_notes:
+        organization: gforcada
+        repository: flake8-pep3101
