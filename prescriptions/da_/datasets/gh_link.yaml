@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatasetsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datasets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datasets' is hosted on GitHub
+        link: https://github.com/huggingface/datasets
+        package_name: datasets
