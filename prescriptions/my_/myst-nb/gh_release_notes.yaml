@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MystNbGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: myst-nb
+    run:
+      release_notes:
+        organization: executablebooks
+        repository: myst-nb
+        tag_version_prefix: v
