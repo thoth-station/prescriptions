@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PusherclientGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pusherclient
+    run:
+      release_notes:
+        organization: ekulyk
+        repository: PythonPusherClient
+        tag_version_prefix: v
