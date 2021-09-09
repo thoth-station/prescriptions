@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsUnittestMockGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-unittest-mock
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backports-unittest-mock' is hosted on GitHub
+        link: https://github.com/jaraco/backports.unittest_mock
+        package_name: backports-unittest-mock
