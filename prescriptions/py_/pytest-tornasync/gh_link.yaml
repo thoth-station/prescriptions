@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTornasyncGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornasync
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-tornasync' is hosted on GitHub
+        link: https://github.com/eukaryote/pytest-tornasync
+        package_name: pytest-tornasync
