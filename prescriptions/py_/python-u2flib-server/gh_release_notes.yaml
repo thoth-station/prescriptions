@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonU2flibServerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-u2flib-server
+    run:
+      release_notes:
+        organization: Yubico
+        repository: python-u2flib-server
