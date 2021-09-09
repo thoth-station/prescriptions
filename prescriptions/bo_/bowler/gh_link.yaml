@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BowlerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bowler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bowler' is hosted on GitHub
+        link: https://github.com/facebookincubator/bowler
+        package_name: bowler
