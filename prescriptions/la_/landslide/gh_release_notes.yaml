@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LandslideGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: landslide
+    run:
+      release_notes:
+        organization: adamzap
+        repository: landslide
+        tag_version_prefix: v
