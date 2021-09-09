@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudDataprocGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-dataproc
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-dataproc
+        tag_version_prefix: v
