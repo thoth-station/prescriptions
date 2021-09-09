@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'scs' is hosted on GitHub
+        link: https://github.com/cvxgrp/scs
+        package_name: scs
