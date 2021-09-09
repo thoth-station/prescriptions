@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PylintfileheaderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylintfileheader
+    run:
+      release_notes:
+        organization: HaaLeo
+        repository: pylint-file-header
+        tag_version_prefix: v
