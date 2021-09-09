@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibtmuxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libtmux
+    run:
+      justification:
+      - type: INFO
+        message: Package 'libtmux' is hosted on GitHub
+        link: https://github.com/tmux-python/libtmux
+        package_name: libtmux
