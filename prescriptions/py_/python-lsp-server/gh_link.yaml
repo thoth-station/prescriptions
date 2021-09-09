@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonLspServerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-lsp-server
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-lsp-server' is hosted on GitHub
+        link: https://github.com/python-lsp/python-lsp-server
+        package_name: python-lsp-server
