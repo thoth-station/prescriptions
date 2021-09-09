@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CinchGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cinch
+    run:
+      release_notes:
+        organization: RedHatQE
+        repository: cinch
+        tag_version_prefix: v
