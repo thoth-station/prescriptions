@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VprofGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vprof
+    run:
+      justification:
+      - type: INFO
+        message: Package 'vprof' is hosted on GitHub
+        link: https://github.com/nvdv/vprof
+        package_name: vprof
