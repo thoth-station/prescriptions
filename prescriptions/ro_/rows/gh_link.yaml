@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RowsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rows
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rows' is hosted on GitHub
+        link: https://github.com/turicas/rows
+        package_name: rows
