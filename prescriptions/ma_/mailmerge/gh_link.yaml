@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MailmergeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailmerge
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mailmerge' is hosted on GitHub
+        link: https://github.com/awdeorio/mailmerge
+        package_name: mailmerge
