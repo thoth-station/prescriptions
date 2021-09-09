@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DcrpmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dcrpm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dcrpm' is hosted on GitHub
+        link: https://github.com/facebookincubator/dcrpm
+        package_name: dcrpm
