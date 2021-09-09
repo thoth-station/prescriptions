@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonLspJsonrpcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-lsp-jsonrpc
+    run:
+      release_notes:
+        organization: python-lsp
+        repository: python-lsp-jsonrpc
+        tag_version_prefix: v
