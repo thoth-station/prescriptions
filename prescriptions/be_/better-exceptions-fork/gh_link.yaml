@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BetterExceptionsForkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: better-exceptions-fork
+    run:
+      justification:
+      - type: INFO
+        message: Package 'better-exceptions-fork' is hosted on GitHub
+        link: https://github.com/delgan/better-exceptions
+        package_name: better-exceptions-fork
