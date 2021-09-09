@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JellyfishGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jellyfish
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jellyfish' is hosted on GitHub
+        link: https://github.com/jamesturk/jellyfish
+        package_name: jellyfish
