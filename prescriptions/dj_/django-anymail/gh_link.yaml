@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoAnymailGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-anymail
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-anymail' is hosted on GitHub
+        link: https://github.com/anymail/django-anymail
+        package_name: django-anymail
