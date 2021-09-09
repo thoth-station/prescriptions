@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyduofernGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyduofern
+    run:
+      release_notes:
+        organization: gluap
+        repository: pyduofern
+        tag_version_prefix: v
