@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HdateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdate
+    run:
+      release_notes:
+        organization: py-libhdate
+        repository: py-libhdate
+        tag_version_prefix: v
