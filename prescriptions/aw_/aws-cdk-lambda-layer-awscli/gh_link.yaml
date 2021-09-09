@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkLambdaLayerAwscliGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-lambda-layer-awscli
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-lambda-layer-awscli' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-lambda-layer-awscli
