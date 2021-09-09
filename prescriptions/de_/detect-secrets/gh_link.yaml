@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DetectSecretsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: detect-secrets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'detect-secrets' is hosted on GitHub
+        link: https://github.com/Yelp/detect-secrets
+        package_name: detect-secrets
