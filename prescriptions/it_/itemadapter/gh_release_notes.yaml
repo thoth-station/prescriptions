@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ItemadapterGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itemadapter
+    run:
+      release_notes:
+        organization: scrapy
+        repository: itemadapter
+        tag_version_prefix: v
