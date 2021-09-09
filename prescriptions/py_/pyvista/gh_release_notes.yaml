@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyvistaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvista
+    run:
+      release_notes:
+        organization: pyvista
+        repository: pyvista
