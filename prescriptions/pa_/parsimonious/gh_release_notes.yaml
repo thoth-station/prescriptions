@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ParsimoniousGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parsimonious
+    run:
+      release_notes:
+        organization: erikrose
+        repository: parsimonious
