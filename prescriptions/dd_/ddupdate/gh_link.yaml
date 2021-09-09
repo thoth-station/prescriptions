@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DdupdateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ddupdate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ddupdate' is hosted on GitHub
+        link: https://github.com/leamas/ddupdate
+        package_name: ddupdate
