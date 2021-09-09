@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestTapGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tap
+    run:
+      release_notes:
+        organization: python-tap
+        repository: pytest-tap
+        tag_version_prefix: v
