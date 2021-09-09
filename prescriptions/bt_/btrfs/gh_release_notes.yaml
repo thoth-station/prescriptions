@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BtrfsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btrfs
+    run:
+      release_notes:
+        organization: knorrie
+        repository: python-btrfs
+        tag_version_prefix: v
