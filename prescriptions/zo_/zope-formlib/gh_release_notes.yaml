@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ZopeFormlibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-formlib
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.formlib
