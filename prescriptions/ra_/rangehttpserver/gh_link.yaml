@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RangehttpserverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rangehttpserver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rangehttpserver' is hosted on GitHub
+        link: https://github.com/danvk/RangeHTTPServer
+        package_name: rangehttpserver
