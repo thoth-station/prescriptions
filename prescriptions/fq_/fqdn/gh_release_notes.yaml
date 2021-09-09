@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FqdnGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fqdn
+    run:
+      release_notes:
+        organization: ypcrts
+        repository: fqdn
+        tag_version_prefix: v
