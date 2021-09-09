@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: HttprettyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpretty
+    run:
+      release_notes:
+        organization: gabrielfalcao
+        repository: HTTPretty
