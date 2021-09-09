@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatabasesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databases
+    run:
+      justification:
+      - type: INFO
+        message: Package 'databases' is hosted on GitHub
+        link: https://github.com/encode/databases
+        package_name: databases
