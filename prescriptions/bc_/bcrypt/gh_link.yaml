@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcryptGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcrypt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bcrypt' is hosted on GitHub
+        link: https://github.com/pyca/bcrypt
+        package_name: bcrypt
