@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: I3ipcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: i3ipc
+    run:
+      release_notes:
+        organization: altdesktop
+        repository: i3ipc-python
+        tag_version_prefix: v
