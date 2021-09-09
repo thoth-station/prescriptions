@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PathvalidateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathvalidate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pathvalidate' is hosted on GitHub
+        link: https://github.com/thombashi/pathvalidate
+        package_name: pathvalidate
