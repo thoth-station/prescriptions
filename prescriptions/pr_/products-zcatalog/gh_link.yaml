@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductsZcatalogGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-zcatalog
+    run:
+      justification:
+      - type: INFO
+        message: Package 'products-zcatalog' is hosted on GitHub
+        link: https://github.com/zopefoundation/Products.ZCatalog
+        package_name: products-zcatalog
