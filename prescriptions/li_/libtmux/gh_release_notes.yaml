@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LibtmuxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libtmux
+    run:
+      release_notes:
+        organization: tmux-python
+        repository: libtmux
