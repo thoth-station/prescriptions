@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KeyringsAltGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyrings-alt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keyrings-alt' is hosted on GitHub
+        link: https://github.com/jaraco/keyrings.alt
+        package_name: keyrings-alt
