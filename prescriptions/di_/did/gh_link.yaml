@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: did
+    run:
+      justification:
+      - type: INFO
+        message: Package 'did' is hosted on GitHub
+        link: https://github.com/psss/did
+        package_name: did
