@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConvertdateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: convertdate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'convertdate' is hosted on GitHub
+        link: https://github.com/fitnr/convertdate
+        package_name: convertdate
