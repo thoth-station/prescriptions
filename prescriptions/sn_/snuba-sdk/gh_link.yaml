@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnubaSdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snuba-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'snuba-sdk' is hosted on GitHub
+        link: https://github.com/getsentry/snuba-sdk
+        package_name: snuba-sdk
