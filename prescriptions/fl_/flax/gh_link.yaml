@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flax
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flax' is hosted on GitHub
+        link: https://github.com/google/flax
+        package_name: flax
