@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudPubsubGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-pubsub
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-pubsub' is hosted on GitHub
+        link: https://github.com/googleapis/python-pubsub
+        package_name: google-cloud-pubsub
