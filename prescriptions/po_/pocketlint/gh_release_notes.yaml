@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PocketlintGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pocketlint
+    run:
+      release_notes:
+        organization: rhinstaller
+        repository: pocketlint
