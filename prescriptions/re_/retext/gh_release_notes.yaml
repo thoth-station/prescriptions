@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RetextGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retext
+    run:
+      release_notes:
+        organization: retext-project
+        repository: retext
