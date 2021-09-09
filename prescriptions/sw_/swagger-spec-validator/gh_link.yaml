@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SwaggerSpecValidatorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: swagger-spec-validator
+    run:
+      justification:
+      - type: INFO
+        message: Package 'swagger-spec-validator' is hosted on GitHub
+        link: https://github.com/Yelp/swagger_spec_validator
+        package_name: swagger-spec-validator
