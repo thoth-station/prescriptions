@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Gcld3GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcld3
+    run:
+      release_notes:
+        organization: google
+        repository: cld3
