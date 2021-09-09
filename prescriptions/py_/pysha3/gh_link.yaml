@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pysha3GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysha3
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pysha3' is hosted on GitHub
+        link: https://github.com/tiran/pysha3
+        package_name: pysha3
