@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AioredlockGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioredlock
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aioredlock' is hosted on GitHub
+        link: https://github.com/joanvila/aioredlock
+        package_name: aioredlock
