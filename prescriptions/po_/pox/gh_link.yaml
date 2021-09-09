@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PoxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pox
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pox' is hosted on GitHub
+        link: https://github.com/uqfoundation/pox
+        package_name: pox
