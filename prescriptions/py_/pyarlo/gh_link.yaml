@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyarloGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyarlo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyarlo' is hosted on GitHub
+        link: https://github.com/tchellomello/python-arlo
+        package_name: pyarlo
