@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LibrabbitmqGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: librabbitmq
+    run:
+      release_notes:
+        organization: celery
+        repository: librabbitmq
