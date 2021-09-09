@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsMacieGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-macie
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-macie' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-macie
