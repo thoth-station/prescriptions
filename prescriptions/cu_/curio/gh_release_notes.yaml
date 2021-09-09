@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CurioGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: curio
+    run:
+      release_notes:
+        organization: dabeaz
+        repository: curio
