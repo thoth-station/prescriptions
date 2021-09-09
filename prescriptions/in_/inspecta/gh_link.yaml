@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InspectaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inspecta
+    run:
+      justification:
+      - type: INFO
+        message: Package 'inspecta' is hosted on GitHub
+        link: https://github.com/grimen/python-inspecta
+        package_name: inspecta
