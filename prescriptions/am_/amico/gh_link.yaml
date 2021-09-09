@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AmicoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amico
+    run:
+      justification:
+      - type: INFO
+        message: Package 'amico' is hosted on GitHub
+        link: https://github.com/agoragames/amico-python
+        package_name: amico
