@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YesqaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yesqa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yesqa' is hosted on GitHub
+        link: https://github.com/asottile/yesqa
+        package_name: yesqa
