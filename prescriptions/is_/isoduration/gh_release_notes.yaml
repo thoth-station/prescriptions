@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: IsodurationGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isoduration
+    run:
+      release_notes:
+        organization: bolsote
+        repository: isoduration
