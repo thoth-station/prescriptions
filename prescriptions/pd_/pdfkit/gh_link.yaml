@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PdfkitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdfkit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pdfkit' is hosted on GitHub
+        link: https://github.com/JazzCore/python-pdfkit
+        package_name: pdfkit
