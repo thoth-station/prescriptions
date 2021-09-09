@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChangelogGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: changelog
+    run:
+      justification:
+      - type: INFO
+        message: Package 'changelog' is hosted on GitHub
+        link: https://github.com/sqlalchemyorg/changelog
+        package_name: changelog
