@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoRecaptchaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-recaptcha
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-recaptcha' is hosted on GitHub
+        link: https://github.com/praekelt/django-recaptcha
+        package_name: django-recaptcha
