@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: VprofGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vprof
+    run:
+      release_notes:
+        organization: nvdv
+        repository: vprof
+        tag_version_prefix: v
