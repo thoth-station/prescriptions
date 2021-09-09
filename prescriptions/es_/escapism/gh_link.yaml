@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EscapismGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: escapism
+    run:
+      justification:
+      - type: INFO
+        message: Package 'escapism' is hosted on GitHub
+        link: https://github.com/minrk/escapism
+        package_name: escapism
