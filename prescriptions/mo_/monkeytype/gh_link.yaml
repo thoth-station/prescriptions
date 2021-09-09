@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MonkeytypeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: monkeytype
+    run:
+      justification:
+      - type: INFO
+        message: Package 'monkeytype' is hosted on GitHub
+        link: https://github.com/instagram/MonkeyType
+        package_name: monkeytype
