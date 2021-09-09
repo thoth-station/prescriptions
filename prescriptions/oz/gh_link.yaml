@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OzGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'oz' is hosted on GitHub
+        link: https://github.com/dailymuse/oz
+        package_name: oz
