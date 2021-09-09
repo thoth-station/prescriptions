@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LinguaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lingua
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lingua' is hosted on GitHub
+        link: https://github.com/wichert/lingua
+        package_name: lingua
