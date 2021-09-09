@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProbablepeopleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: probablepeople
+    run:
+      justification:
+      - type: INFO
+        message: Package 'probablepeople' is hosted on GitHub
+        link: https://github.com/datamade/probablepeople
+        package_name: probablepeople
