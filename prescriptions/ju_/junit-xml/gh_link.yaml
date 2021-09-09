@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JunitXmlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: junit-xml
+    run:
+      justification:
+      - type: INFO
+        message: Package 'junit-xml' is hosted on GitHub
+        link: https://github.com/kyrus/python-junit-xml
+        package_name: junit-xml
