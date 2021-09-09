@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HdateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hdate' is hosted on GitHub
+        link: https://github.com/py-libhdate/py-libhdate
+        package_name: hdate
