@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPicklefieldGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-picklefield
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-picklefield' is hosted on GitHub
+        link: https://github.com/gintas/django-picklefield
+        package_name: django-picklefield
