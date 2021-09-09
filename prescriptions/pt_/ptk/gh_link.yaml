@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PtkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ptk' is hosted on GitHub
+        link: https://github.com/fraca7/ptk
+        package_name: ptk
