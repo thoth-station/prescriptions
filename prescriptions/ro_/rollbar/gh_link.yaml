@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RollbarGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rollbar
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rollbar' is hosted on GitHub
+        link: https://github.com/rollbar/pyrollbar
+        package_name: rollbar
