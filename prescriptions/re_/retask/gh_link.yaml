@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetaskGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retask
+    run:
+      justification:
+      - type: INFO
+        message: Package 'retask' is hosted on GitHub
+        link: https://github.com/kushaldas/retask
+        package_name: retask
