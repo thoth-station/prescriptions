@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LambdaGitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lambda-git
+    run:
+      release_notes:
+        organization: eredi93
+        repository: lambda-git
+        tag_version_prefix: v
