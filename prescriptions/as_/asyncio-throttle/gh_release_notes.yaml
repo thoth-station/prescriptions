@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AsyncioThrottleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncio-throttle
+    run:
+      release_notes:
+        organization: hallazzang
+        repository: asyncio-throttle
+        tag_version_prefix: v
