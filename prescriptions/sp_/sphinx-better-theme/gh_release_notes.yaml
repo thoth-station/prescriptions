@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxBetterThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-better-theme
+    run:
+      release_notes:
+        organization: irskep
+        repository: sphinx-better-theme
+        tag_version_prefix: v
