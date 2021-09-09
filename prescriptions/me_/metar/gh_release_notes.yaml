@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MetarGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metar
+    run:
+      release_notes:
+        organization: python-metar
+        repository: python-metar
+        tag_version_prefix: v
