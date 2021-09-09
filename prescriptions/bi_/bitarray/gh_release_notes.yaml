@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BitarrayGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitarray
+    run:
+      release_notes:
+        organization: ilanschnell
+        repository: bitarray
