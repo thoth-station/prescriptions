@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CodeflareGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codeflare
+    run:
+      release_notes:
+        organization: project-codeflare
+        repository: codeflare
