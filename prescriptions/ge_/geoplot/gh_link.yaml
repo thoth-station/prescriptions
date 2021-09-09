@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GeoplotGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoplot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'geoplot' is hosted on GitHub
+        link: https://github.com/ResidentMario/geoplot
+        package_name: geoplot
