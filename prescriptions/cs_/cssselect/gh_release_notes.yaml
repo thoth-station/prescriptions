@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CssselectGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cssselect
+    run:
+      release_notes:
+        organization: scrapy
+        repository: cssselect
+        tag_version_prefix: v
