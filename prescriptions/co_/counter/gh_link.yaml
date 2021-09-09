@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CounterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: counter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'counter' is hosted on GitHub
+        link: https://github.com/KelSolaar/Counter
+        package_name: counter
