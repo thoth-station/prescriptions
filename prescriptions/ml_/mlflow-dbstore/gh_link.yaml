@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MlflowDbstoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlflow-dbstore
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mlflow-dbstore' is hosted on GitHub
+        link: https://github.com/avflor/mlflow-dbstore
+        package_name: mlflow-dbstore
