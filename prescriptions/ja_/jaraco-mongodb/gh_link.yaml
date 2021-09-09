@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoMongodbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-mongodb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-mongodb' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.mongodb
+        package_name: jaraco-mongodb
