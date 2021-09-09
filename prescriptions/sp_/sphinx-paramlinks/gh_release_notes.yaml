@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxParamlinksGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-paramlinks
+    run:
+      release_notes:
+        organization: sqlalchemyorg
+        repository: sphinx-paramlinks
