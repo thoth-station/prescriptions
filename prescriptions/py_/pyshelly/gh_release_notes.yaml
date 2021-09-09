@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyshellyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyshelly
+    run:
+      release_notes:
+        organization: StyraHem
+        repository: pyShelly
