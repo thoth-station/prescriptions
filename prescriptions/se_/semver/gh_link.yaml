@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SemverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'semver' is hosted on GitHub
+        link: https://github.com/python-semver/python-semver
+        package_name: semver
