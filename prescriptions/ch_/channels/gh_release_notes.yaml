@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ChannelsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: channels
+    run:
+      release_notes:
+        organization: django
+        repository: channels
