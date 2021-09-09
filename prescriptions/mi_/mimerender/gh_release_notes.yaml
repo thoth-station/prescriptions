@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MimerenderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimerender
+    run:
+      release_notes:
+        organization: martinblech
+        repository: mimerender
+        tag_version_prefix: v
