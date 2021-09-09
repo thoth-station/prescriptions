@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconPythonSetupPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-python-setup-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-python-setup-py' is hosted on GitHub
+        link: https://github.com/colcon/colcon-python-setup-py
+        package_name: colcon-python-setup-py
