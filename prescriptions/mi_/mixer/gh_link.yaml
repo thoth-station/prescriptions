@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MixerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mixer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mixer' is hosted on GitHub
+        link: https://github.com/klen/mixer
+        package_name: mixer
