@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: IntervaltreeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intervaltree
+    run:
+      release_notes:
+        organization: chaimleib
+        repository: intervaltree
