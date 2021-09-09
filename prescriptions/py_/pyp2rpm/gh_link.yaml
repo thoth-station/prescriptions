@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pyp2rpmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyp2rpm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyp2rpm' is hosted on GitHub
+        link: https://github.com/fedora-python/pyp2rpm
+        package_name: pyp2rpm
