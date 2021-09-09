@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Flake8PytestGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-pytest
+    run:
+      release_notes:
+        organization: vikingco
+        repository: flake8-pytest
