@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RequestsNtlmGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ntlm
+    run:
+      release_notes:
+        organization: requests
+        repository: requests-ntlm
+        tag_version_prefix: v
