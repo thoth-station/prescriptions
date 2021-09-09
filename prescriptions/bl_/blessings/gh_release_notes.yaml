@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BlessingsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blessings
+    run:
+      release_notes:
+        organization: erikrose
+        repository: blessings
