@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeurosynthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neurosynth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'neurosynth' is hosted on GitHub
+        link: https://github.com/neurosynth/neurosynth
+        package_name: neurosynth
