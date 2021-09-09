@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ShyamlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shyaml
+    run:
+      release_notes:
+        organization: 0k
+        repository: shyaml
