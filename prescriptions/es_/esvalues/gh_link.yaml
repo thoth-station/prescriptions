@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EsvaluesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: esvalues
+    run:
+      justification:
+      - type: INFO
+        message: Package 'esvalues' is hosted on GitHub
+        link: https://github.com/interpretable-ml/esvalues.py
+        package_name: esvalues
