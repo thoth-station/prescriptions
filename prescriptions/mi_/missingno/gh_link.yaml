@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MissingnoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: missingno
+    run:
+      justification:
+      - type: INFO
+        message: Package 'missingno' is hosted on GitHub
+        link: https://github.com/ResidentMario/missingno
+        package_name: missingno
