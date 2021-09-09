@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ExabgpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exabgp
+    run:
+      release_notes:
+        organization: Exa-Networks
+        repository: exabgp
