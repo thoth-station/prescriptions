@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatanommerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datanommer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datanommer' is hosted on GitHub
+        link: https://github.com/ralphbean/datanommer
+        package_name: datanommer
