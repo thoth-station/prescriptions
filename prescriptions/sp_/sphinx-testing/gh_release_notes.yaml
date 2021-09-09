@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxTestingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-testing
+    run:
+      release_notes:
+        organization: sphinx-doc
+        repository: sphinx-testing
