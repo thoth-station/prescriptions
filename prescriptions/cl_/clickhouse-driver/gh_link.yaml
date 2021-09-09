@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickhouseDriverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clickhouse-driver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'clickhouse-driver' is hosted on GitHub
+        link: https://github.com/mymarilyn/clickhouse-driver
+        package_name: clickhouse-driver
