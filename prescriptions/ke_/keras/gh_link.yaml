@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerasGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keras' is hosted on GitHub
+        link: https://github.com/keras-team/keras
+        package_name: keras
