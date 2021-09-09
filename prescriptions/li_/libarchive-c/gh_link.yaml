@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibarchiveCGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libarchive-c
+    run:
+      justification:
+      - type: INFO
+        message: Package 'libarchive-c' is hosted on GitHub
+        link: https://github.com/Changaco/python-libarchive-c
+        package_name: libarchive-c
