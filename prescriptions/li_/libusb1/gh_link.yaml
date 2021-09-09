@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Libusb1GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libusb1
+    run:
+      justification:
+      - type: INFO
+        message: Package 'libusb1' is hosted on GitHub
+        link: https://github.com/vpelletier/python-libusb1
+        package_name: libusb1
