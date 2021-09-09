@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Traceback2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: traceback2
+    run:
+      release_notes:
+        organization: testing-cabal
+        repository: traceback2
