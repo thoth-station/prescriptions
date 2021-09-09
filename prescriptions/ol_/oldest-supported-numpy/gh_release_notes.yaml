@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OldestSupportedNumpyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oldest-supported-numpy
+    run:
+      release_notes:
+        organization: scipy
+        repository: oldest-supported-numpy
+        tag_version_prefix: v
