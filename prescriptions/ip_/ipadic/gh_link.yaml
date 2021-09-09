@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpadicGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipadic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ipadic' is hosted on GitHub
+        link: https://github.com/polm/ipadic-py
+        package_name: ipadic
