@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PortalockerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: portalocker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'portalocker' is hosted on GitHub
+        link: https://github.com/WoLpH/portalocker
+        package_name: portalocker
