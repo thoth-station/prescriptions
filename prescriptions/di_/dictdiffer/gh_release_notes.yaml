@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DictdifferGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdiffer
+    run:
+      release_notes:
+        organization: inveniosoftware
+        repository: dictdiffer
+        tag_version_prefix: v
