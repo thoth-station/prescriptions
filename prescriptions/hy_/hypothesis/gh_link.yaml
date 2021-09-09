@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HypothesisGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hypothesis' is hosted on GitHub
+        link: https://github.com/HypothesisWorks/hypothesis
+        package_name: hypothesis
