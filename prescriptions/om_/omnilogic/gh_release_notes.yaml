@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: OmnilogicGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: omnilogic
+    run:
+      release_notes:
+        organization: djtimca
+        repository: omnilogic-api
