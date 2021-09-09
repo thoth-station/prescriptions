@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PureSaslGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pure-sasl
+    run:
+      release_notes:
+        organization: thobbs
+        repository: pure-sasl
