@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MygeotabGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mygeotab
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mygeotab' is hosted on GitHub
+        link: https://github.com/geotab/mygeotab-python
+        package_name: mygeotab
