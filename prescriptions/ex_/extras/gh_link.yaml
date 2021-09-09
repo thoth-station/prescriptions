@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ExtrasGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: extras
+    run:
+      justification:
+      - type: INFO
+        message: Package 'extras' is hosted on GitHub
+        link: https://github.com/testing-cabal/extras
+        package_name: extras
