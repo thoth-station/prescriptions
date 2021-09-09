@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpinfoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipinfo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ipinfo' is hosted on GitHub
+        link: https://github.com/ipinfo/python
+        package_name: ipinfo
