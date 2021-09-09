@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: StaticGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: static
+    run:
+      release_notes:
+        organization: lukearno
+        repository: static
+        tag_version_prefix: v
