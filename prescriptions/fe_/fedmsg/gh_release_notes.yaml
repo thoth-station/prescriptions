@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FedmsgGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fedmsg
+    run:
+      release_notes:
+        organization: fedora-infra
+        repository: fedmsg
