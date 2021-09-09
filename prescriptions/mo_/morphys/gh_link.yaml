@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MorphysGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: morphys
+    run:
+      justification:
+      - type: INFO
+        message: Package 'morphys' is hosted on GitHub
+        link: https://github.com/mkalinski/morphys
+        package_name: morphys
