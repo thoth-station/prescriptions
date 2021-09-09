@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterBokehGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-bokeh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-bokeh' is hosted on GitHub
+        link: https://github.com/bokeh/jupyter_bokeh
+        package_name: jupyter-bokeh
