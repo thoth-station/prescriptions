@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MapboxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapbox
+    run:
+      release_notes:
+        organization: mapbox
+        repository: mapbox-sdk-py
