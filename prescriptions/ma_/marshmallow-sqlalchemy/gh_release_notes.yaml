@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MarshmallowSqlalchemyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-sqlalchemy
+    run:
+      release_notes:
+        organization: marshmallow-code
+        repository: marshmallow-sqlalchemy
