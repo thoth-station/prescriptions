@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppSessionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-session
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-session' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.session
+        package_name: zope-app-session
