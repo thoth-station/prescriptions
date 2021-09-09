@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SsgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ssg' is hosted on GitHub
+        link: https://github.com/ponrawee/ssg
+        package_name: ssg
