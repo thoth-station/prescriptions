@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycassaGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycassa
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pycassa' is marked as archived on GitHub
+        link: https://github.com/pycassa/pycassa
+        package_name: pycassa
