@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click
+    run:
+      justification:
+      - type: INFO
+        message: Package 'click' is hosted on GitHub
+        link: https://github.com/pallets/click
+        package_name: click
