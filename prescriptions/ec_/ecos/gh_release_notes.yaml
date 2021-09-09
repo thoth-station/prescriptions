@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: EcosGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ecos
+    run:
+      release_notes:
+        organization: embotech
+        repository: ecos
