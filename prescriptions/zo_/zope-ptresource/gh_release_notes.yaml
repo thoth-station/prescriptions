@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ZopePtresourceGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-ptresource
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.ptresource
