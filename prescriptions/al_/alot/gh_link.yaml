@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AlotGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'alot' is hosted on GitHub
+        link: https://github.com/pazz/alot
+        package_name: alot
