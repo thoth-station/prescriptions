@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AuthheadersGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authheaders
+    run:
+      justification:
+      - type: INFO
+        message: Package 'authheaders' is hosted on GitHub
+        link: https://github.com/ValiMail/authentication-headers
+        package_name: authheaders
