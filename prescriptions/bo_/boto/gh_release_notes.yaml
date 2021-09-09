@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BotoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto
+    run:
+      release_notes:
+        organization: boto
+        repository: boto
