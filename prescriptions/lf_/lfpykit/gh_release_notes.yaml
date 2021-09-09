@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LfpykitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lfpykit
+    run:
+      release_notes:
+        organization: LFPy
+        repository: LFPykit
+        tag_version_prefix: v
