@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoAptGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-apt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-apt' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.apt
+        package_name: jaraco-apt
