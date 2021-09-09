@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CheckovGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: checkov
+    run:
+      justification:
+      - type: INFO
+        message: Package 'checkov' is hosted on GitHub
+        link: https://github.com/bridgecrewio/checkov
+        package_name: checkov
