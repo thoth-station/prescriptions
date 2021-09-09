@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OnnxruntimeToolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxruntime-tools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'onnxruntime-tools' is hosted on GitHub
+        link: https://github.com/microsoft/onnxruntime
+        package_name: onnxruntime-tools
