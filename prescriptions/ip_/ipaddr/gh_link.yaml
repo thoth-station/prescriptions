@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpaddrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaddr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ipaddr' is hosted on GitHub
+        link: https://github.com/google/ipaddr-py
+        package_name: ipaddr
