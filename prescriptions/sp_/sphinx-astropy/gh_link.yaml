@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxAstropyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-astropy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-astropy' is hosted on GitHub
+        link: https://github.com/astropy/sphinx-astropy
+        package_name: sphinx-astropy
