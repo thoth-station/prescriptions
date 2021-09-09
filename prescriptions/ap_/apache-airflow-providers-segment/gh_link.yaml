@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersSegmentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-segment
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apache-airflow-providers-segment' is hosted on GitHub
+        link: https://github.com/apache/airflow
+        package_name: apache-airflow-providers-segment
