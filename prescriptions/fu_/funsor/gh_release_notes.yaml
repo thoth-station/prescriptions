@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FunsorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: funsor
+    run:
+      release_notes:
+        organization: pyro-ppl
+        repository: funsor
