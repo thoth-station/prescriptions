@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyaesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyaes' is hosted on GitHub
+        link: https://github.com/ricmoo/pyaes
+        package_name: pyaes
