@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoqlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangoql
+    run:
+      justification:
+      - type: INFO
+        message: Package 'djangoql' is hosted on GitHub
+        link: https://github.com/ivelum/djangoql
+        package_name: djangoql
