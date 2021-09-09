@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyexasolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexasol
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyexasol' is hosted on GitHub
+        link: https://github.com/badoo/pyexasol
+        package_name: pyexasol
