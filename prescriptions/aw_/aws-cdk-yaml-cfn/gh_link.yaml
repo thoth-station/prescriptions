@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkYamlCfnGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-yaml-cfn
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-yaml-cfn' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-yaml-cfn
