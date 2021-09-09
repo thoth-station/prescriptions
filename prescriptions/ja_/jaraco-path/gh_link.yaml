@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoPathGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-path
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-path' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.path
+        package_name: jaraco-path
