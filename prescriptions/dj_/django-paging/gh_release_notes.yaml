@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoPagingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-paging
+    run:
+      release_notes:
+        organization: dcramer
+        repository: django-paging
