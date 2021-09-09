@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ServerfilesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serverfiles
+    run:
+      justification:
+      - type: INFO
+        message: Package 'serverfiles' is hosted on GitHub
+        link: https://github.com/biolab/serverfiles
+        package_name: serverfiles
