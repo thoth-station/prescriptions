@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxextOpengraphGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxext-opengraph
+    run:
+      release_notes:
+        organization: wpilibsuite
+        repository: sphinxext-opengraph
+        tag_version_prefix: v
