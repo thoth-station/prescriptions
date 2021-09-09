@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AllennlpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: allennlp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'allennlp' is hosted on GitHub
+        link: https://github.com/allenai/allennlp
+        package_name: allennlp
