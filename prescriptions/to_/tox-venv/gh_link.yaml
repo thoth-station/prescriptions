@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ToxVenvGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-venv
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tox-venv' is hosted on GitHub
+        link: https://github.com/tox-dev/tox-venv
+        package_name: tox-venv
