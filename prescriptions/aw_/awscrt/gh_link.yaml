@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwscrtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awscrt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'awscrt' is hosted on GitHub
+        link: https://github.com/awslabs/aws-crt-python
+        package_name: awscrt
