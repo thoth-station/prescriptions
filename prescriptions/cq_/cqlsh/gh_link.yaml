@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CqlshGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cqlsh
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cqlsh' is hosted on GitHub
+        link: https://github.com/jeffwidman/cqlsh
+        package_name: cqlsh
