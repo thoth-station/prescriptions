@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SystemdPythonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: systemd-python
+    run:
+      release_notes:
+        organization: systemd
+        repository: python-systemd
+        tag_version_prefix: v
