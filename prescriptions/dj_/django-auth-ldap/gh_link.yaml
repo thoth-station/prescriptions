@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoAuthLdapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-auth-ldap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-auth-ldap' is hosted on GitHub
+        link: https://github.com/django-auth-ldap/django-auth-ldap
+        package_name: django-auth-ldap
