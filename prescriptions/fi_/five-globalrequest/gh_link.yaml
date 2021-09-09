@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FiveGlobalrequestGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: five-globalrequest
+    run:
+      justification:
+      - type: INFO
+        message: Package 'five-globalrequest' is hosted on GitHub
+        link: https://github.com/zopefoundation/five.globalrequest
+        package_name: five-globalrequest
