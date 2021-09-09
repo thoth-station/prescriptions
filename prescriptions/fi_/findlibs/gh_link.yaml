@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FindlibsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findlibs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'findlibs' is hosted on GitHub
+        link: https://github.com/ecmwf/findlibs
+        package_name: findlibs
