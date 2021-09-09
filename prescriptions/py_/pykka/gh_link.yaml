@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PykkaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykka
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pykka' is hosted on GitHub
+        link: https://github.com/jodal/pykka
+        package_name: pykka
