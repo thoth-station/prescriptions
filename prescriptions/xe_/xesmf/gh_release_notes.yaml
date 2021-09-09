@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: XesmfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xesmf
+    run:
+      release_notes:
+        organization: JiaweiZhuang
+        repository: xESMF
+        tag_version_prefix: v
