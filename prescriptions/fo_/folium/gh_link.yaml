@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FoliumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: folium
+    run:
+      justification:
+      - type: INFO
+        message: Package 'folium' is hosted on GitHub
+        link: https://github.com/python-visualization/folium
+        package_name: folium
