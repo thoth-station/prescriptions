@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SphinxAirflowThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-airflow-theme
+    run:
+      release_notes:
+        organization: apache
+        repository: airflow-site
