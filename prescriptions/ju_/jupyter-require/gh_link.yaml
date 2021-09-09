@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterRequireGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-require
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-require' is hosted on GitHub
+        link: https://github.com/CermakM/jupyter-require
+        package_name: jupyter-require
