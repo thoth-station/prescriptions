@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FortnitepyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fortnitepy
+    run:
+      release_notes:
+        organization: Terbau
+        repository: fortnitepy
+        tag_version_prefix: v
