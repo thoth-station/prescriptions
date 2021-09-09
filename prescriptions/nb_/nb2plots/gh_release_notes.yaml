@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Nb2plotsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nb2plots
+    run:
+      release_notes:
+        organization: matthew-brett
+        repository: nb2plots
