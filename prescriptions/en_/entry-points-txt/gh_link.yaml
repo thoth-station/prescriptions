@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EntryPointsTxtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entry-points-txt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'entry-points-txt' is hosted on GitHub
+        link: https://github.com/jwodder/entry-points-txt
+        package_name: entry-points-txt
