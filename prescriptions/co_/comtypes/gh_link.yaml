@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ComtypesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: comtypes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'comtypes' is hosted on GitHub
+        link: https://github.com/enthought/comtypes
+        package_name: comtypes
