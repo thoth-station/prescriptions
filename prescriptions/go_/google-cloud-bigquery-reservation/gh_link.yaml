@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudBigqueryReservationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-bigquery-reservation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-cloud-bigquery-reservation' is hosted on GitHub
+        link: https://github.com/googleapis/python-bigquery-reservation
+        package_name: google-cloud-bigquery-reservation
