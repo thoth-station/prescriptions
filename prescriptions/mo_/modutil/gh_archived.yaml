@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ModutilGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modutil
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'modutil' is marked as archived on GitHub
+        link: https://github.com/brettcannon/modutil
+        package_name: modutil
