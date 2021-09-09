@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PysmiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmi
+    run:
+      release_notes:
+        organization: etingof
+        repository: pysmi
+        tag_version_prefix: v
