@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PygmentsGithubLexersGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygments-github-lexers
+    run:
+      release_notes:
+        organization: liluo
+        repository: pygments-github-lexers
+        tag_version_prefix: v
