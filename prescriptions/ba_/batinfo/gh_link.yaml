@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BatinfoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batinfo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'batinfo' is hosted on GitHub
+        link: https://github.com/nicolargo/batinfo
+        package_name: batinfo
