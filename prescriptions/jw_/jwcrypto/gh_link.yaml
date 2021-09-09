@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JwcryptoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jwcrypto
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jwcrypto' is hosted on GitHub
+        link: https://github.com/latchset/jwcrypto
+        package_name: jwcrypto
