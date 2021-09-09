@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EpcGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'epc' is hosted on GitHub
+        link: https://github.com/tkf/python-epc
+        package_name: epc
