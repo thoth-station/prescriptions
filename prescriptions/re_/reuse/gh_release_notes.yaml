@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ReuseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reuse
+    run:
+      release_notes:
+        organization: fsfe
+        repository: reuse-tool
+        tag_version_prefix: v
