@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyUbjsonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-ubjson
+    run:
+      release_notes:
+        organization: Iotic-Labs
+        repository: py-ubjson
+        tag_version_prefix: v
