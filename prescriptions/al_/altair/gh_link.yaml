@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AltairGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: altair
+    run:
+      justification:
+      - type: INFO
+        message: Package 'altair' is hosted on GitHub
+        link: https://github.com/altair-viz/altair
+        package_name: altair
