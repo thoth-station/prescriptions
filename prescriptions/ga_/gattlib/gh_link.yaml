@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GattlibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gattlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gattlib' is hosted on GitHub
+        link: https://github.com/oscaracena/pygattlib
+        package_name: gattlib
