@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoBulkUpdateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-bulk-update
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-bulk-update' is hosted on GitHub
+        link: https://github.com/aykut/django-bulk-update
+        package_name: django-bulk-update
