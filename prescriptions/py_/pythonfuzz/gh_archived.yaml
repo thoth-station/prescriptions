@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonfuzzGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythonfuzz
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pythonfuzz' is marked as archived on GitHub
+        link: https://github.com/fuzzitdev/pythonfuzz
+        package_name: pythonfuzz
