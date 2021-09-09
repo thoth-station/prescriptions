@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PystacheGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pystache
+    run:
+      release_notes:
+        organization: defunkt
+        repository: pystache
+        tag_version_prefix: v
