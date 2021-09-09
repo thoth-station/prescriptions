@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PylacrosseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylacrosse
+    run:
+      release_notes:
+        organization: hthiery
+        repository: python-lacrosse
