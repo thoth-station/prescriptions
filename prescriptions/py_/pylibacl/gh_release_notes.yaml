@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PylibaclGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibacl
+    run:
+      release_notes:
+        organization: iustin
+        repository: pylibacl
+        tag_version_prefix: v
