@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SkiaPathopsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: skia-pathops
+    run:
+      release_notes:
+        organization: fonttools
+        repository: skia-pathops
+        tag_version_prefix: v
