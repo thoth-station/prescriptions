@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EasydictGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easydict
+    run:
+      justification:
+      - type: INFO
+        message: Package 'easydict' is hosted on GitHub
+        link: https://github.com/makinacorpus/easydict
+        package_name: easydict
