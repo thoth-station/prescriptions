@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoChoicesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-choices
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-choices' is hosted on GitHub
+        link: https://github.com/bigjason/django-choices
+        package_name: django-choices
