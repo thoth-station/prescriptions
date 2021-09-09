@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: LarkParserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lark-parser
+    run:
+      release_notes:
+        organization: lark-parser
+        repository: lark
