@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestCheckLinksGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-check-links
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-check-links' is hosted on GitHub
+        link: https://github.com/jupyterlab/pytest-check-links
+        package_name: pytest-check-links
