@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SanicRoutingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic-routing
+    run:
+      release_notes:
+        organization: sanic-org
+        repository: sanic-routing
+        tag_version_prefix: v
