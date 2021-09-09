@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoverageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'coverage' is hosted on GitHub
+        link: https://github.com/nedbat/coveragepy
+        package_name: coverage
