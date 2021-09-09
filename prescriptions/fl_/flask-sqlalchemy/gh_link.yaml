@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskSqlalchemyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sqlalchemy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-sqlalchemy' is hosted on GitHub
+        link: https://github.com/pallets/flask-sqlalchemy
+        package_name: flask-sqlalchemy
