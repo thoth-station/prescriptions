@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PecanGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pecan
+    run:
+      release_notes:
+        organization: pecan
+        repository: pecan
