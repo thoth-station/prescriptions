@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CredslayerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: credslayer
+    run:
+      release_notes:
+        organization: ShellCode33
+        repository: CredSLayer
+        tag_version_prefix: v
