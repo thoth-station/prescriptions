@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfigupdaterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configupdater
+    run:
+      justification:
+      - type: INFO
+        message: Package 'configupdater' is hosted on GitHub
+        link: https://github.com/pyscaffold/configupdater
+        package_name: configupdater
