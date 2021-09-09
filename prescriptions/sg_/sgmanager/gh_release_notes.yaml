@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SgmanagerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sgmanager
+    run:
+      release_notes:
+        organization: gooddata
+        repository: sgmanager
+        tag_version_prefix: v
