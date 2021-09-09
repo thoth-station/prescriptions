@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestSplitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-split
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-split' is hosted on GitHub
+        link: https://github.com/jerry-git/pytest-split
+        package_name: pytest-split
