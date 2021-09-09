@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CherootGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cheroot
+    run:
+      release_notes:
+        organization: cherrypy
+        repository: cheroot
+        tag_version_prefix: v
