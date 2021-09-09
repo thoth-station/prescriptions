@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureDatalakeStoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-datalake-store
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-datalake-store' is hosted on GitHub
+        link: https://github.com/Azure/azure-data-lake-store-python
+        package_name: azure-datalake-store
