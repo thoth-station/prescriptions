@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ConvertdateGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: convertdate
+    run:
+      release_notes:
+        organization: fitnr
+        repository: convertdate
+        tag_version_prefix: v
