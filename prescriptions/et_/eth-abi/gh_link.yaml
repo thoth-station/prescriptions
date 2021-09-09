@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthAbiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-abi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'eth-abi' is hosted on GitHub
+        link: https://github.com/ethereum/eth-abi
+        package_name: eth-abi
