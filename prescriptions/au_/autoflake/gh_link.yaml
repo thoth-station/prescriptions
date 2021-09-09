@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutoflakeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoflake
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autoflake' is hosted on GitHub
+        link: https://github.com/myint/autoflake
+        package_name: autoflake
