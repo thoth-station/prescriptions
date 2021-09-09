@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpyscalesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipyscales
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ipyscales' is hosted on GitHub
+        link: https://github.com/vidartf/ipyscales
+        package_name: ipyscales
