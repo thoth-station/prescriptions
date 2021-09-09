@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportlibMetadataGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib-metadata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'importlib-metadata' is hosted on GitHub
+        link: https://github.com/python/importlib_metadata
+        package_name: importlib-metadata
