@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BodhiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bodhi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bodhi' is hosted on GitHub
+        link: https://github.com/fedora-infra/bodhi
+        package_name: bodhi
