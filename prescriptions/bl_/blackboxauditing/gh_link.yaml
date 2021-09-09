@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlackboxauditingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blackboxauditing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blackboxauditing' is hosted on GitHub
+        link: https://github.com/algofairness/BlackBoxAuditing
+        package_name: blackboxauditing
