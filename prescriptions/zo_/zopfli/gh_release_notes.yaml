@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ZopfliGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zopfli
+    run:
+      release_notes:
+        organization: obp
+        repository: py-zopfli
+        tag_version_prefix: v
