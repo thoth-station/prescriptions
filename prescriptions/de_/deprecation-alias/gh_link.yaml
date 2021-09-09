@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeprecationAliasGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation-alias
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deprecation-alias' is hosted on GitHub
+        link: https://github.com/domdfcoding/deprecation-alias
+        package_name: deprecation-alias
