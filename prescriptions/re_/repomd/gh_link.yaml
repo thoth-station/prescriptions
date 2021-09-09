@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RepomdGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: repomd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'repomd' is hosted on GitHub
+        link: https://github.com/carlwgeorge/repomd
+        package_name: repomd
