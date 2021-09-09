@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CrayonsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crayons
+    run:
+      release_notes:
+        organization: MasterOdin
+        repository: crayons
+        tag_version_prefix: v
