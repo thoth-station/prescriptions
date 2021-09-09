@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterResourceUsageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-resource-usage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-resource-usage' is hosted on GitHub
+        link: https://github.com/jupyter-server/jupyter-resource-usage
+        package_name: jupyter-resource-usage
