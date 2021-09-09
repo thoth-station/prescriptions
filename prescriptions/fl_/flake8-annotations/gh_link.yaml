@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8AnnotationsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-annotations
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-annotations' is hosted on GitHub
+        link: https://github.com/sco1/flake8-annotations
+        package_name: flake8-annotations
