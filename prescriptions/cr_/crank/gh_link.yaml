@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CrankGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crank
+    run:
+      justification:
+      - type: INFO
+        message: Package 'crank' is hosted on GitHub
+        link: https://github.com/TurboGears/crank
+        package_name: crank
