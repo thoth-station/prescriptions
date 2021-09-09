@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterLspGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-lsp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-lsp' is hosted on GitHub
+        link: https://github.com/krassowski/jupyterlab-lsp
+        package_name: jupyter-lsp
