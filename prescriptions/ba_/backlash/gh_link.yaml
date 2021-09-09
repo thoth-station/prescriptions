@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BacklashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backlash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backlash' is hosted on GitHub
+        link: https://github.com/TurboGears/backlash
+        package_name: backlash
