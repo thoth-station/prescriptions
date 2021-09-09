@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RepomdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: repomd
+    run:
+      release_notes:
+        organization: carlwgeorge
+        repository: repomd
