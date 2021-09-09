@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuncTimeoutGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: func-timeout
+    run:
+      justification:
+      - type: INFO
+        message: Package 'func-timeout' is hosted on GitHub
+        link: https://github.com/kata198/func_timeout
+        package_name: func-timeout
