@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestCatchlogGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-catchlog
+    run:
+      release_notes:
+        organization: eisensheng
+        repository: pytest-catchlog
