@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlatformdirsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: platformdirs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'platformdirs' is hosted on GitHub
+        link: https://github.com/platformdirs/platformdirs
+        package_name: platformdirs
