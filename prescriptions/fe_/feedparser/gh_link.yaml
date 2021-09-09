@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FeedparserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedparser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'feedparser' is hosted on GitHub
+        link: https://github.com/kurtmckee/feedparser
+        package_name: feedparser
