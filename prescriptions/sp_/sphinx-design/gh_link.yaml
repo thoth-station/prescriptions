@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxDesignGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-design
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinx-design' is hosted on GitHub
+        link: https://github.com/executablebooks/sphinx-design
+        package_name: sphinx-design
