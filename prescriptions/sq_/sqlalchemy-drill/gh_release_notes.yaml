@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SqlalchemyDrillGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-drill
+    run:
+      release_notes:
+        organization: JohnOmernik
+        repository: sqlalchemy-drill
