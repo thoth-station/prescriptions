@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AioPikaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aio-pika
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aio-pika' is hosted on GitHub
+        link: https://github.com/mosquito/aio-pika
+        package_name: aio-pika
