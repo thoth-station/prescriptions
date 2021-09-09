@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MtscompGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mtscomp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mtscomp' is hosted on GitHub
+        link: https://github.com/int-brain-lab/mtscomp
+        package_name: mtscomp
