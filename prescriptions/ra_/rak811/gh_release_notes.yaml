@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Rak811GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rak811
+    run:
+      release_notes:
+        organization: AmedeeBulle
+        repository: pyrak811
+        tag_version_prefix: v
