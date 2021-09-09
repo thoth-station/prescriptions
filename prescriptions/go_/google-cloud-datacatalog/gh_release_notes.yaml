@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GoogleCloudDatacatalogGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-datacatalog
+    run:
+      release_notes:
+        organization: googleapis
+        repository: python-datacatalog
+        tag_version_prefix: v
