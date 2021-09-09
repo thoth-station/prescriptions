@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestPycodestyleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-pycodestyle
+    run:
+      release_notes:
+        organization: henry0312
+        repository: pytest-pycodestyle
+        tag_version_prefix: v
