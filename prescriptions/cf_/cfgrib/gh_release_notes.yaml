@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CfgribGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfgrib
+    run:
+      release_notes:
+        organization: ecmwf
+        repository: cfgrib
