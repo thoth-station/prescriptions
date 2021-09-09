@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BenigetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beniget
+    run:
+      release_notes:
+        organization: serge-sans-paille
+        repository: beniget
