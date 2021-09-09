@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ItypesGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itypes
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'itypes' is marked as archived on GitHub
+        link: https://github.com/PavanTatikonda/itypes
+        package_name: itypes
