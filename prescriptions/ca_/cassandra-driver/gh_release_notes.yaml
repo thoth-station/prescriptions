@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CassandraDriverGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cassandra-driver
+    run:
+      release_notes:
+        organization: datastax
+        repository: python-driver
