@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestMplGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-mpl
+    run:
+      release_notes:
+        organization: matplotlib
+        repository: pytest-mpl
+        tag_version_prefix: v
