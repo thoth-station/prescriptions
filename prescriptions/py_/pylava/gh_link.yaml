@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylavaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylava
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pylava' is hosted on GitHub
+        link: https://github.com/pylava/pylava
+        package_name: pylava
