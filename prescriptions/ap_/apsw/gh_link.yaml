@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApswGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apsw
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apsw' is hosted on GitHub
+        link: https://github.com/rogerbinns/apsw
+        package_name: apsw
