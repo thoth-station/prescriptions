@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DatetimeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datetime
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: DateTime
