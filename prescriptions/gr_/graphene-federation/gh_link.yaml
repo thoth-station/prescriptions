@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrapheneFederationGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphene-federation
+    run:
+      justification:
+      - type: INFO
+        message: Package 'graphene-federation' is hosted on GitHub
+        link: https://github.com/preply/graphene-federation
+        package_name: graphene-federation
