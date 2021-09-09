@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsons
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jsons' is hosted on GitHub
+        link: https://github.com/ramonhagenaars/jsons
+        package_name: jsons
