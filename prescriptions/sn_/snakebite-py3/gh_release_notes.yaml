@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SnakebitePy3GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snakebite-py3
+    run:
+      release_notes:
+        organization: internetarchive
+        repository: snakebite-py3
