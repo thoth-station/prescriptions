@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EsptoolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: esptool
+    run:
+      justification:
+      - type: INFO
+        message: Package 'esptool' is hosted on GitHub
+        link: https://github.com/espressif/esptool
+        package_name: esptool
