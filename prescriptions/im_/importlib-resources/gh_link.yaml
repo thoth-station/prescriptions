@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportlibResourcesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib-resources
+    run:
+      justification:
+      - type: INFO
+        message: Package 'importlib-resources' is hosted on GitHub
+        link: https://github.com/python/importlib_resources
+        package_name: importlib-resources
