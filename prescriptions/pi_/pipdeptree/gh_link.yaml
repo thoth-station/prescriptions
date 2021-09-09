@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipdeptreeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipdeptree
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pipdeptree' is hosted on GitHub
+        link: https://github.com/naiquevin/pipdeptree
+        package_name: pipdeptree
