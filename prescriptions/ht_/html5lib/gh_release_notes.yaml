@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Html5libGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: html5lib
+    run:
+      release_notes:
+        organization: html5lib
+        repository: html5lib-python
