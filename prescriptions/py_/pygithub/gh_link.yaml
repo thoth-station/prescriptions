@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygithubGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygithub
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygithub' is hosted on GitHub
+        link: https://github.com/pygithub/pygithub
+        package_name: pygithub
