@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KwonlyArgsGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kwonly-args
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kwonly-args' is marked as archived on GitHub
+        link: https://github.com/pasztorpisti/kwonly-args
+        package_name: kwonly-args
