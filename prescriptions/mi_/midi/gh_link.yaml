@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MidiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: midi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'midi' is hosted on GitHub
+        link: https://github.com/vishnubob/python-midi
+        package_name: midi
