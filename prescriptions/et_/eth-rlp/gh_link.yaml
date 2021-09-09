@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthRlpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-rlp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'eth-rlp' is hosted on GitHub
+        link: https://github.com/ethereum/eth-rlp
+        package_name: eth-rlp
