@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retry
+    run:
+      justification:
+      - type: INFO
+        message: Package 'retry' is hosted on GitHub
+        link: https://github.com/invl/retry
+        package_name: retry
