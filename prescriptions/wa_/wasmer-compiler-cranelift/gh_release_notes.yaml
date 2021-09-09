@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: WasmerCompilerCraneliftGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wasmer-compiler-cranelift
+    run:
+      release_notes:
+        organization: wasmerio
+        repository: wasmer-python
