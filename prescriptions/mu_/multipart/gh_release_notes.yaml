@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MultipartGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multipart
+    run:
+      release_notes:
+        organization: defnull
+        repository: multipart
+        tag_version_prefix: v
