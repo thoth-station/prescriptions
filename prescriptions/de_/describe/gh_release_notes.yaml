@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DescribeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: describe
+    run:
+      release_notes:
+        organization: jeffh
+        repository: describe
+        tag_version_prefix: v
