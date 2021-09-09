@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyMultihashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-multihash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'py-multihash' is hosted on GitHub
+        link: https://github.com/multiformats/multihash
+        package_name: py-multihash
