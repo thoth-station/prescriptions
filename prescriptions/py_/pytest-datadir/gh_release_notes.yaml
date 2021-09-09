@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestDatadirGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-datadir
+    run:
+      release_notes:
+        organization: gabrielcnr
+        repository: pytest-datadir
