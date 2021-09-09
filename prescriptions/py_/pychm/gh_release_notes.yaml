@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PychmGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pychm
+    run:
+      release_notes:
+        organization: dottedmag
+        repository: pychm
+        tag_version_prefix: v
