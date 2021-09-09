@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Py3statusGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3status
+    run:
+      release_notes:
+        organization: ultrabug
+        repository: py3status
