@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GooglePastaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-pasta
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-pasta' is hosted on GitHub
+        link: https://github.com/google/pasta
+        package_name: google-pasta
