@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IdnaSslGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna-ssl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'idna-ssl' is hosted on GitHub
+        link: https://github.com/aio-libs/idna-ssl
+        package_name: idna-ssl
