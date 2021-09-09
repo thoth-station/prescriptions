@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KiwisolverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kiwisolver
+    run:
+      justification:
+      - type: INFO
+        message: Package 'kiwisolver' is hosted on GitHub
+        link: https://github.com/nucleic/kiwi
+        package_name: kiwisolver
