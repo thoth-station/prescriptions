@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RrdtoolGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rrdtool
+    run:
+      release_notes:
+        organization: commx
+        repository: python-rrdtool
+        tag_version_prefix: v
