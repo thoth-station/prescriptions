@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LoraxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lorax
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lorax' is hosted on GitHub
+        link: https://github.com/LegumeFederation/lorax
+        package_name: lorax
