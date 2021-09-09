@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ListparserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: listparser
+    run:
+      release_notes:
+        organization: kurtmckee
+        repository: listparser
+        tag_version_prefix: v
