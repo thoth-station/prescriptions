@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HpackGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hpack
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hpack' is hosted on GitHub
+        link: https://github.com/python-hyper/hpack
+        package_name: hpack
