@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PykeepassGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykeepass
+    run:
+      release_notes:
+        organization: libkeepass
+        repository: pykeepass
