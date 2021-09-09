@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CsiphashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: csiphash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'csiphash' is hosted on GitHub
+        link: https://github.com/zacharyvoase/python-csiphash
+        package_name: csiphash
