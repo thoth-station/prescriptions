@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskApschedulerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-apscheduler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-apscheduler' is hosted on GitHub
+        link: https://github.com/viniciuschiele/flask-apscheduler
+        package_name: flask-apscheduler
