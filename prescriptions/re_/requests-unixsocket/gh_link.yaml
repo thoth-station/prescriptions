@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsUnixsocketGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-unixsocket
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-unixsocket' is hosted on GitHub
+        link: https://github.com/msabramo/requests-unixsocket
+        package_name: requests-unixsocket
