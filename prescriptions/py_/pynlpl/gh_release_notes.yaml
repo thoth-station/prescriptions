@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PynlplGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynlpl
+    run:
+      release_notes:
+        organization: proycon
+        repository: pynlpl
+        tag_version_prefix: v
