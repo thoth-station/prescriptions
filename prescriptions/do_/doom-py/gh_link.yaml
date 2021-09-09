@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DoomPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doom-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'doom-py' is hosted on GitHub
+        link: https://github.com/openai/doom-py
+        package_name: doom-py
