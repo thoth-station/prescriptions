@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytenableGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytenable
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytenable' is hosted on GitHub
+        link: https://github.com/tenable/pytenable
+        package_name: pytenable
