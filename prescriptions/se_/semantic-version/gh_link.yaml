@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SemanticVersionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semantic-version
+    run:
+      justification:
+      - type: INFO
+        message: Package 'semantic-version' is hosted on GitHub
+        link: https://github.com/rbarrois/python-semanticversion
+        package_name: semantic-version
