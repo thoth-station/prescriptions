@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RestflyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restfly
+    run:
+      release_notes:
+        organization: stevemcgrath
+        repository: restfly
