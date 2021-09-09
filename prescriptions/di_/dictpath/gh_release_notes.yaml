@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DictpathGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictpath
+    run:
+      release_notes:
+        organization: p1c2u
+        repository: dictpath
