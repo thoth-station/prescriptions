@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DocumenttemplateGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: documenttemplate
+    run:
+      justification:
+      - type: INFO
+        message: Package 'documenttemplate' is hosted on GitHub
+        link: https://github.com/zopefoundation/DocumentTemplate
+        package_name: documenttemplate
