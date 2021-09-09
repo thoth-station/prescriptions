@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ActiveSshtunnelScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshtunnel
+    run:
+      justification:
+      - type: WARNING
+        message: Project is NOT actively maintained based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: sshtunnel
