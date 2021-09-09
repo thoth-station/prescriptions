@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StreamzGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: streamz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'streamz' is hosted on GitHub
+        link: https://github.com/python-streamz/streamz
+        package_name: streamz
