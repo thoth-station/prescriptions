@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlowfishGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blowfish
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blowfish' is hosted on GitHub
+        link: https://github.com/jashandeep-sohi/python-blowfish
+        package_name: blowfish
