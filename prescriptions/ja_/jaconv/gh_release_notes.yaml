@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JaconvGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaconv
+    run:
+      release_notes:
+        organization: ikegami-yukino
+        repository: jaconv
+        tag_version_prefix: v
