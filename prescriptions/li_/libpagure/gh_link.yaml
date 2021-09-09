@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibpagureGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libpagure
+    run:
+      justification:
+      - type: INFO
+        message: Package 'libpagure' is hosted on GitHub
+        link: https://github.com/yangl1996/libpagure
+        package_name: libpagure
