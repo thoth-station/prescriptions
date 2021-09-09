@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: OnnxruntimeGpuGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxruntime-gpu
+    run:
+      release_notes:
+        organization: microsoft
+        repository: onnxruntime
+        tag_version_prefix: v
