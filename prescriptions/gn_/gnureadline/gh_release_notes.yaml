@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GnureadlineGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gnureadline
+    run:
+      release_notes:
+        organization: ludwigschwardt
+        repository: python-gnureadline
+        tag_version_prefix: v
