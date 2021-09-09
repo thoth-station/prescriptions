@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DjangoSudoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sudo
+    run:
+      release_notes:
+        organization: mattrobenolt
+        repository: django-sudo
