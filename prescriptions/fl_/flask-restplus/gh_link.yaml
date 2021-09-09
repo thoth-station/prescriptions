@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskRestplusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-restplus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-restplus' is hosted on GitHub
+        link: https://github.com/noirbizarre/flask-restplus
+        package_name: flask-restplus
