@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PygattGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygatt
+    run:
+      release_notes:
+        organization: peplin
+        repository: pygatt
+        tag_version_prefix: v
