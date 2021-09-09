@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MeshClientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mesh-client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mesh-client' is hosted on GitHub
+        link: https://github.com/jamespic/mesh-client
+        package_name: mesh-client
