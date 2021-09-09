@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconTestResultGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-test-result
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colcon-test-result' is hosted on GitHub
+        link: https://github.com/colcon/colcon-test-result
+        package_name: colcon-test-result
