@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastpurgeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastpurge
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fastpurge' is hosted on GitHub
+        link: https://github.com/release-engineering/python-fastpurge
+        package_name: fastpurge
