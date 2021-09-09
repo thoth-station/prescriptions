@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestBddGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-bdd
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-bdd' is hosted on GitHub
+        link: https://github.com/pytest-dev/pytest-bdd
+        package_name: pytest-bdd
