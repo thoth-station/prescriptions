@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WheelFilenameGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-filename
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wheel-filename' is hosted on GitHub
+        link: https://github.com/jwodder/wheel-filename
+        package_name: wheel-filename
