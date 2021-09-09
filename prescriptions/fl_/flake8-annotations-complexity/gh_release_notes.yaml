@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Flake8AnnotationsComplexityGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-annotations-complexity
+    run:
+      release_notes:
+        organization: best-doctor
+        repository: flake8-annotations-complexity
+        tag_version_prefix: v
