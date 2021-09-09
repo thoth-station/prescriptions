@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: KleinGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: klein
+    run:
+      release_notes:
+        organization: twisted
+        repository: klein
