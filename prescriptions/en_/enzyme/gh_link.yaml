@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnzymeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enzyme
+    run:
+      justification:
+      - type: INFO
+        message: Package 'enzyme' is hosted on GitHub
+        link: https://github.com/Diaoul/enzyme
+        package_name: enzyme
