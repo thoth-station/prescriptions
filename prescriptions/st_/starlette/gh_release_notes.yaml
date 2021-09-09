@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: StarletteGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: starlette
+    run:
+      release_notes:
+        organization: encode
+        repository: starlette
