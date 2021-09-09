@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoronavirusGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coronavirus
+    run:
+      justification:
+      - type: INFO
+        message: Package 'coronavirus' is hosted on GitHub
+        link: https://github.com/nabucasa/coronavirus
+        package_name: coronavirus
