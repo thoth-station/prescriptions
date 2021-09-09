@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NcTimeAxisGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nc-time-axis
+    run:
+      release_notes:
+        organization: SciTools
+        repository: nc-time-axis
+        tag_version_prefix: v
