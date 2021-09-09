@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MistletoeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mistletoe
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mistletoe' is hosted on GitHub
+        link: https://github.com/miyuchina/mistletoe
+        package_name: mistletoe
