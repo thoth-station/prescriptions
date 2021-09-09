@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FugashiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fugashi
+    run:
+      release_notes:
+        organization: polm
+        repository: fugashi
+        tag_version_prefix: v
