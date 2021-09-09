@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MujocoPyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mujoco-py
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mujoco-py' is hosted on GitHub
+        link: https://github.com/openai/mujoco-py
+        package_name: mujoco-py
