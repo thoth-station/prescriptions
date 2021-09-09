@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FlaskBabelGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-babel
+    run:
+      release_notes:
+        organization: python-babel
+        repository: flask-babel
+        tag_version_prefix: v
