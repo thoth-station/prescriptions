@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EpcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epc
+    run:
+      release_notes:
+        organization: tkf
+        repository: python-epc
+        tag_version_prefix: v
