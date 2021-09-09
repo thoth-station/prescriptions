@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GensonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: genson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'genson' is hosted on GitHub
+        link: https://github.com/wolverdude/genson
+        package_name: genson
