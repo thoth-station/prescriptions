@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DumbInitGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dumb-init
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dumb-init' is hosted on GitHub
+        link: https://github.com/Yelp/dumb-init
+        package_name: dumb-init
