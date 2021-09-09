@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyinotifyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinotify
+    run:
+      release_notes:
+        organization: seb-m
+        repository: pyinotify
