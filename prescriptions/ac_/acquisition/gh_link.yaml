@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AcquisitionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: acquisition
+    run:
+      justification:
+      - type: INFO
+        message: Package 'acquisition' is hosted on GitHub
+        link: https://github.com/zopefoundation/Acquisition
+        package_name: acquisition
