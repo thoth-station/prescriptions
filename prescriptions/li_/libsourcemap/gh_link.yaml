@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibsourcemapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libsourcemap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'libsourcemap' is hosted on GitHub
+        link: https://github.com/getsentry/libsourcemap
+        package_name: libsourcemap
