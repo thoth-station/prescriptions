@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PydbusGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydbus
+    run:
+      release_notes:
+        organization: LEW21
+        repository: pydbus
+        tag_version_prefix: v
