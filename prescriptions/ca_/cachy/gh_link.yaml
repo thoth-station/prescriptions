@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cachy' is hosted on GitHub
+        link: https://github.com/sdispater/cachy
+        package_name: cachy
