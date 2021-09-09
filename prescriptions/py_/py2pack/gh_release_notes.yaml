@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Py2packGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py2pack
+    run:
+      release_notes:
+        organization: openSUSE
+        repository: py2pack
