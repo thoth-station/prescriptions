@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductsTemporaryfolderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-temporaryfolder
+    run:
+      justification:
+      - type: INFO
+        message: Package 'products-temporaryfolder' is hosted on GitHub
+        link: https://github.com/zopefoundation/Products.TemporaryFolder
+        package_name: products-temporaryfolder
