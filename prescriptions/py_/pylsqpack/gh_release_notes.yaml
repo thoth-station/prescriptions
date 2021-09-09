@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PylsqpackGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylsqpack
+    run:
+      release_notes:
+        organization: aiortc
+        repository: pylsqpack
