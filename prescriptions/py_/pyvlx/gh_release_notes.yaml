@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PyvlxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvlx
+    run:
+      release_notes:
+        organization: Julius2342
+        repository: pyvlx
