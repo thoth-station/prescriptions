@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SiphashGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: siphash
+    run:
+      justification:
+      - type: INFO
+        message: Package 'siphash' is hosted on GitHub
+        link: https://github.com/majek/pysiphash
+        package_name: siphash
