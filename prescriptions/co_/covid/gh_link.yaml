@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CovidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: covid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'covid' is hosted on GitHub
+        link: https://github.com/ahmednafies/covid
+        package_name: covid
