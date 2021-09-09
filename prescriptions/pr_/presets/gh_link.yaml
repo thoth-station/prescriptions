@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PresetsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: presets
+    run:
+      justification:
+      - type: INFO
+        message: Package 'presets' is hosted on GitHub
+        link: https://github.com/bmcfee/presets
+        package_name: presets
