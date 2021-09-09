@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImagecodecsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagecodecs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'imagecodecs' is hosted on GitHub
+        link: https://github.com/cgohlke/imagecodecs
+        package_name: imagecodecs
