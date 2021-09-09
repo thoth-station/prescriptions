@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PykmipGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykmip
+    run:
+      release_notes:
+        organization: OpenKMIP
+        repository: PyKMIP
+        tag_version_prefix: v
