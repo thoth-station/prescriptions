@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LightfmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lightfm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lightfm' is hosted on GitHub
+        link: https://github.com/lyst/lightfm
+        package_name: lightfm
