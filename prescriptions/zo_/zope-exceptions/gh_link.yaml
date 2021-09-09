@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeExceptionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-exceptions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-exceptions' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.exceptions
+        package_name: zope-exceptions
