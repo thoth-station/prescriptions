@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HexbytesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hexbytes
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hexbytes' is hosted on GitHub
+        link: https://github.com/ethereum/hexbytes
+        package_name: hexbytes
