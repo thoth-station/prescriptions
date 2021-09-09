@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: IdnaSslGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna-ssl
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: idna-ssl
+        tag_version_prefix: v
