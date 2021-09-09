@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BravadoCoreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bravado-core
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bravado-core' is hosted on GitHub
+        link: https://github.com/Yelp/bravado-core
+        package_name: bravado-core
