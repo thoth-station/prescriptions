@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FitsioGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fitsio
+    run:
+      release_notes:
+        organization: esheldon
+        repository: fitsio
+        tag_version_prefix: v
