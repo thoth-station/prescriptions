@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ManholeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: manhole
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-manhole
+        tag_version_prefix: v
