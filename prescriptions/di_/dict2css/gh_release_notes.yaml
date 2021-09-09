@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Dict2cssGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dict2css
+    run:
+      release_notes:
+        organization: sphinx-toolbox
+        repository: dict2css
+        tag_version_prefix: v
