@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BtrfsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btrfs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'btrfs' is hosted on GitHub
+        link: https://github.com/knorrie/python-btrfs
+        package_name: btrfs
