@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HashidGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hashid
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hashid' is hosted on GitHub
+        link: https://github.com/psypanda/hashID
+        package_name: hashid
