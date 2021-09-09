@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GastGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gast
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gast' is hosted on GitHub
+        link: https://github.com/serge-sans-paille/gast
+        package_name: gast
