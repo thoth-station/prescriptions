@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BackportsTimePerfCounterGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-time-perf-counter
+    run:
+      release_notes:
+        organization: ejd
+        repository: backports.time_perf_counter
