@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzingTbNightlyScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tb-nightly
+    run:
+      justification:
+      - type: WARNING
+        message: Project does not use fuzzing based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: tb-nightly
