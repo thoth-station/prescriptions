@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsShutilWhichGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-shutil-which
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backports-shutil-which' is hosted on GitHub
+        link: https://github.com/minrk/backports.shutil_which
+        package_name: backports-shutil-which
