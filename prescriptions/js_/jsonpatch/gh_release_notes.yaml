@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JsonpatchGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpatch
+    run:
+      release_notes:
+        organization: stefankoegl
+        repository: python-json-patch
+        tag_version_prefix: v
