@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TorchcontribGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchcontrib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'torchcontrib' is marked as archived on GitHub
+        link: https://github.com/pytorch/contrib
+        package_name: torchcontrib
