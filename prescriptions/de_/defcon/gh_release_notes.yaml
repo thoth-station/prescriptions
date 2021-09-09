@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DefconGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: defcon
+    run:
+      release_notes:
+        organization: robotools
+        repository: defcon
