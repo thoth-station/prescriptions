@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DevpiCommonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devpi-common
+    run:
+      justification:
+      - type: INFO
+        message: Package 'devpi-common' is hosted on GitHub
+        link: https://github.com/devpi/devpi
+        package_name: devpi-common
