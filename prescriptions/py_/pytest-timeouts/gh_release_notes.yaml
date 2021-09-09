@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestTimeoutsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-timeouts
+    run:
+      release_notes:
+        organization: Scony
+        repository: pytest-timeouts
+        tag_version_prefix: v
