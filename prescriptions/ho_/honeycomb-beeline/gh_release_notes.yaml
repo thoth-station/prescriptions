@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HoneycombBeelineGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: honeycomb-beeline
+    run:
+      release_notes:
+        organization: honeycombio
+        repository: beeline-python
+        tag_version_prefix: v
