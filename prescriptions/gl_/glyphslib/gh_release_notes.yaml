@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GlyphslibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glyphslib
+    run:
+      release_notes:
+        organization: googlefonts
+        repository: glyphsLib
+        tag_version_prefix: v
