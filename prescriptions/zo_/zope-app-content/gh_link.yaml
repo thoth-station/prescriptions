@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppContentGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-content
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-app-content' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.app.content
+        package_name: zope-app-content
