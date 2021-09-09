@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: SlumberGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slumber
+    run:
+      release_notes:
+        organization: samgiles
+        repository: slumber
