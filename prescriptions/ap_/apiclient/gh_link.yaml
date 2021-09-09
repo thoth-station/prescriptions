@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApiclientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apiclient
+    run:
+      justification:
+      - type: INFO
+        message: Package 'apiclient' is hosted on GitHub
+        link: https://github.com/shazow/apiclient
+        package_name: apiclient
