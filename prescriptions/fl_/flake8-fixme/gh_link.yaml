@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8FixmeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-fixme
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flake8-fixme' is hosted on GitHub
+        link: https://github.com/tommilligan/flake8-fixme
+        package_name: flake8-fixme
