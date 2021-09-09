@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SeleniumGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selenium
+    run:
+      justification:
+      - type: INFO
+        message: Package 'selenium' is hosted on GitHub
+        link: https://github.com/SeleniumHQ/selenium
+        package_name: selenium
