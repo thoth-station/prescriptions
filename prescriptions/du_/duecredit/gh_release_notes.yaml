@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DuecreditGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: duecredit
+    run:
+      release_notes:
+        organization: duecredit
+        repository: duecredit
