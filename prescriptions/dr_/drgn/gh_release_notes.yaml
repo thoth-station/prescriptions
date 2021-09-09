@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DrgnGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drgn
+    run:
+      release_notes:
+        organization: osandov
+        repository: drgn
+        tag_version_prefix: v
