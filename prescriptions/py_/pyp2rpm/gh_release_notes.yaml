@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Pyp2rpmGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyp2rpm
+    run:
+      release_notes:
+        organization: fedora-python
+        repository: pyp2rpm
+        tag_version_prefix: v
