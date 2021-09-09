@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyvoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvo
+    run:
+      release_notes:
+        organization: astropy
+        repository: pyvo
+        tag_version_prefix: v
