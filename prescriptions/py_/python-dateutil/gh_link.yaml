@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonDateutilGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dateutil
+    run:
+      justification:
+      - type: INFO
+        message: Package 'python-dateutil' is hosted on GitHub
+        link: https://github.com/dateutil/dateutil
+        package_name: python-dateutil
