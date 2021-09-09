@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RbcProjectGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rbc-project
+    run:
+      release_notes:
+        organization: xnd-project
+        repository: rbc
+        tag_version_prefix: v
