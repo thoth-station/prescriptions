@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoSesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-ses
+    run:
+      release_notes:
+        organization: django-ses
+        repository: django-ses
+        tag_version_prefix: v
