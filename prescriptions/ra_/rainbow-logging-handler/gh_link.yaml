@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RainbowLoggingHandlerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rainbow-logging-handler
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rainbow-logging-handler' is hosted on GitHub
+        link: https://github.com/laysakura/rainbow_logging_handler
+        package_name: rainbow-logging-handler
