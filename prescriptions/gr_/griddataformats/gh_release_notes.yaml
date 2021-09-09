@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GriddataformatsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: griddataformats
+    run:
+      release_notes:
+        organization: MDAnalysis
+        repository: GridDataFormats
