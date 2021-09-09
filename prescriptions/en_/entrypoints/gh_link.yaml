@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EntrypointsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entrypoints
+    run:
+      justification:
+      - type: INFO
+        message: Package 'entrypoints' is hosted on GitHub
+        link: https://github.com/takluyver/entrypoints
+        package_name: entrypoints
