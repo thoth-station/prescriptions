@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArnparseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arnparse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'arnparse' is hosted on GitHub
+        link: https://github.com/PokaInc/arnparse
+        package_name: arnparse
