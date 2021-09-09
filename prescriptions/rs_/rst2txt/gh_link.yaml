@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Rst2txtGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst2txt
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rst2txt' is hosted on GitHub
+        link: https://github.com/stephenfin/rst2txt
+        package_name: rst2txt
