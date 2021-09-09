@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ZopeProxyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-proxy
+    run:
+      release_notes:
+        organization: zopefoundation
+        repository: zope.proxy
