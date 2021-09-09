@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FurlGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: furl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'furl' is hosted on GitHub
+        link: https://github.com/gruns/furl
+        package_name: furl
