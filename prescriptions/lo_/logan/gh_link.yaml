@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LoganGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logan
+    run:
+      justification:
+      - type: INFO
+        message: Package 'logan' is hosted on GitHub
+        link: https://github.com/dcramer/logan
+        package_name: logan
