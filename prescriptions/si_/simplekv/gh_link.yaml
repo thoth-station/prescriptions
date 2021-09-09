@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SimplekvGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplekv
+    run:
+      justification:
+      - type: INFO
+        message: Package 'simplekv' is hosted on GitHub
+        link: https://github.com/mbr/simplekv
+        package_name: simplekv
