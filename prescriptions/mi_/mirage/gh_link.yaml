@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MirageGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mirage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mirage' is hosted on GitHub
+        link: https://github.com/spacetelescope/mirage
+        package_name: mirage
