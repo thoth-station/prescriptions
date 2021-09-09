@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DpktGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dpkt
+    run:
+      release_notes:
+        organization: kbandla
+        repository: dpkt
+        tag_version_prefix: v
