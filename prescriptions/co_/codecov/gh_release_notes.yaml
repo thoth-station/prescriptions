@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CodecovGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codecov
+    run:
+      release_notes:
+        organization: codecov
+        repository: codecov-python
+        tag_version_prefix: v
