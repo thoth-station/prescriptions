@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PingouinGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pingouin
+    run:
+      release_notes:
+        organization: raphaelvallat
+        repository: pingouin
+        tag_version_prefix: v
