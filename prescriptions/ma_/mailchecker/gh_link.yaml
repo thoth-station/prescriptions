@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MailcheckerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailchecker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mailchecker' is hosted on GitHub
+        link: https://github.com/FGRibreau/mailchecker
+        package_name: mailchecker
