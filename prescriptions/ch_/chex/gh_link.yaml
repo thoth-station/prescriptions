@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChexGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chex
+    run:
+      justification:
+      - type: INFO
+        message: Package 'chex' is hosted on GitHub
+        link: https://github.com/deepmind/chex
+        package_name: chex
