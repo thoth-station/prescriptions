@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PywinptyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywinpty
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pywinpty' is hosted on GitHub
+        link: https://github.com/spyder-ide/pywinpty
+        package_name: pywinpty
