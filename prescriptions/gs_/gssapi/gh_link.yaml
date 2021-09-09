@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GssapiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gssapi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gssapi' is hosted on GitHub
+        link: https://github.com/pythongssapi/python-gssapi
+        package_name: gssapi
