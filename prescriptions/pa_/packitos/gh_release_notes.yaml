@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PackitosGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: packitos
+    run:
+      release_notes:
+        organization: packit
+        repository: packit
