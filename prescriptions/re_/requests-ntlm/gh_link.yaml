@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsNtlmGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ntlm
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requests-ntlm' is hosted on GitHub
+        link: https://github.com/requests/requests-ntlm
+        package_name: requests-ntlm
