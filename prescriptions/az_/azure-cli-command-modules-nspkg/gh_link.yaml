@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureCliCommandModulesNspkgGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cli-command-modules-nspkg
+    run:
+      justification:
+      - type: INFO
+        message: Package 'azure-cli-command-modules-nspkg' is hosted on GitHub
+        link: https://github.com/Azure/azure-cli
+        package_name: azure-cli-command-modules-nspkg
