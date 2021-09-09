@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SanctionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanction
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sanction' is hosted on GitHub
+        link: https://github.com/demianbrecht/sanction
+        package_name: sanction
