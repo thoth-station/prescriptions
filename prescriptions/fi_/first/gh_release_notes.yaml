@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FirstGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: first
+    run:
+      release_notes:
+        organization: hynek
+        repository: first
