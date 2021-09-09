@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PsutilGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psutil
+    run:
+      justification:
+      - type: INFO
+        message: Package 'psutil' is hosted on GitHub
+        link: https://github.com/giampaolo/psutil
+        package_name: psutil
