@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EarthpyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: earthpy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'earthpy' is hosted on GitHub
+        link: https://github.com/earthlab/earthpy
+        package_name: earthpy
