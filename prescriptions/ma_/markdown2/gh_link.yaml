@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Markdown2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markdown2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'markdown2' is hosted on GitHub
+        link: https://github.com/trentm/python-markdown2
+        package_name: markdown2
