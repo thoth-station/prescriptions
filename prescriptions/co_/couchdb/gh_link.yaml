@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CouchdbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: couchdb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'couchdb' is hosted on GitHub
+        link: https://github.com/djc/couchdb-python
+        package_name: couchdb
