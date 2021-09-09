@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FlaskBasicauthGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-basicauth
+    run:
+      release_notes:
+        organization: jpvanhal
+        repository: flask-basicauth
+        tag_version_prefix: v
