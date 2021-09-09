@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PySolcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-solc
+    run:
+      release_notes:
+        organization: ethereum
+        repository: py-solc
+        tag_version_prefix: v
