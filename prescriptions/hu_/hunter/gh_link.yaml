@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HunterGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hunter
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hunter' is hosted on GitHub
+        link: https://github.com/ionelmc/python-hunter
+        package_name: hunter
