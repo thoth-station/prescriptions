@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PytestHttpxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-httpx
+    run:
+      release_notes:
+        organization: Colin-b
+        repository: pytest_httpx
+        tag_version_prefix: v
