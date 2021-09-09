@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GabbiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gabbi
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gabbi' is hosted on GitHub
+        link: https://github.com/cdent/gabbi
+        package_name: gabbi
