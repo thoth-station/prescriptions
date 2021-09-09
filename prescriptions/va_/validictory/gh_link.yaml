@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ValidictoryGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validictory
+    run:
+      justification:
+      - type: INFO
+        message: Package 'validictory' is hosted on GitHub
+        link: https://github.com/jamesturk/validictory
+        package_name: validictory
