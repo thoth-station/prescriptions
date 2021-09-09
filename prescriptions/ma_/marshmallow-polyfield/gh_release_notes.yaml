@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MarshmallowPolyfieldGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-polyfield
+    run:
+      release_notes:
+        organization: Bachmann1234
+        repository: marshmallow-polyfield
+        tag_version_prefix: v
