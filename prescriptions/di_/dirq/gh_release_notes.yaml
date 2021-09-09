@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DirqGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dirq
+    run:
+      release_notes:
+        organization: cern-mig
+        repository: python-dirq
+        tag_version_prefix: v
