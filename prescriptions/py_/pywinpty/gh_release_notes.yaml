@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PywinptyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywinpty
+    run:
+      release_notes:
+        organization: spyder-ide
+        repository: pywinpty
+        tag_version_prefix: v
