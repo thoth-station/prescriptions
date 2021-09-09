@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: StreamlinkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: streamlink
+    run:
+      release_notes:
+        organization: streamlink
+        repository: streamlink
