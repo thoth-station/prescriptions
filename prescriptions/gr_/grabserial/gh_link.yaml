@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrabserialGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabserial
+    run:
+      justification:
+      - type: INFO
+        message: Package 'grabserial' is hosted on GitHub
+        link: https://github.com/straend/grabserial
+        package_name: grabserial
