@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NewlinejsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: newlinejson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'newlinejson' is hosted on GitHub
+        link: https://github.com/geowurster/NewlineJSON
+        package_name: newlinejson
