@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoItertoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-itertools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jaraco-itertools' is hosted on GitHub
+        link: https://github.com/jaraco/jaraco.itertools
+        package_name: jaraco-itertools
