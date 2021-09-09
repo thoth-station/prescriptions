@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FactoryBoyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: factory-boy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'factory-boy' is hosted on GitHub
+        link: https://github.com/FactoryBoy/factory_boy
+        package_name: factory-boy
