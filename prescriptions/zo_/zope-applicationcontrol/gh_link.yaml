@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeApplicationcontrolGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-applicationcontrol
+    run:
+      justification:
+      - type: INFO
+        message: Package 'zope-applicationcontrol' is hosted on GitHub
+        link: https://github.com/zopefoundation/zope.applicationcontrol
+        package_name: zope-applicationcontrol
