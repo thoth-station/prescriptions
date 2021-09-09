@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MystParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: myst-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'myst-parser' is hosted on GitHub
+        link: https://github.com/executablebooks/MyST-Parser
+        package_name: myst-parser
