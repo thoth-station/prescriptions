@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PythonMultipartGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-multipart
+    run:
+      release_notes:
+        organization: andrew-d
+        repository: python-multipart
