@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlivetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blivet
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blivet' is hosted on GitHub
+        link: https://github.com/storaged-project/blivet
+        package_name: blivet
