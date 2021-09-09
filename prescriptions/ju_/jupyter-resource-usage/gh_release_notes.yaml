@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JupyterResourceUsageGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-resource-usage
+    run:
+      release_notes:
+        organization: jupyter-server
+        repository: jupyter-resource-usage
