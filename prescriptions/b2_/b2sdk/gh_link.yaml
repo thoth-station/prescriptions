@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: B2sdkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: b2sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'b2sdk' is hosted on GitHub
+        link: https://github.com/Backblaze/b2-sdk-python
+        package_name: b2sdk
