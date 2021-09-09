@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsStepfunctionsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-stepfunctions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-aws-stepfunctions' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-stepfunctions
