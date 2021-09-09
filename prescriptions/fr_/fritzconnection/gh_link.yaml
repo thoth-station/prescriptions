@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FritzconnectionGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fritzconnection
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fritzconnection' is hosted on GitHub
+        link: https://github.com/kbr/fritzconnection
+        package_name: fritzconnection
