@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MarkupsafeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markupsafe
+    run:
+      justification:
+      - type: INFO
+        message: Package 'markupsafe' is hosted on GitHub
+        link: https://github.com/pallets/markupsafe
+        package_name: markupsafe
