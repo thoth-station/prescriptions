@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YandexcloudGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yandexcloud
+    run:
+      justification:
+      - type: INFO
+        message: Package 'yandexcloud' is hosted on GitHub
+        link: https://github.com/yandex-cloud/python-sdk
+        package_name: yandexcloud
