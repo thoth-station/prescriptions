@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TensorboardxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboardx
+    run:
+      release_notes:
+        organization: lanpa
+        repository: tensorboardX
+        tag_version_prefix: v
