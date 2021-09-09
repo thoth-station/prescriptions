@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TfNightlyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tf-nightly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tf-nightly' is hosted on GitHub
+        link: https://github.com/tensorflow/tensorflow
+        package_name: tf-nightly
