@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTapGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tap
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytest-tap' is hosted on GitHub
+        link: https://github.com/python-tap/pytest-tap
+        package_name: pytest-tap
