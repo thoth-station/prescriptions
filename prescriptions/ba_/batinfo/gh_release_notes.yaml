@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BatinfoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batinfo
+    run:
+      release_notes:
+        organization: nicolargo
+        repository: batinfo
+        tag_version_prefix: v
