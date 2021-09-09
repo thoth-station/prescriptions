@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncprawGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncpraw
+    run:
+      justification:
+      - type: INFO
+        message: Package 'asyncpraw' is hosted on GitHub
+        link: https://github.com/praw-dev/asyncpraw
+        package_name: asyncpraw
