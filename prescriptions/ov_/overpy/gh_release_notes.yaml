@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: OverpyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: overpy
+    run:
+      release_notes:
+        organization: DinoTools
+        repository: python-overpy
