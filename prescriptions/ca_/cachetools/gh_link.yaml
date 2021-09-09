@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachetoolsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachetools
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cachetools' is hosted on GitHub
+        link: https://github.com/tkem/cachetools
+        package_name: cachetools
