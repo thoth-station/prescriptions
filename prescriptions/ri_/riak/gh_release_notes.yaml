@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: RiakGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riak
+    run:
+      release_notes:
+        organization: basho
+        repository: riak-python-client
