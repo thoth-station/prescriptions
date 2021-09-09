@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AndroguardGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: androguard
+    run:
+      justification:
+      - type: INFO
+        message: Package 'androguard' is hosted on GitHub
+        link: https://github.com/androguard/androguard
+        package_name: androguard
