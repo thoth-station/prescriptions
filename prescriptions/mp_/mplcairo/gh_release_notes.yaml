@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MplcairoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mplcairo
+    run:
+      release_notes:
+        organization: matplotlib
+        repository: mplcairo
+        tag_version_prefix: v
