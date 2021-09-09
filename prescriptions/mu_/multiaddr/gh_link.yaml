@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MultiaddrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multiaddr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'multiaddr' is hosted on GitHub
+        link: https://github.com/multiformats/py-multiaddr
+        package_name: multiaddr
