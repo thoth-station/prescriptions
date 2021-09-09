@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DocstringParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docstring-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'docstring-parser' is hosted on GitHub
+        link: https://github.com/rr-/docstring_parser
+        package_name: docstring-parser
