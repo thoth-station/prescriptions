@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonUtilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-utils
+    run:
+      release_notes:
+        organization: WoLpH
+        repository: python-utils
+        tag_version_prefix: v
