@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PastelGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastel
+    run:
+      release_notes:
+        organization: sdispater
+        repository: pastel
