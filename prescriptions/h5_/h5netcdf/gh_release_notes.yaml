@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: H5netcdfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h5netcdf
+    run:
+      release_notes:
+        organization: h5netcdf
+        repository: h5netcdf
+        tag_version_prefix: v
