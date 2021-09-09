@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterServerProxyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-server-proxy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-server-proxy' is hosted on GitHub
+        link: https://github.com/jupyterhub/jupyter-server-proxy
+        package_name: jupyter-server-proxy
