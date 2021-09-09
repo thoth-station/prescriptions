@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CssParserGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: css-parser
+    run:
+      justification:
+      - type: INFO
+        message: Package 'css-parser' is hosted on GitHub
+        link: https://github.com/ebook-utils/css-parser
+        package_name: css-parser
