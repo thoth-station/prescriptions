@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CoverageEnableSubprocessGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage-enable-subprocess
+    run:
+      release_notes:
+        organization: bukzor
+        repository: python-coverage-enable-subprocess
+        tag_version_prefix: v
