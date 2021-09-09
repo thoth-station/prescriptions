@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: UcMicroPyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uc-micro-py
+    run:
+      release_notes:
+        organization: tsutsu3
+        repository: uc.micro-py
+        tag_version_prefix: v
