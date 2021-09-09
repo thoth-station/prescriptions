@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GlogGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glog
+    run:
+      release_notes:
+        organization: benley
+        repository: python-glog
