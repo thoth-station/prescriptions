@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArtifactsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: artifacts
+    run:
+      justification:
+      - type: INFO
+        message: Package 'artifacts' is hosted on GitHub
+        link: https://github.com/ForensicArtifacts/artifacts
+        package_name: artifacts
