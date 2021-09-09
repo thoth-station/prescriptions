@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PysmbcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmbc
+    run:
+      release_notes:
+        organization: hamano
+        repository: pysmbc
