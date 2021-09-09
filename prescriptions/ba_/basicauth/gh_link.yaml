@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BasicauthGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basicauth
+    run:
+      justification:
+      - type: INFO
+        message: Package 'basicauth' is hosted on GitHub
+        link: https://github.com/rdegges/python-basicauth
+        package_name: basicauth
