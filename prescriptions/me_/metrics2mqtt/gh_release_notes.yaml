@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Metrics2mqttGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metrics2mqtt
+    run:
+      release_notes:
+        organization: jamiebegin
+        repository: metrics2mqtt
+        tag_version_prefix: v
