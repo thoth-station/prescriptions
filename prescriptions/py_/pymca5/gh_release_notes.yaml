@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Pymca5GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymca5
+    run:
+      release_notes:
+        organization: vasole
+        repository: pymca
+        tag_version_prefix: v
