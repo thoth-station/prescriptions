@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiosecretsdumpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosecretsdump
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiosecretsdump' is hosted on GitHub
+        link: https://github.com/skelsec/aiosecretsdump
+        package_name: aiosecretsdump
