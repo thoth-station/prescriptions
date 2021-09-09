@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EpitranGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epitran
+    run:
+      justification:
+      - type: INFO
+        message: Package 'epitran' is hosted on GitHub
+        link: https://github.com/dmort27/epitran
+        package_name: epitran
