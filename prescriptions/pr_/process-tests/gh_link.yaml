@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProcessTestsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: process-tests
+    run:
+      justification:
+      - type: INFO
+        message: Package 'process-tests' is hosted on GitHub
+        link: https://github.com/ionelmc/python-process-tests
+        package_name: process-tests
