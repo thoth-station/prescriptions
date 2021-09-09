@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoBitfieldGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-bitfield
+    run:
+      justification:
+      - type: INFO
+        message: Package 'django-bitfield' is hosted on GitHub
+        link: https://github.com/disqus/django-bitfield
+        package_name: django-bitfield
