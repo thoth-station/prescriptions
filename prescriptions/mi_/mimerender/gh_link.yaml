@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MimerenderGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimerender
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mimerender' is hosted on GitHub
+        link: https://github.com/martinblech/mimerender
+        package_name: mimerender
