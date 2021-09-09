@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TifffileGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tifffile
+    run:
+      release_notes:
+        organization: cgohlke
+        repository: tifffile
+        tag_version_prefix: v
