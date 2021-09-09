@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkCustomResourcesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-custom-resources
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aws-cdk-custom-resources' is hosted on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-custom-resources
