@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OrjsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: orjson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'orjson' is hosted on GitHub
+        link: https://github.com/ijl/orjson
+        package_name: orjson
