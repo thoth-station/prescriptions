@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SignedTagsSklearnPandasScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sklearn-pandas
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT cryptographically sign tags based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: sklearn-pandas
