@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NetmikoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netmiko
+    run:
+      justification:
+      - type: INFO
+        message: Package 'netmiko' is hosted on GitHub
+        link: https://github.com/ktbyers/netmiko
+        package_name: netmiko
