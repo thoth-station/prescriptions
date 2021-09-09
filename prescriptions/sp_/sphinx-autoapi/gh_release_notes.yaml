@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxAutoapiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autoapi
+    run:
+      release_notes:
+        organization: readthedocs
+        repository: sphinx-autoapi
+        tag_version_prefix: v
