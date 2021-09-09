@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SecurityPolicyTenacityScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tenacity
+    run:
+      justification:
+      - type: WARNING
+        message: Project does not have any security policy published based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: tenacity
