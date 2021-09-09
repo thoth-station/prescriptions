@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ReAssertGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: re-assert
+    run:
+      release_notes:
+        organization: asottile
+        repository: re-assert
+        tag_version_prefix: v
