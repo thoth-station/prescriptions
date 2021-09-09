@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyreCheckGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyre-check
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyre-check' is hosted on GitHub
+        link: https://github.com/facebook/pyre-check
+        package_name: pyre-check
