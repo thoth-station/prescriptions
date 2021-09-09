@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SalesforceBulkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: salesforce-bulk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'salesforce-bulk' is hosted on GitHub
+        link: https://github.com/heroku/salesforce-bulk
+        package_name: salesforce-bulk
