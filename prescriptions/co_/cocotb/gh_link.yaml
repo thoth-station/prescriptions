@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CocotbGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cocotb
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cocotb' is hosted on GitHub
+        link: https://github.com/cocotb/cocotb
+        package_name: cocotb
