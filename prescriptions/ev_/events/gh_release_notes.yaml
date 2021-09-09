@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EventsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: events
+    run:
+      release_notes:
+        organization: pyeve
+        repository: events
+        tag_version_prefix: v
