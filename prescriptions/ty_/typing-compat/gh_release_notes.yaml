@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TypingCompatGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-compat
+    run:
+      release_notes:
+        organization: rossmacarthur
+        repository: typing-compat
