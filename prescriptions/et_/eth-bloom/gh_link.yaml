@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthBloomGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-bloom
+    run:
+      justification:
+      - type: INFO
+        message: Package 'eth-bloom' is hosted on GitHub
+        link: https://github.com/ethereum/eth-bloom
+        package_name: eth-bloom
