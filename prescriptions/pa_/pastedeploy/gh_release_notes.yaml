@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PastedeployGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastedeploy
+    run:
+      release_notes:
+        organization: Pylons
+        repository: pastedeploy
