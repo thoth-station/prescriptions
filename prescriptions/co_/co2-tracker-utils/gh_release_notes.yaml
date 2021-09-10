@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Co2TrackerUtilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: co2-tracker-utils
+    run:
+      release_notes:
+        organization: comet-ml
+        repository: co2-tracker-utils
