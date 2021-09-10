@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BottleneckGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bottleneck
+    run:
+      release_notes:
+        organization: pydata
+        repository: bottleneck
+        tag_version_prefix: v
