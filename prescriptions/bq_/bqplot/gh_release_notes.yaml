@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BqplotGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bqplot
+    run:
+      release_notes:
+        organization: bqplot
+        repository: bqplot
