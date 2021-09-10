@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AwsCdkAwsConnectGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-connect
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-cdk
+        tag_version_prefix: v
