@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CanonicaljsonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: canonicaljson
+    run:
+      release_notes:
+        organization: matrix-org
+        repository: python-canonicaljson
+        tag_version_prefix: v
