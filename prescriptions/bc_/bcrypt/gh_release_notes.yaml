@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BcryptGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcrypt
+    run:
+      release_notes:
+        organization: pyca
+        repository: bcrypt
