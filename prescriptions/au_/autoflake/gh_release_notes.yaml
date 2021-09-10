@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AutoflakeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoflake
+    run:
+      release_notes:
+        organization: myint
+        repository: autoflake
+        tag_version_prefix: v
