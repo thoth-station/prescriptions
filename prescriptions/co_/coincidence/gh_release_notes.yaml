@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CoincidenceGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coincidence
+    run:
+      release_notes:
+        organization: python-coincidence
+        repository: coincidence
+        tag_version_prefix: v
