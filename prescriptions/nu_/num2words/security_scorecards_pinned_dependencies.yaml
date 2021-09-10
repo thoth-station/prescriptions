@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PinnedDependenciesNum2wordsScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: num2words
+    run:
+      justification:
+      - type: INFO
+        message: Project uses pinned dependencies based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: num2words
