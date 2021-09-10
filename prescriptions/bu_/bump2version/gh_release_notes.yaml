@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Bump2versionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bump2version
+    run:
+      release_notes:
+        organization: c4urself
+        repository: bump2version
+        tag_version_prefix: v
