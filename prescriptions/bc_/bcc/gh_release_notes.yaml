@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BccGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcc
+    run:
+      release_notes:
+        organization: willsheffler
+        repository: bcc
+        tag_version_prefix: v
