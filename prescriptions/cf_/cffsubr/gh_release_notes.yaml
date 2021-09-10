@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CffsubrGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cffsubr
+    run:
+      release_notes:
+        organization: adobe-type-tools
+        repository: cffsubr
+        tag_version_prefix: v
