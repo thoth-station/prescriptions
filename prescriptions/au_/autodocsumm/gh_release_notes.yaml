@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AutodocsummGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autodocsumm
+    run:
+      release_notes:
+        organization: Chilipp
+        repository: autodocsumm
+        tag_version_prefix: v
