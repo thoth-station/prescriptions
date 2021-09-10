@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CekitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cekit
+    run:
+      release_notes:
+        organization: cekit
+        repository: cekit
