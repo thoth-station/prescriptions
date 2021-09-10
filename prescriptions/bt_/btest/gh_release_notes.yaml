@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BtestGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btest
+    run:
+      release_notes:
+        organization: zeek
+        repository: btest
+        tag_version_prefix: v
