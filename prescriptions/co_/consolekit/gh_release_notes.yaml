@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ConsolekitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: consolekit
+    run:
+      release_notes:
+        organization: domdfcoding
+        repository: consolekit
+        tag_version_prefix: v
