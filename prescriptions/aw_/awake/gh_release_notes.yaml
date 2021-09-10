@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AwakeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awake
+    run:
+      release_notes:
+        organization: cyraxjoe
+        repository: awake
+        tag_version_prefix: v
