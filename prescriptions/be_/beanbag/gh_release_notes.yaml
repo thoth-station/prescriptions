@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BeanbagGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beanbag
+    run:
+      release_notes:
+        organization: ajtowns
+        repository: beanbag
