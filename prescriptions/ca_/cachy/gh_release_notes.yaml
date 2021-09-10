@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CachyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachy
+    run:
+      release_notes:
+        organization: sdispater
+        repository: cachy
