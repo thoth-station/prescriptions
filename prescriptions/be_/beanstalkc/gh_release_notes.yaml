@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BeanstalkcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beanstalkc
+    run:
+      release_notes:
+        organization: earl
+        repository: beanstalkc
+        tag_version_prefix: v
