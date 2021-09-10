@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BashoErlasticGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basho-erlastic
+    run:
+      release_notes:
+        organization: basho
+        repository: python-erlastic
+        tag_version_prefix: v
