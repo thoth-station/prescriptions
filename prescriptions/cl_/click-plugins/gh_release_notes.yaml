@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ClickPluginsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-plugins
+    run:
+      release_notes:
+        organization: click-contrib
+        repository: click-plugins
