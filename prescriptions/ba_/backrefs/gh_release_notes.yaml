@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BackrefsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backrefs
+    run:
+      release_notes:
+        organization: facelessuser
+        repository: backrefs
