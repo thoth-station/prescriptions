@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AwsCdkAwsRoute53resolverGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-route53resolver
+    run:
+      release_notes:
+        organization: aws
+        repository: aws-cdk
+        tag_version_prefix: v
