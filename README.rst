@@ -26,8 +26,8 @@ requirements for the application and other inputs to the Thoth's cloud
 resolver.
 
 See `the linked presentation
-<https://github.com/thoth-station/prescriptions/blob/master/Documentation/presentation.pdf>`__
-or `YouTube video <https://youtu.be/dg6_WhUK5Ew>`__ for more info.
+<https://docs.google.com/viewer?url=https://github.com/thoth-station/talks/raw/master/2021-09-03-devconf-us/thoth_healing_python_applications.pdf>`__
+or `YouTube video <https://www.youtube.com/watch?v=SQO2yTQ_OD4>`__ for more info.
 
 How to write a prescription?
 ============================
