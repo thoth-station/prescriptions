@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CompalGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: compal
+    run:
+      release_notes:
+        organization: ties
+        repository: compal_CH7465LG_py
+        tag_version_prefix: v
