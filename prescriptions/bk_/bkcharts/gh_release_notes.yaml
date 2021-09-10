@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BkchartsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bkcharts
+    run:
+      release_notes:
+        organization: bokeh
+        repository: bkcharts
