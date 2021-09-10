@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: B2sdkGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: b2sdk
+    run:
+      release_notes:
+        organization: Backblaze
+        repository: b2-sdk-python
+        tag_version_prefix: v
