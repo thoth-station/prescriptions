@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CaptumGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: captum
+    run:
+      release_notes:
+        organization: pytorch
+        repository: captum
+        tag_version_prefix: v
