@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodeReviewPythonHcl2ScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-hcl2
+    run:
+      justification:
+      - type: INFO
+        message: Project requires code review before the code is merged based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: python-hcl2
