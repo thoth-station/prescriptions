@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ColumnizeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: columnize
+    run:
+      release_notes:
+        organization: rocky
+        repository: pycolumnize
