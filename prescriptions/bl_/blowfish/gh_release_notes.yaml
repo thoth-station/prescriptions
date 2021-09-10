@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BlowfishGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blowfish
+    run:
+      release_notes:
+        organization: jashandeep-sohi
+        repository: python-blowfish
+        tag_version_prefix: v
