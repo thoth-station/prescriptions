@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ClickConfigFileGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-config-file
+    run:
+      release_notes:
+        organization: phha
+        repository: click_config_file
+        tag_version_prefix: v
