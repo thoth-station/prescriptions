@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CarrotGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: carrot
+    run:
+      release_notes:
+        organization: ask
+        repository: carrot
+        tag_version_prefix: v
