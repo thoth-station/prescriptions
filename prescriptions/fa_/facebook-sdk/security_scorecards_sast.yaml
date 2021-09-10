@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SASTFacebookSdkScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT use static source code analysis based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: facebook-sdk

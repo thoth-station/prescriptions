@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzingAwsCdkAwsRoute53TargetsScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-route53-targets
+    run:
+      justification:
+      - type: WARNING
+        message: Project does not use fuzzing based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: aws-cdk-aws-route53-targets

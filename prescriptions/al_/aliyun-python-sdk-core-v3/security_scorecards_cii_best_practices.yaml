@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CIIBestPracticesAliyunPythonSdkCoreV3ScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aliyun-python-sdk-core-v3
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT honour CII Best Practices based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: aliyun-python-sdk-core-v3

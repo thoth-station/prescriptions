@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SecurityPolicyGlancesScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glances
+    run:
+      justification:
+      - type: WARNING
+        message: Project does not have any security policy published based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: glances

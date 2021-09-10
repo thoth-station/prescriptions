@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SignedTagsGcsOauth2BotoPluginScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcs-oauth2-boto-plugin
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT cryptographically sign tags based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: gcs-oauth2-boto-plugin

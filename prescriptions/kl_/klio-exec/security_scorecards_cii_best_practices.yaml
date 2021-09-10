@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CIIBestPracticesKlioExecScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: klio-exec
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT honour CII Best Practices based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: klio-exec

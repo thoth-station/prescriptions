@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BinaryArtifactsGoogleCrc32cScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-crc32c
+    run:
+      justification:
+      - type: INFO
+        message: Project does not have binary artifacts in the source repository
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: google-crc32c

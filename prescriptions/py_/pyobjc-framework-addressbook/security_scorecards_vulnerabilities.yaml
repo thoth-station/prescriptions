@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VulnerabilitiesPyobjcFrameworkAddressbookScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-addressbook
+    run:
+      justification:
+      - type: INFO
+        message: Project does not have open or unfixed vulnerabilities on the OSV service based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: pyobjc-framework-addressbook
