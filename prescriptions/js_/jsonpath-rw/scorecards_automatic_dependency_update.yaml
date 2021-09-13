@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutomaticDependencyUpdateJsonpathRwScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpath-rw
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT use tools for automatic dependency updates based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: jsonpath-rw
