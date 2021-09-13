@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutomaticDependencyUpdateTrustmeScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trustme
+    run:
+      justification:
+      - type: INFO
+        message: Project uses tools for automatic dependency updates based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: trustme

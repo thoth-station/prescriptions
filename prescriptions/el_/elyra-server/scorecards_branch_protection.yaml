@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BranchProtectionElyraServerScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elyra-server
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT have branch protection setup based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: elyra-server
