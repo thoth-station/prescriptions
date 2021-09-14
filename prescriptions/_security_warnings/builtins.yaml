@@ -1,0 +1,26 @@
+units:
+  wraps:
+  - name: ExecSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        __builtins__:
+        - __builtins__.exec
+    run:
+      stack_info:
+      - type: WARNING
+        message: Using dynamic code execution using exec() can introduce a security risk
+        link: https://docs.python.org/3/library/functions.html#exec
+  - name: EvalSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        __builtins__:
+        - __builtins__.eval
+    run:
+      stack_info:
+      - type: WARNING
+        message: Executing arbitrary code using eval() can introduce a security risk
+        link: https://docs.python.org/3/library/functions.html#eval
