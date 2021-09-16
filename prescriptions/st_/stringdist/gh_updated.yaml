@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StringdistGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stringdist
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stringdist' was last updated at 2017-05-11 07:58:16
+        link: https://github.com/obulkin/string-dist
+        package_name: stringdist
