@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZdeskGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zdesk
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zdesk' was last updated at 2018-09-07 14:41:36
+        link: https://github.com/fprimex/zdesk
+        package_name: zdesk
