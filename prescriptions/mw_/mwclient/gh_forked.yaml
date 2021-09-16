@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MwclientGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mwclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mwclient' is a GitHub fork
+        link: https://github.com/btongminh/mwclient
+        package_name: mwclient
