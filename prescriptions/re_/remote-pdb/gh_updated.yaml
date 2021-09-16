@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RemotePdbGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: remote-pdb
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'remote-pdb' was last updated at 2020-07-24 13:30:09
+        link: https://github.com/ionelmc/python-remote-pdb
+        package_name: remote-pdb
