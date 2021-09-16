@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RangehttpserverGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rangehttpserver
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rangehttpserver' was last updated at 2018-08-06 11:49:32
+        link: https://github.com/danvk/RangeHTTPServer
+        package_name: rangehttpserver
