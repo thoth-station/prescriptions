@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShrubPyGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shrub-py
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'shrub-py' is a GitHub fork
+        link: https://github.com/evergreen-ci/shrub.py
+        package_name: shrub-py
