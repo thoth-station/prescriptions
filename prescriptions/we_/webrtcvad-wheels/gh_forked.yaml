@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebrtcvadWheelsGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webrtcvad-wheels
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'webrtcvad-wheels' is a GitHub fork
+        link: https://github.com/daanzu/py-webrtcvad-wheels
+        package_name: webrtcvad-wheels
