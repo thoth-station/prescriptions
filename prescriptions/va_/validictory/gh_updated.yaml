@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ValidictoryGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validictory
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'validictory' was last updated at 2017-12-01 19:01:00
+        link: https://github.com/jamesturk/validictory
+        package_name: validictory
