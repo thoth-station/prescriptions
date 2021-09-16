@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsHtmlGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-html
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-html' is a GitHub fork
+        link: https://github.com/kennethreitz/requests-html
+        package_name: requests-html
