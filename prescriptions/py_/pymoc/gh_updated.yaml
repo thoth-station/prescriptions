@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymocGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymoc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pymoc' was last updated at 2017-07-14 00:06:42
+        link: https://github.com/grahambell/pymoc
+        package_name: pymoc
