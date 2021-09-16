@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VobjectGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vobject
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'vobject' was last updated at 2018-07-18 18:28:54
+        link: https://github.com/eventable/vobject
+        package_name: vobject
