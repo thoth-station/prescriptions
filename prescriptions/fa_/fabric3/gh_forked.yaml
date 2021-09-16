@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Fabric3GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fabric3
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fabric3' is a GitHub fork
+        link: https://github.com/mathiasertl/fabric
+        package_name: fabric3
