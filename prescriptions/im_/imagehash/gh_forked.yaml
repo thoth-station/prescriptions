@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImagehashGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagehash
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'imagehash' is a GitHub fork
+        link: https://github.com/JohannesBuchner/imagehash
+        package_name: imagehash
