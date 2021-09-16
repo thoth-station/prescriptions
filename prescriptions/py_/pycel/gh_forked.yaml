@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycelGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycel
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pycel' is a GitHub fork
+        link: https://github.com/stephenrauch/pycel
+        package_name: pycel
