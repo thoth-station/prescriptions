@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpamwatchGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spamwatch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'spamwatch' was last updated at 2020-06-12 03:24:33
+        link: https://github.com/SpamWatch/spamwatch-py
+        package_name: spamwatch
