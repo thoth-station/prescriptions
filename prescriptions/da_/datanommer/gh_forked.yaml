@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatanommerGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datanommer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'datanommer' is a GitHub fork
+        link: https://github.com/ralphbean/datanommer
+        package_name: datanommer
