@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SparkParserGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spark-parser
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'spark-parser' was last updated at 2020-07-06 09:22:08
+        link: https://github.com/rocky/python-spark
+        package_name: spark-parser
