@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SimplevisorGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplevisor
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'simplevisor' was last updated at 2020-03-16 15:01:05
+        link: https://github.com/cern-mig/python-simplevisor
+        package_name: simplevisor
