@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ContextilyGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contextily
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'contextily' is a GitHub fork
+        link: https://github.com/darribas/contextily
+        package_name: contextily
