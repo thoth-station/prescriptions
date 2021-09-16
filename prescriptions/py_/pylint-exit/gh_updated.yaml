@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintExitGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-exit
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylint-exit' was last updated at 2020-07-15 22:10:59
+        link: https://github.com/jongracecox/pylint-exit
+        package_name: pylint-exit
