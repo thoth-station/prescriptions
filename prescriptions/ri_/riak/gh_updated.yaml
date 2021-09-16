@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RiakGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riak
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'riak' was last updated at 2018-03-20 09:35:17
+        link: https://github.com/basho/riak-python-client
+        package_name: riak
