@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FysomGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fysom
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fysom' is a GitHub fork
+        link: https://github.com/mriehl/fysom
+        package_name: fysom
