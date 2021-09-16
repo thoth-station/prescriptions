@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonpathNgGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpath-ng
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'jsonpath-ng' is a GitHub fork
+        link: https://github.com/h2non/jsonpath-ng
+        package_name: jsonpath-ng
