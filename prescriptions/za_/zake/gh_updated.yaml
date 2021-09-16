@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZakeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zake
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zake' was last updated at 2020-08-31T11:27:05Z
+        link: https://github.com/yahoo/Zake
+        package_name: zake
