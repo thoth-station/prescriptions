@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QrencodeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qrencode
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'qrencode' was last updated at 2019-05-22 01:35:04
+        link: https://github.com/Arachnid/pyqrencode
+        package_name: qrencode
