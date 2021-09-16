@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: us
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'us' was last updated at 2020-04-29 15:08:18
+        link: https://github.com/unitedstates/python-us
+        package_name: us
