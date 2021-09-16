@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RatelimitingfilterGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimitingfilter
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ratelimitingfilter' was last updated at 2019-04-01 08:44:26
+        link: https://github.com/wkeeling/ratelimitingfilter
+        package_name: ratelimitingfilter
