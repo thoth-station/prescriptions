@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TubesGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tubes
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tubes' was last updated at 2020-05-25 06:52:22
+        link: https://github.com/twisted/tubes
+        package_name: tubes
