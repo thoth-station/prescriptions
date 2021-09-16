@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: J2cliGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: j2cli
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'j2cli' is a GitHub fork
+        link: https://github.com/kolypto/j2cli
+        package_name: j2cli
