@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpdxGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spdx
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'spdx' was last updated at 2016-10-29 03:14:24
+        link: https://github.com/bbqsrc/spdx-python
+        package_name: spdx
