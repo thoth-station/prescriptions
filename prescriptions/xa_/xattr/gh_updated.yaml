@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XattrGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xattr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'xattr' was last updated at 2020-01-21 16:01:56
+        link: https://github.com/xattr/xattr
+        package_name: xattr
