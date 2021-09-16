@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnowflakeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snowflake
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'snowflake' was last updated at 2018-05-28 06:07:47
+        link: https://github.com/shaddi/snowflake
+        package_name: snowflake
