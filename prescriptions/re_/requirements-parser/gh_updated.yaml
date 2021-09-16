@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequirementsParserGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requirements-parser
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requirements-parser' was last updated at 2020-03-31 20:34:11
+        link: https://github.com/davidfischer/requirements-parser
+        package_name: requirements-parser
