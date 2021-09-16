@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ToxVenvGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-venv
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tox-venv' was last updated at 2020-07-23 13:59:01
+        link: https://github.com/tox-dev/tox-venv
+        package_name: tox-venv
