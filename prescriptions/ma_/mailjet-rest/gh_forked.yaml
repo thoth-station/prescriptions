@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MailjetRestGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailjet-rest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mailjet-rest' is a GitHub fork
+        link: https://github.com/mailjet/mailjet-apiv3-python
+        package_name: mailjet-rest
