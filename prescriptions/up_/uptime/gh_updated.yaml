@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UptimeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uptime
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'uptime' was last updated at 2015-10-25 14:56:24
+        link: https://github.com/Cairnarvon/uptime
+        package_name: uptime
