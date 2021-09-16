@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsJwtGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-jwt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-jwt' was last updated at 2018-12-11 21:40:59
+        link: https://github.com/tgs/requests-jwt
+        package_name: requests-jwt
