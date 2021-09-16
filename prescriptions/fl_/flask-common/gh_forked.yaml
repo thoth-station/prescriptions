@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskCommonGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-common
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-common' is a GitHub fork
+        link: https://github.com/kennethreitz/flask-common
+        package_name: flask-common
