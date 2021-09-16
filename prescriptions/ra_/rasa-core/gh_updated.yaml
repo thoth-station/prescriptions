@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RasaCoreGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasa-core
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rasa-core' was last updated at 2019-05-20 14:25:16
+        link: https://github.com/rasahq/rasa_core
+        package_name: rasa-core
