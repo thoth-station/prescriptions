@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjDatabaseUrlGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dj-database-url
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dj-database-url' is a GitHub fork
+        link: https://github.com/kennethreitz/dj-database-url
+        package_name: dj-database-url
