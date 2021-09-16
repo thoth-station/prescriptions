@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReadlikeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readlike
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'readlike' was last updated at 2018-05-29 20:57:35
+        link: https://github.com/jangler/readlike
+        package_name: readlike
