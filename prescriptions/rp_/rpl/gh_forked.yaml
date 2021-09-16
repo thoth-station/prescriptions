@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RplGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpl
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rpl' is a GitHub fork
+        link: https://github.com/rrthomas/rpl
+        package_name: rpl
