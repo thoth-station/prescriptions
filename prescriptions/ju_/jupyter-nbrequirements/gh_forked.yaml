@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterNbrequirementsGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-nbrequirements
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'jupyter-nbrequirements' is a GitHub fork
+        link: https://github.com/CermakM/jupyter-nbrequirements
+        package_name: jupyter-nbrequirements
