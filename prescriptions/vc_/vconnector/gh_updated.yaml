@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VconnectorGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vconnector
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'vconnector' was last updated at 2019-10-29 07:59:47
+        link: https://github.com/dnaeon/py-vconnector
+        package_name: vconnector
