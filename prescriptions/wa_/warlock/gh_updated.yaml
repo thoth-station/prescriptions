@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WarlockGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: warlock
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'warlock' was last updated at 2020-02-09 11:11:04
+        link: https://github.com/bcwaldon/warlock
+        package_name: warlock
