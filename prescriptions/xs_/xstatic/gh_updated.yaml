@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XstaticGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xstatic
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'xstatic' was last updated at 2020-09-02 10:06:31
+        link: https://github.com/xstatic-py/xstatic
+        package_name: xstatic
