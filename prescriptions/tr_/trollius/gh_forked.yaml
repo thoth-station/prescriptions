@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TrolliusGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trollius
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'trollius' is a GitHub fork
+        link: https://github.com/jamadden/trollius
+        package_name: trollius
