@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slack
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'slack' was last updated at 2014-05-27 08:05:23
+        link: https://github.com/zweifisch/slack
+        package_name: slack
