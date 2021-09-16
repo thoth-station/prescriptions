@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RlrGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rlr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rlr' was last updated at 2020-03-31 21:00:09
+        link: https://github.com/dedupeio/rlr
+        package_name: rlr
