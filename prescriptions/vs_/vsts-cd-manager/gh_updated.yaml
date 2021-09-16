@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VstsCdManagerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsts-cd-manager
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'vsts-cd-manager' was last updated at 2020-01-31 05:58:41
+        link: https://github.com/microsoft/vsts-cd-manager
+        package_name: vsts-cd-manager
