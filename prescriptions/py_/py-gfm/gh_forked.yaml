@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyGfmGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-gfm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'py-gfm' is a GitHub fork
+        link: https://github.com/zopieux/py-gfm
+        package_name: py-gfm
