@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SieveGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sieve
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sieve' was last updated at 2013-09-11 12:57:56
+        link: https://github.com/ralphbean/sieve
+        package_name: sieve
