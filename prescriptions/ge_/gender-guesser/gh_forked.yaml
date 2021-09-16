@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GenderGuesserGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gender-guesser
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gender-guesser' is a GitHub fork
+        link: https://github.com/lead-ratings/gender-guesser
+        package_name: gender-guesser
