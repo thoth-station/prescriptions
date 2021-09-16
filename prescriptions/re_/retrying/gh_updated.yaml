@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetryingGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retrying
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'retrying' was last updated at 2016-06-07 04:02:12
+        link: https://github.com/rholder/retrying
+        package_name: retrying
