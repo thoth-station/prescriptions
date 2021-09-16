@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SailthruClientGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sailthru-client
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sailthru-client' was last updated at 2018-07-26 19:15:48
+        link: https://github.com/sailthru/sailthru-python-client
+        package_name: sailthru-client
