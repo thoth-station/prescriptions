@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pydrive2GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydrive2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pydrive2' is a GitHub fork
+        link: https://github.com/iterative/PyDrive2
+        package_name: pydrive2
