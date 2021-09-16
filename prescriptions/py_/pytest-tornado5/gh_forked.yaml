@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTornado5GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornado5
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-tornado5' is a GitHub fork
+        link: https://github.com/vidartf/pytest-tornado
+        package_name: pytest-tornado5
