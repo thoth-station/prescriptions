@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpegGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speg
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'speg' was last updated at 2018-08-19 20:16:41
+        link: https://github.com/avakar/speg
+        package_name: speg
