@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxcontribImagesGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-images
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sphinxcontrib-images' is a GitHub fork
+        link: https://github.com/sphinx-contrib/images
+        package_name: sphinxcontrib-images
