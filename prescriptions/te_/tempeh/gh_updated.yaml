@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TempehGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tempeh
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tempeh' was last updated at 2020-01-22 15:32:55
+        link: https://github.com/microsoft/tempeh
+        package_name: tempeh
