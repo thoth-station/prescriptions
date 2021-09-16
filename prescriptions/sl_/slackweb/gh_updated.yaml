@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackwebGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slackweb
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'slackweb' was last updated at 2015-06-23 02:15:37
+        link: https://github.com/satoshi03/slack-python-webhook
+        package_name: slackweb
