@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsOauthGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-oauth
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-oauth' was last updated at 2012-06-21 07:14:46
+        link: https://github.com/maraujop/requests-oauth
+        package_name: requests-oauth
