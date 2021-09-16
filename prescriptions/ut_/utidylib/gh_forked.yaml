@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UtidylibGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utidylib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'utidylib' is a GitHub fork
+        link: https://github.com/nijel/utidylib
+        package_name: utidylib
