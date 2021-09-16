@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiffMatchPatchGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diff-match-patch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'diff-match-patch' is a GitHub fork
+        link: https://github.com/diff-match-patch-python/diff-match-patch
+        package_name: diff-match-patch
