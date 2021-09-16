@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpecGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spec
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'spec' was last updated at 2019-01-03 23:43:14
+        link: https://github.com/bitprophet/spec
+        package_name: spec
