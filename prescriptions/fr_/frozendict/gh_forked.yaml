@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FrozendictGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: frozendict
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'frozendict' is a GitHub fork
+        link: https://github.com/Marco-Sulla/python-frozendict
+        package_name: frozendict
