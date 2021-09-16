@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZipstreamGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zipstream' was last updated at 2018-07-12 17:24:39
+        link: https://github.com/allanlei/python-zipstream
+        package_name: zipstream
