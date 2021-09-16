@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RqDashboardGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rq-dashboard
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rq-dashboard' was last updated at 2020-08-28 13:14:16
+        link: https://github.com/Parallels/rq-dashboard
+        package_name: rq-dashboard
