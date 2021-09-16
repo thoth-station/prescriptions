@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetaskGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retask
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'retask' was last updated at 2016-02-12 13:35:44
+        link: https://github.com/kushaldas/retask
+        package_name: retask
