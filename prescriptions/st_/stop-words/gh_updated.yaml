@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StopWordsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stop-words
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stop-words' was last updated at 2018-07-23 21:04:09
+        link: https://github.com/Alir3z4/python-stop-words
+        package_name: stop-words
