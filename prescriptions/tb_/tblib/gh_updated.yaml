@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TblibGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tblib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tblib' was last updated at 2020-07-23 23:17:33
+        link: https://github.com/ionelmc/python-tblib
+        package_name: tblib
