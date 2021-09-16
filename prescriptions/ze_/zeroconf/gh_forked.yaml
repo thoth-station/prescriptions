@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZeroconfGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zeroconf
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zeroconf' is a GitHub fork
+        link: https://github.com/jstasiak/python-zeroconf
+        package_name: zeroconf
