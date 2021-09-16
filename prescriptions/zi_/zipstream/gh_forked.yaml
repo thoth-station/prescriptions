@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZipstreamGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zipstream' is a GitHub fork
+        link: https://github.com/allanlei/python-zipstream
+        package_name: zipstream
