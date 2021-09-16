@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCorsMiddlewareGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cors-middleware
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-cors-middleware' is a GitHub fork
+        link: https://github.com/zestedesavoir/django-cors-middleware
+        package_name: django-cors-middleware
