@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StompestGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stompest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stompest' is a GitHub fork
+        link: https://github.com/nikipore/stompest
+        package_name: stompest
