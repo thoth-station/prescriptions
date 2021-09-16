@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QualnameGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qualname
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'qualname' was last updated at 2020-05-25 09:27:21
+        link: https://github.com/wbolster/qualname
+        package_name: qualname
