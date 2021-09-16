@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZcLockfileGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zc-lockfile
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zc-lockfile' was last updated at 2019-10-23 12:32:40
+        link: https://github.com/zopefoundation/zc.lockfile
+        package_name: zc-lockfile
