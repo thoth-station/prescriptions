@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReleasesGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: releases
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'releases' was last updated at 2020-01-26 03:27:03
+        link: https://github.com/bitprophet/releases
+        package_name: releases
