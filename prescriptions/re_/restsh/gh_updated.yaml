@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RestshGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restsh
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'restsh' was last updated at 2013-07-21 09:06:36
+        link: https://github.com/jespino/restsh
+        package_name: restsh
