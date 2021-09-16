@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SiphashGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: siphash
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'siphash' was last updated at 2013-01-28 10:39:51
+        link: https://github.com/majek/pysiphash
+        package_name: siphash
