@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestFaulthandlerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-faulthandler
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-faulthandler' was last updated at 2020-07-11 15:07:08
+        link: https://github.com/pytest-dev/pytest-faulthandler
+        package_name: pytest-faulthandler
