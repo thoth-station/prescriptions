@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysnmpGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysnmp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pysnmp' was last updated at 2019-12-15 18:19:57
+        link: https://github.com/etingof/pysnmp
+        package_name: pysnmp
