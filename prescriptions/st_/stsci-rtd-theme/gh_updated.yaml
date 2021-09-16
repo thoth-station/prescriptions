@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StsciRtdThemeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stsci-rtd-theme
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stsci-rtd-theme' was last updated at 2020-07-16 16:12:55
+        link: https://github.com/spacetelescope/stsci_rtd_theme
+        package_name: stsci-rtd-theme
