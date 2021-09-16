@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RmtestGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rmtest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rmtest' was last updated at 2019-09-08 16:56:54
+        link: https://github.com/RedisLabs/rmtest
+        package_name: rmtest
