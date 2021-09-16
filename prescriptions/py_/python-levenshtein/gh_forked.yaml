@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonLevenshteinGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-levenshtein
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-levenshtein' is a GitHub fork
+        link: https://github.com/ztane/python-Levenshtein
+        package_name: python-levenshtein
