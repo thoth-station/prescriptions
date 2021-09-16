@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TerminatorGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: terminator
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'terminator' was last updated at 2016-05-09 04:27:16
+        link: https://github.com/HunterLarco/terminator
+        package_name: terminator
