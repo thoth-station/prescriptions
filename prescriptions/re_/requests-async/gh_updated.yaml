@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsAsyncGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-async
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-async' was last updated at 2019-07-22 21:40:27
+        link: https://github.com/encode/requests-async
+        package_name: requests-async
