@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PurepngGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: purepng
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'purepng' is a GitHub fork
+        link: https://github.com/scondo/purepng
+        package_name: purepng
