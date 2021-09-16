@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UnifyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unify
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'unify' was last updated at 2019-08-07 13:44:00
+        link: https://github.com/myint/unify
+        package_name: unify
