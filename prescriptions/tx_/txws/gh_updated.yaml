@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TxwsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txws
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'txws' was last updated at 2016-05-12 05:15:05
+        link: https://github.com/MostAwesomeDude/txWS
+        package_name: txws
