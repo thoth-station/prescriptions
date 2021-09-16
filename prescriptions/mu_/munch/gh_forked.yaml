@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MunchGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: munch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'munch' is a GitHub fork
+        link: https://github.com/Infinidat/munch
+        package_name: munch
