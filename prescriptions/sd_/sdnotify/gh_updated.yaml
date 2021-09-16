@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SdnotifyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sdnotify
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sdnotify' was last updated at 2017-08-02 18:41:10
+        link: https://github.com/bb4242/sdnotify
+        package_name: sdnotify
