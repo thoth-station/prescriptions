@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ToxTravisGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-travis
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tox-travis' was last updated at 2020-02-07 08:55:33
+        link: https://github.com/tox-dev/tox-travis
+        package_name: tox-travis
