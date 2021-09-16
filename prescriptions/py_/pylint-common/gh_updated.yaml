@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintCommonGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-common
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylint-common' was last updated at 2019-01-05 16:37:01
+        link: https://github.com/landscapeio/pylint-common
+        package_name: pylint-common
