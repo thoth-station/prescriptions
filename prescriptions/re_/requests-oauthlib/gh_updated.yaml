@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsOauthlibGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-oauthlib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-oauthlib' was last updated at 2020-05-14 21:03:15
+        link: https://github.com/requests/requests-oauthlib
+        package_name: requests-oauthlib
