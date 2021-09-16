@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetryGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retry
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'retry' was last updated at 2016-05-12 08:20:51
+        link: https://github.com/invl/retry
+        package_name: retry
