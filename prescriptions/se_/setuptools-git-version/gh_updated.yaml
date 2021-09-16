@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetuptoolsGitVersionGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-git-version
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'setuptools-git-version' was last updated at 2018-11-23 16:02:03
+        link: https://github.com/pyfidelity/setuptools-git-version
+        package_name: setuptools-git-version
