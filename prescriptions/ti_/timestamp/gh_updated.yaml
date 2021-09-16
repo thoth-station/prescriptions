@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TimestampGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timestamp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'timestamp' was last updated at 2014-08-20 03:25:02
+        link: https://github.com/jarvys/timestamp
+        package_name: timestamp
