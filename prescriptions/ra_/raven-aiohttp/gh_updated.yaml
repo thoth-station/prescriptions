@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RavenAiohttpGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: raven-aiohttp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'raven-aiohttp' was last updated at 2018-03-20 19:25:30
+        link: https://github.com/getsentry/raven-aiohttp
+        package_name: raven-aiohttp
