@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StaticGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: static
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'static' was last updated at 2014-10-20 01:29:18
+        link: https://github.com/lukearno/static
+        package_name: static
