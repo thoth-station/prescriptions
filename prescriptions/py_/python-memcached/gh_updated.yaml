@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonMemcachedGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-memcached
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-memcached' was last updated at 2017-12-15 16:39:50
+        link: https://github.com/linsomniac/python-memcached
+        package_name: python-memcached
