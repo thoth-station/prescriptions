@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygrokGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygrok
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pygrok' was last updated at 2018-07-29 04:19:36
+        link: https://github.com/garyelephant/pygrok
+        package_name: pygrok
