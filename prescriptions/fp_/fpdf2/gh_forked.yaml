@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Fpdf2GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fpdf2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fpdf2' is a GitHub fork
+        link: https://github.com/PyFPDF/fpdf2
+        package_name: fpdf2
