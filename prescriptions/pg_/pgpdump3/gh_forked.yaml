@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pgpdump3GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgpdump3
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pgpdump3' is a GitHub fork
+        link: https://github.com/SkierPGP/python-pgpdump
+        package_name: pgpdump3
