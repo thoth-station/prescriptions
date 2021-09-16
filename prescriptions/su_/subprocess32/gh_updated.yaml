@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Subprocess32GitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subprocess32
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'subprocess32' was last updated at 2020-06-16 21:50:04
+        link: https://github.com/google/python-subprocess32
+        package_name: subprocess32
