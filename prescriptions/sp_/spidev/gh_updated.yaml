@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpidevGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spidev
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'spidev' was last updated at 2020-06-02 20:07:21
+        link: https://github.com/doceme/py-spidev
+        package_name: spidev
