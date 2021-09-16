@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WalkscoreApiGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: walkscore-api
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'walkscore-api' was last updated at 2020-01-04 21:14:09
+        link: https://github.com/insightindustry/walkscore-api
+        package_name: walkscore-api
