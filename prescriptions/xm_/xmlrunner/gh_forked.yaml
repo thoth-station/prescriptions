@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XmlrunnerGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmlrunner
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'xmlrunner' is a GitHub fork
+        link: https://github.com/pycontribs/xmlrunner
+        package_name: xmlrunner
