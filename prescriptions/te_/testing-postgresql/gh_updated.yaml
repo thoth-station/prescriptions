@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TestingPostgresqlGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testing-postgresql
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'testing-postgresql' was last updated at 2017-10-31 14:02:26
+        link: https://github.com/tk0miya/testing.postgresql
+        package_name: testing-postgresql
