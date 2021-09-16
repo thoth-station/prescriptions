@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonDaemon3kGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-daemon-3k
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-daemon-3k' is a GitHub fork
+        link: https://github.com/jbvsmo/python-daemon
+        package_name: python-daemon-3k
