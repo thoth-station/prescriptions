@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PillowSimdGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pillow-simd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pillow-simd' is a GitHub fork
+        link: https://github.com/uploadcare/pillow-simd
+        package_name: pillow-simd
