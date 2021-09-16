@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TextparserGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textparser
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'textparser' was last updated at 2020-01-02 14:51:05
+        link: https://github.com/eerimoq/textparser
+        package_name: textparser
