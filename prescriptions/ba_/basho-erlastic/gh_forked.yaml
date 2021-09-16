@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BashoErlasticGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basho-erlastic
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'basho-erlastic' is a GitHub fork
+        link: https://github.com/basho/python-erlastic
+        package_name: basho-erlastic
