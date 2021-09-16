@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RubberGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rubber
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rubber' was last updated at 2012-08-06 11:43:16
+        link: https://github.com/cantinasoftware/rubber
+        package_name: rubber
