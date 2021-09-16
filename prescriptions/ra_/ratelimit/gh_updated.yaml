@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RatelimitGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimit
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ratelimit' was last updated at 2019-02-06 21:53:36
+        link: https://github.com/tomasbasham/ratelimit
+        package_name: ratelimit
