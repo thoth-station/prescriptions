@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonJsonrpcServerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-jsonrpc-server
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-jsonrpc-server' was last updated at 2020-09-07 21:24:04
+        link: https://github.com/palantir/python-jsonrpc-server
+        package_name: python-jsonrpc-server
