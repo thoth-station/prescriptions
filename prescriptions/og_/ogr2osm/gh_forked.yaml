@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Ogr2osmGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ogr2osm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ogr2osm' is a GitHub fork
+        link: https://github.com/roelderickx/ogr2osm
+        package_name: ogr2osm
