@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TimesGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: times
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'times' was last updated at 2014-08-24 06:10:25
+        link: https://github.com/nvie/times
+        package_name: times
