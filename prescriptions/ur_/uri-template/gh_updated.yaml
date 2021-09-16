@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UriTemplateGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uri-template
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'uri-template' was last updated at 2020-04-22 20:47:08
+        link: https://github.com/plinss/uri_template
+        package_name: uri-template
