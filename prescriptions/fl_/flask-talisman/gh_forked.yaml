@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskTalismanGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-talisman
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-talisman' is a GitHub fork
+        link: https://github.com/wntrblm/flask-talisman
+        package_name: flask-talisman
