@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiscordPySelfGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-py-self
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'discord-py-self' is a GitHub fork
+        link: https://github.com/dolfies/discord.py-self
+        package_name: discord-py-self
