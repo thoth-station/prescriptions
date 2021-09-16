@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PropertyCachedGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: property-cached
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'property-cached' is a GitHub fork
+        link: https://github.com/althonos/property-cached
+        package_name: property-cached
