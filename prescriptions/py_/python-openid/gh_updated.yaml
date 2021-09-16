@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonOpenidGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-openid
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-openid' was last updated at 2020-09-02 08:21:22
+        link: https://github.com/openid/python-openid
+        package_name: python-openid
