@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WekaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: weka
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'weka' was last updated at 2019-05-01 18:33:56
+        link: https://github.com/chrisspen/weka
+        package_name: weka
