@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyMultihashGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-multihash
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'py-multihash' was last updated at 2020-01-17 21:04:52
+        link: https://github.com/multiformats/multihash
+        package_name: py-multihash
