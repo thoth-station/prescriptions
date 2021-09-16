@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsKerberosGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-kerberos
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-kerberos' was last updated at 2019-07-02 21:44:42
+        link: https://github.com/requests/requests-kerberos
+        package_name: requests-kerberos
