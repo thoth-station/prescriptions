@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PySolcGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-solc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'py-solc' was last updated at 2018-10-04 15:24:08
+        link: https://github.com/ethereum/py-solc
+        package_name: py-solc
