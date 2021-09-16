@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetupextrasGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setupextras
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'setupextras' was last updated at 2019-05-17 05:57:36
+        link: https://github.com/grimen/python-setupextras
+        package_name: setupextras
