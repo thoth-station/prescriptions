@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonDynamodbLockGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dynamodb-lock
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-dynamodb-lock' was last updated at 2019-05-12 21:20:47
+        link: https://github.com/mohankishore/python_dynamodb_lock
+        package_name: python-dynamodb-lock
