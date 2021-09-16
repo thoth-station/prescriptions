@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SerpyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serpy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'serpy' was last updated at 2018-09-10 19:01:23
+        link: https://github.com/clarkduvall/serpy
+        package_name: serpy
