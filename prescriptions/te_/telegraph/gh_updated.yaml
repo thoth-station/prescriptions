@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TelegraphGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: telegraph
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'telegraph' was last updated at 2020-06-11 04:39:45
+        link: https://github.com/python273/telegraph
+        package_name: telegraph
