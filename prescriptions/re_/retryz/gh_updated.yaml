@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetryzGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retryz
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'retryz' was last updated at 2017-05-21 15:14:26
+        link: https://github.com/jealous/retryz
+        package_name: retryz
