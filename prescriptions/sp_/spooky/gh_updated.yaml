@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpookyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spooky
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'spooky' was last updated at 2013-11-25 19:40:57
+        link: https://github.com/DomainTools/spooky
+        package_name: spooky
