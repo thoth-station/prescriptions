@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ModinSpreadsheetGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modin-spreadsheet
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'modin-spreadsheet' is a GitHub fork
+        link: https://github.com/modin-project/modin-spreadsheet
+        package_name: modin-spreadsheet
