@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Coapthon3GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coapthon3
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coapthon3' is a GitHub fork
+        link: https://github.com/mcfreis/CoAPthon3
+        package_name: coapthon3
