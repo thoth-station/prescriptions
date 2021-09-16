@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpacyPkusegGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spacy-pkuseg
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'spacy-pkuseg' is a GitHub fork
+        link: https://github.com/explosion/spacy-pkuseg
+        package_name: spacy-pkuseg
