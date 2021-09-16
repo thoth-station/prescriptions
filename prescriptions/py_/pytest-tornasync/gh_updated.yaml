@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTornasyncGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornasync
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-tornasync' was last updated at 2019-07-16 01:59:33
+        link: https://github.com/eukaryote/pytest-tornasync
+        package_name: pytest-tornasync
