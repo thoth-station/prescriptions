@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TimeunitGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeunit
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'timeunit' was last updated at 2019-08-06 10:01:34
+        link: https://github.com/Ralph-Wang/timeunit-python
+        package_name: timeunit
