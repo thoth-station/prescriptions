@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QueuemanGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: queueman
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'queueman' was last updated at 2020-04-04 10:13:51
+        link: https://github.com/ludeeus/queueman
+        package_name: queueman
