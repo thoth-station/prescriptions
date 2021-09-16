@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Geohash2GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geohash2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'geohash2' is a GitHub fork
+        link: https://github.com/dbarthe/geohash
+        package_name: geohash2
