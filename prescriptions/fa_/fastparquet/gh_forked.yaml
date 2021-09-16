@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastparquetGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastparquet
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fastparquet' is a GitHub fork
+        link: https://github.com/dask/fastparquet
+        package_name: fastparquet
