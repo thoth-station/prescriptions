@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RigGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rig
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rig' was last updated at 2018-05-13 14:22:02
+        link: https://github.com/project-rig/rig
+        package_name: rig
