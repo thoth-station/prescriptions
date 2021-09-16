@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShredderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shredder
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'shredder' was last updated at 2018-04-05 16:06:05
+        link: https://github.com/svrana/shredder
+        package_name: shredder
