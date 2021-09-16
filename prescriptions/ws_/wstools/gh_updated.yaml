@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WstoolsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wstools
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'wstools' was last updated at 2020-07-03T10:33:05Z
+        link: https://github.com/pycontribs/wstools
+        package_name: wstools
