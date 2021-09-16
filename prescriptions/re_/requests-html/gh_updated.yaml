@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsHtmlGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-html
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-html' was last updated at 2020-05-10 19:40:04
+        link: https://github.com/kennethreitz/requests-html
+        package_name: requests-html
