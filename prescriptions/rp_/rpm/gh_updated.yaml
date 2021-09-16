@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RpmGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rpm' was last updated at 2017-09-21 07:54:00
+        link: https://github.com/ncoghlan/pypi-rpm
+        package_name: rpm
