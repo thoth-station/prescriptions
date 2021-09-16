@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'slacker' was last updated at 2020-07-03 04:29:16
+        link: https://github.com/os/slacker
+        package_name: slacker
