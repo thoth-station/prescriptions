@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RepomdGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: repomd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'repomd' was last updated at 2019-04-05 02:14:53
+        link: https://github.com/carlwgeorge/repomd
+        package_name: repomd
