@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SanctionGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanction
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sanction' was last updated at 2014-05-14 17:45:44
+        link: https://github.com/demianbrecht/sanction
+        package_name: sanction
