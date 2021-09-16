@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSelect2GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-select2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-select2' is a GitHub fork
+        link: https://github.com/codingjoe/django-select2
+        package_name: django-select2
