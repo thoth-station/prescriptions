@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Box2dPyGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: box2d-py
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'box2d-py' is a GitHub fork
+        link: https://github.com/openai/box2d-py
+        package_name: box2d-py
