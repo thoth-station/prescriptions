@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HidapiGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hidapi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hidapi' is a GitHub fork
+        link: https://github.com/trezor/cython-hidapi
+        package_name: hidapi
