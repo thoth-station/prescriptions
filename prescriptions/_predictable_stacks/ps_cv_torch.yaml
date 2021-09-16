@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: ThothPSCVTorchBaseImageWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images: [null]  # Only if no base image is used.
+    match:
+    - state:
+        resolved_dependencies:
+        - name: jupyter-tensorboard
+    - state:
+        resolved_dependencies:
+        - name: opencv-python
+    - state:
+        resolved_dependencies:
+        - name: pillow>8.3.0
+    - state:
+        resolved_dependencies:
+        - name: tensorboard
+    - state:
+        resolved_dependencies:
+        - name: torch
+    - state:
+        resolved_dependencies:
+        - name: torchvision
+    run:
+      advised_manifest_changes:
+      - base_images: "quay.io/thoth-station/ps-cv-pytorch:*"
+      justification:
+      - type: INFO
+        message: Consider using predictive stack for computer vision
+        link: https://github.com/thoth-station/ps-cv/
