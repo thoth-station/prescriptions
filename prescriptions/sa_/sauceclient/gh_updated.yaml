@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SauceclientGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sauceclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sauceclient' was last updated at 2018-11-11 13:11:37
+        link: https://github.com/cgoldberg/sauceclient
+        package_name: sauceclient
