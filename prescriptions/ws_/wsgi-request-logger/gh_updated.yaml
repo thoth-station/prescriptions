@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WsgiRequestLoggerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsgi-request-logger
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'wsgi-request-logger' was last updated at 2019-12-03 06:48:13
+        link: https://github.com/pklaus/wsgi-request-logger
+        package_name: wsgi-request-logger
