@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestWatchGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-watch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-watch' was last updated at 2019-06-15 20:36:43
+        link: https://github.com/joeyespo/pytest-watch
+        package_name: pytest-watch
