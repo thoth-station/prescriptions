@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonGiltGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-gilt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-gilt' was last updated at 2020-03-17 18:26:12
+        link: https://github.com/retr0h/gilt
+        package_name: python-gilt
