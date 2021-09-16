@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YgLockfileGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yg-lockfile
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'yg-lockfile' was last updated at 2019-09-02T13:42:54Z
+        link: https://github.com/yougov/yg.lockfile
+        package_name: yg-lockfile
