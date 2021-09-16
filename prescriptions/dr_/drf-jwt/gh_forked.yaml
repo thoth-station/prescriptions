@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DrfJwtGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drf-jwt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'drf-jwt' is a GitHub fork
+        link: https://github.com/Styria-Digital/django-rest-framework-jwt
+        package_name: drf-jwt
