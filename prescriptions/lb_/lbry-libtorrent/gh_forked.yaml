@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LbryLibtorrentGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lbry-libtorrent
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lbry-libtorrent' is a GitHub fork
+        link: https://github.com/lbryio/libtorrent
+        package_name: lbry-libtorrent
