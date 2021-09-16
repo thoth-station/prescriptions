@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TxawsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txaws
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'txaws' was last updated at 2018-12-20 14:25:27
+        link: https://github.com/twisted/txaws
+        package_name: txaws
