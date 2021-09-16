@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytomlGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytoml
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytoml' was last updated at 2019-07-21 17:54:43
+        link: https://github.com/avakar/pytoml
+        package_name: pytoml
