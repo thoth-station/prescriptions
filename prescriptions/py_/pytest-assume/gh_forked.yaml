@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestAssumeGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-assume
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-assume' is a GitHub fork
+        link: https://github.com/astraw38/pytest-assume
+        package_name: pytest-assume
