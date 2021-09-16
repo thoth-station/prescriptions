@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypdGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pypd' was last updated at 2020-06-23 18:01:07
+        link: https://github.com/PagerDuty/pagerduty-api-python-client
+        package_name: pypd
