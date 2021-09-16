@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsFtpGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ftp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-ftp' was last updated at 2017-10-11 04:24:05
+        link: https://github.com/Lukasa/requests-ftp
+        package_name: requests-ftp
