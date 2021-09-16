@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PamelaGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pamela
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pamela' is a GitHub fork
+        link: https://github.com/minrk/pamela
+        package_name: pamela
