@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VisitorGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visitor
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'visitor' was last updated at 2016-05-19 11:29:51
+        link: https://github.com/mbr/visitor
+        package_name: visitor
