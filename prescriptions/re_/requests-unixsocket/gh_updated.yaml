@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsUnixsocketGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-unixsocket
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-unixsocket' was last updated at 2019-08-16 19:05:45
+        link: https://github.com/msabramo/requests-unixsocket
+        package_name: requests-unixsocket
