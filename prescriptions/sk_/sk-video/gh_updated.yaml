@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SkVideoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sk-video
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sk-video' was last updated at 2020-01-15 00:15:33
+        link: https://github.com/scikit-video/scikit-video
+        package_name: sk-video
