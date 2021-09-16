@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsNtlmGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ntlm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-ntlm' was last updated at 2017-09-19 18:06:53
+        link: https://github.com/requests/requests-ntlm
+        package_name: requests-ntlm
