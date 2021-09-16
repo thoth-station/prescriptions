@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygtrieGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygtrie
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pygtrie' is a GitHub fork
+        link: https://github.com/mina86/pygtrie
+        package_name: pygtrie
