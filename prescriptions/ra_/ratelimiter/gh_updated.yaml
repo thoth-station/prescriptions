@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RatelimiterGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimiter
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ratelimiter' was last updated at 2018-01-11 00:46:42
+        link: https://github.com/RazerM/ratelimiter
+        package_name: ratelimiter
