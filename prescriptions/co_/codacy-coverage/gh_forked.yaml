@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodacyCoverageGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codacy-coverage
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'codacy-coverage' is a GitHub fork
+        link: https://github.com/codacy/python-codacy-coverage
+        package_name: codacy-coverage
