@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyqrcodeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyqrcode
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyqrcode' was last updated at 2016-06-20 03:30:00
+        link: https://github.com/mnooner256/pyqrcode
+        package_name: pyqrcode
