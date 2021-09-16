@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoAjaxSelectsGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-ajax-selects
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-ajax-selects' is a GitHub fork
+        link: https://github.com/crucialfelix/django-ajax-selects
+        package_name: django-ajax-selects
