@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickhouseCityhashGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clickhouse-cityhash
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'clickhouse-cityhash' is a GitHub fork
+        link: https://github.com/xzkostyan/python-cityhash
+        package_name: clickhouse-cityhash
