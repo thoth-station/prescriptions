@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PykafkaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykafka
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pykafka' was last updated at 2019-06-10 16:18:00
+        link: https://github.com/Parsely/pykafka
+        package_name: pykafka
