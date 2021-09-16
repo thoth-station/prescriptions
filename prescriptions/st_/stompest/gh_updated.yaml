@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StompestGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stompest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stompest' was last updated at 2018-06-30 10:06:07
+        link: https://github.com/nikipore/stompest
+        package_name: stompest
