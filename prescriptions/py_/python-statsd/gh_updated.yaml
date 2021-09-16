@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonStatsdGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-statsd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-statsd' was last updated at 2017-09-05 01:54:29
+        link: https://github.com/WoLpH/python-statsd
+        package_name: python-statsd
