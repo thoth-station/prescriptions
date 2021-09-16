@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VdmGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vdm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'vdm' was last updated at 2019-05-14 12:53:09
+        link: https://github.com/okfn/vdm
+        package_name: vdm
