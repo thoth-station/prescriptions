@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TimeloopGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeloop
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'timeloop' was last updated at 2020-07-18 17:08:32
+        link: https://github.com/sankalpjonn/timeloop
+        package_name: timeloop
