@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IjsonGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ijson
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ijson' is a GitHub fork
+        link: https://github.com/ICRAR/ijson
+        package_name: ijson
