@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestRandomOrderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-random-order
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-random-order' was last updated at 2018-11-30 15:21:54
+        link: https://github.com/jbasko/pytest-random-order
+        package_name: pytest-random-order
