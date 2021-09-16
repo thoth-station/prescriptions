@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UtilsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utils
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'utils' was last updated at 2020-02-08 10:03:14
+        link: https://github.com/haaksmash/pyutils
+        package_name: utils
