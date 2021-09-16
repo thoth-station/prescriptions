@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ObdGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: obd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'obd' is a GitHub fork
+        link: https://github.com/brendan-w/python-OBD
+        package_name: obd
