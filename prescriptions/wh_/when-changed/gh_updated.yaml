@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WhenChangedGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: when-changed
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'when-changed' was last updated at 2019-10-08 09:16:40
+        link: https://github.com/joh/when-changed
+        package_name: when-changed
