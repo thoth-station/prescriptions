@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyctGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyct
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyct' was last updated at 2020-09-11 21:13:48
+        link: https://github.com/pyviz-dev/pyct
+        package_name: pyct
