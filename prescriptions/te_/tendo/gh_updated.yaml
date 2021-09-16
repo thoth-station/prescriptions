@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TendoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tendo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tendo' was last updated at 2020-05-23 09:05:19
+        link: https://github.com/pycontribs/tendo
+        package_name: tendo
