@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CloudflareGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cloudflare
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cloudflare' is a GitHub fork
+        link: https://github.com/cloudflare/python-cloudflare
+        package_name: cloudflare
