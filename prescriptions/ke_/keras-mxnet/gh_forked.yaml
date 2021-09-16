@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerasMxnetGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-mxnet
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'keras-mxnet' is a GitHub fork
+        link: https://github.com/awslabs/keras-apache-mxnet
+        package_name: keras-mxnet
