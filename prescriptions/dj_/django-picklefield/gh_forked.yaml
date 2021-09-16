@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPicklefieldGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-picklefield
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-picklefield' is a GitHub fork
+        link: https://github.com/gintas/django-picklefield
+        package_name: django-picklefield
