@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestSparkGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-spark
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-spark' was last updated at 2020-02-23 13:09:38
+        link: https://github.com/malexer/pytest-spark
+        package_name: pytest-spark
