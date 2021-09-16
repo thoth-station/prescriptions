@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskSocketsGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sockets
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-sockets' is a GitHub fork
+        link: https://github.com/kennethreitz/flask-sockets
+        package_name: flask-sockets
