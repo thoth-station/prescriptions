@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GwebsocketsGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gwebsockets
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gwebsockets' is a GitHub fork
+        link: https://github.com/sugarlabs/gwebsockets
+        package_name: gwebsockets
