@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WstoolsGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wstools
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'wstools' is a GitHub fork
+        link: https://github.com/pycontribs/wstools
+        package_name: wstools
