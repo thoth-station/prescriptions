@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonIptablesGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-iptables
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-iptables' was last updated at 2020-06-14 21:39:01
+        link: https://github.com/ldx/python-iptables
+        package_name: python-iptables
