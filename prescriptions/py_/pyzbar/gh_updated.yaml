@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyzbarGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzbar
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyzbar' was last updated at 2019-02-21 07:11:31
+        link: https://github.com/NaturalHistoryMuseum/pyzbar
+        package_name: pyzbar
