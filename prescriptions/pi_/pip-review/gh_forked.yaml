@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipReviewGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-review
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pip-review' is a GitHub fork
+        link: https://github.com/jgonggrijp/pip-review
+        package_name: pip-review
