@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BottlechestGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bottlechest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bottlechest' is a GitHub fork
+        link: https://github.com/biolab/bottlechest
+        package_name: bottlechest
