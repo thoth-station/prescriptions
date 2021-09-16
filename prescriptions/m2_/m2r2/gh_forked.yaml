@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: M2r2GitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: m2r2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'm2r2' is a GitHub fork
+        link: https://github.com/crossnox/m2r2
+        package_name: m2r2
