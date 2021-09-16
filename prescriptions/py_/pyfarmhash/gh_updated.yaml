@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyfarmhashGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfarmhash
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyfarmhash' was last updated at 2016-12-01 07:56:02
+        link: https://github.com/veelion/python-farmhash
+        package_name: pyfarmhash
