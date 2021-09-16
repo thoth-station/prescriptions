@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestEthereumGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-ethereum
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-ethereum' was last updated at 2019-06-24 21:00:19
+        link: https://github.com/ethereum/pytest-ethereum
+        package_name: pytest-ethereum
