@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TransliterateGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transliterate
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'transliterate' was last updated at 2020-02-25 21:03:30
+        link: https://github.com/barseghyanartur/transliterate
+        package_name: transliterate
