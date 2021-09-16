@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZerorpcGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zerorpc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zerorpc' was last updated at 2020-05-27 01:26:30
+        link: https://github.com/0rpc/zerorpc-python
+        package_name: zerorpc
