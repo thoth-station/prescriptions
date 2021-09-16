@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxHolovizThemeGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-holoviz-theme
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sphinx-holoviz-theme' is a GitHub fork
+        link: https://github.com/pyviz-dev/sphinx_holoviz_theme
+        package_name: sphinx-holoviz-theme
