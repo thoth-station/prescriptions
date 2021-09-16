@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SymsyndGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: symsynd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'symsynd' was last updated at 2017-07-26 08:43:44
+        link: https://github.com/getsentry/symsynd
+        package_name: symsynd
