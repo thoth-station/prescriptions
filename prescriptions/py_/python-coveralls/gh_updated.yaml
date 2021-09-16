@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonCoverallsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-coveralls
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-coveralls' was last updated at 2019-08-01 19:11:55
+        link: https://github.com/z4r/python-coveralls
+        package_name: python-coveralls
