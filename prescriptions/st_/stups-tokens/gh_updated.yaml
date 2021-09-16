@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StupsTokensGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-tokens
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stups-tokens' was last updated at 2019-03-19 21:59:22
+        link: https://github.com/zalando-stups/python-tokens
+        package_name: stups-tokens
