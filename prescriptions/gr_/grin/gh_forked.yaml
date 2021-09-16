@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrinGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grin
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'grin' is a GitHub fork
+        link: https://github.com/matthew-brett/grin
+        package_name: grin
