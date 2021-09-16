@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonMimeparseGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-mimeparse
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-mimeparse' was last updated at 2018-10-15 17:26:52
+        link: https://github.com/dbtsai/python-mimeparse
+        package_name: python-mimeparse
