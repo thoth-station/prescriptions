@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShadowsocksGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shadowsocks
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'shadowsocks' was last updated at 2015-08-22 02:45:55
+        link: https://github.com/shadowsocks/shadowsocks
+        package_name: shadowsocks
