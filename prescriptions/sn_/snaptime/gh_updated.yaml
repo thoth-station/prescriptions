@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnaptimeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snaptime
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'snaptime' was last updated at 2017-06-15 15:37:09
+        link: https://github.com/zartstrom/snaptime
+        package_name: snaptime
