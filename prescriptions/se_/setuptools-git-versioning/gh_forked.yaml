@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetuptoolsGitVersioningGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-git-versioning
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'setuptools-git-versioning' is a GitHub fork
+        link: https://github.com/dolfinus/setuptools-git-versioning
+        package_name: setuptools-git-versioning
