@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyvcfGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvcf
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyvcf' is a GitHub fork
+        link: https://github.com/jamescasbon/PyVCF
+        package_name: pyvcf
