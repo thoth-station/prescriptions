@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpytreeGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipytree
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ipytree' is a GitHub fork
+        link: https://github.com/martinRenou/ipytree
+        package_name: ipytree
