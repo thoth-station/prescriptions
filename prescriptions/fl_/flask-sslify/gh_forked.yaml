@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskSslifyGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sslify
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-sslify' is a GitHub fork
+        link: https://github.com/kennethreitz/flask-sslify
+        package_name: flask-sslify
