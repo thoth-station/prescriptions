@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZipstreamNewGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream-new
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zipstream-new' is a GitHub fork
+        link: https://github.com/arjan-s/python-zipstream
+        package_name: zipstream-new
