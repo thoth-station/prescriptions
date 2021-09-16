@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyedimaxGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyedimax
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyedimax' is a GitHub fork
+        link: https://github.com/andreipop2005/pyedimax
+        package_name: pyedimax
