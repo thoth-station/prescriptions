@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TortillaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tortilla
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tortilla' was last updated at 2019-02-22 12:31:20
+        link: https://github.com/tortilla/tortilla
+        package_name: tortilla
