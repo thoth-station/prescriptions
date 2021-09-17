@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HonchoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: honcho
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'honcho' was last updated at 2020-03-22 17:58:04
+        link: https://github.com/nickstenning/honcho
+        package_name: honcho
