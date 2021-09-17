@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CrankGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crank
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'crank' was last updated at 2020-02-18 21:59:09
+        link: https://github.com/TurboGears/crank
+        package_name: crank
