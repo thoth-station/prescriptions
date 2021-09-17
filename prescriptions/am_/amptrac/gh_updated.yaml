@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AmptracGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amptrac
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'amptrac' was last updated at 2016-06-14 06:52:42
+        link: https://github.com/twisted-infra/amptrac
+        package_name: amptrac
