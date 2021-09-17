@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipenvSetupGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipenv-setup
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pipenv-setup' was last updated at 2020-06-29 05:58:27
+        link: https://github.com/Madoshakalaka/pipenv-setup
+        package_name: pipenv-setup
