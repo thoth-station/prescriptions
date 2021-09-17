@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysmiGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pysmi' was last updated at 2020-03-21 19:00:31
+        link: https://github.com/etingof/pysmi
+        package_name: pysmi
