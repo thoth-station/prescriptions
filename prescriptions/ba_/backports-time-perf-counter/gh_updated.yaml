@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsTimePerfCounterGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-time-perf-counter
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-time-perf-counter' was last updated at 2019-03-26 01:56:00
+        link: https://github.com/ejd/backports.time_perf_counter
+        package_name: backports-time-perf-counter
