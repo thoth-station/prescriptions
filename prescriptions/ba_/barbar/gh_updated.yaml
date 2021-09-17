@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BarbarGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: barbar
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'barbar' was last updated at 2019-04-12 02:23:08
+        link: https://github.com/yusugomori/barbar
+        package_name: barbar
