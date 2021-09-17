@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestLoggingGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-logging
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-logging' was last updated at 2015-11-04 13:26:47
+        link: https://github.com/saltstack/pytest-logging
+        package_name: pytest-logging
