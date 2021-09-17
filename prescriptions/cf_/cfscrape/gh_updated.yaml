@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CfscrapeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfscrape
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cfscrape' was last updated at 2020-03-23 07:06:38
+        link: https://github.com/Anorov/cloudflare-scrape
+        package_name: cfscrape
