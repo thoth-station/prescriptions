@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibsourcemapGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libsourcemap
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'libsourcemap' was last updated at 2017-10-24 23:41:34
+        link: https://github.com/getsentry/libsourcemap
+        package_name: libsourcemap
