@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OffspringGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: offspring
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'offspring' was last updated at 2018-01-04 19:15:08
+        link: https://github.com/borgstrom/offspring
+        package_name: offspring
