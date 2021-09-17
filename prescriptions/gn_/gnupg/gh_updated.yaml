@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GnupgGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gnupg
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gnupg' was last updated at 2018-08-01 22:05:19
+        link: https://github.com/isislovecruft/python-gnupg
+        package_name: gnupg
