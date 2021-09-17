@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8TodoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-todo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-todo' was last updated at 2016-11-15 16:10:38
+        link: https://github.com/schlamar/flake8-todo
+        package_name: flake8-todo
