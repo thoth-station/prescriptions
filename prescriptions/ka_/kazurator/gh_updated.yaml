@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KazuratorGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kazurator
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kazurator' was last updated at 2017-01-30 13:46:55
+        link: https://github.com/pseudomuto/kazurator
+        package_name: kazurator
