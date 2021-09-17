@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskGraphqlGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-graphql
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-graphql' was last updated at 2020-08-07 18:38:18
+        link: https://github.com/graphql-python/flask-graphql
+        package_name: flask-graphql
