@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconCommonExtensionsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-common-extensions
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'colcon-common-extensions' has less than 5 contributors on GitHub
+        link: https://github.com/colcon/colcon-common-extensions
+        package_name: colcon-common-extensions

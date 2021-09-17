@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsDatetimeFromisoformatGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-datetime-fromisoformat
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-datetime-fromisoformat' has less than 5 contributors on GitHub
+        link: https://github.com/movermeyer/backports.datetime_fromisoformat
+        package_name: backports-datetime-fromisoformat

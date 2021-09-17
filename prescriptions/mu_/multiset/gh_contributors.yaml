@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MultisetGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multiset
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'multiset' has less than 5 contributors on GitHub
+        link: https://github.com/wheerd/multiset
+        package_name: multiset

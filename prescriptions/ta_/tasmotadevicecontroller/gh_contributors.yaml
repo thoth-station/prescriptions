@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TasmotadevicecontrollerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tasmotadevicecontroller
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tasmotadevicecontroller' has less than 5 contributors on GitHub
+        link: https://github.com/chaptergy/tasmota-device-controller
+        package_name: tasmotadevicecontroller

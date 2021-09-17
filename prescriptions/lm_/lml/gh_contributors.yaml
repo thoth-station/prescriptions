@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LmlGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lml
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lml' has less than 5 contributors on GitHub
+        link: https://github.com/python-lml/lml
+        package_name: lml

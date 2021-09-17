@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NumbaggGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numbagg
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'numbagg' has less than 5 contributors on GitHub
+        link: https://github.com/numbagg/numbagg
+        package_name: numbagg

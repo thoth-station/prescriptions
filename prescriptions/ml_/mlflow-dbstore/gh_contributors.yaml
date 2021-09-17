@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MlflowDbstoreGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlflow-dbstore
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mlflow-dbstore' has less than 5 contributors on GitHub
+        link: https://github.com/avflor/mlflow-dbstore
+        package_name: mlflow-dbstore

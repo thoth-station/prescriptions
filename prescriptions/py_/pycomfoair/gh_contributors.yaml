@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycomfoairGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycomfoair
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pycomfoair' has less than 5 contributors on GitHub
+        link: https://github.com/mtdcr/pycomfoair
+        package_name: pycomfoair

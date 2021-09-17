@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AdextGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adext
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'adext' has less than 5 contributors on GitHub
+        link: https://github.com/ajschmidt8/adext
+        package_name: adext

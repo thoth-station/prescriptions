@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CmaesGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmaes
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cmaes' has less than 5 contributors on GitHub
+        link: https://github.com/CyberAgent/cmaes
+        package_name: cmaes

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GetVersionGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: get-version
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'get-version' has less than 5 contributors on GitHub
+        link: https://github.com/flying-sheep/get_version
+        package_name: get-version

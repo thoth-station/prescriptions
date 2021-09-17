@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodegenGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codegen
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'codegen' has less than 5 contributors on GitHub
+        link: https://github.com/andreif/codegen
+        package_name: codegen

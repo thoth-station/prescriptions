@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CertvalidatorGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certvalidator
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'certvalidator' has less than 5 contributors on GitHub
+        link: https://github.com/wbond/certvalidator
+        package_name: certvalidator

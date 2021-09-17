@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AaarghGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aaargh
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aaargh' has less than 5 contributors on GitHub
+        link: https://github.com/wbolster/aaargh
+        package_name: aaargh

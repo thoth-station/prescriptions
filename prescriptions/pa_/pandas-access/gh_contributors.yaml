@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PandasAccessGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandas-access
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pandas-access' has less than 5 contributors on GitHub
+        link: https://github.com/jbn/pandas_access
+        package_name: pandas-access

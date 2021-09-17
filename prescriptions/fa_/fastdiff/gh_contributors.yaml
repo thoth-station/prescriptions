@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastdiffGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastdiff
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fastdiff' has less than 5 contributors on GitHub
+        link: https://github.com/syrusakbary/fastdiff
+        package_name: fastdiff

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JpholidayGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jpholiday
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'jpholiday' has less than 5 contributors on GitHub
+        link: https://github.com/Lalcs/jpholiday
+        package_name: jpholiday

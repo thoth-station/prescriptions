@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwistedIocpsupportGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-iocpsupport
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'twisted-iocpsupport' has less than 5 contributors on GitHub
+        link: https://github.com/twisted/twisted-iocpsupport
+        package_name: twisted-iocpsupport

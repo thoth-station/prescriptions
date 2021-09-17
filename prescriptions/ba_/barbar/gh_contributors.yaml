@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BarbarGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: barbar
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'barbar' has less than 5 contributors on GitHub
+        link: https://github.com/yusugomori/barbar
+        package_name: barbar

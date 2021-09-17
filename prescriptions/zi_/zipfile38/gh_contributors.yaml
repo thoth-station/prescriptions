@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Zipfile38GitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipfile38
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'zipfile38' has less than 5 contributors on GitHub
+        link: https://github.com/lorencarvalho/zipfile38
+        package_name: zipfile38

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WlocGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wloc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'wloc' has less than 5 contributors on GitHub
+        link: https://github.com/xvitaly/wloc
+        package_name: wloc

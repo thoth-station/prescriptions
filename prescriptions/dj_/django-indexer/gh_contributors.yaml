@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoIndexerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-indexer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-indexer' has less than 5 contributors on GitHub
+        link: https://github.com/dcramer/django-indexer
+        package_name: django-indexer

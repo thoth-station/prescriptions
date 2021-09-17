@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiofloGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioflo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aioflo' has less than 5 contributors on GitHub
+        link: https://github.com/bachya/aioflo
+        package_name: aioflo

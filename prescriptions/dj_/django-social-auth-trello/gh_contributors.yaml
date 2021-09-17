@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSocialAuthTrelloGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-social-auth-trello
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-social-auth-trello' has less than 5 contributors on GitHub
+        link: https://github.com/DamianZaremba/django-social-auth-trello
+        package_name: django-social-auth-trello

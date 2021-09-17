@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WaterfurnaceGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waterfurnace
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'waterfurnace' has less than 5 contributors on GitHub
+        link: https://github.com/sdague/waterfurnace
+        package_name: waterfurnace

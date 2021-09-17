@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MapsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: maps
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'maps' has less than 5 contributors on GitHub
+        link: https://github.com/pcattori/maps
+        package_name: maps

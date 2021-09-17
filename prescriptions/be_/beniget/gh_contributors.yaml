@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BenigetGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beniget
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'beniget' has less than 5 contributors on GitHub
+        link: https://github.com/serge-sans-paille/beniget
+        package_name: beniget

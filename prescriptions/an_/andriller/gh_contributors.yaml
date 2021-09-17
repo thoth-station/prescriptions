@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AndrillerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: andriller
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'andriller' has less than 5 contributors on GitHub
+        link: https://github.com/den4uk/andriller
+        package_name: andriller

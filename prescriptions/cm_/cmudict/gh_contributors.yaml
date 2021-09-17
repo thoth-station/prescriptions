@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CmudictGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmudict
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cmudict' has less than 5 contributors on GitHub
+        link: https://github.com/prosegrinder/python-cmudict
+        package_name: cmudict

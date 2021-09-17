@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintfileheaderGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylintfileheader
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylintfileheader' has less than 5 contributors on GitHub
+        link: https://github.com/HaaLeo/pylint-file-header
+        package_name: pylintfileheader

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TzdataGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tzdata
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tzdata' has less than 5 contributors on GitHub
+        link: https://github.com/python/tzdata
+        package_name: tzdata

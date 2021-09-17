@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MditPyPluginsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mdit-py-plugins
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mdit-py-plugins' has less than 5 contributors on GitHub
+        link: https://github.com/executablebooks/mdit-py-plugins
+        package_name: mdit-py-plugins

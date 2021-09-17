@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YancGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yanc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'yanc' has less than 5 contributors on GitHub
+        link: https://github.com/0compute/yanc
+        package_name: yanc

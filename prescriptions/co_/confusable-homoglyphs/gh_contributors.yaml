@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfusableHomoglyphsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: confusable-homoglyphs
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'confusable-homoglyphs' has less than 5 contributors on GitHub
+        link: https://github.com/vhf/confusable_homoglyphs
+        package_name: confusable-homoglyphs

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SshPythonGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssh-python
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ssh-python' has less than 5 contributors on GitHub
+        link: https://github.com/ParallelSSH/ssh-python
+        package_name: ssh-python

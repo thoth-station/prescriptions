@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KnotFloerHomologyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: knot-floer-homology
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'knot-floer-homology' has less than 5 contributors on GitHub
+        link: https://github.com/3-manifolds/knot_floer_homology
+        package_name: knot-floer-homology

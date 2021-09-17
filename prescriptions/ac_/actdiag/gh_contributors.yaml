@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ActdiagGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: actdiag
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'actdiag' has less than 5 contributors on GitHub
+        link: https://github.com/blockdiag/actdiag
+        package_name: actdiag

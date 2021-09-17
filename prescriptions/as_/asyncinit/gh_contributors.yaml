@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncinitGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncinit
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'asyncinit' has less than 5 contributors on GitHub
+        link: https://github.com/kchmck/pyasyncinit
+        package_name: asyncinit

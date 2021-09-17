@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SparkaidGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparkaid
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sparkaid' has less than 5 contributors on GitHub
+        link: https://github.com/lvhuyen/SparkAid
+        package_name: sparkaid

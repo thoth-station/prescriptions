@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TextsearchGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textsearch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'textsearch' has less than 5 contributors on GitHub
+        link: https://github.com/kootenpv/textsearch
+        package_name: textsearch

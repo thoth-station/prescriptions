@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KedroNeptuneGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kedro-neptune
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kedro-neptune' has less than 5 contributors on GitHub
+        link: https://github.com/neptune-ai/kedro-neptune
+        package_name: kedro-neptune

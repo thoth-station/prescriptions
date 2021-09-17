@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OutdatedGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: outdated
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'outdated' has less than 5 contributors on GitHub
+        link: https://github.com/alexmojaki/outdated
+        package_name: outdated

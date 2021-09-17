@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BaluhnGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: baluhn
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'baluhn' has less than 5 contributors on GitHub
+        link: https://github.com/benhodgson/baluhn
+        package_name: baluhn

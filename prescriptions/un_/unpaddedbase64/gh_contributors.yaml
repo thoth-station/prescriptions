@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Unpaddedbase64GitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unpaddedbase64
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'unpaddedbase64' has less than 5 contributors on GitHub
+        link: https://github.com/matrix-org/python-unpaddedbase64
+        package_name: unpaddedbase64

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NrParsingDateGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nr-parsing-date
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nr-parsing-date' has less than 5 contributors on GitHub
+        link: https://github.com/NiklasRosenstein/nr-python
+        package_name: nr-parsing-date

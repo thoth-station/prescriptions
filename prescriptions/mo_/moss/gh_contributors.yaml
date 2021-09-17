@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MossGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moss
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'moss' has less than 5 contributors on GitHub
+        link: https://github.com/mwaskom/moss
+        package_name: moss

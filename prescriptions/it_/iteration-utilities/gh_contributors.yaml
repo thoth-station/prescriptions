@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IterationUtilitiesGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iteration-utilities
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'iteration-utilities' has less than 5 contributors on GitHub
+        link: https://github.com/MSeifert04/iteration_utilities
+        package_name: iteration-utilities

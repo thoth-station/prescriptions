@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AdmeshGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: admesh
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'admesh' has less than 5 contributors on GitHub
+        link: https://github.com/admesh/python-admesh
+        package_name: admesh

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SiosocksGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: siosocks
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'siosocks' has less than 5 contributors on GitHub
+        link: https://github.com/pohmelie/siosocks
+        package_name: siosocks

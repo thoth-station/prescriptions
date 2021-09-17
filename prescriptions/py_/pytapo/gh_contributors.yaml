@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytapoGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytapo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytapo' has less than 5 contributors on GitHub
+        link: https://github.com/JurajNyiri/pytapo
+        package_name: pytapo

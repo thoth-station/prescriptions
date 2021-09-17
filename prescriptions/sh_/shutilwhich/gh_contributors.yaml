@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShutilwhichGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shutilwhich
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'shutilwhich' has less than 5 contributors on GitHub
+        link: https://github.com/mbr/shutilwhich
+        package_name: shutilwhich

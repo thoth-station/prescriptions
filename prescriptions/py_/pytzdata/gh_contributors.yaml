@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytzdataGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytzdata
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytzdata' has less than 5 contributors on GitHub
+        link: https://github.com/sdispater/pytzdata
+        package_name: pytzdata

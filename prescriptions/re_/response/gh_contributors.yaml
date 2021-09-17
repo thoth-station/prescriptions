@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ResponseGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: response
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'response' has less than 5 contributors on GitHub
+        link: https://github.com/fhchl/Response
+        package_name: response

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8ModuleNameGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-module-name
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-module-name' has less than 5 contributors on GitHub
+        link: https://github.com/ohjeah/flake8_module_name
+        package_name: flake8-module-name

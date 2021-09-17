@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GekitchenGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gekitchen
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gekitchen' has less than 5 contributors on GitHub
+        link: https://github.com/ajmarks/gekitchen
+        package_name: gekitchen

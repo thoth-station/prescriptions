@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParseTypeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parse-type
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'parse-type' has less than 5 contributors on GitHub
+        link: https://github.com/jenisys/parse_type
+        package_name: parse-type

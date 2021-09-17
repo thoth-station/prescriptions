@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KaleidoGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaleido
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kaleido' has less than 5 contributors on GitHub
+        link: https://github.com/plotly/Kaleido
+        package_name: kaleido

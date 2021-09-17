@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylibdmtxGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibdmtx
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylibdmtx' has less than 5 contributors on GitHub
+        link: https://github.com/NaturalHistoryMuseum/pylibdmtx
+        package_name: pylibdmtx

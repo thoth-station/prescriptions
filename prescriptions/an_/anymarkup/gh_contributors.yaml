@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnymarkupGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anymarkup
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'anymarkup' has less than 5 contributors on GitHub
+        link: https://github.com/bkabrda/anymarkup
+        package_name: anymarkup

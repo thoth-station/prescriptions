@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MybadGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mybad
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mybad' has less than 5 contributors on GitHub
+        link: https://github.com/grimen/python-mybad
+        package_name: mybad

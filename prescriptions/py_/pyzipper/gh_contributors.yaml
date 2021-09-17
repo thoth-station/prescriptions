@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyzipperGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzipper
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyzipper' has less than 5 contributors on GitHub
+        link: https://github.com/danifus/pyzipper
+        package_name: pyzipper

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnkiGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enki
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'enki' has less than 5 contributors on GitHub
+        link: https://github.com/Scifabric/enki
+        package_name: enki

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiogqlcGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiogqlc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aiogqlc' has less than 5 contributors on GitHub
+        link: https://github.com/DoctorJohn/aiogqlc
+        package_name: aiogqlc

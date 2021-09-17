@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeptuneSacredGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-sacred
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'neptune-sacred' has less than 5 contributors on GitHub
+        link: https://github.com/neptune-ai/neptune-sacred
+        package_name: neptune-sacred

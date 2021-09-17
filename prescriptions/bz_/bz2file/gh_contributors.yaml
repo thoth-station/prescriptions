@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Bz2fileGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bz2file
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bz2file' has less than 5 contributors on GitHub
+        link: https://github.com/nvawda/bz2file
+        package_name: bz2file

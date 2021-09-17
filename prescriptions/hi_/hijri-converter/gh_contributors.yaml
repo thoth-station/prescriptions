@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HijriConverterGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hijri-converter
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hijri-converter' has less than 5 contributors on GitHub
+        link: https://github.com/dralshehri/hijri-converter
+        package_name: hijri-converter

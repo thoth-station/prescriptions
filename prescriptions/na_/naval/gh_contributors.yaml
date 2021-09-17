@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NavalGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: naval
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'naval' has less than 5 contributors on GitHub
+        link: https://github.com/leforestier/naval
+        package_name: naval

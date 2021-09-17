@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MoreorlessGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moreorless
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'moreorless' has less than 5 contributors on GitHub
+        link: https://github.com/thatch/moreorless
+        package_name: moreorless

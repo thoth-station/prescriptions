@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxcontribAsyncioGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-asyncio
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sphinxcontrib-asyncio' has less than 5 contributors on GitHub
+        link: https://github.com/aio-libs/sphinxcontrib-asyncio
+        package_name: sphinxcontrib-asyncio

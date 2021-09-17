@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IsodurationGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isoduration
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'isoduration' has less than 5 contributors on GitHub
+        link: https://github.com/bolsote/isoduration
+        package_name: isoduration

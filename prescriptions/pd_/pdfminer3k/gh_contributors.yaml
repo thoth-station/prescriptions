@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pdfminer3kGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdfminer3k
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pdfminer3k' has less than 5 contributors on GitHub
+        link: https://github.com/canserhat77/pdfminer3k
+        package_name: pdfminer3k

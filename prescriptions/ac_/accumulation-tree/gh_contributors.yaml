@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AccumulationTreeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: accumulation-tree
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'accumulation-tree' has less than 5 contributors on GitHub
+        link: https://github.com/tkluck/accumulation_tree
+        package_name: accumulation-tree

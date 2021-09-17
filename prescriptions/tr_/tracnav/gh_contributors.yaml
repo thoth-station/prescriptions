@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TracnavGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tracnav
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tracnav' has less than 5 contributors on GitHub
+        link: https://github.com/thmo/tracnav
+        package_name: tracnav

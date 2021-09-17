@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HdxPythonCountryGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdx-python-country
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hdx-python-country' has less than 5 contributors on GitHub
+        link: https://github.com/OCHA-DAP/hdx-python-country
+        package_name: hdx-python-country

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PychmGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pychm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pychm' has less than 5 contributors on GitHub
+        link: https://github.com/dottedmag/pychm
+        package_name: pychm

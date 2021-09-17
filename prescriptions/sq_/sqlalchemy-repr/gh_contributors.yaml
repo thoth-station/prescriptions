@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlalchemyReprGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-repr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sqlalchemy-repr' has less than 5 contributors on GitHub
+        link: https://github.com/manicmaniac/sqlalchemy-repr
+        package_name: sqlalchemy-repr

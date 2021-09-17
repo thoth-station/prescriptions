@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LambdaGitGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lambda-git
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lambda-git' has less than 5 contributors on GitHub
+        link: https://github.com/eredi93/lambda-git
+        package_name: lambda-git

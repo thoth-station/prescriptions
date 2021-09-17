@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScryptGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scrypt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'scrypt' has less than 5 contributors on GitHub
+        link: https://github.com/holgern/py-scrypt
+        package_name: scrypt

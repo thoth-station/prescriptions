@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StathamSchemaGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: statham-schema
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'statham-schema' has less than 5 contributors on GitHub
+        link: https://github.com/jacksmith15/statham-schema
+        package_name: statham-schema

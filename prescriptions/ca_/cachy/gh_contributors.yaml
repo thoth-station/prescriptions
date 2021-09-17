@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cachy' has less than 5 contributors on GitHub
+        link: https://github.com/sdispater/cachy
+        package_name: cachy

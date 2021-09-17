@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthtokenGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethtoken
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ethtoken' has less than 5 contributors on GitHub
+        link: https://github.com/carver/ethtoken.py
+        package_name: ethtoken

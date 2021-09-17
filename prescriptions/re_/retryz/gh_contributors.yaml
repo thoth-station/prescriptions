@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RetryzGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retryz
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'retryz' has less than 5 contributors on GitHub
+        link: https://github.com/jealous/retryz
+        package_name: retryz

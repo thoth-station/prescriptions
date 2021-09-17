@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerasCrfGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-crf
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'keras-crf' has less than 5 contributors on GitHub
+        link: https://github.com/luozhouyang/keras-crf
+        package_name: keras-crf

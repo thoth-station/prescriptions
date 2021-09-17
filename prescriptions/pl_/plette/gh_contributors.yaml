@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PletteGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plette
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'plette' has less than 5 contributors on GitHub
+        link: https://github.com/sarugaku/plette
+        package_name: plette

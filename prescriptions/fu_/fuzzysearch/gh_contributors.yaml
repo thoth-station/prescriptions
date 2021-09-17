@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzysearchGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzysearch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fuzzysearch' has less than 5 contributors on GitHub
+        link: https://github.com/taleinat/fuzzysearch
+        package_name: fuzzysearch

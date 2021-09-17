@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MetaextractGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metaextract
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'metaextract' has less than 5 contributors on GitHub
+        link: https://github.com/toabctl/metaextract
+        package_name: metaextract

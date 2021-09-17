@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestPydocstyleGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-pydocstyle
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-pydocstyle' has less than 5 contributors on GitHub
+        link: https://github.com/henry0312/pytest-pydocstyle
+        package_name: pytest-pydocstyle

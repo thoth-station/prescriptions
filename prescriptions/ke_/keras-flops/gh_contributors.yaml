@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerasFlopsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-flops
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'keras-flops' has less than 5 contributors on GitHub
+        link: https://github.com/tokusumi/keras-flops
+        package_name: keras-flops

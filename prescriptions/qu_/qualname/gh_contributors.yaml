@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QualnameGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qualname
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'qualname' has less than 5 contributors on GitHub
+        link: https://github.com/wbolster/qualname
+        package_name: qualname

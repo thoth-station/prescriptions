@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CyclicGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyclic
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cyclic' has less than 5 contributors on GitHub
+        link: https://github.com/neurobin/cyclic
+        package_name: cyclic

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyroApiGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyro-api
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyro-api' has less than 5 contributors on GitHub
+        link: https://github.com/pyro-ppl/pyro-api
+        package_name: pyro-api

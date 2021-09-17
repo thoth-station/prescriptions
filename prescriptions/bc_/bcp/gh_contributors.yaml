@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcpGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bcp' has less than 5 contributors on GitHub
+        link: https://github.com/fivestack/bcp
+        package_name: bcp

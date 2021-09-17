@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuncargparseGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: funcargparse
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'funcargparse' has less than 5 contributors on GitHub
+        link: https://github.com/Chilipp/funcargparse
+        package_name: funcargparse

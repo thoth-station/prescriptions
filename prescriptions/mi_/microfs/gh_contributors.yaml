@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MicrofsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: microfs
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'microfs' has less than 5 contributors on GitHub
+        link: https://github.com/ntoll/microfs
+        package_name: microfs

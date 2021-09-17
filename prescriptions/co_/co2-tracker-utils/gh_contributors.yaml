@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Co2TrackerUtilsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: co2-tracker-utils
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'co2-tracker-utils' has less than 5 contributors on GitHub
+        link: https://github.com/comet-ml/co2-tracker-utils
+        package_name: co2-tracker-utils

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonSocksGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-socks
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-socks' has less than 5 contributors on GitHub
+        link: https://github.com/romis2012/python-socks
+        package_name: python-socks

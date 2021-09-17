@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IluaGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ilua
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ilua' has less than 5 contributors on GitHub
+        link: https://github.com/guysv/ilua
+        package_name: ilua

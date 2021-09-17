@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxPlotlyDirectiveGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-plotly-directive
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sphinx-plotly-directive' has less than 5 contributors on GitHub
+        link: https://github.com/harupy/sphinx-plotly-directive
+        package_name: sphinx-plotly-directive

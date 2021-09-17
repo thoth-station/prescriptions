@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InstantApiClientGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: instant-api-client
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'instant-api-client' has less than 5 contributors on GitHub
+        link: https://github.com/FalseDev/instant-api-client
+        package_name: instant-api-client

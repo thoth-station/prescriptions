@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColourRunnerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colour-runner
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'colour-runner' has less than 5 contributors on GitHub
+        link: https://github.com/meshy/colour-runner
+        package_name: colour-runner

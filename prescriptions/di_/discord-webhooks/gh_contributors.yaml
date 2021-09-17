@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiscordWebhooksGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-webhooks
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'discord-webhooks' has less than 5 contributors on GitHub
+        link: https://github.com/JamesIves/discord-webhooks
+        package_name: discord-webhooks

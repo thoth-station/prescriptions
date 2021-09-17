@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintPytestGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-pytest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylint-pytest' has less than 5 contributors on GitHub
+        link: https://github.com/reverbc/pylint-pytest
+        package_name: pylint-pytest

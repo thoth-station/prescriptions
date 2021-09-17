@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylibsrtpGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibsrtp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylibsrtp' has less than 5 contributors on GitHub
+        link: https://github.com/aiortc/pylibsrtp
+        package_name: pylibsrtp

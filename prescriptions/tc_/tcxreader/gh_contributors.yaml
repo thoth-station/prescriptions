@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TcxreaderGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tcxreader
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tcxreader' has less than 5 contributors on GitHub
+        link: https://github.com/alenrajsp/tcxreader
+        package_name: tcxreader

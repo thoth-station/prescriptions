@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SubprocessTeeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subprocess-tee
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'subprocess-tee' has less than 5 contributors on GitHub
+        link: https://github.com/pycontribs/subprocess-tee
+        package_name: subprocess-tee

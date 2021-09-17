@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoincidenceGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coincidence
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coincidence' has less than 5 contributors on GitHub
+        link: https://github.com/python-coincidence/coincidence
+        package_name: coincidence

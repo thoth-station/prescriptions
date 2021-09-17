@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MdxIncludeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mdx-include
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mdx-include' has less than 5 contributors on GitHub
+        link: https://github.com/neurobin/mdx_include
+        package_name: mdx-include

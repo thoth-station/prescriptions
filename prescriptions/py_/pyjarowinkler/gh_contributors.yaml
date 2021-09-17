@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyjarowinklerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyjarowinkler
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyjarowinkler' has less than 5 contributors on GitHub
+        link: https://github.com/nap/jaro-winkler-distance
+        package_name: pyjarowinkler

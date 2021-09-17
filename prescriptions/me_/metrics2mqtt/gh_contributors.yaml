@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Metrics2mqttGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metrics2mqtt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'metrics2mqtt' has less than 5 contributors on GitHub
+        link: https://github.com/jamiebegin/metrics2mqtt
+        package_name: metrics2mqtt

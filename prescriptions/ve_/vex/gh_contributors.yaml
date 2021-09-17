@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VexGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vex
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'vex' has less than 5 contributors on GitHub
+        link: https://github.com/sashahart/vex
+        package_name: vex

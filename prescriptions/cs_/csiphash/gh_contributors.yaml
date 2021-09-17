@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CsiphashGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: csiphash
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'csiphash' has less than 5 contributors on GitHub
+        link: https://github.com/zacharyvoase/python-csiphash
+        package_name: csiphash

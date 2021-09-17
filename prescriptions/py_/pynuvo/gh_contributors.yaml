@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PynuvoGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynuvo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pynuvo' has less than 5 contributors on GitHub
+        link: https://github.com/ejonesnospam/pynuvo
+        package_name: pynuvo

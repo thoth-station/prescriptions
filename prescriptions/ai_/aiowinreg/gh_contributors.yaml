@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiowinregGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiowinreg
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aiowinreg' has less than 5 contributors on GitHub
+        link: https://github.com/skelsec/aiowinreg
+        package_name: aiowinreg

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestAnnotateGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-annotate
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-annotate' has less than 5 contributors on GitHub
+        link: https://github.com/kensho-technologies/pytest-annotate
+        package_name: pytest-annotate

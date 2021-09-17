@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClevercsvGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clevercsv
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'clevercsv' has less than 5 contributors on GitHub
+        link: https://github.com/alan-turing-institute/CleverCSV
+        package_name: clevercsv

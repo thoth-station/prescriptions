@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Dict2cssGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dict2css
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dict2css' has less than 5 contributors on GitHub
+        link: https://github.com/sphinx-toolbox/dict2css
+        package_name: dict2css

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyopenuvGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyopenuv
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyopenuv' has less than 5 contributors on GitHub
+        link: https://github.com/bachya/pyopenuv
+        package_name: pyopenuv

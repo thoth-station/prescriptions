@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VirustotalPythonGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: virustotal-python
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'virustotal-python' has less than 5 contributors on GitHub
+        link: https://github.com/dbrennand/virustotal-python
+        package_name: virustotal-python

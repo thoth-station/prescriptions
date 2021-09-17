@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DottedDictGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotted-dict
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dotted-dict' has less than 5 contributors on GitHub
+        link: https://github.com/josh-paul/dotted_dict
+        package_name: dotted-dict

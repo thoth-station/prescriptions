@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TrololioGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trololio
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'trololio' has less than 5 contributors on GitHub
+        link: https://github.com/ThinkChaos/Trololio
+        package_name: trololio

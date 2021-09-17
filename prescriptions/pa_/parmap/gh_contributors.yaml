@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParmapGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parmap
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'parmap' has less than 5 contributors on GitHub
+        link: https://github.com/zeehio/parmap
+        package_name: parmap

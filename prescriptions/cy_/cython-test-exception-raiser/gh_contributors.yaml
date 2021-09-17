@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CythonTestExceptionRaiserGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cython-test-exception-raiser
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cython-test-exception-raiser' has less than 5 contributors on GitHub
+        link: https://github.com/twisted/cython-test-exception-raiser
+        package_name: cython-test-exception-raiser

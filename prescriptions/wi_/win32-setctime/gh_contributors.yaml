@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Win32SetctimeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: win32-setctime
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'win32-setctime' has less than 5 contributors on GitHub
+        link: https://github.com/Delgan/win32-setctime
+        package_name: win32-setctime

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Feedfinder2GitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedfinder2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'feedfinder2' has less than 5 contributors on GitHub
+        link: https://github.com/dfm/feedfinder2
+        package_name: feedfinder2
