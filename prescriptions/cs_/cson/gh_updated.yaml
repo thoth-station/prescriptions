@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CsonGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cson
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cson' was last updated at 2020-04-26 09:48:54
+        link: https://github.com/avakar/pycson
+        package_name: cson
