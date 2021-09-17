@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IsodateGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isodate
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'isodate' was last updated at 2018-08-02 23:45:26
+        link: https://github.com/gweis/isodate
+        package_name: isodate
