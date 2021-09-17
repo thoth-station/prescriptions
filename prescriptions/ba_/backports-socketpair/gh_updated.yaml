@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsSocketpairGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-socketpair
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-socketpair' was last updated at 2017-12-12 18:58:54
+        link: https://github.com/mhils/backports.socketpair
+        package_name: backports-socketpair
