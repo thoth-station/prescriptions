@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LangidGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: langid
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'langid' was last updated at 2017-07-15 02:49:17
+        link: https://github.com/saffsd/langid.py
+        package_name: langid
