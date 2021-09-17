@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSlowtestsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-slowtests
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-slowtests' was last updated at 2019-02-12 16:58:31
+        link: https://github.com/realpython/django-slow-tests
+        package_name: django-slowtests
