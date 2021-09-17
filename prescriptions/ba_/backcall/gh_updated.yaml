@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackcallGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backcall
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backcall' was last updated at 2020-06-09 15:09:09
+        link: https://github.com/takluyver/backcall
+        package_name: backcall
