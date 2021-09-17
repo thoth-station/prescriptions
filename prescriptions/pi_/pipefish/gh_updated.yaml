@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipefishGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipefish
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pipefish' was last updated at 2020-09-09 23:11:28
+        link: https://github.com/pytest-buildkite/pipefish
+        package_name: pipefish
