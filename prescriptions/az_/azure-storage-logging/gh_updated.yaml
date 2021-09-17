@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureStorageLoggingGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-logging
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'azure-storage-logging' was last updated at 2016-10-09 16:09:40
+        link: https://github.com/michiya/azure-storage-logging
+        package_name: azure-storage-logging
