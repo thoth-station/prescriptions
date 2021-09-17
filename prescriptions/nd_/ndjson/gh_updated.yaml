@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NdjsonGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ndjson
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ndjson' was last updated at 2020-02-25 04:57:48
+        link: https://github.com/rhgrant10/ndjson
+        package_name: ndjson
