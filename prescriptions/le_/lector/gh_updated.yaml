@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LectorGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lector
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lector' was last updated at 2017-05-20 23:37:02
+        link: https://github.com/msuozzo/Lector
+        package_name: lector
