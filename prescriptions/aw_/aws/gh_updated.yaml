@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aws' was last updated at 2013-06-10 13:24:52
+        link: https://github.com/eofs/aws
+        package_name: aws
