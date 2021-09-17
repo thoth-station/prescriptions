@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PercyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: percy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'percy' was last updated at 2020-07-07 19:28:50
+        link: https://github.com/percy/python-percy-client
+        package_name: percy
