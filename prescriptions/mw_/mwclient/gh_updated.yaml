@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MwclientGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mwclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mwclient' was last updated at 2014-12-19 12:01:45
+        link: https://github.com/btongminh/mwclient
+        package_name: mwclient
