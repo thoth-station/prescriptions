@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterRequireGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-require
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'jupyter-require' was last updated at 2019-12-03 22:05:39
+        link: https://github.com/CermakM/jupyter-require
+        package_name: jupyter-require
