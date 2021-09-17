@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskUuidGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-uuid
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-uuid' was last updated at 2020-06-16 10:52:52
+        link: https://github.com/wbolster/flask-uuid
+        package_name: flask-uuid
