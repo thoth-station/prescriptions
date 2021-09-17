@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastcacheGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastcache
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fastcache' was last updated at 2019-12-24 13:20:35
+        link: https://github.com/pbrady/fastcache
+        package_name: fastcache
