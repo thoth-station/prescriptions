@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Config2GitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: config2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'config2' was last updated at 2019-05-17 05:52:52
+        link: https://github.com/grimen/python-config2
+        package_name: config2
