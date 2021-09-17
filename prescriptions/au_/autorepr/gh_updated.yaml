@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutoreprGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autorepr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'autorepr' was last updated at 2017-03-14 15:25:00
+        link: https://github.com/wolever/autorepr
+        package_name: autorepr
