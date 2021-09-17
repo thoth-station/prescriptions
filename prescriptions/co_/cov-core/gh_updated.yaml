@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CovCoreGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cov-core
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cov-core' was last updated at 2014-11-22 11:04:38
+        link: https://github.com/schlamar/cov-core
+        package_name: cov-core
