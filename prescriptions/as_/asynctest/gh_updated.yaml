@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsynctestGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asynctest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'asynctest' was last updated at 2019-11-13 20:35:50
+        link: https://github.com/Martiusweb/asynctest
+        package_name: asynctest
