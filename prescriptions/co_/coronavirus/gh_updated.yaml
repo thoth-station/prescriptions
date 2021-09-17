@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoronavirusGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coronavirus
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coronavirus' was last updated at 2020-09-04 05:47:02
+        link: https://github.com/nabucasa/coronavirus
+        package_name: coronavirus
