@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CookiesGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cookies
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cookies' was last updated at 2014-09-27 02:36:25
+        link: https://github.com/sashahart/cookies
+        package_name: cookies
