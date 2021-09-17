@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReadcharGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readchar
+    run:
+      justification:
+      - type: INFO
+        message: Project 'readchar' has high popularity on GitHub
+        link: https://github.com/magmax/python-readchar
+        package_name: readchar

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImgtagGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imgtag
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'imgtag' has low popularity on GitHub
+        link: https://github.com/nimaid/python-imgtag
+        package_name: imgtag

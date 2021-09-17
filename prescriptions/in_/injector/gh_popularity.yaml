@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InjectorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: injector
+    run:
+      justification:
+      - type: INFO
+        message: Project 'injector' has very high popularity on GitHub
+        link: https://github.com/alecthomas/injector
+        package_name: injector

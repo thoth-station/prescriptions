@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonRedmineGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-redmine
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-redmine' has very high popularity on GitHub
+        link: https://github.com/maxtepkeev/python-redmine
+        package_name: python-redmine

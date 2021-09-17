@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoFsmAdminGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-fsm-admin
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-fsm-admin' has high popularity on GitHub
+        link: https://github.com/gadventures/django-fsm-admin
+        package_name: django-fsm-admin

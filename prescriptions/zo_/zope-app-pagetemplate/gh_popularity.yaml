@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppPagetemplateGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-pagetemplate
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-pagetemplate' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.pagetemplate
+        package_name: zope-app-pagetemplate

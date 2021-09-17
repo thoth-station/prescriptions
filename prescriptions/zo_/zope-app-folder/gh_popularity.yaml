@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppFolderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-folder
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-folder' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.folder
+        package_name: zope-app-folder

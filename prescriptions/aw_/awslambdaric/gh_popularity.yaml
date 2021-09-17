@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwslambdaricGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awslambdaric
+    run:
+      justification:
+      - type: INFO
+        message: Project 'awslambdaric' has high popularity on GitHub
+        link: https://github.com/aws/aws-lambda-python-runtime-interface-client
+        package_name: awslambdaric

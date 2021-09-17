@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DratGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drat
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'drat' has low popularity on GitHub
+        link: https://github.com/riverrun/drat
+        package_name: drat

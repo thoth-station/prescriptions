@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GnupgGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gnupg
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gnupg' has high popularity on GitHub
+        link: https://github.com/isislovecruft/python-gnupg
+        package_name: gnupg

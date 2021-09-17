@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MsrestGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msrest
+    run:
+      justification:
+      - type: INFO
+        message: Project 'msrest' has high popularity on GitHub
+        link: https://github.com/Azure/msrest-for-python
+        package_name: msrest

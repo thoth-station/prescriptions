@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GetmacGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: getmac
+    run:
+      justification:
+      - type: INFO
+        message: Project 'getmac' has high popularity on GitHub
+        link: https://github.com/GhostofGoes/getmac
+        package_name: getmac

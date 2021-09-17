@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MeshClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mesh-client
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'mesh-client' has low popularity on GitHub
+        link: https://github.com/jamespic/mesh-client
+        package_name: mesh-client

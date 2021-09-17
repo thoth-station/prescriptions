@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypiserverGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypiserver
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pypiserver' has very high popularity on GitHub
+        link: https://github.com/pypiserver/pypiserver
+        package_name: pypiserver

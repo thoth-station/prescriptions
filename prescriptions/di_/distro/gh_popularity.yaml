@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DistroGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distro
+    run:
+      justification:
+      - type: INFO
+        message: Project 'distro' has high popularity on GitHub
+        link: https://github.com/python-distro/distro
+        package_name: distro

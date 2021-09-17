@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymetnoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymetno
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pymetno' has low popularity on GitHub
+        link: https://github.com/Danielhiversen/pyMetno
+        package_name: pymetno

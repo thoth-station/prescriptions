@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MockitoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mockito
+    run:
+      justification:
+      - type: INFO
+        message: Project 'mockito' has high popularity on GitHub
+        link: https://github.com/kaste/mockito-python
+        package_name: mockito

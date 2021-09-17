@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HuggingfaceHubGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: huggingface-hub
+    run:
+      justification:
+      - type: INFO
+        message: Project 'huggingface-hub' has high popularity on GitHub
+        link: https://github.com/huggingface/huggingface_hub
+        package_name: huggingface-hub

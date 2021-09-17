@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PynaclGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynacl
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pynacl' has very high popularity on GitHub
+        link: https://github.com/pyca/pynacl
+        package_name: pynacl

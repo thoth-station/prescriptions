@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Jinja2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2
+    run:
+      justification:
+      - type: INFO
+        message: Project 'jinja2' has very high popularity on GitHub
+        link: https://github.com/pallets/jinja
+        package_name: jinja2

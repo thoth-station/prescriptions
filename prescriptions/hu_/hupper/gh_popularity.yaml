@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HupperGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hupper
+    run:
+      justification:
+      - type: INFO
+        message: Project 'hupper' has high popularity on GitHub
+        link: https://github.com/Pylons/hupper
+        package_name: hupper

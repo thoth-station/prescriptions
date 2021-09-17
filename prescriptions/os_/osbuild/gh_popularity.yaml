@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OsbuildGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: osbuild
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'osbuild' has low popularity on GitHub
+        link: https://github.com/dnarvaez/osbuild
+        package_name: osbuild

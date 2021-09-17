@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerasNightlyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-nightly
+    run:
+      justification:
+      - type: INFO
+        message: Project 'keras-nightly' has very high popularity on GitHub
+        link: https://github.com/keras-team/keras
+        package_name: keras-nightly

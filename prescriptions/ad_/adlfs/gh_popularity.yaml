@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AdlfsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adlfs
+    run:
+      justification:
+      - type: INFO
+        message: Project 'adlfs' has high popularity on GitHub
+        link: https://github.com/dask/adlfs
+        package_name: adlfs

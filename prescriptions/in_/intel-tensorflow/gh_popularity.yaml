@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IntelTensorflowGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+    run:
+      justification:
+      - type: INFO
+        message: Project 'intel-tensorflow' has very high popularity on GitHub
+        link: https://github.com/tensorflow/tensorflow
+        package_name: intel-tensorflow

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InfluxdbClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: influxdb-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'influxdb-client' has high popularity on GitHub
+        link: https://github.com/influxdata/influxdb-client-python
+        package_name: influxdb-client

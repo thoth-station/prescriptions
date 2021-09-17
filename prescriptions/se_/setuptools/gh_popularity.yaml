@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetuptoolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools
+    run:
+      justification:
+      - type: INFO
+        message: Project 'setuptools' has very high popularity on GitHub
+        link: https://github.com/pypa/setuptools
+        package_name: setuptools

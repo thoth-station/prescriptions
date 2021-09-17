@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HassNabucasaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hass-nabucasa
+    run:
+      justification:
+      - type: INFO
+        message: Project 'hass-nabucasa' has high popularity on GitHub
+        link: https://github.com/NabuCasa/hass-nabucasa
+        package_name: hass-nabucasa

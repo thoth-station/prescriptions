@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IbmCosSdkCoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-cos-sdk-core
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'ibm-cos-sdk-core' has low popularity on GitHub
+        link: https://github.com/ibm/ibm-cos-sdk-python-core
+        package_name: ibm-cos-sdk-core

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HugGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hug
+    run:
+      justification:
+      - type: INFO
+        message: Project 'hug' has very high popularity on GitHub
+        link: https://github.com/hugapi/hug
+        package_name: hug

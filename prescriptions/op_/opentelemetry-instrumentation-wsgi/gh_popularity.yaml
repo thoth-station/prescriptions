@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpentelemetryInstrumentationWsgiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentelemetry-instrumentation-wsgi
+    run:
+      justification:
+      - type: INFO
+        message: Project 'opentelemetry-instrumentation-wsgi' has high popularity on GitHub
+        link: https://github.com/open-telemetry/opentelemetry-python-contrib
+        package_name: opentelemetry-instrumentation-wsgi

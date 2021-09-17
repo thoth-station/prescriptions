@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MartianGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: martian
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'martian' has low popularity on GitHub
+        link: https://github.com/zopefoundation/martian
+        package_name: martian

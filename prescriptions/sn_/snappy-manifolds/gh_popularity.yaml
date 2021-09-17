@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnappyManifoldsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snappy-manifolds
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'snappy-manifolds' has low popularity on GitHub
+        link: https://github.com/3-manifolds/snappy_manifolds
+        package_name: snappy-manifolds

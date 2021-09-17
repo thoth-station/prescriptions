@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ResponseGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: response
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'response' has low popularity on GitHub
+        link: https://github.com/fhchl/Response
+        package_name: response

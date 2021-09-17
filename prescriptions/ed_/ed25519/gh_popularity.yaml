@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Ed25519GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ed25519
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ed25519' has high popularity on GitHub
+        link: https://github.com/warner/python-ed25519
+        package_name: ed25519

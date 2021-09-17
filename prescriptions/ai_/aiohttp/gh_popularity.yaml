@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiohttpGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aiohttp' has very high popularity on GitHub
+        link: https://github.com/aio-libs/aiohttp
+        package_name: aiohttp

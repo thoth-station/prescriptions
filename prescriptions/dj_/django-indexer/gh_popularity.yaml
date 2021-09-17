@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoIndexerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-indexer
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-indexer' has moderate popularity on GitHub
+        link: https://github.com/dcramer/django-indexer
+        package_name: django-indexer

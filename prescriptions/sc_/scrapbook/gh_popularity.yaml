@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScrapbookGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scrapbook
+    run:
+      justification:
+      - type: INFO
+        message: Project 'scrapbook' has high popularity on GitHub
+        link: https://github.com/nteract/scrapbook
+        package_name: scrapbook

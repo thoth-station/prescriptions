@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSimpleHistoryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-simple-history
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-simple-history' has very high popularity on GitHub
+        link: https://github.com/jazzband/django-simple-history
+        package_name: django-simple-history

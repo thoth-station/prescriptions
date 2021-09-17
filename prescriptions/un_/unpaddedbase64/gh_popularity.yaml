@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Unpaddedbase64GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unpaddedbase64
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'unpaddedbase64' has low popularity on GitHub
+        link: https://github.com/matrix-org/python-unpaddedbase64
+        package_name: unpaddedbase64

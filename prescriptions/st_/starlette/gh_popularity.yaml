@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StarletteGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: starlette
+    run:
+      justification:
+      - type: INFO
+        message: Project 'starlette' has very high popularity on GitHub
+        link: https://github.com/encode/starlette
+        package_name: starlette

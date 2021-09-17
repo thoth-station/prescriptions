@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AmqplibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amqplib
+    run:
+      justification:
+      - type: INFO
+        message: Project 'amqplib' has moderate popularity on GitHub
+        link: https://github.com/barryp/py-amqplib
+        package_name: amqplib

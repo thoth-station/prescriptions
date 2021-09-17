@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsdfGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asdf
+    run:
+      justification:
+      - type: INFO
+        message: Project 'asdf' has high popularity on GitHub
+        link: https://github.com/asdf-format/asdf
+        package_name: asdf

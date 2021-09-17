@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiofloGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioflo
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'aioflo' has low popularity on GitHub
+        link: https://github.com/bachya/aioflo
+        package_name: aioflo

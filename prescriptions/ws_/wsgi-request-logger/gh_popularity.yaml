@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WsgiRequestLoggerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsgi-request-logger
+    run:
+      justification:
+      - type: INFO
+        message: Project 'wsgi-request-logger' has high popularity on GitHub
+        link: https://github.com/pklaus/wsgi-request-logger
+        package_name: wsgi-request-logger

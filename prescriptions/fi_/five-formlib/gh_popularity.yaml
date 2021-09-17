@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FiveFormlibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: five-formlib
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'five-formlib' has low popularity on GitHub
+        link: https://github.com/zopefoundation/five.formlib
+        package_name: five-formlib

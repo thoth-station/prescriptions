@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WxnatpyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wxnatpy
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'wxnatpy' has low popularity on GitHub
+        link: https://github.com/pauldmccarthy/wxnatpy
+        package_name: wxnatpy

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PaddlepaddleGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paddlepaddle
+    run:
+      justification:
+      - type: INFO
+        message: Project 'paddlepaddle' has very high popularity on GitHub
+        link: https://github.com/paddlepaddle/paddle
+        package_name: paddlepaddle

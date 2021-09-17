@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeContentproviderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-contentprovider
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-contentprovider' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.contentprovider
+        package_name: zope-contentprovider

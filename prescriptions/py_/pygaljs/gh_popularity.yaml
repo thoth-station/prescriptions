@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygaljsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygaljs
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pygaljs' has low popularity on GitHub
+        link: https://github.com/ionelmc/python-pygaljs
+        package_name: pygaljs

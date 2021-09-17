@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskAdminGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-admin
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-admin' has very high popularity on GitHub
+        link: https://github.com/flask-admin/flask-admin
+        package_name: flask-admin

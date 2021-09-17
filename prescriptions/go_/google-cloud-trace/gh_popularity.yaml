@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudTraceGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-trace
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'google-cloud-trace' has low popularity on GitHub
+        link: https://github.com/googleapis/python-trace
+        package_name: google-cloud-trace

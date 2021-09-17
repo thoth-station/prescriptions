@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GwebsocketsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gwebsockets
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'gwebsockets' has low popularity on GitHub
+        link: https://github.com/sugarlabs/gwebsockets
+        package_name: gwebsockets

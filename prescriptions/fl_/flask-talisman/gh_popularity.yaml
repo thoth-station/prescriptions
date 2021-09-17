@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskTalismanGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-talisman
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'flask-talisman' has low popularity on GitHub
+        link: https://github.com/wntrblm/flask-talisman
+        package_name: flask-talisman

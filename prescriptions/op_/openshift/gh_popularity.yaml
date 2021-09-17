@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpenshiftGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openshift
+    run:
+      justification:
+      - type: INFO
+        message: Project 'openshift' has high popularity on GitHub
+        link: https://github.com/openshift/openshift-restclient-python
+        package_name: openshift

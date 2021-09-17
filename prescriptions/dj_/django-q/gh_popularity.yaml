@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoQGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-q
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-q' has very high popularity on GitHub
+        link: https://github.com/koed00/django-q
+        package_name: django-q

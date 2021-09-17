@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydruidGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydruid
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pydruid' has very high popularity on GitHub
+        link: https://github.com/druid-io/pydruid
+        package_name: pydruid

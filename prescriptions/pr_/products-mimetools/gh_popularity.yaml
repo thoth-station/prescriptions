@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductsMimetoolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-mimetools
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'products-mimetools' has low popularity on GitHub
+        link: https://github.com/zopefoundation/Products.MIMETools
+        package_name: products-mimetools

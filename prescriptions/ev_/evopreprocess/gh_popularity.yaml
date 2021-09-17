@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EvopreprocessGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: evopreprocess
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'evopreprocess' has low popularity on GitHub
+        link: https://github.com/karakatic/EvoPreprocess
+        package_name: evopreprocess

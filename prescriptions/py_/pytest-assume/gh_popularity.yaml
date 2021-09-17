@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestAssumeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-assume
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pytest-assume' has high popularity on GitHub
+        link: https://github.com/astraw38/pytest-assume
+        package_name: pytest-assume

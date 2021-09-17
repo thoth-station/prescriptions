@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoTwoFactorAuthGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-two-factor-auth
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-two-factor-auth' has very high popularity on GitHub
+        link: https://github.com/Bouke/django-two-factor-auth
+        package_name: django-two-factor-auth

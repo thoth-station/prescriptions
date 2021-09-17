@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonsirGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonsir
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jsonsir' has low popularity on GitHub
+        link: https://github.com/RussellLuo/jsonsir
+        package_name: jsonsir

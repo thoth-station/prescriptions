@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CudfGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cudf
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cudf' has high popularity on GitHub
+        link: https://github.com/rapidsai/dask-cuda
+        package_name: cudf

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskSecurityGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-security
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-security' has very high popularity on GitHub
+        link: https://github.com/mattupstate/flask-security
+        package_name: flask-security

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyhamcrestGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhamcrest
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyhamcrest' has very high popularity on GitHub
+        link: https://github.com/hamcrest/PyHamcrest
+        package_name: pyhamcrest

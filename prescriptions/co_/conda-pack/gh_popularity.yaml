@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CondaPackGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conda-pack
+    run:
+      justification:
+      - type: INFO
+        message: Project 'conda-pack' has high popularity on GitHub
+        link: https://github.com/conda/conda-pack
+        package_name: conda-pack

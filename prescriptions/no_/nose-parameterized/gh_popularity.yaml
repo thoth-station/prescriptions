@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NoseParameterizedGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-parameterized
+    run:
+      justification:
+      - type: INFO
+        message: Project 'nose-parameterized' has very high popularity on GitHub
+        link: https://github.com/wolever/parameterized
+        package_name: nose-parameterized

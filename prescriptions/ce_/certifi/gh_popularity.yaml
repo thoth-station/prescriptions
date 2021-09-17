@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CertifiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certifi
+    run:
+      justification:
+      - type: INFO
+        message: Project 'certifi' has very high popularity on GitHub
+        link: https://github.com/certifi/python-certifi
+        package_name: certifi

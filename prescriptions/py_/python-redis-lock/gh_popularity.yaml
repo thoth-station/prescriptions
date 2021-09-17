@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonRedisLockGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-redis-lock
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-redis-lock' has high popularity on GitHub
+        link: https://github.com/ionelmc/python-redis-lock
+        package_name: python-redis-lock

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorboardGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tensorboard' has very high popularity on GitHub
+        link: https://github.com/tensorflow/tensorboard
+        package_name: tensorboard

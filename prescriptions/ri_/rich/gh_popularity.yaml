@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RichGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rich
+    run:
+      justification:
+      - type: INFO
+        message: Project 'rich' has very high popularity on GitHub
+        link: https://github.com/willmcgugan/rich
+        package_name: rich

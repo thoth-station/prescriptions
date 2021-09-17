@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StdlibsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlibs
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'stdlibs' has low popularity on GitHub
+        link: https://github.com/jreese/stdlibs
+        package_name: stdlibs

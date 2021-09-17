@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CatalystSphinxThemeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catalyst-sphinx-theme
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'catalyst-sphinx-theme' has low popularity on GitHub
+        link: https://github.com/catalyst-team/catalyst_sphinx_theme
+        package_name: catalyst-sphinx-theme

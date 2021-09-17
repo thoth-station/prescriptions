@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwitterAdsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twitter-ads
+    run:
+      justification:
+      - type: INFO
+        message: Project 'twitter-ads' has high popularity on GitHub
+        link: https://github.com/twitterdev/twitter-python-ads-sdk
+        package_name: twitter-ads

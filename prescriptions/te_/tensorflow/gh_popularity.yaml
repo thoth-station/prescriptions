@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tensorflow' has very high popularity on GitHub
+        link: https://github.com/tensorflow/tensorflow
+        package_name: tensorflow

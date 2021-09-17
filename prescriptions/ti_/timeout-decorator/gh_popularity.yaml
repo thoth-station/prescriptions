@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TimeoutDecoratorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeout-decorator
+    run:
+      justification:
+      - type: INFO
+        message: Project 'timeout-decorator' has high popularity on GitHub
+        link: https://github.com/pnpnpn/timeout-decorator
+        package_name: timeout-decorator

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCacheUrlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cache-url
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-cache-url' has moderate popularity on GitHub
+        link: https://github.com/epicserve/django-cache-url
+        package_name: django-cache-url

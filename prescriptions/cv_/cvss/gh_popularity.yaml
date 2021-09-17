@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CvssGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cvss
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cvss' has moderate popularity on GitHub
+        link: https://github.com/skontar/cvss
+        package_name: cvss

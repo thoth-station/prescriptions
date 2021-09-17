@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackoffUtilsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backoff-utils
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'backoff-utils' has low popularity on GitHub
+        link: https://github.com/insightindustry/backoff-utils
+        package_name: backoff-utils

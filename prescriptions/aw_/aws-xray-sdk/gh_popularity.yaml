@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsXraySdkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-xray-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aws-xray-sdk' has high popularity on GitHub
+        link: https://github.com/aws/aws-xray-sdk-python
+        package_name: aws-xray-sdk

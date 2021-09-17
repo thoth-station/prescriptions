@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ThothBuildlogParserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-buildlog-parser
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'thoth-buildlog-parser' has low popularity on GitHub
+        link: https://github.com/thoth-station/buildlog-parser
+        package_name: thoth-buildlog-parser

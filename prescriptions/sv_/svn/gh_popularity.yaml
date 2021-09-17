@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SvnGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: svn
+    run:
+      justification:
+      - type: INFO
+        message: Project 'svn' has high popularity on GitHub
+        link: https://github.com/dsoprea/PySvn
+        package_name: svn

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SupervisorChecksGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supervisor-checks
+    run:
+      justification:
+      - type: INFO
+        message: Project 'supervisor-checks' has high popularity on GitHub
+        link: https://github.com/vovanec/supervisor_checks
+        package_name: supervisor-checks

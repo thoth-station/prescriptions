@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiormqGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiormq
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aiormq' has high popularity on GitHub
+        link: https://github.com/mosquito/aiormq
+        package_name: aiormq

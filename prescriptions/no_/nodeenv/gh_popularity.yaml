@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NodeenvGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nodeenv
+    run:
+      justification:
+      - type: INFO
+        message: Project 'nodeenv' has very high popularity on GitHub
+        link: https://github.com/ekalinin/nodeenv
+        package_name: nodeenv

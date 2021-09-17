@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoDiscoverRunnerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-discover-runner
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-discover-runner' has high popularity on GitHub
+        link: https://github.com/jezdez/django-discover-runner
+        package_name: django-discover-runner

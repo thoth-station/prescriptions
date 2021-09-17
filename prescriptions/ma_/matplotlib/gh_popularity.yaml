@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MatplotlibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matplotlib
+    run:
+      justification:
+      - type: INFO
+        message: Project 'matplotlib' has very high popularity on GitHub
+        link: https://github.com/matplotlib/matplotlib
+        package_name: matplotlib

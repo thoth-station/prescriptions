@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FiveLocalsitemanagerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: five-localsitemanager
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'five-localsitemanager' has low popularity on GitHub
+        link: https://github.com/zopefoundation/five.localsitemanager
+        package_name: five-localsitemanager

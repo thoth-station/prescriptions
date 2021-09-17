@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PromiseGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: promise
+    run:
+      justification:
+      - type: INFO
+        message: Project 'promise' has high popularity on GitHub
+        link: https://github.com/syrusakbary/promise
+        package_name: promise

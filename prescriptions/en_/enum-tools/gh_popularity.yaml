@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnumToolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enum-tools
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'enum-tools' has low popularity on GitHub
+        link: https://github.com/domdfcoding/enum_tools
+        package_name: enum-tools

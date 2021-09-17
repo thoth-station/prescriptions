@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskMomentGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-moment
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-moment' has high popularity on GitHub
+        link: https://github.com/miguelgrinberg/flask-moment
+        package_name: flask-moment

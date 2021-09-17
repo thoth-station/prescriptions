@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OktaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: okta
+    run:
+      justification:
+      - type: INFO
+        message: Project 'okta' has high popularity on GitHub
+        link: https://github.com/okta/okta-sdk-python
+        package_name: okta

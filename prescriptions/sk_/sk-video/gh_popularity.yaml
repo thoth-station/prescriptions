@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SkVideoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sk-video
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sk-video' has very high popularity on GitHub
+        link: https://github.com/scikit-video/scikit-video
+        package_name: sk-video

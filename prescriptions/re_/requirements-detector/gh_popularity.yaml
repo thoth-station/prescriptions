@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequirementsDetectorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requirements-detector
+    run:
+      justification:
+      - type: INFO
+        message: Project 'requirements-detector' has moderate popularity on GitHub
+        link: https://github.com/landscapeio/requirements-detector
+        package_name: requirements-detector

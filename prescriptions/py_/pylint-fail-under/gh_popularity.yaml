@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintFailUnderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-fail-under
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pylint-fail-under' has low popularity on GitHub
+        link: https://github.com/TNThieding/pylint-fail-under
+        package_name: pylint-fail-under

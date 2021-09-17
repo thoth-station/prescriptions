@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NestedLookupGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nested-lookup
+    run:
+      justification:
+      - type: INFO
+        message: Project 'nested-lookup' has high popularity on GitHub
+        link: https://github.com/russellballestrini/nested-lookup
+        package_name: nested-lookup

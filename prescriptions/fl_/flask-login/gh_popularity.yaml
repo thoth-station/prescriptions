@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskLoginGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-login
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-login' has very high popularity on GitHub
+        link: https://github.com/maxcountryman/flask-login
+        package_name: flask-login

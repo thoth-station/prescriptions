@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RplGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpl
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'rpl' has low popularity on GitHub
+        link: https://github.com/rrthomas/rpl
+        package_name: rpl

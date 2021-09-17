@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutoflakeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoflake
+    run:
+      justification:
+      - type: INFO
+        message: Project 'autoflake' has high popularity on GitHub
+        link: https://github.com/myint/autoflake
+        package_name: autoflake

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SafetyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: safety
+    run:
+      justification:
+      - type: INFO
+        message: Project 'safety' has very high popularity on GitHub
+        link: https://github.com/pyupio/safety
+        package_name: safety

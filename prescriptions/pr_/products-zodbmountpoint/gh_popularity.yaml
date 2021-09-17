@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductsZodbmountpointGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-zodbmountpoint
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'products-zodbmountpoint' has low popularity on GitHub
+        link: https://github.com/zopefoundation/Products.ZODBMountPoint
+        package_name: products-zodbmountpoint

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthAbiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-abi
+    run:
+      justification:
+      - type: INFO
+        message: Project 'eth-abi' has high popularity on GitHub
+        link: https://github.com/ethereum/eth-abi
+        package_name: eth-abi

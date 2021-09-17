@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApacheAirflowBackportProvidersSftpGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-backport-providers-sftp
+    run:
+      justification:
+      - type: INFO
+        message: Project 'apache-airflow-backport-providers-sftp' has very high popularity on GitHub
+        link: https://github.com/apache/airflow
+        package_name: apache-airflow-backport-providers-sftp

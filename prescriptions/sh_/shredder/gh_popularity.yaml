@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShredderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shredder
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'shredder' has low popularity on GitHub
+        link: https://github.com/svrana/shredder
+        package_name: shredder

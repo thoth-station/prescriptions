@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachedPropertyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cached-property
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cached-property' has very high popularity on GitHub
+        link: https://github.com/pydanny/cached-property
+        package_name: cached-property

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DocumenttemplateGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: documenttemplate
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'documenttemplate' has low popularity on GitHub
+        link: https://github.com/zopefoundation/DocumentTemplate
+        package_name: documenttemplate

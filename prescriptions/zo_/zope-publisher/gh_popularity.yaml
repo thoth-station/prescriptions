@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopePublisherGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-publisher
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-publisher' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.publisher
+        package_name: zope-publisher

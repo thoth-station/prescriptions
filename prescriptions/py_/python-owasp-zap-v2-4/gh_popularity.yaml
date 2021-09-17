@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonOwaspZapV24GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-owasp-zap-v2-4
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-owasp-zap-v2-4' has high popularity on GitHub
+        link: https://github.com/zaproxy/zap-api-python
+        package_name: python-owasp-zap-v2-4

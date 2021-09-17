@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FindsparkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findspark
+    run:
+      justification:
+      - type: INFO
+        message: Project 'findspark' has high popularity on GitHub
+        link: https://github.com/minrk/findspark
+        package_name: findspark

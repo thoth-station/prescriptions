@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DevpiServerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devpi-server
+    run:
+      justification:
+      - type: INFO
+        message: Project 'devpi-server' has very high popularity on GitHub
+        link: https://github.com/devpi/devpi
+        package_name: devpi-server

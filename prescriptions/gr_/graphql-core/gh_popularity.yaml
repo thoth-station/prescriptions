@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GraphqlCoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphql-core
+    run:
+      justification:
+      - type: INFO
+        message: Project 'graphql-core' has high popularity on GitHub
+        link: https://github.com/graphql-python/graphql-core
+        package_name: graphql-core

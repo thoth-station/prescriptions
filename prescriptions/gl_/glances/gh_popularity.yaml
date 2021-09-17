@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GlancesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glances
+    run:
+      justification:
+      - type: INFO
+        message: Project 'glances' has very high popularity on GitHub
+        link: https://github.com/nicolargo/glances
+        package_name: glances

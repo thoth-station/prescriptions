@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NewrelicTelemetrySdkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: newrelic-telemetry-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Project 'newrelic-telemetry-sdk' has moderate popularity on GitHub
+        link: https://github.com/newrelic/newrelic-telemetry-sdk-python
+        package_name: newrelic-telemetry-sdk

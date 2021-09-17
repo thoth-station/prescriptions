@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LazyImportGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy-import
+    run:
+      justification:
+      - type: INFO
+        message: Project 'lazy-import' has high popularity on GitHub
+        link: https://github.com/mnmelo/lazy_import
+        package_name: lazy-import

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymocGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymoc
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pymoc' has low popularity on GitHub
+        link: https://github.com/grahambell/pymoc
+        package_name: pymoc

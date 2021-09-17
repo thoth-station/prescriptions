@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RencodeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rencode
+    run:
+      justification:
+      - type: INFO
+        message: Project 'rencode' has moderate popularity on GitHub
+        link: https://github.com/aresch/rencode
+        package_name: rencode

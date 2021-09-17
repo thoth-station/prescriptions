@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoRedisGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-redis
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-redis' has very high popularity on GitHub
+        link: https://github.com/jazzband/django-redis
+        package_name: django-redis

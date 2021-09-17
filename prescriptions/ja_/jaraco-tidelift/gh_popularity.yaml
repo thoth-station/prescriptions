@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoTideliftGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-tidelift
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-tidelift' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.tidelift
+        package_name: jaraco-tidelift

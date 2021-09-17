@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductmdGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: productmd
+    run:
+      justification:
+      - type: INFO
+        message: Project 'productmd' has moderate popularity on GitHub
+        link: https://github.com/release-engineering/productmd
+        package_name: productmd

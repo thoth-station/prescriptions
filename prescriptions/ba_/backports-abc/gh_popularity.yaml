@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsAbcGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-abc
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'backports-abc' has low popularity on GitHub
+        link: https://github.com/cython/backports_abc
+        package_name: backports-abc

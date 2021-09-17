@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PriceParserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: price-parser
+    run:
+      justification:
+      - type: INFO
+        message: Project 'price-parser' has high popularity on GitHub
+        link: https://github.com/scrapinghub/price-parser
+        package_name: price-parser

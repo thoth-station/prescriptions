@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TentaclioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tentaclio
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'tentaclio' has low popularity on GitHub
+        link: https://github.com/octoenergy/tentaclio
+        package_name: tentaclio

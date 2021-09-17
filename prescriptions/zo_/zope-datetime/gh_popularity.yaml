@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeDatetimeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-datetime
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-datetime' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.datetime
+        package_name: zope-datetime

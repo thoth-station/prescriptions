@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwistedIocpsupportGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-iocpsupport
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'twisted-iocpsupport' has low popularity on GitHub
+        link: https://github.com/twisted/twisted-iocpsupport
+        package_name: twisted-iocpsupport

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskGraphqlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-graphql
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-graphql' has very high popularity on GitHub
+        link: https://github.com/graphql-python/flask-graphql
+        package_name: flask-graphql

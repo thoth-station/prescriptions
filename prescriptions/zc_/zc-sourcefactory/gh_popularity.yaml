@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZcSourcefactoryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zc-sourcefactory
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zc-sourcefactory' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zc.sourcefactory
+        package_name: zc-sourcefactory

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyinstrumentGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinstrument
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyinstrument' has very high popularity on GitHub
+        link: https://github.com/joerick/pyinstrument
+        package_name: pyinstrument

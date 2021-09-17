@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RapidfuzzGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rapidfuzz
+    run:
+      justification:
+      - type: INFO
+        message: Project 'rapidfuzz' has very high popularity on GitHub
+        link: https://github.com/maxbachmann/rapidfuzz
+        package_name: rapidfuzz

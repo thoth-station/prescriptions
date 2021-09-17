@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowTextGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-text
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tensorflow-text' has very high popularity on GitHub
+        link: https://github.com/tensorflow/text
+        package_name: tensorflow-text

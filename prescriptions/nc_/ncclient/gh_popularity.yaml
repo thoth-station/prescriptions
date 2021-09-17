@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NcclientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ncclient
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ncclient' has very high popularity on GitHub
+        link: https://github.com/ncclient/ncclient
+        package_name: ncclient

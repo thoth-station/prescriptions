@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoTreebeardGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-treebeard
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-treebeard' has very high popularity on GitHub
+        link: https://github.com/django-treebeard/django-treebeard
+        package_name: django-treebeard

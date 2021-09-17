@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TransliterateGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transliterate
+    run:
+      justification:
+      - type: INFO
+        message: Project 'transliterate' has high popularity on GitHub
+        link: https://github.com/barseghyanartur/transliterate
+        package_name: transliterate

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TypesClickGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-click
+    run:
+      justification:
+      - type: INFO
+        message: Project 'types-click' has very high popularity on GitHub
+        link: https://github.com/python/typeshed
+        package_name: types-click

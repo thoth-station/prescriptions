@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TldrGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tldr
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tldr' has high popularity on GitHub
+        link: https://github.com/tldr-pages/tldr-python-client
+        package_name: tldr

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DmTreeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dm-tree
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dm-tree' has very high popularity on GitHub
+        link: https://github.com/deepmind/tree
+        package_name: dm-tree

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyflakesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyflakes
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyflakes' has very high popularity on GitHub
+        link: https://github.com/PyCQA/pyflakes
+        package_name: pyflakes

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DedupeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dedupe
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dedupe' has very high popularity on GitHub
+        link: https://github.com/dedupeio/dedupe
+        package_name: dedupe

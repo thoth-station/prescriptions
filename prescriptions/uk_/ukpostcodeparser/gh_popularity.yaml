@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UkpostcodeparserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ukpostcodeparser
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'ukpostcodeparser' has low popularity on GitHub
+        link: https://github.com/hamstah/ukpostcodeparser
+        package_name: ukpostcodeparser

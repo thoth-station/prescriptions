@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonConsulGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-consul
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-consul' has very high popularity on GitHub
+        link: https://github.com/cablehead/python-consul
+        package_name: python-consul

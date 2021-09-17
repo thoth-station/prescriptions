@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LittleutilsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: littleutils
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'littleutils' has low popularity on GitHub
+        link: https://github.com/alexmojaki/littleutils
+        package_name: littleutils

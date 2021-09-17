@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DecoratorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: decorator
+    run:
+      justification:
+      - type: INFO
+        message: Project 'decorator' has very high popularity on GitHub
+        link: https://github.com/micheles/decorator
+        package_name: decorator

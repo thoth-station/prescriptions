@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HollandGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: holland
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'holland' has low popularity on GitHub
+        link: https://github.com/lambdalife/holland
+        package_name: holland

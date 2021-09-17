@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TeampullsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: teampulls
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'teampulls' has low popularity on GitHub
+        link: https://github.com/brejoc/teampulls
+        package_name: teampulls

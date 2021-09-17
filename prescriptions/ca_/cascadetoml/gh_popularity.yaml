@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CascadetomlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cascadetoml
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'cascadetoml' has low popularity on GitHub
+        link: https://github.com/adafruit/cascadetoml
+        package_name: cascadetoml

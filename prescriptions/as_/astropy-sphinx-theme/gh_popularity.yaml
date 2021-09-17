@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AstropySphinxThemeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astropy-sphinx-theme
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'astropy-sphinx-theme' has low popularity on GitHub
+        link: https://github.com/astropy/astropy-sphinx-theme
+        package_name: astropy-sphinx-theme

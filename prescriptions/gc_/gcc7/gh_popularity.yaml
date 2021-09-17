@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Gcc7GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcc7
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'gcc7' has low popularity on GitHub
+        link: https://github.com/bh107/python-gcc
+        package_name: gcc7

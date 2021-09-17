@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymongoAuthAwsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymongo-auth-aws
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pymongo-auth-aws' has low popularity on GitHub
+        link: https://github.com/mongodb/pymongo-auth-aws
+        package_name: pymongo-auth-aws

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HubspotApiClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hubspot-api-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'hubspot-api-client' has high popularity on GitHub
+        link: https://github.com/HubSpot/hubspot-api-python
+        package_name: hubspot-api-client

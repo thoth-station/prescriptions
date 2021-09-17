@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskOpentracingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-opentracing
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-opentracing' has high popularity on GitHub
+        link: https://github.com/opentracing-contrib/python-flask
+        package_name: flask-opentracing

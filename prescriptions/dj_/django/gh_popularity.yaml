@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django' has very high popularity on GitHub
+        link: https://github.com/django/django
+        package_name: django

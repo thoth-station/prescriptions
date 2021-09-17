@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterNbutilsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-nbutils
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jupyter-nbutils' has low popularity on GitHub
+        link: https://github.com/CermakM/jupyter-nbutils
+        package_name: jupyter-nbutils

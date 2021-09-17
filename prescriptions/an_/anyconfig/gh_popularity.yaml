@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnyconfigGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anyconfig
+    run:
+      justification:
+      - type: INFO
+        message: Project 'anyconfig' has high popularity on GitHub
+        link: https://github.com/ssato/python-anyconfig
+        package_name: anyconfig

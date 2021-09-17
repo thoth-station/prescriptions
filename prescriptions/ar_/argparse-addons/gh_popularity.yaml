@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArgparseAddonsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argparse-addons
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'argparse-addons' has low popularity on GitHub
+        link: https://github.com/eerimoq/argparse_addons
+        package_name: argparse-addons

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppAppsetupGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-appsetup
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-appsetup' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.appsetup
+        package_name: zope-app-appsetup

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MlpackGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlpack
+    run:
+      justification:
+      - type: INFO
+        message: Project 'mlpack' has very high popularity on GitHub
+        link: https://github.com/mlpack/mlpack
+        package_name: mlpack

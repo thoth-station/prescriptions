@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconPkgConfigGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-pkg-config
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'colcon-pkg-config' has low popularity on GitHub
+        link: https://github.com/colcon/colcon-pkg-config
+        package_name: colcon-pkg-config

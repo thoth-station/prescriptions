@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FurlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: furl
+    run:
+      justification:
+      - type: INFO
+        message: Project 'furl' has very high popularity on GitHub
+        link: https://github.com/gruns/furl
+        package_name: furl

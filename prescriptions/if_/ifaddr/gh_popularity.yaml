@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IfaddrGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ifaddr
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ifaddr' has high popularity on GitHub
+        link: https://github.com/pydron/ifaddr
+        package_name: ifaddr

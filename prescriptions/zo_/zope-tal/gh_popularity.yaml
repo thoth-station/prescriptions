@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeTalGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-tal
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-tal' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.tal
+        package_name: zope-tal

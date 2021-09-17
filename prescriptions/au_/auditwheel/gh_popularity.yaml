@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AuditwheelGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: auditwheel
+    run:
+      justification:
+      - type: INFO
+        message: Project 'auditwheel' has high popularity on GitHub
+        link: https://github.com/pypa/auditwheel
+        package_name: auditwheel

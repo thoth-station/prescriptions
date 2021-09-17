@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPagingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-paging
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-paging' has high popularity on GitHub
+        link: https://github.com/dcramer/django-paging
+        package_name: django-paging

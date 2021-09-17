@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GenderGuesserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gender-guesser
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gender-guesser' has high popularity on GitHub
+        link: https://github.com/lead-ratings/gender-guesser
+        package_name: gender-guesser

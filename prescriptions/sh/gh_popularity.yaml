@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sh
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sh' has very high popularity on GitHub
+        link: https://github.com/amoffat/sh
+        package_name: sh

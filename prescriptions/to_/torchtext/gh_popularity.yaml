@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TorchtextGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchtext
+    run:
+      justification:
+      - type: INFO
+        message: Project 'torchtext' has very high popularity on GitHub
+        link: https://github.com/pytorch/text
+        package_name: torchtext

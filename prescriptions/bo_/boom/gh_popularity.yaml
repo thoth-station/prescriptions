@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BoomGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boom
+    run:
+      justification:
+      - type: INFO
+        message: Project 'boom' has very high popularity on GitHub
+        link: https://github.com/tarekziade/boom
+        package_name: boom

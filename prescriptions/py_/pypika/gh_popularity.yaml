@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypikaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypika
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pypika' has very high popularity on GitHub
+        link: https://github.com/kayak/pypika
+        package_name: pypika

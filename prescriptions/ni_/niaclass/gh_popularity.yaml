@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NiaclassGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: niaclass
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'niaclass' has low popularity on GitHub
+        link: https://github.com/lukapecnik/NiaClass
+        package_name: niaclass

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TextsearchGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textsearch
+    run:
+      justification:
+      - type: INFO
+        message: Project 'textsearch' has high popularity on GitHub
+        link: https://github.com/kootenpv/textsearch
+        package_name: textsearch

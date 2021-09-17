@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BodhiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bodhi
+    run:
+      justification:
+      - type: INFO
+        message: Project 'bodhi' has high popularity on GitHub
+        link: https://github.com/fedora-infra/bodhi
+        package_name: bodhi

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyzabbixGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzabbix
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyzabbix' has very high popularity on GitHub
+        link: https://github.com/lukecyca/pyzabbix
+        package_name: pyzabbix

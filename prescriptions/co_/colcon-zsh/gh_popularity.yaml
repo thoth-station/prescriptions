@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconZshGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-zsh
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'colcon-zsh' has low popularity on GitHub
+        link: https://github.com/colcon/colcon-zsh
+        package_name: colcon-zsh

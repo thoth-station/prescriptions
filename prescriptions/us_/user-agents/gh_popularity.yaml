@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UserAgentsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: user-agents
+    run:
+      justification:
+      - type: INFO
+        message: Project 'user-agents' has very high popularity on GitHub
+        link: https://github.com/selwin/python-user-agents
+        package_name: user-agents

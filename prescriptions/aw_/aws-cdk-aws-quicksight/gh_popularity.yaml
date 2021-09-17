@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsQuicksightGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-quicksight
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aws-cdk-aws-quicksight' has very high popularity on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-quicksight

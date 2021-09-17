@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconParallelExecutorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-parallel-executor
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'colcon-parallel-executor' has low popularity on GitHub
+        link: https://github.com/colcon/colcon-parallel-executor
+        package_name: colcon-parallel-executor

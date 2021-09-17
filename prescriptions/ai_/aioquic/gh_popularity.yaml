@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AioquicGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioquic
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aioquic' has very high popularity on GitHub
+        link: https://github.com/aiortc/aioquic
+        package_name: aioquic

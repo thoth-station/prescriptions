@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TypingCompatGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-compat
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'typing-compat' has low popularity on GitHub
+        link: https://github.com/rossmacarthur/typing-compat
+        package_name: typing-compat

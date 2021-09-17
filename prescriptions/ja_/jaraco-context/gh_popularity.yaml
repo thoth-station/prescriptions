@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoContextGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-context
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-context' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.context
+        package_name: jaraco-context

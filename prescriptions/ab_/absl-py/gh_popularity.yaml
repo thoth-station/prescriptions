@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AbslPyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: absl-py
+    run:
+      justification:
+      - type: INFO
+        message: Project 'absl-py' has very high popularity on GitHub
+        link: https://github.com/abseil/abseil-py
+        package_name: absl-py

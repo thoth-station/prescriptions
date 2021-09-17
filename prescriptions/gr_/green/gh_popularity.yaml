@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GreenGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: green
+    run:
+      justification:
+      - type: INFO
+        message: Project 'green' has very high popularity on GitHub
+        link: https://github.com/CleanCut/green
+        package_name: green

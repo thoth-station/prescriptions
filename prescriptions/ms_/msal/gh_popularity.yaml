@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MsalGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msal
+    run:
+      justification:
+      - type: INFO
+        message: Project 'msal' has high popularity on GitHub
+        link: https://github.com/AzureAD/microsoft-authentication-library-for-python
+        package_name: msal

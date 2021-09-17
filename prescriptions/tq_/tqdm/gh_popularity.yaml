@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TqdmGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tqdm
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tqdm' has very high popularity on GitHub
+        link: https://github.com/tqdm/tqdm
+        package_name: tqdm

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PantsbuildPantsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pantsbuild-pants
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pantsbuild-pants' has very high popularity on GitHub
+        link: https://github.com/pantsbuild/pants
+        package_name: pantsbuild-pants

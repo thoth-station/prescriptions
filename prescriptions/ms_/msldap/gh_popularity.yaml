@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MsldapGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msldap
+    run:
+      justification:
+      - type: INFO
+        message: Project 'msldap' has high popularity on GitHub
+        link: https://github.com/skelsec/msldap
+        package_name: msldap

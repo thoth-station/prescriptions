@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnsibleBaseGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-base
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ansible-base' has very high popularity on GitHub
+        link: https://github.com/ansible/ansible
+        package_name: ansible-base

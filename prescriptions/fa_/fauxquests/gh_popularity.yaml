@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FauxquestsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fauxquests
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'fauxquests' has low popularity on GitHub
+        link: https://github.com/lukesneeringer/fauxquests
+        package_name: fauxquests

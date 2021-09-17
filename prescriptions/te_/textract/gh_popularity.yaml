@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TextractGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textract
+    run:
+      justification:
+      - type: INFO
+        message: Project 'textract' has very high popularity on GitHub
+        link: https://github.com/deanmalmgren/textract
+        package_name: textract

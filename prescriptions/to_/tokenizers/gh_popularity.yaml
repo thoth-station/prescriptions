@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TokenizersGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tokenizers
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tokenizers' has very high popularity on GitHub
+        link: https://github.com/huggingface/tokenizers
+        package_name: tokenizers

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8CommasGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-commas
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flake8-commas' has high popularity on GitHub
+        link: https://github.com/PyCQA/flake8-commas
+        package_name: flake8-commas

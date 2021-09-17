@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsDocdbGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-docdb
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aws-cdk-aws-docdb' has very high popularity on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-docdb

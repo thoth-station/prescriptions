@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8SuperCallGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-super-call
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'flake8-super-call' has low popularity on GitHub
+        link: https://github.com/DragosOprica/flake8-super-call
+        package_name: flake8-super-call

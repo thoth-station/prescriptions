@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoQueryinspectGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-queryinspect
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-queryinspect' has very high popularity on GitHub
+        link: https://github.com/dobarkod/django-queryinspect
+        package_name: django-queryinspect

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoEnvsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-envs
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-envs' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.envs
+        package_name: jaraco-envs

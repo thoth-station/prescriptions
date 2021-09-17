@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnrichGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enrich
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'enrich' has low popularity on GitHub
+        link: https://github.com/pycontribs/enrich
+        package_name: enrich

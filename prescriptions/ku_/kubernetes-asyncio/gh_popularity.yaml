@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KubernetesAsyncioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes-asyncio
+    run:
+      justification:
+      - type: INFO
+        message: Project 'kubernetes-asyncio' has high popularity on GitHub
+        link: https://github.com/tomplus/kubernetes_asyncio
+        package_name: kubernetes-asyncio

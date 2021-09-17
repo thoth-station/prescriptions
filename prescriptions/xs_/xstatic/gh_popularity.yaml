@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XstaticGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xstatic
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'xstatic' has low popularity on GitHub
+        link: https://github.com/xstatic-py/xstatic
+        package_name: xstatic

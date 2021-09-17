@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiosmtpdGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosmtpd
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aiosmtpd' has high popularity on GitHub
+        link: https://github.com/aio-libs/aiosmtpd
+        package_name: aiosmtpd

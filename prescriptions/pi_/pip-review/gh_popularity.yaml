@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipReviewGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-review
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pip-review' has high popularity on GitHub
+        link: https://github.com/jgonggrijp/pip-review
+        package_name: pip-review

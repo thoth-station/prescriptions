@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OsSysGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: os-sys
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'os-sys' has low popularity on GitHub
+        link: https://github.com/Matthijs990/os-sys-github
+        package_name: os-sys

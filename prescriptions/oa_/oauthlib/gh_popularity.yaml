@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OauthlibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauthlib
+    run:
+      justification:
+      - type: INFO
+        message: Project 'oauthlib' has very high popularity on GitHub
+        link: https://github.com/oauthlib/oauthlib
+        package_name: oauthlib

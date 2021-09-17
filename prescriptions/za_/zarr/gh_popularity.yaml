@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZarrGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zarr
+    run:
+      justification:
+      - type: INFO
+        message: Project 'zarr' has very high popularity on GitHub
+        link: https://github.com/zarr-developers/zarr-python
+        package_name: zarr

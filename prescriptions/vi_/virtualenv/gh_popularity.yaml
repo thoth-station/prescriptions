@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VirtualenvGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: virtualenv
+    run:
+      justification:
+      - type: INFO
+        message: Project 'virtualenv' has very high popularity on GitHub
+        link: https://github.com/pypa/virtualenv
+        package_name: virtualenv

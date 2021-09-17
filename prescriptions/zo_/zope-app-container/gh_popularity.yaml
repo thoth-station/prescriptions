@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppContainerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-container
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-container' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.container
+        package_name: zope-app-container

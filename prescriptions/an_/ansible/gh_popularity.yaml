@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnsibleGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ansible' has very high popularity on GitHub
+        link: https://github.com/ansible/ansible
+        package_name: ansible

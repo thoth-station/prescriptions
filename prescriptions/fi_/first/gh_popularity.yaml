@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FirstGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: first
+    run:
+      justification:
+      - type: INFO
+        message: Project 'first' has high popularity on GitHub
+        link: https://github.com/hynek/first
+        package_name: first

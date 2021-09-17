@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pip' has very high popularity on GitHub
+        link: https://github.com/pypa/pip
+        package_name: pip

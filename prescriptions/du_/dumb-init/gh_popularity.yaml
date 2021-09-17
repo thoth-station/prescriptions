@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DumbInitGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dumb-init
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dumb-init' has very high popularity on GitHub
+        link: https://github.com/Yelp/dumb-init
+        package_name: dumb-init

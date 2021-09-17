@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PywbemGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywbem
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pywbem' has moderate popularity on GitHub
+        link: https://github.com/pywbem/pywbem
+        package_name: pywbem

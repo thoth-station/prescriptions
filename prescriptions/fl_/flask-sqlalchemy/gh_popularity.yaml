@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskSqlalchemyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sqlalchemy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-sqlalchemy' has very high popularity on GitHub
+        link: https://github.com/pallets/flask-sqlalchemy
+        package_name: flask-sqlalchemy

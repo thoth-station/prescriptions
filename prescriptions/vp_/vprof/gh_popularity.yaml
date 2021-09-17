@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VprofGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vprof
+    run:
+      justification:
+      - type: INFO
+        message: Project 'vprof' has very high popularity on GitHub
+        link: https://github.com/nvdv/vprof
+        package_name: vprof

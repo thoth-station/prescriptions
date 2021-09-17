@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoObjectActionsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-object-actions
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-object-actions' has high popularity on GitHub
+        link: https://github.com/crccheck/django-object-actions
+        package_name: django-object-actions

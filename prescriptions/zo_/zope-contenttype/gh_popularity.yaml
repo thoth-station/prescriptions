@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeContenttypeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-contenttype
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-contenttype' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.contenttype
+        package_name: zope-contenttype

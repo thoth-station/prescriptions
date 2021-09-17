@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FakeredisGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fakeredis
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fakeredis' has very high popularity on GitHub
+        link: https://github.com/jamesls/fakeredis
+        package_name: fakeredis

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PywinrmGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywinrm
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pywinrm' has very high popularity on GitHub
+        link: https://github.com/diyan/pywinrm
+        package_name: pywinrm

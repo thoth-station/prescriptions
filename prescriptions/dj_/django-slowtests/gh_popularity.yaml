@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSlowtestsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-slowtests
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-slowtests' has high popularity on GitHub
+        link: https://github.com/realpython/django-slow-tests
+        package_name: django-slowtests

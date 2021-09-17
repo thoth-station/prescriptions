@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnnoyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: annoy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'annoy' has very high popularity on GitHub
+        link: https://github.com/spotify/annoy
+        package_name: annoy

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjSearchUrlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dj-search-url
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dj-search-url' has moderate popularity on GitHub
+        link: https://github.com/dstufft/dj-search-url
+        package_name: dj-search-url

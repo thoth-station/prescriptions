@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InvectioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invectio
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'invectio' has low popularity on GitHub
+        link: https://github.com/thoth-station/invectio
+        package_name: invectio

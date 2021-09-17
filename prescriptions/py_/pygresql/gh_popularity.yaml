@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygresqlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygresql
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pygresql' has moderate popularity on GitHub
+        link: https://github.com/PyGreSQL/PyGreSQL
+        package_name: pygresql

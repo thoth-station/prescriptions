@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoMongodbGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-mongodb
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-mongodb' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.mongodb
+        package_name: jaraco-mongodb

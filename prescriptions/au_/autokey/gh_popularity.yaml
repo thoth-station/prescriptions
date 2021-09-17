@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutokeyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autokey
+    run:
+      justification:
+      - type: INFO
+        message: Project 'autokey' has very high popularity on GitHub
+        link: https://github.com/autokey/autokey
+        package_name: autokey

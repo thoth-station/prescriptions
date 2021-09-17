@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DictdumperGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdumper
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'dictdumper' has low popularity on GitHub
+        link: https://github.com/JarryShaw/dictdumper
+        package_name: dictdumper

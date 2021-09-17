@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Traceback2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: traceback2
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'traceback2' has low popularity on GitHub
+        link: https://github.com/testing-cabal/traceback2
+        package_name: traceback2

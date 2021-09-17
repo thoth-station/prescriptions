@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TorchGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch
+    run:
+      justification:
+      - type: INFO
+        message: Project 'torch' has very high popularity on GitHub
+        link: https://github.com/pytorch/pytorch
+        package_name: torch

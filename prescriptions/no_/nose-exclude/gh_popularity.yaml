@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NoseExcludeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-exclude
+    run:
+      justification:
+      - type: INFO
+        message: Project 'nose-exclude' has moderate popularity on GitHub
+        link: https://github.com/kgrandis/nose-exclude
+        package_name: nose-exclude

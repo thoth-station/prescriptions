@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HttprettyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpretty
+    run:
+      justification:
+      - type: INFO
+        message: Project 'httpretty' has very high popularity on GitHub
+        link: https://github.com/gabrielfalcao/HTTPretty
+        package_name: httpretty

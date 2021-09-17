@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkCloudformationIncludeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-cloudformation-include
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aws-cdk-cloudformation-include' has very high popularity on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-cloudformation-include

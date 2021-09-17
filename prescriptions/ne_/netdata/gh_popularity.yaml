@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NetdataGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netdata
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'netdata' has low popularity on GitHub
+        link: https://github.com/home-assistant-ecosystem/python-netdata
+        package_name: netdata

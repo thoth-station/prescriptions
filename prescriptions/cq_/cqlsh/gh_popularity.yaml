@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CqlshGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cqlsh
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'cqlsh' has low popularity on GitHub
+        link: https://github.com/jeffwidman/cqlsh
+        package_name: cqlsh

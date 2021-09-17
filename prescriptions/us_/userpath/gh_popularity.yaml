@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UserpathGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: userpath
+    run:
+      justification:
+      - type: INFO
+        message: Project 'userpath' has high popularity on GitHub
+        link: https://github.com/ofek/userpath
+        package_name: userpath

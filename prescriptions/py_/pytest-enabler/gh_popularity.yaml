@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestEnablerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-enabler
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pytest-enabler' has low popularity on GitHub
+        link: https://github.com/jaraco/pytest-enabler
+        package_name: pytest-enabler

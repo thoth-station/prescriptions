@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZexceptionsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zexceptions
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zexceptions' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zExceptions
+        package_name: zexceptions

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeApplicationcontrolGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-applicationcontrol
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-applicationcontrol' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.applicationcontrol
+        package_name: zope-applicationcontrol

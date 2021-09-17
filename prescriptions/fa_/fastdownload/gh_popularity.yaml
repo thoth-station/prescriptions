@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastdownloadGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastdownload
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fastdownload' has moderate popularity on GitHub
+        link: https://github.com/fastai/fastdownload
+        package_name: fastdownload

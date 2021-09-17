@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SemgrepGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semgrep
+    run:
+      justification:
+      - type: INFO
+        message: Project 'semgrep' has very high popularity on GitHub
+        link: https://github.com/returntocorp/semgrep
+        package_name: semgrep

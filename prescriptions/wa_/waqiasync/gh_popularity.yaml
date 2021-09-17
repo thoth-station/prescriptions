@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WaqiasyncGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waqiasync
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'waqiasync' has low popularity on GitHub
+        link: https://github.com/andrey-git/waqi-async
+        package_name: waqiasync

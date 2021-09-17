@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskCompressGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-compress
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-compress' has high popularity on GitHub
+        link: https://github.com/colour-science/flask-compress
+        package_name: flask-compress

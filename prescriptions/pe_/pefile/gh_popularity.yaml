@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PefileGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pefile
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pefile' has very high popularity on GitHub
+        link: https://github.com/erocarrera/pefile
+        package_name: pefile

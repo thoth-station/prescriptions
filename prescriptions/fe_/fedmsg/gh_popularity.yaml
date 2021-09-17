@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FedmsgGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fedmsg
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fedmsg' has high popularity on GitHub
+        link: https://github.com/fedora-infra/fedmsg
+        package_name: fedmsg

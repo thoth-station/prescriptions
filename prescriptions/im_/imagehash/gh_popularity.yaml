@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImagehashGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagehash
+    run:
+      justification:
+      - type: INFO
+        message: Project 'imagehash' has very high popularity on GitHub
+        link: https://github.com/JohannesBuchner/imagehash
+        package_name: imagehash

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoUrlShorteningGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-url-shortening
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'django-url-shortening' has low popularity on GitHub
+        link: https://github.com/doubletapp/django-url-shortening
+        package_name: django-url-shortening

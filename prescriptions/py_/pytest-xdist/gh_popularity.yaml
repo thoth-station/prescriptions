@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestXdistGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-xdist
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pytest-xdist' has very high popularity on GitHub
+        link: https://github.com/pytest-dev/pytest-xdist
+        package_name: pytest-xdist

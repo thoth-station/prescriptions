@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WlocGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wloc
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'wloc' has low popularity on GitHub
+        link: https://github.com/xvitaly/wloc
+        package_name: wloc

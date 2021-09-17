@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCrontabGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crontab
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-crontab' has very high popularity on GitHub
+        link: https://github.com/kraiz/django-crontab
+        package_name: django-crontab

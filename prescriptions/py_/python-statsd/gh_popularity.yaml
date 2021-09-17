@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonStatsdGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-statsd
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-statsd' has high popularity on GitHub
+        link: https://github.com/WoLpH/python-statsd
+        package_name: python-statsd

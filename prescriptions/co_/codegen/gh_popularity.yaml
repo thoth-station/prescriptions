@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodegenGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codegen
+    run:
+      justification:
+      - type: INFO
+        message: Project 'codegen' has high popularity on GitHub
+        link: https://github.com/andreif/codegen
+        package_name: codegen

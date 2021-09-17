@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GraphqlRelayGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphql-relay
+    run:
+      justification:
+      - type: INFO
+        message: Project 'graphql-relay' has high popularity on GitHub
+        link: https://github.com/graphql-python/graphql-relay-py
+        package_name: graphql-relay

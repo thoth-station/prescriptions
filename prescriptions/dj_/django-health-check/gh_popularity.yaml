@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoHealthCheckGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-health-check
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-health-check' has very high popularity on GitHub
+        link: https://github.com/KristianOellegaard/django-health-check
+        package_name: django-health-check

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonfuzzGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythonfuzz
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pythonfuzz' has high popularity on GitHub
+        link: https://github.com/fuzzitdev/pythonfuzz
+        package_name: pythonfuzz

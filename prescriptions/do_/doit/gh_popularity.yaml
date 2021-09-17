@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DoitGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doit
+    run:
+      justification:
+      - type: INFO
+        message: Project 'doit' has very high popularity on GitHub
+        link: https://github.com/pydoit/doit
+        package_name: doit

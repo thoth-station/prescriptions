@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackwebGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slackweb
+    run:
+      justification:
+      - type: INFO
+        message: Project 'slackweb' has high popularity on GitHub
+        link: https://github.com/satoshi03/slack-python-webhook
+        package_name: slackweb

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApacheBookkeeperClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-bookkeeper-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'apache-bookkeeper-client' has very high popularity on GitHub
+        link: https://github.com/apache/bookkeeper
+        package_name: apache-bookkeeper-client

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyroApiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyro-api
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyro-api' has moderate popularity on GitHub
+        link: https://github.com/pyro-ppl/pyro-api
+        package_name: pyro-api

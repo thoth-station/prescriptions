@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NoxGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nox
+    run:
+      justification:
+      - type: INFO
+        message: Project 'nox' has very high popularity on GitHub
+        link: https://github.com/theacodes/nox
+        package_name: nox

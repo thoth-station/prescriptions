@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebsockifyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websockify
+    run:
+      justification:
+      - type: INFO
+        message: Project 'websockify' has very high popularity on GitHub
+        link: https://github.com/novnc/websockify
+        package_name: websockify

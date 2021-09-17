@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CxFreezeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cx-freeze
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cx-freeze' has very high popularity on GitHub
+        link: https://github.com/marcelotduarte/cx_Freeze
+        package_name: cx-freeze

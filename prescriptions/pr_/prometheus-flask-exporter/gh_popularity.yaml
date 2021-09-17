@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrometheusFlaskExporterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-flask-exporter
+    run:
+      justification:
+      - type: INFO
+        message: Project 'prometheus-flask-exporter' has high popularity on GitHub
+        link: https://github.com/rycus86/prometheus_flask_exporter
+        package_name: prometheus-flask-exporter

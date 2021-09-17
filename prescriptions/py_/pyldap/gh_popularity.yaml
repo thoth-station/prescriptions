@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyldapGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyldap
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyldap' has high popularity on GitHub
+        link: https://github.com/pyldap/pyldap
+        package_name: pyldap

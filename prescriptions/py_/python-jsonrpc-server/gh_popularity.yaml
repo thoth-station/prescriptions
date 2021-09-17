@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonJsonrpcServerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-jsonrpc-server
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-jsonrpc-server' has high popularity on GitHub
+        link: https://github.com/palantir/python-jsonrpc-server
+        package_name: python-jsonrpc-server

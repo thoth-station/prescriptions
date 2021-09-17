@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CompatibilityLibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: compatibility-lib
+    run:
+      justification:
+      - type: INFO
+        message: Project 'compatibility-lib' has high popularity on GitHub
+        link: https://github.com/GoogleCloudPlatform/cloud-opensource-python
+        package_name: compatibility-lib

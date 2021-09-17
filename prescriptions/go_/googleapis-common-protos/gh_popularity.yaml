@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleapisCommonProtosGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleapis-common-protos
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'googleapis-common-protos' has low popularity on GitHub
+        link: https://github.com/googleapis/python-api-common-protos
+        package_name: googleapis-common-protos

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpytreeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipytree
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'ipytree' has low popularity on GitHub
+        link: https://github.com/martinRenou/ipytree
+        package_name: ipytree

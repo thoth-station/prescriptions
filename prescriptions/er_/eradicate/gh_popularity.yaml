@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EradicateGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eradicate
+    run:
+      justification:
+      - type: INFO
+        message: Project 'eradicate' has high popularity on GitHub
+        link: https://github.com/myint/eradicate
+        package_name: eradicate

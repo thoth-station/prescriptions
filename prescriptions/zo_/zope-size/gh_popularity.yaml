@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeSizeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-size
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-size' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.size
+        package_name: zope-size

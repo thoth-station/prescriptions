@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WhenChangedGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: when-changed
+    run:
+      justification:
+      - type: INFO
+        message: Project 'when-changed' has very high popularity on GitHub
+        link: https://github.com/joh/when-changed
+        package_name: when-changed

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudBuildGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-build
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-cloud-build' has moderate popularity on GitHub
+        link: https://github.com/googleapis/python-cloudbuild
+        package_name: google-cloud-build

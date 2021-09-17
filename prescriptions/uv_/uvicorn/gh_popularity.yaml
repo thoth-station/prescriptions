@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UvicornGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uvicorn
+    run:
+      justification:
+      - type: INFO
+        message: Project 'uvicorn' has very high popularity on GitHub
+        link: https://github.com/encode/uvicorn
+        package_name: uvicorn

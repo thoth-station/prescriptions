@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxAirflowThemeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-airflow-theme
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sphinx-airflow-theme' has high popularity on GitHub
+        link: https://github.com/apache/airflow-site
+        package_name: sphinx-airflow-theme

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TomlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toml
+    run:
+      justification:
+      - type: INFO
+        message: Project 'toml' has very high popularity on GitHub
+        link: https://github.com/uiri/toml
+        package_name: toml

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebsocketClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websocket-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'websocket-client' has very high popularity on GitHub
+        link: https://github.com/websocket-client/websocket-client
+        package_name: websocket-client

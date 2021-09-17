@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutogluonCoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autogluon-core
+    run:
+      justification:
+      - type: INFO
+        message: Project 'autogluon-core' has very high popularity on GitHub
+        link: https://github.com/awslabs/autogluon
+        package_name: autogluon-core

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PriorityGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: priority
+    run:
+      justification:
+      - type: INFO
+        message: Project 'priority' has moderate popularity on GitHub
+        link: https://github.com/python-hyper/priority
+        package_name: priority

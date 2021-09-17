@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GeorgeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: george
+    run:
+      justification:
+      - type: INFO
+        message: Project 'george' has high popularity on GitHub
+        link: https://github.com/dfm/george
+        package_name: george

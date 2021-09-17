@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeFormlibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-formlib
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-formlib' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.formlib
+        package_name: zope-formlib

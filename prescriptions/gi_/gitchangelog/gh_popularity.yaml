@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GitchangelogGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitchangelog
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gitchangelog' has very high popularity on GitHub
+        link: https://github.com/vaab/gitchangelog
+        package_name: gitchangelog

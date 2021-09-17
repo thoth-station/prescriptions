@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ValidateEmailGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validate-email
+    run:
+      justification:
+      - type: INFO
+        message: Project 'validate-email' has very high popularity on GitHub
+        link: https://github.com/syrusakbary/validate_email
+        package_name: validate-email

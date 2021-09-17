@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeGlobalrequestGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-globalrequest
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-globalrequest' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.globalrequest
+        package_name: zope-globalrequest

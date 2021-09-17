@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IbmWatsonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-watson
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ibm-watson' has very high popularity on GitHub
+        link: https://github.com/watson-developer-cloud/python-sdk
+        package_name: ibm-watson

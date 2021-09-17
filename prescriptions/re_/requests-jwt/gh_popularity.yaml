@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsJwtGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-jwt
+    run:
+      justification:
+      - type: INFO
+        message: Project 'requests-jwt' has moderate popularity on GitHub
+        link: https://github.com/tgs/requests-jwt
+        package_name: requests-jwt

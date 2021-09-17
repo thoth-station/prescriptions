@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColourGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colour
+    run:
+      justification:
+      - type: INFO
+        message: Project 'colour' has high popularity on GitHub
+        link: https://github.com/vaab/colour
+        package_name: colour

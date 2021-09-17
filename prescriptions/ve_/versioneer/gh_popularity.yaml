@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VersioneerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: versioneer
+    run:
+      justification:
+      - type: INFO
+        message: Project 'versioneer' has very high popularity on GitHub
+        link: https://github.com/python-versioneer/python-versioneer
+        package_name: versioneer

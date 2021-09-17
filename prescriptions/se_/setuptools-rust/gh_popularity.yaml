@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetuptoolsRustGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-rust
+    run:
+      justification:
+      - type: INFO
+        message: Project 'setuptools-rust' has high popularity on GitHub
+        link: https://github.com/PyO3/setuptools-rust
+        package_name: setuptools-rust

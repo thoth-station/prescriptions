@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GcovrGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcovr
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gcovr' has very high popularity on GitHub
+        link: https://github.com/gcovr/gcovr
+        package_name: gcovr

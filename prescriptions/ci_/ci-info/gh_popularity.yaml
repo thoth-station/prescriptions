@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CiInfoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ci-info
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'ci-info' has low popularity on GitHub
+        link: https://github.com/mgxd/ci-info
+        package_name: ci-info

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsUnixsocketGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-unixsocket
+    run:
+      justification:
+      - type: INFO
+        message: Project 'requests-unixsocket' has high popularity on GitHub
+        link: https://github.com/msabramo/requests-unixsocket
+        package_name: requests-unixsocket

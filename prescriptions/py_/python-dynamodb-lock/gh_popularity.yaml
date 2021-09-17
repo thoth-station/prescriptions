@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonDynamodbLockGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dynamodb-lock
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-dynamodb-lock' has moderate popularity on GitHub
+        link: https://github.com/mohankishore/python_dynamodb_lock
+        package_name: python-dynamodb-lock

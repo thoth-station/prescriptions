@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpacyAlignmentsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spacy-alignments
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'spacy-alignments' has low popularity on GitHub
+        link: https://github.com/explosion/spacy-alignments
+        package_name: spacy-alignments

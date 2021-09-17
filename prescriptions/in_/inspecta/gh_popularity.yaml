@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InspectaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inspecta
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'inspecta' has low popularity on GitHub
+        link: https://github.com/grimen/python-inspecta
+        package_name: inspecta

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppErrorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-error
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-error' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.error
+        package_name: zope-app-error

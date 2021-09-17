@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskWtfGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-wtf
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-wtf' has very high popularity on GitHub
+        link: https://github.com/wtforms/flask-wtf
+        package_name: flask-wtf

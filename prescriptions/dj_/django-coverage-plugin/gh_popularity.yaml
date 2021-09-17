@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCoveragePluginGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-coverage-plugin
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-coverage-plugin' has high popularity on GitHub
+        link: https://github.com/nedbat/django_coverage_plugin
+        package_name: django-coverage-plugin

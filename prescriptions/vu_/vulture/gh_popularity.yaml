@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VultureGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vulture
+    run:
+      justification:
+      - type: INFO
+        message: Project 'vulture' has very high popularity on GitHub
+        link: https://github.com/jendrikseipp/vulture
+        package_name: vulture

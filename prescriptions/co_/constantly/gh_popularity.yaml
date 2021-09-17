@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConstantlyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: constantly
+    run:
+      justification:
+      - type: INFO
+        message: Project 'constantly' has moderate popularity on GitHub
+        link: https://github.com/twisted/constantly
+        package_name: constantly

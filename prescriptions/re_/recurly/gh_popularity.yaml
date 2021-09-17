@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RecurlyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: recurly
+    run:
+      justification:
+      - type: INFO
+        message: Project 'recurly' has high popularity on GitHub
+        link: https://github.com/recurly/recurly-client-python
+        package_name: recurly

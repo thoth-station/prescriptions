@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CircleciGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: circleci
+    run:
+      justification:
+      - type: INFO
+        message: Project 'circleci' has high popularity on GitHub
+        link: https://github.com/levlaz/circleci.py
+        package_name: circleci

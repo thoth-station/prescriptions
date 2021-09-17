@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShapelyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shapely
+    run:
+      justification:
+      - type: INFO
+        message: Project 'shapely' has very high popularity on GitHub
+        link: https://github.com/Toblerity/Shapely
+        package_name: shapely

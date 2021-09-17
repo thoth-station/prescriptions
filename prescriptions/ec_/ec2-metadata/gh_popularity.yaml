@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Ec2MetadataGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ec2-metadata
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ec2-metadata' has high popularity on GitHub
+        link: https://github.com/adamchainz/ec2-metadata
+        package_name: ec2-metadata

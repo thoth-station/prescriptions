@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PreCommitHooksGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit-hooks
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pre-commit-hooks' has very high popularity on GitHub
+        link: https://github.com/pre-commit/pre-commit-hooks
+        package_name: pre-commit-hooks

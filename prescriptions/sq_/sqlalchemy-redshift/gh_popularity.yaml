@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlalchemyRedshiftGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-redshift
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sqlalchemy-redshift' has high popularity on GitHub
+        link: https://github.com/sqlalchemy-redshift/sqlalchemy-redshift
+        package_name: sqlalchemy-redshift

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CrashtestGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crashtest
+    run:
+      justification:
+      - type: INFO
+        message: Project 'crashtest' has moderate popularity on GitHub
+        link: https://github.com/sdispater/crashtest
+        package_name: crashtest

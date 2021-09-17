@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MoleculeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: molecule
+    run:
+      justification:
+      - type: INFO
+        message: Project 'molecule' has very high popularity on GitHub
+        link: https://github.com/ansible-community/molecule
+        package_name: molecule

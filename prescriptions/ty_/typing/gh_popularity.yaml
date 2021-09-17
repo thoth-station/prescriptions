@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TypingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing
+    run:
+      justification:
+      - type: INFO
+        message: Project 'typing' has very high popularity on GitHub
+        link: https://github.com/python/typing
+        package_name: typing

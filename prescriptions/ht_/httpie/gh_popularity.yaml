@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HttpieGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpie
+    run:
+      justification:
+      - type: INFO
+        message: Project 'httpie' has very high popularity on GitHub
+        link: https://github.com/httpie/httpie
+        package_name: httpie

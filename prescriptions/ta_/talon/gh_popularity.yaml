@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TalonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: talon
+    run:
+      justification:
+      - type: INFO
+        message: Project 'talon' has very high popularity on GitHub
+        link: https://github.com/mailgun/talon
+        package_name: talon

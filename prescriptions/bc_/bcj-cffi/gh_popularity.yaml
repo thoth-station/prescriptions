@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcjCffiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcj-cffi
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'bcj-cffi' has low popularity on GitHub
+        link: https://github.com/miurahr/bcj-cffi
+        package_name: bcj-cffi

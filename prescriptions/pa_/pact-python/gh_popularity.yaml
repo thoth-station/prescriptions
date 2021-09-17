@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PactPythonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pact-python
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pact-python' has high popularity on GitHub
+        link: https://github.com/pact-foundation/pact-python
+        package_name: pact-python

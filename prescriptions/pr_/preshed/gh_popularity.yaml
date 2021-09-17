@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PreshedGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: preshed
+    run:
+      justification:
+      - type: INFO
+        message: Project 'preshed' has high popularity on GitHub
+        link: https://github.com/explosion/preshed
+        package_name: preshed

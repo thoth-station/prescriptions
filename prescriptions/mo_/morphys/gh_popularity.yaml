@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MorphysGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: morphys
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'morphys' has low popularity on GitHub
+        link: https://github.com/mkalinski/morphys
+        package_name: morphys

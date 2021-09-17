@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IdentifyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: identify
+    run:
+      justification:
+      - type: INFO
+        message: Project 'identify' has high popularity on GitHub
+        link: https://github.com/pre-commit/identify
+        package_name: identify

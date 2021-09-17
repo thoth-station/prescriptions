@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WheelInspectGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-inspect
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'wheel-inspect' has low popularity on GitHub
+        link: https://github.com/jwodder/wheel-inspect
+        package_name: wheel-inspect

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AccesscontrolGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: accesscontrol
+    run:
+      justification:
+      - type: INFO
+        message: Project 'accesscontrol' has moderate popularity on GitHub
+        link: https://github.com/zopefoundation/AccessControl
+        package_name: accesscontrol

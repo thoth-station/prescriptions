@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TorchModelArchiverGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch-model-archiver
+    run:
+      justification:
+      - type: INFO
+        message: Project 'torch-model-archiver' has very high popularity on GitHub
+        link: https://github.com/pytorch/serve
+        package_name: torch-model-archiver

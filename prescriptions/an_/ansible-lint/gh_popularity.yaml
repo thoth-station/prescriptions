@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnsibleLintGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-lint
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ansible-lint' has very high popularity on GitHub
+        link: https://github.com/ansible-community/ansible-lint
+        package_name: ansible-lint

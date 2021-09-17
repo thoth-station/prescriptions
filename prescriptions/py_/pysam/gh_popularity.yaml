@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysamGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysam
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pysam' has very high popularity on GitHub
+        link: https://github.com/pysam-developers/pysam
+        package_name: pysam

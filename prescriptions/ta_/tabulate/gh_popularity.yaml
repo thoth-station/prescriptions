@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TabulateGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabulate
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tabulate' has very high popularity on GitHub
+        link: https://github.com/astanin/python-tabulate
+        package_name: tabulate

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatasetsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datasets
+    run:
+      justification:
+      - type: INFO
+        message: Project 'datasets' has very high popularity on GitHub
+        link: https://github.com/huggingface/datasets
+        package_name: datasets

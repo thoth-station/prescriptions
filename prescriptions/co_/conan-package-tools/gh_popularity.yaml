@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConanPackageToolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conan-package-tools
+    run:
+      justification:
+      - type: INFO
+        message: Project 'conan-package-tools' has high popularity on GitHub
+        link: https://github.com/conan-io/conan-package-tools
+        package_name: conan-package-tools

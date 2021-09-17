@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlessedGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blessed
+    run:
+      justification:
+      - type: INFO
+        message: Project 'blessed' has very high popularity on GitHub
+        link: https://github.com/jquast/blessed
+        package_name: blessed

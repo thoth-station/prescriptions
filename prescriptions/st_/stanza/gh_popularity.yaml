@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StanzaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stanza
+    run:
+      justification:
+      - type: INFO
+        message: Project 'stanza' has very high popularity on GitHub
+        link: https://github.com/stanfordnlp/stanza
+        package_name: stanza

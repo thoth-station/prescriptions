@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UrlscanGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlscan
+    run:
+      justification:
+      - type: INFO
+        message: Project 'urlscan' has high popularity on GitHub
+        link: https://github.com/firecat53/urlscan
+        package_name: urlscan

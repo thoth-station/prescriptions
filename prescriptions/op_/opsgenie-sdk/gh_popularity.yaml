@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpsgenieSdkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opsgenie-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Project 'opsgenie-sdk' has moderate popularity on GitHub
+        link: https://github.com/opsgenie/opsgenie-python-sdk
+        package_name: opsgenie-sdk

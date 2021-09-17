@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BloomFilterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bloom-filter
+    run:
+      justification:
+      - type: INFO
+        message: Project 'bloom-filter' has high popularity on GitHub
+        link: https://github.com/hiway/python-bloom-filter
+        package_name: bloom-filter

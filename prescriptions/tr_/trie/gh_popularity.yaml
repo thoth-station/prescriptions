@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TrieGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trie
+    run:
+      justification:
+      - type: INFO
+        message: Project 'trie' has high popularity on GitHub
+        link: https://github.com/ethereum/py-trie
+        package_name: trie
