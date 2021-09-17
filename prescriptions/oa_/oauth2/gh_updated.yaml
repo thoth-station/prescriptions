@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Oauth2GitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauth2
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'oauth2' was last updated at 2018-02-12 06:35:04
+        link: https://github.com/joestump/python-oauth2
+        package_name: oauth2
