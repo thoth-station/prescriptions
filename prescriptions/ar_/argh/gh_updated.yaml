@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArghGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argh
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'argh' was last updated at 2016-08-27 00:02:23
+        link: https://github.com/neithere/argh
+        package_name: argh
