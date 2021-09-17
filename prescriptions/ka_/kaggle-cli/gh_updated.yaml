@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KaggleCliGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaggle-cli
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kaggle-cli' was last updated at 2017-11-20 03:38:10
+        link: https://github.com/floydwch/kaggle-cli
+        package_name: kaggle-cli
