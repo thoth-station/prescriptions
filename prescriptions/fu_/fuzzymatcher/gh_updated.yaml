@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzymatcherGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzymatcher
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fuzzymatcher' was last updated at 2019-12-19 16:02:36
+        link: https://github.com/RobinL/fuzzymatcher
+        package_name: fuzzymatcher
