@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EasyargsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyargs
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'easyargs' was last updated at 2018-09-23 07:17:21
+        link: https://github.com/stedmeister/easyargs
+        package_name: easyargs
