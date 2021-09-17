@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8ImportOrderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-import-order
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-import-order' was last updated at 2020-08-04 12:21:12
+        link: https://github.com/PyCQA/flake8-import-order
+        package_name: flake8-import-order
