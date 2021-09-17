@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncGeneratorGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: async-generator
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'async-generator' was last updated at 2018-08-01 05:39:16
+        link: https://github.com/python-trio/async_generator
+        package_name: async-generator
