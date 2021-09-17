@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IntuitOauthGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intuit-oauth
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'intuit-oauth' was last updated at 2020-09-10 19:29:00
+        link: https://github.com/intuit/oauth-pythonclient
+        package_name: intuit-oauth
