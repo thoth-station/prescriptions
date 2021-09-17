@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OptionalDjangoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optional-django
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'optional-django' was last updated at 2015-05-04 10:27:33
+        link: https://github.com/markfinger/optional-django
+        package_name: optional-django
