@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnzymeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enzyme
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'enzyme' was last updated at 2015-03-15 16:54:40
+        link: https://github.com/Diaoul/enzyme
+        package_name: enzyme
