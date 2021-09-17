@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuncTimeoutGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: func-timeout
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'func-timeout' was last updated at 2019-08-19 21:52:33
+        link: https://github.com/kata198/func_timeout
+        package_name: func-timeout
