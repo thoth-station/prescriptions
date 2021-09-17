@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoStatsdMozillaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-statsd-mozilla
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-statsd-mozilla' was last updated at 2018-08-08 13:51:11
+        link: https://github.com/django-statsd/django-statsd
+        package_name: django-statsd-mozilla
