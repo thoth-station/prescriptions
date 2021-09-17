@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PungiGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pungi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pungi' was last updated at 2013-06-26 17:59:05
+        link: https://github.com/endeepak/pungi
+        package_name: pungi
