@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskOpentracingGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-opentracing
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-opentracing' was last updated at 2019-10-22 00:14:18
+        link: https://github.com/opentracing-contrib/python-flask
+        package_name: flask-opentracing
