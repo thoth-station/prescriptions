@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintFailUnderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-fail-under
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylint-fail-under' was last updated at 2020-05-10 18:32:49
+        link: https://github.com/TNThieding/pylint-fail-under
+        package_name: pylint-fail-under
