@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8PerFileIgnoresGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-per-file-ignores
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-per-file-ignores' was last updated at 2019-01-30 18:50:10
+        link: https://github.com/snoack/flake8-per-file-ignores
+        package_name: flake8-per-file-ignores
