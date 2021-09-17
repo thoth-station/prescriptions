@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BertScoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bert-score
+    run:
+      justification:
+      - type: INFO
+        message: Project 'bert-score' has very high popularity on GitHub
+        link: https://github.com/Tiiiger/bert_score
+        package_name: bert-score

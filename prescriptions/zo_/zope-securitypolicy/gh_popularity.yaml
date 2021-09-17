@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeSecuritypolicyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-securitypolicy
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-securitypolicy' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.securitypolicy
+        package_name: zope-securitypolicy

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydanticGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydantic
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pydantic' has very high popularity on GitHub
+        link: https://github.com/samuelcolvin/pydantic
+        package_name: pydantic

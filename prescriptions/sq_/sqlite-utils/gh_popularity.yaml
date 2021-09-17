@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqliteUtilsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlite-utils
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sqlite-utils' has very high popularity on GitHub
+        link: https://github.com/simonw/sqlite-utils
+        package_name: sqlite-utils

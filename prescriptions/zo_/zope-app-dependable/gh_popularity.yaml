@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppDependableGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-dependable
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-dependable' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.dependable
+        package_name: zope-app-dependable

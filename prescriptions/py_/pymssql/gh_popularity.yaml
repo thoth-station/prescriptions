@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymssqlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymssql
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pymssql' has very high popularity on GitHub
+        link: https://github.com/pymssql/pymssql
+        package_name: pymssql

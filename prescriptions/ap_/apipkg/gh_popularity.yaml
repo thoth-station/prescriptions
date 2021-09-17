@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApipkgGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apipkg
+    run:
+      justification:
+      - type: INFO
+        message: Project 'apipkg' has moderate popularity on GitHub
+        link: https://github.com/pytest-dev/apipkg
+        package_name: apipkg

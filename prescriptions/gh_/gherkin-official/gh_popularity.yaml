@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GherkinOfficialGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gherkin-official
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gherkin-official' has high popularity on GitHub
+        link: https://github.com/cucumber/gherkin-python
+        package_name: gherkin-official

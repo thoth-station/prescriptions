@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSequencesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sequences
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-sequences' has high popularity on GitHub
+        link: https://github.com/aaugustin/django-sequences
+        package_name: django-sequences

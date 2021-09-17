@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsAws4authGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-aws4auth
+    run:
+      justification:
+      - type: INFO
+        message: Project 'requests-aws4auth' has high popularity on GitHub
+        link: https://github.com/tedder/requests-aws4auth
+        package_name: requests-aws4auth

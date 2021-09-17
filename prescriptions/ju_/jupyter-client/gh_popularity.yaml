@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'jupyter-client' has high popularity on GitHub
+        link: https://github.com/jupyter/jupyter_client
+        package_name: jupyter-client

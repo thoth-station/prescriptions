@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ToxMonorepoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-monorepo
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tox-monorepo' has high popularity on GitHub
+        link: https://github.com/Azure/azure-sdk-tools
+        package_name: tox-monorepo

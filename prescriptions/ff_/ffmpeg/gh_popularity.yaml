@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FfmpegGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ffmpeg
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ffmpeg' has high popularity on GitHub
+        link: https://github.com/jiashaokun/ffmpeg
+        package_name: ffmpeg

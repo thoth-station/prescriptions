@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KoalasGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: koalas
+    run:
+      justification:
+      - type: INFO
+        message: Project 'koalas' has very high popularity on GitHub
+        link: https://github.com/databricks/koalas
+        package_name: koalas

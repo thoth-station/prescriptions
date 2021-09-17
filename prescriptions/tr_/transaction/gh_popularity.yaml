@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TransactionGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transaction
+    run:
+      justification:
+      - type: INFO
+        message: Project 'transaction' has high popularity on GitHub
+        link: https://github.com/zopefoundation/transaction
+        package_name: transaction

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzywuzzyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzywuzzy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fuzzywuzzy' has very high popularity on GitHub
+        link: https://github.com/seatgeek/fuzzywuzzy
+        package_name: fuzzywuzzy

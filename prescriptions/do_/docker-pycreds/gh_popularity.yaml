@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DockerPycredsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker-pycreds
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'docker-pycreds' has low popularity on GitHub
+        link: https://github.com/shin-/dockerpy-creds
+        package_name: docker-pycreds

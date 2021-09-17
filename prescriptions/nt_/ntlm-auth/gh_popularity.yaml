@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NtlmAuthGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ntlm-auth
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ntlm-auth' has moderate popularity on GitHub
+        link: https://github.com/jborean93/ntlm-auth
+        package_name: ntlm-auth

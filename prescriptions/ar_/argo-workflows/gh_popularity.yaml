@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArgoWorkflowsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argo-workflows
+    run:
+      justification:
+      - type: INFO
+        message: Project 'argo-workflows' has high popularity on GitHub
+        link: https://github.com/argoproj-labs/argo-client-python
+        package_name: argo-workflows

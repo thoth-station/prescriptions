@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GitlintGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitlint
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gitlint' has very high popularity on GitHub
+        link: https://github.com/jorisroovers/gitlint
+        package_name: gitlint

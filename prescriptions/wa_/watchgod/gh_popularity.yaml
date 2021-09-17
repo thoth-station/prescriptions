@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WatchgodGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watchgod
+    run:
+      justification:
+      - type: INFO
+        message: Project 'watchgod' has very high popularity on GitHub
+        link: https://github.com/samuelcolvin/watchgod
+        package_name: watchgod

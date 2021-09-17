@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParseTypeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parse-type
+    run:
+      justification:
+      - type: INFO
+        message: Project 'parse-type' has moderate popularity on GitHub
+        link: https://github.com/jenisys/parse_type
+        package_name: parse-type

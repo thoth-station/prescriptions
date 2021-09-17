@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JwtGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jwt
+    run:
+      justification:
+      - type: INFO
+        message: Project 'jwt' has high popularity on GitHub
+        link: https://github.com/GehirnInc/python-jwt
+        package_name: jwt

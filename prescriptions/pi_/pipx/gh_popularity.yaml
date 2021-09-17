@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipxGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipx
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pipx' has very high popularity on GitHub
+        link: https://github.com/pypa/pipx
+        package_name: pipx

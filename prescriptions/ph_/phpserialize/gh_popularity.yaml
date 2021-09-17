@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PhpserializeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phpserialize
+    run:
+      justification:
+      - type: INFO
+        message: Project 'phpserialize' has high popularity on GitHub
+        link: https://github.com/mitsuhiko/phpserialize
+        package_name: phpserialize

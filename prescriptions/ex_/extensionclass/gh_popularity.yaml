@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ExtensionclassGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: extensionclass
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'extensionclass' has low popularity on GitHub
+        link: https://github.com/zopefoundation/ExtensionClass
+        package_name: extensionclass

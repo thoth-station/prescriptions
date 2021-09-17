@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ToolzGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toolz
+    run:
+      justification:
+      - type: INFO
+        message: Project 'toolz' has very high popularity on GitHub
+        link: https://github.com/pytoolz/toolz
+        package_name: toolz

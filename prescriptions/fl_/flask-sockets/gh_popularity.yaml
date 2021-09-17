@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskSocketsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sockets
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'flask-sockets' has low popularity on GitHub
+        link: https://github.com/kennethreitz/flask-sockets
+        package_name: flask-sockets

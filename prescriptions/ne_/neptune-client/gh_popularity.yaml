@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeptuneClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'neptune-client' has high popularity on GitHub
+        link: https://github.com/neptune-ai/neptune-client
+        package_name: neptune-client

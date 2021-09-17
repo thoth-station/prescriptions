@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TzlocalGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tzlocal
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tzlocal' has high popularity on GitHub
+        link: https://github.com/regebro/tzlocal
+        package_name: tzlocal

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsUnittestMockGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-unittest-mock
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'backports-unittest-mock' has low popularity on GitHub
+        link: https://github.com/jaraco/backports.unittest_mock
+        package_name: backports-unittest-mock

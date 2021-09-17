@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackerLogHandlerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker-log-handler
+    run:
+      justification:
+      - type: INFO
+        message: Project 'slacker-log-handler' has high popularity on GitHub
+        link: https://github.com/mathiasose/slacker_log_handler
+        package_name: slacker-log-handler

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InvenioAdminGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-admin
+    run:
+      justification:
+      - type: INFO
+        message: Project 'invenio-admin' has moderate popularity on GitHub
+        link: https://github.com/inveniosoftware/invenio-admin
+        package_name: invenio-admin

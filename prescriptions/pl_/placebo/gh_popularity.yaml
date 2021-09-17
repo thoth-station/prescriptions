@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlaceboGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: placebo
+    run:
+      justification:
+      - type: INFO
+        message: Project 'placebo' has high popularity on GitHub
+        link: https://github.com/garnaat/placebo
+        package_name: placebo

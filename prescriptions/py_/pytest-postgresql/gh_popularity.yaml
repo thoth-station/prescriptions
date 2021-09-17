@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestPostgresqlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-postgresql
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pytest-postgresql' has high popularity on GitHub
+        link: https://github.com/ClearcodeHQ/pytest-postgresql
+        package_name: pytest-postgresql

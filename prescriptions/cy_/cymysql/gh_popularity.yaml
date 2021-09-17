@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CymysqlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cymysql
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cymysql' has high popularity on GitHub
+        link: https://github.com/nakagami/CyMySQL
+        package_name: cymysql

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlackduckGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blackduck
+    run:
+      justification:
+      - type: INFO
+        message: Project 'blackduck' has high popularity on GitHub
+        link: https://github.com/blackducksoftware/hub-rest-api-python
+        package_name: blackduck

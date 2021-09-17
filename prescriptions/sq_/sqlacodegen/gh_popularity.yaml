@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlacodegenGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlacodegen
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sqlacodegen' has very high popularity on GitHub
+        link: https://github.com/agronholm/sqlacodegen
+        package_name: sqlacodegen

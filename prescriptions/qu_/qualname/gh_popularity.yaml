@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QualnameGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qualname
+    run:
+      justification:
+      - type: INFO
+        message: Project 'qualname' has moderate popularity on GitHub
+        link: https://github.com/wbolster/qualname
+        package_name: qualname

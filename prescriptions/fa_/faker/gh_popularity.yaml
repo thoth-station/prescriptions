@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FakerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: faker
+    run:
+      justification:
+      - type: INFO
+        message: Project 'faker' has very high popularity on GitHub
+        link: https://github.com/joke2k/faker
+        package_name: faker

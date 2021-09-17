@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconNotificationGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-notification
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'colcon-notification' has low popularity on GitHub
+        link: https://github.com/colcon/colcon-notification
+        package_name: colcon-notification

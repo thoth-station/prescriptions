@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportlibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'importlib' has low popularity on GitHub
+        link: https://github.com/brettcannon/importlib
+        package_name: importlib

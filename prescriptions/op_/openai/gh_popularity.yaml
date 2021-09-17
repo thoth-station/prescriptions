@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpenaiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openai
+    run:
+      justification:
+      - type: INFO
+        message: Project 'openai' has high popularity on GitHub
+        link: https://github.com/openai/openai-python
+        package_name: openai

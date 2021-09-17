@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnorkelGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snorkel
+    run:
+      justification:
+      - type: INFO
+        message: Project 'snorkel' has very high popularity on GitHub
+        link: https://github.com/snorkel-team/snorkel
+        package_name: snorkel

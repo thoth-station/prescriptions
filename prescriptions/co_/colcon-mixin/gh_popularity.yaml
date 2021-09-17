@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconMixinGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-mixin
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'colcon-mixin' has low popularity on GitHub
+        link: https://github.com/colcon/colcon-mixin
+        package_name: colcon-mixin

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskRedisGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-redis
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-redis' has high popularity on GitHub
+        link: https://github.com/underyx/flask-redis
+        package_name: flask-redis

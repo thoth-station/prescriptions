@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoKombuGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-kombu
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-kombu' has high popularity on GitHub
+        link: https://github.com/ask/django-kombu
+        package_name: django-kombu

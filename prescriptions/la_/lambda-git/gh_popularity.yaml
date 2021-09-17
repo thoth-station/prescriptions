@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LambdaGitGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lambda-git
+    run:
+      justification:
+      - type: INFO
+        message: Project 'lambda-git' has moderate popularity on GitHub
+        link: https://github.com/eredi93/lambda-git
+        package_name: lambda-git

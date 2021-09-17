@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TokenizeRtGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tokenize-rt
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tokenize-rt' has moderate popularity on GitHub
+        link: https://github.com/asottile/tokenize-rt
+        package_name: tokenize-rt

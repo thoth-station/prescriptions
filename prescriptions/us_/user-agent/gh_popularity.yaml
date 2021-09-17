@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UserAgentGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: user-agent
+    run:
+      justification:
+      - type: INFO
+        message: Project 'user-agent' has high popularity on GitHub
+        link: https://github.com/lorien/user_agent
+        package_name: user-agent

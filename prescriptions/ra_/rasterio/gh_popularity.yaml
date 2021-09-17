@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RasterioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasterio
+    run:
+      justification:
+      - type: INFO
+        message: Project 'rasterio' has very high popularity on GitHub
+        link: https://github.com/mapbox/rasterio
+        package_name: rasterio

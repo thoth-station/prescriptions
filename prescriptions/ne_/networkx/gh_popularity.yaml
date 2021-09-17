@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NetworkxGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: networkx
+    run:
+      justification:
+      - type: INFO
+        message: Project 'networkx' has very high popularity on GitHub
+        link: https://github.com/networkx/networkx
+        package_name: networkx

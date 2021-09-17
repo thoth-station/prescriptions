@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RespxGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: respx
+    run:
+      justification:
+      - type: INFO
+        message: Project 'respx' has high popularity on GitHub
+        link: https://github.com/lundberg/respx
+        package_name: respx

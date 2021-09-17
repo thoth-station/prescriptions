@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SseclientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sseclient
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sseclient' has high popularity on GitHub
+        link: https://github.com/btubbs/sseclient
+        package_name: sseclient

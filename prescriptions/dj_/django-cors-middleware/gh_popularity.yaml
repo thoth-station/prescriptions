@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCorsMiddlewareGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cors-middleware
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-cors-middleware' has high popularity on GitHub
+        link: https://github.com/zestedesavoir/django-cors-middleware
+        package_name: django-cors-middleware

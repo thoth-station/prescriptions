@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CircuitbreakerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: circuitbreaker
+    run:
+      justification:
+      - type: INFO
+        message: Project 'circuitbreaker' has high popularity on GitHub
+        link: https://github.com/fabfuel/circuitbreaker
+        package_name: circuitbreaker

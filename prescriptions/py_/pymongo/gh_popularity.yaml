@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymongoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymongo
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pymongo' has very high popularity on GitHub
+        link: https://github.com/mongodb/mongo-python-driver
+        package_name: pymongo

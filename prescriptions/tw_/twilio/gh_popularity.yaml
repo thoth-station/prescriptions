@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwilioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twilio
+    run:
+      justification:
+      - type: INFO
+        message: Project 'twilio' has very high popularity on GitHub
+        link: https://github.com/twilio/twilio-python
+        package_name: twilio

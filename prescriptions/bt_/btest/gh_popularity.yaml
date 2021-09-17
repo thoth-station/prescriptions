@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BtestGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btest
+    run:
+      justification:
+      - type: INFO
+        message: Project 'btest' has moderate popularity on GitHub
+        link: https://github.com/zeek/btest
+        package_name: btest

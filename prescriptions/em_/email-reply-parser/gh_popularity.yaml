@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EmailReplyParserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: email-reply-parser
+    run:
+      justification:
+      - type: INFO
+        message: Project 'email-reply-parser' has high popularity on GitHub
+        link: https://github.com/zapier/email-reply-parser
+        package_name: email-reply-parser

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetuptoolsScmGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-scm
+    run:
+      justification:
+      - type: INFO
+        message: Project 'setuptools-scm' has very high popularity on GitHub
+        link: https://github.com/pypa/setuptools_scm
+        package_name: setuptools-scm

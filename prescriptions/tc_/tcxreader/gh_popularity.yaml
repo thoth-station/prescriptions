@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TcxreaderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tcxreader
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'tcxreader' has low popularity on GitHub
+        link: https://github.com/alenrajsp/tcxreader
+        package_name: tcxreader

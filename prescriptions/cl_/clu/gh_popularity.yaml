@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CluGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clu
+    run:
+      justification:
+      - type: INFO
+        message: Project 'clu' has high popularity on GitHub
+        link: https://github.com/google/CommonLoopUtils
+        package_name: clu

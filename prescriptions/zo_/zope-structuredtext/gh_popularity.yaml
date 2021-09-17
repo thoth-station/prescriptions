@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeStructuredtextGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-structuredtext
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-structuredtext' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.structuredtext
+        package_name: zope-structuredtext

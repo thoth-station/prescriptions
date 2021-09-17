@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IntuitOauthGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intuit-oauth
+    run:
+      justification:
+      - type: INFO
+        message: Project 'intuit-oauth' has high popularity on GitHub
+        link: https://github.com/intuit/oauth-pythonclient
+        package_name: intuit-oauth

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppComponentGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-component
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-component' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.component
+        package_name: zope-app-component

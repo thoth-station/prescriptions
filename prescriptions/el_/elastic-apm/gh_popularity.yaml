@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ElasticApmGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elastic-apm
+    run:
+      justification:
+      - type: INFO
+        message: Project 'elastic-apm' has high popularity on GitHub
+        link: https://github.com/elastic/apm-agent-python
+        package_name: elastic-apm

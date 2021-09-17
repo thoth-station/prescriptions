@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PungiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pungi
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pungi' has low popularity on GitHub
+        link: https://github.com/endeepak/pungi
+        package_name: pungi

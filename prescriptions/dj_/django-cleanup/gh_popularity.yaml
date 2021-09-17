@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCleanupGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cleanup
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-cleanup' has very high popularity on GitHub
+        link: https://github.com/un1t/django-cleanup
+        package_name: django-cleanup

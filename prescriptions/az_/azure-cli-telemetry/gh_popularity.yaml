@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureCliTelemetryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cli-telemetry
+    run:
+      justification:
+      - type: INFO
+        message: Project 'azure-cli-telemetry' has very high popularity on GitHub
+        link: https://github.com/Azure/azure-cli
+        package_name: azure-cli-telemetry

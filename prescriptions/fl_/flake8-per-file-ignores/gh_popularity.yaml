@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8PerFileIgnoresGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-per-file-ignores
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flake8-per-file-ignores' has high popularity on GitHub
+        link: https://github.com/snoack/flake8-per-file-ignores
+        package_name: flake8-per-file-ignores

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JiraGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jira
+    run:
+      justification:
+      - type: INFO
+        message: Project 'jira' has very high popularity on GitHub
+        link: https://github.com/pycontribs/jira
+        package_name: jira

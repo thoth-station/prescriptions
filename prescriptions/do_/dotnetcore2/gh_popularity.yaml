@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Dotnetcore2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotnetcore2
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dotnetcore2' has very high popularity on GitHub
+        link: https://github.com/dotnet/core
+        package_name: dotnetcore2

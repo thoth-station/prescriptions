@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MarkuppyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markuppy
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'markuppy' has low popularity on GitHub
+        link: https://github.com/tylerbakke/MarkupPy
+        package_name: markuppy

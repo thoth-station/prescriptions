@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MwclientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mwclient
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'mwclient' has low popularity on GitHub
+        link: https://github.com/btongminh/mwclient
+        package_name: mwclient

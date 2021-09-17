@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SagemakerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sagemaker
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sagemaker' has very high popularity on GitHub
+        link: https://github.com/aws/sagemaker-python-sdk
+        package_name: sagemaker

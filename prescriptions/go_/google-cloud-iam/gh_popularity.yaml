@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudIamGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-iam
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-cloud-iam' has moderate popularity on GitHub
+        link: https://github.com/googleapis/python-iam
+        package_name: google-cloud-iam

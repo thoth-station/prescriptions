@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlMetadataGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sql-metadata
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sql-metadata' has high popularity on GitHub
+        link: https://github.com/macbre/sql-metadata
+        package_name: sql-metadata

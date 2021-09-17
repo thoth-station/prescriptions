@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BinstructGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binstruct
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'binstruct' has low popularity on GitHub
+        link: https://github.com/Jokymon/binstruct
+        package_name: binstruct

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudPubsubliteGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-pubsublite
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'google-cloud-pubsublite' has low popularity on GitHub
+        link: https://github.com/googleapis/python-pubsublite
+        package_name: google-cloud-pubsublite

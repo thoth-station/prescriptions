@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KoboGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kobo
+    run:
+      justification:
+      - type: INFO
+        message: Project 'kobo' has moderate popularity on GitHub
+        link: https://github.com/release-engineering/kobo
+        package_name: kobo

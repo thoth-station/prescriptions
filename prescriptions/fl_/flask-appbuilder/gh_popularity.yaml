@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskAppbuilderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-appbuilder
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-appbuilder' has very high popularity on GitHub
+        link: https://github.com/dpgaspar/flask-appbuilder
+        package_name: flask-appbuilder

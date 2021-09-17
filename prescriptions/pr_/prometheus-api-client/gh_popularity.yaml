@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrometheusApiClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-api-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'prometheus-api-client' has high popularity on GitHub
+        link: https://github.com/AICoE/prometheus-api-client-python
+        package_name: prometheus-api-client

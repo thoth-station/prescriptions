@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GeopyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geopy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'geopy' has very high popularity on GitHub
+        link: https://github.com/geopy/geopy
+        package_name: geopy

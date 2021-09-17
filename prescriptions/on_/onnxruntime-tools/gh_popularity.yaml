@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OnnxruntimeToolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxruntime-tools
+    run:
+      justification:
+      - type: INFO
+        message: Project 'onnxruntime-tools' has very high popularity on GitHub
+        link: https://github.com/microsoft/onnxruntime
+        package_name: onnxruntime-tools

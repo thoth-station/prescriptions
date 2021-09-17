@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PykafkaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykafka
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pykafka' has very high popularity on GitHub
+        link: https://github.com/Parsely/pykafka
+        package_name: pykafka

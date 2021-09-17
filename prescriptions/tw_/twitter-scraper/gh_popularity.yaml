@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TwitterScraperGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twitter-scraper
+    run:
+      justification:
+      - type: INFO
+        message: Project 'twitter-scraper' has very high popularity on GitHub
+        link: https://github.com/bisguzar/twitter-scraper
+        package_name: twitter-scraper

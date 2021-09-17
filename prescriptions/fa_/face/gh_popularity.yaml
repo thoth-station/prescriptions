@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FaceGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: face
+    run:
+      justification:
+      - type: INFO
+        message: Project 'face' has moderate popularity on GitHub
+        link: https://github.com/mahmoud/face
+        package_name: face

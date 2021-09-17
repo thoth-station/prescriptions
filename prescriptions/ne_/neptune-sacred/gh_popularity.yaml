@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeptuneSacredGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-sacred
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'neptune-sacred' has low popularity on GitHub
+        link: https://github.com/neptune-ai/neptune-sacred
+        package_name: neptune-sacred

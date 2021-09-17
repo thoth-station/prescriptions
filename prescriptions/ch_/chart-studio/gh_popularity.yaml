@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChartStudioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chart-studio
+    run:
+      justification:
+      - type: INFO
+        message: Project 'chart-studio' has very high popularity on GitHub
+        link: https://github.com/plotly/plotly.py
+        package_name: chart-studio

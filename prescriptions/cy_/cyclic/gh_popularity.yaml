@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CyclicGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyclic
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'cyclic' has low popularity on GitHub
+        link: https://github.com/neurobin/cyclic
+        package_name: cyclic

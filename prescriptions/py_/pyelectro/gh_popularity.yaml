@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyelectroGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyelectro
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pyelectro' has low popularity on GitHub
+        link: https://github.com/NeuralEnsemble/pyelectro
+        package_name: pyelectro

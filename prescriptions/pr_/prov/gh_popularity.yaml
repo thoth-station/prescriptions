@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProvGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prov
+    run:
+      justification:
+      - type: INFO
+        message: Project 'prov' has high popularity on GitHub
+        link: https://github.com/trungdong/prov
+        package_name: prov

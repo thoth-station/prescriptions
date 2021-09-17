@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoDockerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-docker
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-docker' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.docker
+        package_name: jaraco-docker

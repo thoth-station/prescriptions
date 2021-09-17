@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppSecurityGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-security
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-security' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.security
+        package_name: zope-app-security

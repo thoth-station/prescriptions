@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VolkszaehlerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: volkszaehler
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'volkszaehler' has low popularity on GitHub
+        link: https://github.com/home-assistant-ecosystem/python-volkszaehler
+        package_name: volkszaehler

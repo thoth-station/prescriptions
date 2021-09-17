@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParamGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: param
+    run:
+      justification:
+      - type: INFO
+        message: Project 'param' has high popularity on GitHub
+        link: https://github.com/holoviz/param
+        package_name: param

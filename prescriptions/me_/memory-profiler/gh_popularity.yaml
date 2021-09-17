@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MemoryProfilerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: memory-profiler
+    run:
+      justification:
+      - type: INFO
+        message: Project 'memory-profiler' has very high popularity on GitHub
+        link: https://github.com/pythonprofilers/memory_profiler
+        package_name: memory-profiler

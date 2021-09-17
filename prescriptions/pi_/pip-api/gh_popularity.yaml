@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipApiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-api
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pip-api' has high popularity on GitHub
+        link: https://github.com/di/pip-api
+        package_name: pip-api

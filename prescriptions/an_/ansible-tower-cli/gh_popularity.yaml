@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnsibleTowerCliGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-tower-cli
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ansible-tower-cli' has high popularity on GitHub
+        link: https://github.com/ansible/tower-cli
+        package_name: ansible-tower-cli

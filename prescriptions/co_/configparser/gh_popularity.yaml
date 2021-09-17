@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfigparserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configparser
+    run:
+      justification:
+      - type: INFO
+        message: Project 'configparser' has moderate popularity on GitHub
+        link: https://github.com/jaraco/configparser
+        package_name: configparser

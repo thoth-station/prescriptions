@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureStorageLoggingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-logging
+    run:
+      justification:
+      - type: INFO
+        message: Project 'azure-storage-logging' has moderate popularity on GitHub
+        link: https://github.com/michiya/azure-storage-logging
+        package_name: azure-storage-logging

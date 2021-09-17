@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MailjetRestGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailjet-rest
+    run:
+      justification:
+      - type: INFO
+        message: Project 'mailjet-rest' has high popularity on GitHub
+        link: https://github.com/mailjet/mailjet-apiv3-python
+        package_name: mailjet-rest

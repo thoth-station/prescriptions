@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UcMicroPyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uc-micro-py
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'uc-micro-py' has low popularity on GitHub
+        link: https://github.com/tsutsu3/uc.micro-py
+        package_name: uc-micro-py

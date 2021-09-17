@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ElasticsearchCuratorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-curator
+    run:
+      justification:
+      - type: INFO
+        message: Project 'elasticsearch-curator' has very high popularity on GitHub
+        link: https://github.com/elastic/curator
+        package_name: elasticsearch-curator

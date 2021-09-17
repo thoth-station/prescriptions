@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RedisPyClusterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: redis-py-cluster
+    run:
+      justification:
+      - type: INFO
+        message: Project 'redis-py-cluster' has very high popularity on GitHub
+        link: https://github.com/grokzen/redis-py-cluster
+        package_name: redis-py-cluster

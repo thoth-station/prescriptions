@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LightgbmGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lightgbm
+    run:
+      justification:
+      - type: INFO
+        message: Project 'lightgbm' has very high popularity on GitHub
+        link: https://github.com/microsoft/LightGBM
+        package_name: lightgbm

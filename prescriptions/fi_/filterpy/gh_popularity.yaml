@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FilterpyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: filterpy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'filterpy' has very high popularity on GitHub
+        link: https://github.com/rlabbe/filterpy
+        package_name: filterpy

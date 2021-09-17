@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApschedulerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apscheduler
+    run:
+      justification:
+      - type: INFO
+        message: Project 'apscheduler' has very high popularity on GitHub
+        link: https://github.com/agronholm/apscheduler
+        package_name: apscheduler

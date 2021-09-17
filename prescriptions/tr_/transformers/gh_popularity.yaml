@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TransformersGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transformers
+    run:
+      justification:
+      - type: INFO
+        message: Project 'transformers' has very high popularity on GitHub
+        link: https://github.com/huggingface/transformers
+        package_name: transformers

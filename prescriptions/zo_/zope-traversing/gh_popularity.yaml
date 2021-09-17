@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeTraversingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-traversing
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-traversing' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.traversing
+        package_name: zope-traversing

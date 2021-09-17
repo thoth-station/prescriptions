@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeSequencesortGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-sequencesort
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-sequencesort' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.sequencesort
+        package_name: zope-sequencesort

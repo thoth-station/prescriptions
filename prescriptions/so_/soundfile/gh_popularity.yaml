@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SoundfileGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: soundfile
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'soundfile' has low popularity on GitHub
+        link: https://github.com/bastibe/PySoundFile
+        package_name: soundfile

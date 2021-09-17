@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CmakeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmake
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cmake' has high popularity on GitHub
+        link: https://github.com/scikit-build/cmake-python-distributions
+        package_name: cmake

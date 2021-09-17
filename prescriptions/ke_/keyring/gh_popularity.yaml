@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KeyringGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyring
+    run:
+      justification:
+      - type: INFO
+        message: Project 'keyring' has very high popularity on GitHub
+        link: https://github.com/jaraco/keyring
+        package_name: keyring

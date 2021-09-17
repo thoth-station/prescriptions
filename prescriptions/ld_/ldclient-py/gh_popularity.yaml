@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LdclientPyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ldclient-py
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ldclient-py' has moderate popularity on GitHub
+        link: https://github.com/launchdarkly/python-server-sdk
+        package_name: ldclient-py

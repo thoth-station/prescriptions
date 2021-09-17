@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BsonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bson
+    run:
+      justification:
+      - type: INFO
+        message: Project 'bson' has high popularity on GitHub
+        link: https://github.com/py-bson/bson
+        package_name: bson

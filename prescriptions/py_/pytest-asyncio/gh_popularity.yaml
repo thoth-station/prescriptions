@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestAsyncioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-asyncio
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pytest-asyncio' has very high popularity on GitHub
+        link: https://github.com/pytest-dev/pytest-asyncio
+        package_name: pytest-asyncio

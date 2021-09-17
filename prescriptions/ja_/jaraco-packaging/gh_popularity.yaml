@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoPackagingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-packaging
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-packaging' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.packaging
+        package_name: jaraco-packaging

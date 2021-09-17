@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Urllib3GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urllib3
+    run:
+      justification:
+      - type: INFO
+        message: Project 'urllib3' has very high popularity on GitHub
+        link: https://github.com/urllib3/urllib3
+        package_name: urllib3

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StepfunctionsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stepfunctions
+    run:
+      justification:
+      - type: INFO
+        message: Project 'stepfunctions' has high popularity on GitHub
+        link: https://github.com/aws/aws-step-functions-data-science-sdk-python
+        package_name: stepfunctions

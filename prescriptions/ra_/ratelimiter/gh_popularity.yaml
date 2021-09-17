@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RatelimiterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimiter
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ratelimiter' has high popularity on GitHub
+        link: https://github.com/RazerM/ratelimiter
+        package_name: ratelimiter

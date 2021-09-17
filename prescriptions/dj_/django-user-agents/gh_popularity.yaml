@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoUserAgentsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-user-agents
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-user-agents' has very high popularity on GitHub
+        link: https://github.com/selwin/django-user_agents
+        package_name: django-user-agents

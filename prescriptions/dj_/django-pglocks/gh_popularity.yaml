@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPglocksGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pglocks
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-pglocks' has high popularity on GitHub
+        link: https://github.com/Xof/django-pglocks
+        package_name: django-pglocks

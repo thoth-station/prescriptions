@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MixerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mixer
+    run:
+      justification:
+      - type: INFO
+        message: Project 'mixer' has very high popularity on GitHub
+        link: https://github.com/klen/mixer
+        package_name: mixer

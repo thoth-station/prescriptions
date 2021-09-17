@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeptuneLightgbmGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-lightgbm
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'neptune-lightgbm' has low popularity on GitHub
+        link: https://github.com/neptune-ai/neptune-lightgbm
+        package_name: neptune-lightgbm

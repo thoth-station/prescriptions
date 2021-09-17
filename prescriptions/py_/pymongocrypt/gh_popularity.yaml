@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymongocryptGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymongocrypt
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pymongocrypt' has high popularity on GitHub
+        link: https://github.com/mongodb/libmongocrypt
+        package_name: pymongocrypt

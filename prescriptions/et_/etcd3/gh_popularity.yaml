@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Etcd3GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etcd3
+    run:
+      justification:
+      - type: INFO
+        message: Project 'etcd3' has high popularity on GitHub
+        link: https://github.com/kragniz/python-etcd3
+        package_name: etcd3

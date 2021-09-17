@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureStorageCommonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-common
+    run:
+      justification:
+      - type: INFO
+        message: Project 'azure-storage-common' has high popularity on GitHub
+        link: https://github.com/Azure/azure-storage-python
+        package_name: azure-storage-common

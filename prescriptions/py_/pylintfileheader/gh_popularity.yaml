@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintfileheaderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylintfileheader
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pylintfileheader' has low popularity on GitHub
+        link: https://github.com/HaaLeo/pylint-file-header
+        package_name: pylintfileheader

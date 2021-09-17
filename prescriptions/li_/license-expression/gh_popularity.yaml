@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LicenseExpressionGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: license-expression
+    run:
+      justification:
+      - type: INFO
+        message: Project 'license-expression' has moderate popularity on GitHub
+        link: https://github.com/nexB/license-expression
+        package_name: license-expression

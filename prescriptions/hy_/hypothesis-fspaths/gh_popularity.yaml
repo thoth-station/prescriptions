@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HypothesisFspathsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis-fspaths
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'hypothesis-fspaths' has low popularity on GitHub
+        link: https://github.com/lazka/hypothesis-fspaths
+        package_name: hypothesis-fspaths

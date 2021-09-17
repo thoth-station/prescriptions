@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonRefDictGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-ref-dict
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'json-ref-dict' has low popularity on GitHub
+        link: https://github.com/jacksmith15/json-ref-dict
+        package_name: json-ref-dict

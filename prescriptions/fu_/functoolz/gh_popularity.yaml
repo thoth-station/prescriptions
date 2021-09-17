@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FunctoolzGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: functoolz
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'functoolz' has low popularity on GitHub
+        link: https://github.com/mrocklin/functoolz
+        package_name: functoolz

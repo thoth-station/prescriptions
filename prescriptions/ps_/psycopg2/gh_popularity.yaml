@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Psycopg2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycopg2
+    run:
+      justification:
+      - type: INFO
+        message: Project 'psycopg2' has very high popularity on GitHub
+        link: https://github.com/psycopg/psycopg2
+        package_name: psycopg2

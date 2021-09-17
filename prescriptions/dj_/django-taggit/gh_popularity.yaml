@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoTaggitGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-taggit
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-taggit' has very high popularity on GitHub
+        link: https://github.com/jazzband/django-taggit
+        package_name: django-taggit

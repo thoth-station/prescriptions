@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JtutilsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jtutils
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jtutils' has low popularity on GitHub
+        link: https://github.com/jasontrigg0/jtutils
+        package_name: jtutils

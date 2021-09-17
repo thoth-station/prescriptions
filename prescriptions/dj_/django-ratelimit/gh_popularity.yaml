@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoRatelimitGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-ratelimit
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-ratelimit' has very high popularity on GitHub
+        link: https://github.com/jsocol/django-ratelimit
+        package_name: django-ratelimit

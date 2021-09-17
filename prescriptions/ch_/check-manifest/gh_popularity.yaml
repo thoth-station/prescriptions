@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CheckManifestGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: check-manifest
+    run:
+      justification:
+      - type: INFO
+        message: Project 'check-manifest' has high popularity on GitHub
+        link: https://github.com/mgedmin/check-manifest
+        package_name: check-manifest

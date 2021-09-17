@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Co2TrackerUtilsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: co2-tracker-utils
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'co2-tracker-utils' has low popularity on GitHub
+        link: https://github.com/comet-ml/co2-tracker-utils
+        package_name: co2-tracker-utils

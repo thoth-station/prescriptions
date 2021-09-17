@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Oauth2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauth2
+    run:
+      justification:
+      - type: INFO
+        message: Project 'oauth2' has very high popularity on GitHub
+        link: https://github.com/joestump/python-oauth2
+        package_name: oauth2

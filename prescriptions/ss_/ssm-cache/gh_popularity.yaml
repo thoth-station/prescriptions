@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SsmCacheGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssm-cache
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ssm-cache' has high popularity on GitHub
+        link: https://github.com/alexcasalboni/ssm-cache-python
+        package_name: ssm-cache

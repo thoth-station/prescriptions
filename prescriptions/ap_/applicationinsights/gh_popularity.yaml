@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApplicationinsightsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: applicationinsights
+    run:
+      justification:
+      - type: INFO
+        message: Project 'applicationinsights' has high popularity on GitHub
+        link: https://github.com/Microsoft/ApplicationInsights-Python
+        package_name: applicationinsights

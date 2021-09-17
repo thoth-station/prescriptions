@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RayGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ray
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ray' has very high popularity on GitHub
+        link: https://github.com/ray-project/ray
+        package_name: ray

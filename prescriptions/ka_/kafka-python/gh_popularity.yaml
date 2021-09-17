@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KafkaPythonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kafka-python
+    run:
+      justification:
+      - type: INFO
+        message: Project 'kafka-python' has very high popularity on GitHub
+        link: https://github.com/dpkp/kafka-python
+        package_name: kafka-python

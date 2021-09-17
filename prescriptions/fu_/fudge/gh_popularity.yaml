@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FudgeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fudge
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fudge' has moderate popularity on GitHub
+        link: https://github.com/fudge-py/fudge
+        package_name: fudge

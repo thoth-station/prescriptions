@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoFilterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-filter
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-filter' has very high popularity on GitHub
+        link: https://github.com/carltongibson/django-filter
+        package_name: django-filter

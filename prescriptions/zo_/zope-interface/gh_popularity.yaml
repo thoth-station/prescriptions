@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeInterfaceGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-interface
+    run:
+      justification:
+      - type: INFO
+        message: Project 'zope-interface' has high popularity on GitHub
+        link: https://github.com/zopefoundation/zope.interface
+        package_name: zope-interface

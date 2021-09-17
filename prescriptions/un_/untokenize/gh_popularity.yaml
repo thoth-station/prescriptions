@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UntokenizeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: untokenize
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'untokenize' has low popularity on GitHub
+        link: https://github.com/myint/untokenize
+        package_name: untokenize

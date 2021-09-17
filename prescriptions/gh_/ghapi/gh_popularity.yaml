@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GhapiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ghapi
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ghapi' has high popularity on GitHub
+        link: https://github.com/fastai/ghapi
+        package_name: ghapi

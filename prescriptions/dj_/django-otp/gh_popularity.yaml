@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoOtpGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-otp
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-otp' has high popularity on GitHub
+        link: https://github.com/django-otp/django-otp
+        package_name: django-otp

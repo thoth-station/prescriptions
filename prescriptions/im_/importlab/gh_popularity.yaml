@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportlabGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlab
+    run:
+      justification:
+      - type: INFO
+        message: Project 'importlab' has high popularity on GitHub
+        link: https://github.com/google/importlab
+        package_name: importlab

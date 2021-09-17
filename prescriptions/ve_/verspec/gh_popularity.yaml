@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VerspecGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: verspec
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'verspec' has low popularity on GitHub
+        link: https://github.com/jimporter/verspec
+        package_name: verspec

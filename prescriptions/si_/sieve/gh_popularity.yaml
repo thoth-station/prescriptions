@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SieveGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sieve
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'sieve' has low popularity on GitHub
+        link: https://github.com/ralphbean/sieve
+        package_name: sieve

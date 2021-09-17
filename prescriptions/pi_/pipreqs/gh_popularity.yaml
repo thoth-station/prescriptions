@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipreqsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipreqs
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pipreqs' has very high popularity on GitHub
+        link: https://github.com/bndr/pipreqs
+        package_name: pipreqs

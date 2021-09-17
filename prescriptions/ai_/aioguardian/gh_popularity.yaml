@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AioguardianGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioguardian
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'aioguardian' has low popularity on GitHub
+        link: https://github.com/bachya/aioguardian
+        package_name: aioguardian

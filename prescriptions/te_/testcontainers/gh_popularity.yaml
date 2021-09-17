@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TestcontainersGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testcontainers
+    run:
+      justification:
+      - type: INFO
+        message: Project 'testcontainers' has high popularity on GitHub
+        link: https://github.com/testcontainers/testcontainers-python
+        package_name: testcontainers

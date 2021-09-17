@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KlioExecGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: klio-exec
+    run:
+      justification:
+      - type: INFO
+        message: Project 'klio-exec' has very high popularity on GitHub
+        link: https://github.com/spotify/klio
+        package_name: klio-exec

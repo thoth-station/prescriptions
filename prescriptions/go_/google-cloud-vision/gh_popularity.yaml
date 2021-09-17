@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudVisionGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-vision
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-cloud-vision' has high popularity on GitHub
+        link: https://github.com/googleapis/python-vision
+        package_name: google-cloud-vision

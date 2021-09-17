@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudRedisGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-redis
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'google-cloud-redis' has low popularity on GitHub
+        link: https://github.com/googleapis/python-redis
+        package_name: google-cloud-redis

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysnmpGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysnmp
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pysnmp' has very high popularity on GitHub
+        link: https://github.com/etingof/pysnmp
+        package_name: pysnmp

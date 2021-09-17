@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8ImportOrderGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-import-order
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flake8-import-order' has high popularity on GitHub
+        link: https://github.com/PyCQA/flake8-import-order
+        package_name: flake8-import-order

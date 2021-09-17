@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LbryLibtorrentGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lbry-libtorrent
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'lbry-libtorrent' has low popularity on GitHub
+        link: https://github.com/lbryio/libtorrent
+        package_name: lbry-libtorrent

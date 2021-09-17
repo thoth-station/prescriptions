@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeltalakeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deltalake
+    run:
+      justification:
+      - type: INFO
+        message: Project 'deltalake' has high popularity on GitHub
+        link: https://github.com/delta-io/delta-rs
+        package_name: deltalake

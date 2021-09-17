@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MysqlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysql
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'mysql' has low popularity on GitHub
+        link: https://github.com/valhallasw/virtual-mysql-pypi-package
+        package_name: mysql

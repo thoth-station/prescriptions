@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoStoragesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-storages
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-storages' has very high popularity on GitHub
+        link: https://github.com/jschneier/django-storages
+        package_name: django-storages

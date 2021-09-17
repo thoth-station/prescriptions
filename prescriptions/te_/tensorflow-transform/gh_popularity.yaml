@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorflowTransformGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-transform
+    run:
+      justification:
+      - type: INFO
+        message: Project 'tensorflow-transform' has very high popularity on GitHub
+        link: https://github.com/tensorflow/transform
+        package_name: tensorflow-transform

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Multipartposthandler2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multipartposthandler2
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'multipartposthandler2' has low popularity on GitHub
+        link: https://github.com/sergiomb2/MultipartPostHandler2
+        package_name: multipartposthandler2

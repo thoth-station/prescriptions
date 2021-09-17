@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NodeSemverGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: node-semver
+    run:
+      justification:
+      - type: INFO
+        message: Project 'node-semver' has moderate popularity on GitHub
+        link: https://github.com/podhmo/python-semver
+        package_name: node-semver

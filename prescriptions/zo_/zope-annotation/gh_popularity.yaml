@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAnnotationGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-annotation
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-annotation' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.annotation
+        package_name: zope-annotation

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CatalystCodestyleGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catalyst-codestyle
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'catalyst-codestyle' has low popularity on GitHub
+        link: https://github.com/catalyst-team/codestyle
+        package_name: catalyst-codestyle

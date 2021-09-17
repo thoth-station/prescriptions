@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlowerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flower
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flower' has very high popularity on GitHub
+        link: https://github.com/mher/flower
+        package_name: flower

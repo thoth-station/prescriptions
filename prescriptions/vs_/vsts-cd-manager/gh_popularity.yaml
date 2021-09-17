@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VstsCdManagerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsts-cd-manager
+    run:
+      justification:
+      - type: INFO
+        message: Project 'vsts-cd-manager' has moderate popularity on GitHub
+        link: https://github.com/microsoft/vsts-cd-manager
+        package_name: vsts-cd-manager

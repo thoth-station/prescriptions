@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DtfabricGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dtfabric
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'dtfabric' has low popularity on GitHub
+        link: https://github.com/libyal/dtfabric
+        package_name: dtfabric

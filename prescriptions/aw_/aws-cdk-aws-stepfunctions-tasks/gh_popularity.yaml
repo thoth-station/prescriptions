@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkAwsStepfunctionsTasksGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-stepfunctions-tasks
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aws-cdk-aws-stepfunctions-tasks' has very high popularity on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-aws-stepfunctions-tasks

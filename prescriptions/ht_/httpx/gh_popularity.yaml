@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HttpxGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpx
+    run:
+      justification:
+      - type: INFO
+        message: Project 'httpx' has very high popularity on GitHub
+        link: https://github.com/encode/httpx
+        package_name: httpx

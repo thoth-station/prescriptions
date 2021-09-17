@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncGeneratorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: async-generator
+    run:
+      justification:
+      - type: INFO
+        message: Project 'async-generator' has high popularity on GitHub
+        link: https://github.com/python-trio/async_generator
+        package_name: async-generator

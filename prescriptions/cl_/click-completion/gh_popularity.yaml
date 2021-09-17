@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickCompletionGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-completion
+    run:
+      justification:
+      - type: INFO
+        message: Project 'click-completion' has high popularity on GitHub
+        link: https://github.com/click-contrib/click-completion
+        package_name: click-completion

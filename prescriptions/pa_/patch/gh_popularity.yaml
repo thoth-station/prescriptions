@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PatchGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patch
+    run:
+      justification:
+      - type: INFO
+        message: Project 'patch' has high popularity on GitHub
+        link: https://github.com/techtonik/python-patch
+        package_name: patch

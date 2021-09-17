@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ExecutingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: executing
+    run:
+      justification:
+      - type: INFO
+        message: Project 'executing' has high popularity on GitHub
+        link: https://github.com/alexmojaki/executing
+        package_name: executing

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickhouseCityhashGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clickhouse-cityhash
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'clickhouse-cityhash' has low popularity on GitHub
+        link: https://github.com/xzkostyan/python-cityhash
+        package_name: clickhouse-cityhash

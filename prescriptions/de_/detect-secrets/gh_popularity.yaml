@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DetectSecretsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: detect-secrets
+    run:
+      justification:
+      - type: INFO
+        message: Project 'detect-secrets' has very high popularity on GitHub
+        link: https://github.com/Yelp/detect-secrets
+        package_name: detect-secrets

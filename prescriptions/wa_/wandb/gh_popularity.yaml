@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WandbGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wandb
+    run:
+      justification:
+      - type: INFO
+        message: Project 'wandb' has very high popularity on GitHub
+        link: https://github.com/wandb/client
+        package_name: wandb

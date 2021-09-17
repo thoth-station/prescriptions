@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JanusGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: janus
+    run:
+      justification:
+      - type: INFO
+        message: Project 'janus' has very high popularity on GitHub
+        link: https://github.com/aio-libs/janus
+        package_name: janus

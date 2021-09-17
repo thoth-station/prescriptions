@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonLogstashAsyncGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-logstash-async
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-logstash-async' has high popularity on GitHub
+        link: https://github.com/eht16/python-logstash-async
+        package_name: python-logstash-async

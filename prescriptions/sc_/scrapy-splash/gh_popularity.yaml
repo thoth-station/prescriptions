@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ScrapySplashGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scrapy-splash
+    run:
+      justification:
+      - type: INFO
+        message: Project 'scrapy-splash' has very high popularity on GitHub
+        link: https://github.com/scrapy-plugins/scrapy-splash
+        package_name: scrapy-splash

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickPluginsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-plugins
+    run:
+      justification:
+      - type: INFO
+        message: Project 'click-plugins' has high popularity on GitHub
+        link: https://github.com/click-contrib/click-plugins
+        package_name: click-plugins

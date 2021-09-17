@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: us
+    run:
+      justification:
+      - type: INFO
+        message: Project 'us' has high popularity on GitHub
+        link: https://github.com/unitedstates/python-us
+        package_name: us

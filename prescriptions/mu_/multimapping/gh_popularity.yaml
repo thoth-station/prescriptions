@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MultimappingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multimapping
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'multimapping' has low popularity on GitHub
+        link: https://github.com/zopefoundation/MultiMapping
+        package_name: multimapping

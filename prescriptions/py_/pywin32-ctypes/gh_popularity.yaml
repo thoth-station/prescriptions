@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pywin32CtypesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywin32-ctypes
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pywin32-ctypes' has low popularity on GitHub
+        link: https://github.com/enthought/pywin32-ctypes
+        package_name: pywin32-ctypes

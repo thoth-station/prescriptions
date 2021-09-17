@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzysearchGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzysearch
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fuzzysearch' has high popularity on GitHub
+        link: https://github.com/taleinat/fuzzysearch
+        package_name: fuzzysearch

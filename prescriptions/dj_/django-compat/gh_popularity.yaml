@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCompatGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-compat
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-compat' has high popularity on GitHub
+        link: https://github.com/arteria/django-compat
+        package_name: django-compat

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrapheneDjangoGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphene-django
+    run:
+      justification:
+      - type: INFO
+        message: Project 'graphene-django' has very high popularity on GitHub
+        link: https://github.com/graphql-python/graphene-django
+        package_name: graphene-django

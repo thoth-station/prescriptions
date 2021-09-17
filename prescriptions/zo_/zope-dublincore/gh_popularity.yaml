@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeDublincoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-dublincore
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-dublincore' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.dublincore
+        package_name: zope-dublincore

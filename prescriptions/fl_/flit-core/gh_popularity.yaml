@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlitCoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flit-core
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flit-core' has very high popularity on GitHub
+        link: https://github.com/takluyver/flit
+        package_name: flit-core

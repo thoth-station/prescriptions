@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChessGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chess
+    run:
+      justification:
+      - type: INFO
+        message: Project 'chess' has very high popularity on GitHub
+        link: https://github.com/niklasf/python-chess
+        package_name: chess

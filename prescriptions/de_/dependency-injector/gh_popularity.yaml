@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DependencyInjectorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dependency-injector
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dependency-injector' has very high popularity on GitHub
+        link: https://github.com/ets-labs/python-dependency-injector
+        package_name: dependency-injector

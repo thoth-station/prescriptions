@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Domain2idnaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: domain2idna
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'domain2idna' has low popularity on GitHub
+        link: https://github.com/PyFunceble/domain2idna
+        package_name: domain2idna

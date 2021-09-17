@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CbapiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cbapi
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cbapi' has high popularity on GitHub
+        link: https://github.com/carbonblack/cbapi-python
+        package_name: cbapi

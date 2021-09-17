@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Send2trashGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: send2trash
+    run:
+      justification:
+      - type: INFO
+        message: Project 'send2trash' has high popularity on GitHub
+        link: https://github.com/arsenetar/send2trash
+        package_name: send2trash

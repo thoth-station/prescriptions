@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoMoneyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-money
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-money' has very high popularity on GitHub
+        link: https://github.com/django-money/django-money
+        package_name: django-money

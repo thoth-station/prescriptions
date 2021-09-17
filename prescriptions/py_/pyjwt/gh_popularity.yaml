@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyjwtGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyjwt
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyjwt' has very high popularity on GitHub
+        link: https://github.com/jpadilla/pyjwt
+        package_name: pyjwt

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ElasticsearchAsyncGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-async
+    run:
+      justification:
+      - type: INFO
+        message: Project 'elasticsearch-async' has high popularity on GitHub
+        link: https://github.com/elastic/elasticsearch-py-async
+        package_name: elasticsearch-async

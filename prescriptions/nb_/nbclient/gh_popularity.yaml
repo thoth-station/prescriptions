@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NbclientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbclient
+    run:
+      justification:
+      - type: INFO
+        message: Project 'nbclient' has high popularity on GitHub
+        link: https://github.com/jupyter/nbclient
+        package_name: nbclient

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatasetteGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datasette
+    run:
+      justification:
+      - type: INFO
+        message: Project 'datasette' has very high popularity on GitHub
+        link: https://github.com/simonw/datasette
+        package_name: datasette

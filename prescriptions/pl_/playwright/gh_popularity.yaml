@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlaywrightGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: playwright
+    run:
+      justification:
+      - type: INFO
+        message: Project 'playwright' has very high popularity on GitHub
+        link: https://github.com/Microsoft/playwright-python
+        package_name: playwright

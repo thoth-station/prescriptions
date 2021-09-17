@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonschemaGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonschema
+    run:
+      justification:
+      - type: INFO
+        message: Project 'jsonschema' has very high popularity on GitHub
+        link: https://github.com/Julian/jsonschema
+        package_name: jsonschema

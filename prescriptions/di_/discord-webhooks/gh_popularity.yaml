@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiscordWebhooksGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-webhooks
+    run:
+      justification:
+      - type: INFO
+        message: Project 'discord-webhooks' has moderate popularity on GitHub
+        link: https://github.com/JamesIves/discord-webhooks
+        package_name: discord-webhooks

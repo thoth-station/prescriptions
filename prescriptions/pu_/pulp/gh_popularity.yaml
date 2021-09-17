@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PulpGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pulp
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pulp' has very high popularity on GitHub
+        link: https://github.com/coin-or/pulp
+        package_name: pulp

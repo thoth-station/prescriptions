@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnvironsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: environs
+    run:
+      justification:
+      - type: INFO
+        message: Project 'environs' has very high popularity on GitHub
+        link: https://github.com/sloria/environs
+        package_name: environs

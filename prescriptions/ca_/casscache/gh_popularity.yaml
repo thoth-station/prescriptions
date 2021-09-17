@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CasscacheGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: casscache
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'casscache' has low popularity on GitHub
+        link: https://github.com/mattrobenolt/python-casscache
+        package_name: casscache

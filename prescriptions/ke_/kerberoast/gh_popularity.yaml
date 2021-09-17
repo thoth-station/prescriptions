@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerberoastGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberoast
+    run:
+      justification:
+      - type: INFO
+        message: Project 'kerberoast' has high popularity on GitHub
+        link: https://github.com/skelsec/kerberoast
+        package_name: kerberoast

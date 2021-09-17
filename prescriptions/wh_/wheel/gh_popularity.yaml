@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WheelGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel
+    run:
+      justification:
+      - type: INFO
+        message: Project 'wheel' has high popularity on GitHub
+        link: https://github.com/pypa/wheel
+        package_name: wheel

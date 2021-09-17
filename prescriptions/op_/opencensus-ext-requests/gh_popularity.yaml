@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpencensusExtRequestsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus-ext-requests
+    run:
+      justification:
+      - type: INFO
+        message: Project 'opencensus-ext-requests' has very high popularity on GitHub
+        link: https://github.com/census-instrumentation/opencensus-python
+        package_name: opencensus-ext-requests

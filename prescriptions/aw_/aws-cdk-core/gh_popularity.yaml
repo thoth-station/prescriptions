@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsCdkCoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-core
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aws-cdk-core' has very high popularity on GitHub
+        link: https://github.com/aws/aws-cdk
+        package_name: aws-cdk-core

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AadictGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aadict
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'aadict' has low popularity on GitHub
+        link: https://github.com/metagriffin/aadict
+        package_name: aadict

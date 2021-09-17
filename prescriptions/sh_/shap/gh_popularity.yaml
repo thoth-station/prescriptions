@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShapGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shap
+    run:
+      justification:
+      - type: INFO
+        message: Project 'shap' has very high popularity on GitHub
+        link: https://github.com/slundberg/shap
+        package_name: shap

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker
+    run:
+      justification:
+      - type: INFO
+        message: Project 'slacker' has very high popularity on GitHub
+        link: https://github.com/os/slacker
+        package_name: slacker

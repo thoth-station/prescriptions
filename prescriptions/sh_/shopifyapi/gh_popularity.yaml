@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ShopifyapiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shopifyapi
+    run:
+      justification:
+      - type: INFO
+        message: Project 'shopifyapi' has very high popularity on GitHub
+        link: https://github.com/Shopify/shopify_python_api
+        package_name: shopifyapi

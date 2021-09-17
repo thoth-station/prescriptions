@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeprecatedGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecated
+    run:
+      justification:
+      - type: INFO
+        message: Project 'deprecated' has high popularity on GitHub
+        link: https://github.com/tantale/deprecated
+        package_name: deprecated

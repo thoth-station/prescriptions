@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpidevGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spidev
+    run:
+      justification:
+      - type: INFO
+        message: Project 'spidev' has high popularity on GitHub
+        link: https://github.com/doceme/py-spidev
+        package_name: spidev

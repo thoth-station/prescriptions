@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WincertstoreGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wincertstore
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'wincertstore' has low popularity on GitHub
+        link: https://github.com/tiran/wincertstore
+        package_name: wincertstore

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ChaliceGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chalice
+    run:
+      justification:
+      - type: INFO
+        message: Project 'chalice' has very high popularity on GitHub
+        link: https://github.com/aws/chalice
+        package_name: chalice

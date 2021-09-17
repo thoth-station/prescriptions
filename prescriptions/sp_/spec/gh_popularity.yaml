@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpecGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spec
+    run:
+      justification:
+      - type: INFO
+        message: Project 'spec' has high popularity on GitHub
+        link: https://github.com/bitprophet/spec
+        package_name: spec

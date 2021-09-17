@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysparkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspark
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyspark' has very high popularity on GitHub
+        link: https://github.com/apache/spark
+        package_name: pyspark

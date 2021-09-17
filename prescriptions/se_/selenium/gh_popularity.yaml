@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SeleniumGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selenium
+    run:
+      justification:
+      - type: INFO
+        message: Project 'selenium' has very high popularity on GitHub
+        link: https://github.com/SeleniumHQ/selenium
+        package_name: selenium

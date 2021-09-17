@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudLanguageGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-language
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-cloud-language' has high popularity on GitHub
+        link: https://github.com/googleapis/python-language
+        package_name: google-cloud-language

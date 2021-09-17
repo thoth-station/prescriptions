@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GeohashGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geohash
+    run:
+      justification:
+      - type: INFO
+        message: Project 'geohash' has high popularity on GitHub
+        link: https://github.com/vinsci/geohash
+        package_name: geohash

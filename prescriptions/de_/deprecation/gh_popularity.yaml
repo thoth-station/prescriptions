@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeprecationGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation
+    run:
+      justification:
+      - type: INFO
+        message: Project 'deprecation' has high popularity on GitHub
+        link: https://github.com/briancurtin/deprecation
+        package_name: deprecation

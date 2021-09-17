@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlockGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flock
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'flock' has low popularity on GitHub
+        link: https://github.com/misli/python-flock
+        package_name: flock

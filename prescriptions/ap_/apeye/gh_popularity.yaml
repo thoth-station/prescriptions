@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApeyeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apeye
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'apeye' has low popularity on GitHub
+        link: https://github.com/domdfcoding/apeye
+        package_name: apeye

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YgLockfileGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yg-lockfile
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'yg-lockfile' has low popularity on GitHub
+        link: https://github.com/yougov/yg.lockfile
+        package_name: yg-lockfile

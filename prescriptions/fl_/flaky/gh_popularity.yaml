@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlakyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flaky
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flaky' has high popularity on GitHub
+        link: https://github.com/box/flaky
+        package_name: flaky

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyserialGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyserial
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyserial' has very high popularity on GitHub
+        link: https://github.com/pyserial/pyserial
+        package_name: pyserial

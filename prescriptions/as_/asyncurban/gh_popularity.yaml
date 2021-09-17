@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncurbanGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncurban
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'asyncurban' has low popularity on GitHub
+        link: https://github.com/naught0/asyncurban
+        package_name: asyncurban

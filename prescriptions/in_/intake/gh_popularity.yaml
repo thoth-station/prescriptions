@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IntakeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intake
+    run:
+      justification:
+      - type: INFO
+        message: Project 'intake' has very high popularity on GitHub
+        link: https://github.com/intake/intake
+        package_name: intake

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyicuBinaryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyicu-binary
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyicu-binary' has high popularity on GitHub
+        link: https://github.com/ovalhub/pyicu
+        package_name: pyicu-binary

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestCheckdocsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-checkdocs
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pytest-checkdocs' has low popularity on GitHub
+        link: https://github.com/jaraco/pytest-checkdocs
+        package_name: pytest-checkdocs

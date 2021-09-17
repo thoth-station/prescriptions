@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KeyboardGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyboard
+    run:
+      justification:
+      - type: INFO
+        message: Project 'keyboard' has very high popularity on GitHub
+        link: https://github.com/boppreh/keyboard
+        package_name: keyboard

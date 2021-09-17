@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SniffioGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sniffio
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sniffio' has high popularity on GitHub
+        link: https://github.com/python-trio/sniffio
+        package_name: sniffio

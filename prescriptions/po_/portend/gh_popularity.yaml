@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PortendGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: portend
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'portend' has low popularity on GitHub
+        link: https://github.com/jaraco/portend
+        package_name: portend

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Linecache2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linecache2
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'linecache2' has low popularity on GitHub
+        link: https://github.com/testing-cabal/linecache2
+        package_name: linecache2

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestWatchGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-watch
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pytest-watch' has very high popularity on GitHub
+        link: https://github.com/joeyespo/pytest-watch
+        package_name: pytest-watch

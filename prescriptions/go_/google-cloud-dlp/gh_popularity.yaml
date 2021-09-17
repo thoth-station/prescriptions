@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudDlpGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-dlp
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-cloud-dlp' has moderate popularity on GitHub
+        link: https://github.com/googleapis/python-dlp
+        package_name: google-cloud-dlp

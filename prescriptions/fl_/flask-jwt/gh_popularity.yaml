@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskJwtGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-jwt
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-jwt' has very high popularity on GitHub
+        link: https://github.com/mattupstate/flask-jwt
+        package_name: flask-jwt

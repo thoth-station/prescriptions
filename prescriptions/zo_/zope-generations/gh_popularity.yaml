@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeGenerationsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-generations
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-generations' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.generations
+        package_name: zope-generations

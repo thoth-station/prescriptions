@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MysqlPythonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysql-python
+    run:
+      justification:
+      - type: INFO
+        message: Project 'mysql-python' has very high popularity on GitHub
+        link: https://github.com/farcepest/MySQLdb1
+        package_name: mysql-python

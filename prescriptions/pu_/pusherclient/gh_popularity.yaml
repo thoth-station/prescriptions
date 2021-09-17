@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PusherclientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pusherclient
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pusherclient' has high popularity on GitHub
+        link: https://github.com/ekulyk/PythonPusherClient
+        package_name: pusherclient

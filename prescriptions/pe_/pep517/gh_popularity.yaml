@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pep517GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pep517
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pep517' has high popularity on GitHub
+        link: https://github.com/pypa/pep517
+        package_name: pep517

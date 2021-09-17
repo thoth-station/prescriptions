@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ResponsesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: responses
+    run:
+      justification:
+      - type: INFO
+        message: Project 'responses' has very high popularity on GitHub
+        link: https://github.com/getsentry/responses
+        package_name: responses

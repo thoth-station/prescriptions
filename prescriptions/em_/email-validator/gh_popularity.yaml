@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EmailValidatorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: email-validator
+    run:
+      justification:
+      - type: INFO
+        message: Project 'email-validator' has high popularity on GitHub
+        link: https://github.com/JoshData/python-email-validator
+        package_name: email-validator

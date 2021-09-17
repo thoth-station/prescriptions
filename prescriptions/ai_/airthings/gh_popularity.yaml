@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AirthingsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airthings
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'airthings' has low popularity on GitHub
+        link: https://github.com/kotlarz/airthings
+        package_name: airthings

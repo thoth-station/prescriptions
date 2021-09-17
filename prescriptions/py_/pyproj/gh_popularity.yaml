@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyprojGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyproj
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyproj' has very high popularity on GitHub
+        link: https://github.com/pyproj4/pyproj
+        package_name: pyproj

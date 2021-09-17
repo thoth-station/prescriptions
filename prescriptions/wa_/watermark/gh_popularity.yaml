@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WatermarkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watermark
+    run:
+      justification:
+      - type: INFO
+        message: Project 'watermark' has very high popularity on GitHub
+        link: https://github.com/rasbt/watermark
+        package_name: watermark

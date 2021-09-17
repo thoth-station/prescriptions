@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XboxapiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xboxapi
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'xboxapi' has low popularity on GitHub
+        link: https://github.com/mKeRix/xboxapi-python
+        package_name: xboxapi

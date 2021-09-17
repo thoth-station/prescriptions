@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProductsGenericsetupGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-genericsetup
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'products-genericsetup' has low popularity on GitHub
+        link: https://github.com/zopefoundation/Products.GenericSetup
+        package_name: products-genericsetup

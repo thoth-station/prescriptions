@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SshtunnelGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshtunnel
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sshtunnel' has very high popularity on GitHub
+        link: https://github.com/pahaz/sshtunnel
+        package_name: sshtunnel

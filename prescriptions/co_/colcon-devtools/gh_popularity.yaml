@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconDevtoolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-devtools
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'colcon-devtools' has low popularity on GitHub
+        link: https://github.com/colcon/colcon-devtools
+        package_name: colcon-devtools

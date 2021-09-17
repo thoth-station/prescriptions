@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsFunctoolsPartialmethodGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-functools-partialmethod
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'backports-functools-partialmethod' has low popularity on GitHub
+        link: https://github.com/PythonBackports/backports.functools_partialmethod
+        package_name: backports-functools-partialmethod

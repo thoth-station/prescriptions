@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlurbGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blurb
+    run:
+      justification:
+      - type: INFO
+        message: Project 'blurb' has high popularity on GitHub
+        link: https://github.com/python/core-workflow
+        package_name: blurb

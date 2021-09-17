@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiohttpRetryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-retry
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aiohttp-retry' has high popularity on GitHub
+        link: https://github.com/inyutin/aiohttp_retry
+        package_name: aiohttp-retry

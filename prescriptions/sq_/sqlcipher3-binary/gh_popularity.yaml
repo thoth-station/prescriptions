@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Sqlcipher3BinaryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlcipher3-binary
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sqlcipher3-binary' has moderate popularity on GitHub
+        link: https://github.com/coleifer/sqlcipher3
+        package_name: sqlcipher3-binary

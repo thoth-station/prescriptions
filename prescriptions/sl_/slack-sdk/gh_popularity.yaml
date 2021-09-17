@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackSdkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slack-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Project 'slack-sdk' has very high popularity on GitHub
+        link: https://github.com/slackapi/python-slack-sdk
+        package_name: slack-sdk

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PelicanGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pelican
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pelican' has very high popularity on GitHub
+        link: https://github.com/getpelican/pelican
+        package_name: pelican

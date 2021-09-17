@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyutilGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyutil
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pyutil' has low popularity on GitHub
+        link: https://github.com/tpltnt/pyutil
+        package_name: pyutil

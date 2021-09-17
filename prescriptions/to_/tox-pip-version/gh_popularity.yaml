@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ToxPipVersionGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-pip-version
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'tox-pip-version' has low popularity on GitHub
+        link: https://github.com/pglass/tox-pip-version
+        package_name: tox-pip-version

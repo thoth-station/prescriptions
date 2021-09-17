@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCacheMemoizeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cache-memoize
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-cache-memoize' has high popularity on GitHub
+        link: https://github.com/peterbe/django-cache-memoize
+        package_name: django-cache-memoize

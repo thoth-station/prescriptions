@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SelinuxGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selinux
+    run:
+      justification:
+      - type: INFO
+        message: Project 'selinux' has moderate popularity on GitHub
+        link: https://github.com/pycontribs/selinux
+        package_name: selinux

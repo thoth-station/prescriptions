@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PretendGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretend
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pretend' has high popularity on GitHub
+        link: https://github.com/alex/pretend
+        package_name: pretend

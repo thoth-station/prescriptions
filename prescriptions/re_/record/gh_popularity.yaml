@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RecordGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: record
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'record' has low popularity on GitHub
+        link: https://github.com/zopefoundation/Record
+        package_name: record

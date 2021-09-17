@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterServerProxyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-server-proxy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'jupyter-server-proxy' has high popularity on GitHub
+        link: https://github.com/jupyterhub/jupyter-server-proxy
+        package_name: jupyter-server-proxy

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KfpPipelineSpecGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp-pipeline-spec
+    run:
+      justification:
+      - type: INFO
+        message: Project 'kfp-pipeline-spec' has very high popularity on GitHub
+        link: https://github.com/kubeflow/pipelines
+        package_name: kfp-pipeline-spec

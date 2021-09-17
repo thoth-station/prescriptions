@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AionotionGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aionotion
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'aionotion' has low popularity on GitHub
+        link: https://github.com/bachya/aionotion
+        package_name: aionotion

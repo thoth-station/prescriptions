@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyinotifyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinotify
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyinotify' has very high popularity on GitHub
+        link: https://github.com/seb-m/pyinotify
+        package_name: pyinotify

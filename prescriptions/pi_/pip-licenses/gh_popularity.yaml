@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipLicensesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-licenses
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pip-licenses' has high popularity on GitHub
+        link: https://github.com/raimon49/pip-licenses
+        package_name: pip-licenses

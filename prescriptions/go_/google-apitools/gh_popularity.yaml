@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleApitoolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-apitools
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-apitools' has high popularity on GitHub
+        link: https://github.com/google/apitools
+        package_name: google-apitools

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MccabeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mccabe
+    run:
+      justification:
+      - type: INFO
+        message: Project 'mccabe' has high popularity on GitHub
+        link: https://github.com/pycqa/mccabe
+        package_name: mccabe

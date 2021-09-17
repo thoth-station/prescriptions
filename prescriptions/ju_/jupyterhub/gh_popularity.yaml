@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterhubGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterhub
+    run:
+      justification:
+      - type: INFO
+        message: Project 'jupyterhub' has very high popularity on GitHub
+        link: https://github.com/jupyterhub/jupyterhub
+        package_name: jupyterhub

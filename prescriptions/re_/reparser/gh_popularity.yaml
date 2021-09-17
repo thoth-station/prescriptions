@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ReparserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reparser
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'reparser' has low popularity on GitHub
+        link: https://github.com/xmikos/reparser
+        package_name: reparser

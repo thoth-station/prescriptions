@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonRpcGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-rpc
+    run:
+      justification:
+      - type: INFO
+        message: Project 'json-rpc' has high popularity on GitHub
+        link: https://github.com/pavlov99/json-rpc
+        package_name: json-rpc

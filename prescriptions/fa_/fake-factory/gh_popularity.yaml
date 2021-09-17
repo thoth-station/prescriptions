@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FakeFactoryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fake-factory
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fake-factory' has very high popularity on GitHub
+        link: https://github.com/joke2k/faker
+        package_name: fake-factory

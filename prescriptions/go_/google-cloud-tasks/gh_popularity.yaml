@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudTasksGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-tasks
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-cloud-tasks' has moderate popularity on GitHub
+        link: https://github.com/googleapis/python-tasks
+        package_name: google-cloud-tasks

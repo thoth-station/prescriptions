@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EtelemetryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etelemetry
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'etelemetry' has low popularity on GitHub
+        link: https://github.com/sensein/etelemetry-client
+        package_name: etelemetry

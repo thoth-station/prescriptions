@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlatbuffersGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatbuffers
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flatbuffers' has very high popularity on GitHub
+        link: https://github.com/google/flatbuffers
+        package_name: flatbuffers

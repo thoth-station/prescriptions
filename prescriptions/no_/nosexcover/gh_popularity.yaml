@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NosexcoverGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nosexcover
+    run:
+      justification:
+      - type: INFO
+        message: Project 'nosexcover' has high popularity on GitHub
+        link: https://github.com/cmheisel/nose-xcover
+        package_name: nosexcover

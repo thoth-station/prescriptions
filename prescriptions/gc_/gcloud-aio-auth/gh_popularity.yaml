@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GcloudAioAuthGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcloud-aio-auth
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gcloud-aio-auth' has high popularity on GitHub
+        link: https://github.com/talkiq/gcloud-aio
+        package_name: gcloud-aio-auth

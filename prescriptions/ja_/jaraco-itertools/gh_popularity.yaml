@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoItertoolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-itertools
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-itertools' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.itertools
+        package_name: jaraco-itertools

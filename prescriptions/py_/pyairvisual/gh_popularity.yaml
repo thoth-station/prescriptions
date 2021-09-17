@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyairvisualGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyairvisual
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pyairvisual' has low popularity on GitHub
+        link: https://github.com/bachya/pyairvisual
+        package_name: pyairvisual

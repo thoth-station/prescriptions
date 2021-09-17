@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskMarshmallowGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-marshmallow
+    run:
+      justification:
+      - type: INFO
+        message: Project 'flask-marshmallow' has very high popularity on GitHub
+        link: https://github.com/marshmallow-code/flask-marshmallow
+        package_name: flask-marshmallow

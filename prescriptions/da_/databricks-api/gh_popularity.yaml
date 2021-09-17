@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatabricksApiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databricks-api
+    run:
+      justification:
+      - type: INFO
+        message: Project 'databricks-api' has moderate popularity on GitHub
+        link: https://github.com/crflynn/databricks-api
+        package_name: databricks-api

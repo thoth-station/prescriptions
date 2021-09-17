@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydoctorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydoctor
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pydoctor' has high popularity on GitHub
+        link: https://github.com/twisted/pydoctor
+        package_name: pydoctor

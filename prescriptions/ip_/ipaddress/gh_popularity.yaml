@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpaddressGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaddress
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ipaddress' has high popularity on GitHub
+        link: https://github.com/phihag/ipaddress
+        package_name: ipaddress

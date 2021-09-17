@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GhpImportGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ghp-import
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ghp-import' has very high popularity on GitHub
+        link: https://github.com/c-w/ghp-import
+        package_name: ghp-import

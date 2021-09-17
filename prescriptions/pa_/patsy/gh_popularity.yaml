@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PatsyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patsy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'patsy' has very high popularity on GitHub
+        link: https://github.com/pydata/patsy
+        package_name: patsy

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SshpubkeysGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshpubkeys
+    run:
+      justification:
+      - type: INFO
+        message: Project 'sshpubkeys' has high popularity on GitHub
+        link: https://github.com/ojarva/python-sshpubkeys
+        package_name: sshpubkeys

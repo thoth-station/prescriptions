@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylintQuotesGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-quotes
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pylint-quotes' has moderate popularity on GitHub
+        link: https://github.com/edaniszewski/pylint-quotes
+        package_name: pylint-quotes

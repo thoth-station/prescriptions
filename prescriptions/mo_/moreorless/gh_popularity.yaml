@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MoreorlessGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moreorless
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'moreorless' has low popularity on GitHub
+        link: https://github.com/thatch/moreorless
+        package_name: moreorless

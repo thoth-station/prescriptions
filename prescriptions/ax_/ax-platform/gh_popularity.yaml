@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AxPlatformGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ax-platform
+    run:
+      justification:
+      - type: INFO
+        message: Project 'ax-platform' has very high popularity on GitHub
+        link: https://github.com/facebook/Ax
+        package_name: ax-platform

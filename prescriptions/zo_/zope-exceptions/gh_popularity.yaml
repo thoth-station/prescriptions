@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeExceptionsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-exceptions
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-exceptions' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.exceptions
+        package_name: zope-exceptions

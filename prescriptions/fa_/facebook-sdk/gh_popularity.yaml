@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FacebookSdkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Project 'facebook-sdk' has very high popularity on GitHub
+        link: https://github.com/mobolic/facebook-sdk
+        package_name: facebook-sdk

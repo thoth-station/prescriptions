@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PastedeployGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastedeploy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pastedeploy' has moderate popularity on GitHub
+        link: https://github.com/Pylons/pastedeploy
+        package_name: pastedeploy

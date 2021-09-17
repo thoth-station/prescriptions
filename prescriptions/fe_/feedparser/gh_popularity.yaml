@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FeedparserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedparser
+    run:
+      justification:
+      - type: INFO
+        message: Project 'feedparser' has very high popularity on GitHub
+        link: https://github.com/kurtmckee/feedparser
+        package_name: feedparser

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PySolcGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-solc
+    run:
+      justification:
+      - type: INFO
+        message: Project 'py-solc' has high popularity on GitHub
+        link: https://github.com/ethereum/py-solc
+        package_name: py-solc

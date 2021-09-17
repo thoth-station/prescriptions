@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CeleryRedbeatGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: celery-redbeat
+    run:
+      justification:
+      - type: INFO
+        message: Project 'celery-redbeat' has very high popularity on GitHub
+        link: https://github.com/sibson/redbeat
+        package_name: celery-redbeat

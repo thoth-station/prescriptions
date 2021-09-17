@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AfsapiGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: afsapi
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'afsapi' has low popularity on GitHub
+        link: https://github.com/zhelev/python-afsapi
+        package_name: afsapi

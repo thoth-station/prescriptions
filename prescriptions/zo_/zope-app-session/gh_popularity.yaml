@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppSessionGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-session
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-session' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.session
+        package_name: zope-app-session

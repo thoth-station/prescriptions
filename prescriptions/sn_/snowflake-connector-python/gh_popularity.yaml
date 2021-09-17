@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnowflakeConnectorPythonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snowflake-connector-python
+    run:
+      justification:
+      - type: INFO
+        message: Project 'snowflake-connector-python' has high popularity on GitHub
+        link: https://github.com/snowflakedb/snowflake-connector-python
+        package_name: snowflake-connector-python

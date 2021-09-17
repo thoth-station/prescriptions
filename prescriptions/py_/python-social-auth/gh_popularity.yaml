@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonSocialAuthGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-social-auth
+    run:
+      justification:
+      - type: INFO
+        message: Project 'python-social-auth' has very high popularity on GitHub
+        link: https://github.com/omab/python-social-auth
+        package_name: python-social-auth

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JaracoTextGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-text
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'jaraco-text' has low popularity on GitHub
+        link: https://github.com/jaraco/jaraco.text
+        package_name: jaraco-text

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatabricksCliGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databricks-cli
+    run:
+      justification:
+      - type: INFO
+        message: Project 'databricks-cli' has high popularity on GitHub
+        link: https://github.com/databricks/databricks-cli
+        package_name: databricks-cli

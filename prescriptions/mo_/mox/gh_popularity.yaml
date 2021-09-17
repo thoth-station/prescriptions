@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MoxGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mox
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'mox' has low popularity on GitHub
+        link: https://github.com/glasser/pymox
+        package_name: mox

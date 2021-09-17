@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Ipgetter2GitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipgetter2
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'ipgetter2' has low popularity on GitHub
+        link: https://github.com/starofrainnight/ipgetter2
+        package_name: ipgetter2

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnglishGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: english
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'english' has low popularity on GitHub
+        link: https://github.com/technige/english
+        package_name: english

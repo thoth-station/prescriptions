@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastimportGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastimport
+    run:
+      justification:
+      - type: INFO
+        message: Project 'fastimport' has moderate popularity on GitHub
+        link: https://github.com/jelmer/python-fastimport
+        package_name: fastimport

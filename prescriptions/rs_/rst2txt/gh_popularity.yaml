@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Rst2txtGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst2txt
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'rst2txt' has low popularity on GitHub
+        link: https://github.com/stephenfin/rst2txt
+        package_name: rst2txt

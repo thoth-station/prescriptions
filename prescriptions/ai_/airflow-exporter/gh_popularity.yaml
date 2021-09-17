@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AirflowExporterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airflow-exporter
+    run:
+      justification:
+      - type: INFO
+        message: Project 'airflow-exporter' has high popularity on GitHub
+        link: https://github.com/epoch8/airflow-exporter
+        package_name: airflow-exporter

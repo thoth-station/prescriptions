@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CatboostGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catboost
+    run:
+      justification:
+      - type: INFO
+        message: Project 'catboost' has very high popularity on GitHub
+        link: https://github.com/catboost/catboost
+        package_name: catboost

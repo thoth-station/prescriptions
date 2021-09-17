@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeAppTestingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-testing
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-app-testing' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.app.testing
+        package_name: zope-app-testing

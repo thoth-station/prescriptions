@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UamqpGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uamqp
+    run:
+      justification:
+      - type: INFO
+        message: Project 'uamqp' has high popularity on GitHub
+        link: https://github.com/Azure/azure-uamqp-python
+        package_name: uamqp

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pyp2rpmGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyp2rpm
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pyp2rpm' has high popularity on GitHub
+        link: https://github.com/fedora-python/pyp2rpm
+        package_name: pyp2rpm

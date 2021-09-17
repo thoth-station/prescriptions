@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoNineGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-nine
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'django-nine' has low popularity on GitHub
+        link: https://github.com/barseghyanartur/django-nine
+        package_name: django-nine

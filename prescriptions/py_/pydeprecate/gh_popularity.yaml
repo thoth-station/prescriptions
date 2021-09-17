@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydeprecateGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydeprecate
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pydeprecate' has moderate popularity on GitHub
+        link: https://github.com/Borda/pyDeprecate
+        package_name: pydeprecate

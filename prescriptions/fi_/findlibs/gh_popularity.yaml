@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FindlibsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findlibs
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'findlibs' has low popularity on GitHub
+        link: https://github.com/ecmwf/findlibs
+        package_name: findlibs

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestDockerComposeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-docker-compose
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pytest-docker-compose' has high popularity on GitHub
+        link: https://github.com/pytest-docker-compose/pytest-docker-compose
+        package_name: pytest-docker-compose

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GpustatGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpustat
+    run:
+      justification:
+      - type: INFO
+        message: Project 'gpustat' has very high popularity on GitHub
+        link: https://github.com/wookayin/gpustat
+        package_name: gpustat

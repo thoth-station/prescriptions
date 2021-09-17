@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthTesterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-tester
+    run:
+      justification:
+      - type: INFO
+        message: Project 'eth-tester' has high popularity on GitHub
+        link: https://github.com/ethereum/eth-tester
+        package_name: eth-tester

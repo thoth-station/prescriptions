@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeptuneSklearnGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-sklearn
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'neptune-sklearn' has low popularity on GitHub
+        link: https://github.com/neptune-ai/neptune-sklearn
+        package_name: neptune-sklearn

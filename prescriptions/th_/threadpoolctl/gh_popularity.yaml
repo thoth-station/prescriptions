@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ThreadpoolctlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: threadpoolctl
+    run:
+      justification:
+      - type: INFO
+        message: Project 'threadpoolctl' has high popularity on GitHub
+        link: https://github.com/joblib/threadpoolctl
+        package_name: threadpoolctl

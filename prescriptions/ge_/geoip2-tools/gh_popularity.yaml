@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Geoip2ToolsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoip2-tools
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'geoip2-tools' has low popularity on GitHub
+        link: https://github.com/Nekmo/geoip2-tools
+        package_name: geoip2-tools

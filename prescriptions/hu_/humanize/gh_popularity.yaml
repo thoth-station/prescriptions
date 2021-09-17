@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HumanizeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: humanize
+    run:
+      justification:
+      - type: INFO
+        message: Project 'humanize' has very high popularity on GitHub
+        link: https://github.com/jmoiron/humanize
+        package_name: humanize

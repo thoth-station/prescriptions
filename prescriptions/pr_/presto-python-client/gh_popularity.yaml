@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PrestoPythonClientGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: presto-python-client
+    run:
+      justification:
+      - type: INFO
+        message: Project 'presto-python-client' has high popularity on GitHub
+        link: https://github.com/prestodb/presto-python-client
+        package_name: presto-python-client

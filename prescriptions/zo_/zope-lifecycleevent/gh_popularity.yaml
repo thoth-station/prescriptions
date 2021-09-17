@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeLifecycleeventGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-lifecycleevent
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-lifecycleevent' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.lifecycleevent
+        package_name: zope-lifecycleevent

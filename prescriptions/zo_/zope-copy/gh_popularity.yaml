@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeCopyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-copy
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-copy' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.copy
+        package_name: zope-copy

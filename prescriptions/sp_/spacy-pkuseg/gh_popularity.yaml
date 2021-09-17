@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpacyPkusegGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spacy-pkuseg
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'spacy-pkuseg' has low popularity on GitHub
+        link: https://github.com/explosion/spacy-pkuseg
+        package_name: spacy-pkuseg

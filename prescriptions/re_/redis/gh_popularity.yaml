@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RedisGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: redis
+    run:
+      justification:
+      - type: INFO
+        message: Project 'redis' has very high popularity on GitHub
+        link: https://github.com/andymccurdy/redis-py
+        package_name: redis

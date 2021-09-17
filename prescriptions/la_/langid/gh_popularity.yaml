@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LangidGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: langid
+    run:
+      justification:
+      - type: INFO
+        message: Project 'langid' has very high popularity on GitHub
+        link: https://github.com/saffsd/langid.py
+        package_name: langid

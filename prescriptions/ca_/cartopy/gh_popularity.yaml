@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CartopyGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cartopy
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cartopy' has very high popularity on GitHub
+        link: https://github.com/SciTools/cartopy
+        package_name: cartopy

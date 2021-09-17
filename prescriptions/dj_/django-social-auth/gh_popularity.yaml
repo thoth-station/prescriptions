@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSocialAuthGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-social-auth
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-social-auth' has very high popularity on GitHub
+        link: https://github.com/omab/django-social-auth
+        package_name: django-social-auth

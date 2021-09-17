@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CritGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crit
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'crit' has low popularity on GitHub
+        link: https://github.com/jessielaf/crit
+        package_name: crit

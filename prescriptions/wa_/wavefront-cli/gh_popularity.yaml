@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WavefrontCliGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wavefront-cli
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'wavefront-cli' has low popularity on GitHub
+        link: https://github.com/wavefrontHQ/wavefront-cli
+        package_name: wavefront-cli

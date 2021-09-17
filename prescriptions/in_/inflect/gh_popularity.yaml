@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InflectGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inflect
+    run:
+      justification:
+      - type: INFO
+        message: Project 'inflect' has very high popularity on GitHub
+        link: https://github.com/jaraco/inflect
+        package_name: inflect

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestFlaskGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flask
+    run:
+      justification:
+      - type: INFO
+        message: Project 'pytest-flask' has high popularity on GitHub
+        link: https://github.com/pytest-dev/pytest-flask
+        package_name: pytest-flask

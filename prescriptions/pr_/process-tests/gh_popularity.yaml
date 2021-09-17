@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProcessTestsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: process-tests
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'process-tests' has low popularity on GitHub
+        link: https://github.com/ionelmc/python-process-tests
+        package_name: process-tests

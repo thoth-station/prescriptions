@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoAnnoyingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-annoying
+    run:
+      justification:
+      - type: INFO
+        message: Project 'django-annoying' has very high popularity on GitHub
+        link: https://github.com/skorokithakis/django-annoying
+        package_name: django-annoying

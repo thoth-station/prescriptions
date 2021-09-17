@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EmbeddingsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: embeddings
+    run:
+      justification:
+      - type: INFO
+        message: Project 'embeddings' has high popularity on GitHub
+        link: https://github.com/vzhong/embeddings
+        package_name: embeddings

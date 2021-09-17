@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KnackGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: knack
+    run:
+      justification:
+      - type: INFO
+        message: Project 'knack' has high popularity on GitHub
+        link: https://github.com/microsoft/knack
+        package_name: knack

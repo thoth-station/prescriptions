@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DynamodbJsonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynamodb-json
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dynamodb-json' has high popularity on GitHub
+        link: https://github.com/Alonreznik/dynamodb-json
+        package_name: dynamodb-json

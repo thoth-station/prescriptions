@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoverageGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage
+    run:
+      justification:
+      - type: INFO
+        message: Project 'coverage' has very high popularity on GitHub
+        link: https://github.com/nedbat/coveragepy
+        package_name: coverage

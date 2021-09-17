@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MissingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: missing
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'missing' has low popularity on GitHub
+        link: https://github.com/zopefoundation/Missing
+        package_name: missing

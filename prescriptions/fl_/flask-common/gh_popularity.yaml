@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskCommonGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-common
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'flask-common' has low popularity on GitHub
+        link: https://github.com/kennethreitz/flask-common
+        package_name: flask-common

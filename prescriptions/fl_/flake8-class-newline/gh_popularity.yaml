@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8ClassNewlineGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-class-newline
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'flake8-class-newline' has low popularity on GitHub
+        link: https://github.com/AlexanderVanEck/flake8-class-newline
+        package_name: flake8-class-newline

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsSocketpairGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-socketpair
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'backports-socketpair' has low popularity on GitHub
+        link: https://github.com/mhils/backports.socketpair
+        package_name: backports-socketpair

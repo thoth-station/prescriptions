@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AuthlibGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authlib
+    run:
+      justification:
+      - type: INFO
+        message: Project 'authlib' has very high popularity on GitHub
+        link: https://github.com/lepture/authlib
+        package_name: authlib

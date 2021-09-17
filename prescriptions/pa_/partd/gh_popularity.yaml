@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PartdGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: partd
+    run:
+      justification:
+      - type: INFO
+        message: Project 'partd' has high popularity on GitHub
+        link: https://github.com/dask/partd
+        package_name: partd

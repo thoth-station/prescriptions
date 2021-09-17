@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HaversineGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: haversine
+    run:
+      justification:
+      - type: INFO
+        message: Project 'haversine' has high popularity on GitHub
+        link: https://github.com/mapado/haversine
+        package_name: haversine

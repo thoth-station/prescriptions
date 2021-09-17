@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DocWardenGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doc-warden
+    run:
+      justification:
+      - type: INFO
+        message: Project 'doc-warden' has high popularity on GitHub
+        link: https://github.com/Azure/azure-sdk-tools
+        package_name: doc-warden

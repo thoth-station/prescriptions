@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodeAnnotationsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: code-annotations
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'code-annotations' has low popularity on GitHub
+        link: https://github.com/edx/code-annotations
+        package_name: code-annotations

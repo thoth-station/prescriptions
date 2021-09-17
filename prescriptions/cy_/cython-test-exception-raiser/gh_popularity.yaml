@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CythonTestExceptionRaiserGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cython-test-exception-raiser
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'cython-test-exception-raiser' has low popularity on GitHub
+        link: https://github.com/twisted/cython-test-exception-raiser
+        package_name: cython-test-exception-raiser

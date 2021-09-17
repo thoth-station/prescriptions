@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DynaconfGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynaconf
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dynaconf' has very high popularity on GitHub
+        link: https://github.com/rochacbruno/dynaconf
+        package_name: dynaconf

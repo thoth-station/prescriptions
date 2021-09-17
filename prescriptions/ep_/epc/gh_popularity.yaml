@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EpcGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epc
+    run:
+      justification:
+      - type: INFO
+        message: Project 'epc' has high popularity on GitHub
+        link: https://github.com/tkf/python-epc
+        package_name: epc

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleCloudLoggingGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-logging
+    run:
+      justification:
+      - type: INFO
+        message: Project 'google-cloud-logging' has high popularity on GitHub
+        link: https://github.com/googleapis/python-logging
+        package_name: google-cloud-logging

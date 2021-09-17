@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BitcoinGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitcoin
+    run:
+      justification:
+      - type: INFO
+        message: Project 'bitcoin' has very high popularity on GitHub
+        link: https://github.com/vbuterin/pybitcointools
+        package_name: bitcoin

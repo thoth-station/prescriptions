@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlackBoltGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slack-bolt
+    run:
+      justification:
+      - type: INFO
+        message: Project 'slack-bolt' has high popularity on GitHub
+        link: https://github.com/slackapi/bolt-python
+        package_name: slack-bolt

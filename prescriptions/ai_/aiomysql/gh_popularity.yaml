@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiomysqlGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiomysql
+    run:
+      justification:
+      - type: INFO
+        message: Project 'aiomysql' has very high popularity on GitHub
+        link: https://github.com/aio-libs/aiomysql
+        package_name: aiomysql

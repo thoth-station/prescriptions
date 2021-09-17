@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleApiHelperGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-api-helper
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'google-api-helper' has low popularity on GitHub
+        link: https://github.com/r00tat/google-api-helper
+        package_name: google-api-helper

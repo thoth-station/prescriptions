@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportLinterGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: import-linter
+    run:
+      justification:
+      - type: INFO
+        message: Project 'import-linter' has high popularity on GitHub
+        link: https://github.com/seddonym/import-linter
+        package_name: import-linter

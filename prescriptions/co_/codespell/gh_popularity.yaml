@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodespellGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codespell
+    run:
+      justification:
+      - type: INFO
+        message: Project 'codespell' has very high popularity on GitHub
+        link: https://github.com/codespell-project/codespell
+        package_name: codespell

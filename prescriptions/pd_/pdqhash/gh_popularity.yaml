@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PdqhashGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdqhash
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'pdqhash' has low popularity on GitHub
+        link: https://github.com/faustomorales/pdqhash-python
+        package_name: pdqhash

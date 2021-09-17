@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TexextGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: texext
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'texext' has low popularity on GitHub
+        link: https://github.com/matthew-brett/texext
+        package_name: texext

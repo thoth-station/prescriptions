@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KwonlyArgsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kwonly-args
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'kwonly-args' has low popularity on GitHub
+        link: https://github.com/pasztorpisti/kwonly-args
+        package_name: kwonly-args

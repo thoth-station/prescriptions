@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickLogGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-log
+    run:
+      justification:
+      - type: INFO
+        message: Project 'click-log' has high popularity on GitHub
+        link: https://github.com/click-contrib/click-log
+        package_name: click-log

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DmHaikuGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dm-haiku
+    run:
+      justification:
+      - type: INFO
+        message: Project 'dm-haiku' has very high popularity on GitHub
+        link: https://github.com/deepmind/dm-haiku
+        package_name: dm-haiku

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PhabricatorGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phabricator
+    run:
+      justification:
+      - type: INFO
+        message: Project 'phabricator' has high popularity on GitHub
+        link: https://github.com/disqus/python-phabricator
+        package_name: phabricator
