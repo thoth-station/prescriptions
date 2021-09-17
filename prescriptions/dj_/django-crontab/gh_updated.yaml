@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCrontabGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crontab
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-crontab' was last updated at 2018-05-14 17:50:49
+        link: https://github.com/kraiz/django-crontab
+        package_name: django-crontab
