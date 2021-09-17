@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygerdutyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygerduty
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pygerduty' was last updated at 2020-06-23 18:30:09
+        link: https://github.com/dropbox/pygerduty
+        package_name: pygerduty
