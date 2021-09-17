@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FnGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fn
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fn' was last updated at 2014-10-13 16:51:28
+        link: https://github.com/kachayev/fn.py
+        package_name: fn
