@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MybadGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mybad
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mybad' was last updated at 2019-05-17 05:55:26
+        link: https://github.com/grimen/python-mybad
+        package_name: mybad
