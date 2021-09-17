@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSentryGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sentry
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-sentry' was last updated at 2012-09-11 00:49:38
+        link: https://github.com/dcramer/django-sentry
+        package_name: django-sentry
