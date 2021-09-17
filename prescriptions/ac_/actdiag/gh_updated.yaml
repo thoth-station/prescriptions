@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ActdiagGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: actdiag
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'actdiag' was last updated at 2020-01-26 05:46:15
+        link: https://github.com/blockdiag/actdiag
+        package_name: actdiag
