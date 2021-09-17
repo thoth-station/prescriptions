@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcpyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcpy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bcpy' was last updated at 2020-04-19 01:01:04
+        link: https://github.com/titan550/bcpy
+        package_name: bcpy
