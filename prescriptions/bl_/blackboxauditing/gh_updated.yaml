@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlackboxauditingGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blackboxauditing
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'blackboxauditing' was last updated at 2019-05-22 00:19:23
+        link: https://github.com/algofairness/BlackBoxAuditing
+        package_name: blackboxauditing
