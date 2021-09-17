@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskJwtGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-jwt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-jwt' was last updated at 2015-11-03 14:41:38
+        link: https://github.com/mattupstate/flask-jwt
+        package_name: flask-jwt
