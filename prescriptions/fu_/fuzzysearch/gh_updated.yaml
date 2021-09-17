@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FuzzysearchGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzysearch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fuzzysearch' was last updated at 2020-06-28 07:00:30
+        link: https://github.com/taleinat/fuzzysearch
+        package_name: fuzzysearch
