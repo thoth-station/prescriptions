@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CertipyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certipy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'certipy' was last updated at 2020-05-12 16:23:02
+        link: https://github.com/LLNL/certipy
+        package_name: certipy
