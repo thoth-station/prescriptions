@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GumboGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gumbo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gumbo' was last updated at 2016-06-28 22:44:58
+        link: https://github.com/google/gumbo-parser
+        package_name: gumbo
