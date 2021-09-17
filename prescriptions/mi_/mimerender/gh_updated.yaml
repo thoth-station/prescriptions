@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MimerenderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimerender
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mimerender' was last updated at 2016-02-23 16:28:14
+        link: https://github.com/martinblech/mimerender
+        package_name: mimerender
