@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeVocabularyregistryGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-vocabularyregistry
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zope-vocabularyregistry' has low popularity on GitHub
+        link: https://github.com/zopefoundation/zope.vocabularyregistry
+        package_name: zope-vocabularyregistry
