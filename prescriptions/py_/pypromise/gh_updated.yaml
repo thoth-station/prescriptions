@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypromiseGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypromise
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pypromise' was last updated at 2020-01-28 22:33:56
+        link: https://github.com/syrusakbary/promise
+        package_name: pypromise
