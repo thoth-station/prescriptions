@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MoxGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mox
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mox' was last updated at 2012-11-16 19:17:52
+        link: https://github.com/glasser/pymox
+        package_name: mox
