@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MayaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: maya
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'maya' was last updated at 2020-05-20 07:19:47
+        link: https://github.com/kennethreitz/maya
+        package_name: maya
