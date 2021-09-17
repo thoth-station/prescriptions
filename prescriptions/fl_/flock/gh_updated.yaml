@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlockGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flock
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flock' was last updated at 2014-02-27 00:37:13
+        link: https://github.com/misli/python-flock
+        package_name: flock
