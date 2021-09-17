@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DockerPycredsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker-pycreds
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'docker-pycreds' was last updated at 2018-12-01 00:31:01
+        link: https://github.com/shin-/dockerpy-creds
+        package_name: docker-pycreds
