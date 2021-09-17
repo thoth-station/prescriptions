@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MarkdownIncludeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markdown-include
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'markdown-include' was last updated at 2020-08-20 23:05:51
+        link: https://github.com/cmacmackin/markdown-include
+        package_name: markdown-include
