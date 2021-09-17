@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlatdictGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatdict
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flatdict' was last updated at 2020-02-13 19:15:00
+        link: https://github.com/gmr/flatdict
+        package_name: flatdict
