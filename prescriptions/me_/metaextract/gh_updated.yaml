@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MetaextractGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metaextract
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'metaextract' was last updated at 2020-03-29 05:21:37
+        link: https://github.com/toabctl/metaextract
+        package_name: metaextract
