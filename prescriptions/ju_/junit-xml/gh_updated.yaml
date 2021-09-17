@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JunitXmlGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: junit-xml
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'junit-xml' was last updated at 2020-02-22 20:43:21
+        link: https://github.com/kyrus/python-junit-xml
+        package_name: junit-xml
