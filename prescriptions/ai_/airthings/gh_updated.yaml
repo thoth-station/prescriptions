@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AirthingsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airthings
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'airthings' was last updated at 2020-08-30 08:41:12
+        link: https://github.com/kotlarz/airthings
+        package_name: airthings
