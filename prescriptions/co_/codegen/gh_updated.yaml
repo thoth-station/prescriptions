@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodegenGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codegen
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'codegen' was last updated at 2015-05-19 19:55:49
+        link: https://github.com/andreif/codegen
+        package_name: codegen
