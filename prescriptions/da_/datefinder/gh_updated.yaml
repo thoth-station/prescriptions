@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatefinderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datefinder
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'datefinder' was last updated at 2020-08-02 17:48:38
+        link: https://github.com/akoumjian/datefinder
+        package_name: datefinder
