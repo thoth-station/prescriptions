@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerasMxnetGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-mxnet
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'keras-mxnet' was last updated at 2020-07-03 05:40:57
+        link: https://github.com/awslabs/keras-apache-mxnet
+        package_name: keras-mxnet
