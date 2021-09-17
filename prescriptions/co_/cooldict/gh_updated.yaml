@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CooldictGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cooldict
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cooldict' was last updated at 2019-10-31 04:09:00
+        link: https://github.com/zardus/cooldict
+        package_name: cooldict
