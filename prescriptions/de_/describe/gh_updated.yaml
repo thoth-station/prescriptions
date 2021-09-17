@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DescribeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: describe
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'describe' was last updated at 2018-05-29 04:31:40
+        link: https://github.com/jeffh/describe
+        package_name: describe
