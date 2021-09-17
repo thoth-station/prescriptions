@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IsoweekGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isoweek
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'isoweek' was last updated at 2020-02-01 10:20:08
+        link: https://github.com/gisle/isoweek
+        package_name: isoweek
