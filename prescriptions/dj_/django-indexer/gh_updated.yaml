@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoIndexerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-indexer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-indexer' was last updated at 2011-04-25 18:35:53
+        link: https://github.com/dcramer/django-indexer
+        package_name: django-indexer
