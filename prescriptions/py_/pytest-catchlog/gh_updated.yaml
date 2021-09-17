@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestCatchlogGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-catchlog
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-catchlog' was last updated at 2018-01-27 12:53:48
+        link: https://github.com/eisensheng/pytest-catchlog
+        package_name: pytest-catchlog
