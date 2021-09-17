@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyinotifyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinotify
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyinotify' was last updated at 2015-06-04 17:18:00
+        link: https://github.com/seb-m/pyinotify
+        package_name: pyinotify
