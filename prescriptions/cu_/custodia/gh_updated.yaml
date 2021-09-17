@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CustodiaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: custodia
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'custodia' was last updated at 2020-08-20 12:15:35
+        link: https://github.com/latchset/custodia
+        package_name: custodia
