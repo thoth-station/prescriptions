@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZserverGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zserver
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'zserver' has low on GitHub
+        link: https://github.com/zopefoundation/ZServer
+        package_name: zserver
