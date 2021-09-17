@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cachy' was last updated at 2019-08-06 20:14:02
+        link: https://github.com/sdispater/cachy
+        package_name: cachy
