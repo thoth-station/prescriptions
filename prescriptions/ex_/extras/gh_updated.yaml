@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ExtrasGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: extras
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'extras' was last updated at 2018-01-09 12:41:57
+        link: https://github.com/testing-cabal/extras
+        package_name: extras
