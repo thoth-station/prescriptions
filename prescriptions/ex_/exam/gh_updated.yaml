@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ExamGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exam
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'exam' was last updated at 2016-05-26 21:07:00
+        link: https://github.com/fluxx/exam
+        package_name: exam
