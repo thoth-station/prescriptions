@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeltaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: delta
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'delta' was last updated at 2020-06-01 15:56:23
+        link: https://github.com/rlgomes/delta
+        package_name: delta
