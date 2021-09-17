@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BottlechestGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bottlechest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bottlechest' was last updated at 2014-09-26 13:38:58
+        link: https://github.com/biolab/bottlechest
+        package_name: bottlechest
