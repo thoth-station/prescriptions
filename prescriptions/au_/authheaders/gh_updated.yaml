@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AuthheadersGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authheaders
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'authheaders' was last updated at 2020-01-25 22:08:13
+        link: https://github.com/ValiMail/authentication-headers
+        package_name: authheaders
