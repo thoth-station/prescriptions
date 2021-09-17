@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EntrypointsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entrypoints
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'entrypoints' was last updated at 2020-03-15 12:25:13
+        link: https://github.com/takluyver/entrypoints
+        package_name: entrypoints
