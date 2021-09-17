@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCompatGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-compat
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-compat' was last updated at 2017-12-04 09:12:37
+        link: https://github.com/arteria/django-compat
+        package_name: django-compat
