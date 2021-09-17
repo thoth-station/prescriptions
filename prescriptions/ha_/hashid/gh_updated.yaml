@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HashidGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hashid
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hashid' was last updated at 2015-03-17 14:12:33
+        link: https://github.com/psypanda/hashID
+        package_name: hashid
