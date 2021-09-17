@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EmbeddingsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: embeddings
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'embeddings' was last updated at 2020-02-11 20:46:54
+        link: https://github.com/vzhong/embeddings
+        package_name: embeddings
