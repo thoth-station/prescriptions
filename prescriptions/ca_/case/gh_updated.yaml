@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CaseGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: case
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'case' was last updated at 2018-01-22 08:28:19
+        link: https://github.com/celery/case
+        package_name: case
