@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPglocksGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pglocks
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-pglocks' was last updated at 2019-12-26 19:56:17
+        link: https://github.com/Xof/django-pglocks
+        package_name: django-pglocks
