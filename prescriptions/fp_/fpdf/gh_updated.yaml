@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FpdfGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fpdf
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fpdf' was last updated at 2018-01-26 06:02:40
+        link: https://github.com/reingart/pyfpdf
+        package_name: fpdf
