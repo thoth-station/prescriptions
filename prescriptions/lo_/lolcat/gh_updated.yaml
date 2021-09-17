@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LolcatGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lolcat
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lolcat' was last updated at 2019-05-14 07:22:30
+        link: https://github.com/tehmaze/lolcat
+        package_name: lolcat
