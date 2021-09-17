@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskCommonGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-common
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flask-common' was last updated at 2018-05-12 21:08:35
+        link: https://github.com/kennethreitz/flask-common
+        package_name: flask-common
