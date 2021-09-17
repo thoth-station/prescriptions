@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NosexcoverGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nosexcover
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nosexcover' was last updated at 2018-02-18 17:36:21
+        link: https://github.com/cmheisel/nose-xcover
+        package_name: nosexcover
