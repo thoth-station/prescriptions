@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestLoggerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-logger
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-logger' was last updated at 2020-08-24 19:26:14
+        link: https://github.com/aurzenligl/pytest-logger
+        package_name: pytest-logger
