@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NoseParallelGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-parallel
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nose-parallel' was last updated at 2020-05-01 21:11:41
+        link: https://github.com/dlanger/nose-parallel
+        package_name: nose-parallel
