@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GntpGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gntp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gntp' was last updated at 2016-03-06 22:47:02
+        link: https://github.com/kfdm/gntp
+        package_name: gntp
