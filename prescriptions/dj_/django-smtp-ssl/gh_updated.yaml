@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSmtpSslGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-smtp-ssl
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-smtp-ssl' was last updated at 2019-10-29 15:08:12
+        link: https://github.com/bancek/django-smtp-ssl
+        package_name: django-smtp-ssl
