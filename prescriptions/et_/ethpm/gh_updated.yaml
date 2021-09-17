@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthpmGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethpm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ethpm' was last updated at 2019-12-10 16:25:17
+        link: https://github.com/ethpm/py-ethpm
+        package_name: ethpm
