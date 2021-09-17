@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PusherclientGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pusherclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pusherclient' was last updated at 2014-12-13 20:22:18
+        link: https://github.com/ekulyk/PythonPusherClient
+        package_name: pusherclient
