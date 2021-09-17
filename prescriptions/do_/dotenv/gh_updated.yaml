@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DotenvGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotenv
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dotenv' was last updated at 2018-11-23 18:04:19
+        link: https://github.com/pedroburon/dotenv
+        package_name: dotenv
