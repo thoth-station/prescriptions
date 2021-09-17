@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Ed25519GitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ed25519
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ed25519' was last updated at 2019-06-01 21:14:47
+        link: https://github.com/warner/python-ed25519
+        package_name: ed25519
