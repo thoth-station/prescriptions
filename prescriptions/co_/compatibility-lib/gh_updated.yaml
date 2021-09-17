@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CompatibilityLibGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: compatibility-lib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'compatibility-lib' was last updated at 2019-07-31 17:37:15
+        link: https://github.com/GoogleCloudPlatform/cloud-opensource-python
+        package_name: compatibility-lib
