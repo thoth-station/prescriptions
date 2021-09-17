@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpaddrGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaddr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ipaddr' was last updated at 2017-09-15 20:14:59
+        link: https://github.com/google/ipaddr-py
+        package_name: ipaddr
