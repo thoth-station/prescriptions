@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HmsclientGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hmsclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hmsclient' was last updated at 2018-04-24 20:24:18
+        link: https://github.com/gglanzani/hmsclient
+        package_name: hmsclient
