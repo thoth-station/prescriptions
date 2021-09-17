@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CritGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crit
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'crit' was last updated at 2019-05-27 14:36:59
+        link: https://github.com/jessielaf/crit
+        package_name: crit
