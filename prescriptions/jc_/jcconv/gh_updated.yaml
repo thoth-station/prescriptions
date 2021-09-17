@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JcconvGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jcconv
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'jcconv' was last updated at 2012-03-26 16:04:48
+        link: https://github.com/taichino/jcconv
+        package_name: jcconv
