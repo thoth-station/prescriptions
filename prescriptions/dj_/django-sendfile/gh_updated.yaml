@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSendfileGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sendfile
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-sendfile' was last updated at 2017-01-12 21:33:43
+        link: https://github.com/johnsensible/django-sendfile
+        package_name: django-sendfile
