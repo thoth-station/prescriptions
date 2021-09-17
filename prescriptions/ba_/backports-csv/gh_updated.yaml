@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsCsvGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-csv
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-csv' was last updated at 2020-06-23 13:47:42
+        link: https://github.com/ryanhiebert/backports.csv
+        package_name: backports-csv
