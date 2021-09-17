@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachezGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachez
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cachez' was last updated at 2017-05-16 07:49:54
+        link: https://github.com/jealous/cachez
+        package_name: cachez
