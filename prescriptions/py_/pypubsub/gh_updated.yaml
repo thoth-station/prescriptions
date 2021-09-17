@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypubsubGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypubsub
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pypubsub' was last updated at 2019-04-01 02:57:45
+        link: https://github.com/schollii/pypubsub
+        package_name: pypubsub
