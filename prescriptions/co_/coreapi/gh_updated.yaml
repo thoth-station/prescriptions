@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoreapiGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreapi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coreapi' was last updated at 2018-06-04 08:19:12
+        link: https://github.com/core-api/python-client
+        package_name: coreapi
