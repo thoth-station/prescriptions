@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CircleciGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: circleci
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'circleci' was last updated at 2020-02-23 02:01:12
+        link: https://github.com/levlaz/circleci.py
+        package_name: circleci
