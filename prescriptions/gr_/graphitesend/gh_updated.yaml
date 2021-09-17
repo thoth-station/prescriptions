@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GraphitesendGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphitesend
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'graphitesend' was last updated at 2018-09-08 22:24:59
+        link: https://github.com/daniellawrence/graphitesend
+        package_name: graphitesend
