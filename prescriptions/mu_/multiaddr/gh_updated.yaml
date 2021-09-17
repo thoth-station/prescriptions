@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MultiaddrGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multiaddr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'multiaddr' was last updated at 2020-09-11 09:14:36
+        link: https://github.com/multiformats/py-multiaddr
+        package_name: multiaddr
