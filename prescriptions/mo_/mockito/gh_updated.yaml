@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MockitoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mockito
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mockito' was last updated at 2020-09-09 06:58:02
+        link: https://github.com/kaste/mockito-python
+        package_name: mockito
