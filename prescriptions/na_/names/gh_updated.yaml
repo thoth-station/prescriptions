@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NamesGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: names
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'names' was last updated at 2014-12-15 22:29:01
+        link: https://github.com/treyhunner/names
+        package_name: names
