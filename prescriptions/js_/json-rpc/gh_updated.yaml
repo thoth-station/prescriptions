@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsonRpcGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-rpc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'json-rpc' was last updated at 2020-01-22 14:55:37
+        link: https://github.com/pavlov99/json-rpc
+        package_name: json-rpc
