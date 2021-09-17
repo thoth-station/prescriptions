@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InotifySimpleGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inotify-simple
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'inotify-simple' was last updated at 2020-08-06 00:23:10
+        link: https://github.com/chrisjbillington/inotify_simple
+        package_name: inotify-simple
