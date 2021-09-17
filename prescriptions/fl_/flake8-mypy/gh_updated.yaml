@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8MypyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-mypy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-mypy' was last updated at 2020-06-19 16:51:00
+        link: https://github.com/ambv/flake8-mypy
+        package_name: flake8-mypy
