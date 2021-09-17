@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LoganGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logan
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'logan' was last updated at 2016-05-18 13:56:28
+        link: https://github.com/dcramer/logan
+        package_name: logan
