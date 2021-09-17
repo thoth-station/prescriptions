@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IpaddressGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaddress
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ipaddress' was last updated at 2019-10-18 01:30:15
+        link: https://github.com/phihag/ipaddress
+        package_name: ipaddress
