@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NotarioGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notario
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'notario' was last updated at 2019-12-02 16:04:47
+        link: https://github.com/alfredodeza/notario
+        package_name: notario
