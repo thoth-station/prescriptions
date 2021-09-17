@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjDatabaseUrlGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dj-database-url
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dj-database-url' was last updated at 2019-12-25 15:53:32
+        link: https://github.com/kennethreitz/dj-database-url
+        package_name: dj-database-url
