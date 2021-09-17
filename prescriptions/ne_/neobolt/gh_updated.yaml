@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeoboltGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neobolt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'neobolt' was last updated at 2019-06-03 13:05:43
+        link: https://github.com/neo4j-drivers/neobolt
+        package_name: neobolt
