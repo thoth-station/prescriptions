@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylsqpackGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylsqpack
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylsqpack' has less than 5 contributors on GitHub
+        link: https://github.com/aiortc/pylsqpack
+        package_name: pylsqpack

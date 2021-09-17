@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LaituriGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: laituri
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'laituri' has less than 5 contributors on GitHub
+        link: https://github.com/valohai/laituri
+        package_name: laituri

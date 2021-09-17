@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SimpleaudioGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simpleaudio
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'simpleaudio' has less than 5 contributors on GitHub
+        link: https://github.com/hamiltron/py-simple-audio
+        package_name: simpleaudio

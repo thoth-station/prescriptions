@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UpdateCheckerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: update-checker
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'update-checker' has less than 5 contributors on GitHub
+        link: https://github.com/bboe/update_checker
+        package_name: update-checker

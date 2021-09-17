@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EpcGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epc
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'epc' has less than 5 contributors on GitHub
+        link: https://github.com/tkf/python-epc
+        package_name: epc

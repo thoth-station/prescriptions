@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TfxBslGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfx-bsl
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tfx-bsl' has less than 5 contributors on GitHub
+        link: https://github.com/tensorflow/tfx-bsl
+        package_name: tfx-bsl

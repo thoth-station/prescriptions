@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CyordereddictGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyordereddict
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cyordereddict' has less than 5 contributors on GitHub
+        link: https://github.com/shoyer/cyordereddict
+        package_name: cyordereddict

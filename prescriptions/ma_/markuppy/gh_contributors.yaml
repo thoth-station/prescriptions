@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MarkuppyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markuppy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'markuppy' has less than 5 contributors on GitHub
+        link: https://github.com/tylerbakke/MarkupPy
+        package_name: markuppy

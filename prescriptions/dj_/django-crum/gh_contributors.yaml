@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoCrumGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crum
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-crum' has less than 5 contributors on GitHub
+        link: https://github.com/ninemoreminutes/django-crum
+        package_name: django-crum

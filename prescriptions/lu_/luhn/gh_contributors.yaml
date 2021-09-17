@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LuhnGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: luhn
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'luhn' has less than 5 contributors on GitHub
+        link: https://github.com/mmcloughlin/luhn
+        package_name: luhn

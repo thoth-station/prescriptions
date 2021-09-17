@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NoseCover3GitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-cover3
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nose-cover3' has less than 5 contributors on GitHub
+        link: https://github.com/ask/nosecover3
+        package_name: nose-cover3

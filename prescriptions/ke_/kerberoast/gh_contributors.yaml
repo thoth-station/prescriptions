@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerberoastGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberoast
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kerberoast' has less than 5 contributors on GitHub
+        link: https://github.com/skelsec/kerberoast
+        package_name: kerberoast

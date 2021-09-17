@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParamikoTunnelGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paramiko-tunnel
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'paramiko-tunnel' has less than 5 contributors on GitHub
+        link: https://github.com/adamdelman/paramiko_tunnel
+        package_name: paramiko-tunnel

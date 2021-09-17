@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SoxrGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: soxr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'soxr' has less than 5 contributors on GitHub
+        link: https://github.com/dofuuz/python-soxr
+        package_name: soxr

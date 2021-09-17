@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UcMicroPyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uc-micro-py
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'uc-micro-py' has less than 5 contributors on GitHub
+        link: https://github.com/tsutsu3/uc.micro-py
+        package_name: uc-micro-py

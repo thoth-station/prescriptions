@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PansiGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pansi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pansi' has less than 5 contributors on GitHub
+        link: https://github.com/technige/pansi
+        package_name: pansi

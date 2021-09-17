@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GraphqlPyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphql-py
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'graphql-py' has less than 5 contributors on GitHub
+        link: https://github.com/ivelum/graphql-py
+        package_name: graphql-py

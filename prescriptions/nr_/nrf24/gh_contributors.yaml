@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Nrf24GitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nrf24
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nrf24' has less than 5 contributors on GitHub
+        link: https://github.com/bjarne-hansen/py-nrf24
+        package_name: nrf24

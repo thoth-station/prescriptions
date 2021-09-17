@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BraceexpandGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: braceexpand
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'braceexpand' has less than 5 contributors on GitHub
+        link: https://github.com/trendels/braceexpand
+        package_name: braceexpand

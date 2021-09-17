@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylonsSphinxThemesGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylons-sphinx-themes
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylons-sphinx-themes' has less than 5 contributors on GitHub
+        link: https://github.com/Pylons/pylons-sphinx-themes
+        package_name: pylons-sphinx-themes

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebscrapbookGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webscrapbook
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'webscrapbook' has less than 5 contributors on GitHub
+        link: https://github.com/danny0838/PyWebScrapBook
+        package_name: webscrapbook

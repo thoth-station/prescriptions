@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FontdumpGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fontdump
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fontdump' has less than 5 contributors on GitHub
+        link: https://github.com/glasslion/fontdump
+        package_name: fontdump

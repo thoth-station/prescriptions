@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerasTransformerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-transformer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'keras-transformer' has less than 5 contributors on GitHub
+        link: https://github.com/CyberZHG/keras-transformer
+        package_name: keras-transformer

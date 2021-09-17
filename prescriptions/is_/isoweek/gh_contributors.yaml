@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IsoweekGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isoweek
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'isoweek' has less than 5 contributors on GitHub
+        link: https://github.com/gisle/isoweek
+        package_name: isoweek

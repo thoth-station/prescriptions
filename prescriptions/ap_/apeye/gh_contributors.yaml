@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApeyeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apeye
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'apeye' has less than 5 contributors on GitHub
+        link: https://github.com/domdfcoding/apeye
+        package_name: apeye

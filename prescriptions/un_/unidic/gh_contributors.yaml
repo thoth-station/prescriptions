@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UnidicGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unidic
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'unidic' has less than 5 contributors on GitHub
+        link: https://github.com/polm/unidic-py
+        package_name: unidic

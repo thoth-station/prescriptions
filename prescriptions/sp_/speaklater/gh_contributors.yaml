@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpeaklaterGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speaklater
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'speaklater' has less than 5 contributors on GitHub
+        link: https://github.com/mitsuhiko/speaklater
+        package_name: speaklater

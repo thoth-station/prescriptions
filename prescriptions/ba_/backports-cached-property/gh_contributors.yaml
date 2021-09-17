@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsCachedPropertyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-cached-property
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-cached-property' has less than 5 contributors on GitHub
+        link: https://github.com/penguinolog/backports.cached_property
+        package_name: backports-cached-property

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MoxGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mox
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mox' has less than 5 contributors on GitHub
+        link: https://github.com/glasser/pymox
+        package_name: mox

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StripHintsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: strip-hints
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'strip-hints' has less than 5 contributors on GitHub
+        link: https://github.com/abarker/strip-hints
+        package_name: strip-hints

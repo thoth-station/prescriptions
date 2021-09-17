@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ItemGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: item
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'item' has less than 5 contributors on GitHub
+        link: https://github.com/lorien/item
+        package_name: item

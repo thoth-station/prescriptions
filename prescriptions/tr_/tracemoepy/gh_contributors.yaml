@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TracemoepyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tracemoepy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'tracemoepy' has less than 5 contributors on GitHub
+        link: https://github.com/DragSama/tracemoepy
+        package_name: tracemoepy

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GspreadFormattingGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-formatting
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gspread-formatting' has less than 5 contributors on GitHub
+        link: https://github.com/robin900/gspread-formatting
+        package_name: gspread-formatting

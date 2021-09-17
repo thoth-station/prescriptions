@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconZshGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-zsh
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'colcon-zsh' has less than 5 contributors on GitHub
+        link: https://github.com/colcon/colcon-zsh
+        package_name: colcon-zsh

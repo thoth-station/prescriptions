@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SymsyndGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: symsynd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'symsynd' has less than 5 contributors on GitHub
+        link: https://github.com/getsentry/symsynd
+        package_name: symsynd

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestDjangoLiteGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-django-lite
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-django-lite' has less than 5 contributors on GitHub
+        link: https://github.com/dcramer/pytest-django-lite
+        package_name: pytest-django-lite

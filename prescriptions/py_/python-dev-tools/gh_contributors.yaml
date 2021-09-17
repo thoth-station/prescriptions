@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonDevToolsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dev-tools
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-dev-tools' has less than 5 contributors on GitHub
+        link: https://github.com/vpoulailleau/python-dev-tools
+        package_name: python-dev-tools

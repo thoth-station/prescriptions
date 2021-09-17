@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyUbjsonGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-ubjson
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'py-ubjson' has less than 5 contributors on GitHub
+        link: https://github.com/Iotic-Labs/py-ubjson
+        package_name: py-ubjson

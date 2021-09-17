@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SingletonDecoratorGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: singleton-decorator
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'singleton-decorator' has less than 5 contributors on GitHub
+        link: https://github.com/Kemaweyan/singleton_decorator
+        package_name: singleton-decorator

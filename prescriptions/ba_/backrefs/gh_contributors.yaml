@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackrefsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backrefs
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backrefs' has less than 5 contributors on GitHub
+        link: https://github.com/facelessuser/backrefs
+        package_name: backrefs

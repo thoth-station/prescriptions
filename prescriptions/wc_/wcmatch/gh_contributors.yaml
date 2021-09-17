@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WcmatchGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wcmatch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'wcmatch' has less than 5 contributors on GitHub
+        link: https://github.com/facelessuser/wcmatch
+        package_name: wcmatch

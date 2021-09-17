@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PsycogreenGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycogreen
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'psycogreen' has less than 5 contributors on GitHub
+        link: https://github.com/psycopg/psycogreen
+        package_name: psycogreen

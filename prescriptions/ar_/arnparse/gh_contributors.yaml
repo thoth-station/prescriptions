@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArnparseGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arnparse
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'arnparse' has less than 5 contributors on GitHub
+        link: https://github.com/PokaInc/arnparse
+        package_name: arnparse

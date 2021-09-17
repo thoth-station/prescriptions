@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TelepathGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: telepath
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'telepath' has less than 5 contributors on GitHub
+        link: https://github.com/wagtail/telepath
+        package_name: telepath

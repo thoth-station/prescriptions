@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeptuneFastaiGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-fastai
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'neptune-fastai' has less than 5 contributors on GitHub
+        link: https://github.com/neptune-ai/neptune-fastai
+        package_name: neptune-fastai

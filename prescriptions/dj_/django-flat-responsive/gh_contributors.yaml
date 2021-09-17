@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoFlatResponsiveGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-flat-responsive
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-flat-responsive' has less than 5 contributors on GitHub
+        link: https://github.com/elky/django-flat-responsive
+        package_name: django-flat-responsive

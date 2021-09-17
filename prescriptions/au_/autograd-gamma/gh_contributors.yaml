@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutogradGammaGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autograd-gamma
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'autograd-gamma' has less than 5 contributors on GitHub
+        link: https://github.com/CamDavidsonPilon/autograd-gamma
+        package_name: autograd-gamma

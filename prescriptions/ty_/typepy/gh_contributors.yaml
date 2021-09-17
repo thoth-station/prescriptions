@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TypepyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typepy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'typepy' has less than 5 contributors on GitHub
+        link: https://github.com/thombashi/typepy
+        package_name: typepy

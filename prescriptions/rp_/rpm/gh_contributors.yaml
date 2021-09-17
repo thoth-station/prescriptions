@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RpmGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpm
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rpm' has less than 5 contributors on GitHub
+        link: https://github.com/ncoghlan/pypi-rpm
+        package_name: rpm

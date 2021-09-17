@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiosaslGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosasl
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aiosasl' has less than 5 contributors on GitHub
+        link: https://github.com/horazont/aiosasl
+        package_name: aiosasl

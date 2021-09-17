@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JcconvGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jcconv
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'jcconv' has less than 5 contributors on GitHub
+        link: https://github.com/taichino/jcconv
+        package_name: jcconv

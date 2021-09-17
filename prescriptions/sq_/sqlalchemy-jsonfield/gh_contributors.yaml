@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SqlalchemyJsonfieldGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-jsonfield
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sqlalchemy-jsonfield' has less than 5 contributors on GitHub
+        link: https://github.com/penguinolog/sqlalchemy_jsonfield
+        package_name: sqlalchemy-jsonfield

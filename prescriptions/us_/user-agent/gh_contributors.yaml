@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UserAgentGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: user-agent
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'user-agent' has less than 5 contributors on GitHub
+        link: https://github.com/lorien/user_agent
+        package_name: user-agent

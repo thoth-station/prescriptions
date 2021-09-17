@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PastelGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastel
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pastel' has less than 5 contributors on GitHub
+        link: https://github.com/sdispater/pastel
+        package_name: pastel

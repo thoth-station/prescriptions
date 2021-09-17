@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestHelpersNamespaceGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-helpers-namespace
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-helpers-namespace' has less than 5 contributors on GitHub
+        link: https://github.com/saltstack/pytest-helpers-namespace
+        package_name: pytest-helpers-namespace

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NbsmokeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbsmoke
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nbsmoke' has less than 5 contributors on GitHub
+        link: https://github.com/pyviz-dev/nbsmoke
+        package_name: nbsmoke

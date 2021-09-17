@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CliappGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cliapp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cliapp' has less than 5 contributors on GitHub
+        link: https://github.com/zhchang/cliapp
+        package_name: cliapp

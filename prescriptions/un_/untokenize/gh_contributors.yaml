@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UntokenizeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: untokenize
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'untokenize' has less than 5 contributors on GitHub
+        link: https://github.com/myint/untokenize
+        package_name: untokenize

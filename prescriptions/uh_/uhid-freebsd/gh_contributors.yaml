@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UhidFreebsdGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uhid-freebsd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'uhid-freebsd' has less than 5 contributors on GitHub
+        link: https://github.com/grembo/uhid-freebsd
+        package_name: uhid-freebsd

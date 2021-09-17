@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WheelFilenameGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-filename
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'wheel-filename' has less than 5 contributors on GitHub
+        link: https://github.com/jwodder/wheel-filename
+        package_name: wheel-filename

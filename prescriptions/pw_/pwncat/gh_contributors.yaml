@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PwncatGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pwncat
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pwncat' has less than 5 contributors on GitHub
+        link: https://github.com/cytopia/pwncat
+        package_name: pwncat

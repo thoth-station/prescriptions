@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CrankGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crank
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'crank' has less than 5 contributors on GitHub
+        link: https://github.com/TurboGears/crank
+        package_name: crank

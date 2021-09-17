@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlicerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slicer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'slicer' has less than 5 contributors on GitHub
+        link: https://github.com/interpretml/slicer
+        package_name: slicer

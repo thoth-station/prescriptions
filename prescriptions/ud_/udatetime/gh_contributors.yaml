@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: UdatetimeGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: udatetime
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'udatetime' has less than 5 contributors on GitHub
+        link: https://github.com/freach/udatetime
+        package_name: udatetime

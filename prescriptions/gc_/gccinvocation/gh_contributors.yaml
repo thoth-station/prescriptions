@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GccinvocationGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gccinvocation
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gccinvocation' has less than 5 contributors on GitHub
+        link: https://github.com/fedora-static-analysis/gccinvocation
+        package_name: gccinvocation

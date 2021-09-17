@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MkdocsMaterialExtensionsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs-material-extensions
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mkdocs-material-extensions' has less than 5 contributors on GitHub
+        link: https://github.com/facelessuser/mkdocs-material-extensions
+        package_name: mkdocs-material-extensions

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackoffUtilsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backoff-utils
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backoff-utils' has less than 5 contributors on GitHub
+        link: https://github.com/insightindustry/backoff-utils
+        package_name: backoff-utils

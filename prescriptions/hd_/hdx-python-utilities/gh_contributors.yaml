@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HdxPythonUtilitiesGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdx-python-utilities
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hdx-python-utilities' has less than 5 contributors on GitHub
+        link: https://github.com/OCHA-DAP/hdx-python-utilities
+        package_name: hdx-python-utilities

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PythonFsutilGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-fsutil
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-fsutil' has less than 5 contributors on GitHub
+        link: https://github.com/fabiocaccamo/python-fsutil
+        package_name: python-fsutil

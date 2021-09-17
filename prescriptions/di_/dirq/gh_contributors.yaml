@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DirqGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dirq
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dirq' has less than 5 contributors on GitHub
+        link: https://github.com/cern-mig/python-dirq
+        package_name: dirq

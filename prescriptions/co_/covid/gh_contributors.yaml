@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CovidGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: covid
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'covid' has less than 5 contributors on GitHub
+        link: https://github.com/ahmednafies/covid
+        package_name: covid

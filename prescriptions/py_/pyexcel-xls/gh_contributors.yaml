@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyexcelXlsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexcel-xls
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyexcel-xls' has less than 5 contributors on GitHub
+        link: https://github.com/pyexcel/pyexcel-xls
+        package_name: pyexcel-xls

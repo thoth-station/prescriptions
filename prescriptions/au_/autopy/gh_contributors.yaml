@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutopyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autopy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'autopy' has less than 5 contributors on GitHub
+        link: https://github.com/autopilot-rs/autopy
+        package_name: autopy

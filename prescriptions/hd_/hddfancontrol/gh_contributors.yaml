@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HddfancontrolGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hddfancontrol
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hddfancontrol' has less than 5 contributors on GitHub
+        link: https://github.com/desbma/hddfancontrol
+        package_name: hddfancontrol

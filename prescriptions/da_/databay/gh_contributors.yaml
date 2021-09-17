@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatabayGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databay
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'databay' has less than 5 contributors on GitHub
+        link: https://github.com/Voyz/databay
+        package_name: databay

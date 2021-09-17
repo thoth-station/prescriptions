@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EnrichGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enrich
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'enrich' has less than 5 contributors on GitHub
+        link: https://github.com/pycontribs/enrich
+        package_name: enrich

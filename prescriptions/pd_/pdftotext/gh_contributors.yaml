@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PdftotextGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdftotext
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pdftotext' has less than 5 contributors on GitHub
+        link: https://github.com/jalan/pdftotext
+        package_name: pdftotext

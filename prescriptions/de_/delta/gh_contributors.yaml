@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeltaGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: delta
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'delta' has less than 5 contributors on GitHub
+        link: https://github.com/rlgomes/delta
+        package_name: delta

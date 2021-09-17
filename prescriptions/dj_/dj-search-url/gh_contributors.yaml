@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjSearchUrlGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dj-search-url
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dj-search-url' has less than 5 contributors on GitHub
+        link: https://github.com/dstufft/dj-search-url
+        package_name: dj-search-url

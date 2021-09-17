@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8FormatterJunitXmlGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-formatter-junit-xml
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-formatter-junit-xml' has less than 5 contributors on GitHub
+        link: https://github.com/astj/flake8-formatter-junit-xml
+        package_name: flake8-formatter-junit-xml

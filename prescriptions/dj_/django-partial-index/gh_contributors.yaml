@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoPartialIndexGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-partial-index
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-partial-index' has less than 5 contributors on GitHub
+        link: https://github.com/mattiaslinnap/django-partial-index
+        package_name: django-partial-index

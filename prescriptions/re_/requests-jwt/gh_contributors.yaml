@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsJwtGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-jwt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-jwt' has less than 5 contributors on GitHub
+        link: https://github.com/tgs/requests-jwt
+        package_name: requests-jwt

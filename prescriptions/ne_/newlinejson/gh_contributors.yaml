@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NewlinejsonGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: newlinejson
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'newlinejson' has less than 5 contributors on GitHub
+        link: https://github.com/geowurster/NewlineJSON
+        package_name: newlinejson

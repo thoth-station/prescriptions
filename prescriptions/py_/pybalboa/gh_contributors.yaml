@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PybalboaGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybalboa
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pybalboa' has less than 5 contributors on GitHub
+        link: https://github.com/garbled1/pybalboa
+        package_name: pybalboa

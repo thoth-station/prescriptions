@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aws' has less than 5 contributors on GitHub
+        link: https://github.com/eofs/aws
+        package_name: aws

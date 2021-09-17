@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Ikp3dbGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ikp3db
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ikp3db' has less than 5 contributors on GitHub
+        link: https://github.com/cmorisse/ikp3db
+        package_name: ikp3db

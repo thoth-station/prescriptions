@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiscordExtSlashGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-ext-slash
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'discord-ext-slash' has less than 5 contributors on GitHub
+        link: https://github.com/Kenny2github/discord-ext-slash
+        package_name: discord-ext-slash

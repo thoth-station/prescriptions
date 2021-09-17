@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PysignalsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysignals
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pysignals' has less than 5 contributors on GitHub
+        link: https://github.com/theojulienne/PySignals
+        package_name: pysignals

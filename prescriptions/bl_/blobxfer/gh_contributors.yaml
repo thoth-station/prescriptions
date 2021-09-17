@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlobxferGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blobxfer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'blobxfer' has less than 5 contributors on GitHub
+        link: https://github.com/Azure/blobxfer
+        package_name: blobxfer

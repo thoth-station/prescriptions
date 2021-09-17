@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LazyGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lazy' has less than 5 contributors on GitHub
+        link: https://github.com/stefanholek/lazy
+        package_name: lazy

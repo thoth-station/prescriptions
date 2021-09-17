@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HtmlTelegraphPosterGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: html-telegraph-poster
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'html-telegraph-poster' has less than 5 contributors on GitHub
+        link: https://github.com/mercuree/html-telegraph-poster
+        package_name: html-telegraph-poster

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconLibraryPathGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-library-path
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'colcon-library-path' has less than 5 contributors on GitHub
+        link: https://github.com/colcon/colcon-library-path
+        package_name: colcon-library-path

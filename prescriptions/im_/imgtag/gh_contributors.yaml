@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImgtagGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imgtag
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'imgtag' has less than 5 contributors on GitHub
+        link: https://github.com/nimaid/python-imgtag
+        package_name: imgtag

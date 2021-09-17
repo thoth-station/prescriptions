@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pyqt5PluginsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyqt5-plugins
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyqt5-plugins' has less than 5 contributors on GitHub
+        link: https://github.com/altendky/pyqt-plugins
+        package_name: pyqt5-plugins

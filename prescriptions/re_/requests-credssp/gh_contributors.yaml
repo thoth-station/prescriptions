@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequestsCredsspGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-credssp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'requests-credssp' has less than 5 contributors on GitHub
+        link: https://github.com/jborean93/requests-credssp
+        package_name: requests-credssp

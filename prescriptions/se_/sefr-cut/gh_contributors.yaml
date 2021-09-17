@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SefrCutGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sefr-cut
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sefr-cut' has less than 5 contributors on GitHub
+        link: https://github.com/mrpeerat/SEFR_CUT
+        package_name: sefr-cut

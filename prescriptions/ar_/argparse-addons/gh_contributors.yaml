@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArgparseAddonsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argparse-addons
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'argparse-addons' has less than 5 contributors on GitHub
+        link: https://github.com/eerimoq/argparse_addons
+        package_name: argparse-addons

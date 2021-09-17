@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylibaclGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibacl
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylibacl' has less than 5 contributors on GitHub
+        link: https://github.com/iustin/pylibacl
+        package_name: pylibacl

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Sqlcipher3BinaryGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlcipher3-binary
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sqlcipher3-binary' has less than 5 contributors on GitHub
+        link: https://github.com/coleifer/sqlcipher3
+        package_name: sqlcipher3-binary

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrinGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grin
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'grin' has less than 5 contributors on GitHub
+        link: https://github.com/matthew-brett/grin
+        package_name: grin

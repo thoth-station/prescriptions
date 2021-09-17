@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EntryPointsTxtGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entry-points-txt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'entry-points-txt' has less than 5 contributors on GitHub
+        link: https://github.com/jwodder/entry-points-txt
+        package_name: entry-points-txt

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutopageGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autopage
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'autopage' has less than 5 contributors on GitHub
+        link: https://github.com/zaneb/autopage
+        package_name: autopage

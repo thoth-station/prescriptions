@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportlibGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'importlib' has less than 5 contributors on GitHub
+        link: https://github.com/brettcannon/importlib
+        package_name: importlib

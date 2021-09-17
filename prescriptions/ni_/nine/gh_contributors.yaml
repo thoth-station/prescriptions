@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NineGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nine
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nine' has less than 5 contributors on GitHub
+        link: https://github.com/nandoflorestan/nine
+        package_name: nine

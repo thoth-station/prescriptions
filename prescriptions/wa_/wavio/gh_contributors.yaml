@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WavioGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wavio
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'wavio' has less than 5 contributors on GitHub
+        link: https://github.com/WarrenWeckesser/wavio
+        package_name: wavio

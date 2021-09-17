@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ColconParallelExecutorGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-parallel-executor
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'colcon-parallel-executor' has less than 5 contributors on GitHub
+        link: https://github.com/colcon/colcon-parallel-executor
+        package_name: colcon-parallel-executor

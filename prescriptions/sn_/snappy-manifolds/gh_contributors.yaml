@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnappyManifoldsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snappy-manifolds
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'snappy-manifolds' has less than 5 contributors on GitHub
+        link: https://github.com/3-manifolds/snappy_manifolds
+        package_name: snappy-manifolds

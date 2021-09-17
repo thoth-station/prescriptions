@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxInlineTabsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-inline-tabs
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sphinx-inline-tabs' has less than 5 contributors on GitHub
+        link: https://github.com/pradyunsg/sphinx-inline-tabs
+        package_name: sphinx-inline-tabs

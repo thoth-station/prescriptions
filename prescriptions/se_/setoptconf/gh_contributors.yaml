@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetoptconfGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setoptconf
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'setoptconf' has less than 5 contributors on GitHub
+        link: https://github.com/jayclassless/setoptconf
+        package_name: setoptconf

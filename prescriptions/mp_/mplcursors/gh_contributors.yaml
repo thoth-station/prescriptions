@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MplcursorsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mplcursors
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mplcursors' has less than 5 contributors on GitHub
+        link: https://github.com/anntzer/mplcursors
+        package_name: mplcursors

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: YamlordereddictloaderGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yamlordereddictloader
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'yamlordereddictloader' has less than 5 contributors on GitHub
+        link: https://github.com/fmenabe/python-yamlordereddictloader
+        package_name: yamlordereddictloader

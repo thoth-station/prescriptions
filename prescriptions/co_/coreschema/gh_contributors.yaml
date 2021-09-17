@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoreschemaGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreschema
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coreschema' has less than 5 contributors on GitHub
+        link: https://github.com/core-api/python-coreschema
+        package_name: coreschema

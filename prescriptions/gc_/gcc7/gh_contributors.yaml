@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Gcc7GitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcc7
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gcc7' has less than 5 contributors on GitHub
+        link: https://github.com/bh107/python-gcc
+        package_name: gcc7

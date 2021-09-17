@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestReraiseGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-reraise
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-reraise' has less than 5 contributors on GitHub
+        link: https://github.com/bjoluc/pytest-reraise
+        package_name: pytest-reraise

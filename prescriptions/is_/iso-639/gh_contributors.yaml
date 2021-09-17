@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Iso639GitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iso-639
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'iso-639' has less than 5 contributors on GitHub
+        link: https://github.com/noumar/iso639
+        package_name: iso-639

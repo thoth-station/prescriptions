@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AzureStorageLoggingGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-logging
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'azure-storage-logging' has less than 5 contributors on GitHub
+        link: https://github.com/michiya/azure-storage-logging
+        package_name: azure-storage-logging

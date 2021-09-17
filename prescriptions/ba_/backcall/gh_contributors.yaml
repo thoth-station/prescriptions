@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackcallGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backcall
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backcall' has less than 5 contributors on GitHub
+        link: https://github.com/takluyver/backcall
+        package_name: backcall

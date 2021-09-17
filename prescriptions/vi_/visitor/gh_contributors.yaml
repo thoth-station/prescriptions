@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: VisitorGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visitor
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'visitor' has less than 5 contributors on GitHub
+        link: https://github.com/mbr/visitor
+        package_name: visitor

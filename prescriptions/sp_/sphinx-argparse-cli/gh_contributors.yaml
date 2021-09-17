@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxArgparseCliGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-argparse-cli
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sphinx-argparse-cli' has less than 5 contributors on GitHub
+        link: https://github.com/gaborbernat/sphinx-argparse-cli
+        package_name: sphinx-argparse-cli

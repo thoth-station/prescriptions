@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlugnplayGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plugnplay
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'plugnplay' has less than 5 contributors on GitHub
+        link: https://github.com/daltonmatos/plugnplay
+        package_name: plugnplay

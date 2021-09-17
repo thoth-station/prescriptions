@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CaseGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: case
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'case' has less than 5 contributors on GitHub
+        link: https://github.com/celery/case
+        package_name: case
