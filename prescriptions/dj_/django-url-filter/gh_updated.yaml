@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoUrlFilterGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-url-filter
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-url-filter' was last updated at 2020-02-10 13:23:40
+        link: https://github.com/miki725/django-url-filter
+        package_name: django-url-filter
