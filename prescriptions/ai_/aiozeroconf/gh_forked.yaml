@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiozeroconfGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiozeroconf
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aiozeroconf' is a GitHub fork
+        link: https://github.com/frawau/aiozeroconf
+        package_name: aiozeroconf
