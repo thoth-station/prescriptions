@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PylruGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylru
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylru' was last updated at 2019-03-13 21:25:13
+        link: https://github.com/jlhutch/pylru
+        package_name: pylru
