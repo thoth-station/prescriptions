@@ -15,7 +15,8 @@ units:
         - name: opencv-python
     - state:
         resolved_dependencies:
-        - name: pillow>8.3.0
+        - name: pillow
+          version: ">8.3.0"
     - state:
         resolved_dependencies:
         - name: tensorboard
@@ -26,9 +27,7 @@ units:
         resolved_dependencies:
         - name: torchvision
     run:
-      advised_manifest_changes:
-      - base_images: "quay.io/thoth-station/ps-cv-pytorch:*"
       justification:
       - type: INFO
-        message: Consider using predictive stack for computer vision
+        message: Consider using predictive stack for computer vision with Pytorch.
         link: https://github.com/thoth-station/ps-cv/
