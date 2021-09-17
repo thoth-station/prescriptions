@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HugGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hug
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hug' was last updated at 2020-08-10 05:07:26
+        link: https://github.com/hugapi/hug
+        package_name: hug
