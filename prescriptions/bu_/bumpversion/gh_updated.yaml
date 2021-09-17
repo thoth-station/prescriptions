@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BumpversionGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bumpversion
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bumpversion' was last updated at 2019-11-26 10:10:37
+        link: https://github.com/peritus/bumpversion
+        package_name: bumpversion
