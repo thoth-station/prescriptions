@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Jinja2CliGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2-cli
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'jinja2-cli' was last updated at 2019-05-24 08:20:44
+        link: https://github.com/mattrobenolt/jinja2-cli
+        package_name: jinja2-cli
