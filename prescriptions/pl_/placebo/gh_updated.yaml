@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlaceboGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: placebo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'placebo' was last updated at 2019-02-17 15:54:16
+        link: https://github.com/garnaat/placebo
+        package_name: placebo
