@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MapboxGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapbox
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mapbox' was last updated at 2020-03-17 20:34:11
+        link: https://github.com/mapbox/mapbox-sdk-py
+        package_name: mapbox
