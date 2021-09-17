@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyhaproxyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhaproxy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyhaproxy' was last updated at 2019-12-06 09:17:31
+        link: https://github.com/imjoey/pyhaproxy
+        package_name: pyhaproxy
