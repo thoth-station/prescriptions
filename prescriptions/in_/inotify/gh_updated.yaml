@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InotifyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inotify
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'inotify' was last updated at 2020-08-27 03:36:13
+        link: https://github.com/dsoprea/PyInotify
+        package_name: inotify
