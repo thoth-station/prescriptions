@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DratGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drat
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'drat' was last updated at 2019-07-03 09:33:22
+        link: https://github.com/riverrun/drat
+        package_name: drat
