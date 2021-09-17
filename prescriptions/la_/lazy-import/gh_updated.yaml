@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LazyImportGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy-import
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lazy-import' was last updated at 2018-01-25 23:57:31
+        link: https://github.com/mnmelo/lazy_import
+        package_name: lazy-import
