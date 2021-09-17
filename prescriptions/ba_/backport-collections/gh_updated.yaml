@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportCollectionsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backport-collections
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backport-collections' was last updated at 2015-07-01 21:42:55
+        link: https://github.com/sk-/backport_collections
+        package_name: backport-collections
