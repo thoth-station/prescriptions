@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LambdaGitGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lambda-git
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lambda-git' was last updated at 2019-02-06 08:45:51
+        link: https://github.com/eredi93/lambda-git
+        package_name: lambda-git
