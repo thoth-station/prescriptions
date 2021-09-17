@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestCoverGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cover
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-cover' was last updated at 2015-07-08 20:55:19
+        link: https://github.com/ionelmc/pytest-cover
+        package_name: pytest-cover
