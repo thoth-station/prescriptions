@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiocmdGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocmd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aiocmd' was last updated at 2020-06-18 12:56:35
+        link: https://github.com/KimiNewt/aiocmd
+        package_name: aiocmd
