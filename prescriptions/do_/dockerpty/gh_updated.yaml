@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DockerptyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dockerpty
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dockerpty' was last updated at 2016-02-05 11:48:49
+        link: https://github.com/d11wtq/dockerpty
+        package_name: dockerpty
