@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Metrics2mqttGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metrics2mqtt
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'metrics2mqtt' was last updated at 2020-08-06 18:45:29
+        link: https://github.com/jamiebegin/metrics2mqtt
+        package_name: metrics2mqtt
