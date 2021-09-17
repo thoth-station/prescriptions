@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsInspectGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-inspect
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-inspect' was last updated at 2018-03-05 11:42:42
+        link: https://github.com/agoraplex/backports.inspect
+        package_name: backports-inspect
