@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NeedleGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: needle
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'needle' was last updated at 2017-04-23 18:55:57
+        link: https://github.com/python-needle/needle
+        package_name: needle
