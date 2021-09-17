@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthKeyfileGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-keyfile
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'eth-keyfile' was last updated at 2019-10-01 20:17:55
+        link: https://github.com/ethereum/eth-keyfile
+        package_name: eth-keyfile
