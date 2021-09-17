@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FudgeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fudge
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fudge' was last updated at 2018-04-04 01:17:26
+        link: https://github.com/fudge-py/fudge
+        package_name: fudge
