@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NwdiagGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nwdiag
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nwdiag' was last updated at 2020-01-26 05:37:39
+        link: https://github.com/blockdiag/nwdiag
+        package_name: nwdiag
