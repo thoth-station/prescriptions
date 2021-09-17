@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcpGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bcp' was last updated at 2020-02-03 00:41:05
+        link: https://github.com/fivestack/bcp
+        package_name: bcp
