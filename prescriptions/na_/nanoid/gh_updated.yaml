@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NanoidGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nanoid
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'nanoid' was last updated at 2019-07-14 06:11:26
+        link: https://github.com/puyuan/py-nanoid
+        package_name: nanoid
