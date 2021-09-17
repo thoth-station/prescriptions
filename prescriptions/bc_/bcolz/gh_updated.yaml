@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcolzGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcolz
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bcolz' was last updated at 2020-09-10 12:12:45
+        link: https://github.com/Blosc/bcolz
+        package_name: bcolz
