@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LibrabbitmqGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: librabbitmq
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'librabbitmq' was last updated at 2020-04-18 08:57:44
+        link: https://github.com/celery/librabbitmq
+        package_name: librabbitmq
