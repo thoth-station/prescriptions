@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BashoErlasticGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basho-erlastic
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'basho-erlastic' was last updated at 2016-05-03 03:40:37
+        link: https://github.com/basho/python-erlastic
+        package_name: basho-erlastic
