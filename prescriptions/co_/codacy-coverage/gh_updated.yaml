@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CodacyCoverageGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codacy-coverage
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'codacy-coverage' was last updated at 2020-02-11 16:13:16
+        link: https://github.com/codacy/python-codacy-coverage
+        package_name: codacy-coverage
