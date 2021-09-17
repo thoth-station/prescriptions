@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrabserialGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabserial
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'grabserial' was last updated at 2020-04-09 07:55:31
+        link: https://github.com/straend/grabserial
+        package_name: grabserial
