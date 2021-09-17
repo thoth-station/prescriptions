@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutopyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autopy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'autopy' was last updated at 2020-09-08 22:25:36
+        link: https://github.com/autopilot-rs/autopy
+        package_name: autopy
