@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Psycopg2PoolGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycopg2-pool
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'psycopg2-pool' was last updated at 2019-10-08 11:01:30
+        link: https://github.com/Changaco/psycopg2-pool
+        package_name: psycopg2-pool
