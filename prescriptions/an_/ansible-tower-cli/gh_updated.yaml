@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AnsibleTowerCliGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-tower-cli
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ansible-tower-cli' was last updated at 2020-09-16 16:11:50
+        link: https://github.com/ansible/tower-cli
+        package_name: ansible-tower-cli
