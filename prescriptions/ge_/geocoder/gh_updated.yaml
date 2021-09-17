@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GeocoderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geocoder
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'geocoder' was last updated at 2018-10-12 15:53:05
+        link: https://github.com/DenisCarriere/geocoder
+        package_name: geocoder
