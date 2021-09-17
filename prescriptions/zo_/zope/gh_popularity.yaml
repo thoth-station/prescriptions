@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ZopeGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope
+    run:
+      justification:
+      - type: INFO
+        message: Project 'zope' has very high popularity on GitHub
+        link: https://github.com/zopefoundation/Zope
+        package_name: zope
