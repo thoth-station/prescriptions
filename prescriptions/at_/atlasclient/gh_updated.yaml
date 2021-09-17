@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AtlasclientGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atlasclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'atlasclient' was last updated at 2019-08-19 13:52:31
+        link: https://github.com/jpoullet2000/atlasclient
+        package_name: atlasclient
