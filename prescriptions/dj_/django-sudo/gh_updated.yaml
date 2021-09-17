@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSudoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sudo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-sudo' was last updated at 2020-01-09 22:51:07
+        link: https://github.com/mattrobenolt/django-sudo
+        package_name: django-sudo
