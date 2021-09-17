@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PercolGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: percol
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'percol' was last updated at 2019-07-23 23:48:07
+        link: https://github.com/mooz/percol
+        package_name: percol
