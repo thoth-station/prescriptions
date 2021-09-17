@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MtgGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mtg
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mtg' was last updated at 2016-05-17 15:26:17
+        link: https://github.com/chigby/mtg
+        package_name: mtg
