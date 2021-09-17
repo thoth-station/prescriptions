@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParseTypeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parse-type
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'parse-type' was last updated at 2020-09-11 06:47:40
+        link: https://github.com/jenisys/parse_type
+        package_name: parse-type
