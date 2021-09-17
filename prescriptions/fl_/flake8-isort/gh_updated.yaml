@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8IsortGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-isort
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-isort' was last updated at 2020-08-11 08:04:26
+        link: https://github.com/gforcada/flake8-isort
+        package_name: flake8-isort
