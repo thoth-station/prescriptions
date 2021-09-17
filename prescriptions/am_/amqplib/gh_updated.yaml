@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AmqplibGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amqplib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'amqplib' was last updated at 2015-11-03 14:49:33
+        link: https://github.com/barryp/py-amqplib
+        package_name: amqplib
