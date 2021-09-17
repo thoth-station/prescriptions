@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GlogGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glog
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'glog' was last updated at 2020-06-22 20:09:44
+        link: https://github.com/benley/python-glog
+        package_name: glog
