@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MockDjangoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mock-django
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mock-django' was last updated at 2016-02-09 19:14:55
+        link: https://github.com/dcramer/mock-django
+        package_name: mock-django
