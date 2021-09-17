@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyldapGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyldap
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyldap' was last updated at 2018-03-27 14:47:44
+        link: https://github.com/pyldap/pyldap
+        package_name: pyldap
