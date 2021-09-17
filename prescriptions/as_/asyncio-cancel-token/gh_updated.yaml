@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AsyncioCancelTokenGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncio-cancel-token
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'asyncio-cancel-token' was last updated at 2019-09-06 19:31:17
+        link: https://github.com/ethereum/asyncio-cancel-token
+        package_name: asyncio-cancel-token
