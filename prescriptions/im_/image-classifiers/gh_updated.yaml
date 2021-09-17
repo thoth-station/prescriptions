@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImageClassifiersGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: image-classifiers
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'image-classifiers' was last updated at 2020-02-26 08:57:00
+        link: https://github.com/qubvel/classification_models
+        package_name: image-classifiers
