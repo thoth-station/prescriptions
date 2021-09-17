@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PacpyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pacpy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pacpy' was last updated at 2017-07-15 14:36:51
+        link: https://github.com/voytekresearch/pacpy
+        package_name: pacpy
