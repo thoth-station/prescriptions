@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoBulkUpdateGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-bulk-update
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-bulk-update' was last updated at 2018-03-15 16:32:47
+        link: https://github.com/aykut/django-bulk-update
+        package_name: django-bulk-update
