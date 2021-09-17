@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoverageEnableSubprocessGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage-enable-subprocess
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coverage-enable-subprocess' was last updated at 2018-07-08 17:02:48
+        link: https://github.com/bukzor/python-coverage-enable-subprocess
+        package_name: coverage-enable-subprocess
