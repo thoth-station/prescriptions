@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DpcontractsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dpcontracts
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dpcontracts' was last updated at 2018-11-20 04:05:56
+        link: https://github.com/deadpixi/contracts
+        package_name: dpcontracts
