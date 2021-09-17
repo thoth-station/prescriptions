@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PlasterPastedeployGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plaster-pastedeploy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'plaster-pastedeploy' was last updated at 2019-04-12 06:05:47
+        link: https://github.com/Pylons/plaster_pastedeploy
+        package_name: plaster-pastedeploy
