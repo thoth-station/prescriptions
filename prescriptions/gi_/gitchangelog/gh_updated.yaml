@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GitchangelogGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitchangelog
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gitchangelog' was last updated at 2018-12-21 13:29:55
+        link: https://github.com/vaab/gitchangelog
+        package_name: gitchangelog
