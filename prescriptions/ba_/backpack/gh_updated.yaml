@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackpackGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backpack
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backpack' was last updated at 2016-08-05 14:33:27
+        link: https://github.com/sdispater/backpack
+        package_name: backpack
