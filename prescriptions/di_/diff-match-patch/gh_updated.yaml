@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiffMatchPatchGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diff-match-patch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'diff-match-patch' was last updated at 2020-07-13 18:07:20
+        link: https://github.com/diff-match-patch-python/diff-match-patch
+        package_name: diff-match-patch
