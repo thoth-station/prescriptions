@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArgoModelsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argo-models
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'argo-models' was last updated at 2020-05-11 13:18:52
+        link: https://github.com/e2fyi/argo-models
+        package_name: argo-models
