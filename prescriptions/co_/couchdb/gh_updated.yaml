@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CouchdbGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: couchdb
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'couchdb' was last updated at 2018-02-16 21:04:53
+        link: https://github.com/djc/couchdb-python
+        package_name: couchdb
