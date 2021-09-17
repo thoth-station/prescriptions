@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PipShimsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-shims
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pip-shims' was last updated at 2020-08-07 23:14:45
+        link: https://github.com/sarugaku/pip-shims
+        package_name: pip-shims
