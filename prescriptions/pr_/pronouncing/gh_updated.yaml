@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PronouncingGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pronouncing
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pronouncing' was last updated at 2019-11-01 20:24:15
+        link: https://github.com/aparrish/pronouncingpy
+        package_name: pronouncing
