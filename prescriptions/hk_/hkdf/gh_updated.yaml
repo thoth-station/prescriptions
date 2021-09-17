@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HkdfGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hkdf
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hkdf' was last updated at 2015-07-24 06:47:47
+        link: https://github.com/casebeer/python-hkdf
+        package_name: hkdf
