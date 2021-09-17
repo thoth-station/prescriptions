@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParseroGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parsero
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'parsero' was last updated at 2014-09-29 11:27:42
+        link: https://github.com/behindthefirewalls/Parsero
+        package_name: parsero
