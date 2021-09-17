@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AdbGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adb
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'adb' was last updated at 2019-10-16 21:49:14
+        link: https://github.com/google/python-adb
+        package_name: adb
