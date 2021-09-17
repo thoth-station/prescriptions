@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ParametersValidationGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parameters-validation
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'parameters-validation' was last updated at 2020-03-25 20:46:56
+        link: https://github.com/allrod5/parameters-validation
+        package_name: parameters-validation
