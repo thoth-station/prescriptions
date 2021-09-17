@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8JunitReportGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-junit-report
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-junit-report' was last updated at 2016-08-10 11:08:54
+        link: https://github.com/initios/flake8-junit-report
+        package_name: flake8-junit-report
