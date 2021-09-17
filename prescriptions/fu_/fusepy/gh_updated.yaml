@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FusepyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fusepy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fusepy' was last updated at 2018-09-17 00:10:46
+        link: https://github.com/fusepy/fusepy
+        package_name: fusepy
