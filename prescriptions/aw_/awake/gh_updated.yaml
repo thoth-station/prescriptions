@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AwakeGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awake
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'awake' was last updated at 2019-04-19 01:14:11
+        link: https://github.com/cyraxjoe/awake
+        package_name: awake
