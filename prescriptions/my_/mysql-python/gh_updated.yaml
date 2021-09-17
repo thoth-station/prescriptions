@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MysqlPythonGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysql-python
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mysql-python' was last updated at 2014-01-02 18:42:36
+        link: https://github.com/farcepest/MySQLdb1
+        package_name: mysql-python
