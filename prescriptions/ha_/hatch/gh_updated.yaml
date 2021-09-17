@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HatchGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hatch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hatch' was last updated at 2019-10-21 16:41:50
+        link: https://github.com/ofek/hatch
+        package_name: hatch
