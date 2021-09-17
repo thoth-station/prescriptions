@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BasicauthGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basicauth
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'basicauth' was last updated at 2018-02-07 07:32:08
+        link: https://github.com/rdegges/python-basicauth
+        package_name: basicauth
