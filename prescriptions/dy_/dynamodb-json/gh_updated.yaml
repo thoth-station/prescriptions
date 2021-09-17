@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DynamodbJsonGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynamodb-json
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dynamodb-json' was last updated at 2018-05-09 21:20:01
+        link: https://github.com/Alonreznik/dynamodb-json
+        package_name: dynamodb-json
