@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KerberosSspiGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberos-sspi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kerberos-sspi' was last updated at 2016-02-05 13:15:40
+        link: https://github.com/may-day/kerberos-sspi
+        package_name: kerberos-sspi
