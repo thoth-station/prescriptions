@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PathmatchGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathmatch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pathmatch' was last updated at 2020-05-03 23:31:34
+        link: https://github.com/demurgos/py-pathmatch
+        package_name: pathmatch
