@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConstantlyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: constantly
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'constantly' was last updated at 2018-01-11 20:24:50
+        link: https://github.com/twisted/constantly
+        package_name: constantly
