@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClickPluginsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-plugins
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'click-plugins' was last updated at 2019-04-04 04:23:16
+        link: https://github.com/click-contrib/click-plugins
+        package_name: click-plugins
