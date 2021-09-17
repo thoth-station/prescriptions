@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GlueGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glue
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'glue' was last updated at 2017-05-15 11:06:17
+        link: https://github.com/jorgebastida/glue
+        package_name: glue
