@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApiclientGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apiclient
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'apiclient' was last updated at 2019-03-21 00:57:42
+        link: https://github.com/shazow/apiclient
+        package_name: apiclient
