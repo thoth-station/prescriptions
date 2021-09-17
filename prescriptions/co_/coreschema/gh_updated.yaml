@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoreschemaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreschema
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'coreschema' was last updated at 2017-09-07 11:35:15
+        link: https://github.com/core-api/python-coreschema
+        package_name: coreschema
