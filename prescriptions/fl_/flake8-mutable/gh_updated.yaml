@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8MutableGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-mutable
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-mutable' was last updated at 2017-05-19 01:55:41
+        link: https://github.com/ebeweber/flake8-mutable
+        package_name: flake8-mutable
