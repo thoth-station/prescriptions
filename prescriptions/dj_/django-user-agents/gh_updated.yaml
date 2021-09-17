@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoUserAgentsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-user-agents
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-user-agents' was last updated at 2019-06-22 13:32:31
+        link: https://github.com/selwin/django-user_agents
+        package_name: django-user-agents
