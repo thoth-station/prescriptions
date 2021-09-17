@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MongoqueryGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mongoquery
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mongoquery' was last updated at 2020-01-29 15:12:03
+        link: https://github.com/kapouille/mongoquery
+        package_name: mongoquery
