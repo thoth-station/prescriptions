@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthtokenGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethtoken
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ethtoken' was last updated at 2019-01-17 19:03:25
+        link: https://github.com/carver/ethtoken.py
+        package_name: ethtoken
