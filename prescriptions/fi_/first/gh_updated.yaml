@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FirstGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: first
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'first' was last updated at 2019-12-16 11:44:35
+        link: https://github.com/hynek/first
+        package_name: first
