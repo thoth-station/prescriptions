@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BkchartsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bkcharts
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bkcharts' was last updated at 2017-06-30 19:25:54
+        link: https://github.com/bokeh/bkcharts
+        package_name: bkcharts
