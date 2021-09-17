@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BitcoinGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitcoin
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bitcoin' was last updated at 2019-01-18 02:34:28
+        link: https://github.com/vbuterin/pybitcointools
+        package_name: bitcoin
