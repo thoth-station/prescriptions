@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: EthereumGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethereum
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ethereum' was last updated at 2019-05-29 21:09:48
+        link: https://github.com/ethereum/pyethereum
+        package_name: ethereum
