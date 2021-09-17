@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSocialAuthGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-social-auth
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-social-auth' was last updated at 2015-03-30 17:14:57
+        link: https://github.com/omab/django-social-auth
+        package_name: django-social-auth
