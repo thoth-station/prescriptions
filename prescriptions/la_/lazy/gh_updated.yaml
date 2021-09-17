@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: LazyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'lazy' was last updated at 2019-01-28 18:53:08
+        link: https://github.com/stefanholek/lazy
+        package_name: lazy
