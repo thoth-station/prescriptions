@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8DeprecatedGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-deprecated
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-deprecated' was last updated at 2020-01-09 11:17:39
+        link: https://github.com/gforcada/flake8-deprecated
+        package_name: flake8-deprecated
