@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DatalabGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datalab
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'datalab' was last updated at 2020-03-25 19:39:17
+        link: https://github.com/googledatalab/pydatalab
+        package_name: datalab
