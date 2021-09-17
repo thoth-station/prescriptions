@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CiInfoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ci-info
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'ci-info' was last updated at 2020-04-16 18:56:36
+        link: https://github.com/mgxd/ci-info
+        package_name: ci-info
