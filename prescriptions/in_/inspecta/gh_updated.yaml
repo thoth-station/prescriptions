@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: InspectaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inspecta
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'inspecta' was last updated at 2019-05-17 05:54:56
+        link: https://github.com/grimen/python-inspecta
+        package_name: inspecta
