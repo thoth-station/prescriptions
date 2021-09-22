@@ -1,33 +1,19 @@
 units:
-  wraps:
-  - name: ThothPSCVTorchBaseImageWrap
-    type: wrap
+  boots:
+  - name: ThothPSCVTorchBaseImageBoot
+    type: boot
     should_include:
       adviser_pipeline: true
       runtime_environments:
         base_images: [null]  # Only if no base image is used.
     match:
-    - state:
-        resolved_dependencies:
-        - name: jupyter-tensorboard
-    - state:
-        resolved_dependencies:
-        - name: opencv-python
-    - state:
-        resolved_dependencies:
-        - name: pillow
-          version: ">8.3.0"
-    - state:
-        resolved_dependencies:
-        - name: tensorboard
-    - state:
-        resolved_dependencies:
-        - name: torch
-    - state:
-        resolved_dependencies:
-        - name: torchvision
+    - package_name: opencv-python
+    - package_name: torch
     run:
-      justification:
+      log:
+        type: INFO
+        message: Found predictive stack image that can be used with these dependencies
+      stack_info:
       - type: INFO
         message: Consider using predictive stack for computer vision with Pytorch
         link: https://quay.io/repository/thoth-station/ps-cv-pytorch
