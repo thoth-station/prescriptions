@@ -1,0 +1,43 @@
+units:
+  steps:
+  - name: FlaskOpenIDSetuptools2to3Step
+    type: step
+    should_include:
+      adviser_pipeline: true
+    match:
+      package_version:
+        name: flask-openid
+        version: <1.3.0
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: setuptools
+          version: ">=58.0.0"
+    run:
+      multi_package_resolution: true
+      stack_info:
+      - &stack_info
+        type: WARNING
+        message: Cannot install flask-openid<1.3.0 when using setuptools>=58.0.0
+        link: https://github.com/pallets-eco/flask-openid/issues/59
+      not_acceptable: Cannot install flask-openid<1.3.0 when using setuptools>=58.0.0
+  sieves:
+  - name: FlaskOpenIDSetuptools2to3Sieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        # Filter flask-openid if Python container images are
+        # shipped with the specified setuptools.
+        python_packages:
+        - name: setuptools
+          version: <58.0.0
+          location: ^/opt/app-root/.*
+    match:
+      package_version:
+        name: flask-openid
+        version: <1.3.0
+        index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - <<: *stack_info
