@@ -45,7 +45,7 @@ know by openning an issue and we will help you with writing a prescription.
 Release Details
 ==============================
 
-Prescriptions are released as the blob.
+Prescriptions are released as a blob.
 During the tag release session of `thoth-adviser <https://github.com/thoth-station/adviser>`_ ,
 the `s2i process <https://github.com/thoth-station/adviser/blob/master/.s2i/bin/assemble>`_ clones the prescriptions repo with the latest tag information.
 
