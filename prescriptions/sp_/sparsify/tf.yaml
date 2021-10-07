@@ -1,0 +1,46 @@
+units:
+  steps:
+  - name: SparsifyTensorflowStep
+    type: step
+    should_include:
+      adviser_pipeline: true
+    match:
+      package_version:
+        name: sparsify
+        version: <=0.7.0
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: <1.16.0
+          index_url: https://pypi.org/simple
+    run:
+      multi_package_resolution: false
+      justification:
+      - type: INFO
+        message: >-
+          maximum tensorflow version supported by sparsify is 1.16.0
+        link: https://github.com/neuralmagic/sparsify/issues/83  # TODO: Link proper documention from Neural Magic once available
+        package_name: tensorflow
+  - name: TensorflowSparsifyStep
+    type: step
+    should_include:
+      adviser_pipeline: true
+    match:
+      package_version:
+        name: tensorflow
+        version: <1.16.0
+        index_url: https://pypi.org/simple
+      state:
+        resolved_dependencies:
+        - name: sparsify
+          version: <=0.7.0
+          index_url: https://pypi.org/simple
+    run:
+      multi_package_resolution: false
+      justification:
+      - type: INFO
+        message: >-
+          maximum tensorflow version supported by sparsify is 1.16.0
+        link: https://github.com/neuralmagic/sparsify/issues/83
+        package_name: tensorflow
