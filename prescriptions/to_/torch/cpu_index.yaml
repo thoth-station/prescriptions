@@ -1,17 +1,18 @@
 units:
-  sieves:
+  steps:
   - name: TorchCPUIndex
-    type: sieve
+    type: step
     should_include:
       adviser_pipeline: true
       runtime_environments:
         cuda_version: null
     match:
-    - package_version:
+      package_version:
         name: torch
         index_url:
           not: https://download.pytorch.org/whl/cpu
     run:
+      score: -0.1
       log:
         message: Using torch releases from Torch CPU Python Package index
         type: INFO
