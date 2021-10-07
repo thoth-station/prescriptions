@@ -1,0 +1,99 @@
+units:
+  sieves:
+  - name: DeepSparseIntelSieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        hardware:
+          # 6 Intel
+        - cpu_families: [6]
+          # See:
+          #   https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2
+          #   https://en.wikichip.org/wiki/intel/cpuid
+          # 6 0x5 Cascade Lake Intel
+          # 6 0x6 Broadwell, Cannon Lake
+          # 6 0xA Ice Lake
+          # 6 0xC Ice Lake, Tiger Lake
+          # 6 0xD Ice Lake
+          # 6 0xE Skylake, Kaby Lake, Coffee Lake, Ice Lake, Comet Lake, Whiskey Lake
+          # 6 0xF Haswell
+          # cpu_models:
+          #   not: [5, 6, 10, 12, 13, 14, 15, 16]
+
+          # See:
+          #   https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX-512
+          #   https://en.wikipedia.org/wiki/AVX-512#VNNI
+          #   https://en.wikichip.org/wiki/intel/cpuid
+          # 6 0x5 Knights Mill, Skylake (Server) SP and X, Cascade Lake SP (VNNI)
+          # 6 0x6 Cannon Lake
+          # 6 0x7 Knights Landing, Rocket Lake (VNNI)
+          # 6 0xC Tiger Lake C (VNNI)
+          # 6 0xD Ice Lake Y (VNNI), Tiger Lake H (VNNI)
+          # 6 0xE Ice Lake U (VNNI)
+          cpu_models:
+            not: [5, 6, 10, 12, 13, 14, 15, 16, 21, 49, 85, 87, 102, 125, 126, 133, 140, 141, 167]
+    match:
+      package_version:
+        name: deepsparse
+        version: <=0.7.0
+        index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          deepsparse requires Intel avx2 or avx512 architecture (and avx512 with VNNI instructions) to allow deployment of ML model.
+        link: https://github.com/neuralmagic/deepsparse#hardware-support
+
+  - name: DeepSparseAMD23AVX2Sieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        hardware:
+          # 23 AMD
+        - cpu_families: [23]
+          # See:
+          #   https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2
+          #   https://en.wikichip.org/wiki/amd/cpuid
+          # 23 0x1 Rome
+          cpu_models:
+            not: [49]
+    match:
+      package_version:
+        name: deepsparse
+        version: <=0.7.0
+        index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          deepsparse requires AMD avx2 architecture (Zen 2) to allow deployment of ML model.
+        link: https://github.com/neuralmagic/deepsparse#hardware-support
+
+  - name: DeepSparseAMD25AVX2Sieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        hardware:
+          # 6 Intel
+          # 25 AMD
+        - cpu_families: [25]
+          # See:
+          #   https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2
+          #   https://en.wikichip.org/wiki/amd/cpuid
+          # 25 0x1 Milan
+          cpu_models:
+            not: [21]
+    match:
+      package_version:
+        name: deepsparse
+        version: <=0.7.0
+        index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          deepsparse requires AMD avx2 architecture (Zen 3) to allow deployment of ML model.
+        link: https://github.com/neuralmagic/deepsparse#hardware-support
