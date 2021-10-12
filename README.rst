@@ -15,15 +15,15 @@ environments they can run in. The database is used in
 `Thoth <https://thoth-station.ninja/>`__ to resolve high quality Python
 software stacks.
 
-When using OpenShift or Kubernetes, one provides manifest files that state
-how the desired state of a cluster should look like. Prescriptions might
-be seen analogous to this - prescriptions provide a way to declaratively
-state how the desired dependency resolution should look like considering
-the prescribed rules. Then, it’s up to the reinforcement learning algorithm
-implemented in `Thoth's adviser <https://github.com/thoth-station/adviser>`__
-to find a solution in the form of a lockfile respecting the prescribed rules,
-requirements for the application and other inputs to the Thoth's cloud
-resolver.
+  When using OpenShift or Kubernetes, one provides manifest files that state
+  how the desired state of a cluster should look like. Prescriptions might
+  be seen analogous to this - prescriptions provide a way to declaratively
+  state how the desired dependency resolution should look like considering
+  the prescribed rules. Then, it’s up to the reinforcement learning algorithm
+  implemented in `Thoth's adviser <https://github.com/thoth-station/adviser>`__
+  to find a solution in the form of a lockfile respecting the prescribed rules,
+  requirements for the application and other inputs to the Thoth's cloud
+  resolver.
 
 See `the linked presentation
 <https://docs.google.com/viewer?url=https://github.com/thoth-station/talks/raw/master/2021-09-03-devconf-us/thoth_healing_python_applications.pdf>`__
@@ -46,7 +46,7 @@ Release Details
 ==============================
 
 Prescriptions are released as a blob.
-During the tag release session of `thoth-adviser <https://github.com/thoth-station/adviser>`_ ,
+During the tag release session of `thoth-adviser <https://github.com/thoth-station/adviser>`_,
 the `s2i process <https://github.com/thoth-station/adviser/blob/master/.s2i/bin/assemble>`_ clones the prescriptions repo with the latest tag information.
 
 Licensing
