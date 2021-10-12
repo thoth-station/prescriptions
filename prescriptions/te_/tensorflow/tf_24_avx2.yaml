@@ -1,0 +1,30 @@
+units:
+  sieves:
+  - name: TensorFlow240AVX2Sieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        hardware:
+        - cpu_flags:
+            not: [avx2]
+    match:
+    - package_version:
+        name: tensorflow
+        version: ==2.4.0
+        index_url: https://pypi.org/simple
+    - package_version:
+        name: tensorflow-cpu
+        version: ==2.4.0
+        index_url: https://pypi.org/simple
+    - package_version:
+        name: tensorflow-gpu
+        version: ==2.4.0
+        index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          Upstream TensorFlow in version 2.4.0 was accidentally built on avx2 enabled
+          processors, removing it as your processor does not provide avx2
+        link: https://github.com/tensorflow/tensorflow/issues/45744
