@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FeedparserCVEWarningWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'feedparser' is known to have at least 3 vulnerabilities reported in releases
+        link: cve_warning
+        package_name: feedparser

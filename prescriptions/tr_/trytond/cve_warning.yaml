@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrytondCVEWarningWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trytond
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trytond' is known to have at least 3 vulnerabilities reported in releases
+        link: cve_warning
+        package_name: trytond
