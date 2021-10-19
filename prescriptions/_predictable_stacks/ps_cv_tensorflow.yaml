@@ -1,0 +1,92 @@
+units:
+  boots:
+  - name: OpencvPythonPredictiveStackPsCvTensorflowBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-cv-tensorflow
+    match:
+      package_name: opencv-python
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-cv-tensorflow' that has prepared environment with 'opencv-python'
+        link: https://quay.io/repository/thoth-station/ps-cv-tensorflow
+  - name: PillowPredictiveStackPsCvTensorflowBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-cv-tensorflow
+    match:
+      package_name: pillow
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-cv-tensorflow' that has prepared environment with 'pillow'
+        link: https://quay.io/repository/thoth-station/ps-cv-tensorflow
+  - name: KerasPredictiveStackPsCvTensorflowBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-cv-tensorflow
+    match:
+      package_name: keras
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-cv-tensorflow' that has prepared environment with 'keras'
+        link: https://quay.io/repository/thoth-station/ps-cv-tensorflow
+  - name: TensorboardPredictiveStackPsCvTensorflowBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-cv-tensorflow
+    match:
+      package_name: tensorboard
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-cv-tensorflow' that has prepared environment with 'tensorboard'
+        link: https://quay.io/repository/thoth-station/ps-cv-tensorflow
+  - name: TensorflowPredictiveStackPsCvTensorflowBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-cv-tensorflow
+    match:
+      package_name: tensorflow
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-cv-tensorflow' that has prepared environment with 'tensorflow'
+        link: https://quay.io/repository/thoth-station/ps-cv-tensorflow
+  - name: JupyterTensorboardPredictiveStackPsCvTensorflowBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-cv-tensorflow
+    match:
+      package_name: jupyter-tensorboard
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-cv-tensorflow' that has prepared environment with 'jupyter-tensorboard'
+        link: https://quay.io/repository/thoth-station/ps-cv-tensorflow
