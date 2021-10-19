@@ -1,0 +1,62 @@
+units:
+  boots:
+  - name: NltkPredictiveStackPsNlpBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-nlp
+    match:
+      package_name: nltk
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-nlp' that has prepared environment with 'nltk'
+        link: https://quay.io/repository/thoth-station/ps-nlp
+  - name: GensimPredictiveStackPsNlpBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-nlp
+    match:
+      package_name: gensim
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-nlp' that has prepared environment with 'gensim'
+        link: https://quay.io/repository/thoth-station/ps-nlp
+  - name: SpacyPredictiveStackPsNlpBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-nlp
+    match:
+      package_name: spacy
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-nlp' that has prepared environment with 'spacy'
+        link: https://quay.io/repository/thoth-station/ps-nlp
+  - name: TransformersPredictiveStackPsNlpBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-nlp
+    match:
+      package_name: transformers
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-nlp' that has prepared environment with 'transformers'
+        link: https://quay.io/repository/thoth-station/ps-nlp
