@@ -1,0 +1,62 @@
+units:
+  boots:
+  - name: OpencvPythonPredictiveStackPsIpIfdBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-ip-ifd
+    match:
+      package_name: opencv-python
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-ip-ifd' that has prepared environment with 'opencv-python'
+        link: https://quay.io/repository/thoth-station/ps-ip-ifd
+  - name: PillowPredictiveStackPsIpIfdBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-ip-ifd
+    match:
+      package_name: pillow
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-ip-ifd' that has prepared environment with 'pillow'
+        link: https://quay.io/repository/thoth-station/ps-ip-ifd
+  - name: CythonPredictiveStackPsIpIfdBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-ip-ifd
+    match:
+      package_name: cython
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-ip-ifd' that has prepared environment with 'cython'
+        link: https://quay.io/repository/thoth-station/ps-ip-ifd
+  - name: PyifdPredictiveStackPsIpIfdBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-ip-ifd
+    match:
+      package_name: pyIFD
+    run:
+      stack_info:
+      - type: INFO
+        message: Consider using a predictive stack 'ps-ip-ifd' that has prepared environment with 'pyIFD'
+        link: https://quay.io/repository/thoth-station/ps-ip-ifd
