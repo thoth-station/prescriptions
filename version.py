@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
 # Copyright(C) 2021 Project Thoth
 
-__version__ = "0.9.1"
+__version__ = "0.10.0"
