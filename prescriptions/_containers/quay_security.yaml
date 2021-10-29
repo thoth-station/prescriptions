@@ -1,0 +1,16 @@
+units:
+  boots:
+  - name: QuaySecurityTimestampInfoBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        base_images:
+          not: [null]
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          Using security information for predictable stacks based on Quay
+          scanners for quay.io/organization/thoth-station as of '2021-10-26T09:07:45.132954'
+        link: https://www.projectquay.io/

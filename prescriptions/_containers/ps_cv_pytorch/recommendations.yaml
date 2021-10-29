@@ -90,3 +90,35 @@ units:
       - type: INFO
         message: Consider using a computer vision predictable stack 'ps-cv-pytorch' that has prepared environment with 'jupyter-tensorboard'
         link: https://quay.io/repository/thoth-station/ps-cv-pytorch
+
+  wraps:
+  - name: ThothPSCVTorch190BaseImageWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: rhel
+          version: "8"
+        python_version: ==3.8
+        base_images:
+          not:
+          - quay.io/thoth-station/ps-cv-pytorch
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch
+          version: ==1.9.0
+        - name: opencv-python
+          version: ==4.5.2.54
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          Found predictive stack image that can be used with these dependencies
+        link: quay.io/thoth-station/ps-cv-pytorch:v0.1.2
+      advised_manifest_changes:
+      - file: .thoth.yaml
+        patch:
+        - name: base_image
+          value: quay.io/thoth-station/ps-cv-pytorch:v0.1.2
