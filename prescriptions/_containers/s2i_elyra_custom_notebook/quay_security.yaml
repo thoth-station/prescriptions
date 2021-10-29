@@ -1,4 +1,209 @@
 units:
+  boots:
+  - name: S2iElyraCustomNotebookVuln0QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:2569 in the base image used: The libxml2 library is a development toolbox providing the implementation of various XML standards. Security Fix(es): * libxml2: Use-after-free in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3516) * libxml2: Heap-based buffer overflow in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3517) * libxml2: Use-after-free in xmlXIncludeDoProcess() in xinclude.c (CVE-2021-3518) * libxml2: NULL pointer dereference when post-validating mixed content parsed in recovery mode (CVE-2021-3537) * libxml2: Exponential entity expansion attack bypasses all existing protection mechanisms (CVE-2021-3541) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2569
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:2569
+  - name: S2iElyraCustomNotebookVuln1QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:2354 in the base image used: The libwebp packages provide a library and tools for the WebP graphics format. WebP is an image format with a lossy compression of digital photographic images. WebP consists of a codec based on the VP8 format, and a container based on the Resource Interchange File Format (RIFF). Webmasters, web developers and browser developers can use WebP to compress, archive, and distribute digital images more efficiently. Security Fix(es): * libwebp: heap-based buffer overflow in PutLE16() (CVE-2018-25011) * libwebp: heap-based buffer overflow in WebPDecode*Into functions (CVE-2020-36328) * libwebp: use-after-free in EmitFancyRGB() in dec/io_dec.c (CVE-2020-36329) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2354
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:2354
+  - name: S2iElyraCustomNotebookVuln2QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:2717 in the base image used: The systemd packages contain systemd, a system and service manager for Linux, compatible with the SysV and LSB init scripts. It provides aggressive parallelism capabilities, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, and keeps track of processes using Linux cgroups. In addition, it supports snapshotting and restoring of the system state, maintains mount and automount points, and implements an elaborate transactional dependency-based service control logic. It can also work as a drop-in replacement for sysvinit. Security Fix(es): * systemd: uncontrolled allocation on the stack in function unit_name_path_escape leads to crash (CVE-2021-33910) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2717
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:2717
+  - name: S2iElyraCustomNotebookVuln3QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:3075 in the base image used: libuv is a multi-platform support library with a focus on asynchronous I/O.  Security Fix(es): * libuv: out-of-bounds read in uv__idna_toascii() can lead to information disclosures or crashes (CVE-2021-22918) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3075
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:3075
+  - name: S2iElyraCustomNotebookVuln4QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:3816 in the base image used: The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server. Security Fix(es): * httpd: mod_proxy: SSRF via a crafted request uri-path containing \"unix:\" (CVE-2021-40438) * httpd: mod_session: Heap overflow via a crafted SessionHeader value (CVE-2021-26691) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3816
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:3816
+  - name: S2iElyraCustomNotebookVuln5QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:3576 in the base image used: Kerberos is a network authentication system, which can improve the security of your network by eliminating the insecure practice of sending passwords over the network in unencrypted form. It allows clients and servers to authenticate to each other with the help of a trusted third party, the Kerberos key distribution center (KDC). Security Fix(es): * krb5: Sending a request containing PA-ENCRYPTED-CHALLENGE padata element without using FAST could result in NULL dereference in KDC which leads to DoS (CVE-2021-36222) * krb5: NULL pointer dereference in process_tgs_req() in kdc/do_tgs_req.c via a FAST inner body that lacks server field (CVE-2021-37750) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3576
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:3576
+  - name: S2iElyraCustomNotebookVuln6QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:2574 in the base image used: The RPM Package Manager (RPM) is a command-line driven package management system capable of installing, uninstalling, verifying, querying, and updating software packages. Security Fix(es): * rpm: Signature checks bypass via corrupted rpm package (CVE-2021-20271) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2574
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:2574
+  - name: S2iElyraCustomNotebookVuln7QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:2170 in the base image used: GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_bytes_new function on 64-bit platforms due to an implicit cast from 64 bits to 32 bits (CVE-2021-27219) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Refcounting issue causes crashes and slow workarounds (BZ#1953553)
+        link: https://access.redhat.com/errata/RHSA-2021:2170
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:2170
+  - name: S2iElyraCustomNotebookVuln8QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:3058 in the base image used: GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_byte_array_new_take function when called with a buffer of 4GB or more on a 64-bit platform (CVE-2021-27218) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3058
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:3058
+  - name: S2iElyraCustomNotebookVuln16QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:3582 in the base image used: The curl packages provide the libcurl library and the curl utility for downloading files from servers using various protocols, including HTTP, FTP, and LDAP. Security Fix(es): * curl: Content not matching hash in Metalink is not being discarded (CVE-2021-22922) * curl: Metalink download sends credentials (CVE-2021-22923) * curl: Bad connection reuse due to flawed path name checks (CVE-2021-22924) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3582
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:3582
+  - name: S2iElyraCustomNotebookVuln25QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:2575 in the base image used: The lz4 packages provide support for LZ4, a very fast, lossless compression algorithm that provides compression speeds of 400 MB/s per core and scales with multicore CPUs. It also features an extremely fast decoder that reaches speeds of multiple GB/s per core and typically reaches RAM speed limits on multicore systems. Security Fix(es): * lz4: memory corruption due to an integer overflow bug caused by memmove argument (CVE-2021-3520) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2575
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:2575
+  - name: S2iElyraCustomNotebookVuln27QuaySecurityErrorBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      stack_info:
+      - type: ERROR
+        message: >-
+          Found RHSA-2021:3057 in the base image used: The kernel packages contain the Linux kernel, the core of any Linux operating system. Security Fix(es): * kernel: race condition in net/can/bcm.c leads to local privilege escalation (CVE-2021-3609) * kernel: Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks (CVE-2021-22543) * kernel: out-of-bounds write in xt_compat_target_from_user() in net/netfilter/x_tables.c (CVE-2021-22555) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Urgent: Missing dptf_power.ko module in RHEL8 (BZ#1968381) * [mlx5] kdump over NFS fails: mlx5 driver gives error \"Stop room 95 is bigger than the SQ size 64\" (BZ#1969909) * BUG: unable to handle kernel NULL pointer dereference at 0000000000000000 in bluetooth  hci_error_reset on intel-tigerlake-h01 (BZ#1972564) * Update CIFS to kernel 5.10 (BZ#1973637) * Backport \"tick/nohz: Conditionally restart tick on idle exit\" to RHEL 8.5 (BZ#1978710) * Significant performance drop starting on kernel-4.18.0-277 visible on mmap benchmark (BZ#1980314) * Inaccessible NFS server overloads clients (native_queued_spin_lock_slowpath connotation?) (BZ#1980613) * [RHEL8.4 BUG],RialtoMLK, I915 graphic driver failed to boot with one new 120HZ panel (BZ#1981250) * act_ct: subject to DNAT tuple collision (BZ#1982494) Enhancement(s): * [Lenovo 8.5 FEAT] drivers/nvme - Update to the latest upstream (BZ#1965415)
+        link: https://access.redhat.com/errata/RHSA-2021:3057
+      not_acceptable: >-
+        The base image used has a CVE: RHSA-2021:3057
   wraps:
   - name: S2iElyraCustomNotebookVuln0QuaySecurityWarningWrap
     type: wrap
@@ -14,24 +219,11 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "The RPM Package Manager (RPM) is a command-line driven package management system capable of installing, uninstalling, verifying, querying, and updating software packages. Security Fix(es): * rpm: Signature checks bypass via corrupted rpm package (CVE-2021-20271) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2574
-  - name: S2iElyraCustomNotebookVuln0QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
       - type: ERROR
-        message: "The RPM Package Manager (RPM) is a command-line driven package management system capable of installing, uninstalling, verifying, querying, and updating software packages. Security Fix(es): * rpm: Signature checks bypass via corrupted rpm package (CVE-2021-20271) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2574
-        cve_name: RHSA-2021:2574
+        message: >-
+          The libxml2 library is a development toolbox providing the implementation of various XML standards. Security Fix(es): * libxml2: Use-after-free in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3516) * libxml2: Heap-based buffer overflow in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3517) * libxml2: Use-after-free in xmlXIncludeDoProcess() in xinclude.c (CVE-2021-3518) * libxml2: NULL pointer dereference when post-validating mixed content parsed in recovery mode (CVE-2021-3537) * libxml2: Exponential entity expansion attack bypasses all existing protection mechanisms (CVE-2021-3541) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2569
+        cve_name: RHSA-2021:2569
   - name: S2iElyraCustomNotebookVuln1QuaySecurityWarningWrap
     type: wrap
     should_include:
@@ -46,24 +238,30 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "The libxml2 library is a development toolbox providing the implementation of various XML standards. Security Fix(es): * libxml2: Use-after-free in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3516) * libxml2: Heap-based buffer overflow in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3517) * libxml2: Use-after-free in xmlXIncludeDoProcess() in xinclude.c (CVE-2021-3518) * libxml2: NULL pointer dereference when post-validating mixed content parsed in recovery mode (CVE-2021-3537) * libxml2: Exponential entity expansion attack bypasses all existing protection mechanisms (CVE-2021-3541) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2569
-  - name: S2iElyraCustomNotebookVuln1QuaySecurityErrorWrap
+      - type: ERROR
+        message: >-
+          The libwebp packages provide a library and tools for the WebP graphics format. WebP is an image format with a lossy compression of digital photographic images. WebP consists of a codec based on the VP8 format, and a container based on the Resource Interchange File Format (RIFF). Webmasters, web developers and browser developers can use WebP to compress, archive, and distribute digital images more efficiently. Security Fix(es): * libwebp: heap-based buffer overflow in PutLE16() (CVE-2018-25011) * libwebp: heap-based buffer overflow in WebPDecode*Into functions (CVE-2020-36328) * libwebp: use-after-free in EmitFancyRGB() in dec/io_dec.c (CVE-2020-36329) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2354
+        cve_name: RHSA-2021:2354
+  - name: S2iElyraCustomNotebookVuln2QuaySecurityWarningWrap
     type: wrap
     should_include:
       adviser_pipeline: true
       recommendation_types:
-      - security
+      - latest
+      - performance
+      - stable
+      - testing
       runtime_environments:
         base_images:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
       - type: ERROR
-        message: "The libxml2 library is a development toolbox providing the implementation of various XML standards. Security Fix(es): * libxml2: Use-after-free in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3516) * libxml2: Heap-based buffer overflow in xmlEncodeEntitiesInternal() in entities.c (CVE-2021-3517) * libxml2: Use-after-free in xmlXIncludeDoProcess() in xinclude.c (CVE-2021-3518) * libxml2: NULL pointer dereference when post-validating mixed content parsed in recovery mode (CVE-2021-3537) * libxml2: Exponential entity expansion attack bypasses all existing protection mechanisms (CVE-2021-3541) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2569
-        cve_name: RHSA-2021:2569
+        message: >-
+          The systemd packages contain systemd, a system and service manager for Linux, compatible with the SysV and LSB init scripts. It provides aggressive parallelism capabilities, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, and keeps track of processes using Linux cgroups. In addition, it supports snapshotting and restoring of the system state, maintains mount and automount points, and implements an elaborate transactional dependency-based service control logic. It can also work as a drop-in replacement for sysvinit. Security Fix(es): * systemd: uncontrolled allocation on the stack in function unit_name_path_escape leads to crash (CVE-2021-33910) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2717
+        cve_name: RHSA-2021:2717
   - name: S2iElyraCustomNotebookVuln3QuaySecurityWarningWrap
     type: wrap
     should_include:
@@ -78,24 +276,11 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "The kernel packages contain the Linux kernel, the core of any Linux operating system. Security Fix(es): * kernel: race condition in net/can/bcm.c leads to local privilege escalation (CVE-2021-3609) * kernel: Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks (CVE-2021-22543) * kernel: out-of-bounds write in xt_compat_target_from_user() in net/netfilter/x_tables.c (CVE-2021-22555) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Urgent: Missing dptf_power.ko module in RHEL8 (BZ#1968381) * [mlx5] kdump over NFS fails: mlx5 driver gives error \"Stop room 95 is bigger than the SQ size 64\" (BZ#1969909) * BUG: unable to handle kernel NULL pointer dereference at 0000000000000000 in bluetooth  hci_error_reset on intel-tigerlake-h01 (BZ#1972564) * Update CIFS to kernel 5.10 (BZ#1973637) * Backport \"tick/nohz: Conditionally restart tick on idle exit\" to RHEL 8.5 (BZ#1978710) * Significant performance drop starting on kernel-4.18.0-277 visible on mmap benchmark (BZ#1980314) * Inaccessible NFS server overloads clients (native_queued_spin_lock_slowpath connotation?) (BZ#1980613) * [RHEL8.4 BUG],RialtoMLK, I915 graphic driver failed to boot with one new 120HZ panel (BZ#1981250) * act_ct: subject to DNAT tuple collision (BZ#1982494) Enhancement(s): * [Lenovo 8.5 FEAT] drivers/nvme - Update to the latest upstream (BZ#1965415)"
-        link: https://access.redhat.com/errata/RHSA-2021:3057
-  - name: S2iElyraCustomNotebookVuln3QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
       - type: ERROR
-        message: "The kernel packages contain the Linux kernel, the core of any Linux operating system. Security Fix(es): * kernel: race condition in net/can/bcm.c leads to local privilege escalation (CVE-2021-3609) * kernel: Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks (CVE-2021-22543) * kernel: out-of-bounds write in xt_compat_target_from_user() in net/netfilter/x_tables.c (CVE-2021-22555) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Urgent: Missing dptf_power.ko module in RHEL8 (BZ#1968381) * [mlx5] kdump over NFS fails: mlx5 driver gives error \"Stop room 95 is bigger than the SQ size 64\" (BZ#1969909) * BUG: unable to handle kernel NULL pointer dereference at 0000000000000000 in bluetooth  hci_error_reset on intel-tigerlake-h01 (BZ#1972564) * Update CIFS to kernel 5.10 (BZ#1973637) * Backport \"tick/nohz: Conditionally restart tick on idle exit\" to RHEL 8.5 (BZ#1978710) * Significant performance drop starting on kernel-4.18.0-277 visible on mmap benchmark (BZ#1980314) * Inaccessible NFS server overloads clients (native_queued_spin_lock_slowpath connotation?) (BZ#1980613) * [RHEL8.4 BUG],RialtoMLK, I915 graphic driver failed to boot with one new 120HZ panel (BZ#1981250) * act_ct: subject to DNAT tuple collision (BZ#1982494) Enhancement(s): * [Lenovo 8.5 FEAT] drivers/nvme - Update to the latest upstream (BZ#1965415)"
-        link: https://access.redhat.com/errata/RHSA-2021:3057
-        cve_name: RHSA-2021:3057
+        message: >-
+          libuv is a multi-platform support library with a focus on asynchronous I/O.  Security Fix(es): * libuv: out-of-bounds read in uv__idna_toascii() can lead to information disclosures or crashes (CVE-2021-22918) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3075
+        cve_name: RHSA-2021:3075
   - name: S2iElyraCustomNotebookVuln4QuaySecurityWarningWrap
     type: wrap
     should_include:
@@ -110,24 +295,11 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "libuv is a multi-platform support library with a focus on asynchronous I/O.  Security Fix(es): * libuv: out-of-bounds read in uv__idna_toascii() can lead to information disclosures or crashes (CVE-2021-22918) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3075
-  - name: S2iElyraCustomNotebookVuln4QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
       - type: ERROR
-        message: "libuv is a multi-platform support library with a focus on asynchronous I/O.  Security Fix(es): * libuv: out-of-bounds read in uv__idna_toascii() can lead to information disclosures or crashes (CVE-2021-22918) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3075
-        cve_name: RHSA-2021:3075
+        message: >-
+          The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server. Security Fix(es): * httpd: mod_proxy: SSRF via a crafted request uri-path containing \"unix:\" (CVE-2021-40438) * httpd: mod_session: Heap overflow via a crafted SessionHeader value (CVE-2021-26691) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3816
+        cve_name: RHSA-2021:3816
   - name: S2iElyraCustomNotebookVuln5QuaySecurityWarningWrap
     type: wrap
     should_include:
@@ -142,24 +314,11 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server. Security Fix(es): * httpd: mod_proxy: SSRF via a crafted request uri-path containing \"unix:\" (CVE-2021-40438) * httpd: mod_session: Heap overflow via a crafted SessionHeader value (CVE-2021-26691) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3816
-  - name: S2iElyraCustomNotebookVuln5QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
       - type: ERROR
-        message: "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server. Security Fix(es): * httpd: mod_proxy: SSRF via a crafted request uri-path containing \"unix:\" (CVE-2021-40438) * httpd: mod_session: Heap overflow via a crafted SessionHeader value (CVE-2021-26691) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3816
-        cve_name: RHSA-2021:3816
+        message: >-
+          Kerberos is a network authentication system, which can improve the security of your network by eliminating the insecure practice of sending passwords over the network in unencrypted form. It allows clients and servers to authenticate to each other with the help of a trusted third party, the Kerberos key distribution center (KDC). Security Fix(es): * krb5: Sending a request containing PA-ENCRYPTED-CHALLENGE padata element without using FAST could result in NULL dereference in KDC which leads to DoS (CVE-2021-36222) * krb5: NULL pointer dereference in process_tgs_req() in kdc/do_tgs_req.c via a FAST inner body that lacks server field (CVE-2021-37750) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3576
+        cve_name: RHSA-2021:3576
   - name: S2iElyraCustomNotebookVuln6QuaySecurityWarningWrap
     type: wrap
     should_include:
@@ -174,25 +333,12 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "The systemd packages contain systemd, a system and service manager for Linux, compatible with the SysV and LSB init scripts. It provides aggressive parallelism capabilities, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, and keeps track of processes using Linux cgroups. In addition, it supports snapshotting and restoring of the system state, maintains mount and automount points, and implements an elaborate transactional dependency-based service control logic. It can also work as a drop-in replacement for sysvinit. Security Fix(es): * systemd: uncontrolled allocation on the stack in function unit_name_path_escape leads to crash (CVE-2021-33910) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2717
-  - name: S2iElyraCustomNotebookVuln6QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
       - type: ERROR
-        message: "The systemd packages contain systemd, a system and service manager for Linux, compatible with the SysV and LSB init scripts. It provides aggressive parallelism capabilities, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, and keeps track of processes using Linux cgroups. In addition, it supports snapshotting and restoring of the system state, maintains mount and automount points, and implements an elaborate transactional dependency-based service control logic. It can also work as a drop-in replacement for sysvinit. Security Fix(es): * systemd: uncontrolled allocation on the stack in function unit_name_path_escape leads to crash (CVE-2021-33910) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2717
-        cve_name: RHSA-2021:2717
-  - name: S2iElyraCustomNotebookVuln9QuaySecurityWarningWrap
+        message: >-
+          The RPM Package Manager (RPM) is a command-line driven package management system capable of installing, uninstalling, verifying, querying, and updating software packages. Security Fix(es): * rpm: Signature checks bypass via corrupted rpm package (CVE-2021-20271) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2574
+        cve_name: RHSA-2021:2574
+  - name: S2iElyraCustomNotebookVuln7QuaySecurityWarningWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -206,153 +352,12 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "The libwebp packages provide a library and tools for the WebP graphics format. WebP is an image format with a lossy compression of digital photographic images. WebP consists of a codec based on the VP8 format, and a container based on the Resource Interchange File Format (RIFF). Webmasters, web developers and browser developers can use WebP to compress, archive, and distribute digital images more efficiently. Security Fix(es): * libwebp: heap-based buffer overflow in PutLE16() (CVE-2018-25011) * libwebp: heap-based buffer overflow in WebPDecode*Into functions (CVE-2020-36328) * libwebp: use-after-free in EmitFancyRGB() in dec/io_dec.c (CVE-2020-36329) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2354
-  - name: S2iElyraCustomNotebookVuln9QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
       - type: ERROR
-        message: "The libwebp packages provide a library and tools for the WebP graphics format. WebP is an image format with a lossy compression of digital photographic images. WebP consists of a codec based on the VP8 format, and a container based on the Resource Interchange File Format (RIFF). Webmasters, web developers and browser developers can use WebP to compress, archive, and distribute digital images more efficiently. Security Fix(es): * libwebp: heap-based buffer overflow in PutLE16() (CVE-2018-25011) * libwebp: heap-based buffer overflow in WebPDecode*Into functions (CVE-2020-36328) * libwebp: use-after-free in EmitFancyRGB() in dec/io_dec.c (CVE-2020-36329) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2354
-        cve_name: RHSA-2021:2354
-  - name: S2iElyraCustomNotebookVuln10QuaySecurityWarningWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - latest
-      - performance
-      - stable
-      - testing
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: WARNING
-        message: "The lz4 packages provide support for LZ4, a very fast, lossless compression algorithm that provides compression speeds of 400 MB/s per core and scales with multicore CPUs. It also features an extremely fast decoder that reaches speeds of multiple GB/s per core and typically reaches RAM speed limits on multicore systems. Security Fix(es): * lz4: memory corruption due to an integer overflow bug caused by memmove argument (CVE-2021-3520) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2575
-  - name: S2iElyraCustomNotebookVuln10QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: ERROR
-        message: "The lz4 packages provide support for LZ4, a very fast, lossless compression algorithm that provides compression speeds of 400 MB/s per core and scales with multicore CPUs. It also features an extremely fast decoder that reaches speeds of multiple GB/s per core and typically reaches RAM speed limits on multicore systems. Security Fix(es): * lz4: memory corruption due to an integer overflow bug caused by memmove argument (CVE-2021-3520) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:2575
-        cve_name: RHSA-2021:2575
-  - name: S2iElyraCustomNotebookVuln12QuaySecurityWarningWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - latest
-      - performance
-      - stable
-      - testing
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: WARNING
-        message: "Kerberos is a network authentication system, which can improve the security of your network by eliminating the insecure practice of sending passwords over the network in unencrypted form. It allows clients and servers to authenticate to each other with the help of a trusted third party, the Kerberos key distribution center (KDC). Security Fix(es): * krb5: Sending a request containing PA-ENCRYPTED-CHALLENGE padata element without using FAST could result in NULL dereference in KDC which leads to DoS (CVE-2021-36222) * krb5: NULL pointer dereference in process_tgs_req() in kdc/do_tgs_req.c via a FAST inner body that lacks server field (CVE-2021-37750) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3576
-  - name: S2iElyraCustomNotebookVuln12QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: ERROR
-        message: "Kerberos is a network authentication system, which can improve the security of your network by eliminating the insecure practice of sending passwords over the network in unencrypted form. It allows clients and servers to authenticate to each other with the help of a trusted third party, the Kerberos key distribution center (KDC). Security Fix(es): * krb5: Sending a request containing PA-ENCRYPTED-CHALLENGE padata element without using FAST could result in NULL dereference in KDC which leads to DoS (CVE-2021-36222) * krb5: NULL pointer dereference in process_tgs_req() in kdc/do_tgs_req.c via a FAST inner body that lacks server field (CVE-2021-37750) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3576
-        cve_name: RHSA-2021:3576
-  - name: S2iElyraCustomNotebookVuln19QuaySecurityWarningWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - latest
-      - performance
-      - stable
-      - testing
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: WARNING
-        message: "The curl packages provide the libcurl library and the curl utility for downloading files from servers using various protocols, including HTTP, FTP, and LDAP. Security Fix(es): * curl: Content not matching hash in Metalink is not being discarded (CVE-2021-22922) * curl: Metalink download sends credentials (CVE-2021-22923) * curl: Bad connection reuse due to flawed path name checks (CVE-2021-22924) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3582
-  - name: S2iElyraCustomNotebookVuln19QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: ERROR
-        message: "The curl packages provide the libcurl library and the curl utility for downloading files from servers using various protocols, including HTTP, FTP, and LDAP. Security Fix(es): * curl: Content not matching hash in Metalink is not being discarded (CVE-2021-22922) * curl: Metalink download sends credentials (CVE-2021-22923) * curl: Bad connection reuse due to flawed path name checks (CVE-2021-22924) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3582
-        cve_name: RHSA-2021:3582
-  - name: S2iElyraCustomNotebookVuln21QuaySecurityWarningWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - latest
-      - performance
-      - stable
-      - testing
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: WARNING
-        message: "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_bytes_new function on 64-bit platforms due to an implicit cast from 64 bits to 32 bits (CVE-2021-27219) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Refcounting issue causes crashes and slow workarounds (BZ#1953553)"
-        link: https://access.redhat.com/errata/RHSA-2021:2170
-  - name: S2iElyraCustomNotebookVuln21QuaySecurityErrorWrap
-    type: wrap
-    should_include:
-      adviser_pipeline: true
-      recommendation_types:
-      - security
-      runtime_environments:
-        base_images:
-        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
-    run:
-      justification:
-      - type: ERROR
-        message: "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_bytes_new function on 64-bit platforms due to an implicit cast from 64 bits to 32 bits (CVE-2021-27219) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Refcounting issue causes crashes and slow workarounds (BZ#1953553)"
+        message: >-
+          GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_bytes_new function on 64-bit platforms due to an implicit cast from 64 bits to 32 bits (CVE-2021-27219) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Refcounting issue causes crashes and slow workarounds (BZ#1953553)
         link: https://access.redhat.com/errata/RHSA-2021:2170
         cve_name: RHSA-2021:2170
-  - name: S2iElyraCustomNotebookVuln22QuaySecurityWarningWrap
+  - name: S2iElyraCustomNotebookVuln8QuaySecurityWarningWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -366,21 +371,65 @@ units:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
-      - type: WARNING
-        message: "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_byte_array_new_take function when called with a buffer of 4GB or more on a 64-bit platform (CVE-2021-27218) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
+      - type: ERROR
+        message: >-
+          GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_byte_array_new_take function when called with a buffer of 4GB or more on a 64-bit platform (CVE-2021-27218) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
         link: https://access.redhat.com/errata/RHSA-2021:3058
-  - name: S2iElyraCustomNotebookVuln22QuaySecurityErrorWrap
+        cve_name: RHSA-2021:3058
+  - name: S2iElyraCustomNotebookVuln16QuaySecurityWarningWrap
     type: wrap
     should_include:
       adviser_pipeline: true
       recommendation_types:
-      - security
+      - latest
+      - performance
+      - stable
+      - testing
       runtime_environments:
         base_images:
         - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
     run:
       justification:
       - type: ERROR
-        message: "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures. Security Fix(es): * glib: integer overflow in g_byte_array_new_take function when called with a buffer of 4GB or more on a 64-bit platform (CVE-2021-27218) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section."
-        link: https://access.redhat.com/errata/RHSA-2021:3058
-        cve_name: RHSA-2021:3058
+        message: >-
+          The curl packages provide the libcurl library and the curl utility for downloading files from servers using various protocols, including HTTP, FTP, and LDAP. Security Fix(es): * curl: Content not matching hash in Metalink is not being discarded (CVE-2021-22922) * curl: Metalink download sends credentials (CVE-2021-22923) * curl: Bad connection reuse due to flawed path name checks (CVE-2021-22924) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:3582
+        cve_name: RHSA-2021:3582
+  - name: S2iElyraCustomNotebookVuln25QuaySecurityWarningWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - stable
+      - testing
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      justification:
+      - type: ERROR
+        message: >-
+          The lz4 packages provide support for LZ4, a very fast, lossless compression algorithm that provides compression speeds of 400 MB/s per core and scales with multicore CPUs. It also features an extremely fast decoder that reaches speeds of multiple GB/s per core and typically reaches RAM speed limits on multicore systems. Security Fix(es): * lz4: memory corruption due to an integer overflow bug caused by memmove argument (CVE-2021-3520) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+        link: https://access.redhat.com/errata/RHSA-2021:2575
+        cve_name: RHSA-2021:2575
+  - name: S2iElyraCustomNotebookVuln27QuaySecurityWarningWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - stable
+      - testing
+      runtime_environments:
+        base_images:
+        - quay.io/thoth-station/s2i-elyra-custom-notebook:v0.3.1
+    run:
+      justification:
+      - type: ERROR
+        message: >-
+          The kernel packages contain the Linux kernel, the core of any Linux operating system. Security Fix(es): * kernel: race condition in net/can/bcm.c leads to local privilege escalation (CVE-2021-3609) * kernel: Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks (CVE-2021-22543) * kernel: out-of-bounds write in xt_compat_target_from_user() in net/netfilter/x_tables.c (CVE-2021-22555) For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section. Bug Fix(es): * Urgent: Missing dptf_power.ko module in RHEL8 (BZ#1968381) * [mlx5] kdump over NFS fails: mlx5 driver gives error \"Stop room 95 is bigger than the SQ size 64\" (BZ#1969909) * BUG: unable to handle kernel NULL pointer dereference at 0000000000000000 in bluetooth  hci_error_reset on intel-tigerlake-h01 (BZ#1972564) * Update CIFS to kernel 5.10 (BZ#1973637) * Backport \"tick/nohz: Conditionally restart tick on idle exit\" to RHEL 8.5 (BZ#1978710) * Significant performance drop starting on kernel-4.18.0-277 visible on mmap benchmark (BZ#1980314) * Inaccessible NFS server overloads clients (native_queued_spin_lock_slowpath connotation?) (BZ#1980613) * [RHEL8.4 BUG],RialtoMLK, I915 graphic driver failed to boot with one new 120HZ panel (BZ#1981250) * act_ct: subject to DNAT tuple collision (BZ#1982494) Enhancement(s): * [Lenovo 8.5 FEAT] drivers/nvme - Update to the latest upstream (BZ#1965415)
+        link: https://access.redhat.com/errata/RHSA-2021:3057
+        cve_name: RHSA-2021:3057
