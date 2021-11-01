@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Attrdict201ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrdict
+          version: "!=2.0.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'attrdict' in version '2.0.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: attrdict
+  - name: Attrdict201TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrdict
+          version: ==2.0.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'attrdict' in version '2.0.1' is popular within Thoth community
+        link: thoth_community
+        package_name: attrdict

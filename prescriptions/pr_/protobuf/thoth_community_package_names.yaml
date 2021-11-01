@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProtobufTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: protobuf
+    run:
+      justification:
+      - type: INFO
+        message: Package 'protobuf' is popular within Thoth community
+        link: thoth_community
+        package_name: protobuf

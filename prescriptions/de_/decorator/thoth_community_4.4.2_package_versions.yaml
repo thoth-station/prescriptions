@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Decorator442ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: decorator
+          version: "!=4.4.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'decorator' in version '4.4.2' which is popular within Thoth community
+        link: thoth_community
+        package_name: decorator
+  - name: Decorator442TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: decorator
+          version: ==4.4.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'decorator' in version '4.4.2' is popular within Thoth community
+        link: thoth_community
+        package_name: decorator

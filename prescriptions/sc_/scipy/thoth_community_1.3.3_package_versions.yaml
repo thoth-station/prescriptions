@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Scipy133ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scipy
+          version: "!=1.3.3"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'scipy' in version '1.3.3' which is popular within Thoth community
+        link: thoth_community
+        package_name: scipy
+  - name: Scipy133TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scipy
+          version: ==1.3.3
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'scipy' in version '1.3.3' is popular within Thoth community
+        link: thoth_community
+        package_name: scipy

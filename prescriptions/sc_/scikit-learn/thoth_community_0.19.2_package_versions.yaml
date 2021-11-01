@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: ScikitLearn0192ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-learn
+          version: "!=0.19.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'scikit-learn' in version '0.19.2' which is popular within Thoth community
+        link: thoth_community
+        package_name: scikit-learn
+  - name: ScikitLearn0192TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-learn
+          version: ==0.19.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'scikit-learn' in version '0.19.2' is popular within Thoth community
+        link: thoth_community
+        package_name: scikit-learn

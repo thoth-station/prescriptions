@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Pip2021ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip
+          version: "!=20.2.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pip' in version '20.2.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: pip
+  - name: Pip2021TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip
+          version: ==20.2.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pip' in version '20.2.1' is popular within Thoth community
+        link: thoth_community
+        package_name: pip
