@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NetworkxTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: networkx
+    run:
+      justification:
+      - type: INFO
+        message: Package 'networkx' is popular within Thoth community
+        link: thoth_community
+        package_name: networkx

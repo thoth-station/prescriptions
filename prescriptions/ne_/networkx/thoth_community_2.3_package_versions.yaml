@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Networkx23ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: networkx
+          version: "!=2.3"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'networkx' in version '2.3' which is popular within Thoth community
+        link: thoth_community
+        package_name: networkx
+  - name: Networkx23TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: networkx
+          version: ==2.3
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'networkx' in version '2.3' is popular within Thoth community
+        link: thoth_community
+        package_name: networkx

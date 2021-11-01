@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Setuptools4063ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools
+          version: "!=40.6.3"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'setuptools' in version '40.6.3' which is popular within Thoth community
+        link: thoth_community
+        package_name: setuptools
+  - name: Setuptools4063TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools
+          version: ==40.6.3
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'setuptools' in version '40.6.3' is popular within Thoth community
+        link: thoth_community
+        package_name: setuptools

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Numpy1190ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy
+          version: "!=1.19.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'numpy' in version '1.19.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: numpy
+  - name: Numpy1190TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy
+          version: ==1.19.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'numpy' in version '1.19.0' is popular within Thoth community
+        link: thoth_community
+        package_name: numpy

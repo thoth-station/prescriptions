@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Six1150ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: six
+          version: "!=1.15.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'six' in version '1.15.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: six
+  - name: Six1150TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: six
+          version: ==1.15.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'six' in version '1.15.0' is popular within Thoth community
+        link: thoth_community
+        package_name: six

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: PrometheusClient080ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-client
+          version: "!=0.8.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'prometheus-client' in version '0.8.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: prometheus-client
+  - name: PrometheusClient080TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-client
+          version: ==0.8.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'prometheus-client' in version '0.8.0' is popular within Thoth community
+        link: thoth_community
+        package_name: prometheus-client

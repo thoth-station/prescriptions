@@ -1,0 +1,26 @@
+units:
+  boots:
+  - name: Python36TopPythonVersionsBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        python_version: ==3.6
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          Python in version '3.6' is popular within Thoth community
+        link: thoth_community
+  - name: Python36ConsiderTopPythonVersionsBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        python_version: "!=3.6"
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          Consider switching to Python in version '3.6' which is popular within Thoth community
+        link: thoth_community

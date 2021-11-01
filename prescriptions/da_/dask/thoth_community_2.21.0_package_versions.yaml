@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Dask2210ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask
+          version: "!=2.21.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'dask' in version '2.21.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: dask
+  - name: Dask2210TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask
+          version: ==2.21.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'dask' in version '2.21.0' is popular within Thoth community
+        link: thoth_community
+        package_name: dask

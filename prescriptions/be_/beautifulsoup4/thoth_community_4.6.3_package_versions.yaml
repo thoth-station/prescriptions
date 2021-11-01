@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Beautifulsoup4463ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beautifulsoup4
+          version: "!=4.6.3"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'beautifulsoup4' in version '4.6.3' which is popular within Thoth community
+        link: thoth_community
+        package_name: beautifulsoup4
+  - name: Beautifulsoup4463TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beautifulsoup4
+          version: ==4.6.3
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'beautifulsoup4' in version '4.6.3' is popular within Thoth community
+        link: thoth_community
+        package_name: beautifulsoup4

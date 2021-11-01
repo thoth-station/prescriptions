@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Argparse140ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argparse
+          version: "!=1.4.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'argparse' in version '1.4.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: argparse
+  - name: Argparse140TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argparse
+          version: ==1.4.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'argparse' in version '1.4.0' is popular within Thoth community
+        link: thoth_community
+        package_name: argparse
