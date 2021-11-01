@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Platformdirs210ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: platformdirs
+          version: "!=2.1.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'platformdirs' in version '2.1.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: platformdirs
+  - name: Platformdirs210TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: platformdirs
+          version: ==2.1.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'platformdirs' in version '2.1.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: platformdirs

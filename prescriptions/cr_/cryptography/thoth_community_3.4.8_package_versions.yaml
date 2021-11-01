@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Cryptography348ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cryptography
+          version: "!=3.4.8"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'cryptography' in version '3.4.8' which is popular within Thoth community
+        link: thoth_community
+        package_name: cryptography
+  - name: Cryptography348TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cryptography
+          version: ==3.4.8
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'cryptography' in version '3.4.8' is popular within Thoth community
+        link: thoth_community
+        package_name: cryptography

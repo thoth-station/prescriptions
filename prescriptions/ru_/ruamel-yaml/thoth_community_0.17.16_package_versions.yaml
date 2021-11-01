@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: RuamelYaml01716ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruamel-yaml
+          version: "!=0.17.16"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'ruamel-yaml' in version '0.17.16' which is popular within Thoth community
+        link: thoth_community
+        package_name: ruamel-yaml
+  - name: RuamelYaml01716TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruamel-yaml
+          version: ==0.17.16
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'ruamel-yaml' in version '0.17.16' is popular within Thoth community
+        link: thoth_community
+        package_name: ruamel-yaml

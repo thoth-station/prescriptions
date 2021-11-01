@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: ImportlibMetadata481ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib-metadata
+          version: "!=4.8.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'importlib-metadata' in version '4.8.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: importlib-metadata
+  - name: ImportlibMetadata481TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib-metadata
+          version: ==4.8.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'importlib-metadata' in version '4.8.1' is popular within Thoth community
+        link: thoth_community
+        package_name: importlib-metadata

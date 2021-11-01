@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Cfgv330ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfgv
+          version: "!=3.3.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'cfgv' in version '3.3.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: cfgv
+  - name: Cfgv330TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfgv
+          version: ==3.3.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'cfgv' in version '3.3.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: cfgv

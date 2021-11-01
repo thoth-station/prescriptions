@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Grpcio1400ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpcio
+          version: "!=1.40.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'grpcio' in version '1.40.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: grpcio
+  - name: Grpcio1400TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpcio
+          version: ==1.40.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'grpcio' in version '1.40.0' is popular within Thoth community
+        link: thoth_community
+        package_name: grpcio

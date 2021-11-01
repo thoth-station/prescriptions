@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: ThothAnalyzer017ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-analyzer
+          version: "!=0.1.7"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'thoth-analyzer' in version '0.1.7' which is popular within Thoth community
+        link: thoth_community
+        package_name: thoth-analyzer
+  - name: ThothAnalyzer017TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-analyzer
+          version: ==0.1.7
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'thoth-analyzer' in version '0.1.7' is popular within Thoth community
+        link: thoth_community
+        package_name: thoth-analyzer

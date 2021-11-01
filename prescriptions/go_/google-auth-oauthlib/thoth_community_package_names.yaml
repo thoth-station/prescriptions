@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GoogleAuthOauthlibTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-auth-oauthlib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'google-auth-oauthlib' is popular within Thoth community
+        link: thoth_community
+        package_name: google-auth-oauthlib

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Aiohttp374post0ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp
+          version: "!=3.7.4.post0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'aiohttp' in version '3.7.4.post0' which is popular within Thoth community
+        link: thoth_community
+        package_name: aiohttp
+  - name: Aiohttp374post0TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp
+          version: ==3.7.4.post0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'aiohttp' in version '3.7.4.post0' is popular within Thoth community
+        link: thoth_community
+        package_name: aiohttp

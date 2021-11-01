@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CoverageTopDevPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage
+    run:
+      justification:
+      - type: INFO
+        message: Package 'coverage' is popular as a development dependency within Thoth community
+        link: thoth_community
+        package_name: coverage

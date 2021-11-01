@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NodeenvTopDevPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nodeenv
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nodeenv' is popular as a development dependency within Thoth community
+        link: thoth_community
+        package_name: nodeenv

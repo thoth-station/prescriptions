@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: GooglePasta020ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-pasta
+          version: "!=0.2.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'google-pasta' in version '0.2.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: google-pasta
+  - name: GooglePasta020TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-pasta
+          version: ==0.2.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'google-pasta' in version '0.2.0' is popular within Thoth community
+        link: thoth_community
+        package_name: google-pasta

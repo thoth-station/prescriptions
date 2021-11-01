@@ -1,0 +1,26 @@
+units:
+  boots:
+  - name: Python38TopPythonVersionsBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        python_version: ==3.8
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          Python in version '3.8' is popular within Thoth community
+        link: thoth_community
+  - name: Python38ConsiderTopPythonVersionsBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        python_version: "!=3.8"
+    run:
+      stack_info:
+      - type: INFO
+        message: >-
+          Consider switching to Python in version '3.8' which is popular within Thoth community
+        link: thoth_community

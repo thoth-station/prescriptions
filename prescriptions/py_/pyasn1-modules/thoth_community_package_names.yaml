@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Pyasn1ModulesTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyasn1-modules
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyasn1-modules' is popular within Thoth community
+        link: thoth_community
+        package_name: pyasn1-modules

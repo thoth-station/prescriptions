@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GastTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gast
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gast' is popular within Thoth community
+        link: thoth_community
+        package_name: gast

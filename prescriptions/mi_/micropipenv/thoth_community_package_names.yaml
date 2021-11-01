@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MicropipenvTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: micropipenv
+    run:
+      justification:
+      - type: INFO
+        message: Package 'micropipenv' is popular within Thoth community
+        link: thoth_community
+        package_name: micropipenv

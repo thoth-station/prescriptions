@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JupyterPackagingTopDevPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-packaging
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jupyter-packaging' is popular as a development dependency within Thoth community
+        link: thoth_community
+        package_name: jupyter-packaging

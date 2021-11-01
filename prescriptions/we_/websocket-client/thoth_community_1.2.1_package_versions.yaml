@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: WebsocketClient121ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websocket-client
+          version: "!=1.2.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'websocket-client' in version '1.2.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: websocket-client
+  - name: WebsocketClient121TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websocket-client
+          version: ==1.2.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'websocket-client' in version '1.2.1' is popular within Thoth community
+        link: thoth_community
+        package_name: websocket-client

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Ptyprocess070ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptyprocess
+          version: "!=0.7.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'ptyprocess' in version '0.7.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: ptyprocess
+  - name: Ptyprocess070TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptyprocess
+          version: ==0.7.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'ptyprocess' in version '0.7.0' is popular within Thoth community
+        link: thoth_community
+        package_name: ptyprocess

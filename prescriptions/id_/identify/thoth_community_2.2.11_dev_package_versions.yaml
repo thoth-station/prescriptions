@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Identify2211ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: identify
+          version: "!=2.2.11"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'identify' in version '2.2.11' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: identify
+  - name: Identify2211TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: identify
+          version: ==2.2.11
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'identify' in version '2.2.11' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: identify

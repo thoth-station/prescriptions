@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Pytest624ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest
+          version: "!=6.2.4"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pytest' in version '6.2.4' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pytest
+  - name: Pytest624TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest
+          version: ==6.2.4
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pytest' in version '6.2.4' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pytest

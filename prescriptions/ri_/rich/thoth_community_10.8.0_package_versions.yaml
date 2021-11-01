@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Rich1080ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rich
+          version: "!=10.8.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'rich' in version '10.8.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: rich
+  - name: Rich1080TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rich
+          version: ==10.8.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'rich' in version '10.8.0' is popular within Thoth community
+        link: thoth_community
+        package_name: rich

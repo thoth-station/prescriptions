@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Cffi1146ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cffi
+          version: "!=1.14.6"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'cffi' in version '1.14.6' which is popular within Thoth community
+        link: thoth_community
+        package_name: cffi
+  - name: Cffi1146TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cffi
+          version: ==1.14.6
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'cffi' in version '1.14.6' is popular within Thoth community
+        link: thoth_community
+        package_name: cffi

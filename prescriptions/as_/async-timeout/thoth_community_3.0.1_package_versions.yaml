@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: AsyncTimeout301ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: async-timeout
+          version: "!=3.0.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'async-timeout' in version '3.0.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: async-timeout
+  - name: AsyncTimeout301TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: async-timeout
+          version: ==3.0.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'async-timeout' in version '3.0.1' is popular within Thoth community
+        link: thoth_community
+        package_name: async-timeout

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Pexpect480ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pexpect
+          version: "!=4.8.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pexpect' in version '4.8.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: pexpect
+  - name: Pexpect480TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pexpect
+          version: ==4.8.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pexpect' in version '4.8.0' is popular within Thoth community
+        link: thoth_community
+        package_name: pexpect

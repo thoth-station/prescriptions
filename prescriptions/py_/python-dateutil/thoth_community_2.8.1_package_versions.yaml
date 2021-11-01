@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: PythonDateutil281ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dateutil
+          version: "!=2.8.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'python-dateutil' in version '2.8.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: python-dateutil
+  - name: PythonDateutil281TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dateutil
+          version: ==2.8.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'python-dateutil' in version '2.8.1' is popular within Thoth community
+        link: thoth_community
+        package_name: python-dateutil

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Keras260ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras
+          version: "!=2.6.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'keras' in version '2.6.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: keras
+  - name: Keras260TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras
+          version: ==2.6.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'keras' in version '2.6.0' is popular within Thoth community
+        link: thoth_community
+        package_name: keras

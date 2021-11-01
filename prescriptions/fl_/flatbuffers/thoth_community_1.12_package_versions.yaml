@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Flatbuffers112ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatbuffers
+          version: "!=1.12"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'flatbuffers' in version '1.12' which is popular within Thoth community
+        link: thoth_community
+        package_name: flatbuffers
+  - name: Flatbuffers112TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatbuffers
+          version: ==1.12
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'flatbuffers' in version '1.12' is popular within Thoth community
+        link: thoth_community
+        package_name: flatbuffers

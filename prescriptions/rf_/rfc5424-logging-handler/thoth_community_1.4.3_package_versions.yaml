@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Rfc5424LoggingHandler143ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc5424-logging-handler
+          version: "!=1.4.3"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'rfc5424-logging-handler' in version '1.4.3' which is popular within Thoth community
+        link: thoth_community
+        package_name: rfc5424-logging-handler
+  - name: Rfc5424LoggingHandler143TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc5424-logging-handler
+          version: ==1.4.3
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'rfc5424-logging-handler' in version '1.4.3' is popular within Thoth community
+        link: thoth_community
+        package_name: rfc5424-logging-handler

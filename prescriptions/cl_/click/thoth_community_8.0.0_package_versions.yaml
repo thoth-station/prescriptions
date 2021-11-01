@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Click800ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click
+          version: "!=8.0.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'click' in version '8.0.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: click
+  - name: Click800TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click
+          version: ==8.0.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'click' in version '8.0.0' is popular within Thoth community
+        link: thoth_community
+        package_name: click

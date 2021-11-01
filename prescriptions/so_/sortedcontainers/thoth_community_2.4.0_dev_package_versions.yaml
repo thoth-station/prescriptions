@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Sortedcontainers240ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sortedcontainers
+          version: "!=2.4.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'sortedcontainers' in version '2.4.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: sortedcontainers
+  - name: Sortedcontainers240TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sortedcontainers
+          version: ==2.4.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'sortedcontainers' in version '2.4.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: sortedcontainers

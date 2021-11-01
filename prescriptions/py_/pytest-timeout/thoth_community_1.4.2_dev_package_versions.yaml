@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: PytestTimeout142ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-timeout
+          version: "!=1.4.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pytest-timeout' in version '1.4.2' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pytest-timeout
+  - name: PytestTimeout142TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-timeout
+          version: ==1.4.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pytest-timeout' in version '1.4.2' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pytest-timeout

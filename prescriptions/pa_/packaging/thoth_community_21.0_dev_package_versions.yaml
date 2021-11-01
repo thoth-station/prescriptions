@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Packaging210ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: packaging
+          version: "!=21.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'packaging' in version '21.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: packaging
+  - name: Packaging210TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: packaging
+          version: ==21.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'packaging' in version '21.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: packaging

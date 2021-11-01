@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: BackportsZoneinfo021ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-zoneinfo
+          version: "!=0.2.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'backports-zoneinfo' in version '0.2.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: backports-zoneinfo
+  - name: BackportsZoneinfo021TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-zoneinfo
+          version: ==0.2.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'backports-zoneinfo' in version '0.2.1' is popular within Thoth community
+        link: thoth_community
+        package_name: backports-zoneinfo

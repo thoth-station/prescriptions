@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Markupsafe201ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markupsafe
+          version: "!=2.0.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'markupsafe' in version '2.0.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: markupsafe
+  - name: Markupsafe201TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markupsafe
+          version: ==2.0.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'markupsafe' in version '2.0.1' is popular within Thoth community
+        link: thoth_community
+        package_name: markupsafe

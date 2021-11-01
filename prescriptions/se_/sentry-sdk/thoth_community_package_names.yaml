@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SentrySdkTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentry-sdk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sentry-sdk' is popular within Thoth community
+        link: thoth_community
+        package_name: sentry-sdk

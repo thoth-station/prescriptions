@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Rsa472ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rsa
+          version: "!=4.7.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'rsa' in version '4.7.2' which is popular within Thoth community
+        link: thoth_community
+        package_name: rsa
+  - name: Rsa472TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rsa
+          version: ==4.7.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'rsa' in version '4.7.2' is popular within Thoth community
+        link: thoth_community
+        package_name: rsa

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Requests2251ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests
+          version: "!=2.25.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'requests' in version '2.25.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: requests
+  - name: Requests2251TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests
+          version: ==2.25.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'requests' in version '2.25.1' is popular within Thoth community
+        link: thoth_community
+        package_name: requests

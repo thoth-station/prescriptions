@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsEntryPointsSelectableTopDevPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-entry-points-selectable
+    run:
+      justification:
+      - type: INFO
+        message: Package 'backports-entry-points-selectable' is popular as a development dependency within Thoth community
+        link: thoth_community
+        package_name: backports-entry-points-selectable

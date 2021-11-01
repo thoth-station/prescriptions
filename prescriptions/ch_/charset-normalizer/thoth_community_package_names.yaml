@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CharsetNormalizerTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: charset-normalizer
+    run:
+      justification:
+      - type: INFO
+        message: Package 'charset-normalizer' is popular within Thoth community
+        link: thoth_community
+        package_name: charset-normalizer

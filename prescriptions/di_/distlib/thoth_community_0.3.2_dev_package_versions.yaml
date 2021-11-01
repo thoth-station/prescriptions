@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Distlib032ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distlib
+          version: "!=0.3.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'distlib' in version '0.3.2' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: distlib
+  - name: Distlib032TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distlib
+          version: ==0.3.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'distlib' in version '0.3.2' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: distlib

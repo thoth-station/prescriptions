@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: GoogleAuthOauthlib046ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-auth-oauthlib
+          version: "!=0.4.6"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'google-auth-oauthlib' in version '0.4.6' which is popular within Thoth community
+        link: thoth_community
+        package_name: google-auth-oauthlib
+  - name: GoogleAuthOauthlib046TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-auth-oauthlib
+          version: ==0.4.6
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'google-auth-oauthlib' in version '0.4.6' is popular within Thoth community
+        link: thoth_community
+        package_name: google-auth-oauthlib

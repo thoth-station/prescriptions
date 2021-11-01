@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Yaspin150ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yaspin
+          version: "!=1.5.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'yaspin' in version '1.5.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: yaspin
+  - name: Yaspin150TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yaspin
+          version: ==1.5.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'yaspin' in version '1.5.0' is popular within Thoth community
+        link: thoth_community
+        package_name: yaspin

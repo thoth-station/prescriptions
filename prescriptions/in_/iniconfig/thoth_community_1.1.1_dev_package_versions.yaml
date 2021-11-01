@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Iniconfig111ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iniconfig
+          version: "!=1.1.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'iniconfig' in version '1.1.1' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: iniconfig
+  - name: Iniconfig111TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iniconfig
+          version: ==1.1.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'iniconfig' in version '1.1.1' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: iniconfig

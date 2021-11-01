@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Lxml463ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lxml
+          version: "!=4.6.3"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'lxml' in version '4.6.3' which is popular within Thoth community
+        link: thoth_community
+        package_name: lxml
+  - name: Lxml463TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lxml
+          version: ==4.6.3
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'lxml' in version '4.6.3' is popular within Thoth community
+        link: thoth_community
+        package_name: lxml

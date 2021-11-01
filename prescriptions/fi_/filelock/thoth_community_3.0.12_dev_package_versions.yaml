@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Filelock3012ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: filelock
+          version: "!=3.0.12"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'filelock' in version '3.0.12' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: filelock
+  - name: Filelock3012TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: filelock
+          version: ==3.0.12
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'filelock' in version '3.0.12' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: filelock

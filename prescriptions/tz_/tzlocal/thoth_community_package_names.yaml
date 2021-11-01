@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TzlocalTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tzlocal
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tzlocal' is popular within Thoth community
+        link: thoth_community
+        package_name: tzlocal

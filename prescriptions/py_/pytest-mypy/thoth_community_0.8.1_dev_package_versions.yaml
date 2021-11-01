@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: PytestMypy081ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-mypy
+          version: "!=0.8.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pytest-mypy' in version '0.8.1' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pytest-mypy
+  - name: PytestMypy081TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-mypy
+          version: ==0.8.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pytest-mypy' in version '0.8.1' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pytest-mypy

@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Virtualenv2060ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: virtualenv
+          version: "!=20.6.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'virtualenv' in version '20.6.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: virtualenv
+  - name: Virtualenv2060TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: virtualenv
+          version: ==20.6.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'virtualenv' in version '20.6.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: virtualenv

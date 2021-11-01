@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SemanticVersionTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semantic-version
+    run:
+      justification:
+      - type: INFO
+        message: Package 'semantic-version' is popular within Thoth community
+        link: thoth_community
+        package_name: semantic-version

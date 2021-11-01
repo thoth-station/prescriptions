@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Py1100ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py
+          version: "!=1.10.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'py' in version '1.10.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: py
+  - name: Py1100TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py
+          version: ==1.10.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'py' in version '1.10.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: py

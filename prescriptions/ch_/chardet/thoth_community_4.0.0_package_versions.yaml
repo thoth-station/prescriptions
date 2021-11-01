@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Chardet400ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chardet
+          version: "!=4.0.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'chardet' in version '4.0.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: chardet
+  - name: Chardet400TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chardet
+          version: ==4.0.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'chardet' in version '4.0.0' is popular within Thoth community
+        link: thoth_community
+        package_name: chardet

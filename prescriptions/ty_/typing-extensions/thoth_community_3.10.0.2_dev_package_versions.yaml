@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: TypingExtensions31002ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-extensions
+          version: "!=3.10.0.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'typing-extensions' in version '3.10.0.2' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: typing-extensions
+  - name: TypingExtensions31002TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-extensions
+          version: ==3.10.0.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'typing-extensions' in version '3.10.0.2' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: typing-extensions

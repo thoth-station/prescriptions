@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: AbslPy0130ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: absl-py
+          version: "!=0.13.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'absl-py' in version '0.13.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: absl-py
+  - name: AbslPy0130TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: absl-py
+          version: ==0.13.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'absl-py' in version '0.13.0' is popular within Thoth community
+        link: thoth_community
+        package_name: absl-py

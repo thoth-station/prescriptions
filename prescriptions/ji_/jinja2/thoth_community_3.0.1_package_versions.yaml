@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Jinja2301ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2
+          version: "!=3.0.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'jinja2' in version '3.0.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: jinja2
+  - name: Jinja2301TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2
+          version: ==3.0.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'jinja2' in version '3.0.1' is popular within Thoth community
+        link: thoth_community
+        package_name: jinja2

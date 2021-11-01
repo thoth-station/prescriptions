@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Pyrsistent0180ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrsistent
+          version: "!=0.18.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pyrsistent' in version '0.18.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: pyrsistent
+  - name: Pyrsistent0180TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrsistent
+          version: ==0.18.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pyrsistent' in version '0.18.0' is popular within Thoth community
+        link: thoth_community
+        package_name: pyrsistent

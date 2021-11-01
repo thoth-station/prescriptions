@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TensorboardDataServerTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard-data-server
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tensorboard-data-server' is popular within Thoth community
+        link: thoth_community
+        package_name: tensorboard-data-server

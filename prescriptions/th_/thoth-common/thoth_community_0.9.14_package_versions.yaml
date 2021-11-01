@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: ThothCommon0914ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-common
+          version: "!=0.9.14"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'thoth-common' in version '0.9.14' which is popular within Thoth community
+        link: thoth_community
+        package_name: thoth-common
+  - name: ThothCommon0914TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-common
+          version: ==0.9.14
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'thoth-common' in version '0.9.14' is popular within Thoth community
+        link: thoth_community
+        package_name: thoth-common

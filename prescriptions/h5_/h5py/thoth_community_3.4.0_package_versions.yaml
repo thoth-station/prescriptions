@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: H5py340ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h5py
+          version: "!=3.4.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'h5py' in version '3.4.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: h5py
+  - name: H5py340TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h5py
+          version: ==3.4.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'h5py' in version '3.4.0' is popular within Thoth community
+        link: thoth_community
+        package_name: h5py

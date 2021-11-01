@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Coverage55ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage
+          version: "!=5.5"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'coverage' in version '5.5' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: coverage
+  - name: Coverage55TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage
+          version: ==5.5
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'coverage' in version '5.5' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: coverage

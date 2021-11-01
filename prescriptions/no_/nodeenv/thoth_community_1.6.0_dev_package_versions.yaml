@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Nodeenv160ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nodeenv
+          version: "!=1.6.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'nodeenv' in version '1.6.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: nodeenv
+  - name: Nodeenv160TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nodeenv
+          version: ==1.6.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'nodeenv' in version '1.6.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: nodeenv

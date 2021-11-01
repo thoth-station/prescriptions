@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Certifi2021530ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certifi
+          version: "!=2021.5.30"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'certifi' in version '2021.5.30' which is popular within Thoth community
+        link: thoth_community
+        package_name: certifi
+  - name: Certifi2021530TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certifi
+          version: ==2021.5.30
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'certifi' in version '2021.5.30' is popular within Thoth community
+        link: thoth_community
+        package_name: certifi

@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ItsdangerousTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itsdangerous
+    run:
+      justification:
+      - type: INFO
+        message: Package 'itsdangerous' is popular within Thoth community
+        link: thoth_community
+        package_name: itsdangerous

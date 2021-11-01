@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Soupsieve221ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: soupsieve
+          version: "!=2.2.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'soupsieve' in version '2.2.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: soupsieve
+  - name: Soupsieve221TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: soupsieve
+          version: ==2.2.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'soupsieve' in version '2.2.1' is popular within Thoth community
+        link: thoth_community
+        package_name: soupsieve

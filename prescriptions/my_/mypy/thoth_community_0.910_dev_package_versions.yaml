@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Mypy0910ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy
+          version: "!=0.910"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'mypy' in version '0.910' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: mypy
+  - name: Mypy0910TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy
+          version: ==0.910
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'mypy' in version '0.910' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: mypy

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Invectio006ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invectio
+          version: "!=0.0.6"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'invectio' in version '0.0.6' which is popular within Thoth community
+        link: thoth_community
+        package_name: invectio
+  - name: Invectio006TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invectio
+          version: ==0.0.6
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'invectio' in version '0.0.6' is popular within Thoth community
+        link: thoth_community
+        package_name: invectio

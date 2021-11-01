@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Kubernetes801ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes
+          version: "!=8.0.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'kubernetes' in version '8.0.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: kubernetes
+  - name: Kubernetes801TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes
+          version: ==8.0.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'kubernetes' in version '8.0.1' is popular within Thoth community
+        link: thoth_community
+        package_name: kubernetes

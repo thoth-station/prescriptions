@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Wheel0362ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel
+          version: "!=0.36.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'wheel' in version '0.36.2' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: wheel
+  - name: Wheel0362TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel
+          version: ==0.36.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'wheel' in version '0.36.2' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: wheel

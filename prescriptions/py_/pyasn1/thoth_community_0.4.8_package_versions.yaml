@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Pyasn1048ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyasn1
+          version: "!=0.4.8"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pyasn1' in version '0.4.8' which is popular within Thoth community
+        link: thoth_community
+        package_name: pyasn1
+  - name: Pyasn1048TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyasn1
+          version: ==0.4.8
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pyasn1' in version '0.4.8' is popular within Thoth community
+        link: thoth_community
+        package_name: pyasn1

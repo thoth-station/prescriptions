@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: RuamelYamlClib026ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruamel-yaml-clib
+          version: "!=0.2.6"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'ruamel-yaml-clib' in version '0.2.6' which is popular within Thoth community
+        link: thoth_community
+        package_name: ruamel-yaml-clib
+  - name: RuamelYamlClib026TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruamel-yaml-clib
+          version: ==0.2.6
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'ruamel-yaml-clib' in version '0.2.6' is popular within Thoth community
+        link: thoth_community
+        package_name: ruamel-yaml-clib

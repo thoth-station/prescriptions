@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Yarl163ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yarl
+          version: "!=1.6.3"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'yarl' in version '1.6.3' which is popular within Thoth community
+        link: thoth_community
+        package_name: yarl
+  - name: Yarl163TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yarl
+          version: ==1.6.3
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'yarl' in version '1.6.3' is popular within Thoth community
+        link: thoth_community
+        package_name: yarl

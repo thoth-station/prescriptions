@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Pyparsing247ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyparsing
+          version: "!=2.4.7"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pyparsing' in version '2.4.7' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pyparsing
+  - name: Pyparsing247TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyparsing
+          version: ==2.4.7
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pyparsing' in version '2.4.7' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pyparsing

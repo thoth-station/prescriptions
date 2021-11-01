@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Pluggy0131ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pluggy
+          version: "!=0.13.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pluggy' in version '0.13.1' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pluggy
+  - name: Pluggy0131TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pluggy
+          version: ==0.13.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pluggy' in version '0.13.1' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pluggy

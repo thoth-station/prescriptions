@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Pyyaml541ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml
+          version: "!=5.4.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pyyaml' in version '5.4.1' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pyyaml
+  - name: Pyyaml541TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml
+          version: ==5.4.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pyyaml' in version '5.4.1' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pyyaml

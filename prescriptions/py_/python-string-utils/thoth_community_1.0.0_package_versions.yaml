@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: PythonStringUtils100ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-string-utils
+          version: "!=1.0.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'python-string-utils' in version '1.0.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: python-string-utils
+  - name: PythonStringUtils100TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-string-utils
+          version: ==1.0.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'python-string-utils' in version '1.0.0' is popular within Thoth community
+        link: thoth_community
+        package_name: python-string-utils

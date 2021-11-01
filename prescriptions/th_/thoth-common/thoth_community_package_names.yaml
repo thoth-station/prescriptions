@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ThothCommonTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-common
+    run:
+      justification:
+      - type: INFO
+        message: Package 'thoth-common' is popular within Thoth community
+        link: thoth_community
+        package_name: thoth-common

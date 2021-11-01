@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Jinja2TopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jinja2' is popular within Thoth community
+        link: thoth_community
+        package_name: jinja2

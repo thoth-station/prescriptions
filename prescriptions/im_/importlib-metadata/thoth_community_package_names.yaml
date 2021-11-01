@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ImportlibMetadataTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib-metadata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'importlib-metadata' is popular within Thoth community
+        link: thoth_community
+        package_name: importlib-metadata

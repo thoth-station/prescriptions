@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PreCommitTopDevPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pre-commit' is popular as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pre-commit

@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: JupyterPackaging0104ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-packaging
+          version: "!=0.10.4"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'jupyter-packaging' in version '0.10.4' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: jupyter-packaging
+  - name: JupyterPackaging0104TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-packaging
+          version: ==0.10.4
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'jupyter-packaging' in version '0.10.4' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: jupyter-packaging

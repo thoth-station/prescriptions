@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Attrs2120ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrs
+          version: "!=21.2.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'attrs' in version '21.2.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: attrs
+  - name: Attrs2120TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrs
+          version: ==21.2.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'attrs' in version '21.2.0' is popular within Thoth community
+        link: thoth_community
+        package_name: attrs

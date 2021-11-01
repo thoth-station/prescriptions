@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Hypothesis6145ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis
+          version: "!=6.14.5"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'hypothesis' in version '6.14.5' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: hypothesis
+  - name: Hypothesis6145TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis
+          version: ==6.14.5
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'hypothesis' in version '6.14.5' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: hypothesis

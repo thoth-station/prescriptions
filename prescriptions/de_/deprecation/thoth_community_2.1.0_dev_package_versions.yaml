@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Deprecation210ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation
+          version: "!=2.1.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'deprecation' in version '2.1.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: deprecation
+  - name: Deprecation210TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation
+          version: ==2.1.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'deprecation' in version '2.1.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: deprecation

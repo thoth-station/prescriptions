@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AttrsTopDevPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrs
+    run:
+      justification:
+      - type: INFO
+        message: Package 'attrs' is popular as a development dependency within Thoth community
+        link: thoth_community
+        package_name: attrs

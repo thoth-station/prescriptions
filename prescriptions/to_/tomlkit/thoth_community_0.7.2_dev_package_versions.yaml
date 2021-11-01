@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Tomlkit072ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tomlkit
+          version: "!=0.7.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'tomlkit' in version '0.7.2' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: tomlkit
+  - name: Tomlkit072TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tomlkit
+          version: ==0.7.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'tomlkit' in version '0.7.2' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: tomlkit

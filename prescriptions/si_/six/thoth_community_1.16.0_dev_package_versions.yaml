@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Six1160ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: six
+          version: "!=1.16.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'six' in version '1.16.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: six
+  - name: Six1160TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: six
+          version: ==1.16.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'six' in version '1.16.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: six

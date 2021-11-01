@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: PytestCov2121ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cov
+          version: "!=2.12.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pytest-cov' in version '2.12.1' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pytest-cov
+  - name: PytestCov2121TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cov
+          version: ==2.12.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pytest-cov' in version '2.12.1' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pytest-cov

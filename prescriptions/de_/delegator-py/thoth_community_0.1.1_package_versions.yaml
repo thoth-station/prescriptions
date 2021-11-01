@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: DelegatorPy011ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: delegator-py
+          version: "!=0.1.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'delegator-py' in version '0.1.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: delegator-py
+  - name: DelegatorPy011TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: delegator-py
+          version: ==0.1.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'delegator-py' in version '0.1.1' is popular within Thoth community
+        link: thoth_community
+        package_name: delegator-py

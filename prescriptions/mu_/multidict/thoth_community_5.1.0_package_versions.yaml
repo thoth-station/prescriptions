@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Multidict510ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multidict
+          version: "!=5.1.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'multidict' in version '5.1.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: multidict
+  - name: Multidict510TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multidict
+          version: ==5.1.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'multidict' in version '5.1.0' is popular within Thoth community
+        link: thoth_community
+        package_name: multidict

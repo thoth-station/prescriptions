@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Toml0102ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toml
+          version: "!=0.10.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'toml' in version '0.10.2' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: toml
+  - name: Toml0102TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toml
+          version: ==0.10.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'toml' in version '0.10.2' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: toml

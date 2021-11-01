@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: Pydantic182ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydantic
+          version: "!=1.8.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pydantic' in version '1.8.2' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pydantic
+  - name: Pydantic182TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydantic
+          version: ==1.8.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pydantic' in version '1.8.2' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pydantic

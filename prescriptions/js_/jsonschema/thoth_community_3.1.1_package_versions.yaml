@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Jsonschema311ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonschema
+          version: "!=3.1.1"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'jsonschema' in version '3.1.1' which is popular within Thoth community
+        link: thoth_community
+        package_name: jsonschema
+  - name: Jsonschema311TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonschema
+          version: ==3.1.1
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'jsonschema' in version '3.1.1' is popular within Thoth community
+        link: thoth_community
+        package_name: jsonschema

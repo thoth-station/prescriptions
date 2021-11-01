@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Gast052ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gast
+          version: "!=0.5.2"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'gast' in version '0.5.2' which is popular within Thoth community
+        link: thoth_community
+        package_name: gast
+  - name: Gast052TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gast
+          version: ==0.5.2
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'gast' in version '0.5.2' is popular within Thoth community
+        link: thoth_community
+        package_name: gast

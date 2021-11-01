@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Urllib31265ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urllib3
+          version: "!=1.26.5"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'urllib3' in version '1.26.5' which is popular within Thoth community
+        link: thoth_community
+        package_name: urllib3
+  - name: Urllib31265TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urllib3
+          version: ==1.26.5
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'urllib3' in version '1.26.5' is popular within Thoth community
+        link: thoth_community
+        package_name: urllib3

@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Pygments2100ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygments
+          version: "!=2.10.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pygments' in version '2.10.0' which is popular within Thoth community
+        link: thoth_community
+        package_name: pygments
+  - name: Pygments2100TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygments
+          version: ==2.10.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pygments' in version '2.10.0' is popular within Thoth community
+        link: thoth_community
+        package_name: pygments

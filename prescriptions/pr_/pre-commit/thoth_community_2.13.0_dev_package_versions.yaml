@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: PreCommit2130ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit
+          version: "!=2.13.0"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'pre-commit' in version '2.13.0' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: pre-commit
+  - name: PreCommit2130TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit
+          version: ==2.13.0
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'pre-commit' in version '2.13.0' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: pre-commit

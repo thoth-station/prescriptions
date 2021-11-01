@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytzTopPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pytz' is popular within Thoth community
+        link: thoth_community
+        package_name: pytz

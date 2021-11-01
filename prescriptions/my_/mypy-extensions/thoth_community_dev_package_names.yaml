@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MypyExtensionsTopDevPackageNamesWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy-extensions
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mypy-extensions' is popular as a development dependency within Thoth community
+        link: thoth_community
+        package_name: mypy-extensions

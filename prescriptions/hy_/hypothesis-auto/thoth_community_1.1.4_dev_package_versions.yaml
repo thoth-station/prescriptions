@@ -1,0 +1,36 @@
+units:
+  wraps:
+  - name: HypothesisAuto114ConsiderTopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis-auto
+          version: "!=1.1.4"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'hypothesis-auto' in version '1.1.4' is popular
+          as a development dependency within Thoth community
+        link: thoth_community
+        package_name: hypothesis-auto
+  - name: HypothesisAuto114TopDevPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis-auto
+          version: ==1.1.4
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'hypothesis-auto' in version '1.1.4' is popular as a development dependency
+          within Thoth community
+        link: thoth_community
+        package_name: hypothesis-auto

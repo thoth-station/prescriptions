@@ -1,0 +1,34 @@
+units:
+  wraps:
+  - name: Idna210ConsiderTopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna
+          version: "!=2.10"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Consider using 'idna' in version '2.10' which is popular within Thoth community
+        link: thoth_community
+        package_name: idna
+  - name: Idna210TopPackageVersionsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna
+          version: ==2.10
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Package 'idna' in version '2.10' is popular within Thoth community
+        link: thoth_community
+        package_name: idna
