@@ -1,0 +1,47 @@
+units:
+  steps:
+  - name: TensorFlow26Keras27Sieve
+    type: step.Group
+    should_include:
+      adviser_pipeline: true
+    match:
+    - group:
+      - package_version:
+          name: keras
+          version: ">=2.7.0"
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: tensorflow
+          version: ">=2.6.0,<2.7.0"
+    - group:
+      - package_version:
+          name: keras
+          version: ">=2.7.0"
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: tensorflow-cpu
+          version: ">=2.6.0,<2.7.0"
+    - group:
+      - package_version:
+          name: keras
+          version: ">=2.7.0"
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: tensorflow-gpu
+          version: ">=2.6.0,<2.7.0"
+    - group:
+      - package_version:
+          name: keras
+          version: ">=2.7.0"
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: intel-tensorflow
+          version: ">=2.6.0,<2.7.0"
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          TensorFlow in versions >=2.6.0,<2.7.0 overpinned Keras dependency, compatible releases are ~=2.7.0
+        link: https://github.com/tensorflow/tensorflow/issues/52922
+      not_acceptable: >-
+        TensorFlow in versions >=2.6.0,<2.7.0 overpinned Keras dependency, compatible releases are ~=2.7.0
