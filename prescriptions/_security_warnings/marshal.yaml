@@ -1,0 +1,26 @@
+units:
+  wraps:
+  - name: MarshalLoadSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        marshal:
+        - marshal.load
+    run:
+      stack_info:
+      - type: WARNING
+        message: The marshal module is not intended to be secure against erroneous or maliciously constructed data. Never unmarshal data received from an untrusted or unauthenticated source.
+        link: https://docs.python.org/3/library/marshal.html
+  - name: MarshalLoadsSecurityWarnings
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        marshal:
+        - marshal.loads
+    run:
+      stack_info:
+      - type: WARNING
+        message: The marshal module is not intended to be secure against erroneous or maliciously constructed data. Never unmarshal data received from an untrusted or unauthenticated source.
+        link: https://docs.python.org/3/library/marshal.html
