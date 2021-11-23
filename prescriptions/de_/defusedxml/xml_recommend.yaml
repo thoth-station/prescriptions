@@ -1,0 +1,33 @@
+units:
+  wraps:
+  - name: DefusedxmlRecommendInfoWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - latest
+      - performance
+      - stable
+      - testing
+      library_usage:
+        xml:
+        - xml.*
+    run:
+      justification:
+      - type: INFO
+        message: Consider using 'defusedxml' package to avoid XML library attacks
+        link: https://pypi.org/project/defusedxml/
+  - name: DefusedxmlRecommendWarningWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      recommendation_types:
+      - security
+      library_usage:
+        xml:
+        - xml.*
+    run:
+      justification:
+      - type: WARNING
+        message: Consider using 'defusedxml' package to avoid XML library attacks
+        link: https://pypi.org/project/defusedxml/
