@@ -1,0 +1,26 @@
+units:
+  wraps:
+  - name: SubprocessPopenSecurityWarningsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        subprocess:
+        - subprocess.Popen
+    run:
+      stack_info:
+      - type: WARNING
+        message: Whenever possible, try to avoid using subprocess.Popen(shell=True)
+        link: https://docs.python.org/3/library/subprocess.html#subprocess.Popen
+  - name: OsPopenSecurityWarningsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      library_usage:
+        os:
+        - os.popen
+    run:
+      stack_info:
+      - type: WARNING
+        message: Whenever possible, try to avoid using os.popen()
+        link: https://docs.python.org/3/library/os.html#os.popen
