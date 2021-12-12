@@ -27,7 +27,7 @@ software stacks. The `linked blog post describes prescriptions more in-depth
   resolver.
 
 See `the linked presentation
-<https://docs.google.com/viewer?url=https://github.com/thoth-station/talks/raw/master/2021-09-03-devconf-us/thoth_healing_python_applications.pdf>`__
+<https://github.com/thoth-station/talks/blob/master/2021-09-03-devconf-us/thoth_healing_python_applications.pdf>`__
 or `YouTube video <https://www.youtube.com/watch?v=SQO2yTQ_OD4>`__ for more info.
 
 How to write a prescription?
