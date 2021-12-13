@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TeampullsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: teampulls
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'teampulls' has no recent release, last release dates back to 2020-12-15 13:32:49.103785
+        link: https://pypi.org/project/teampulls/#history
+        package_name: teampulls

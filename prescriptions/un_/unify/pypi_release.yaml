@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UnifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'unify' has no recent release, last release dates back to 2019-08-07 13:46:09.142920
+        link: https://pypi.org/project/unify/#history
+        package_name: unify

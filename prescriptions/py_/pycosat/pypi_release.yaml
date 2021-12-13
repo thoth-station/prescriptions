@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycosatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycosat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycosat' has no recent release, last release dates back to 2017-11-09 18:07:14.198156
+        link: https://pypi.org/project/pycosat/#history
+        package_name: pycosat

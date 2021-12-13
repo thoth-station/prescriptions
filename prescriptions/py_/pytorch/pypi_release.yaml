@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytorchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytorch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytorch' has no recent release, last release dates back to 2019-04-24 16:32:54.277081
+        link: https://pypi.org/project/pytorch/#history
+        package_name: pytorch

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PinjectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pinject
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pinject' has no recent release, last release dates back to 2019-05-25 08:04:39.794365
+        link: https://pypi.org/project/pinject/#history
+        package_name: pinject

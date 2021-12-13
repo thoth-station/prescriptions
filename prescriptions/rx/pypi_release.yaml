@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rx' has no recent release, last release dates back to 2021-04-25 15:57:07.487535
+        link: https://pypi.org/project/rx/#history
+        package_name: rx

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XmldiffPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmldiff
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xmldiff' has no recent release, last release dates back to 2019-10-09 09:41:17.883138
+        link: https://pypi.org/project/xmldiff/#history
+        package_name: xmldiff

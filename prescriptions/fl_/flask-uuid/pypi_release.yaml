@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskUuidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-uuid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-uuid' has no recent release, last release dates back to 2013-06-13 20:39:57.348952
+        link: https://pypi.org/project/flask-uuid/#history
+        package_name: flask-uuid

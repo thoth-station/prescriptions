@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonMimeparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-mimeparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-mimeparse' has no recent release, last release dates back to 2016-10-16 22:54:20.046129
+        link: https://pypi.org/project/python-mimeparse/#history
+        package_name: python-mimeparse

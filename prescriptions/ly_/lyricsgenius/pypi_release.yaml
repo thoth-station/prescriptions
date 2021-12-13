@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LyricsgeniusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lyricsgenius
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lyricsgenius' has no recent release, last release dates back to 2021-04-18 15:18:00.004480
+        link: https://pypi.org/project/lyricsgenius/#history
+        package_name: lyricsgenius

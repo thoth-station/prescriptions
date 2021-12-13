@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ComtypesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: comtypes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'comtypes' has no recent release, last release dates back to 2021-04-24 18:03:25.375951
+        link: https://pypi.org/project/comtypes/#history
+        package_name: comtypes

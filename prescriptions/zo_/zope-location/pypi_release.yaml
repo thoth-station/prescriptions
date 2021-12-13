@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeLocationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-location
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-location' has no recent release, last release dates back to 2018-10-09 13:43:30.693119
+        link: https://pypi.org/project/zope-location/#history
+        package_name: zope-location

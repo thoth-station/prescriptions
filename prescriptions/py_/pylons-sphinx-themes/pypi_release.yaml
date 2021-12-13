@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylonsSphinxThemesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylons-sphinx-themes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylons-sphinx-themes' has no recent release, last release dates back to 2020-11-30 11:28:25.940834
+        link: https://pypi.org/project/pylons-sphinx-themes/#history
+        package_name: pylons-sphinx-themes

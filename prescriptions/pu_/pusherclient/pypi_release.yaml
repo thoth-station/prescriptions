@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PusherclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pusherclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pusherclient' has no recent release, last release dates back to 2014-12-13 20:29:28.318457
+        link: https://pypi.org/project/pusherclient/#history
+        package_name: pusherclient

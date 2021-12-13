@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RecAvroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rec-avro
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rec-avro' has no recent release, last release dates back to 2019-04-15 15:51:03.387512
+        link: https://pypi.org/project/rec-avro/#history
+        package_name: rec-avro

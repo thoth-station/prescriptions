@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestOpenfilesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-openfiles
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-openfiles' has no recent release, last release dates back to 2020-04-16 15:35:18.983931
+        link: https://pypi.org/project/pytest-openfiles/#history
+        package_name: pytest-openfiles

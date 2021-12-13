@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ModernizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modernize
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'modernize' has no recent release, last release dates back to 2020-09-27 13:29:43.442119
+        link: https://pypi.org/project/modernize/#history
+        package_name: modernize

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogletransPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googletrans
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'googletrans' has no recent release, last release dates back to 2020-06-14 07:43:55.166606
+        link: https://pypi.org/project/googletrans/#history
+        package_name: googletrans

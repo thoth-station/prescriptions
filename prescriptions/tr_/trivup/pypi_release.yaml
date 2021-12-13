@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrivupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trivup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trivup' has no recent release, last release dates back to 2021-04-27 11:42:26.096532
+        link: https://pypi.org/project/trivup/#history
+        package_name: trivup

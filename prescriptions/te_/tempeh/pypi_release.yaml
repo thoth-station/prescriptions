@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TempehPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tempeh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tempeh' has no recent release, last release dates back to 2020-01-21 21:09:29.301412
+        link: https://pypi.org/project/tempeh/#history
+        package_name: tempeh

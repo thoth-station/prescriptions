@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CmdlnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmdln
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cmdln' has no recent release, last release dates back to 2015-04-13 04:19:08.396640
+        link: https://pypi.org/project/cmdln/#history
+        package_name: cmdln

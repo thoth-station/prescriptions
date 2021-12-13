@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CarrotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: carrot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'carrot' has no recent release, last release dates back to 2010-10-07 15:25:28.161485
+        link: https://pypi.org/project/carrot/#history
+        package_name: carrot

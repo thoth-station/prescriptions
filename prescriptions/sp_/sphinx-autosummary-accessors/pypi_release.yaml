@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxAutosummaryAccessorsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autosummary-accessors
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-autosummary-accessors' has no recent release, last release dates back to 2021-06-06 15:10:23.227748
+        link: https://pypi.org/project/sphinx-autosummary-accessors/#history
+        package_name: sphinx-autosummary-accessors

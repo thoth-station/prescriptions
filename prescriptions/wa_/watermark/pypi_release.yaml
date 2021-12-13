@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WatermarkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watermark
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'watermark' has no recent release, last release dates back to 2021-02-18 16:56:31.756122
+        link: https://pypi.org/project/watermark/#history
+        package_name: watermark

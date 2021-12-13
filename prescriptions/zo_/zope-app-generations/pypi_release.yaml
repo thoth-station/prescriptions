@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppGenerationsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-generations
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-generations' has no recent release, last release dates back to 2017-05-09 11:05:54.171635
+        link: https://pypi.org/project/zope-app-generations/#history
+        package_name: zope-app-generations

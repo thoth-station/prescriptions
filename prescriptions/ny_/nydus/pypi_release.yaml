@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NydusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nydus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nydus' has no recent release, last release dates back to 2015-04-23 23:33:32.537371
+        link: https://pypi.org/project/nydus/#history
+        package_name: nydus

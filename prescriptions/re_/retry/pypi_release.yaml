@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RetryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retry
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'retry' has no recent release, last release dates back to 2016-05-11 13:58:51.541112
+        link: https://pypi.org/project/retry/#history
+        package_name: retry

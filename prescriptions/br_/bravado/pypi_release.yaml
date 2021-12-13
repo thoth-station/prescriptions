@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BravadoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bravado
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bravado' has no recent release, last release dates back to 2021-03-02 17:41:48.199201
+        link: https://pypi.org/project/bravado/#history
+        package_name: bravado

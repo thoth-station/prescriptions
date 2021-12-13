@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DtoptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dtopt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dtopt' has no recent release, last release dates back to 2007-08-10 18:24:58
+        link: https://pypi.org/project/dtopt/#history
+        package_name: dtopt

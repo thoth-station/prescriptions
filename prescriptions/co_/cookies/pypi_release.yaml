@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CookiesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cookies
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cookies' has no recent release, last release dates back to 2014-09-27 02:36:49.417765
+        link: https://pypi.org/project/cookies/#history
+        package_name: cookies

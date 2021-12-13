@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxcontribLogCabinetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-log-cabinet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxcontrib-log-cabinet' has no recent release, last release dates back to 2019-07-05 23:22:34.596733
+        link: https://pypi.org/project/sphinxcontrib-log-cabinet/#history
+        package_name: sphinxcontrib-log-cabinet

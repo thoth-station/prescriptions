@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WavioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wavio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wavio' has no recent release, last release dates back to 2018-07-14 18:27:56.005256
+        link: https://pypi.org/project/wavio/#history
+        package_name: wavio

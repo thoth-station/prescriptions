@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StdlibListPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlib-list
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stdlib-list' has no recent release, last release dates back to 2020-11-19 14:11:09.910338
+        link: https://pypi.org/project/stdlib-list/#history
+        package_name: stdlib-list

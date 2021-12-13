@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Zipfile38PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipfile38
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zipfile38' has no recent release, last release dates back to 2020-12-03 15:33:53.088356
+        link: https://pypi.org/project/zipfile38/#history
+        package_name: zipfile38

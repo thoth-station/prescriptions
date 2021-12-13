@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8PluginUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-plugin-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-plugin-utils' has no recent release, last release dates back to 2021-05-05 08:48:55.106877
+        link: https://pypi.org/project/flake8-plugin-utils/#history
+        package_name: flake8-plugin-utils

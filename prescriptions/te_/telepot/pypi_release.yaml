@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TelepotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: telepot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'telepot' has no recent release, last release dates back to 2018-05-26 16:26:54.938779
+        link: https://pypi.org/project/telepot/#history
+        package_name: telepot

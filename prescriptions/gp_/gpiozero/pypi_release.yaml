@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GpiozeroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpiozero
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gpiozero' has no recent release, last release dates back to 2021-03-18 18:23:50.053485
+        link: https://pypi.org/project/gpiozero/#history
+        package_name: gpiozero

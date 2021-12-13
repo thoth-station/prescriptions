@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestAzurepipelinesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-azurepipelines
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-azurepipelines' has no recent release, last release dates back to 2019-07-06 22:50:45.725353
+        link: https://pypi.org/project/pytest-azurepipelines/#history
+        package_name: pytest-azurepipelines

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: J2cliPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: j2cli
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'j2cli' has no recent release, last release dates back to 2019-06-07 12:23:41.454686
+        link: https://pypi.org/project/j2cli/#history
+        package_name: j2cli

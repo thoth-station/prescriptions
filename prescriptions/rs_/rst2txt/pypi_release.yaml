@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rst2txtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst2txt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rst2txt' has no recent release, last release dates back to 2019-02-28 12:00:02.098926
+        link: https://pypi.org/project/rst2txt/#history
+        package_name: rst2txt

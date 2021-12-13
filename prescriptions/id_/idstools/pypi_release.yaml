@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IdstoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idstools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'idstools' has no recent release, last release dates back to 2020-08-03 05:07:09.349907
+        link: https://pypi.org/project/idstools/#history
+        package_name: idstools

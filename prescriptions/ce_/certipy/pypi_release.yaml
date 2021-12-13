@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CertipyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certipy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'certipy' has no recent release, last release dates back to 2019-03-18 17:31:11.166223
+        link: https://pypi.org/project/certipy/#history
+        package_name: certipy

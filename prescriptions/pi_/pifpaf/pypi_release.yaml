@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PifpafPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pifpaf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pifpaf' has no recent release, last release dates back to 2021-02-01 17:12:54.768561
+        link: https://pypi.org/project/pifpaf/#history
+        package_name: pifpaf

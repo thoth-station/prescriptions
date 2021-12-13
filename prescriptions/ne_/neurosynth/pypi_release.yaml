@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeurosynthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neurosynth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neurosynth' has no recent release, last release dates back to 2019-08-08 22:41:00.544788
+        link: https://pypi.org/project/neurosynth/#history
+        package_name: neurosynth

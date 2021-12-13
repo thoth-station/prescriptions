@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytomlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytoml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytoml' has no recent release, last release dates back to 2019-07-21 17:58:13.306950
+        link: https://pypi.org/project/pytoml/#history
+        package_name: pytoml

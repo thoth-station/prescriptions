@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioiotprovPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioiotprov
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioiotprov' has no recent release, last release dates back to 2020-11-08 09:22:01.862930
+        link: https://pypi.org/project/aioiotprov/#history
+        package_name: aioiotprov

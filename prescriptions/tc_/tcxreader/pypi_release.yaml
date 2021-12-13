@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TcxreaderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tcxreader
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tcxreader' has no recent release, last release dates back to 2021-04-26 06:43:58.705120
+        link: https://pypi.org/project/tcxreader/#history
+        package_name: tcxreader

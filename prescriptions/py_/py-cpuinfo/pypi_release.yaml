@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyCpuinfoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-cpuinfo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-cpuinfo' has no recent release, last release dates back to 2021-04-14 16:53:43.394219
+        link: https://pypi.org/project/py-cpuinfo/#history
+        package_name: py-cpuinfo

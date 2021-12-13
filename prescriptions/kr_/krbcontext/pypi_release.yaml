@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KrbcontextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: krbcontext
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'krbcontext' has no recent release, last release dates back to 2019-07-15 12:06:32.224650
+        link: https://pypi.org/project/krbcontext/#history
+        package_name: krbcontext

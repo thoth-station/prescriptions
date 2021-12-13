@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytimeparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytimeparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytimeparse' has no recent release, last release dates back to 2018-05-18 17:40:42.760633
+        link: https://pypi.org/project/pytimeparse/#history
+        package_name: pytimeparse

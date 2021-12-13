@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxTyplogThemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-typlog-theme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-typlog-theme' has no recent release, last release dates back to 2019-10-08 01:30:07.797036
+        link: https://pypi.org/project/sphinx-typlog-theme/#history
+        package_name: sphinx-typlog-theme

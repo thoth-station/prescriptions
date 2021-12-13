@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DingusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dingus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dingus' has no recent release, last release dates back to 2012-03-14 19:31:35.848423
+        link: https://pypi.org/project/dingus/#history
+        package_name: dingus

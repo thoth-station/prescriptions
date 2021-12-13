@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OuimeauxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ouimeaux
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ouimeaux' has no recent release, last release dates back to 2020-06-11 20:45:12.786705
+        link: https://pypi.org/project/ouimeaux/#history
+        package_name: ouimeaux

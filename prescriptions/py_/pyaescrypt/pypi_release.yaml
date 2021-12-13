@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyaescryptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaescrypt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyaescrypt' has no recent release, last release dates back to 2021-05-09 10:17:45.354782
+        link: https://pypi.org/project/pyaescrypt/#history
+        package_name: pyaescrypt

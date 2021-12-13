@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipdb' has no recent release, last release dates back to 2021-06-02 11:43:46.396706
+        link: https://pypi.org/project/ipdb/#history
+        package_name: ipdb

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AstroplanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astroplan
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'astroplan' has no recent release, last release dates back to 2021-01-26 07:58:01.863321
+        link: https://pypi.org/project/astroplan/#history
+        package_name: astroplan

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleEndpointsApiManagementPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-endpoints-api-management
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-endpoints-api-management' has no recent release, last release dates back to 2020-04-14 20:51:00.344145
+        link: https://pypi.org/project/google-endpoints-api-management/#history
+        package_name: google-endpoints-api-management

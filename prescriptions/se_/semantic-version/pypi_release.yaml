@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SemanticVersionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semantic-version
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'semantic-version' has no recent release, last release dates back to 2020-04-29 09:56:00.917931
+        link: https://pypi.org/project/semantic-version/#history
+        package_name: semantic-version

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FieldsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fields
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fields' has no recent release, last release dates back to 2016-04-13 20:53:08.282722
+        link: https://pypi.org/project/fields/#history
+        package_name: fields

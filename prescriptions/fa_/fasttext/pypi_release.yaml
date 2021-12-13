@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FasttextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fasttext
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fasttext' has no recent release, last release dates back to 2020-04-28 09:54:50.807132
+        link: https://pypi.org/project/fasttext/#history
+        package_name: fasttext

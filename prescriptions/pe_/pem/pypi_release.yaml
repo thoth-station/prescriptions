@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PemPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pem
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pem' has no recent release, last release dates back to 2021-04-07 13:31:42.273390
+        link: https://pypi.org/project/pem/#history
+        package_name: pem

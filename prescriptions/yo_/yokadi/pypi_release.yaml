@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YokadiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yokadi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yokadi' has no recent release, last release dates back to 2019-02-10 11:48:20.979945
+        link: https://pypi.org/project/yokadi/#history
+        package_name: yokadi

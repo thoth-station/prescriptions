@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NplusonePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nplusone
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nplusone' has no recent release, last release dates back to 2018-05-21 03:40:25.010476
+        link: https://pypi.org/project/nplusone/#history
+        package_name: nplusone

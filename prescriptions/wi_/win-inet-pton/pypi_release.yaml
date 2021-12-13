@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WinInetPtonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: win-inet-pton
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'win-inet-pton' has no recent release, last release dates back to 2019-02-19 17:46:23.925484
+        link: https://pypi.org/project/win-inet-pton/#history
+        package_name: win-inet-pton

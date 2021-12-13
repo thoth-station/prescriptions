@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EcpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ecpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ecpy' has no recent release, last release dates back to 2020-10-26 11:56:16.313802
+        link: https://pypi.org/project/ecpy/#history
+        package_name: ecpy

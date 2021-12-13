@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonU2flibServerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-u2flib-server
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-u2flib-server' has no recent release, last release dates back to 2020-11-03 12:02:53.605277
+        link: https://pypi.org/project/python-u2flib-server/#history
+        package_name: python-u2flib-server

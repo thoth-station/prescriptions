@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylibloPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyliblo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyliblo' has no recent release, last release dates back to 2016-06-23 08:27:13.889367
+        link: https://pypi.org/project/pyliblo/#history
+        package_name: pyliblo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QrencodePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qrencode
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'qrencode' has no recent release, last release dates back to 2016-08-09 08:21:47.222239
+        link: https://pypi.org/project/qrencode/#history
+        package_name: qrencode

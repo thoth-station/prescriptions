@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StructlogSentryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: structlog-sentry
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'structlog-sentry' has no recent release, last release dates back to 2021-03-08 19:49:37.372523
+        link: https://pypi.org/project/structlog-sentry/#history
+        package_name: structlog-sentry

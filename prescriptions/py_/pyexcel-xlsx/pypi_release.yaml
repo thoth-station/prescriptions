@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyexcelXlsxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexcel-xlsx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyexcel-xlsx' has no recent release, last release dates back to 2020-10-10 13:13:35.212182
+        link: https://pypi.org/project/pyexcel-xlsx/#history
+        package_name: pyexcel-xlsx

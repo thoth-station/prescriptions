@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Transforms3dPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transforms3d
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'transforms3d' has no recent release, last release dates back to 2017-06-16 08:54:00.109189
+        link: https://pypi.org/project/transforms3d/#history
+        package_name: transforms3d

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LoganPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logan
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'logan' has no recent release, last release dates back to 2016-07-28 15:09:30.727604
+        link: https://pypi.org/project/logan/#history
+        package_name: logan

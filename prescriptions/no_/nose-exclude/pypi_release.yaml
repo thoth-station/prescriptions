@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NoseExcludePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-exclude
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nose-exclude' has no recent release, last release dates back to 2016-09-06 18:23:09.864014
+        link: https://pypi.org/project/nose-exclude/#history
+        package_name: nose-exclude

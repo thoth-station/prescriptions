@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MapscriptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapscript
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mapscript' has no recent release, last release dates back to 2020-06-17 13:25:34.285605
+        link: https://pypi.org/project/mapscript/#history
+        package_name: mapscript

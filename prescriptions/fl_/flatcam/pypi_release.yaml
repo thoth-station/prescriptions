@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlatcamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatcam
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flatcam' has no recent release, last release dates back to 2018-06-07 11:36:55.355337
+        link: https://pypi.org/project/flatcam/#history
+        package_name: flatcam

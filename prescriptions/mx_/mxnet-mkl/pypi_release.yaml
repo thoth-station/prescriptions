@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MxnetMklPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mxnet-mkl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mxnet-mkl' has no recent release, last release dates back to 2020-02-29 18:02:30.142697
+        link: https://pypi.org/project/mxnet-mkl/#history
+        package_name: mxnet-mkl

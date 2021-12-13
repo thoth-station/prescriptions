@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiocmdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocmd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiocmd' has no recent release, last release dates back to 2020-06-19 07:13:52.332600
+        link: https://pypi.org/project/aiocmd/#history
+        package_name: aiocmd

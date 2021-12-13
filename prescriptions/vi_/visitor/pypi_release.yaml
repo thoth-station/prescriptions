@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VisitorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visitor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'visitor' has no recent release, last release dates back to 2016-05-18 19:27:53.383175
+        link: https://pypi.org/project/visitor/#history
+        package_name: visitor

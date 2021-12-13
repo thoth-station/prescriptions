@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PewPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pew
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pew' has no recent release, last release dates back to 2019-04-12 23:38:11.209080
+        link: https://pypi.org/project/pew/#history
+        package_name: pew

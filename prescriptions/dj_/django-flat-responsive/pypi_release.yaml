@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoFlatResponsivePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-flat-responsive
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-flat-responsive' has no recent release, last release dates back to 2017-09-16 22:31:00.151290
+        link: https://pypi.org/project/django-flat-responsive/#history
+        package_name: django-flat-responsive

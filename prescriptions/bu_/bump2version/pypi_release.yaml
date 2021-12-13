@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Bump2versionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bump2version
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bump2version' has no recent release, last release dates back to 2020-10-07 18:38:40.119462
+        link: https://pypi.org/project/bump2version/#history
+        package_name: bump2version

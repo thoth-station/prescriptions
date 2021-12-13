@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZlogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zlog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zlog' has no recent release, last release dates back to 2020-11-18 13:47:56.805350
+        link: https://pypi.org/project/zlog/#history
+        package_name: zlog

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Zodb3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zodb3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zodb3' has no recent release, last release dates back to 2014-05-23 16:10:51.665143
+        link: https://pypi.org/project/zodb3/#history
+        package_name: zodb3

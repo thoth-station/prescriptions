@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ItemPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: item
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'item' has no recent release, last release dates back to 2015-04-10 17:17:02.161965
+        link: https://pypi.org/project/item/#history
+        package_name: item

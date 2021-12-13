@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SolarwolfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: solarwolf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'solarwolf' has no recent release, last release dates back to 2017-01-24 06:17:55.418945
+        link: https://pypi.org/project/solarwolf/#history
+        package_name: solarwolf

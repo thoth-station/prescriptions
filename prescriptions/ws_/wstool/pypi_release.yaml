@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WstoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wstool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wstool' has no recent release, last release dates back to 2018-01-11 17:49:16.084907
+        link: https://pypi.org/project/wstool/#history
+        package_name: wstool

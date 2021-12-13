@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pypdf2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypdf2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pypdf2' has no recent release, last release dates back to 2016-05-18 17:21:56.537758
+        link: https://pypi.org/project/pypdf2/#history
+        package_name: pypdf2

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EnkiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enki
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'enki' has no recent release, last release dates back to 2019-12-28 14:56:15.498040
+        link: https://pypi.org/project/enki/#history
+        package_name: enki

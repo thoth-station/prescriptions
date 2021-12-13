@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CovCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cov-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cov-core' has no recent release, last release dates back to 2014-11-22 11:05:18.033263
+        link: https://pypi.org/project/cov-core/#history
+        package_name: cov-core

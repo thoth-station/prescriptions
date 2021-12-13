@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JapanizeMatplotlibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: japanize-matplotlib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'japanize-matplotlib' has no recent release, last release dates back to 2020-10-21 10:20:37.049056
+        link: https://pypi.org/project/japanize-matplotlib/#history
+        package_name: japanize-matplotlib

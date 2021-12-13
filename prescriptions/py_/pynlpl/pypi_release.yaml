@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PynlplPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynlpl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pynlpl' has no recent release, last release dates back to 2019-03-13 18:02:12.295234
+        link: https://pypi.org/project/pynlpl/#history
+        package_name: pynlpl

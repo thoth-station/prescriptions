@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobotframeworkSeleniumlibraryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-seleniumlibrary
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'robotframework-seleniumlibrary' has no recent release, last release dates back to 2021-03-23 21:33:12.041488
+        link: https://pypi.org/project/robotframework-seleniumlibrary/#history
+        package_name: robotframework-seleniumlibrary

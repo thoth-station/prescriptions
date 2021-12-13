@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygrokPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygrok
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygrok' has no recent release, last release dates back to 2016-09-24 08:32:38.164199
+        link: https://pypi.org/project/pygrok/#history
+        package_name: pygrok

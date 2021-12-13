@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WsgiRequestLoggerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsgi-request-logger
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wsgi-request-logger' has no recent release, last release dates back to 2016-10-08 09:13:56.631820
+        link: https://pypi.org/project/wsgi-request-logger/#history
+        package_name: wsgi-request-logger

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxAutodocTypehintsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autodoc-typehints
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-autodoc-typehints' has no recent release, last release dates back to 2021-04-15 00:21:36.918920
+        link: https://pypi.org/project/sphinx-autodoc-typehints/#history
+        package_name: sphinx-autodoc-typehints

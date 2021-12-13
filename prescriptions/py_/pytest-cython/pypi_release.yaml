@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestCythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cython
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-cython' has no recent release, last release dates back to 2021-01-26 14:24:37.757488
+        link: https://pypi.org/project/pytest-cython/#history
+        package_name: pytest-cython

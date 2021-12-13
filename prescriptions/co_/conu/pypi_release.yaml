@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConuPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conu
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'conu' has no recent release, last release dates back to 2020-11-27 14:58:25.142535
+        link: https://pypi.org/project/conu/#history
+        package_name: conu

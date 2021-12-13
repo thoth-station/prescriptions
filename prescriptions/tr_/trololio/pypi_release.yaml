@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrololioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trololio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trololio' has no recent release, last release dates back to 2014-11-14 16:46:41.738979
+        link: https://pypi.org/project/trololio/#history
+        package_name: trololio

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rfc5424LoggingHandlerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc5424-logging-handler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rfc5424-logging-handler' has no recent release, last release dates back to 2019-05-19 14:27:57.687828
+        link: https://pypi.org/project/rfc5424-logging-handler/#history
+        package_name: rfc5424-logging-handler

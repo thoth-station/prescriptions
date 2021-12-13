@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtPolicyinsightsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-policyinsights
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-policyinsights' has no recent release, last release dates back to 2021-01-04 06:16:59.782574
+        link: https://pypi.org/project/azure-mgmt-policyinsights/#history
+        package_name: azure-mgmt-policyinsights

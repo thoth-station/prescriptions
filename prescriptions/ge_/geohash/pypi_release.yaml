@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeohashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geohash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geohash' has no recent release, last release dates back to 2015-01-08 23:36:12.874887
+        link: https://pypi.org/project/geohash/#history
+        package_name: geohash

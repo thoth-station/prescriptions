@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskSphinxThemesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sphinx-themes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-sphinx-themes' has no recent release, last release dates back to 2017-11-30 18:02:00.932323
+        link: https://pypi.org/project/flask-sphinx-themes/#history
+        package_name: flask-sphinx-themes

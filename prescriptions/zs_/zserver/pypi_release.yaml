@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZserverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zserver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zserver' has no recent release, last release dates back to 2019-08-22 06:54:58.332577
+        link: https://pypi.org/project/zserver/#history
+        package_name: zserver

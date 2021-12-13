@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KneedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kneed
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kneed' has no recent release, last release dates back to 2020-08-13 00:54:00.597800
+        link: https://pypi.org/project/kneed/#history
+        package_name: kneed

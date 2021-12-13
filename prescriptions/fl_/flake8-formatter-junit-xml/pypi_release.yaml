@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8FormatterJunitXmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-formatter-junit-xml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-formatter-junit-xml' has no recent release, last release dates back to 2018-04-11 05:44:27.689936
+        link: https://pypi.org/project/flake8-formatter-junit-xml/#history
+        package_name: flake8-formatter-junit-xml

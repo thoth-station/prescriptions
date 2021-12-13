@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Geohash2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geohash2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geohash2' has no recent release, last release dates back to 2017-07-06 13:43:07.913737
+        link: https://pypi.org/project/geohash2/#history
+        package_name: geohash2

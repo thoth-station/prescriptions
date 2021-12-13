@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SkVideoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sk-video
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sk-video' has no recent release, last release dates back to 2017-12-12 00:49:40.404181
+        link: https://pypi.org/project/sk-video/#history
+        package_name: sk-video

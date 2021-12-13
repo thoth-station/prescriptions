@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygam
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygam' has no recent release, last release dates back to 2018-10-31 17:17:33.128317
+        link: https://pypi.org/project/pygam/#history
+        package_name: pygam

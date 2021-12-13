@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OdfpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: odfpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'odfpy' has no recent release, last release dates back to 2020-01-18 16:55:51.835085
+        link: https://pypi.org/project/odfpy/#history
+        package_name: odfpy

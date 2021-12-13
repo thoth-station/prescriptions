@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebvttPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webvtt-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webvtt-py' has no recent release, last release dates back to 2020-11-18 09:59:45.494291
+        link: https://pypi.org/project/webvtt-py/#history
+        package_name: webvtt-py

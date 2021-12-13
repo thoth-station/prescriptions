@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxIntlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-intl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-intl' has no recent release, last release dates back to 2020-04-27 16:36:10.175730
+        link: https://pypi.org/project/sphinx-intl/#history
+        package_name: sphinx-intl

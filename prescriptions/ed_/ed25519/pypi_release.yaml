@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ed25519PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ed25519
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ed25519' has no recent release, last release dates back to 2019-06-01 21:26:55.690666
+        link: https://pypi.org/project/ed25519/#history
+        package_name: ed25519

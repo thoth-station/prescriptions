@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProcessTestsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: process-tests
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'process-tests' has no recent release, last release dates back to 2021-05-02 07:25:20.634135
+        link: https://pypi.org/project/process-tests/#history
+        package_name: process-tests

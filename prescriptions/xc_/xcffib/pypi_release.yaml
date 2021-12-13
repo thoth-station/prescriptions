@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XcffibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xcffib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xcffib' has no recent release, last release dates back to 2020-11-29 15:55:27.156675
+        link: https://pypi.org/project/xcffib/#history
+        package_name: xcffib

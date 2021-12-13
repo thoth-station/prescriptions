@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CommentjsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commentjson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'commentjson' has no recent release, last release dates back to 2020-10-05 18:49:06.524524
+        link: https://pypi.org/project/commentjson/#history
+        package_name: commentjson

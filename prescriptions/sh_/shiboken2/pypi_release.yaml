@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Shiboken2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shiboken2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shiboken2' has no recent release, last release dates back to 2020-11-20 08:17:09.023020
+        link: https://pypi.org/project/shiboken2/#history
+        package_name: shiboken2

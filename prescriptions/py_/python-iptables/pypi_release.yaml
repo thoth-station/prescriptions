@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonIptablesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-iptables
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-iptables' has no recent release, last release dates back to 2020-06-14 21:19:50.750851
+        link: https://pypi.org/project/python-iptables/#history
+        package_name: python-iptables

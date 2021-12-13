@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TbatsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tbats
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tbats' has no recent release, last release dates back to 2020-07-27 14:13:21.802787
+        link: https://pypi.org/project/tbats/#history
+        package_name: tbats

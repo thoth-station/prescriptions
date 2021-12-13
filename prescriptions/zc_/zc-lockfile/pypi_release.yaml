@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZcLockfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zc-lockfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zc-lockfile' has no recent release, last release dates back to 2019-08-08 05:51:21.133018
+        link: https://pypi.org/project/zc-lockfile/#history
+        package_name: zc-lockfile

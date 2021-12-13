@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyunicornPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyunicorn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyunicorn' has no recent release, last release dates back to 2019-06-21 08:33:48.723980
+        link: https://pypi.org/project/pyunicorn/#history
+        package_name: pyunicorn

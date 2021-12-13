@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Word2numberPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: word2number
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'word2number' has no recent release, last release dates back to 2017-06-02 15:45:14.488024
+        link: https://pypi.org/project/word2number/#history
+        package_name: word2number

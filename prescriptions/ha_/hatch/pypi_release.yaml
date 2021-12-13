@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hatch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hatch' has no recent release, last release dates back to 2019-10-21 16:41:17.858782
+        link: https://pypi.org/project/hatch/#history
+        package_name: hatch

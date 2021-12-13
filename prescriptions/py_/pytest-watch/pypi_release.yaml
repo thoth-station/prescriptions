@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestWatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-watch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-watch' has no recent release, last release dates back to 2018-05-20 19:52:16.194039
+        link: https://pypi.org/project/pytest-watch/#history
+        package_name: pytest-watch

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FriendlylorisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: friendlyloris
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'friendlyloris' has no recent release, last release dates back to 2019-11-11 06:31:15.034298
+        link: https://pypi.org/project/friendlyloris/#history
+        package_name: friendlyloris

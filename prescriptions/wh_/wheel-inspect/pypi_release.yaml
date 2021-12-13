@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WheelInspectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-inspect
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wheel-inspect' has no recent release, last release dates back to 2020-11-07 22:33:37.772401
+        link: https://pypi.org/project/wheel-inspect/#history
+        package_name: wheel-inspect

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScikitFuzzyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-fuzzy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scikit-fuzzy' has no recent release, last release dates back to 2019-11-14 01:51:16.675667
+        link: https://pypi.org/project/scikit-fuzzy/#history
+        package_name: scikit-fuzzy

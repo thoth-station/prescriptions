@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydanticPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydantic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydantic' has no recent release, last release dates back to 2021-05-11 20:29:39.906014
+        link: https://pypi.org/project/pydantic/#history
+        package_name: pydantic

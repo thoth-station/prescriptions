@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TensorflowonsparkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflowonspark
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tensorflowonspark' has no recent release, last release dates back to 2021-05-25 20:44:29.016860
+        link: https://pypi.org/project/tensorflowonspark/#history
+        package_name: tensorflowonspark

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyswipPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyswip
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyswip' has no recent release, last release dates back to 2020-06-22 01:35:44.677523
+        link: https://pypi.org/project/pyswip/#history
+        package_name: pyswip

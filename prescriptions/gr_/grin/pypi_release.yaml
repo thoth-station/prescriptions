@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grin' has no recent release, last release dates back to 2020-12-07 15:21:50.743631
+        link: https://pypi.org/project/grin/#history
+        package_name: grin

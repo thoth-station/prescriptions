@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WhoisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: whois
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'whois' has no recent release, last release dates back to 2021-04-22 19:21:11.210867
+        link: https://pypi.org/project/whois/#history
+        package_name: whois

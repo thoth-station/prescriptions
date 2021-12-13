@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rst2pdfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst2pdf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rst2pdf' has no recent release, last release dates back to 2020-08-28 16:09:59.923525
+        link: https://pypi.org/project/rst2pdf/#history
+        package_name: rst2pdf

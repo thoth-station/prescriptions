@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CollectfastPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: collectfast
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'collectfast' has no recent release, last release dates back to 2020-06-05 22:59:22.160493
+        link: https://pypi.org/project/collectfast/#history
+        package_name: collectfast

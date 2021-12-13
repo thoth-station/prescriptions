@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HupperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hupper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hupper' has no recent release, last release dates back to 2021-05-13 22:06:07.144926
+        link: https://pypi.org/project/hupper/#history
+        package_name: hupper

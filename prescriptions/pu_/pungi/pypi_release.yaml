@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PungiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pungi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pungi' has no recent release, last release dates back to 2013-06-26 17:58:33.752881
+        link: https://pypi.org/project/pungi/#history
+        package_name: pungi

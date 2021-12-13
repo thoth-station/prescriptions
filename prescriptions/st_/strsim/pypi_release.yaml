@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StrsimPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: strsim
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'strsim' has no recent release, last release dates back to 2018-07-13 11:13:03.023035
+        link: https://pypi.org/project/strsim/#history
+        package_name: strsim

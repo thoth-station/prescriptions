@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TracemoepyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tracemoepy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tracemoepy' has no recent release, last release dates back to 2021-06-06 13:16:46.296201
+        link: https://pypi.org/project/tracemoepy/#history
+        package_name: tracemoepy

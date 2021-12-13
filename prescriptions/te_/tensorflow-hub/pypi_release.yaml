@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TensorflowHubPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-hub
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tensorflow-hub' has no recent release, last release dates back to 2021-04-14 12:54:13.100727
+        link: https://pypi.org/project/tensorflow-hub/#history
+        package_name: tensorflow-hub

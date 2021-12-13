@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScikitPlotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-plot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scikit-plot' has no recent release, last release dates back to 2018-08-19 12:18:50.524068
+        link: https://pypi.org/project/scikit-plot/#history
+        package_name: scikit-plot

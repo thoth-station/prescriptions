@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HollandPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: holland
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'holland' has no recent release, last release dates back to 2018-10-13 20:22:06.758721
+        link: https://pypi.org/project/holland/#history
+        package_name: holland

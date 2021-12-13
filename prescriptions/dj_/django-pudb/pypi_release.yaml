@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoPudbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pudb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-pudb' has no recent release, last release dates back to 2014-05-07 13:43:49.025741
+        link: https://pypi.org/project/django-pudb/#history
+        package_name: django-pudb

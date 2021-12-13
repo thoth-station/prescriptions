@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioeafmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioeafm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioeafm' has no recent release, last release dates back to 2020-09-08 06:39:19.843214
+        link: https://pypi.org/project/aioeafm/#history
+        package_name: aioeafm

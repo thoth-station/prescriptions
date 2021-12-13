@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VarintPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: varint
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'varint' has no recent release, last release dates back to 2016-02-24 20:42:38.500689
+        link: https://pypi.org/project/varint/#history
+        package_name: varint

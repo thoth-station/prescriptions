@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobosignatoryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robosignatory
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'robosignatory' has no recent release, last release dates back to 2020-06-10 15:37:47.167173
+        link: https://pypi.org/project/robosignatory/#history
+        package_name: robosignatory

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YawnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yawn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yawn' has no recent release, last release dates back to 2014-10-17 10:55:00.852754
+        link: https://pypi.org/project/yawn/#history
+        package_name: yawn

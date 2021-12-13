@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureGraphrbacPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-graphrbac
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-graphrbac' has no recent release, last release dates back to 2019-05-29 21:16:12.952997
+        link: https://pypi.org/project/azure-graphrbac/#history
+        package_name: azure-graphrbac

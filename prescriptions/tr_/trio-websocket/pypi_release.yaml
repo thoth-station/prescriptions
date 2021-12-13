@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrioWebsocketPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trio-websocket
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trio-websocket' has no recent release, last release dates back to 2021-02-05 11:55:44.820612
+        link: https://pypi.org/project/trio-websocket/#history
+        package_name: trio-websocket

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ModutilPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modutil
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'modutil' has no recent release, last release dates back to 2018-04-23 00:30:31.587112
+        link: https://pypi.org/project/modutil/#history
+        package_name: modutil

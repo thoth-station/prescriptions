@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DogePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doge
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'doge' has no recent release, last release dates back to 2014-05-09 15:33:44.705999
+        link: https://pypi.org/project/doge/#history
+        package_name: doge

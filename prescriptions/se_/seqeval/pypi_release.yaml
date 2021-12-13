@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SeqevalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: seqeval
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'seqeval' has no recent release, last release dates back to 2020-10-24 00:24:54.926204
+        link: https://pypi.org/project/seqeval/#history
+        package_name: seqeval

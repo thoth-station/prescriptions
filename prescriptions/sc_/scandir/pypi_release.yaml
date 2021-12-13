@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScandirPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scandir
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scandir' has no recent release, last release dates back to 2019-03-09 17:58:33.269204
+        link: https://pypi.org/project/scandir/#history
+        package_name: scandir

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XunitparserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xunitparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xunitparser' has no recent release, last release dates back to 2014-08-19 06:53:28.830956
+        link: https://pypi.org/project/xunitparser/#history
+        package_name: xunitparser

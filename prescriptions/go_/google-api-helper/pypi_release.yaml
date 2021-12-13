@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleApiHelperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-api-helper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-api-helper' has no recent release, last release dates back to 2019-04-23 08:04:52.967199
+        link: https://pypi.org/project/google-api-helper/#history
+        package_name: google-api-helper

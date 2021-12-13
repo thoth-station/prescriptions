@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YapsyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yapsy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yapsy' has no recent release, last release dates back to 2019-07-27 17:51:18.769237
+        link: https://pypi.org/project/yapsy/#history
+        package_name: yapsy

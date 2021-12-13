@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebobPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webob
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webob' has no recent release, last release dates back to 2021-02-18 06:55:18.080653
+        link: https://pypi.org/project/webob/#history
+        package_name: webob

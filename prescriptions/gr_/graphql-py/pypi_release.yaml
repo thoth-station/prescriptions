@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GraphqlPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphql-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'graphql-py' has no recent release, last release dates back to 2020-12-07 04:55:24.838463
+        link: https://pypi.org/project/graphql-py/#history
+        package_name: graphql-py

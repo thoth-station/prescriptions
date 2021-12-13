@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyalsaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyalsa
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyalsa' has no recent release, last release dates back to 2015-10-08 05:03:37.215258
+        link: https://pypi.org/project/pyalsa/#history
+        package_name: pyalsa

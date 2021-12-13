@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyairnowPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyairnow
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyairnow' has no recent release, last release dates back to 2020-09-14 04:00:12.897913
+        link: https://pypi.org/project/pyairnow/#history
+        package_name: pyairnow

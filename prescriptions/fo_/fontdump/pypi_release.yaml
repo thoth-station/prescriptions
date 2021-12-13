@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FontdumpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fontdump
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fontdump' has no recent release, last release dates back to 2014-11-21 04:01:40.545318
+        link: https://pypi.org/project/fontdump/#history
+        package_name: fontdump

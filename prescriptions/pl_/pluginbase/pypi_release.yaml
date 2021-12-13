@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PluginbasePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pluginbase
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pluginbase' has no recent release, last release dates back to 2021-05-16 16:25:40.715857
+        link: https://pypi.org/project/pluginbase/#history
+        package_name: pluginbase

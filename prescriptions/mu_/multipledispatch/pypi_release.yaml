@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultipledispatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multipledispatch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multipledispatch' has no recent release, last release dates back to 2018-08-08 18:03:39.337032
+        link: https://pypi.org/project/multipledispatch/#history
+        package_name: multipledispatch

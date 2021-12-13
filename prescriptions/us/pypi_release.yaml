@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: us
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'us' has no recent release, last release dates back to 2020-04-29 05:14:01.493042
+        link: https://pypi.org/project/us/#history
+        package_name: us

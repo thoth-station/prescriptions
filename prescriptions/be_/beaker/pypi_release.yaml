@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BeakerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beaker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'beaker' has no recent release, last release dates back to 2019-08-26 22:02:01.302766
+        link: https://pypi.org/project/beaker/#history
+        package_name: beaker

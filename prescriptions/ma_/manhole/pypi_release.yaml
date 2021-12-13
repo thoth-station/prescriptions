@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ManholePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: manhole
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'manhole' has no recent release, last release dates back to 2021-04-08 20:14:56.966723
+        link: https://pypi.org/project/manhole/#history
+        package_name: manhole

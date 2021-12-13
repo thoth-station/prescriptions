@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Py3PinterestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3-pinterest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py3-pinterest' has no recent release, last release dates back to 2021-01-16 12:40:14.884225
+        link: https://pypi.org/project/py3-pinterest/#history
+        package_name: py3-pinterest

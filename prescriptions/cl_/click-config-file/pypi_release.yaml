@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClickConfigFilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-config-file
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'click-config-file' has no recent release, last release dates back to 2020-04-29 10:35:22.195972
+        link: https://pypi.org/project/click-config-file/#history
+        package_name: click-config-file

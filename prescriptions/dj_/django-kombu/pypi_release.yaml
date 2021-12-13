@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoKombuPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-kombu
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-kombu' has no recent release, last release dates back to 2011-08-01 12:02:23.655489
+        link: https://pypi.org/project/django-kombu/#history
+        package_name: django-kombu

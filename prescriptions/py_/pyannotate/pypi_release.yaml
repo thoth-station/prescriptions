@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyannotatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyannotate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyannotate' has no recent release, last release dates back to 2019-09-16 15:37:05.049612
+        link: https://pypi.org/project/pyannotate/#history
+        package_name: pyannotate

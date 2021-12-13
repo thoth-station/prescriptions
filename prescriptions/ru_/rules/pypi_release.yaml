@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RulesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rules
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rules' has no recent release, last release dates back to 2021-05-10 09:00:09.104616
+        link: https://pypi.org/project/rules/#history
+        package_name: rules

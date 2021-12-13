@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobotremoteserverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotremoteserver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'robotremoteserver' has no recent release, last release dates back to 2017-09-27 11:50:54.654707
+        link: https://pypi.org/project/robotremoteserver/#history
+        package_name: robotremoteserver

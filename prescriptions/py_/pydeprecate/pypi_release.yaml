@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydeprecatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydeprecate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydeprecate' has no recent release, last release dates back to 2021-06-11 09:33:41.199677
+        link: https://pypi.org/project/pydeprecate/#history
+        package_name: pydeprecate

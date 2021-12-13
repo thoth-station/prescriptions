@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TwitterScraperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twitter-scraper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'twitter-scraper' has no recent release, last release dates back to 2020-07-17 18:56:20.963267
+        link: https://pypi.org/project/twitter-scraper/#history
+        package_name: twitter-scraper

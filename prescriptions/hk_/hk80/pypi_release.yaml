@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Hk80PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hk80
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hk80' has no recent release, last release dates back to 2019-05-21 09:54:27.426776
+        link: https://pypi.org/project/hk80/#history
+        package_name: hk80

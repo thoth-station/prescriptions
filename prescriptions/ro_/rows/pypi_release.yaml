@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RowsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rows
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rows' has no recent release, last release dates back to 2019-02-14 21:12:09.650783
+        link: https://pypi.org/project/rows/#history
+        package_name: rows

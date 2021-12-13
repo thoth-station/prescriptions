@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonfuzzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythonfuzz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pythonfuzz' has no recent release, last release dates back to 2019-11-02 08:46:31.570031
+        link: https://pypi.org/project/pythonfuzz/#history
+        package_name: pythonfuzz

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OkaaraPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: okaara
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'okaara' has no recent release, last release dates back to 2016-12-14 17:20:28.540009
+        link: https://pypi.org/project/okaara/#history
+        package_name: okaara

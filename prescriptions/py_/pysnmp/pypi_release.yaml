@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysnmpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysnmp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysnmp' has no recent release, last release dates back to 2019-09-24 16:29:37.521955
+        link: https://pypi.org/project/pysnmp/#history
+        package_name: pysnmp

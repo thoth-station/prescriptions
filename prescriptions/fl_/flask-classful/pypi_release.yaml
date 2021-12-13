@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskClassfulPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-classful
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-classful' has no recent release, last release dates back to 2019-01-23 10:54:38.566452
+        link: https://pypi.org/project/flask-classful/#history
+        package_name: flask-classful

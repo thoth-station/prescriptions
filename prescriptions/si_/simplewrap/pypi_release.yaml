@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimplewrapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplewrap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'simplewrap' has no recent release, last release dates back to 2018-11-09 01:38:19.849214
+        link: https://pypi.org/project/simplewrap/#history
+        package_name: simplewrap

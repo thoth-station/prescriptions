@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RmtestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rmtest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rmtest' has no recent release, last release dates back to 2018-06-20 02:53:46.604130
+        link: https://pypi.org/project/rmtest/#history
+        package_name: rmtest

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LightfmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lightfm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lightfm' has no recent release, last release dates back to 2020-11-27 19:55:08.304605
+        link: https://pypi.org/project/lightfm/#history
+        package_name: lightfm

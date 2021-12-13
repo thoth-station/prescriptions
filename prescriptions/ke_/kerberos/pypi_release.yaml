@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerberosPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberos
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kerberos' has no recent release, last release dates back to 2021-01-09 06:43:46.862129
+        link: https://pypi.org/project/kerberos/#history
+        package_name: kerberos

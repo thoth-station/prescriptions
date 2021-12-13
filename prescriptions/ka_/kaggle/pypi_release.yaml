@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KagglePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaggle
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kaggle' has no recent release, last release dates back to 2021-03-13 00:50:03.699958
+        link: https://pypi.org/project/kaggle/#history
+        package_name: kaggle

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PastedeployPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastedeploy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pastedeploy' has no recent release, last release dates back to 2020-10-12 18:57:13.274784
+        link: https://pypi.org/project/pastedeploy/#history
+        package_name: pastedeploy

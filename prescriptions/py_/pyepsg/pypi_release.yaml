@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyepsgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyepsg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyepsg' has no recent release, last release dates back to 2018-11-26 14:11:46.901937
+        link: https://pypi.org/project/pyepsg/#history
+        package_name: pyepsg

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GorillaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gorilla
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gorilla' has no recent release, last release dates back to 2021-04-17 00:05:04.042783
+        link: https://pypi.org/project/gorilla/#history
+        package_name: gorilla

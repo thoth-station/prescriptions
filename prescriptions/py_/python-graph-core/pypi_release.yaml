@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonGraphCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-graph-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-graph-core' has no recent release, last release dates back to 2015-03-26 21:09:15.540434
+        link: https://pypi.org/project/python-graph-core/#history
+        package_name: python-graph-core

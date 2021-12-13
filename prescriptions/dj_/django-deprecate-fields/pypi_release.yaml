@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoDeprecateFieldsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-deprecate-fields
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-deprecate-fields' has no recent release, last release dates back to 2021-01-08 18:15:30.750828
+        link: https://pypi.org/project/django-deprecate-fields/#history
+        package_name: django-deprecate-fields

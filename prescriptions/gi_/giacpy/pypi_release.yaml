@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GiacpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: giacpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'giacpy' has no recent release, last release dates back to 2020-02-05 14:07:11.507733
+        link: https://pypi.org/project/giacpy/#history
+        package_name: giacpy

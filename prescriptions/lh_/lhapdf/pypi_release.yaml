@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LhapdfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lhapdf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lhapdf' has no recent release, last release dates back to 2018-11-26 16:05:56.258155
+        link: https://pypi.org/project/lhapdf/#history
+        package_name: lhapdf

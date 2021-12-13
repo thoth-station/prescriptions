@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerasResnetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-resnet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keras-resnet' has no recent release, last release dates back to 2019-05-01 18:43:53.627781
+        link: https://pypi.org/project/keras-resnet/#history
+        package_name: keras-resnet

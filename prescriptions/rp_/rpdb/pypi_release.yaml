@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RpdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rpdb' has no recent release, last release dates back to 2016-01-05 22:24:39.331310
+        link: https://pypi.org/project/rpdb/#history
+        package_name: rpdb

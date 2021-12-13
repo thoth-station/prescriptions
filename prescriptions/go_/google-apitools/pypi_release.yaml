@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleApitoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-apitools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-apitools' has no recent release, last release dates back to 2021-05-05 22:13:00.850978
+        link: https://pypi.org/project/google-apitools/#history
+        package_name: google-apitools

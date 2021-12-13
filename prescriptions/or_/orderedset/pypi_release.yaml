@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OrderedsetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: orderedset
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'orderedset' has no recent release, last release dates back to 2020-02-26 17:55:37.285556
+        link: https://pypi.org/project/orderedset/#history
+        package_name: orderedset

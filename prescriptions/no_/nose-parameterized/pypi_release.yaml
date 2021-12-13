@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NoseParameterizedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-parameterized
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nose-parameterized' has no recent release, last release dates back to 2017-03-21 17:30:05.203703
+        link: https://pypi.org/project/nose-parameterized/#history
+        package_name: nose-parameterized

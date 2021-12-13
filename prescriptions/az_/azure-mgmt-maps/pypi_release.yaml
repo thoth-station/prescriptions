@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtMapsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-maps
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-maps' has no recent release, last release dates back to 2021-05-11 03:04:21.951091
+        link: https://pypi.org/project/azure-mgmt-maps/#history
+        package_name: azure-mgmt-maps

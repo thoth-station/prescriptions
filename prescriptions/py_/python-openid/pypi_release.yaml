@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonOpenidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-openid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-openid' has no recent release, last release dates back to 2010-07-01 19:18:59.161558
+        link: https://pypi.org/project/python-openid/#history
+        package_name: python-openid

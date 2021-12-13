@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonMemcachedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-memcached
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-memcached' has no recent release, last release dates back to 2017-12-15 16:38:31.182327
+        link: https://pypi.org/project/python-memcached/#history
+        package_name: python-memcached

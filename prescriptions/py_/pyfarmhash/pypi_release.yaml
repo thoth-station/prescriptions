@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyfarmhashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfarmhash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyfarmhash' has no recent release, last release dates back to 2015-07-02 03:35:18.736636
+        link: https://pypi.org/project/pyfarmhash/#history
+        package_name: pyfarmhash

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XortoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xortool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xortool' has no recent release, last release dates back to 2020-11-01 10:39:07.666628
+        link: https://pypi.org/project/xortool/#history
+        package_name: xortool

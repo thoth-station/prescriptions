@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydotplusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydotplus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydotplus' has no recent release, last release dates back to 2014-12-09 00:53:49.515063
+        link: https://pypi.org/project/pydotplus/#history
+        package_name: pydotplus

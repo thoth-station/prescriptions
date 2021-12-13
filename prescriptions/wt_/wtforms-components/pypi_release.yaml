@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WtformsComponentsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wtforms-components
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wtforms-components' has no recent release, last release dates back to 2021-01-17 16:50:44.293724
+        link: https://pypi.org/project/wtforms-components/#history
+        package_name: wtforms-components

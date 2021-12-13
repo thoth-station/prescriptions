@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8ClassNewlinePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-class-newline
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-class-newline' has no recent release, last release dates back to 2017-11-03 17:24:13.079897
+        link: https://pypi.org/project/flake8-class-newline/#history
+        package_name: flake8-class-newline

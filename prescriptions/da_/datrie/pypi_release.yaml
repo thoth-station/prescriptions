@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DatriePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datrie
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'datrie' has no recent release, last release dates back to 2020-03-26 12:05:49.586785
+        link: https://pypi.org/project/datrie/#history
+        package_name: datrie

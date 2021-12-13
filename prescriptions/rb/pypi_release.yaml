@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rb' has no recent release, last release dates back to 2021-03-10 13:30:36.282282
+        link: https://pypi.org/project/rb/#history
+        package_name: rb

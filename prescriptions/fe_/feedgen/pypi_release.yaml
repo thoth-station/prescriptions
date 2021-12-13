@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FeedgenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedgen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'feedgen' has no recent release, last release dates back to 2020-01-28 17:12:58.861413
+        link: https://pypi.org/project/feedgen/#history
+        package_name: feedgen

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastbpePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastbpe
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastbpe' has no recent release, last release dates back to 2019-08-02 12:18:15.559396
+        link: https://pypi.org/project/fastbpe/#history
+        package_name: fastbpe

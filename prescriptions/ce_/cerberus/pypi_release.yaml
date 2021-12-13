@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CerberusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cerberus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cerberus' has no recent release, last release dates back to 2021-05-05 20:38:00.884544
+        link: https://pypi.org/project/cerberus/#history
+        package_name: cerberus

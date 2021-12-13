@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FidoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fido
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fido' has no recent release, last release dates back to 2017-10-05 15:58:39.097409
+        link: https://pypi.org/project/fido/#history
+        package_name: fido

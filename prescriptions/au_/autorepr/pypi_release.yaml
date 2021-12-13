@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AutoreprPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autorepr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autorepr' has no recent release, last release dates back to 2017-03-14 15:24:37.675553
+        link: https://pypi.org/project/autorepr/#history
+        package_name: autorepr

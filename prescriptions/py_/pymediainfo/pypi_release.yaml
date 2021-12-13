@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymediainfoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymediainfo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymediainfo' has no recent release, last release dates back to 2021-05-01 22:20:55.327804
+        link: https://pypi.org/project/pymediainfo/#history
+        package_name: pymediainfo

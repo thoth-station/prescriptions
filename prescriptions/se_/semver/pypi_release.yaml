@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SemverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'semver' has no recent release, last release dates back to 2020-10-20 20:16:54.454781
+        link: https://pypi.org/project/semver/#history
+        package_name: semver

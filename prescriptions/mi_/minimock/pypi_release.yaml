@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MinimockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minimock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'minimock' has no recent release, last release dates back to 2016-10-28 23:52:42.692059
+        link: https://pypi.org/project/minimock/#history
+        package_name: minimock

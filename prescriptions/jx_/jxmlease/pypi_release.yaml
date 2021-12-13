@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JxmleasePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jxmlease
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jxmlease' has no recent release, last release dates back to 2020-05-29 12:56:24.493983
+        link: https://pypi.org/project/jxmlease/#history
+        package_name: jxmlease

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HgsvnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hgsvn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hgsvn' has no recent release, last release dates back to 2020-07-16 08:58:03.087702
+        link: https://pypi.org/project/hgsvn/#history
+        package_name: hgsvn

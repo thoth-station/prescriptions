@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyhomeworksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhomeworks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyhomeworks' has no recent release, last release dates back to 2018-12-15 00:22:56.244943
+        link: https://pypi.org/project/pyhomeworks/#history
+        package_name: pyhomeworks

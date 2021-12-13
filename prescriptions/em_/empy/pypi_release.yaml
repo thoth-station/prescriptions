@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EmpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: empy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'empy' has no recent release, last release dates back to 2019-03-21 20:22:03.951998
+        link: https://pypi.org/project/empy/#history
+        package_name: empy

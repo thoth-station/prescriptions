@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppSessionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-session
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-session' has no recent release, last release dates back to 2018-10-22 13:01:12.637880
+        link: https://pypi.org/project/zope-app-session/#history
+        package_name: zope-app-session

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TreqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: treq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'treq' has no recent release, last release dates back to 2021-05-24 20:34:32.402317
+        link: https://pypi.org/project/treq/#history
+        package_name: treq

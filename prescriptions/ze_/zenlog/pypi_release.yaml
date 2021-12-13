@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZenlogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zenlog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zenlog' has no recent release, last release dates back to 2016-01-28 15:44:34.930150
+        link: https://pypi.org/project/zenlog/#history
+        package_name: zenlog

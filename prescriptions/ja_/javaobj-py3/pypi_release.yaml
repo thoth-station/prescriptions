@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JavaobjPy3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: javaobj-py3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'javaobj-py3' has no recent release, last release dates back to 2021-05-14 14:27:47.713899
+        link: https://pypi.org/project/javaobj-py3/#history
+        package_name: javaobj-py3

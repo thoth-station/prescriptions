@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RangeparserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rangeparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rangeparser' has no recent release, last release dates back to 2012-01-23 08:08:50.359283
+        link: https://pypi.org/project/rangeparser/#history
+        package_name: rangeparser

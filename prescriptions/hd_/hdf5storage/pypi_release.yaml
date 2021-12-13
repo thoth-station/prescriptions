@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Hdf5storagePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdf5storage
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hdf5storage' has no recent release, last release dates back to 2021-05-01 11:06:47.870822
+        link: https://pypi.org/project/hdf5storage/#history
+        package_name: hdf5storage

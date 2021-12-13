@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Metrics2mqttPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metrics2mqtt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'metrics2mqtt' has no recent release, last release dates back to 2020-08-06 18:50:07.002786
+        link: https://pypi.org/project/metrics2mqtt/#history
+        package_name: metrics2mqtt

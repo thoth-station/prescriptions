@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DataclassesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dataclasses
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dataclasses' has no recent release, last release dates back to 2020-11-13 14:40:30.139527
+        link: https://pypi.org/project/dataclasses/#history
+        package_name: dataclasses

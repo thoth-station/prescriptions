@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RlrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rlr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rlr' has no recent release, last release dates back to 2018-05-18 21:30:24.360095
+        link: https://pypi.org/project/rlr/#history
+        package_name: rlr

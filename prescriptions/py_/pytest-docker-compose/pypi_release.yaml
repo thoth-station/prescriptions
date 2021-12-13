@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestDockerComposePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-docker-compose
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-docker-compose' has no recent release, last release dates back to 2021-01-26 09:06:49.066908
+        link: https://pypi.org/project/pytest-docker-compose/#history
+        package_name: pytest-docker-compose

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TranslationstringPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: translationstring
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'translationstring' has no recent release, last release dates back to 2020-07-09 11:58:32.041458
+        link: https://pypi.org/project/translationstring/#history
+        package_name: translationstring

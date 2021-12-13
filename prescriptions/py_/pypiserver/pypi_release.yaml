@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypiserverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypiserver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pypiserver' has no recent release, last release dates back to 2020-10-10 13:17:57.047736
+        link: https://pypi.org/project/pypiserver/#history
+        package_name: pypiserver

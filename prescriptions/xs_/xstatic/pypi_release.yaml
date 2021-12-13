@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XstaticPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xstatic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xstatic' has no recent release, last release dates back to 2018-09-18 17:49:48.425804
+        link: https://pypi.org/project/xstatic/#history
+        package_name: xstatic

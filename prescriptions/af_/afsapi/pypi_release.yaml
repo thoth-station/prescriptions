@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AfsapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: afsapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'afsapi' has no recent release, last release dates back to 2018-08-21 11:50:19.352347
+        link: https://pypi.org/project/afsapi/#history
+        package_name: afsapi

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeotimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neotime
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neotime' has no recent release, last release dates back to 2018-12-04 09:17:30.733935
+        link: https://pypi.org/project/neotime/#history
+        package_name: neotime

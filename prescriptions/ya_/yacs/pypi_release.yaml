@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YacsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yacs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yacs' has no recent release, last release dates back to 2020-08-10 16:37:47.755411
+        link: https://pypi.org/project/yacs/#history
+        package_name: yacs

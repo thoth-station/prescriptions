@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TorchcontribPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchcontrib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'torchcontrib' has no recent release, last release dates back to 2019-04-29 18:04:15.162870
+        link: https://pypi.org/project/torchcontrib/#history
+        package_name: torchcontrib

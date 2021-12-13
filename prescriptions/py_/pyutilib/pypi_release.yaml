@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyutilibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyutilib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyutilib' has no recent release, last release dates back to 2020-06-19 14:30:52.510713
+        link: https://pypi.org/project/pyutilib/#history
+        package_name: pyutilib

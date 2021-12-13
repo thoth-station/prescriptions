@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtAdvisorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-advisor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-advisor' has no recent release, last release dates back to 2021-01-04 06:14:53.477549
+        link: https://pypi.org/project/azure-mgmt-advisor/#history
+        package_name: azure-mgmt-advisor

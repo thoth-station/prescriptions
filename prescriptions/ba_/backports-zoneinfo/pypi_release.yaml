@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsZoneinfoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-zoneinfo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-zoneinfo' has no recent release, last release dates back to 2020-06-23 13:51:22.041123
+        link: https://pypi.org/project/backports-zoneinfo/#history
+        package_name: backports-zoneinfo

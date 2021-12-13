@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeCachedescriptorsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-cachedescriptors
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-cachedescriptors' has no recent release, last release dates back to 2017-12-09 06:42:02.077054
+        link: https://pypi.org/project/zope-cachedescriptors/#history
+        package_name: zope-cachedescriptors

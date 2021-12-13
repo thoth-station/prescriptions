@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthereumUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethereum-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ethereum-utils' has no recent release, last release dates back to 2017-12-11 17:58:45.152078
+        link: https://pypi.org/project/ethereum-utils/#history
+        package_name: ethereum-utils

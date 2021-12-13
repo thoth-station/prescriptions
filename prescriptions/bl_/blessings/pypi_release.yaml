@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BlessingsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blessings
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'blessings' has no recent release, last release dates back to 2018-06-21 14:00:25.518071
+        link: https://pypi.org/project/blessings/#history
+        package_name: blessings

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SsmCachePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssm-cache
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ssm-cache' has no recent release, last release dates back to 2021-04-30 07:54:57.546975
+        link: https://pypi.org/project/ssm-cache/#history
+        package_name: ssm-cache

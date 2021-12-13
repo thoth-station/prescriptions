@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtDevspacesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-devspaces
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-devspaces' has no recent release, last release dates back to 2019-05-23 22:49:18.981461
+        link: https://pypi.org/project/azure-mgmt-devspaces/#history
+        package_name: azure-mgmt-devspaces

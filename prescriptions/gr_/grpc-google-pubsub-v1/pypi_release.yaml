@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrpcGooglePubsubV1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-pubsub-v1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grpc-google-pubsub-v1' has no recent release, last release dates back to 2016-09-30 01:13:40.877770
+        link: https://pypi.org/project/grpc-google-pubsub-v1/#history
+        package_name: grpc-google-pubsub-v1

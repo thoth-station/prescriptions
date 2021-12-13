@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParsleyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parsley
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'parsley' has no recent release, last release dates back to 2015-09-09 02:53:09.977884
+        link: https://pypi.org/project/parsley/#history
+        package_name: parsley

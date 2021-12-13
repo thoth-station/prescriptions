@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CachyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cachy' has no recent release, last release dates back to 2019-08-06 20:17:57.824095
+        link: https://pypi.org/project/cachy/#history
+        package_name: cachy

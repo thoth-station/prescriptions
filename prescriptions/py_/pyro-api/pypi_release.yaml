@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyroApiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyro-api
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyro-api' has no recent release, last release dates back to 2020-05-15 16:17:41.501019
+        link: https://pypi.org/project/pyro-api/#history
+        package_name: pyro-api

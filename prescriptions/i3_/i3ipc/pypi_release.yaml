@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: I3ipcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: i3ipc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'i3ipc' has no recent release, last release dates back to 2020-04-05 17:25:08.666505
+        link: https://pypi.org/project/i3ipc/#history
+        package_name: i3ipc

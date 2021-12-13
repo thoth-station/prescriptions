@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsShutilGetTerminalSizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-shutil-get-terminal-size
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-shutil-get-terminal-size' has no recent release, last release dates back to 2014-08-19 18:42:51.908309
+        link: https://pypi.org/project/backports-shutil-get-terminal-size/#history
+        package_name: backports-shutil-get-terminal-size

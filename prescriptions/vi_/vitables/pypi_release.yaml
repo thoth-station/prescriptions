@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VitablesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vitables
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vitables' has no recent release, last release dates back to 2019-12-25 14:25:51.096267
+        link: https://pypi.org/project/vitables/#history
+        package_name: vitables

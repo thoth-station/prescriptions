@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestAsyncioNetworkSimulatorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-asyncio-network-simulator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-asyncio-network-simulator' has no recent release, last release dates back to 2018-07-31 17:38:50.041311
+        link: https://pypi.org/project/pytest-asyncio-network-simulator/#history
+        package_name: pytest-asyncio-network-simulator

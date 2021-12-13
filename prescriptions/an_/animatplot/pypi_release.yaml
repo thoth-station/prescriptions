@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnimatplotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: animatplot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'animatplot' has no recent release, last release dates back to 2020-10-05 06:20:52.068805
+        link: https://pypi.org/project/animatplot/#history
+        package_name: animatplot

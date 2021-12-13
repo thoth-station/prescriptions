@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WstoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wstools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wstools' has no recent release, last release dates back to 2018-04-04 09:50:14.088140
+        link: https://pypi.org/project/wstools/#history
+        package_name: wstools

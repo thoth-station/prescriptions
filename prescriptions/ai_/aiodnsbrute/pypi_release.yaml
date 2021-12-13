@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiodnsbrutePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiodnsbrute
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiodnsbrute' has no recent release, last release dates back to 2019-06-04 19:43:26.231424
+        link: https://pypi.org/project/aiodnsbrute/#history
+        package_name: aiodnsbrute

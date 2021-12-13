@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LrparsingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lrparsing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lrparsing' has no recent release, last release dates back to 2016-10-10 02:18:42.266134
+        link: https://pypi.org/project/lrparsing/#history
+        package_name: lrparsing

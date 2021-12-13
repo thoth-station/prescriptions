@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RpycPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpyc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rpyc' has no recent release, last release dates back to 2021-01-11 19:26:24.884640
+        link: https://pypi.org/project/rpyc/#history
+        package_name: rpyc

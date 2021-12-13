@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProtoGoogleCloudSpeechV1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: proto-google-cloud-speech-v1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'proto-google-cloud-speech-v1' has no recent release, last release dates back to 2017-03-31 21:52:08.105394
+        link: https://pypi.org/project/proto-google-cloud-speech-v1/#history
+        package_name: proto-google-cloud-speech-v1

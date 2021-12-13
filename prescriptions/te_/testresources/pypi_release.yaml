@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TestresourcesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testresources
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'testresources' has no recent release, last release dates back to 2016-06-17 00:46:31.889917
+        link: https://pypi.org/project/testresources/#history
+        package_name: testresources

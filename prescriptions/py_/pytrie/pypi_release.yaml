@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytriePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytrie
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytrie' has no recent release, last release dates back to 2020-10-21 15:39:30.334782
+        link: https://pypi.org/project/pytrie/#history
+        package_name: pytrie

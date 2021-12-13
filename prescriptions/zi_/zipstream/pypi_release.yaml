@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZipstreamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zipstream' has no recent release, last release dates back to 2016-05-06 13:05:50.560842
+        link: https://pypi.org/project/zipstream/#history
+        package_name: zipstream

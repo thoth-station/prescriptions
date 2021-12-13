@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TalonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: talon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'talon' has no recent release, last release dates back to 2017-08-24 23:04:14.082427
+        link: https://pypi.org/project/talon/#history
+        package_name: talon

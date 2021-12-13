@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyactiveresourcePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyactiveresource
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyactiveresource' has no recent release, last release dates back to 2021-02-04 21:19:12.730695
+        link: https://pypi.org/project/pyactiveresource/#history
+        package_name: pyactiveresource

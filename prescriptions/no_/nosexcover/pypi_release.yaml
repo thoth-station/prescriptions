@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NosexcoverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nosexcover
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nosexcover' has no recent release, last release dates back to 2016-10-30 12:42:24.981973
+        link: https://pypi.org/project/nosexcover/#history
+        package_name: nosexcover

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BatinfoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batinfo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'batinfo' has no recent release, last release dates back to 2016-11-17 20:51:40.107915
+        link: https://pypi.org/project/batinfo/#history
+        package_name: batinfo

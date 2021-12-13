@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuckitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuckit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fuckit' has no recent release, last release dates back to 2018-02-23 23:17:02.857410
+        link: https://pypi.org/project/fuckit/#history
+        package_name: fuckit

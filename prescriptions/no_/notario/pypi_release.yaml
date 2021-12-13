@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NotarioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notario
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'notario' has no recent release, last release dates back to 2018-11-19 15:16:32.430317
+        link: https://pypi.org/project/notario/#history
+        package_name: notario

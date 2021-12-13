@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxAutobuildPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autobuild
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-autobuild' has no recent release, last release dates back to 2021-03-14 13:46:53.996229
+        link: https://pypi.org/project/sphinx-autobuild/#history
+        package_name: sphinx-autobuild

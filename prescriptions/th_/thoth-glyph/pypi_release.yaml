@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ThothGlyphPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-glyph
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'thoth-glyph' has no recent release, last release dates back to 2020-12-03 19:56:54.991841
+        link: https://pypi.org/project/thoth-glyph/#history
+        package_name: thoth-glyph

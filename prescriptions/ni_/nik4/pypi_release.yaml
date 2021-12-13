@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Nik4PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nik4
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nik4' has no recent release, last release dates back to 2021-03-27 19:48:30.875068
+        link: https://pypi.org/project/nik4/#history
+        package_name: nik4

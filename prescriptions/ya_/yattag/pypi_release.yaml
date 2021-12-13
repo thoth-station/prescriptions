@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YattagPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yattag
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yattag' has no recent release, last release dates back to 2020-08-06 21:30:09.312267
+        link: https://pypi.org/project/yattag/#history
+        package_name: yattag

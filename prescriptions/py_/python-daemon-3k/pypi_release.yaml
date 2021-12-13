@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonDaemon3kPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-daemon-3k
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-daemon-3k' has no recent release, last release dates back to 2014-09-25 14:36:18.287334
+        link: https://pypi.org/project/python-daemon-3k/#history
+        package_name: python-daemon-3k

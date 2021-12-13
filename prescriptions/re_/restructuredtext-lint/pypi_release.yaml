@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RestructuredtextLintPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restructuredtext-lint
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'restructuredtext-lint' has no recent release, last release dates back to 2020-11-24 11:21:13.802990
+        link: https://pypi.org/project/restructuredtext-lint/#history
+        package_name: restructuredtext-lint

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MysqlPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysql-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mysql-python' has no recent release, last release dates back to 2014-01-02 19:43:08.251341
+        link: https://pypi.org/project/mysql-python/#history
+        package_name: mysql-python

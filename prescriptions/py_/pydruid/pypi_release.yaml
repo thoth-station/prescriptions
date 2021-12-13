@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydruidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydruid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydruid' has no recent release, last release dates back to 2020-12-09 20:46:33.257601
+        link: https://pypi.org/project/pydruid/#history
+        package_name: pydruid

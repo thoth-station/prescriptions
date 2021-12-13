@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyinquirerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinquirer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyinquirer' has no recent release, last release dates back to 2018-11-22 19:22:15.215456
+        link: https://pypi.org/project/pyinquirer/#history
+        package_name: pyinquirer

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipy' has no recent release, last release dates back to 2020-12-01 20:33:09.808845
+        link: https://pypi.org/project/ipy/#history
+        package_name: ipy

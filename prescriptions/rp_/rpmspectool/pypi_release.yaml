@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RpmspectoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpmspectool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rpmspectool' has no recent release, last release dates back to 2020-04-03 14:34:01.428870
+        link: https://pypi.org/project/rpmspectool/#history
+        package_name: rpmspectool

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NoseCover3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-cover3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nose-cover3' has no recent release, last release dates back to 2011-09-13 16:21:40.505983
+        link: https://pypi.org/project/nose-cover3/#history
+        package_name: nose-cover3

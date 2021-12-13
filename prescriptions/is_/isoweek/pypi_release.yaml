@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IsoweekPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isoweek
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'isoweek' has no recent release, last release dates back to 2017-01-04 15:16:33.969782
+        link: https://pypi.org/project/isoweek/#history
+        package_name: isoweek

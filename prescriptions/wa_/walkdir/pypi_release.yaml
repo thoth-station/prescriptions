@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WalkdirPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: walkdir
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'walkdir' has no recent release, last release dates back to 2016-05-10 11:59:31.570206
+        link: https://pypi.org/project/walkdir/#history
+        package_name: walkdir

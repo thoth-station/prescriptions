@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysrtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysrt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysrt' has no recent release, last release dates back to 2020-01-20 15:22:28.291026
+        link: https://pypi.org/project/pysrt/#history
+        package_name: pysrt

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskGraphqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-graphql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-graphql' has no recent release, last release dates back to 2019-12-05 15:32:32.398960
+        link: https://pypi.org/project/flask-graphql/#history
+        package_name: flask-graphql

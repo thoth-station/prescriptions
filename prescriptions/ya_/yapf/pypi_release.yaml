@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YapfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yapf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yapf' has no recent release, last release dates back to 2021-03-12 21:45:35.136324
+        link: https://pypi.org/project/yapf/#history
+        package_name: yapf

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DratPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'drat' has no recent release, last release dates back to 2016-07-13 09:44:28.764312
+        link: https://pypi.org/project/drat/#history
+        package_name: drat

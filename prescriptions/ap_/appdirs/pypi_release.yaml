@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AppdirsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: appdirs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'appdirs' has no recent release, last release dates back to 2020-05-11 07:59:51.037820
+        link: https://pypi.org/project/appdirs/#history
+        package_name: appdirs

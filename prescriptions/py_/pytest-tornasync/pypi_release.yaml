@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestTornasyncPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornasync
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-tornasync' has no recent release, last release dates back to 2019-07-15 08:41:13.921038
+        link: https://pypi.org/project/pytest-tornasync/#history
+        package_name: pytest-tornasync

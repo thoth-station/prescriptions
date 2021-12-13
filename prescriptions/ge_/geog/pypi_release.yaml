@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geog' has no recent release, last release dates back to 2016-02-04 14:59:37.622505
+        link: https://pypi.org/project/geog/#history
+        package_name: geog

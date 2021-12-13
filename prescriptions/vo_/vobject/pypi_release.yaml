@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VobjectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vobject
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vobject' has no recent release, last release dates back to 2018-07-18 16:03:43.067435
+        link: https://pypi.org/project/vobject/#history
+        package_name: vobject

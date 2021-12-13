@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UpdateCheckerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: update-checker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'update-checker' has no recent release, last release dates back to 2020-08-04 07:08:50.429516
+        link: https://pypi.org/project/update-checker/#history
+        package_name: update-checker

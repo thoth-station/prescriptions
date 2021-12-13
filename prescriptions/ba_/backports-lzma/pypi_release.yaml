@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsLzmaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-lzma
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-lzma' has no recent release, last release dates back to 2019-09-12 15:00:41.144808
+        link: https://pypi.org/project/backports-lzma/#history
+        package_name: backports-lzma

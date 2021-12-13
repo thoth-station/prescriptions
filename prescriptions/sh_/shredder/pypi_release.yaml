@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShredderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shredder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shredder' has no recent release, last release dates back to 2018-02-14 05:52:09.403383
+        link: https://pypi.org/project/shredder/#history
+        package_name: shredder

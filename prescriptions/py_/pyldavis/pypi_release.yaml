@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyldavisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyldavis
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyldavis' has no recent release, last release dates back to 2021-03-24 12:57:08.998377
+        link: https://pypi.org/project/pyldavis/#history
+        package_name: pyldavis

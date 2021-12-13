@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpaclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipaclient' has no recent release, last release dates back to 2020-08-20 10:53:29.641437
+        link: https://pypi.org/project/ipaclient/#history
+        package_name: ipaclient

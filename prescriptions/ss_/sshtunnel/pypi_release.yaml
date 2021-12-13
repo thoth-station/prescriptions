@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SshtunnelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshtunnel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sshtunnel' has no recent release, last release dates back to 2021-01-11 13:26:32.975793
+        link: https://pypi.org/project/sshtunnel/#history
+        package_name: sshtunnel

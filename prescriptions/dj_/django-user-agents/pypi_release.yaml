@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoUserAgentsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-user-agents
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-user-agents' has no recent release, last release dates back to 2019-06-22 13:33:50.372832
+        link: https://pypi.org/project/django-user-agents/#history
+        package_name: django-user-agents

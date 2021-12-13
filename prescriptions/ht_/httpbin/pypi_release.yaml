@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HttpbinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpbin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'httpbin' has no recent release, last release dates back to 2018-05-08 12:00:47.505185
+        link: https://pypi.org/project/httpbin/#history
+        package_name: httpbin

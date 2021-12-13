@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8Pep3101PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-pep3101
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-pep3101' has no recent release, last release dates back to 2019-12-14 23:32:16.556607
+        link: https://pypi.org/project/flake8-pep3101/#history
+        package_name: flake8-pep3101

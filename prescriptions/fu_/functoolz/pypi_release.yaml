@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FunctoolzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: functoolz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'functoolz' has no recent release, last release dates back to 2013-09-11 02:34:31.916052
+        link: https://pypi.org/project/functoolz/#history
+        package_name: functoolz

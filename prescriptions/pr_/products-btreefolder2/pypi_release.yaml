@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProductsBtreefolder2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-btreefolder2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'products-btreefolder2' has no recent release, last release dates back to 2021-04-26 06:28:31.936847
+        link: https://pypi.org/project/products-btreefolder2/#history
+        package_name: products-btreefolder2

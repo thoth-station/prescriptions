@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonRedisLockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-redis-lock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-redis-lock' has no recent release, last release dates back to 2020-11-20 09:10:28.110783
+        link: https://pypi.org/project/python-redis-lock/#history
+        package_name: python-redis-lock

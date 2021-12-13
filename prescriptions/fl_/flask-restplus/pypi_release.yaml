@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskRestplusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-restplus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-restplus' has no recent release, last release dates back to 2019-08-12 21:51:40.749657
+        link: https://pypi.org/project/flask-restplus/#history
+        package_name: flask-restplus

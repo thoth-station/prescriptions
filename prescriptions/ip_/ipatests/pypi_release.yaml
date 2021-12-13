@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpatestsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipatests
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipatests' has no recent release, last release dates back to 2020-08-20 10:53:42.516104
+        link: https://pypi.org/project/ipatests/#history
+        package_name: ipatests

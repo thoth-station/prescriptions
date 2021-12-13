@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyutilPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyutil
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyutil' has no recent release, last release dates back to 2019-06-26 16:51:35.540107
+        link: https://pypi.org/project/pyutil/#history
+        package_name: pyutil

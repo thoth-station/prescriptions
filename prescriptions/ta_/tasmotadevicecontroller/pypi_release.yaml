@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TasmotadevicecontrollerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tasmotadevicecontroller
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tasmotadevicecontroller' has no recent release, last release dates back to 2020-04-14 17:34:16.467598
+        link: https://pypi.org/project/tasmotadevicecontroller/#history
+        package_name: tasmotadevicecontroller

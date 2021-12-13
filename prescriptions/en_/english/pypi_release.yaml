@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EnglishPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: english
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'english' has no recent release, last release dates back to 2020-07-17 17:33:06.195162
+        link: https://pypi.org/project/english/#history
+        package_name: english

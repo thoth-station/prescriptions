@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImutilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imutils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'imutils' has no recent release, last release dates back to 2021-01-15 10:53:17.816454
+        link: https://pypi.org/project/imutils/#history
+        package_name: imutils

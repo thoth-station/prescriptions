@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProductmdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: productmd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'productmd' has no recent release, last release dates back to 2021-05-24 09:08:38.186572
+        link: https://pypi.org/project/productmd/#history
+        package_name: productmd

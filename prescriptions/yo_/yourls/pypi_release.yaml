@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YourlsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yourls
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yourls' has no recent release, last release dates back to 2018-01-17 23:02:50.704577
+        link: https://pypi.org/project/yourls/#history
+        package_name: yourls

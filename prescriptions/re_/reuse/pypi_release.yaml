@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReusePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reuse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'reuse' has no recent release, last release dates back to 2021-06-11 13:37:40.399620
+        link: https://pypi.org/project/reuse/#history
+        package_name: reuse

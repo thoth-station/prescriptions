@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsTimePerfCounterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-time-perf-counter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-time-perf-counter' has no recent release, last release dates back to 2019-03-26 02:01:56.876434
+        link: https://pypi.org/project/backports-time-perf-counter/#history
+        package_name: backports-time-perf-counter

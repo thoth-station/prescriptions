@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ModinSpreadsheetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modin-spreadsheet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'modin-spreadsheet' has no recent release, last release dates back to 2021-04-05 18:05:56.129133
+        link: https://pypi.org/project/modin-spreadsheet/#history
+        package_name: modin-spreadsheet

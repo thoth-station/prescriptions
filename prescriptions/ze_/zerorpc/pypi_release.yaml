@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZerorpcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zerorpc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zerorpc' has no recent release, last release dates back to 2019-06-26 09:02:38.513284
+        link: https://pypi.org/project/zerorpc/#history
+        package_name: zerorpc

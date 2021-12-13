@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ansi2htmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansi2html
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansi2html' has no recent release, last release dates back to 2020-11-17 14:24:41.802844
+        link: https://pypi.org/project/ansi2html/#history
+        package_name: ansi2html

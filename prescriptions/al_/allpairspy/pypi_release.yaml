@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AllpairspyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: allpairspy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'allpairspy' has no recent release, last release dates back to 2019-05-11 08:54:10.055599
+        link: https://pypi.org/project/allpairspy/#history
+        package_name: allpairspy

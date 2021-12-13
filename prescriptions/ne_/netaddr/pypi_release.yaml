@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NetaddrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netaddr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'netaddr' has no recent release, last release dates back to 2020-07-03 14:43:51.926596
+        link: https://pypi.org/project/netaddr/#history
+        package_name: netaddr

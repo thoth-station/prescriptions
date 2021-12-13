@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PybalboaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybalboa
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pybalboa' has no recent release, last release dates back to 2020-12-05 15:47:19.456923
+        link: https://pypi.org/project/pybalboa/#history
+        package_name: pybalboa

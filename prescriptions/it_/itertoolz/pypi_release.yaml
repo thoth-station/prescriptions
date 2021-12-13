@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ItertoolzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itertoolz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'itertoolz' has no recent release, last release dates back to 2013-09-11 02:42:12.899634
+        link: https://pypi.org/project/itertoolz/#history
+        package_name: itertoolz

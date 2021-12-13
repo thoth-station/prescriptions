@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PlugnplayPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plugnplay
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'plugnplay' has no recent release, last release dates back to 2020-03-29 20:54:59.928914
+        link: https://pypi.org/project/plugnplay/#history
+        package_name: plugnplay

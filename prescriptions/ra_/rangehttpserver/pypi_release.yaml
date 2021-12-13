@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RangehttpserverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rangehttpserver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rangehttpserver' has no recent release, last release dates back to 2016-08-29 19:57:57.437149
+        link: https://pypi.org/project/rangehttpserver/#history
+        package_name: rangehttpserver

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XvfbwrapperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xvfbwrapper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xvfbwrapper' has no recent release, last release dates back to 2016-12-17 20:50:38.431417
+        link: https://pypi.org/project/xvfbwrapper/#history
+        package_name: xvfbwrapper

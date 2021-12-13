@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zict' has no recent release, last release dates back to 2020-02-28 15:22:43.749811
+        link: https://pypi.org/project/zict/#history
+        package_name: zict

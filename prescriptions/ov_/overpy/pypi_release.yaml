@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OverpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: overpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'overpy' has no recent release, last release dates back to 2021-04-20 17:46:40.669729
+        link: https://pypi.org/project/overpy/#history
+        package_name: overpy

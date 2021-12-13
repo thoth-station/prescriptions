@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsInspectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-inspect
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-inspect' has no recent release, last release dates back to 2015-03-07 00:45:59.140137
+        link: https://pypi.org/project/backports-inspect/#history
+        package_name: backports-inspect

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LahjaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lahja
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lahja' has no recent release, last release dates back to 2020-09-04 16:56:26.942781
+        link: https://pypi.org/project/lahja/#history
+        package_name: lahja

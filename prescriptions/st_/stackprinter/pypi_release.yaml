@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StackprinterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stackprinter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stackprinter' has no recent release, last release dates back to 2020-10-31 13:07:01.378778
+        link: https://pypi.org/project/stackprinter/#history
+        package_name: stackprinter

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AdmeshPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: admesh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'admesh' has no recent release, last release dates back to 2018-06-24 18:37:28.147507
+        link: https://pypi.org/project/admesh/#history
+        package_name: admesh

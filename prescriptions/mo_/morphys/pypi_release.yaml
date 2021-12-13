@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MorphysPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: morphys
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'morphys' has no recent release, last release dates back to 2017-01-10 20:08:56.872735
+        link: https://pypi.org/project/morphys/#history
+        package_name: morphys

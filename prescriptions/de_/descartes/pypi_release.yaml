@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DescartesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: descartes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'descartes' has no recent release, last release dates back to 2017-01-17 15:37:03.945069
+        link: https://pypi.org/project/descartes/#history
+        package_name: descartes

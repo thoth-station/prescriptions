@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FacebookSdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'facebook-sdk' has no recent release, last release dates back to 2018-11-06 06:54:02.227640
+        link: https://pypi.org/project/facebook-sdk/#history
+        package_name: facebook-sdk

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppBrokenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-broken
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-broken' has no recent release, last release dates back to 2020-11-18 13:44:50.382225
+        link: https://pypi.org/project/zope-app-broken/#history
+        package_name: zope-app-broken

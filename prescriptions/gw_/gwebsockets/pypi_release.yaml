@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GwebsocketsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gwebsockets
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gwebsockets' has no recent release, last release dates back to 2020-01-30 23:18:23.680435
+        link: https://pypi.org/project/gwebsockets/#history
+        package_name: gwebsockets

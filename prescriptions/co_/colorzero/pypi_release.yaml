@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColorzeroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorzero
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colorzero' has no recent release, last release dates back to 2021-03-15 23:42:23.261534
+        link: https://pypi.org/project/colorzero/#history
+        package_name: colorzero

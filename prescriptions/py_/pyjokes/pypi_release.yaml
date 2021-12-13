@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyjokesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyjokes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyjokes' has no recent release, last release dates back to 2019-08-14 20:47:16.400286
+        link: https://pypi.org/project/pyjokes/#history
+        package_name: pyjokes

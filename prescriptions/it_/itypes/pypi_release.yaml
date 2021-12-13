@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ItypesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itypes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'itypes' has no recent release, last release dates back to 2020-04-19 21:50:13.144495
+        link: https://pypi.org/project/itypes/#history
+        package_name: itypes

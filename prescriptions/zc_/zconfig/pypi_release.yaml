@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZconfigPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zconfig
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zconfig' has no recent release, last release dates back to 2021-05-17 23:02:32.282787
+        link: https://pypi.org/project/zconfig/#history
+        package_name: zconfig

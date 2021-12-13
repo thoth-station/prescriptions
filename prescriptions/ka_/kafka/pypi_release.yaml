@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KafkaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kafka
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kafka' has no recent release, last release dates back to 2017-10-07 23:53:16.826418
+        link: https://pypi.org/project/kafka/#history
+        package_name: kafka

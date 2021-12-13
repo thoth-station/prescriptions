@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rfc3339ValidatorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc3339-validator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rfc3339-validator' has no recent release, last release dates back to 2021-05-12 16:37:54.178122
+        link: https://pypi.org/project/rfc3339-validator/#history
+        package_name: rfc3339-validator

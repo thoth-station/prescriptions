@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Jpeg4pyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jpeg4py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jpeg4py' has no recent release, last release dates back to 2018-02-23 02:44:50.905452
+        link: https://pypi.org/project/jpeg4py/#history
+        package_name: jpeg4py

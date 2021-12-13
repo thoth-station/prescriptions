@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoFakeModelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-fake-model
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-fake-model' has no recent release, last release dates back to 2016-02-08 11:41:12.846204
+        link: https://pypi.org/project/django-fake-model/#history
+        package_name: django-fake-model

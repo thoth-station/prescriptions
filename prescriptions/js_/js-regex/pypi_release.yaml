@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsRegexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: js-regex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'js-regex' has no recent release, last release dates back to 2019-10-17 08:13:57.438279
+        link: https://pypi.org/project/js-regex/#history
+        package_name: js-regex

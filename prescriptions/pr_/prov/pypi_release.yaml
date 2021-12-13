@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prov
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prov' has no recent release, last release dates back to 2020-11-01 18:30:09.294775
+        link: https://pypi.org/project/prov/#history
+        package_name: prov

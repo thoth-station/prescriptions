@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastprogressPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastprogress
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastprogress' has no recent release, last release dates back to 2020-08-20 12:46:30.217784
+        link: https://pypi.org/project/fastprogress/#history
+        package_name: fastprogress

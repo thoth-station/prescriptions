@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskRedisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-redis
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-redis' has no recent release, last release dates back to 2019-05-29 10:55:54.195778
+        link: https://pypi.org/project/flask-redis/#history
+        package_name: flask-redis

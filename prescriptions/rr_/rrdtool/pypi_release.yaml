@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RrdtoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rrdtool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rrdtool' has no recent release, last release dates back to 2019-05-17 12:21:33.800358
+        link: https://pypi.org/project/rrdtool/#history
+        package_name: rrdtool

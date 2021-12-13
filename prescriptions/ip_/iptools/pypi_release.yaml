@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IptoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iptools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'iptools' has no recent release, last release dates back to 2019-01-07 05:00:24.363775
+        link: https://pypi.org/project/iptools/#history
+        package_name: iptools

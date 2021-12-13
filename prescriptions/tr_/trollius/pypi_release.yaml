@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrolliusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trollius
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trollius' has no recent release, last release dates back to 2021-04-28 17:32:04.858086
+        link: https://pypi.org/project/trollius/#history
+        package_name: trollius

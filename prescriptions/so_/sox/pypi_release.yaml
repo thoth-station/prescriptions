@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SoxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sox' has no recent release, last release dates back to 2020-09-30 01:20:26.086214
+        link: https://pypi.org/project/sox/#history
+        package_name: sox

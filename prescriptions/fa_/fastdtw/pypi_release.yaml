@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastdtwPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastdtw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastdtw' has no recent release, last release dates back to 2019-10-07 16:02:29.982783
+        link: https://pypi.org/project/fastdtw/#history
+        package_name: fastdtw

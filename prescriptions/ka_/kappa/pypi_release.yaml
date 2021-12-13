@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KappaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kappa
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kappa' has no recent release, last release dates back to 2017-02-13 23:29:25.747201
+        link: https://pypi.org/project/kappa/#history
+        package_name: kappa

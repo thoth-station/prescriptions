@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BinstructPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binstruct
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'binstruct' has no recent release, last release dates back to 2015-03-02 18:56:42.646430
+        link: https://pypi.org/project/binstruct/#history
+        package_name: binstruct

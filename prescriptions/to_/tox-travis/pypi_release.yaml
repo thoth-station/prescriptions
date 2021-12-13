@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ToxTravisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-travis
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tox-travis' has no recent release, last release dates back to 2019-03-14 18:51:38.576203
+        link: https://pypi.org/project/tox-travis/#history
+        package_name: tox-travis

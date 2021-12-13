@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RiakPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riak
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'riak' has no recent release, last release dates back to 2016-12-12 22:51:36.937693
+        link: https://pypi.org/project/riak/#history
+        package_name: riak

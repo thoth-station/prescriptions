@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PhantomjsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phantomjs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'phantomjs' has no recent release, last release dates back to 2021-04-10 06:55:07.283860
+        link: https://pypi.org/project/phantomjs/#history
+        package_name: phantomjs

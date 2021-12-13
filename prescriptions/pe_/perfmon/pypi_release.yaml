@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PerfmonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: perfmon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'perfmon' has no recent release, last release dates back to 2019-08-07 02:03:15.265249
+        link: https://pypi.org/project/perfmon/#history
+        package_name: perfmon

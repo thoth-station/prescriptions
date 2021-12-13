@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lime
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lime' has no recent release, last release dates back to 2020-06-26 21:38:15.460541
+        link: https://pypi.org/project/lime/#history
+        package_name: lime

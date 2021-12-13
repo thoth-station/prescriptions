@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ChaiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chai
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'chai' has no recent release, last release dates back to 2017-06-19 21:31:52.300546
+        link: https://pypi.org/project/chai/#history
+        package_name: chai

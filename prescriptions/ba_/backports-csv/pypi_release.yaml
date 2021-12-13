@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsCsvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-csv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-csv' has no recent release, last release dates back to 2019-03-11 03:05:33.248718
+        link: https://pypi.org/project/backports-csv/#history
+        package_name: backports-csv

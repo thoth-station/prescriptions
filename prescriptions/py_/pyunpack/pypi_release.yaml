@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyunpackPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyunpack
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyunpack' has no recent release, last release dates back to 2020-10-01 13:35:39.890620
+        link: https://pypi.org/project/pyunpack/#history
+        package_name: pyunpack

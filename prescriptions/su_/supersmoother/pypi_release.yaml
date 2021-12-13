@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SupersmootherPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supersmoother
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'supersmoother' has no recent release, last release dates back to 2017-05-06 03:15:23.080600
+        link: https://pypi.org/project/supersmoother/#history
+        package_name: supersmoother

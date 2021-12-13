@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SmbpasswdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbpasswd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'smbpasswd' has no recent release, last release dates back to 2011-07-17 21:00:44.165661
+        link: https://pypi.org/project/smbpasswd/#history
+        package_name: smbpasswd

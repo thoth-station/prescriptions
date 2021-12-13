@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PlasterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plaster
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'plaster' has no recent release, last release dates back to 2017-10-11 05:25:21.374065
+        link: https://pypi.org/project/plaster/#history
+        package_name: plaster

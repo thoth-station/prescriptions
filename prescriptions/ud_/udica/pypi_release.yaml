@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UdicaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: udica
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'udica' has no recent release, last release dates back to 2020-08-15 10:24:40.059043
+        link: https://pypi.org/project/udica/#history
+        package_name: udica

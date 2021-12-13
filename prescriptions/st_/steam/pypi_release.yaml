@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SteamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: steam
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'steam' has no recent release, last release dates back to 2021-02-06 00:28:09.393861
+        link: https://pypi.org/project/steam/#history
+        package_name: steam

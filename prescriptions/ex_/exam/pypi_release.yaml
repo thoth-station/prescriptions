@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ExamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exam
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'exam' has no recent release, last release dates back to 2016-05-26 21:11:18.560441
+        link: https://pypi.org/project/exam/#history
+        package_name: exam

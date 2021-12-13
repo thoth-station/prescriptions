@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthereumAbiUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethereum-abi-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ethereum-abi-utils' has no recent release, last release dates back to 2017-12-18 17:24:29.060151
+        link: https://pypi.org/project/ethereum-abi-utils/#history
+        package_name: ethereum-abi-utils

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LdappoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ldappool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ldappool' has no recent release, last release dates back to 2021-02-26 15:35:45.769194
+        link: https://pypi.org/project/ldappool/#history
+        package_name: ldappool

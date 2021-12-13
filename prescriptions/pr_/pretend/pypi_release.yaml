@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PretendPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretend
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pretend' has no recent release, last release dates back to 2018-04-14 14:31:08.493739
+        link: https://pypi.org/project/pretend/#history
+        package_name: pretend

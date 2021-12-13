@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AlchemyCatalystPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alchemy-catalyst
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'alchemy-catalyst' has no recent release, last release dates back to 2020-03-21 17:41:17.844590
+        link: https://pypi.org/project/alchemy-catalyst/#history
+        package_name: alchemy-catalyst

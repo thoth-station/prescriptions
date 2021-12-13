@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeorgePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: george
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'george' has no recent release, last release dates back to 2021-02-15 17:00:30.678787
+        link: https://pypi.org/project/george/#history
+        package_name: george

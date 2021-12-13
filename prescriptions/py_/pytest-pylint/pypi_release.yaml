@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestPylintPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-pylint
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-pylint' has no recent release, last release dates back to 2020-11-09 06:56:48.199232
+        link: https://pypi.org/project/pytest-pylint/#history
+        package_name: pytest-pylint

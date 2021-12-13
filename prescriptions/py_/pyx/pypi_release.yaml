@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyx' has no recent release, last release dates back to 2019-07-14 09:59:06.049299
+        link: https://pypi.org/project/pyx/#history
+        package_name: pyx

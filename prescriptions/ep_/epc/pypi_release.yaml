@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EpcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'epc' has no recent release, last release dates back to 2013-06-22 19:14:18.999355
+        link: https://pypi.org/project/epc/#history
+        package_name: epc

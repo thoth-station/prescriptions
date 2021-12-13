@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoMultiselectfieldPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-multiselectfield
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-multiselectfield' has no recent release, last release dates back to 2020-02-20 06:13:17.672547
+        link: https://pypi.org/project/django-multiselectfield/#history
+        package_name: django-multiselectfield

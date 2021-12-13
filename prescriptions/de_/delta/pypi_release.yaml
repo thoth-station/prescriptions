@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DeltaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: delta
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'delta' has no recent release, last release dates back to 2016-08-06 05:02:44.181067
+        link: https://pypi.org/project/delta/#history
+        package_name: delta

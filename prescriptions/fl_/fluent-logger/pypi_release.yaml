@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FluentLoggerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fluent-logger
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fluent-logger' has no recent release, last release dates back to 2021-03-11 01:14:41.691990
+        link: https://pypi.org/project/fluent-logger/#history
+        package_name: fluent-logger

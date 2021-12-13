@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Html2textPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: html2text
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'html2text' has no recent release, last release dates back to 2020-01-16 14:21:54.493722
+        link: https://pypi.org/project/html2text/#history
+        package_name: html2text

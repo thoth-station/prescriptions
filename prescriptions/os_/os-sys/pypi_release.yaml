@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OsSysPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: os-sys
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'os-sys' has no recent release, last release dates back to 2019-12-10 20:06:44.899051
+        link: https://pypi.org/project/os-sys/#history
+        package_name: os-sys

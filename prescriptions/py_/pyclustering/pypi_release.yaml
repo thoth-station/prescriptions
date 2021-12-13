@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyclusteringPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyclustering
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyclustering' has no recent release, last release dates back to 2020-11-25 22:41:20.453951
+        link: https://pypi.org/project/pyclustering/#history
+        package_name: pyclustering

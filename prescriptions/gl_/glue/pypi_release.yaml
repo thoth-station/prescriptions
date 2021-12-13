@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GluePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glue
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'glue' has no recent release, last release dates back to 2017-05-15 11:06:46.017886
+        link: https://pypi.org/project/glue/#history
+        package_name: glue

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SiosocksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: siosocks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'siosocks' has no recent release, last release dates back to 2020-09-01 02:01:21.254783
+        link: https://pypi.org/project/siosocks/#history
+        package_name: siosocks

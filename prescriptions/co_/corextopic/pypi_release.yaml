@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CorextopicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: corextopic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'corextopic' has no recent release, last release dates back to 2021-03-22 20:16:20.058786
+        link: https://pypi.org/project/corextopic/#history
+        package_name: corextopic

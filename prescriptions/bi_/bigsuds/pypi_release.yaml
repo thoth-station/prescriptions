@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BigsudsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bigsuds
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bigsuds' has no recent release, last release dates back to 2017-11-13 20:06:31.703016
+        link: https://pypi.org/project/bigsuds/#history
+        package_name: bigsuds

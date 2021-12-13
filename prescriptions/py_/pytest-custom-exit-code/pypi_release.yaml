@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestCustomExitCodePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-custom-exit-code
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-custom-exit-code' has no recent release, last release dates back to 2019-08-07 09:45:15.781178
+        link: https://pypi.org/project/pytest-custom-exit-code/#history
+        package_name: pytest-custom-exit-code

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pbkdf2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pbkdf2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pbkdf2' has no recent release, last release dates back to 2011-06-14 05:18:10.981277
+        link: https://pypi.org/project/pbkdf2/#history
+        package_name: pbkdf2

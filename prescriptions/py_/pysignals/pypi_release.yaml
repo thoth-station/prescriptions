@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysignalsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysignals
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysignals' has no recent release, last release dates back to 2010-12-13 01:45:07.483018
+        link: https://pypi.org/project/pysignals/#history
+        package_name: pysignals

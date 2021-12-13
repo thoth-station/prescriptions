@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VincentPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vincent
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vincent' has no recent release, last release dates back to 2014-05-06 17:44:12.426127
+        link: https://pypi.org/project/vincent/#history
+        package_name: vincent

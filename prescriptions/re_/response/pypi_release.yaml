@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ResponsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: response
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'response' has no recent release, last release dates back to 2020-09-19 12:50:18.878780
+        link: https://pypi.org/project/response/#history
+        package_name: response

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vex' has no recent release, last release dates back to 2019-05-10 19:21:38.657140
+        link: https://pypi.org/project/vex/#history
+        package_name: vex

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrintrunPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: printrun
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'printrun' has no recent release, last release dates back to 2020-09-06 12:01:30.717085
+        link: https://pypi.org/project/printrun/#history
+        package_name: printrun

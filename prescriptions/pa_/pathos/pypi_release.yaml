@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathosPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathos
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pathos' has no recent release, last release dates back to 2021-06-14 13:15:55.169324
+        link: https://pypi.org/project/pathos/#history
+        package_name: pathos

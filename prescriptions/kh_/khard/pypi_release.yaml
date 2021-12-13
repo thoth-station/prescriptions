@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KhardPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: khard
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'khard' has no recent release, last release dates back to 2020-08-13 07:53:22.263800
+        link: https://pypi.org/project/khard/#history
+        package_name: khard

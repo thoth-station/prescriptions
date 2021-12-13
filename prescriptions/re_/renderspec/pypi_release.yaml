@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RenderspecPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: renderspec
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'renderspec' has no recent release, last release dates back to 2020-10-02 12:22:01.877752
+        link: https://pypi.org/project/renderspec/#history
+        package_name: renderspec

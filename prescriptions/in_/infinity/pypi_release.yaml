@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InfinityPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: infinity
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'infinity' has no recent release, last release dates back to 2020-06-03 10:33:09.478807
+        link: https://pypi.org/project/infinity/#history
+        package_name: infinity

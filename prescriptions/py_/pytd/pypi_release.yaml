@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytd' has no recent release, last release dates back to 2021-02-10 10:11:04.045419
+        link: https://pypi.org/project/pytd/#history
+        package_name: pytd

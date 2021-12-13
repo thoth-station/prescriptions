@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AirthingsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airthings
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'airthings' has no recent release, last release dates back to 2020-08-30 08:44:06.350920
+        link: https://pypi.org/project/airthings/#history
+        package_name: airthings

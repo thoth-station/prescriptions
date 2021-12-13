@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DictdumperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdumper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dictdumper' has no recent release, last release dates back to 2020-06-06 09:28:23.062016
+        link: https://pypi.org/project/dictdumper/#history
+        package_name: dictdumper

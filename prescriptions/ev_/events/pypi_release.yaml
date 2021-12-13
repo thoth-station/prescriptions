@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EventsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: events
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'events' has no recent release, last release dates back to 2020-10-31 12:04:23.845823
+        link: https://pypi.org/project/events/#history
+        package_name: events

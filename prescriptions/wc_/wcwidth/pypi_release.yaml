@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WcwidthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wcwidth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wcwidth' has no recent release, last release dates back to 2020-06-23 16:10:29.829128
+        link: https://pypi.org/project/wcwidth/#history
+        package_name: wcwidth

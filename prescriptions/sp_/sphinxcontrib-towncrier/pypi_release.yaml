@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxcontribTowncrierPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-towncrier
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxcontrib-towncrier' has no recent release, last release dates back to 2021-04-14 12:38:43.865226
+        link: https://pypi.org/project/sphinxcontrib-towncrier/#history
+        package_name: sphinxcontrib-towncrier

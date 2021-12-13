@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuzzyfinderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzyfinder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fuzzyfinder' has no recent release, last release dates back to 2018-01-28 18:51:41.654791
+        link: https://pypi.org/project/fuzzyfinder/#history
+        package_name: fuzzyfinder

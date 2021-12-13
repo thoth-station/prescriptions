@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flock' has no recent release, last release dates back to 2014-10-01 12:18:39.979307
+        link: https://pypi.org/project/flock/#history
+        package_name: flock

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Json2tablePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json2table
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'json2table' has no recent release, last release dates back to 2016-10-21 22:36:39.377259
+        link: https://pypi.org/project/json2table/#history
+        package_name: json2table

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScikitMiscPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-misc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scikit-misc' has no recent release, last release dates back to 2021-05-07 08:49:12.423782
+        link: https://pypi.org/project/scikit-misc/#history
+        package_name: scikit-misc

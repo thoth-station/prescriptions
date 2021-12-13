@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImportmagicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importmagic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'importmagic' has no recent release, last release dates back to 2016-03-16 23:25:58.592226
+        link: https://pypi.org/project/importmagic/#history
+        package_name: importmagic

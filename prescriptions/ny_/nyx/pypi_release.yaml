@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NyxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nyx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nyx' has no recent release, last release dates back to 2019-01-12 23:14:43.389789
+        link: https://pypi.org/project/nyx/#history
+        package_name: nyx

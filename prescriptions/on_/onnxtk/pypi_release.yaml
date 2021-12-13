@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OnnxtkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxtk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'onnxtk' has no recent release, last release dates back to 2019-02-05 19:33:02.746090
+        link: https://pypi.org/project/onnxtk/#history
+        package_name: onnxtk

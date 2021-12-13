@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OnionbalancePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onionbalance
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'onionbalance' has no recent release, last release dates back to 2021-01-25 22:22:31.612563
+        link: https://pypi.org/project/onionbalance/#history
+        package_name: onionbalance

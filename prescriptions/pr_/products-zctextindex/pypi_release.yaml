@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProductsZctextindexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-zctextindex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'products-zctextindex' has no recent release, last release dates back to 2019-02-17 23:24:28.244099
+        link: https://pypi.org/project/products-zctextindex/#history
+        package_name: products-zctextindex

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GswPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gsw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gsw' has no recent release, last release dates back to 2020-09-22 20:33:22.032035
+        link: https://pypi.org/project/gsw/#history
+        package_name: gsw

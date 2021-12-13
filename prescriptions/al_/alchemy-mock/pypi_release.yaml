@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AlchemyMockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alchemy-mock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'alchemy-mock' has no recent release, last release dates back to 2019-11-05 13:24:27.748564
+        link: https://pypi.org/project/alchemy-mock/#history
+        package_name: alchemy-mock

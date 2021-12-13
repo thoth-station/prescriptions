@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TempdirPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tempdir
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tempdir' has no recent release, last release dates back to 2016-03-02 16:42:22.066970
+        link: https://pypi.org/project/tempdir/#history
+        package_name: tempdir

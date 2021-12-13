@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JavabridgePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: javabridge
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'javabridge' has no recent release, last release dates back to 2020-05-26 12:22:57.500461
+        link: https://pypi.org/project/javabridge/#history
+        package_name: javabridge

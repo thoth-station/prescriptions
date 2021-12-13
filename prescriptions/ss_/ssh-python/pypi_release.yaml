@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SshPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssh-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ssh-python' has no recent release, last release dates back to 2020-12-18 10:03:04.370597
+        link: https://pypi.org/project/ssh-python/#history
+        package_name: ssh-python

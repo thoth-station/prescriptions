@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CrancPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cranc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cranc' has no recent release, last release dates back to 2019-08-09 23:59:37.371354
+        link: https://pypi.org/project/cranc/#history
+        package_name: cranc

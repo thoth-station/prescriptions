@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DotenvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotenv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dotenv' has no recent release, last release dates back to 2015-03-05 16:25:06.330545
+        link: https://pypi.org/project/dotenv/#history
+        package_name: dotenv

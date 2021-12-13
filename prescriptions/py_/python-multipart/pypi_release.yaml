@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonMultipartPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-multipart
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-multipart' has no recent release, last release dates back to 2018-10-12 08:36:41.595595
+        link: https://pypi.org/project/python-multipart/#history
+        package_name: python-multipart

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WasmerCompilerCraneliftPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wasmer-compiler-cranelift
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wasmer-compiler-cranelift' has no recent release, last release dates back to 2021-05-12 07:16:23.828628
+        link: https://pypi.org/project/wasmer-compiler-cranelift/#history
+        package_name: wasmer-compiler-cranelift

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjoserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djoser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'djoser' has no recent release, last release dates back to 2020-10-30 15:52:26.940732
+        link: https://pypi.org/project/djoser/#history
+        package_name: djoser

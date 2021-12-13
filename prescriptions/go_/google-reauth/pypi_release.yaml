@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleReauthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-reauth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-reauth' has no recent release, last release dates back to 2020-12-01 17:35:46.530150
+        link: https://pypi.org/project/google-reauth/#history
+        package_name: google-reauth

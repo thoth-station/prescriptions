@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HumblewxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: humblewx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'humblewx' has no recent release, last release dates back to 2020-12-03 20:07:47.999518
+        link: https://pypi.org/project/humblewx/#history
+        package_name: humblewx

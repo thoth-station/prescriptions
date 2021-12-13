@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PacpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pacpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pacpy' has no recent release, last release dates back to 2016-09-08 22:58:48.473607
+        link: https://pypi.org/project/pacpy/#history
+        package_name: pacpy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PproxyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pproxy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pproxy' has no recent release, last release dates back to 2021-05-09 03:23:38.939954
+        link: https://pypi.org/project/pproxy/#history
+        package_name: pproxy

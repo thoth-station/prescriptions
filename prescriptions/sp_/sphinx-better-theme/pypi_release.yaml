@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxBetterThemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-better-theme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-better-theme' has no recent release, last release dates back to 2013-10-05 03:02:18.329555
+        link: https://pypi.org/project/sphinx-better-theme/#history
+        package_name: sphinx-better-theme

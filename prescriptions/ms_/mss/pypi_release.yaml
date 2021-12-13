@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MssPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mss
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mss' has no recent release, last release dates back to 2020-10-31 17:19:13.067156
+        link: https://pypi.org/project/mss/#history
+        package_name: mss

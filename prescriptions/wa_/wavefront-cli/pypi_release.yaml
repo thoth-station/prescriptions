@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WavefrontCliPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wavefront-cli
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wavefront-cli' has no recent release, last release dates back to 2021-03-19 03:11:58.569965
+        link: https://pypi.org/project/wavefront-cli/#history
+        package_name: wavefront-cli

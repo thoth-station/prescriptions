@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoCleanupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cleanup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-cleanup' has no recent release, last release dates back to 2021-04-18 17:08:12.344456
+        link: https://pypi.org/project/django-cleanup/#history
+        package_name: django-cleanup

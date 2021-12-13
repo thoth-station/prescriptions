@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppApplicationcontrolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-applicationcontrol
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-applicationcontrol' has no recent release, last release dates back to 2017-05-03 14:58:39.131828
+        link: https://pypi.org/project/zope-app-applicationcontrol/#history
+        package_name: zope-app-applicationcontrol

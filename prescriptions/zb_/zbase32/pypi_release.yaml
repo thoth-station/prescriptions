@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Zbase32PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zbase32
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zbase32' has no recent release, last release dates back to 2012-08-27 15:56:17.776745
+        link: https://pypi.org/project/zbase32/#history
+        package_name: zbase32

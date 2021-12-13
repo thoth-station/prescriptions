@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VimivPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vimiv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vimiv' has no recent release, last release dates back to 2021-01-18 15:05:54.923639
+        link: https://pypi.org/project/vimiv/#history
+        package_name: vimiv

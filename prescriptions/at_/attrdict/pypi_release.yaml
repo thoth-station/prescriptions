@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AttrdictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrdict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'attrdict' has no recent release, last release dates back to 2019-02-01 22:33:58.493807
+        link: https://pypi.org/project/attrdict/#history
+        package_name: attrdict

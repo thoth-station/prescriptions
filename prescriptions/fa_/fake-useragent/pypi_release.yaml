@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FakeUseragentPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fake-useragent
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fake-useragent' has no recent release, last release dates back to 2018-10-04 15:02:12.899830
+        link: https://pypi.org/project/fake-useragent/#history
+        package_name: fake-useragent

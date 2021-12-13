@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangorestframeworkCsvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangorestframework-csv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'djangorestframework-csv' has no recent release, last release dates back to 2021-05-16 22:02:07.678745
+        link: https://pypi.org/project/djangorestframework-csv/#history
+        package_name: djangorestframework-csv

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GlmnetPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glmnet-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'glmnet-py' has no recent release, last release dates back to 2017-04-01 05:37:55.009498
+        link: https://pypi.org/project/glmnet-py/#history
+        package_name: glmnet-py

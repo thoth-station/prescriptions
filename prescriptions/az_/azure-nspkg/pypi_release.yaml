@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureNspkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-nspkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-nspkg' has no recent release, last release dates back to 2018-10-02 22:51:03.231258
+        link: https://pypi.org/project/azure-nspkg/#history
+        package_name: azure-nspkg

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClickPluginsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-plugins
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'click-plugins' has no recent release, last release dates back to 2019-04-04 04:27:04.820636
+        link: https://pypi.org/project/click-plugins/#history
+        package_name: click-plugins

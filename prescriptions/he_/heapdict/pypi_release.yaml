@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HeapdictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: heapdict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'heapdict' has no recent release, last release dates back to 2019-09-09 18:57:02.154587
+        link: https://pypi.org/project/heapdict/#history
+        package_name: heapdict

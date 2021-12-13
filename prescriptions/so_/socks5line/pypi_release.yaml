@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Socks5linePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: socks5line
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'socks5line' has no recent release, last release dates back to 2020-03-29 23:29:02.311878
+        link: https://pypi.org/project/socks5line/#history
+        package_name: socks5line

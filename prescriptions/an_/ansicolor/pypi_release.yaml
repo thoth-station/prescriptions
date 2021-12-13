@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsicolorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansicolor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansicolor' has no recent release, last release dates back to 2021-05-05 07:04:18.510806
+        link: https://pypi.org/project/ansicolor/#history
+        package_name: ansicolor

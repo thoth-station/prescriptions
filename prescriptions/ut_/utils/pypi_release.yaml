@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'utils' has no recent release, last release dates back to 2020-02-08 10:04:11.502562
+        link: https://pypi.org/project/utils/#history
+        package_name: utils

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestDjangoLitePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-django-lite
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-django-lite' has no recent release, last release dates back to 2014-01-30 06:49:39.010794
+        link: https://pypi.org/project/pytest-django-lite/#history
+        package_name: pytest-django-lite

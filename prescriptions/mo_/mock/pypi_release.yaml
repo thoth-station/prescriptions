@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mock' has no recent release, last release dates back to 2020-12-10 07:33:13.043450
+        link: https://pypi.org/project/mock/#history
+        package_name: mock

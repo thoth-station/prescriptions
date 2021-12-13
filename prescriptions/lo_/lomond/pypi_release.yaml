@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LomondPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lomond
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lomond' has no recent release, last release dates back to 2018-09-21 15:17:43.297567
+        link: https://pypi.org/project/lomond/#history
+        package_name: lomond

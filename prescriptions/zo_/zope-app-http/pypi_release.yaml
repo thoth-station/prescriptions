@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppHttpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-http
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-http' has no recent release, last release dates back to 2017-05-16 10:48:54.232321
+        link: https://pypi.org/project/zope-app-http/#history
+        package_name: zope-app-http

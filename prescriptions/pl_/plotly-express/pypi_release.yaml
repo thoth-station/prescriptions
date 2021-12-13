@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PlotlyExpressPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plotly-express
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'plotly-express' has no recent release, last release dates back to 2019-08-07 16:06:11.487555
+        link: https://pypi.org/project/plotly-express/#history
+        package_name: plotly-express

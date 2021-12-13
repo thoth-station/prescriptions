@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyzorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyzor' has no recent release, last release dates back to 2014-12-10 14:03:41.400933
+        link: https://pypi.org/project/pyzor/#history
+        package_name: pyzor

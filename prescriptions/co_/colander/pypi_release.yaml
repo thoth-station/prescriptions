@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColanderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colander
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colander' has no recent release, last release dates back to 2020-11-28 21:19:35.725566
+        link: https://pypi.org/project/colander/#history
+        package_name: colander

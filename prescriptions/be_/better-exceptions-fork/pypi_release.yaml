@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BetterExceptionsForkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: better-exceptions-fork
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'better-exceptions-fork' has no recent release, last release dates back to 2018-04-29 10:40:09.579636
+        link: https://pypi.org/project/better-exceptions-fork/#history
+        package_name: better-exceptions-fork

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'parse' has no recent release, last release dates back to 2021-01-14 01:36:09.884055
+        link: https://pypi.org/project/parse/#history
+        package_name: parse

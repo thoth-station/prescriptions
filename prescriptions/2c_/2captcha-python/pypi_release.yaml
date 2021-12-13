@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: 2captchaPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: 2captcha-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package '2captcha-python' has no recent release, last release dates back to 2021-04-20 14:25:07.281562
+        link: https://pypi.org/project/2captcha-python/#history
+        package_name: 2captcha-python

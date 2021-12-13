@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Random2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: random2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'random2' has no recent release, last release dates back to 2013-03-15 12:26:29.917369
+        link: https://pypi.org/project/random2/#history
+        package_name: random2

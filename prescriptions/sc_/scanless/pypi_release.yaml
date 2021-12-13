@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScanlessPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scanless
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scanless' has no recent release, last release dates back to 2020-12-09 18:00:48.746141
+        link: https://pypi.org/project/scanless/#history
+        package_name: scanless

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VinePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vine
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vine' has no recent release, last release dates back to 2020-09-06 15:00:39.335223
+        link: https://pypi.org/project/vine/#history
+        package_name: vine

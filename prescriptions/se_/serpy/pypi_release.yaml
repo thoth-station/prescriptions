@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SerpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'serpy' has no recent release, last release dates back to 2017-11-28 05:23:03.757759
+        link: https://pypi.org/project/serpy/#history
+        package_name: serpy

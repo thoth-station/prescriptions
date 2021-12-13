@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColorfulPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorful
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colorful' has no recent release, last release dates back to 2019-09-21 12:28:48.600260
+        link: https://pypi.org/project/colorful/#history
+        package_name: colorful

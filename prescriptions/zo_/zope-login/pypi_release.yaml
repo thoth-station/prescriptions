@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeLoginPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-login
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-login' has no recent release, last release dates back to 2017-09-01 13:25:21.238229
+        link: https://pypi.org/project/zope-login/#history
+        package_name: zope-login

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppI18nPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-i18n
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-i18n' has no recent release, last release dates back to 2020-10-07 14:56:11.236429
+        link: https://pypi.org/project/zope-app-i18n/#history
+        package_name: zope-app-i18n

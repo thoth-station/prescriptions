@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReadlikePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readlike
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'readlike' has no recent release, last release dates back to 2018-05-29 21:07:44.546625
+        link: https://pypi.org/project/readlike/#history
+        package_name: readlike

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt' has no recent release, last release dates back to 2020-04-08 21:30:54.789777
+        link: https://pypi.org/project/azure-mgmt/#history
+        package_name: azure-mgmt

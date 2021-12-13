@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxcontribApidocPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-apidoc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxcontrib-apidoc' has no recent release, last release dates back to 2018-10-04 08:37:03.562973
+        link: https://pypi.org/project/sphinxcontrib-apidoc/#history
+        package_name: sphinxcontrib-apidoc

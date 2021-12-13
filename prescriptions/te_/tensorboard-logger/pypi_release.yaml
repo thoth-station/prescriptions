@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TensorboardLoggerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard-logger
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tensorboard-logger' has no recent release, last release dates back to 2018-02-08 07:31:34.287720
+        link: https://pypi.org/project/tensorboard-logger/#history
+        package_name: tensorboard-logger

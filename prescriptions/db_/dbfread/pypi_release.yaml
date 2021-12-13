@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DbfreadPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dbfread
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dbfread' has no recent release, last release dates back to 2016-11-25 11:27:36.001530
+        link: https://pypi.org/project/dbfread/#history
+        package_name: dbfread

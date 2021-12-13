@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsSocketpairPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-socketpair
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-socketpair' has no recent release, last release dates back to 2017-12-12 18:53:34.914112
+        link: https://pypi.org/project/backports-socketpair/#history
+        package_name: backports-socketpair

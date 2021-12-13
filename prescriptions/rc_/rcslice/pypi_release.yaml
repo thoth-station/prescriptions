@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RcslicePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rcslice
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rcslice' has no recent release, last release dates back to 2018-09-27 12:44:06.601342
+        link: https://pypi.org/project/rcslice/#history
+        package_name: rcslice

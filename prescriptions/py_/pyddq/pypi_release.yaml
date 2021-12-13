@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyddqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyddq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyddq' has no recent release, last release dates back to 2020-02-28 16:19:42.489441
+        link: https://pypi.org/project/pyddq/#history
+        package_name: pyddq

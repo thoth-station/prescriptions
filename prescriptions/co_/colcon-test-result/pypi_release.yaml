@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColconTestResultPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-test-result
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colcon-test-result' has no recent release, last release dates back to 2019-10-01 18:34:27.142425
+        link: https://pypi.org/project/colcon-test-result/#history
+        package_name: colcon-test-result

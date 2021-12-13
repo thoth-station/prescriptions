@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyswordPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysword
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysword' has no recent release, last release dates back to 2019-10-13 20:09:37.392337
+        link: https://pypi.org/project/pysword/#history
+        package_name: pysword

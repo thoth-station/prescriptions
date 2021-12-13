@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InfluxdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: influxdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'influxdb' has no recent release, last release dates back to 2020-11-11 21:23:44.167615
+        link: https://pypi.org/project/influxdb/#history
+        package_name: influxdb

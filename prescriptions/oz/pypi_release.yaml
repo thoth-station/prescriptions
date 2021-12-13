@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'oz' has no recent release, last release dates back to 2017-11-08 22:21:08.313127
+        link: https://pypi.org/project/oz/#history
+        package_name: oz

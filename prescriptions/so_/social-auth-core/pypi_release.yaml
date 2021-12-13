@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SocialAuthCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: social-auth-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'social-auth-core' has no recent release, last release dates back to 2021-03-05 16:21:53.147591
+        link: https://pypi.org/project/social-auth-core/#history
+        package_name: social-auth-core

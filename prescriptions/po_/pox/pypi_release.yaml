@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PoxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pox' has no recent release, last release dates back to 2021-06-13 16:46:26.643997
+        link: https://pypi.org/project/pox/#history
+        package_name: pox

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PromisePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: promise
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'promise' has no recent release, last release dates back to 2019-12-18 07:31:43.070499
+        link: https://pypi.org/project/promise/#history
+        package_name: promise

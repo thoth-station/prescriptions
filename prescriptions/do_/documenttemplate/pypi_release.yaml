@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DocumenttemplatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: documenttemplate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'documenttemplate' has no recent release, last release dates back to 2020-11-12 09:47:15.409820
+        link: https://pypi.org/project/documenttemplate/#history
+        package_name: documenttemplate

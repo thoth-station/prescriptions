@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysubnettreePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysubnettree
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysubnettree' has no recent release, last release dates back to 2020-12-15 07:01:22.410250
+        link: https://pypi.org/project/pysubnettree/#history
+        package_name: pysubnettree

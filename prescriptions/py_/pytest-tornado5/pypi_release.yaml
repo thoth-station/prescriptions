@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestTornado5PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornado5
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-tornado5' has no recent release, last release dates back to 2018-11-16 15:57:12.059233
+        link: https://pypi.org/project/pytest-tornado5/#history
+        package_name: pytest-tornado5

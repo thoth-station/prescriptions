@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Tempmail2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tempmail2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tempmail2' has no recent release, last release dates back to 2018-05-26 21:05:21.030728
+        link: https://pypi.org/project/tempmail2/#history
+        package_name: tempmail2

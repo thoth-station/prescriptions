@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KaptanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaptan
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kaptan' has no recent release, last release dates back to 2019-04-23 03:10:50.128865
+        link: https://pypi.org/project/kaptan/#history
+        package_name: kaptan

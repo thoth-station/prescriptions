@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuncsigsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: funcsigs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'funcsigs' has no recent release, last release dates back to 2016-04-25 22:22:33.882246
+        link: https://pypi.org/project/funcsigs/#history
+        package_name: funcsigs

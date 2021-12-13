@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InstantApiClientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: instant-api-client
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'instant-api-client' has no recent release, last release dates back to 2021-02-05 12:12:10.149211
+        link: https://pypi.org/project/instant-api-client/#history
+        package_name: instant-api-client

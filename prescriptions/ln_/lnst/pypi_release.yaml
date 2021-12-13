@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LnstPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lnst
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lnst' has no recent release, last release dates back to 2013-10-16 14:59:11.169187
+        link: https://pypi.org/project/lnst/#history
+        package_name: lnst

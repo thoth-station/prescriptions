@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColconZshPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-zsh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colcon-zsh' has no recent release, last release dates back to 2019-08-30 00:47:52.165657
+        link: https://pypi.org/project/colcon-zsh/#history
+        package_name: colcon-zsh

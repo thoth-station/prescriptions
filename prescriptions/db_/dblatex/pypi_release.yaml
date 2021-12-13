@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DblatexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dblatex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dblatex' has no recent release, last release dates back to 2017-04-04 20:15:09.829329
+        link: https://pypi.org/project/dblatex/#history
+        package_name: dblatex

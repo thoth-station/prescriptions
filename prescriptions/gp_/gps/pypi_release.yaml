@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GpsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gps
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gps' has no recent release, last release dates back to 2019-07-04 12:02:06.140893
+        link: https://pypi.org/project/gps/#history
+        package_name: gps

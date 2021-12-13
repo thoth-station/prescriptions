@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SetoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'setools' has no recent release, last release dates back to 2019-04-30 09:17:44.886878
+        link: https://pypi.org/project/setools/#history
+        package_name: setools

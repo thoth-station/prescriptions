@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrometheusApiClientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-api-client
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prometheus-api-client' has no recent release, last release dates back to 2020-12-03 16:53:03.390521
+        link: https://pypi.org/project/prometheus-api-client/#history
+        package_name: prometheus-api-client

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebtestAiohttpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webtest-aiohttp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webtest-aiohttp' has no recent release, last release dates back to 2018-02-08 04:17:36.855513
+        link: https://pypi.org/project/webtest-aiohttp/#history
+        package_name: webtest-aiohttp

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrpcGoogleCloudVisionV1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-cloud-vision-v1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grpc-google-cloud-vision-v1' has no recent release, last release dates back to 2016-12-21 22:17:38.385749
+        link: https://pypi.org/project/grpc-google-cloud-vision-v1/#history
+        package_name: grpc-google-cloud-vision-v1

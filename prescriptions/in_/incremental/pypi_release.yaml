@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IncrementalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: incremental
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'incremental' has no recent release, last release dates back to 2021-03-02 01:59:37.695014
+        link: https://pypi.org/project/incremental/#history
+        package_name: incremental

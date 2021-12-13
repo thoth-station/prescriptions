@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NumpyFinancialPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy-financial
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'numpy-financial' has no recent release, last release dates back to 2019-10-18 16:13:45.230778
+        link: https://pypi.org/project/numpy-financial/#history
+        package_name: numpy-financial

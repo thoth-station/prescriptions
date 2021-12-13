@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerasApplicationsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-applications
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keras-applications' has no recent release, last release dates back to 2019-05-30 18:26:21.641555
+        link: https://pypi.org/project/keras-applications/#history
+        package_name: keras-applications

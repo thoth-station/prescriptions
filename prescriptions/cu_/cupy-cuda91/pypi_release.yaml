@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CupyCuda91PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda91
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cupy-cuda91' has no recent release, last release dates back to 2020-08-18 18:22:36.657770
+        link: https://pypi.org/project/cupy-cuda91/#history
+        package_name: cupy-cuda91

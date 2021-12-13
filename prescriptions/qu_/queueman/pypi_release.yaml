@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QueuemanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: queueman
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'queueman' has no recent release, last release dates back to 2020-04-04 10:07:48.216250
+        link: https://pypi.org/project/queueman/#history
+        package_name: queueman

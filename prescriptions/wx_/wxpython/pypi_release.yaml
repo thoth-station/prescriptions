@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WxpythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wxpython
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wxpython' has no recent release, last release dates back to 2020-11-25 21:50:16.721860
+        link: https://pypi.org/project/wxpython/#history
+        package_name: wxpython

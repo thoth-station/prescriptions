@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lap' has no recent release, last release dates back to 2018-07-03 15:23:34.496781
+        link: https://pypi.org/project/lap/#history
+        package_name: lap

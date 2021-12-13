@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoIndexerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-indexer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-indexer' has no recent release, last release dates back to 2011-04-25 21:07:37.878606
+        link: https://pypi.org/project/django-indexer/#history
+        package_name: django-indexer

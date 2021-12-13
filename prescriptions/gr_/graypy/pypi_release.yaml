@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GraypyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graypy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'graypy' has no recent release, last release dates back to 2019-09-30 22:39:26.658780
+        link: https://pypi.org/project/graypy/#history
+        package_name: graypy

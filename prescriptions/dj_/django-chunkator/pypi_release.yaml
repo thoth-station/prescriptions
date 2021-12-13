@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoChunkatorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-chunkator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-chunkator' has no recent release, last release dates back to 2020-06-22 13:17:29.984724
+        link: https://pypi.org/project/django-chunkator/#history
+        package_name: django-chunkator

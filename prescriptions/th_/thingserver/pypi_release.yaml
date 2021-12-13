@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ThingserverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thingserver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'thingserver' has no recent release, last release dates back to 2020-09-04 09:37:47.905471
+        link: https://pypi.org/project/thingserver/#history
+        package_name: thingserver

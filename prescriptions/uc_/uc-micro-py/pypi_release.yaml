@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UcMicroPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uc-micro-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'uc-micro-py' has no recent release, last release dates back to 2020-12-15 11:56:04.059645
+        link: https://pypi.org/project/uc-micro-py/#history
+        package_name: uc-micro-py

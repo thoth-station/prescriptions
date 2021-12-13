@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HuslPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: husl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'husl' has no recent release, last release dates back to 2015-10-11 18:39:23.069010
+        link: https://pypi.org/project/husl/#history
+        package_name: husl

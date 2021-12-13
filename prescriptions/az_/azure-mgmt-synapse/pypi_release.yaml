@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtSynapsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-synapse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-synapse' has no recent release, last release dates back to 2021-04-08 02:02:29.123233
+        link: https://pypi.org/project/azure-mgmt-synapse/#history
+        package_name: azure-mgmt-synapse

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XcatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xcat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xcat' has no recent release, last release dates back to 2020-05-20 23:14:16.552860
+        link: https://pypi.org/project/xcat/#history
+        package_name: xcat

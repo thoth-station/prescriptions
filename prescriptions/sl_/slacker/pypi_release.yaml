@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlackerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slacker' has no recent release, last release dates back to 2020-02-15 09:06:13.629834
+        link: https://pypi.org/project/slacker/#history
+        package_name: slacker

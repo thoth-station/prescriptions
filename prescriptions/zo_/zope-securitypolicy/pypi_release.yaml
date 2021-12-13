@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeSecuritypolicyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-securitypolicy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-securitypolicy' has no recent release, last release dates back to 2021-03-19 11:20:47.375100
+        link: https://pypi.org/project/zope-securitypolicy/#history
+        package_name: zope-securitypolicy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VconnectorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vconnector
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vconnector' has no recent release, last release dates back to 2019-10-29 08:09:26.001343
+        link: https://pypi.org/project/vconnector/#history
+        package_name: vconnector

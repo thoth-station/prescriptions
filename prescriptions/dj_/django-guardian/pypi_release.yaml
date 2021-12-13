@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoGuardianPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-guardian
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-guardian' has no recent release, last release dates back to 2021-05-23 22:11:26.230597
+        link: https://pypi.org/project/django-guardian/#history
+        package_name: django-guardian

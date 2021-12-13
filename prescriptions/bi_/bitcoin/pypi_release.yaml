@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BitcoinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitcoin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bitcoin' has no recent release, last release dates back to 2016-01-11 01:08:22.517674
+        link: https://pypi.org/project/bitcoin/#history
+        package_name: bitcoin

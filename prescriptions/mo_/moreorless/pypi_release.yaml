@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MoreorlessPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moreorless
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'moreorless' has no recent release, last release dates back to 2021-03-30 15:10:52.082981
+        link: https://pypi.org/project/moreorless/#history
+        package_name: moreorless

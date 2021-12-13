@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppWsgiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-wsgi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-wsgi' has no recent release, last release dates back to 2020-07-06 21:14:32.044856
+        link: https://pypi.org/project/zope-app-wsgi/#history
+        package_name: zope-app-wsgi

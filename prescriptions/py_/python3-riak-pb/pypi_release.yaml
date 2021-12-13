@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Python3RiakPbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-riak-pb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python3-riak-pb' has no recent release, last release dates back to 2015-12-11 00:39:28.812626
+        link: https://pypi.org/project/python3-riak-pb/#history
+        package_name: python3-riak-pb

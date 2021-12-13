@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YargPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yarg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yarg' has no recent release, last release dates back to 2014-08-11 22:01:41.104360
+        link: https://pypi.org/project/yarg/#history
+        package_name: yarg

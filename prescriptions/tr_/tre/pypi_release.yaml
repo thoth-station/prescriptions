@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tre
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tre' has no recent release, last release dates back to 2014-07-24 17:10:36.621705
+        link: https://pypi.org/project/tre/#history
+        package_name: tre

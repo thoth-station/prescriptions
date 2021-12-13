@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeUntrustedpythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-untrustedpython
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-untrustedpython' has no recent release, last release dates back to 2013-02-13 01:27:05.302483
+        link: https://pypi.org/project/zope-untrustedpython/#history
+        package_name: zope-untrustedpython

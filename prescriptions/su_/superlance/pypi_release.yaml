@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SuperlancePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: superlance
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'superlance' has no recent release, last release dates back to 2016-10-02 16:12:14.934597
+        link: https://pypi.org/project/superlance/#history
+        package_name: superlance

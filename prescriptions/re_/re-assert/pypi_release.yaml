@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReAssertPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: re-assert
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 're-assert' has no recent release, last release dates back to 2020-02-25 00:05:34.116515
+        link: https://pypi.org/project/re-assert/#history
+        package_name: re-assert

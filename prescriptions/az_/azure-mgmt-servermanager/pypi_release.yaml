@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtServermanagerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-servermanager
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-servermanager' has no recent release, last release dates back to 2018-05-29 20:03:45.483212
+        link: https://pypi.org/project/azure-mgmt-servermanager/#history
+        package_name: azure-mgmt-servermanager

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FeatherFormatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feather-format
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'feather-format' has no recent release, last release dates back to 2020-04-27 21:56:00.480574
+        link: https://pypi.org/project/feather-format/#history
+        package_name: feather-format

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsShutilWhichPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-shutil-which
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-shutil-which' has no recent release, last release dates back to 2018-11-15 10:32:23.495132
+        link: https://pypi.org/project/backports-shutil-which/#history
+        package_name: backports-shutil-which

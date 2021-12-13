@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydispatcherPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydispatcher
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydispatcher' has no recent release, last release dates back to 2015-01-15 04:19:23.227251
+        link: https://pypi.org/project/pydispatcher/#history
+        package_name: pydispatcher

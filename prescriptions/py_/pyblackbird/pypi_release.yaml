@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyblackbirdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyblackbird
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyblackbird' has no recent release, last release dates back to 2018-03-29 19:08:05.336438
+        link: https://pypi.org/project/pyblackbird/#history
+        package_name: pyblackbird

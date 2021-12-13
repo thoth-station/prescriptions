@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UaParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ua-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ua-parser' has no recent release, last release dates back to 2020-02-27 00:07:10.153250
+        link: https://pypi.org/project/ua-parser/#history
+        package_name: ua-parser

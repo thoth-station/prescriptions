@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylinkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylink
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylink' has no recent release, last release dates back to 2017-11-29 08:54:12.331798
+        link: https://pypi.org/project/pylink/#history
+        package_name: pylink

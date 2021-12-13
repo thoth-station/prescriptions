@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysqlitePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysqlite
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysqlite' has no recent release, last release dates back to 2016-08-30 21:38:01.655735
+        link: https://pypi.org/project/pysqlite/#history
+        package_name: pysqlite

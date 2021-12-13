@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RpmdeplintPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpmdeplint
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rpmdeplint' has no recent release, last release dates back to 2017-11-19 23:49:47.767264
+        link: https://pypi.org/project/rpmdeplint/#history
+        package_name: rpmdeplint

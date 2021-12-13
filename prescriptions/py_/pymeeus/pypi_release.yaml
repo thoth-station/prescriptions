@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymeeusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymeeus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymeeus' has no recent release, last release dates back to 2021-03-18 21:07:57.640414
+        link: https://pypi.org/project/pymeeus/#history
+        package_name: pymeeus

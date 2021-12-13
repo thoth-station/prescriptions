@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpdxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spdx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spdx' has no recent release, last release dates back to 2020-12-08 18:52:58.082633
+        link: https://pypi.org/project/spdx/#history
+        package_name: spdx

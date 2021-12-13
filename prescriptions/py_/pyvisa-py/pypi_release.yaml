@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyvisaPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvisa-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyvisa-py' has no recent release, last release dates back to 2021-02-04 11:09:26.819366
+        link: https://pypi.org/project/pyvisa-py/#history
+        package_name: pyvisa-py

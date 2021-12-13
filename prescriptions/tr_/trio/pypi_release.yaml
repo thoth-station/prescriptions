@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trio' has no recent release, last release dates back to 2021-06-15 10:13:10.454663
+        link: https://pypi.org/project/trio/#history
+        package_name: trio

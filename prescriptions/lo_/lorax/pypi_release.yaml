@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LoraxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lorax
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lorax' has no recent release, last release dates back to 2018-08-23 20:24:44.223189
+        link: https://pypi.org/project/lorax/#history
+        package_name: lorax

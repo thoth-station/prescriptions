@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonStringUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-string-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-string-utils' has no recent release, last release dates back to 2020-03-04 20:18:59.402966
+        link: https://pypi.org/project/python-string-utils/#history
+        package_name: python-string-utils

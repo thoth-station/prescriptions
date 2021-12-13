@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VulturePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vulture
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vulture' has no recent release, last release dates back to 2021-01-16 17:49:52.474971
+        link: https://pypi.org/project/vulture/#history
+        package_name: vulture

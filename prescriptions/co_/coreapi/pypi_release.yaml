@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CoreapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'coreapi' has no recent release, last release dates back to 2017-10-05 14:04:40.687050
+        link: https://pypi.org/project/coreapi/#history
+        package_name: coreapi

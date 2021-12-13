@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WinaclPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: winacl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'winacl' has no recent release, last release dates back to 2021-02-26 23:54:29.473765
+        link: https://pypi.org/project/winacl/#history
+        package_name: winacl

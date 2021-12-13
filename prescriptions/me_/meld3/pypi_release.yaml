@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Meld3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: meld3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'meld3' has no recent release, last release dates back to 2020-04-08 20:05:15.639110
+        link: https://pypi.org/project/meld3/#history
+        package_name: meld3

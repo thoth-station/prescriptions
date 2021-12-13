@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StaticPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: static
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'static' has no recent release, last release dates back to 2014-10-20 01:30:44.620298
+        link: https://pypi.org/project/static/#history
+        package_name: static

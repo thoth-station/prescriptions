@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PokedexPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pokedex-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pokedex-py' has no recent release, last release dates back to 2018-10-30 14:17:02.346310
+        link: https://pypi.org/project/pokedex-py/#history
+        package_name: pokedex-py

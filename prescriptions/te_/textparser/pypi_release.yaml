@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TextparserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'textparser' has no recent release, last release dates back to 2019-12-14 14:25:57.535721
+        link: https://pypi.org/project/textparser/#history
+        package_name: textparser

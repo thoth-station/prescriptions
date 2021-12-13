@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Aniso8601PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aniso8601
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aniso8601' has no recent release, last release dates back to 2021-03-02 01:33:22.944020
+        link: https://pypi.org/project/aniso8601/#history
+        package_name: aniso8601

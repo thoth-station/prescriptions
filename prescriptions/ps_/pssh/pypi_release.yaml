@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PsshPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pssh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pssh' has no recent release, last release dates back to 2012-02-02 17:19:57.437769
+        link: https://pypi.org/project/pssh/#history
+        package_name: pssh

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebencodingsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webencodings
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webencodings' has no recent release, last release dates back to 2017-04-05 20:21:34.189869
+        link: https://pypi.org/project/webencodings/#history
+        package_name: webencodings

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskOpentracingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-opentracing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-opentracing' has no recent release, last release dates back to 2019-10-22 00:20:30.887787
+        link: https://pypi.org/project/flask-opentracing/#history
+        package_name: flask-opentracing

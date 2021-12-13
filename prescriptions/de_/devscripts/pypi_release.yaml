@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DevscriptsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devscripts
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'devscripts' has no recent release, last release dates back to 2017-07-14 11:39:46.010435
+        link: https://pypi.org/project/devscripts/#history
+        package_name: devscripts

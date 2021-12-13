@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TypedecoratorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typedecorator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'typedecorator' has no recent release, last release dates back to 2018-01-12 13:46:04.956518
+        link: https://pypi.org/project/typedecorator/#history
+        package_name: typedecorator

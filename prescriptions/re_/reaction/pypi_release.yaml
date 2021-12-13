@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReactionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reaction
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'reaction' has no recent release, last release dates back to 2020-02-17 08:53:47.654774
+        link: https://pypi.org/project/reaction/#history
+        package_name: reaction

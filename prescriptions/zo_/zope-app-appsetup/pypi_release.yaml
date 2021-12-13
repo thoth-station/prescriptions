@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppAppsetupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-appsetup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-appsetup' has no recent release, last release dates back to 2020-05-20 18:00:10.758054
+        link: https://pypi.org/project/zope-app-appsetup/#history
+        package_name: zope-app-appsetup

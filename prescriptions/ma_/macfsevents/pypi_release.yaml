@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MacfseventsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: macfsevents
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'macfsevents' has no recent release, last release dates back to 2018-02-21 11:40:45.266624
+        link: https://pypi.org/project/macfsevents/#history
+        package_name: macfsevents

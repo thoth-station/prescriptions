@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoTimingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-timing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-timing' has no recent release, last release dates back to 2019-01-01 16:07:45.005224
+        link: https://pypi.org/project/jaraco-timing/#history
+        package_name: jaraco-timing

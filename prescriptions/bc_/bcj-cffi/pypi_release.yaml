@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BcjCffiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcj-cffi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bcj-cffi' has no recent release, last release dates back to 2021-04-07 05:42:27.151393
+        link: https://pypi.org/project/bcj-cffi/#history
+        package_name: bcj-cffi

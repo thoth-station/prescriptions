@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MgzipPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mgzip
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mgzip' has no recent release, last release dates back to 2020-03-19 01:37:33.714697
+        link: https://pypi.org/project/mgzip/#history
+        package_name: mgzip

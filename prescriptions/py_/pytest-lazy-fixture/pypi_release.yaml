@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestLazyFixturePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-lazy-fixture
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-lazy-fixture' has no recent release, last release dates back to 2020-02-01 18:04:02.321563
+        link: https://pypi.org/project/pytest-lazy-fixture/#history
+        package_name: pytest-lazy-fixture

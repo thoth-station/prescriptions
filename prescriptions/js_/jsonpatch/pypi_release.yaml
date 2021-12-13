@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonpatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpatch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonpatch' has no recent release, last release dates back to 2021-03-13 19:16:38.264179
+        link: https://pypi.org/project/jsonpatch/#history
+        package_name: jsonpatch

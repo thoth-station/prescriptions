@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeStructuredtextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-structuredtext
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-structuredtext' has no recent release, last release dates back to 2018-10-09 14:55:55.086410
+        link: https://pypi.org/project/zope-structuredtext/#history
+        package_name: zope-structuredtext

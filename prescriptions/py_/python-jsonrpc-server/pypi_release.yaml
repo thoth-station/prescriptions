@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonJsonrpcServerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-jsonrpc-server
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-jsonrpc-server' has no recent release, last release dates back to 2020-09-08 19:22:48.170443
+        link: https://pypi.org/project/python-jsonrpc-server/#history
+        package_name: python-jsonrpc-server

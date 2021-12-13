@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GttsTokenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gtts-token
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gtts-token' has no recent release, last release dates back to 2020-11-09 17:27:49.262799
+        link: https://pypi.org/project/gtts-token/#history
+        package_name: gtts-token

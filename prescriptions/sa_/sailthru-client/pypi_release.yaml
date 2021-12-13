@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SailthruClientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sailthru-client
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sailthru-client' has no recent release, last release dates back to 2018-07-26 19:40:08.485441
+        link: https://pypi.org/project/sailthru-client/#history
+        package_name: sailthru-client

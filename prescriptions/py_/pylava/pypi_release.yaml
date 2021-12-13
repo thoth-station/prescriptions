@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylavaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylava
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylava' has no recent release, last release dates back to 2020-09-28 09:43:14.742861
+        link: https://pypi.org/project/pylava/#history
+        package_name: pylava

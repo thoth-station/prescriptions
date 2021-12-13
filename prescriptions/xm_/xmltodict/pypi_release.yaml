@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XmltodictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmltodict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xmltodict' has no recent release, last release dates back to 2019-02-11 07:00:26.288539
+        link: https://pypi.org/project/xmltodict/#history
+        package_name: xmltodict

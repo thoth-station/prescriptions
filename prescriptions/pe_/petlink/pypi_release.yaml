@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PetlinkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: petlink
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'petlink' has no recent release, last release dates back to 2018-11-09 01:37:56.401500
+        link: https://pypi.org/project/petlink/#history
+        package_name: petlink

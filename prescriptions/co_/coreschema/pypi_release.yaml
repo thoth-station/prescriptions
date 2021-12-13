@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CoreschemaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coreschema
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'coreschema' has no recent release, last release dates back to 2017-02-08 12:23:51.003599
+        link: https://pypi.org/project/coreschema/#history
+        package_name: coreschema

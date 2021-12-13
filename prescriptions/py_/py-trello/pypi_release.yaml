@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyTrelloPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-trello
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-trello' has no recent release, last release dates back to 2021-05-12 15:57:44.557874
+        link: https://pypi.org/project/py-trello/#history
+        package_name: py-trello

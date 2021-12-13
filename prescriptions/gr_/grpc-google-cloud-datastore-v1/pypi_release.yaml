@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrpcGoogleCloudDatastoreV1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-cloud-datastore-v1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grpc-google-cloud-datastore-v1' has no recent release, last release dates back to 2016-12-12 21:36:37.014227
+        link: https://pypi.org/project/grpc-google-cloud-datastore-v1/#history
+        package_name: grpc-google-cloud-datastore-v1

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SegtokPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: segtok
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'segtok' has no recent release, last release dates back to 2020-05-12 20:26:24.455098
+        link: https://pypi.org/project/segtok/#history
+        package_name: segtok

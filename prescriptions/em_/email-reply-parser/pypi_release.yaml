@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EmailReplyParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: email-reply-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'email-reply-parser' has no recent release, last release dates back to 2020-10-07 17:26:46.835620
+        link: https://pypi.org/project/email-reply-parser/#history
+        package_name: email-reply-parser

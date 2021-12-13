@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnakebitePy3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snakebite-py3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'snakebite-py3' has no recent release, last release dates back to 2019-11-14 18:12:51.123013
+        link: https://pypi.org/project/snakebite-py3/#history
+        package_name: snakebite-py3

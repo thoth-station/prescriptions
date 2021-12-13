@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FormatsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: formats
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'formats' has no recent release, last release dates back to 2015-02-11 21:29:36.504230
+        link: https://pypi.org/project/formats/#history
+        package_name: formats

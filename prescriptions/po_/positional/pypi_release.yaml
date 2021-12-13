@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PositionalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: positional
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'positional' has no recent release, last release dates back to 2017-08-08 00:24:46.044452
+        link: https://pypi.org/project/positional/#history
+        package_name: positional

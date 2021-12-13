@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Spec2sclPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spec2scl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spec2scl' has no recent release, last release dates back to 2019-08-19 11:27:42.352544
+        link: https://pypi.org/project/spec2scl/#history
+        package_name: spec2scl

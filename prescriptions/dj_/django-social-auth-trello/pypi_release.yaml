@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoSocialAuthTrelloPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-social-auth-trello
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-social-auth-trello' has no recent release, last release dates back to 2013-03-06 22:24:53.977162
+        link: https://pypi.org/project/django-social-auth-trello/#history
+        package_name: django-social-auth-trello

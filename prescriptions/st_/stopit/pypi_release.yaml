@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StopitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stopit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stopit' has no recent release, last release dates back to 2018-02-09 00:32:14.204588
+        link: https://pypi.org/project/stopit/#history
+        package_name: stopit

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ModestmapsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modestmaps
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'modestmaps' has no recent release, last release dates back to 2016-12-28 02:24:58.403070
+        link: https://pypi.org/project/modestmaps/#history
+        package_name: modestmaps

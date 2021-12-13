@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PatoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'patool' has no recent release, last release dates back to 2016-01-17 08:15:17.115241
+        link: https://pypi.org/project/patool/#history
+        package_name: patool

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SetuptoolsScmGitArchivePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-scm-git-archive
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'setuptools-scm-git-archive' has no recent release, last release dates back to 2019-03-24 09:27:08.110683
+        link: https://pypi.org/project/setuptools-scm-git-archive/#history
+        package_name: setuptools-scm-git-archive

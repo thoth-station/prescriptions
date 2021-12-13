@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EightPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eight
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eight' has no recent release, last release dates back to 2021-03-16 00:12:21.942838
+        link: https://pypi.org/project/eight/#history
+        package_name: eight

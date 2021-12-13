@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoAnnoyingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-annoying
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-annoying' has no recent release, last release dates back to 2019-12-12 00:27:38.675481
+        link: https://pypi.org/project/django-annoying/#history
+        package_name: django-annoying

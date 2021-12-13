@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Apns2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apns2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'apns2' has no recent release, last release dates back to 2020-12-30 21:51:25.754742
+        link: https://pypi.org/project/apns2/#history
+        package_name: apns2

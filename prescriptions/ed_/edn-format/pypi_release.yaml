@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EdnFormatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edn-format
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'edn-format' has no recent release, last release dates back to 2020-11-06 20:23:04.254062
+        link: https://pypi.org/project/edn-format/#history
+        package_name: edn-format

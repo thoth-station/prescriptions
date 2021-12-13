@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TerminatorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: terminator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'terminator' has no recent release, last release dates back to 2016-05-09 04:24:04.951519
+        link: https://pypi.org/project/terminator/#history
+        package_name: terminator

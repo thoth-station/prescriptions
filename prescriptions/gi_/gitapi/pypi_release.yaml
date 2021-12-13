@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GitapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gitapi' has no recent release, last release dates back to 2014-10-15 08:41:53.427580
+        link: https://pypi.org/project/gitapi/#history
+        package_name: gitapi

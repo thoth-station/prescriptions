@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Traceback2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: traceback2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'traceback2' has no recent release, last release dates back to 2015-03-09 06:57:35.150790
+        link: https://pypi.org/project/traceback2/#history
+        package_name: traceback2

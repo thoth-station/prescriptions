@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PdqhashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdqhash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pdqhash' has no recent release, last release dates back to 2020-11-21 00:34:35.573863
+        link: https://pypi.org/project/pdqhash/#history
+        package_name: pdqhash

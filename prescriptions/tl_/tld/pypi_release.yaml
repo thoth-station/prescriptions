@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TldPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tld
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tld' has no recent release, last release dates back to 2021-06-06 19:25:04.470511
+        link: https://pypi.org/project/tld/#history
+        package_name: tld

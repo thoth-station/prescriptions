@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyhivePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhive
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyhive' has no recent release, last release dates back to 2021-05-04 16:05:59.989194
+        link: https://pypi.org/project/pyhive/#history
+        package_name: pyhive

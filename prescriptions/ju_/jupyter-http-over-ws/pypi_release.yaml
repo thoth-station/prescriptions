@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterHttpOverWsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-http-over-ws
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-http-over-ws' has no recent release, last release dates back to 2020-03-12 16:09:41.161984
+        link: https://pypi.org/project/jupyter-http-over-ws/#history
+        package_name: jupyter-http-over-ws

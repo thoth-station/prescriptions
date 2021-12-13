@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsibleTowerCliPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-tower-cli
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansible-tower-cli' has no recent release, last release dates back to 2020-03-12 18:55:29.663475
+        link: https://pypi.org/project/ansible-tower-cli/#history
+        package_name: ansible-tower-cli

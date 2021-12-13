@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SetupextrasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setupextras
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'setupextras' has no recent release, last release dates back to 2019-03-11 19:41:09.626431
+        link: https://pypi.org/project/setupextras/#history
+        package_name: setupextras

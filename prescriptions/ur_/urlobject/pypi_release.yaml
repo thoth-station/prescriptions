@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UrlobjectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlobject
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'urlobject' has no recent release, last release dates back to 2017-04-20 18:27:22.139828
+        link: https://pypi.org/project/urlobject/#history
+        package_name: urlobject

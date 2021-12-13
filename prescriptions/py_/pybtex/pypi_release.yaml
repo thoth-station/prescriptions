@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PybtexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybtex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pybtex' has no recent release, last release dates back to 2021-01-17 20:02:27.328850
+        link: https://pypi.org/project/pybtex/#history
+        package_name: pybtex

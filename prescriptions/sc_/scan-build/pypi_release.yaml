@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScanBuildPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scan-build
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scan-build' has no recent release, last release dates back to 2021-05-17 11:53:01.910791
+        link: https://pypi.org/project/scan-build/#history
+        package_name: scan-build

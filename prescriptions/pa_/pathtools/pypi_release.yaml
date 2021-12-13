@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathtoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathtools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pathtools' has no recent release, last release dates back to 2011-08-25 11:39:31.178130
+        link: https://pypi.org/project/pathtools/#history
+        package_name: pathtools

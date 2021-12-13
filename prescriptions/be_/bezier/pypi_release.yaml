@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BezierPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bezier
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bezier' has no recent release, last release dates back to 2021-02-14 03:56:40.190987
+        link: https://pypi.org/project/bezier/#history
+        package_name: bezier

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebthingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webthing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webthing' has no recent release, last release dates back to 2021-01-02 22:17:02.912728
+        link: https://pypi.org/project/webthing/#history
+        package_name: webthing

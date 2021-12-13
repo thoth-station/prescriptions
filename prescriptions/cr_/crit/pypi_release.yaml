@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CritPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'crit' has no recent release, last release dates back to 2019-01-09 14:48:33.497812
+        link: https://pypi.org/project/crit/#history
+        package_name: crit

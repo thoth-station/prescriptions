@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WikipediaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wikipedia
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wikipedia' has no recent release, last release dates back to 2014-11-15 15:59:49.808169
+        link: https://pypi.org/project/wikipedia/#history
+        package_name: wikipedia

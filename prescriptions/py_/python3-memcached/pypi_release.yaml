@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Python3MemcachedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-memcached
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python3-memcached' has no recent release, last release dates back to 2013-05-11 21:35:30.839278
+        link: https://pypi.org/project/python3-memcached/#history
+        package_name: python3-memcached

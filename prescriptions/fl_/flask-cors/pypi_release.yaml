@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskCorsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-cors
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-cors' has no recent release, last release dates back to 2021-01-06 00:25:42.749903
+        link: https://pypi.org/project/flask-cors/#history
+        package_name: flask-cors

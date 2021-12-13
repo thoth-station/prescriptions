@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnowflakePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snowflake
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'snowflake' has no recent release, last release dates back to 2017-02-13 21:51:18.760397
+        link: https://pypi.org/project/snowflake/#history
+        package_name: snowflake

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyldapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyldap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyldap' has no recent release, last release dates back to 2018-03-27 14:51:43.013520
+        link: https://pypi.org/project/pyldap/#history
+        package_name: pyldap

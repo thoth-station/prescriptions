@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyramidMakoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyramid-mako
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyramid-mako' has no recent release, last release dates back to 2019-08-18 23:47:55.719680
+        link: https://pypi.org/project/pyramid-mako/#history
+        package_name: pyramid-mako

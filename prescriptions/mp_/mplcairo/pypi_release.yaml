@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MplcairoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mplcairo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mplcairo' has no recent release, last release dates back to 2021-04-02 13:06:24.986235
+        link: https://pypi.org/project/mplcairo/#history
+        package_name: mplcairo

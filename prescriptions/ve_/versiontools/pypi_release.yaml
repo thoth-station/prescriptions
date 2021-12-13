@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VersiontoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: versiontools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'versiontools' has no recent release, last release dates back to 2012-03-13 02:24:01.548895
+        link: https://pypi.org/project/versiontools/#history
+        package_name: versiontools

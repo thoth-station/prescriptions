@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CounterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: counter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'counter' has no recent release, last release dates back to 2012-09-19 20:01:00.212578
+        link: https://pypi.org/project/counter/#history
+        package_name: counter

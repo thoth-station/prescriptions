@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SklearnCrfsuitePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sklearn-crfsuite
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sklearn-crfsuite' has no recent release, last release dates back to 2017-06-22 18:49:34.841701
+        link: https://pypi.org/project/sklearn-crfsuite/#history
+        package_name: sklearn-crfsuite

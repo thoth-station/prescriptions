@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtBatchaiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-batchai
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-batchai' has no recent release, last release dates back to 2018-06-12 15:44:19.396398
+        link: https://pypi.org/project/azure-mgmt-batchai/#history
+        package_name: azure-mgmt-batchai

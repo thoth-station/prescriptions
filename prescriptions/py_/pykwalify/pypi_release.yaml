@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PykwalifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykwalify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pykwalify' has no recent release, last release dates back to 2020-12-30 22:31:10.745404
+        link: https://pypi.org/project/pykwalify/#history
+        package_name: pykwalify

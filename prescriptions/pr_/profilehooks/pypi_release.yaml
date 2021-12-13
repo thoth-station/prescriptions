@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProfilehooksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: profilehooks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'profilehooks' has no recent release, last release dates back to 2020-08-20 13:55:55.925788
+        link: https://pypi.org/project/profilehooks/#history
+        package_name: profilehooks

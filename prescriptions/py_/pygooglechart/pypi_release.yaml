@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygooglechartPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygooglechart
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygooglechart' has no recent release, last release dates back to 2014-04-21 03:12:14.924149
+        link: https://pypi.org/project/pygooglechart/#history
+        package_name: pygooglechart

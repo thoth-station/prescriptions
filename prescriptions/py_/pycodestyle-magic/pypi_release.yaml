@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycodestyleMagicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycodestyle-magic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycodestyle-magic' has no recent release, last release dates back to 2019-10-17 21:00:52.414780
+        link: https://pypi.org/project/pycodestyle-magic/#history
+        package_name: pycodestyle-magic

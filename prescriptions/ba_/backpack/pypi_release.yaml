@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackpackPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backpack
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backpack' has no recent release, last release dates back to 2016-08-04 21:11:21.237211
+        link: https://pypi.org/project/backpack/#history
+        package_name: backpack

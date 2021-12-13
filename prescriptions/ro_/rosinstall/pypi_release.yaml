@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RosinstallPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rosinstall
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rosinstall' has no recent release, last release dates back to 2016-05-23 21:31:25.377669
+        link: https://pypi.org/project/rosinstall/#history
+        package_name: rosinstall

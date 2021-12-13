@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CradoxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cradox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cradox' has no recent release, last release dates back to 2018-08-03 17:48:22.301693
+        link: https://pypi.org/project/cradox/#history
+        package_name: cradox

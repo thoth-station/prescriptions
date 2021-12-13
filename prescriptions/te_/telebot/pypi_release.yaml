@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TelebotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: telebot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'telebot' has no recent release, last release dates back to 2020-11-18 17:40:40.215669
+        link: https://pypi.org/project/telebot/#history
+        package_name: telebot

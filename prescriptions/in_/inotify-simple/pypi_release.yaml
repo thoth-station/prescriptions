@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InotifySimplePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inotify-simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'inotify-simple' has no recent release, last release dates back to 2020-08-06 00:24:00.561399
+        link: https://pypi.org/project/inotify-simple/#history
+        package_name: inotify-simple

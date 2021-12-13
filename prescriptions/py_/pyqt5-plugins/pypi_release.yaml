@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyqt5PluginsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyqt5-plugins
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyqt5-plugins' has no recent release, last release dates back to 2021-05-25 22:39:07.303613
+        link: https://pypi.org/project/pyqt5-plugins/#history
+        package_name: pyqt5-plugins

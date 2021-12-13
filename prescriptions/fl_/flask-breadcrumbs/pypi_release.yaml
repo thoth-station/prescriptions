@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskBreadcrumbsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-breadcrumbs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-breadcrumbs' has no recent release, last release dates back to 2020-05-06 15:44:24.274678
+        link: https://pypi.org/project/flask-breadcrumbs/#history
+        package_name: flask-breadcrumbs

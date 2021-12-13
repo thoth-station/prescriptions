@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoPagingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-paging
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-paging' has no recent release, last release dates back to 2013-05-07 06:51:56.719702
+        link: https://pypi.org/project/django-paging/#history
+        package_name: django-paging

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VdmsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vdms
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vdms' has no recent release, last release dates back to 2020-07-17 14:46:07.029282
+        link: https://pypi.org/project/vdms/#history
+        package_name: vdms

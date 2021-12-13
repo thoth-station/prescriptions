@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TbtrimPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tbtrim
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tbtrim' has no recent release, last release dates back to 2020-01-16 01:38:40.870549
+        link: https://pypi.org/project/tbtrim/#history
+        package_name: tbtrim

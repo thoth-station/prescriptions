@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BooleanoperationsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: booleanoperations
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'booleanoperations' has no recent release, last release dates back to 2019-11-13 17:52:51.704993
+        link: https://pypi.org/project/booleanoperations/#history
+        package_name: booleanoperations

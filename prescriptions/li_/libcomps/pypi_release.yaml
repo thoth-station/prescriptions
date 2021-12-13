@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LibcompsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libcomps
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'libcomps' has no recent release, last release dates back to 2020-07-08 18:20:37.460561
+        link: https://pypi.org/project/libcomps/#history
+        package_name: libcomps

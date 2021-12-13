@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EnvparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: envparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'envparse' has no recent release, last release dates back to 2015-12-19 17:24:03.234167
+        link: https://pypi.org/project/envparse/#history
+        package_name: envparse

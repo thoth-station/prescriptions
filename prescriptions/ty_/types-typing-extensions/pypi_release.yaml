@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TypesTypingExtensionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-typing-extensions
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'types-typing-extensions' has no recent release, last release dates back to 2021-04-11 15:21:18.170787
+        link: https://pypi.org/project/types-typing-extensions/#history
+        package_name: types-typing-extensions

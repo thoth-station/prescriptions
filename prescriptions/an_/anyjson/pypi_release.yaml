@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnyjsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anyjson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'anyjson' has no recent release, last release dates back to 2012-06-22 01:12:14.929294
+        link: https://pypi.org/project/anyjson/#history
+        package_name: anyjson

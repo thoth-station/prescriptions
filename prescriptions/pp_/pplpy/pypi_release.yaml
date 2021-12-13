@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PplpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pplpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pplpy' has no recent release, last release dates back to 2021-01-20 18:50:43.418978
+        link: https://pypi.org/project/pplpy/#history
+        package_name: pplpy

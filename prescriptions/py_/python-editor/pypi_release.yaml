@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonEditorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-editor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-editor' has no recent release, last release dates back to 2019-02-01 07:33:16.069231
+        link: https://pypi.org/project/python-editor/#history
+        package_name: python-editor

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WincertstorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wincertstore
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wincertstore' has no recent release, last release dates back to 2021-06-08 11:20:52.101847
+        link: https://pypi.org/project/wincertstore/#history
+        package_name: wincertstore

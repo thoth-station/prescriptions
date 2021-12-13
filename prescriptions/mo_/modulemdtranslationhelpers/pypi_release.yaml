@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ModulemdtranslationhelpersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modulemdtranslationhelpers
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'modulemdtranslationhelpers' has no recent release, last release dates back to 2018-10-16 19:06:14.945428
+        link: https://pypi.org/project/modulemdtranslationhelpers/#history
+        package_name: modulemdtranslationhelpers

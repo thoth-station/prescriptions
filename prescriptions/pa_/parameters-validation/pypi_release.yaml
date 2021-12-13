@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParametersValidationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parameters-validation
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'parameters-validation' has no recent release, last release dates back to 2020-03-24 23:08:12.739448
+        link: https://pypi.org/project/parameters-validation/#history
+        package_name: parameters-validation

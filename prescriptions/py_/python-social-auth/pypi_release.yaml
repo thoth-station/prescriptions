@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonSocialAuthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-social-auth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-social-auth' has no recent release, last release dates back to 2017-02-03 12:20:16.355170
+        link: https://pypi.org/project/python-social-auth/#history
+        package_name: python-social-auth

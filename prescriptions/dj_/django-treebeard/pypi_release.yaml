@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoTreebeardPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-treebeard
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-treebeard' has no recent release, last release dates back to 2021-02-23 06:32:39.714782
+        link: https://pypi.org/project/django-treebeard/#history
+        package_name: django-treebeard

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyaibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyaib' has no recent release, last release dates back to 2016-09-06 21:40:56.073413
+        link: https://pypi.org/project/pyaib/#history
+        package_name: pyaib

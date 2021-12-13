@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestCoverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cover
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-cover' has no recent release, last release dates back to 2015-08-01 19:20:22.562432
+        link: https://pypi.org/project/pytest-cover/#history
+        package_name: pytest-cover

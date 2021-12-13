@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxTogglebuttonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-togglebutton
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-togglebutton' has no recent release, last release dates back to 2020-10-25 14:22:17.940027
+        link: https://pypi.org/project/sphinx-togglebutton/#history
+        package_name: sphinx-togglebutton

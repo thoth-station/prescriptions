@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioopensslPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioopenssl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioopenssl' has no recent release, last release dates back to 2021-01-16 13:22:36.316836
+        link: https://pypi.org/project/aioopenssl/#history
+        package_name: aioopenssl

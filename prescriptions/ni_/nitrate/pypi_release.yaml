@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NitratePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitrate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nitrate' has no recent release, last release dates back to 2020-07-09 15:32:08.802787
+        link: https://pypi.org/project/nitrate/#history
+        package_name: nitrate

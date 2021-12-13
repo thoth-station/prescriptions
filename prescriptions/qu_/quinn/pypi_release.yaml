@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QuinnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: quinn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'quinn' has no recent release, last release dates back to 2021-02-06 15:21:06.073884
+        link: https://pypi.org/project/quinn/#history
+        package_name: quinn

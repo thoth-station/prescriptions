@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonBidiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-bidi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-bidi' has no recent release, last release dates back to 2019-07-04 10:54:23.135009
+        link: https://pypi.org/project/python-bidi/#history
+        package_name: python-bidi

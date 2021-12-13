@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CfscrapePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfscrape
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cfscrape' has no recent release, last release dates back to 2020-02-23 04:09:53.797317
+        link: https://pypi.org/project/cfscrape/#history
+        package_name: cfscrape

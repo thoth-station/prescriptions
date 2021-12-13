@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonTerraformPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-terraform
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-terraform' has no recent release, last release dates back to 2019-06-21 07:03:00.906720
+        link: https://pypi.org/project/python-terraform/#history
+        package_name: python-terraform

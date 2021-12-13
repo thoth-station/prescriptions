@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppPublisherPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-publisher
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-publisher' has no recent release, last release dates back to 2020-06-08 13:48:34.306916
+        link: https://pypi.org/project/zope-app-publisher/#history
+        package_name: zope-app-publisher

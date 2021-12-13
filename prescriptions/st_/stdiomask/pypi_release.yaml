@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StdiomaskPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdiomask
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stdiomask' has no recent release, last release dates back to 2020-10-11 02:32:50.698345
+        link: https://pypi.org/project/stdiomask/#history
+        package_name: stdiomask

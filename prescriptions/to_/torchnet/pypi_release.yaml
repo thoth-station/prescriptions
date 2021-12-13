@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TorchnetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchnet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'torchnet' has no recent release, last release dates back to 2018-07-29 23:16:03.185602
+        link: https://pypi.org/project/torchnet/#history
+        package_name: torchnet

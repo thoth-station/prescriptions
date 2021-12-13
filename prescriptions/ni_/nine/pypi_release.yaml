@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NinePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nine
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nine' has no recent release, last release dates back to 2020-01-21 20:10:33.082913
+        link: https://pypi.org/project/nine/#history
+        package_name: nine

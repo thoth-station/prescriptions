@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtBillingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-billing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-billing' has no recent release, last release dates back to 2021-05-12 09:29:47.629584
+        link: https://pypi.org/project/azure-mgmt-billing/#history
+        package_name: azure-mgmt-billing

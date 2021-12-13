@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CrcelkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crcelk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'crcelk' has no recent release, last release dates back to 2018-11-10 20:29:42.477460
+        link: https://pypi.org/project/crcelk/#history
+        package_name: crcelk

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QtsassPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qtsass
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'qtsass' has no recent release, last release dates back to 2020-03-18 21:48:06.925488
+        link: https://pypi.org/project/qtsass/#history
+        package_name: qtsass

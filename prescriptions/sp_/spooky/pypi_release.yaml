@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpookyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spooky
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spooky' has no recent release, last release dates back to 2013-11-25 19:59:09.574716
+        link: https://pypi.org/project/spooky/#history
+        package_name: spooky

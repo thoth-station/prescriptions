@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UrhPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'urh' has no recent release, last release dates back to 2021-04-17 11:58:46.623051
+        link: https://pypi.org/project/urh/#history
+        package_name: urh

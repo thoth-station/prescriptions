@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtDatalakeNspkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-datalake-nspkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-datalake-nspkg' has no recent release, last release dates back to 2018-10-17 18:21:09.345780
+        link: https://pypi.org/project/azure-mgmt-datalake-nspkg/#history
+        package_name: azure-mgmt-datalake-nspkg

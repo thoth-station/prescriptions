@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyahocorasickPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyahocorasick
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyahocorasick' has no recent release, last release dates back to 2021-03-27 18:19:12.162767
+        link: https://pypi.org/project/pyahocorasick/#history
+        package_name: pyahocorasick

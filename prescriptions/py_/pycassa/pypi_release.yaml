@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycassaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycassa
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycassa' has no recent release, last release dates back to 2017-01-17 16:54:51.292192
+        link: https://pypi.org/project/pycassa/#history
+        package_name: pycassa

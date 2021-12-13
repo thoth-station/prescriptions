@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HmsclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hmsclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hmsclient' has no recent release, last release dates back to 2018-04-24 20:24:51.517181
+        link: https://pypi.org/project/hmsclient/#history
+        package_name: hmsclient

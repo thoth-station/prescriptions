@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GowerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gower
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gower' has no recent release, last release dates back to 2019-12-16 19:32:45.635123
+        link: https://pypi.org/project/gower/#history
+        package_name: gower

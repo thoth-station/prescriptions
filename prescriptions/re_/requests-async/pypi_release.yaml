@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsAsyncPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-async
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'requests-async' has no recent release, last release dates back to 2019-06-21 12:52:21.709954
+        link: https://pypi.org/project/requests-async/#history
+        package_name: requests-async

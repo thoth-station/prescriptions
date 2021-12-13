@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PercolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: percol
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'percol' has no recent release, last release dates back to 2015-07-30 09:18:10.924961
+        link: https://pypi.org/project/percol/#history
+        package_name: percol

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygeohashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygeohash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygeohash' has no recent release, last release dates back to 2016-04-05 15:59:51.789337
+        link: https://pypi.org/project/pygeohash/#history
+        package_name: pygeohash

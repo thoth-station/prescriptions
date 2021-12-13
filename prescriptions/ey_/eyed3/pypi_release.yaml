@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Eyed3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eyed3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eyed3' has no recent release, last release dates back to 2020-12-28 16:08:15.864699
+        link: https://pypi.org/project/eyed3/#history
+        package_name: eyed3

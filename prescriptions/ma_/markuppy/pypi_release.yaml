@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MarkuppyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markuppy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'markuppy' has no recent release, last release dates back to 2017-08-01 22:50:19.282747
+        link: https://pypi.org/project/markuppy/#history
+        package_name: markuppy

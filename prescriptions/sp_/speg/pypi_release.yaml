@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpegPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'speg' has no recent release, last release dates back to 2017-04-28 12:37:52.785205
+        link: https://pypi.org/project/speg/#history
+        package_name: speg

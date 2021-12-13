@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WikitcmsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wikitcms
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wikitcms' has no recent release, last release dates back to 2020-11-06 20:03:17.458987
+        link: https://pypi.org/project/wikitcms/#history
+        package_name: wikitcms

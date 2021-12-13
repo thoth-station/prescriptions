@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CairosvgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cairosvg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cairosvg' has no recent release, last release dates back to 2021-03-06 15:23:03.393219
+        link: https://pypi.org/project/cairosvg/#history
+        package_name: cairosvg

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GithubgqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: githubgql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'githubgql' has no recent release, last release dates back to 2021-04-20 21:23:55.993640
+        link: https://pypi.org/project/githubgql/#history
+        package_name: githubgql

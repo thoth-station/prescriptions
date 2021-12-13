@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XmlrunnerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmlrunner
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xmlrunner' has no recent release, last release dates back to 2014-11-10 16:18:12.624458
+        link: https://pypi.org/project/xmlrunner/#history
+        package_name: xmlrunner

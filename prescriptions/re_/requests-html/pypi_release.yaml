@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsHtmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-html
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'requests-html' has no recent release, last release dates back to 2019-02-17 20:14:19.486641
+        link: https://pypi.org/project/requests-html/#history
+        package_name: requests-html

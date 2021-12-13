@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MglobPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mglob
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mglob' has no recent release, last release dates back to 2007-09-05 18:47:57
+        link: https://pypi.org/project/mglob/#history
+        package_name: mglob

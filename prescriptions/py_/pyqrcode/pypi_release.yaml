@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyqrcodePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyqrcode
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyqrcode' has no recent release, last release dates back to 2016-06-20 03:28:07.967347
+        link: https://pypi.org/project/pyqrcode/#history
+        package_name: pyqrcode

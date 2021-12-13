@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LruDictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lru-dict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lru-dict' has no recent release, last release dates back to 2021-02-03 06:58:35.276979
+        link: https://pypi.org/project/lru-dict/#history
+        package_name: lru-dict

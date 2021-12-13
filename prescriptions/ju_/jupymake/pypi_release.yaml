@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupymakePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupymake
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupymake' has no recent release, last release dates back to 2019-05-02 12:01:39.421534
+        link: https://pypi.org/project/jupymake/#history
+        package_name: jupymake

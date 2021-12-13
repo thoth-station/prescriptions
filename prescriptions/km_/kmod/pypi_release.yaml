@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KmodPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kmod
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kmod' has no recent release, last release dates back to 2017-10-24 16:55:08.527720
+        link: https://pypi.org/project/kmod/#history
+        package_name: kmod

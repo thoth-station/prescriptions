@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CupyCuda80PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda80
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cupy-cuda80' has no recent release, last release dates back to 2020-08-18 18:21:39.390310
+        link: https://pypi.org/project/cupy-cuda80/#history
+        package_name: cupy-cuda80

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Caniusepython3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: caniusepython3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'caniusepython3' has no recent release, last release dates back to 2021-01-01 23:11:48.643531
+        link: https://pypi.org/project/caniusepython3/#history
+        package_name: caniusepython3

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColconCdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-cd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colcon-cd' has no recent release, last release dates back to 2019-10-21 23:43:47.454516
+        link: https://pypi.org/project/colcon-cd/#history
+        package_name: colcon-cd

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeBrowsermenuPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-browsermenu
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-browsermenu' has no recent release, last release dates back to 2018-10-05 14:28:39.938429
+        link: https://pypi.org/project/zope-browsermenu/#history
+        package_name: zope-browsermenu

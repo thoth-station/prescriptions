@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyramidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyramid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyramid' has no recent release, last release dates back to 2021-03-01 03:27:46.840450
+        link: https://pypi.org/project/pyramid/#history
+        package_name: pyramid

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CyclicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyclic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cyclic' has no recent release, last release dates back to 2018-09-26 16:47:07.285514
+        link: https://pypi.org/project/cyclic/#history
+        package_name: cyclic

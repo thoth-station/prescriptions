@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FfmpegPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ffmpeg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ffmpeg' has no recent release, last release dates back to 2018-10-08 07:50:05.748148
+        link: https://pypi.org/project/ffmpeg/#history
+        package_name: ffmpeg

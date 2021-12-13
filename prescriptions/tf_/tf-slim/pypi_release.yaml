@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TfSlimPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tf-slim
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tf-slim' has no recent release, last release dates back to 2020-05-07 22:18:55.976094
+        link: https://pypi.org/project/tf-slim/#history
+        package_name: tf-slim

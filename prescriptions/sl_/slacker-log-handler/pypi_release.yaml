@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlackerLogHandlerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker-log-handler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slacker-log-handler' has no recent release, last release dates back to 2021-02-08 21:16:30.883630
+        link: https://pypi.org/project/slacker-log-handler/#history
+        package_name: slacker-log-handler

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TfrecordLitePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfrecord-lite
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tfrecord-lite' has no recent release, last release dates back to 2020-02-07 09:18:57.923689
+        link: https://pypi.org/project/tfrecord-lite/#history
+        package_name: tfrecord-lite

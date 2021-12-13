@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiocontextvarsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocontextvars
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiocontextvars' has no recent release, last release dates back to 2019-04-08 22:40:33.205236
+        link: https://pypi.org/project/aiocontextvars/#history
+        package_name: aiocontextvars

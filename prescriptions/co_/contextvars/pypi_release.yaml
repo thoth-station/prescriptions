@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ContextvarsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contextvars
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'contextvars' has no recent release, last release dates back to 2019-04-01 14:42:11.953652
+        link: https://pypi.org/project/contextvars/#history
+        package_name: contextvars

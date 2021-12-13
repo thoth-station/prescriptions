@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtDatalakeAnalyticsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-datalake-analytics
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-datalake-analytics' has no recent release, last release dates back to 2018-06-26 19:14:26.505717
+        link: https://pypi.org/project/azure-mgmt-datalake-analytics/#history
+        package_name: azure-mgmt-datalake-analytics

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypromisePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypromise
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pypromise' has no recent release, last release dates back to 2016-05-04 04:06:24.008612
+        link: https://pypi.org/project/pypromise/#history
+        package_name: pypromise

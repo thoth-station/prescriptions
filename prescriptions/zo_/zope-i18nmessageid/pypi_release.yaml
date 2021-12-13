@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeI18nmessageidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-i18nmessageid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-i18nmessageid' has no recent release, last release dates back to 2020-03-10 13:00:01.776362
+        link: https://pypi.org/project/zope-i18nmessageid/#history
+        package_name: zope-i18nmessageid

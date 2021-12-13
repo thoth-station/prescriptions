@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MercantilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mercantile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mercantile' has no recent release, last release dates back to 2021-04-21 14:42:41.096530
+        link: https://pypi.org/project/mercantile/#history
+        package_name: mercantile

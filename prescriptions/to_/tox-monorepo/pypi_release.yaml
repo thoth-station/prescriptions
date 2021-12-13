@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ToxMonorepoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-monorepo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tox-monorepo' has no recent release, last release dates back to 2019-12-06 01:39:38.983382
+        link: https://pypi.org/project/tox-monorepo/#history
+        package_name: tox-monorepo

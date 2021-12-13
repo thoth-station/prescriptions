@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestCatchlogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-catchlog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-catchlog' has no recent release, last release dates back to 2016-01-24 15:24:27.879095
+        link: https://pypi.org/project/pytest-catchlog/#history
+        package_name: pytest-catchlog

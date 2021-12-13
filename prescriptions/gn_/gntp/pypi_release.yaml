@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GntpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gntp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gntp' has no recent release, last release dates back to 2016-03-06 22:51:33.183562
+        link: https://pypi.org/project/gntp/#history
+        package_name: gntp

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CertvalidatorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certvalidator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'certvalidator' has no recent release, last release dates back to 2016-07-29 14:57:44.754876
+        link: https://pypi.org/project/certvalidator/#history
+        package_name: certvalidator

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EmailsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: emails
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'emails' has no recent release, last release dates back to 2020-06-19 11:20:41.644807
+        link: https://pypi.org/project/emails/#history
+        package_name: emails

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpectrographicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spectrographic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spectrographic' has no recent release, last release dates back to 2019-12-24 20:34:51.109790
+        link: https://pypi.org/project/spectrographic/#history
+        package_name: spectrographic

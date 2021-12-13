@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleGaxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-gax
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-gax' has no recent release, last release dates back to 2018-02-28 21:10:09.395038
+        link: https://pypi.org/project/google-gax/#history
+        package_name: google-gax

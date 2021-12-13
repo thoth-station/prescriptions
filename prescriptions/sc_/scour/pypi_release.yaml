@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScourPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scour
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scour' has no recent release, last release dates back to 2020-11-22 14:05:55.677671
+        link: https://pypi.org/project/scour/#history
+        package_name: scour

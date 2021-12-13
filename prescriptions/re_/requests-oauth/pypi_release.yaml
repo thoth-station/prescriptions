@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsOauthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-oauth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'requests-oauth' has no recent release, last release dates back to 2012-06-21 09:10:36.404143
+        link: https://pypi.org/project/requests-oauth/#history
+        package_name: requests-oauth

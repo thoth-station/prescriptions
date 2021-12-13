@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RedisPyClusterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: redis-py-cluster
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'redis-py-cluster' has no recent release, last release dates back to 2021-05-30 09:21:47.477714
+        link: https://pypi.org/project/redis-py-cluster/#history
+        package_name: redis-py-cluster

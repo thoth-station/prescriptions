@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RoutesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: routes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'routes' has no recent release, last release dates back to 2020-10-14 02:33:58.506786
+        link: https://pypi.org/project/routes/#history
+        package_name: routes

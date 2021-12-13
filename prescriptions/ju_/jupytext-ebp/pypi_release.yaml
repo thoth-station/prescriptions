@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupytextEbpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupytext-ebp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupytext-ebp' has no recent release, last release dates back to 2021-04-25 22:02:56.989188
+        link: https://pypi.org/project/jupytext-ebp/#history
+        package_name: jupytext-ebp

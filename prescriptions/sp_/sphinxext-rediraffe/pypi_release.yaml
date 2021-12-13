@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxextRediraffePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxext-rediraffe
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxext-rediraffe' has no recent release, last release dates back to 2021-04-16 11:42:28.206182
+        link: https://pypi.org/project/sphinxext-rediraffe/#history
+        package_name: sphinxext-rediraffe

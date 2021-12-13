@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RednosePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rednose
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rednose' has no recent release, last release dates back to 2018-02-11 18:07:58.700948
+        link: https://pypi.org/project/rednose/#history
+        package_name: rednose

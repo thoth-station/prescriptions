@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RethinkdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rethinkdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rethinkdb' has no recent release, last release dates back to 2020-12-05 22:02:46.122675
+        link: https://pypi.org/project/rethinkdb/#history
+        package_name: rethinkdb

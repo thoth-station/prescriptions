@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeErrorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-error
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-error' has no recent release, last release dates back to 2018-10-19 13:27:34.722334
+        link: https://pypi.org/project/zope-error/#history
+        package_name: zope-error

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TgschedulerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tgscheduler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tgscheduler' has no recent release, last release dates back to 2015-05-18 10:15:12.921178
+        link: https://pypi.org/project/tgscheduler/#history
+        package_name: tgscheduler

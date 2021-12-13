@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeContenttypePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-contenttype
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-contenttype' has no recent release, last release dates back to 2019-12-19 12:02:14.181641
+        link: https://pypi.org/project/zope-contenttype/#history
+        package_name: zope-contenttype

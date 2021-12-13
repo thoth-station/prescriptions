@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OfxparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ofxparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ofxparse' has no recent release, last release dates back to 2021-05-31 03:38:59.526783
+        link: https://pypi.org/project/ofxparse/#history
+        package_name: ofxparse

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PicklesharePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pickleshare
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pickleshare' has no recent release, last release dates back to 2018-09-25 19:17:37.249381
+        link: https://pypi.org/project/pickleshare/#history
+        package_name: pickleshare

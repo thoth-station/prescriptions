@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimplekvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplekv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'simplekv' has no recent release, last release dates back to 2020-04-09 18:00:29.273844
+        link: https://pypi.org/project/simplekv/#history
+        package_name: simplekv

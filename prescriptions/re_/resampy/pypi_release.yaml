@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ResampyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: resampy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'resampy' has no recent release, last release dates back to 2019-08-16 00:17:39.545770
+        link: https://pypi.org/project/resampy/#history
+        package_name: resampy

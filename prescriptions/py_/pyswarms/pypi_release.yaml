@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyswarmsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyswarms
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyswarms' has no recent release, last release dates back to 2021-01-03 21:34:22.091137
+        link: https://pypi.org/project/pyswarms/#history
+        package_name: pyswarms

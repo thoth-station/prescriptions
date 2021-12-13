@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EsprimaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: esprima
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'esprima' has no recent release, last release dates back to 2018-08-24 13:59:11.374013
+        link: https://pypi.org/project/esprima/#history
+        package_name: esprima

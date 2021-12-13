@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FyppPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fypp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fypp' has no recent release, last release dates back to 2021-04-19 10:42:12.847571
+        link: https://pypi.org/project/fypp/#history
+        package_name: fypp

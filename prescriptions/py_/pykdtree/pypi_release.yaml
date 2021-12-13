@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PykdtreePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykdtree
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pykdtree' has no recent release, last release dates back to 2020-11-11 17:05:32.123036
+        link: https://pypi.org/project/pykdtree/#history
+        package_name: pykdtree

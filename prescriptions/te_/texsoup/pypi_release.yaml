@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TexsoupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: texsoup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'texsoup' has no recent release, last release dates back to 2020-08-03 10:14:56.027082
+        link: https://pypi.org/project/texsoup/#history
+        package_name: texsoup

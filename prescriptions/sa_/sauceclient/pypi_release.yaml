@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SauceclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sauceclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sauceclient' has no recent release, last release dates back to 2017-05-07 14:38:58.723907
+        link: https://pypi.org/project/sauceclient/#history
+        package_name: sauceclient

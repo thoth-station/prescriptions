@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GooglePastaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-pasta
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-pasta' has no recent release, last release dates back to 2020-03-13 18:57:50.340495
+        link: https://pypi.org/project/google-pasta/#history
+        package_name: google-pasta

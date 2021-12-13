@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylatexencPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylatexenc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylatexenc' has no recent release, last release dates back to 2021-04-06 07:56:07.854565
+        link: https://pypi.org/project/pylatexenc/#history
+        package_name: pylatexenc

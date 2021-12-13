@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PexpectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pexpect
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pexpect' has no recent release, last release dates back to 2020-01-21 16:37:05.861285
+        link: https://pypi.org/project/pexpect/#history
+        package_name: pexpect

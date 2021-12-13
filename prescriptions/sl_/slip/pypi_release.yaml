@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlipPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slip
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slip' has no recent release, last release dates back to 2019-11-12 10:06:19.985532
+        link: https://pypi.org/project/slip/#history
+        package_name: slip

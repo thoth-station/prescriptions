@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RubberPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rubber
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rubber' has no recent release, last release dates back to 2012-08-06 13:43:42.551234
+        link: https://pypi.org/project/rubber/#history
+        package_name: rubber

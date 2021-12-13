@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthpmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethpm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ethpm' has no recent release, last release dates back to 2018-09-13 21:58:38.681155
+        link: https://pypi.org/project/ethpm/#history
+        package_name: ethpm

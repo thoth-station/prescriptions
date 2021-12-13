@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonSpeechFeaturesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-speech-features
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-speech-features' has no recent release, last release dates back to 2017-08-16 01:46:13.644854
+        link: https://pypi.org/project/python-speech-features/#history
+        package_name: python-speech-features

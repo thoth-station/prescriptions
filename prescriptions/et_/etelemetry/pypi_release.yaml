@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EtelemetryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etelemetry
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'etelemetry' has no recent release, last release dates back to 2020-08-05 01:54:53.902562
+        link: https://pypi.org/project/etelemetry/#history
+        package_name: etelemetry

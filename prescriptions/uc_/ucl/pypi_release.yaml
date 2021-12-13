@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UclPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ucl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ucl' has no recent release, last release dates back to 2018-03-21 15:59:45.409890
+        link: https://pypi.org/project/ucl/#history
+        package_name: ucl

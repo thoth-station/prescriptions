@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FirstPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: first
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'first' has no recent release, last release dates back to 2019-03-07 10:07:28.322717
+        link: https://pypi.org/project/first/#history
+        package_name: first

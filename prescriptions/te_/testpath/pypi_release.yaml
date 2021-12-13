@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TestpathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testpath
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'testpath' has no recent release, last release dates back to 2021-05-17 11:04:42.928227
+        link: https://pypi.org/project/testpath/#history
+        package_name: testpath

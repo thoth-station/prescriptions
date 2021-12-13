@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PloneTestingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plone-testing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'plone-testing' has no recent release, last release dates back to 2021-06-15 02:01:23.484199
+        link: https://pypi.org/project/plone-testing/#history
+        package_name: plone-testing

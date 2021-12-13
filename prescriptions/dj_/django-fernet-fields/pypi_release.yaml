@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoFernetFieldsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-fernet-fields
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-fernet-fields' has no recent release, last release dates back to 2019-05-10 16:38:10.665444
+        link: https://pypi.org/project/django-fernet-fields/#history
+        package_name: django-fernet-fields

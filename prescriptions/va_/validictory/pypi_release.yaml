@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ValidictoryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validictory
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'validictory' has no recent release, last release dates back to 2017-12-01 19:01:57.715911
+        link: https://pypi.org/project/validictory/#history
+        package_name: validictory

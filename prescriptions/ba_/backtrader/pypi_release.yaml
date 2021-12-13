@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BacktraderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backtrader
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backtrader' has no recent release, last release dates back to 2020-07-03 13:02:14.695337
+        link: https://pypi.org/project/backtrader/#history
+        package_name: backtrader

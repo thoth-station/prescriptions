@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtSchedulerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-scheduler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-scheduler' has no recent release, last release dates back to 2018-05-23 19:51:40.844952
+        link: https://pypi.org/project/azure-mgmt-scheduler/#history
+        package_name: azure-mgmt-scheduler

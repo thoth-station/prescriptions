@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TabulatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabulate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tabulate' has no recent release, last release dates back to 2021-02-22 07:34:14.585698
+        link: https://pypi.org/project/tabulate/#history
+        package_name: tabulate

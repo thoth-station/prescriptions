@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysmbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysmb' has no recent release, last release dates back to 2021-05-30 07:03:48.622161
+        link: https://pypi.org/project/pysmb/#history
+        package_name: pysmb

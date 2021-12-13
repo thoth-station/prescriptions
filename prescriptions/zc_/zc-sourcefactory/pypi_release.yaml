@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZcSourcefactoryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zc-sourcefactory
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zc-sourcefactory' has no recent release, last release dates back to 2018-11-07 08:24:19.589594
+        link: https://pypi.org/project/zc-sourcefactory/#history
+        package_name: zc-sourcefactory

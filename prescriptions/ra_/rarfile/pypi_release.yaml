@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RarfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rarfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rarfile' has no recent release, last release dates back to 2020-07-31 19:35:42.931562
+        link: https://pypi.org/project/rarfile/#history
+        package_name: rarfile

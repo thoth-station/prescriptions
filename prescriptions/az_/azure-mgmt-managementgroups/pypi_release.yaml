@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtManagementgroupsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-managementgroups
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-managementgroups' has no recent release, last release dates back to 2021-05-21 09:21:51.169129
+        link: https://pypi.org/project/azure-mgmt-managementgroups/#history
+        package_name: azure-mgmt-managementgroups

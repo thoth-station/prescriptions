@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JcconvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jcconv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jcconv' has no recent release, last release dates back to 2012-03-26 18:08:48.874416
+        link: https://pypi.org/project/jcconv/#history
+        package_name: jcconv

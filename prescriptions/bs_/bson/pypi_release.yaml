@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bson' has no recent release, last release dates back to 2020-05-26 11:13:47.979526
+        link: https://pypi.org/project/bson/#history
+        package_name: bson

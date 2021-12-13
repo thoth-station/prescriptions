@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestFactoryboyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-factoryboy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-factoryboy' has no recent release, last release dates back to 2020-12-30 17:35:14.201412
+        link: https://pypi.org/project/pytest-factoryboy/#history
+        package_name: pytest-factoryboy

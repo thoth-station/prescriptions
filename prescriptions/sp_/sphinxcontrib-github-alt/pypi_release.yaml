@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxcontribGithubAltPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-github-alt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxcontrib-github-alt' has no recent release, last release dates back to 2020-04-27 09:12:43.982828
+        link: https://pypi.org/project/sphinxcontrib-github-alt/#history
+        package_name: sphinxcontrib-github-alt

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZhonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zhon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zhon' has no recent release, last release dates back to 2016-05-23 13:11:39.004197
+        link: https://pypi.org/project/zhon/#history
+        package_name: zhon

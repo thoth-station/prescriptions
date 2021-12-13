@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonBaseconvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-baseconv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-baseconv' has no recent release, last release dates back to 2019-04-04 19:28:57.170968
+        link: https://pypi.org/project/python-baseconv/#history
+        package_name: python-baseconv

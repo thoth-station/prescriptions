@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrsawPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prsaw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prsaw' has no recent release, last release dates back to 2021-06-04 04:26:05.651530
+        link: https://pypi.org/project/prsaw/#history
+        package_name: prsaw

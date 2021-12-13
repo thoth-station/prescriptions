@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SafittyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: safitty
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'safitty' has no recent release, last release dates back to 2019-10-08 12:07:48.139034
+        link: https://pypi.org/project/safitty/#history
+        package_name: safitty

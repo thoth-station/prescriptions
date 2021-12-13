@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Bz2filePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bz2file
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bz2file' has no recent release, last release dates back to 2014-01-19 21:37:38.793407
+        link: https://pypi.org/project/bz2file/#history
+        package_name: bz2file

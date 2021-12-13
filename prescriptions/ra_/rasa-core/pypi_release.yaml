@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RasaCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasa-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rasa-core' has no recent release, last release dates back to 2019-06-04 17:12:23.796311
+        link: https://pypi.org/project/rasa-core/#history
+        package_name: rasa-core

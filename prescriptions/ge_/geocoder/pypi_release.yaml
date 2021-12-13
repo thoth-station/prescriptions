@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeocoderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geocoder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geocoder' has no recent release, last release dates back to 2018-04-04 12:34:51.222570
+        link: https://pypi.org/project/geocoder/#history
+        package_name: geocoder

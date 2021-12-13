@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CooldictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cooldict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cooldict' has no recent release, last release dates back to 2018-11-09 05:30:00.319256
+        link: https://pypi.org/project/cooldict/#history
+        package_name: cooldict

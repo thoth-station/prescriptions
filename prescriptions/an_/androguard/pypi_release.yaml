@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AndroguardPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: androguard
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'androguard' has no recent release, last release dates back to 2019-02-18 15:38:21.522784
+        link: https://pypi.org/project/androguard/#history
+        package_name: androguard

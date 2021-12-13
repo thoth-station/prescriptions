@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyxdgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxdg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyxdg' has no recent release, last release dates back to 2020-10-18 14:54:14.062485
+        link: https://pypi.org/project/pyxdg/#history
+        package_name: pyxdg

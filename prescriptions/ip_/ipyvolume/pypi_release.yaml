@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpyvolumePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipyvolume
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipyvolume' has no recent release, last release dates back to 2019-07-07 19:45:24.759070
+        link: https://pypi.org/project/ipyvolume/#history
+        package_name: ipyvolume

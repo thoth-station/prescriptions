@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Functools32PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: functools32
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'functools32' has no recent release, last release dates back to 2015-07-11 02:47:05.917894
+        link: https://pypi.org/project/functools32/#history
+        package_name: functools32

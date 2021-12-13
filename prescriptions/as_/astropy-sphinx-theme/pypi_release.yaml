@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AstropySphinxThemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astropy-sphinx-theme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'astropy-sphinx-theme' has no recent release, last release dates back to 2019-04-25 08:34:15.497525
+        link: https://pypi.org/project/astropy-sphinx-theme/#history
+        package_name: astropy-sphinx-theme

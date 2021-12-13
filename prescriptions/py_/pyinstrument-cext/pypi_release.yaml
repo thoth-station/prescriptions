@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyinstrumentCextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinstrument-cext
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyinstrument-cext' has no recent release, last release dates back to 2021-02-12 12:28:15.502781
+        link: https://pypi.org/project/pyinstrument-cext/#history
+        package_name: pyinstrument-cext

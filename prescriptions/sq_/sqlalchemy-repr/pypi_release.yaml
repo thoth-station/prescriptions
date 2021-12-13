@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SqlalchemyReprPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-repr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sqlalchemy-repr' has no recent release, last release dates back to 2020-04-12 16:33:37.800329
+        link: https://pypi.org/project/sqlalchemy-repr/#history
+        package_name: sqlalchemy-repr

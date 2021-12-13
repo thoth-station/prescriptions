@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CyordereddictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyordereddict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cyordereddict' has no recent release, last release dates back to 2016-02-05 07:45:29.114416
+        link: https://pypi.org/project/cyordereddict/#history
+        package_name: cyordereddict

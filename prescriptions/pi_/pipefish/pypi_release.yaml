@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PipefishPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipefish
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pipefish' has no recent release, last release dates back to 2019-07-16 02:40:30.238254
+        link: https://pypi.org/project/pipefish/#history
+        package_name: pipefish

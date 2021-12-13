@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WinUnicodeConsolePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: win-unicode-console
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'win-unicode-console' has no recent release, last release dates back to 2016-06-25 19:48:54.050070
+        link: https://pypi.org/project/win-unicode-console/#history
+        package_name: win-unicode-console

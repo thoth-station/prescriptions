@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SvgPathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: svg-path
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'svg-path' has no recent release, last release dates back to 2021-02-16 19:03:15.139210
+        link: https://pypi.org/project/svg-path/#history
+        package_name: svg-path

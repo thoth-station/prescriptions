@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyMiniRacerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-mini-racer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-mini-racer' has no recent release, last release dates back to 2021-04-22 07:58:35.993523
+        link: https://pypi.org/project/py-mini-racer/#history
+        package_name: py-mini-racer

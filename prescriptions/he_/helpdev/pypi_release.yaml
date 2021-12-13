@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HelpdevPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: helpdev
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'helpdev' has no recent release, last release dates back to 2020-05-05 21:12:48.290852
+        link: https://pypi.org/project/helpdev/#history
+        package_name: helpdev

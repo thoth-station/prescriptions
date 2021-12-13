@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HugPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hug
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hug' has no recent release, last release dates back to 2020-02-06 18:13:39.954196
+        link: https://pypi.org/project/hug/#history
+        package_name: hug

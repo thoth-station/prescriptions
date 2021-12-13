@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WinsspiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: winsspi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'winsspi' has no recent release, last release dates back to 2020-04-07 22:43:03.453567
+        link: https://pypi.org/project/winsspi/#history
+        package_name: winsspi

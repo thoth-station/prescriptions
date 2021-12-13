@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LogmaticPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logmatic-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'logmatic-python' has no recent release, last release dates back to 2017-01-18 09:52:29.751272
+        link: https://pypi.org/project/logmatic-python/#history
+        package_name: logmatic-python

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskBabelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-babel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-babel' has no recent release, last release dates back to 2020-08-27 03:14:13.932892
+        link: https://pypi.org/project/flask-babel/#history
+        package_name: flask-babel

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BcpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bcpy' has no recent release, last release dates back to 2020-04-19 01:08:12.639290
+        link: https://pypi.org/project/bcpy/#history
+        package_name: bcpy

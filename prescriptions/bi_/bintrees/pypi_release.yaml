@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BintreesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bintrees
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bintrees' has no recent release, last release dates back to 2020-12-12 09:01:08.969112
+        link: https://pypi.org/project/bintrees/#history
+        package_name: bintrees

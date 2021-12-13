@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StomperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stomper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stomper' has no recent release, last release dates back to 2019-04-09 11:54:32.297869
+        link: https://pypi.org/project/stomper/#history
+        package_name: stomper

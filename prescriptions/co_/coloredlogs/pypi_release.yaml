@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColoredlogsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coloredlogs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'coloredlogs' has no recent release, last release dates back to 2021-06-11 10:22:45.202780
+        link: https://pypi.org/project/coloredlogs/#history
+        package_name: coloredlogs

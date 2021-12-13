@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoStatsdMozillaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-statsd-mozilla
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-statsd-mozilla' has no recent release, last release dates back to 2017-09-01 11:25:18.214707
+        link: https://pypi.org/project/django-statsd-mozilla/#history
+        package_name: django-statsd-mozilla

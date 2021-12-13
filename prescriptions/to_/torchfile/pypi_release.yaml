@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TorchfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'torchfile' has no recent release, last release dates back to 2017-02-19 17:46:32.918031
+        link: https://pypi.org/project/torchfile/#history
+        package_name: torchfile

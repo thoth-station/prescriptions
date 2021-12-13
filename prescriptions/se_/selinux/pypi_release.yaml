@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SelinuxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selinux
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'selinux' has no recent release, last release dates back to 2019-10-23 16:55:17.975237
+        link: https://pypi.org/project/selinux/#history
+        package_name: selinux

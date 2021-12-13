@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SubliminalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subliminal
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'subliminal' has no recent release, last release dates back to 2020-05-02 09:59:04.257944
+        link: https://pypi.org/project/subliminal/#history
+        package_name: subliminal

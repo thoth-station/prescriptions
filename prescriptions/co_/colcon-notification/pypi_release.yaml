@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColconNotificationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-notification
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colcon-notification' has no recent release, last release dates back to 2020-04-15 22:52:35.201458
+        link: https://pypi.org/project/colcon-notification/#history
+        package_name: colcon-notification

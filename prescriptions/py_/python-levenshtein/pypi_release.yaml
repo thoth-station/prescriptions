@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonLevenshteinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-levenshtein
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-levenshtein' has no recent release, last release dates back to 2021-02-01 13:03:13.521387
+        link: https://pypi.org/project/python-levenshtein/#history
+        package_name: python-levenshtein

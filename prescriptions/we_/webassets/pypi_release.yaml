@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebassetsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webassets
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webassets' has no recent release, last release dates back to 2019-12-20 17:37:28.577904
+        link: https://pypi.org/project/webassets/#history
+        package_name: webassets

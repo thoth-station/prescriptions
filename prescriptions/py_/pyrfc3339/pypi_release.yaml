@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyrfc3339PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrfc3339
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyrfc3339' has no recent release, last release dates back to 2018-06-11 00:26:31.000509
+        link: https://pypi.org/project/pyrfc3339/#history
+        package_name: pyrfc3339

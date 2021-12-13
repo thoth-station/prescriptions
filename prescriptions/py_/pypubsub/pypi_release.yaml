@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypubsubPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypubsub
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pypubsub' has no recent release, last release dates back to 2019-01-28 00:36:11.389662
+        link: https://pypi.org/project/pypubsub/#history
+        package_name: pypubsub

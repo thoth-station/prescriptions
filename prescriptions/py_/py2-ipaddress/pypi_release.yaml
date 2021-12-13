@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Py2IpaddressPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py2-ipaddress
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py2-ipaddress' has no recent release, last release dates back to 2020-01-20 13:48:43.253318
+        link: https://pypi.org/project/py2-ipaddress/#history
+        package_name: py2-ipaddress

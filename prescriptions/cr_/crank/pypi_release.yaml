@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CrankPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crank
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'crank' has no recent release, last release dates back to 2017-03-17 23:28:09.909473
+        link: https://pypi.org/project/crank/#history
+        package_name: crank

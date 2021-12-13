@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProtoGoogleCloudLoggingV2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: proto-google-cloud-logging-v2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'proto-google-cloud-logging-v2' has no recent release, last release dates back to 2017-03-06 17:14:44.300606
+        link: https://pypi.org/project/proto-google-cloud-logging-v2/#history
+        package_name: proto-google-cloud-logging-v2

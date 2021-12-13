@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FedmodPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fedmod
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fedmod' has no recent release, last release dates back to 2017-11-07 09:13:01.191766
+        link: https://pypi.org/project/fedmod/#history
+        package_name: fedmod

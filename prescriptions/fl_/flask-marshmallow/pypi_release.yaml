@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskMarshmallowPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-marshmallow
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-marshmallow' has no recent release, last release dates back to 2020-09-28 03:38:47.622740
+        link: https://pypi.org/project/flask-marshmallow/#history
+        package_name: flask-marshmallow

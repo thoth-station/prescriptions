@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SgmanagerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sgmanager
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sgmanager' has no recent release, last release dates back to 2016-09-22 08:53:02.837752
+        link: https://pypi.org/project/sgmanager/#history
+        package_name: sgmanager

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycecPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycec
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycec' has no recent release, last release dates back to 2020-10-26 23:45:51.884182
+        link: https://pypi.org/project/pycec/#history
+        package_name: pycec

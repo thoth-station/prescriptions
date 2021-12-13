@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IntuitOauthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intuit-oauth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'intuit-oauth' has no recent release, last release dates back to 2020-08-11 19:17:43.089319
+        link: https://pypi.org/project/intuit-oauth/#history
+        package_name: intuit-oauth

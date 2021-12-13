@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MdxIncludePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mdx-include
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mdx-include' has no recent release, last release dates back to 2020-09-11 14:50:14.546778
+        link: https://pypi.org/project/mdx-include/#history
+        package_name: mdx-include

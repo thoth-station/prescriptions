@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TimezonefinderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timezonefinder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'timezonefinder' has no recent release, last release dates back to 2021-02-08 23:27:45.711931
+        link: https://pypi.org/project/timezonefinder/#history
+        package_name: timezonefinder

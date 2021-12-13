@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoTemplatetagSugarPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-templatetag-sugar
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-templatetag-sugar' has no recent release, last release dates back to 2014-03-24 04:29:27.964473
+        link: https://pypi.org/project/django-templatetag-sugar/#history
+        package_name: django-templatetag-sugar

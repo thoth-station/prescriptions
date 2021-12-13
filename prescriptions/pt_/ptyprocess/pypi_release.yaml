@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PtyprocessPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptyprocess
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ptyprocess' has no recent release, last release dates back to 2020-12-28 15:15:30.155647
+        link: https://pypi.org/project/ptyprocess/#history
+        package_name: ptyprocess

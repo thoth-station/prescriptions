@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyvcfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvcf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyvcf' has no recent release, last release dates back to 2016-03-18 16:19:46.644249
+        link: https://pypi.org/project/pyvcf/#history
+        package_name: pyvcf

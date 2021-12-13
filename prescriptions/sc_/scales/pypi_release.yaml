@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScalesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scales
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scales' has no recent release, last release dates back to 2015-02-28 18:49:39.538492
+        link: https://pypi.org/project/scales/#history
+        package_name: scales

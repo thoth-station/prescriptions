@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ApiclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apiclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'apiclient' has no recent release, last release dates back to 2019-03-21 00:55:53.521034
+        link: https://pypi.org/project/apiclient/#history
+        package_name: apiclient

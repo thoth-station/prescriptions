@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TabviewPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabview
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tabview' has no recent release, last release dates back to 2020-01-09 19:24:11.184242
+        link: https://pypi.org/project/tabview/#history
+        package_name: tabview

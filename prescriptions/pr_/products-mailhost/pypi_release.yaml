@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProductsMailhostPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-mailhost
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'products-mailhost' has no recent release, last release dates back to 2021-01-21 07:02:05.247965
+        link: https://pypi.org/project/products-mailhost/#history
+        package_name: products-mailhost

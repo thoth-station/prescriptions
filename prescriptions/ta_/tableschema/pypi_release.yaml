@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TableschemaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tableschema
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tableschema' has no recent release, last release dates back to 2021-02-24 11:32:12.126806
+        link: https://pypi.org/project/tableschema/#history
+        package_name: tableschema

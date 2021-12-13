@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IsodurationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isoduration
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'isoduration' has no recent release, last release dates back to 2020-11-01 11:00:00.312591
+        link: https://pypi.org/project/isoduration/#history
+        package_name: isoduration

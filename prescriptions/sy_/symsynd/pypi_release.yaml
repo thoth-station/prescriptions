@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SymsyndPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: symsynd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'symsynd' has no recent release, last release dates back to 2017-06-01 00:07:49.327889
+        link: https://pypi.org/project/symsynd/#history
+        package_name: symsynd

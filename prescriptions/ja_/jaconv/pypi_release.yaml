@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaconvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaconv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaconv' has no recent release, last release dates back to 2021-03-29 07:30:34.039576
+        link: https://pypi.org/project/jaconv/#history
+        package_name: jaconv

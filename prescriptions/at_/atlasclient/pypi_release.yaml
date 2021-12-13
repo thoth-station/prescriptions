@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AtlasclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atlasclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'atlasclient' has no recent release, last release dates back to 2019-08-19 13:58:51.244040
+        link: https://pypi.org/project/atlasclient/#history
+        package_name: atlasclient

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestRepeatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-repeat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-repeat' has no recent release, last release dates back to 2020-10-31 11:10:17.694789
+        link: https://pypi.org/project/pytest-repeat/#history
+        package_name: pytest-repeat

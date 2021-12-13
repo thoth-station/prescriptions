@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TamboPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tambo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tambo' has no recent release, last release dates back to 2017-06-23 20:09:06.923793
+        link: https://pypi.org/project/tambo/#history
+        package_name: tambo

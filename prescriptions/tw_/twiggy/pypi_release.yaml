@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TwiggyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twiggy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'twiggy' has no recent release, last release dates back to 2021-05-12 21:20:17.311240
+        link: https://pypi.org/project/twiggy/#history
+        package_name: twiggy

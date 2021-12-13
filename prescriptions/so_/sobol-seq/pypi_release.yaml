@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SobolSeqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sobol-seq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sobol-seq' has no recent release, last release dates back to 2020-05-14 15:53:17.468477
+        link: https://pypi.org/project/sobol-seq/#history
+        package_name: sobol-seq

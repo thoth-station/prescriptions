@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiozeroconfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiozeroconf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiozeroconf' has no recent release, last release dates back to 2018-11-14 13:01:33.996274
+        link: https://pypi.org/project/aiozeroconf/#history
+        package_name: aiozeroconf

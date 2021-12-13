@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonsirPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonsir
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonsir' has no recent release, last release dates back to 2015-01-16 11:10:06.852097
+        link: https://pypi.org/project/jsonsir/#history
+        package_name: jsonsir

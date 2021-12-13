@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthereumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethereum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ethereum' has no recent release, last release dates back to 2018-07-05 23:19:24.987879
+        link: https://pypi.org/project/ethereum/#history
+        package_name: ethereum

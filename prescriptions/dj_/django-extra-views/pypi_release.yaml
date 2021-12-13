@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoExtraViewsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-extra-views
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-extra-views' has no recent release, last release dates back to 2021-06-09 09:02:36.761755
+        link: https://pypi.org/project/django-extra-views/#history
+        package_name: django-extra-views

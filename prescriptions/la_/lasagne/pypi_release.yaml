@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LasagnePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lasagne
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lasagne' has no recent release, last release dates back to 2015-08-13 21:10:53.821520
+        link: https://pypi.org/project/lasagne/#history
+        package_name: lasagne

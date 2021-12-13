@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoJsonWidgetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-json-widget
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-json-widget' has no recent release, last release dates back to 2021-02-17 15:21:35.976530
+        link: https://pypi.org/project/django-json-widget/#history
+        package_name: django-json-widget

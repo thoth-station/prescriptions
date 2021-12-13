@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysmiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysmi' has no recent release, last release dates back to 2019-04-14 10:06:21.527409
+        link: https://pypi.org/project/pysmi/#history
+        package_name: pysmi

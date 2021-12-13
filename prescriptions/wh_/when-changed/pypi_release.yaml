@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WhenChangedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: when-changed
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'when-changed' has no recent release, last release dates back to 2016-01-23 02:36:15.067754
+        link: https://pypi.org/project/when-changed/#history
+        package_name: when-changed

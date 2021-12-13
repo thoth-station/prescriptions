@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WhateverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: whatever
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'whatever' has no recent release, last release dates back to 2019-11-16 18:31:47.552038
+        link: https://pypi.org/project/whatever/#history
+        package_name: whatever

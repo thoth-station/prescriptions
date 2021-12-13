@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoSendfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sendfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-sendfile' has no recent release, last release dates back to 2016-08-28 16:55:45.068653
+        link: https://pypi.org/project/django-sendfile/#history
+        package_name: django-sendfile

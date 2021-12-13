@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Notmuch2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notmuch2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'notmuch2' has no recent release, last release dates back to 2020-06-18 11:20:26.200531
+        link: https://pypi.org/project/notmuch2/#history
+        package_name: notmuch2

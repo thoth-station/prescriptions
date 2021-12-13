@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuzzysearchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzysearch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fuzzysearch' has no recent release, last release dates back to 2020-06-28 07:14:48.451052
+        link: https://pypi.org/project/fuzzysearch/#history
+        package_name: fuzzysearch

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NakedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: naked
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'naked' has no recent release, last release dates back to 2015-03-18 02:00:05.915610
+        link: https://pypi.org/project/naked/#history
+        package_name: naked

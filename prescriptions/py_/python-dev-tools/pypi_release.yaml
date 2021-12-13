@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonDevToolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dev-tools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-dev-tools' has no recent release, last release dates back to 2020-09-10 07:47:11.857141
+        link: https://pypi.org/project/python-dev-tools/#history
+        package_name: python-dev-tools

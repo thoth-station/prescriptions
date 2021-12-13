@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GtimelogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gtimelog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gtimelog' has no recent release, last release dates back to 2019-04-23 18:23:42.494197
+        link: https://pypi.org/project/gtimelog/#history
+        package_name: gtimelog

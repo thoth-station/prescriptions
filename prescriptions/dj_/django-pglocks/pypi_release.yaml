@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoPglocksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pglocks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-pglocks' has no recent release, last release dates back to 2019-12-26 19:57:23.873417
+        link: https://pypi.org/project/django-pglocks/#history
+        package_name: django-pglocks

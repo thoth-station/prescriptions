@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MpropPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mprop
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mprop' has no recent release, last release dates back to 2019-02-01 05:08:37.163053
+        link: https://pypi.org/project/mprop/#history
+        package_name: mprop

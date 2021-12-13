@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UrlNormalizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: url-normalize
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'url-normalize' has no recent release, last release dates back to 2020-10-26 02:07:13.218554
+        link: https://pypi.org/project/url-normalize/#history
+        package_name: url-normalize

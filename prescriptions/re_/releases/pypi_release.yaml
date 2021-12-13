@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReleasesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: releases
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'releases' has no recent release, last release dates back to 2020-01-11 00:29:51.113894
+        link: https://pypi.org/project/releases/#history
+        package_name: releases

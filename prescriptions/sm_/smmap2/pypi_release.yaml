@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Smmap2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smmap2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'smmap2' has no recent release, last release dates back to 2020-02-23 14:46:56.730783
+        link: https://pypi.org/project/smmap2/#history
+        package_name: smmap2

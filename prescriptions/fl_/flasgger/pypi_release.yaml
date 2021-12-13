@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlasggerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flasgger
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flasgger' has no recent release, last release dates back to 2020-07-31 23:54:51.079235
+        link: https://pypi.org/project/flasgger/#history
+        package_name: flasgger

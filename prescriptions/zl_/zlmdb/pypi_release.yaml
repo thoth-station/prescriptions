@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZlmdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zlmdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zlmdb' has no recent release, last release dates back to 2021-02-20 15:28:22.728054
+        link: https://pypi.org/project/zlmdb/#history
+        package_name: zlmdb

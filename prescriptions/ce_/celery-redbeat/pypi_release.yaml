@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CeleryRedbeatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: celery-redbeat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'celery-redbeat' has no recent release, last release dates back to 2020-10-26 01:35:07.514039
+        link: https://pypi.org/project/celery-redbeat/#history
+        package_name: celery-redbeat

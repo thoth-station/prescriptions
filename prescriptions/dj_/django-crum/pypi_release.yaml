@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoCrumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-crum' has no recent release, last release dates back to 2020-11-10 17:15:35.124283
+        link: https://pypi.org/project/django-crum/#history
+        package_name: django-crum

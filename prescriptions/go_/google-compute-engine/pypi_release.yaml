@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleComputeEnginePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-compute-engine
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-compute-engine' has no recent release, last release dates back to 2019-01-24 19:42:35.792440
+        link: https://pypi.org/project/google-compute-engine/#history
+        package_name: google-compute-engine

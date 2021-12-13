@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MybadPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mybad
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mybad' has no recent release, last release dates back to 2019-05-10 21:18:13.462568
+        link: https://pypi.org/project/mybad/#history
+        package_name: mybad

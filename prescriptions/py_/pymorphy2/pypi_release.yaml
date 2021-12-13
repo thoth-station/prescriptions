@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pymorphy2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymorphy2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymorphy2' has no recent release, last release dates back to 2020-09-26 19:33:48.684360
+        link: https://pypi.org/project/pymorphy2/#history
+        package_name: pymorphy2

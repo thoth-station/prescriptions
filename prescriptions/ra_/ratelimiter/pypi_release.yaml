@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RatelimiterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ratelimiter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ratelimiter' has no recent release, last release dates back to 2017-12-12 00:33:38.783530
+        link: https://pypi.org/project/ratelimiter/#history
+        package_name: ratelimiter

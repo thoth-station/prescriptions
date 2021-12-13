@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReadabilityPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readability
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'readability' has no recent release, last release dates back to 2019-01-13 00:04:35.595737
+        link: https://pypi.org/project/readability/#history
+        package_name: readability

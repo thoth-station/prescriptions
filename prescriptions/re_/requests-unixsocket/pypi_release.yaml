@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsUnixsocketPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-unixsocket
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'requests-unixsocket' has no recent release, last release dates back to 2019-08-15 22:52:35.729866
+        link: https://pypi.org/project/requests-unixsocket/#history
+        package_name: requests-unixsocket

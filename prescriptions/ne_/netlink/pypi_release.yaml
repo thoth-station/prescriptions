@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NetlinkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netlink
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'netlink' has no recent release, last release dates back to 2016-02-15 23:45:07.945603
+        link: https://pypi.org/project/netlink/#history
+        package_name: netlink

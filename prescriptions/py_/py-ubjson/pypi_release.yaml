@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyUbjsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-ubjson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-ubjson' has no recent release, last release dates back to 2020-04-18 15:05:57.698944
+        link: https://pypi.org/project/py-ubjson/#history
+        package_name: py-ubjson

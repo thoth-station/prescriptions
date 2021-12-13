@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimpleaudioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simpleaudio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'simpleaudio' has no recent release, last release dates back to 2019-11-29 03:57:26.254896
+        link: https://pypi.org/project/simpleaudio/#history
+        package_name: simpleaudio

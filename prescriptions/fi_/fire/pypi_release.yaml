@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FirePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fire
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fire' has no recent release, last release dates back to 2021-01-22 18:11:49.152877
+        link: https://pypi.org/project/fire/#history
+        package_name: fire

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RstcheckPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rstcheck
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rstcheck' has no recent release, last release dates back to 2018-11-09 14:29:49.401561
+        link: https://pypi.org/project/rstcheck/#history
+        package_name: rstcheck

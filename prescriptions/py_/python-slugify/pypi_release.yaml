@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonSlugifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-slugify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-slugify' has no recent release, last release dates back to 2021-05-05 23:39:32.363148
+        link: https://pypi.org/project/python-slugify/#history
+        package_name: python-slugify

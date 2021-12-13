@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GraphitesendPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphitesend
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'graphitesend' has no recent release, last release dates back to 2017-03-25 17:53:58.168826
+        link: https://pypi.org/project/graphitesend/#history
+        package_name: graphitesend

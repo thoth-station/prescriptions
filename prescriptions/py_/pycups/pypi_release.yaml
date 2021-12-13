@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycupsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycups
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycups' has no recent release, last release dates back to 2020-04-23 12:36:26.512970
+        link: https://pypi.org/project/pycups/#history
+        package_name: pycups

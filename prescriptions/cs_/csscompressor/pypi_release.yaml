@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CsscompressorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: csscompressor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'csscompressor' has no recent release, last release dates back to 2017-11-26 21:13:08.238226
+        link: https://pypi.org/project/csscompressor/#history
+        package_name: csscompressor

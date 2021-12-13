@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MycliPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mycli
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mycli' has no recent release, last release dates back to 2021-03-03 22:54:13.828841
+        link: https://pypi.org/project/mycli/#history
+        package_name: mycli

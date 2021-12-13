@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlowlorisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slowloris
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slowloris' has no recent release, last release dates back to 2021-04-02 21:05:34.059568
+        link: https://pypi.org/project/slowloris/#history
+        package_name: slowloris

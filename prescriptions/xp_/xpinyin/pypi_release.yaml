@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XpinyinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xpinyin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xpinyin' has no recent release, last release dates back to 2020-12-21 07:58:32.453892
+        link: https://pypi.org/project/xpinyin/#history
+        package_name: xpinyin

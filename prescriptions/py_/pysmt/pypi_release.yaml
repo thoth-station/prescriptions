@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysmtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysmt' has no recent release, last release dates back to 2020-04-26 12:17:45.586177
+        link: https://pypi.org/project/pysmt/#history
+        package_name: pysmt

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlingshotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slingshot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slingshot' has no recent release, last release dates back to 2016-01-21 03:12:36.995971
+        link: https://pypi.org/project/slingshot/#history
+        package_name: slingshot

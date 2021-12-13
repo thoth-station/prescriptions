@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VatnumberPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vatnumber
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vatnumber' has no recent release, last release dates back to 2014-06-25 21:54:17.029547
+        link: https://pypi.org/project/vatnumber/#history
+        package_name: vatnumber

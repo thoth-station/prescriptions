@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtDnsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-dns
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-dns' has no recent release, last release dates back to 2021-04-16 05:41:25.518782
+        link: https://pypi.org/project/azure-mgmt-dns/#history
+        package_name: azure-mgmt-dns

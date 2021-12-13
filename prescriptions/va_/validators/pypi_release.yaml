@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ValidatorsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validators
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'validators' has no recent release, last release dates back to 2020-12-18 10:27:30.059049
+        link: https://pypi.org/project/validators/#history
+        package_name: validators

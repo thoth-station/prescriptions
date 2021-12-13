@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeConfigurationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-configuration
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-configuration' has no recent release, last release dates back to 2020-03-22 14:51:49.073244
+        link: https://pypi.org/project/zope-configuration/#history
+        package_name: zope-configuration

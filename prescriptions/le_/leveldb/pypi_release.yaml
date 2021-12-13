@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LeveldbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: leveldb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'leveldb' has no recent release, last release dates back to 2019-12-09 01:31:12.066709
+        link: https://pypi.org/project/leveldb/#history
+        package_name: leveldb

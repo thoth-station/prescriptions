@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ThothBuildlogParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-buildlog-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'thoth-buildlog-parser' has no recent release, last release dates back to 2021-01-13 17:30:55.049268
+        link: https://pypi.org/project/thoth-buildlog-parser/#history
+        package_name: thoth-buildlog-parser

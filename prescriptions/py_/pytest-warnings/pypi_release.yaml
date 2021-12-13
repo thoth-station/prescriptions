@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestWarningsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-warnings
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-warnings' has no recent release, last release dates back to 2020-09-29 10:50:21.663850
+        link: https://pypi.org/project/pytest-warnings/#history
+        package_name: pytest-warnings

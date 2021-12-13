@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestBenchmarkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-benchmark
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-benchmark' has no recent release, last release dates back to 2021-04-17 19:47:28.644536
+        link: https://pypi.org/project/pytest-benchmark/#history
+        package_name: pytest-benchmark

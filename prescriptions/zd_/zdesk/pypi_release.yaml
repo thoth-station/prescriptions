@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZdeskPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zdesk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zdesk' has no recent release, last release dates back to 2018-08-31 21:31:23.087181
+        link: https://pypi.org/project/zdesk/#history
+        package_name: zdesk

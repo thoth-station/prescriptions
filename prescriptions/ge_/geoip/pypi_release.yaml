@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeoipPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoip
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geoip' has no recent release, last release dates back to 2014-08-22 14:58:53.656354
+        link: https://pypi.org/project/geoip/#history
+        package_name: geoip

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UserAgentsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: user-agents
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'user-agents' has no recent release, last release dates back to 2020-08-23 06:01:56.382786
+        link: https://pypi.org/project/user-agents/#history
+        package_name: user-agents

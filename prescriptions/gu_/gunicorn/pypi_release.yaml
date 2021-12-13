@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GunicornPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gunicorn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gunicorn' has no recent release, last release dates back to 2021-04-27 12:16:23.375893
+        link: https://pypi.org/project/gunicorn/#history
+        package_name: gunicorn

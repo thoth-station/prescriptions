@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DaemonikerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: daemoniker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'daemoniker' has no recent release, last release dates back to 2017-01-10 01:54:53.097637
+        link: https://pypi.org/project/daemoniker/#history
+        package_name: daemoniker

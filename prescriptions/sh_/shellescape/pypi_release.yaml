@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShellescapePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shellescape
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shellescape' has no recent release, last release dates back to 2020-01-25 21:28:23.228297
+        link: https://pypi.org/project/shellescape/#history
+        package_name: shellescape

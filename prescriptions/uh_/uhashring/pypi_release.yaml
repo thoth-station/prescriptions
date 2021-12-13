@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UhashringPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uhashring
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'uhashring' has no recent release, last release dates back to 2021-04-15 21:50:43.877587
+        link: https://pypi.org/project/uhashring/#history
+        package_name: uhashring

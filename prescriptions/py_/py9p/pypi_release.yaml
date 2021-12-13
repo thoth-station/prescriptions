@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Py9pPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py9p
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py9p' has no recent release, last release dates back to 2013-01-03 12:06:23.601309
+        link: https://pypi.org/project/py9p/#history
+        package_name: py9p

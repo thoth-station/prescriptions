@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EnzymePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enzyme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'enzyme' has no recent release, last release dates back to 2013-11-28 19:42:40.416581
+        link: https://pypi.org/project/enzyme/#history
+        package_name: enzyme

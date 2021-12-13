@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymacaroonsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymacaroons
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymacaroons' has no recent release, last release dates back to 2018-02-21 18:07:49.045873
+        link: https://pypi.org/project/pymacaroons/#history
+        package_name: pymacaroons

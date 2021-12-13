@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MapnikPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapnik
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mapnik' has no recent release, last release dates back to 2015-05-06 14:40:08.737518
+        link: https://pypi.org/project/mapnik/#history
+        package_name: mapnik

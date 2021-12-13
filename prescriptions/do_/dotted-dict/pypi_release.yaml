@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DottedDictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotted-dict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dotted-dict' has no recent release, last release dates back to 2020-04-08 20:45:58.494609
+        link: https://pypi.org/project/dotted-dict/#history
+        package_name: dotted-dict

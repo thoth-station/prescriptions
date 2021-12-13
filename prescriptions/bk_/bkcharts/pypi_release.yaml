@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BkchartsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bkcharts
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bkcharts' has no recent release, last release dates back to 2017-06-12 20:10:46.148042
+        link: https://pypi.org/project/bkcharts/#history
+        package_name: bkcharts

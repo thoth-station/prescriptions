@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureCliProfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cli-profile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-cli-profile' has no recent release, last release dates back to 2019-04-09 17:01:55.170237
+        link: https://pypi.org/project/azure-cli-profile/#history
+        package_name: azure-cli-profile

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Gitdb2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitdb2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gitdb2' has no recent release, last release dates back to 2020-02-23 15:47:58.865885
+        link: https://pypi.org/project/gitdb2/#history
+        package_name: gitdb2

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PansiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pansi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pansi' has no recent release, last release dates back to 2020-07-09 15:33:07.241252
+        link: https://pypi.org/project/pansi/#history
+        package_name: pansi

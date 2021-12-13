@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ViivakoodiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: viivakoodi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'viivakoodi' has no recent release, last release dates back to 2014-11-18 12:51:24.183252
+        link: https://pypi.org/project/viivakoodi/#history
+        package_name: viivakoodi

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyvirtualdisplayPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvirtualdisplay
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyvirtualdisplay' has no recent release, last release dates back to 2021-05-30 16:55:02.402418
+        link: https://pypi.org/project/pyvirtualdisplay/#history
+        package_name: pyvirtualdisplay

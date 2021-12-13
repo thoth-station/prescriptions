@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DragonmapperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dragonmapper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dragonmapper' has no recent release, last release dates back to 2016-05-23 12:54:40.842263
+        link: https://pypi.org/project/dragonmapper/#history
+        package_name: dragonmapper

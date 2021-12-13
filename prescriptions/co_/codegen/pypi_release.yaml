@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CodegenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codegen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'codegen' has no recent release, last release dates back to 2012-11-14 08:58:30.750111
+        link: https://pypi.org/project/codegen/#history
+        package_name: codegen

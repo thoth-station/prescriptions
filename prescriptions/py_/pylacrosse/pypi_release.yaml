@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylacrossePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylacrosse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylacrosse' has no recent release, last release dates back to 2019-08-18 07:11:15.735249
+        link: https://pypi.org/project/pylacrosse/#history
+        package_name: pylacrosse

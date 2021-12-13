@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxcontribAsyncioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-asyncio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxcontrib-asyncio' has no recent release, last release dates back to 2020-08-19 09:44:58.455818
+        link: https://pypi.org/project/sphinxcontrib-asyncio/#history
+        package_name: sphinxcontrib-asyncio

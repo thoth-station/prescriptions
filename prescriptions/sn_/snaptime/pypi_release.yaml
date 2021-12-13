@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnaptimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snaptime
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'snaptime' has no recent release, last release dates back to 2017-06-15 15:22:04.067690
+        link: https://pypi.org/project/snaptime/#history
+        package_name: snaptime

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppContentPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-content
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-content' has no recent release, last release dates back to 2017-04-23 16:44:21.886368
+        link: https://pypi.org/project/zope-app-content/#history
+        package_name: zope-app-content

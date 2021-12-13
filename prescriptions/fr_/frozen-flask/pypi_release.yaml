@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FrozenFlaskPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: frozen-flask
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'frozen-flask' has no recent release, last release dates back to 2021-06-15 08:43:07.730944
+        link: https://pypi.org/project/frozen-flask/#history
+        package_name: frozen-flask

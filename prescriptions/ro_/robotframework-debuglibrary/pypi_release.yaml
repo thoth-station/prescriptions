@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobotframeworkDebuglibraryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-debuglibrary
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'robotframework-debuglibrary' has no recent release, last release dates back to 2021-03-29 07:42:45.814738
+        link: https://pypi.org/project/robotframework-debuglibrary/#history
+        package_name: robotframework-debuglibrary

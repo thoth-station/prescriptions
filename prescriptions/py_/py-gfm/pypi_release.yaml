@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyGfmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-gfm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-gfm' has no recent release, last release dates back to 2020-10-22 22:00:26.232435
+        link: https://pypi.org/project/py-gfm/#history
+        package_name: py-gfm

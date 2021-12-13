@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8FixmePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-fixme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-fixme' has no recent release, last release dates back to 2019-05-06 19:06:45.852331
+        link: https://pypi.org/project/flake8-fixme/#history
+        package_name: flake8-fixme

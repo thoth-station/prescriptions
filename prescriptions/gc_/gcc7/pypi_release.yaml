@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Gcc7PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcc7
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gcc7' has no recent release, last release dates back to 2019-02-06 15:27:34.127996
+        link: https://pypi.org/project/gcc7/#history
+        package_name: gcc7

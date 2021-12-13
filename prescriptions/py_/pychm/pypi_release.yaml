@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PychmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pychm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pychm' has no recent release, last release dates back to 2019-12-12 21:51:42.274379
+        link: https://pypi.org/project/pychm/#history
+        package_name: pychm

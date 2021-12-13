@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConfigobjPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configobj
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'configobj' has no recent release, last release dates back to 2014-08-26 01:16:32.734584
+        link: https://pypi.org/project/configobj/#history
+        package_name: configobj

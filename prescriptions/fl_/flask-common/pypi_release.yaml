@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskCommonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-common
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-common' has no recent release, last release dates back to 2018-05-12 21:09:25.032769
+        link: https://pypi.org/project/flask-common/#history
+        package_name: flask-common

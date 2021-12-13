@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Oauth2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauth2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'oauth2' has no recent release, last release dates back to 2015-09-12 12:47:02.670445
+        link: https://pypi.org/project/oauth2/#history
+        package_name: oauth2

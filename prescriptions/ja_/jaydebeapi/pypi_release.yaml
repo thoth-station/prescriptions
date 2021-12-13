@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaydebeapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaydebeapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaydebeapi' has no recent release, last release dates back to 2020-06-12 07:03:30.958896
+        link: https://pypi.org/project/jaydebeapi/#history
+        package_name: jaydebeapi

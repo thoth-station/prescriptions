@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppDebugPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-debug
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-debug' has no recent release, last release dates back to 2017-05-08 10:45:51.160717
+        link: https://pypi.org/project/zope-app-debug/#history
+        package_name: zope-app-debug

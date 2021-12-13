@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlackwebPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slackweb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slackweb' has no recent release, last release dates back to 2015-06-23 01:10:52.118933
+        link: https://pypi.org/project/slackweb/#history
+        package_name: slackweb

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DescribePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: describe
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'describe' has no recent release, last release dates back to 2012-02-01 05:01:07.660559
+        link: https://pypi.org/project/describe/#history
+        package_name: describe

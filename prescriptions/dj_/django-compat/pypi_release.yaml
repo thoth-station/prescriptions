@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoCompatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-compat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-compat' has no recent release, last release dates back to 2017-12-04 09:14:25.537105
+        link: https://pypi.org/project/django-compat/#history
+        package_name: django-compat

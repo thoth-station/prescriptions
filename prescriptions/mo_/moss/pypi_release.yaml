@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MossPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moss
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'moss' has no recent release, last release dates back to 2017-07-07 20:16:07.183584
+        link: https://pypi.org/project/moss/#history
+        package_name: moss

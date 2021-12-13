@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PoyoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: poyo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'poyo' has no recent release, last release dates back to 2019-07-26 12:51:04.855586
+        link: https://pypi.org/project/poyo/#history
+        package_name: poyo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterNbrequirementsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-nbrequirements
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-nbrequirements' has no recent release, last release dates back to 2020-04-22 09:38:56.906408
+        link: https://pypi.org/project/jupyter-nbrequirements/#history
+        package_name: jupyter-nbrequirements

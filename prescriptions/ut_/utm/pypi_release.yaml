@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UtmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'utm' has no recent release, last release dates back to 2020-11-25 11:56:40.790757
+        link: https://pypi.org/project/utm/#history
+        package_name: utm

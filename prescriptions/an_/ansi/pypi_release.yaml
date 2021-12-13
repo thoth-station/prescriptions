@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansi' has no recent release, last release dates back to 2021-01-09 13:16:51.851267
+        link: https://pypi.org/project/ansi/#history
+        package_name: ansi

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PagPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pag
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pag' has no recent release, last release dates back to 2018-04-28 08:21:04.848367
+        link: https://pypi.org/project/pag/#history
+        package_name: pag

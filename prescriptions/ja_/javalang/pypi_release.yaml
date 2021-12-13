@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JavalangPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: javalang
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'javalang' has no recent release, last release dates back to 2020-03-28 16:02:29.288989
+        link: https://pypi.org/project/javalang/#history
+        package_name: javalang

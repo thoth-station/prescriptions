@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BcolzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcolz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bcolz' has no recent release, last release dates back to 2018-04-13 07:44:26.714104
+        link: https://pypi.org/project/bcolz/#history
+        package_name: bcolz

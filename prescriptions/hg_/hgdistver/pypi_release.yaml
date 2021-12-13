@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HgdistverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hgdistver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hgdistver' has no recent release, last release dates back to 2015-02-14 20:31:22.641979
+        link: https://pypi.org/project/hgdistver/#history
+        package_name: hgdistver

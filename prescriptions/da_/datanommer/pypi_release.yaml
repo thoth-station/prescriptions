@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DatanommerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datanommer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'datanommer' has no recent release, last release dates back to 2013-01-25 16:45:05.604067
+        link: https://pypi.org/project/datanommer/#history
+        package_name: datanommer

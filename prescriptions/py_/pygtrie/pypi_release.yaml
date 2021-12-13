@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygtriePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygtrie
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygtrie' has no recent release, last release dates back to 2021-01-03 06:13:28.224371
+        link: https://pypi.org/project/pygtrie/#history
+        package_name: pygtrie

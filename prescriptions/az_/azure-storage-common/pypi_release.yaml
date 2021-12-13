@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureStorageCommonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-common
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-storage-common' has no recent release, last release dates back to 2019-08-02 04:24:21.763518
+        link: https://pypi.org/project/azure-storage-common/#history
+        package_name: azure-storage-common

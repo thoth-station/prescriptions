@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CalypsoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: calypso
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'calypso' has no recent release, last release dates back to 2019-03-13 01:32:40.221624
+        link: https://pypi.org/project/calypso/#history
+        package_name: calypso

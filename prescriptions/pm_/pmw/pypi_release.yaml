@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PmwPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pmw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pmw' has no recent release, last release dates back to 2015-03-22 23:23:21.753090
+        link: https://pypi.org/project/pmw/#history
+        package_name: pmw

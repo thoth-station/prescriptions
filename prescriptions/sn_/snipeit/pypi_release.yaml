@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnipeitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snipeit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'snipeit' has no recent release, last release dates back to 2019-06-05 13:46:53.332361
+        link: https://pypi.org/project/snipeit/#history
+        package_name: snipeit

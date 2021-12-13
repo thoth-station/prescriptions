@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymochadPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymochad
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymochad' has no recent release, last release dates back to 2017-11-15 17:11:40.810457
+        link: https://pypi.org/project/pymochad/#history
+        package_name: pymochad

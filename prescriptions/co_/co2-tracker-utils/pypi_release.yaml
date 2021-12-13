@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Co2TrackerUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: co2-tracker-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'co2-tracker-utils' has no recent release, last release dates back to 2020-06-19 10:20:16.681165
+        link: https://pypi.org/project/co2-tracker-utils/#history
+        package_name: co2-tracker-utils

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SalesforceFuelsdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: salesforce-fuelsdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'salesforce-fuelsdk' has no recent release, last release dates back to 2019-08-07 13:45:12.600212
+        link: https://pypi.org/project/salesforce-fuelsdk/#history
+        package_name: salesforce-fuelsdk

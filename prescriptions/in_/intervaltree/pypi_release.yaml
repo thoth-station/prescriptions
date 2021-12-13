@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IntervaltreePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intervaltree
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'intervaltree' has no recent release, last release dates back to 2020-08-03 08:01:11.392173
+        link: https://pypi.org/project/intervaltree/#history
+        package_name: intervaltree

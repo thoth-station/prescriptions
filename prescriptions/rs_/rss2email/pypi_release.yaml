@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rss2emailPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rss2email
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rss2email' has no recent release, last release dates back to 2021-05-15 18:33:09.407551
+        link: https://pypi.org/project/rss2email/#history
+        package_name: rss2email

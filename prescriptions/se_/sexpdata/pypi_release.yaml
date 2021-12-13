@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SexpdataPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sexpdata
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sexpdata' has no recent release, last release dates back to 2013-05-19 01:54:28.641912
+        link: https://pypi.org/project/sexpdata/#history
+        package_name: sexpdata

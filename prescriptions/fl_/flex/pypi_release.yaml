@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flex' has no recent release, last release dates back to 2019-09-14 20:20:22.288170
+        link: https://pypi.org/project/flex/#history
+        package_name: flex

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtManagementpartnerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-managementpartner
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-managementpartner' has no recent release, last release dates back to 2021-05-24 07:19:26.697400
+        link: https://pypi.org/project/azure-mgmt-managementpartner/#history
+        package_name: azure-mgmt-managementpartner

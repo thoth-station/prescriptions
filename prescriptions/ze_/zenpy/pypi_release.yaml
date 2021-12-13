@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZenpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zenpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zenpy' has no recent release, last release dates back to 2021-02-08 10:48:49.229840
+        link: https://pypi.org/project/zenpy/#history
+        package_name: zenpy

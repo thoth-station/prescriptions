@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShadePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shade
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shade' has no recent release, last release dates back to 2020-02-11 13:42:59.931979
+        link: https://pypi.org/project/shade/#history
+        package_name: shade

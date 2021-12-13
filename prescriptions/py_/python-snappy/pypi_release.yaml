@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonSnappyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-snappy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-snappy' has no recent release, last release dates back to 2021-03-05 14:23:05.523479
+        link: https://pypi.org/project/python-snappy/#history
+        package_name: python-snappy

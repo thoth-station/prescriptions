@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BaluhnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: baluhn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'baluhn' has no recent release, last release dates back to 2019-03-14 13:11:24.330062
+        link: https://pypi.org/project/baluhn/#history
+        package_name: baluhn

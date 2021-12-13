@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lml' has no recent release, last release dates back to 2020-10-21 13:43:46.621749
+        link: https://pypi.org/project/lml/#history
+        package_name: lml

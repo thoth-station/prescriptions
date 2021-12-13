@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiohttpCorsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-cors
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiohttp-cors' has no recent release, last release dates back to 2018-03-06 15:45:42.936300
+        link: https://pypi.org/project/aiohttp-cors/#history
+        package_name: aiohttp-cors

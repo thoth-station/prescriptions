@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestSparkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-spark
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-spark' has no recent release, last release dates back to 2020-02-23 13:00:31.334027
+        link: https://pypi.org/project/pytest-spark/#history
+        package_name: pytest-spark

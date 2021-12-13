@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SystemdPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: systemd-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'systemd-python' has no recent release, last release dates back to 2017-03-26 01:37:06.986244
+        link: https://pypi.org/project/systemd-python/#history
+        package_name: systemd-python

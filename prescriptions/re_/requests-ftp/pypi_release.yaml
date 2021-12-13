@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsFtpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ftp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'requests-ftp' has no recent release, last release dates back to 2015-08-13 21:02:08.294466
+        link: https://pypi.org/project/requests-ftp/#history
+        package_name: requests-ftp

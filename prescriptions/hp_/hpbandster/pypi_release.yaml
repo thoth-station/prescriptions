@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HpbandsterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hpbandster
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hpbandster' has no recent release, last release dates back to 2018-11-06 12:56:55.107424
+        link: https://pypi.org/project/hpbandster/#history
+        package_name: hpbandster

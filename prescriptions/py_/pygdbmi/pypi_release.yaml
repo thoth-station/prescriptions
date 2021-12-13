@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygdbmiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygdbmi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygdbmi' has no recent release, last release dates back to 2021-05-20 05:34:35.044374
+        link: https://pypi.org/project/pygdbmi/#history
+        package_name: pygdbmi

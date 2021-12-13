@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InspectaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inspecta
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'inspecta' has no recent release, last release dates back to 2019-03-10 11:13:57.782944
+        link: https://pypi.org/project/inspecta/#history
+        package_name: inspecta

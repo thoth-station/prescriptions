@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AvroGenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: avro-gen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'avro-gen' has no recent release, last release dates back to 2018-01-13 21:32:49.145263
+        link: https://pypi.org/project/avro-gen/#history
+        package_name: avro-gen
