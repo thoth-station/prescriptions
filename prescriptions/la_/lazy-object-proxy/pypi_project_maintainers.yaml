@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LazyObjectProxyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy-object-proxy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project lazy-object-proxy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/lazy-object-proxy/
+        package_name: lazy-object-proxy

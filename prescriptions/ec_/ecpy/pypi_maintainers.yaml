@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: EcpyPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ecpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project ecpy is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/ecpy/
+        package_name: ecpy

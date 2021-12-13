@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImagecodecsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagecodecs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project imagecodecs has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/imagecodecs/
+        package_name: imagecodecs

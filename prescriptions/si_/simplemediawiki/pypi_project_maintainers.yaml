@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimplemediawikiPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplemediawiki
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project simplemediawiki has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/simplemediawiki/
+        package_name: simplemediawiki

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FastapiUtilsPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastapi-utils
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project fastapi-utils is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/fastapi-utils/
+        package_name: fastapi-utils

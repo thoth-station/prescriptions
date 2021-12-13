@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SmtpapiPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smtpapi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project smtpapi has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/smtpapi/
+        package_name: smtpapi

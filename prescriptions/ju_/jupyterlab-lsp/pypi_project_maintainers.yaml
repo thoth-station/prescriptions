@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterlabLspPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterlab-lsp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jupyterlab-lsp has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jupyterlab-lsp/
+        package_name: jupyterlab-lsp

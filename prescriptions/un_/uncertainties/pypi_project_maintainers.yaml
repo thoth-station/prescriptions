@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UncertaintiesPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uncertainties
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project uncertainties has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/uncertainties/
+        package_name: uncertainties

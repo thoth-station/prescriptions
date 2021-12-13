@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygresqlPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygresql
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pygresql has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pygresql/
+        package_name: pygresql

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Bz2filePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bz2file
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project bz2file has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/bz2file/
+        package_name: bz2file

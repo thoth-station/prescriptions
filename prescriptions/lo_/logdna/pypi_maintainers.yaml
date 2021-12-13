@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: LogdnaPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logdna
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project logdna is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/logdna/
+        package_name: logdna

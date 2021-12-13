@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: LazyImportPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy-import
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project lazy-import is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/lazy-import/
+        package_name: lazy-import

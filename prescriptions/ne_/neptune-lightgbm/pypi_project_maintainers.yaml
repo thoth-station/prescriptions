@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeptuneLightgbmPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-lightgbm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project neptune-lightgbm has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/neptune-lightgbm/
+        package_name: neptune-lightgbm

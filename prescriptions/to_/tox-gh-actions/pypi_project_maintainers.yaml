@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ToxGhActionsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-gh-actions
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tox-gh-actions has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tox-gh-actions/
+        package_name: tox-gh-actions

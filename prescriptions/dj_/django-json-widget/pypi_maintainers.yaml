@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoJsonWidgetPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-json-widget
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project django-json-widget is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/django-json-widget/
+        package_name: django-json-widget

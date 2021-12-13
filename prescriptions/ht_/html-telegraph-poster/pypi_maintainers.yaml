@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: HtmlTelegraphPosterPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: html-telegraph-poster
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project html-telegraph-poster is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/html-telegraph-poster/
+        package_name: html-telegraph-poster

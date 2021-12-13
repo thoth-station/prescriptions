@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TimeunitPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeunit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project timeunit has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/timeunit/
+        package_name: timeunit

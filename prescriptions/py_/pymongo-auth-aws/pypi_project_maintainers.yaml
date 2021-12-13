@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymongoAuthAwsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymongo-auth-aws
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pymongo-auth-aws has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pymongo-auth-aws/
+        package_name: pymongo-auth-aws

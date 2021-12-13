@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MackupPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mackup
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project mackup has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/mackup/
+        package_name: mackup

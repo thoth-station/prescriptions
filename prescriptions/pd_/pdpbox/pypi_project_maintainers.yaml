@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PdpboxPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdpbox
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pdpbox has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pdpbox/
+        package_name: pdpbox

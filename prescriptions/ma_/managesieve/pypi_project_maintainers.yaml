@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ManagesievePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: managesieve
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project managesieve has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/managesieve/
+        package_name: managesieve

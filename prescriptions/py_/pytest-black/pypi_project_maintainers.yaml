@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestBlackPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-black
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pytest-black has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pytest-black/
+        package_name: pytest-black

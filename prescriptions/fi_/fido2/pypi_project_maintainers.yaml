@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Fido2PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fido2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project fido2 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/fido2/
+        package_name: fido2

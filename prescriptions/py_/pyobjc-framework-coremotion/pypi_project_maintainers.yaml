@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyobjcFrameworkCoremotionPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-coremotion
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyobjc-framework-coremotion has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyobjc-framework-coremotion/
+        package_name: pyobjc-framework-coremotion

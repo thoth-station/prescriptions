@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoTemplatetagSugarPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-templatetag-sugar
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-templatetag-sugar has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-templatetag-sugar/
+        package_name: django-templatetag-sugar

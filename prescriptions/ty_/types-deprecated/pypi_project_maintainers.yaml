@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TypesDeprecatedPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-deprecated
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project types-deprecated has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/types-deprecated/
+        package_name: types-deprecated

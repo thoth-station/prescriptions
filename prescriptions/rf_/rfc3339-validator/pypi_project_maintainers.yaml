@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rfc3339ValidatorPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc3339-validator
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project rfc3339-validator has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/rfc3339-validator/
+        package_name: rfc3339-validator

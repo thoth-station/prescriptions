@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyaudioPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaudio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyaudio has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyaudio/
+        package_name: pyaudio

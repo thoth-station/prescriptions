@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HttpcorePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpcore
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project httpcore has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/httpcore/
+        package_name: httpcore

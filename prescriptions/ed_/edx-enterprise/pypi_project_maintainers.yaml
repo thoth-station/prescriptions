@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EdxEnterprisePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edx-enterprise
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project edx-enterprise has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/edx-enterprise/
+        package_name: edx-enterprise

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyobjcFrameworkSystemconfigurationPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-systemconfiguration
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyobjc-framework-systemconfiguration has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyobjc-framework-systemconfiguration/
+        package_name: pyobjc-framework-systemconfiguration

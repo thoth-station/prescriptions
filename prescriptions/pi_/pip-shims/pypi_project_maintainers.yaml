@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PipShimsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-shims
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pip-shims has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pip-shims/
+        package_name: pip-shims

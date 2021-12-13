@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ikp3dbPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ikp3db
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project ikp3db has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/ikp3db/
+        package_name: ikp3db

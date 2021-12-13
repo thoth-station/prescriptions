@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MkdocsGitRevisionDateLocalizedPluginPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs-git-revision-date-localized-plugin
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project mkdocs-git-revision-date-localized-plugin has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/mkdocs-git-revision-date-localized-plugin/
+        package_name: mkdocs-git-revision-date-localized-plugin

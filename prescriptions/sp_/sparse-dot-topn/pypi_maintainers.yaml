@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SparseDotTopnPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparse-dot-topn
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project sparse-dot-topn is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/sparse-dot-topn/
+        package_name: sparse-dot-topn

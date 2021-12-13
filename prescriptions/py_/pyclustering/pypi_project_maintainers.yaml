@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyclusteringPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyclustering
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyclustering has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyclustering/
+        package_name: pyclustering

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PybalboaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybalboa
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pybalboa has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pybalboa/
+        package_name: pybalboa

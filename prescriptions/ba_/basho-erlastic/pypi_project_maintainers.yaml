@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BashoErlasticPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basho-erlastic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project basho-erlastic has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/basho-erlastic/
+        package_name: basho-erlastic

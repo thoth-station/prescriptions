@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FacebookWdaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-wda
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project facebook-wda has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/facebook-wda/
+        package_name: facebook-wda

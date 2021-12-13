@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Boto3TypeAnnotationsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto3-type-annotations
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project boto3-type-annotations has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/boto3-type-annotations/
+        package_name: boto3-type-annotations

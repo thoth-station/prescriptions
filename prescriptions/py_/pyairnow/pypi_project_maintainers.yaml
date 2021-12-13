@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyairnowPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyairnow
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyairnow has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyairnow/
+        package_name: pyairnow

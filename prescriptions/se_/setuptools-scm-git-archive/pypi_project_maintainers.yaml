@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SetuptoolsScmGitArchivePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-scm-git-archive
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project setuptools-scm-git-archive has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/setuptools-scm-git-archive/
+        package_name: setuptools-scm-git-archive

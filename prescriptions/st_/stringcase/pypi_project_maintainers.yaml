@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StringcasePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stringcase
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project stringcase has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/stringcase/
+        package_name: stringcase

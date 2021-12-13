@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SentenceTransformersPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentence-transformers
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project sentence-transformers is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/sentence-transformers/
+        package_name: sentence-transformers

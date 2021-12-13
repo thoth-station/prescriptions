@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Libusb1PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libusb1
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project libusb1 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/libusb1/
+        package_name: libusb1

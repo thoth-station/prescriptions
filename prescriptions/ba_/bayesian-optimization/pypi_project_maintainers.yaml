@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BayesianOptimizationPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bayesian-optimization
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project bayesian-optimization has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/bayesian-optimization/
+        package_name: bayesian-optimization

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NoseParameterizedPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-parameterized
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project nose-parameterized has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/nose-parameterized/
+        package_name: nose-parameterized

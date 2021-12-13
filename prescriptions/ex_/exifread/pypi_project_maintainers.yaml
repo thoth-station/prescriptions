@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ExifreadPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exifread
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project exifread has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/exifread/
+        package_name: exifread

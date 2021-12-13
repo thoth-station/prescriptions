@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobotframeworkPythonlibcorePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-pythonlibcore
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project robotframework-pythonlibcore has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/robotframework-pythonlibcore/
+        package_name: robotframework-pythonlibcore

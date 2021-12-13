@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygeoipPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygeoip
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pygeoip has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pygeoip/
+        package_name: pygeoip

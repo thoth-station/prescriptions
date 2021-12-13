@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpacyAlignmentsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spacy-alignments
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project spacy-alignments has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/spacy-alignments/
+        package_name: spacy-alignments

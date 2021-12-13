@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoTimingPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-timing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jaraco-timing has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jaraco-timing/
+        package_name: jaraco-timing

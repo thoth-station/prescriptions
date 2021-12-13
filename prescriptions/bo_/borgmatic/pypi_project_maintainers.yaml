@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BorgmaticPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: borgmatic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project borgmatic has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/borgmatic/
+        package_name: borgmatic

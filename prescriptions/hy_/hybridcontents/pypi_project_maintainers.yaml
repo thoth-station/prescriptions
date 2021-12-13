@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HybridcontentsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hybridcontents
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project hybridcontents has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/hybridcontents/
+        package_name: hybridcontents

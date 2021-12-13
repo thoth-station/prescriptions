@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestAzurepipelinesPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-azurepipelines
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pytest-azurepipelines has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pytest-azurepipelines/
+        package_name: pytest-azurepipelines

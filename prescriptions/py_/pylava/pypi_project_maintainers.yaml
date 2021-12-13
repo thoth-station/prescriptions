@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylavaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylava
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pylava has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pylava/
+        package_name: pylava

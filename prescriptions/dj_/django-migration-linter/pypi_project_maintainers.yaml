@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoMigrationLinterPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-migration-linter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-migration-linter has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-migration-linter/
+        package_name: django-migration-linter

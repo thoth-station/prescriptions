@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MessagingPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: messaging
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project messaging has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/messaging/
+        package_name: messaging

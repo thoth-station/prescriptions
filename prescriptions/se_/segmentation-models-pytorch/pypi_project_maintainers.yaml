@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SegmentationModelsPytorchPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: segmentation-models-pytorch
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project segmentation-models-pytorch has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/segmentation-models-pytorch/
+        package_name: segmentation-models-pytorch

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyftdiPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyftdi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyftdi has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyftdi/
+        package_name: pyftdi

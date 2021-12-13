@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8HtmlPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-html
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project flake8-html has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/flake8-html/
+        package_name: flake8-html

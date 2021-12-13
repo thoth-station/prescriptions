@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FauxquestsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fauxquests
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project fauxquests has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/fauxquests/
+        package_name: fauxquests

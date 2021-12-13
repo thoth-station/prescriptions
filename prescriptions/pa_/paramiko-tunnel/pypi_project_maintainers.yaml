@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParamikoTunnelPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paramiko-tunnel
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project paramiko-tunnel has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/paramiko-tunnel/
+        package_name: paramiko-tunnel

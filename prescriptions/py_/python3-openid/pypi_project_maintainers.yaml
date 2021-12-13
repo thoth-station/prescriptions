@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Python3OpenidPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-openid
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project python3-openid has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/python3-openid/
+        package_name: python3-openid

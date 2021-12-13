@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DrgnPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drgn
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project drgn has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/drgn/
+        package_name: drgn

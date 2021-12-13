@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PaperworkPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paperwork
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project paperwork has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/paperwork/
+        package_name: paperwork

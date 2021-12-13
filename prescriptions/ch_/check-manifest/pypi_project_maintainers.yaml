@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CheckManifestPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: check-manifest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project check-manifest has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/check-manifest/
+        package_name: check-manifest

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterthemesPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterthemes
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jupyterthemes has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jupyterthemes/
+        package_name: jupyterthemes

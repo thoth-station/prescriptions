@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoObjectActionsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-object-actions
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-object-actions has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-object-actions/
+        package_name: django-object-actions

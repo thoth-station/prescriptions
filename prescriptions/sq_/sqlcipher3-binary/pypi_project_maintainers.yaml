@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Sqlcipher3BinaryPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlcipher3-binary
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sqlcipher3-binary has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sqlcipher3-binary/
+        package_name: sqlcipher3-binary

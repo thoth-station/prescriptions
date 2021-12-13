@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ChromedriverBinaryPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chromedriver-binary
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project chromedriver-binary has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/chromedriver-binary/
+        package_name: chromedriver-binary

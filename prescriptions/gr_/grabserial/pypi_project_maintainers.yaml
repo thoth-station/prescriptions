@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrabserialPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabserial
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project grabserial has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/grabserial/
+        package_name: grabserial

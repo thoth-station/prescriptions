@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SubwordNmtPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subword-nmt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project subword-nmt has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/subword-nmt/
+        package_name: subword-nmt

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Psycopg2BinaryPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycopg2-binary
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project psycopg2-binary has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/psycopg2-binary/
+        package_name: psycopg2-binary

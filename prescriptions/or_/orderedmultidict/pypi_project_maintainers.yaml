@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OrderedmultidictPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: orderedmultidict
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project orderedmultidict has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/orderedmultidict/
+        package_name: orderedmultidict

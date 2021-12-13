@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsibleModulesHashivaultPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-modules-hashivault
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project ansible-modules-hashivault has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/ansible-modules-hashivault/
+        package_name: ansible-modules-hashivault

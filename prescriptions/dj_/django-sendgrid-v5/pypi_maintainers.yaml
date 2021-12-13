@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoSendgridV5PyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sendgrid-v5
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project django-sendgrid-v5 is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/django-sendgrid-v5/
+        package_name: django-sendgrid-v5

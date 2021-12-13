@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IrcPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: irc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project irc has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/irc/
+        package_name: irc

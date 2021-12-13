@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyfigletPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfiglet
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyfiglet has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyfiglet/
+        package_name: pyfiglet

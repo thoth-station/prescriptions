@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymiliaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymilia
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pymilia has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pymilia/
+        package_name: pymilia

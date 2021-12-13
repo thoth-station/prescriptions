@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HoneycombBeelinePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: honeycomb-beeline
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project honeycomb-beeline has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/honeycomb-beeline/
+        package_name: honeycomb-beeline

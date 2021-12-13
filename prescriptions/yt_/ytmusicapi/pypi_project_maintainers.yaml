@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YtmusicapiPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ytmusicapi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project ytmusicapi has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/ytmusicapi/
+        package_name: ytmusicapi

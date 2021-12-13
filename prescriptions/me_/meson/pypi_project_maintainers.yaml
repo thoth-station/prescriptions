@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MesonPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: meson
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project meson has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/meson/
+        package_name: meson

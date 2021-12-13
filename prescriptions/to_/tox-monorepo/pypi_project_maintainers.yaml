@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ToxMonorepoPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-monorepo
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tox-monorepo has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tox-monorepo/
+        package_name: tox-monorepo

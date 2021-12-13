@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ToxPipVersionPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-pip-version
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tox-pip-version has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tox-pip-version/
+        package_name: tox-pip-version

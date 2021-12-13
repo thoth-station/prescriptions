@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SeqevalPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: seqeval
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project seqeval has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/seqeval/
+        package_name: seqeval

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyelftoolsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyelftools
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyelftools has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyelftools/
+        package_name: pyelftools

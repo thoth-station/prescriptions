@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SasutilsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sasutils
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sasutils has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sasutils/
+        package_name: sasutils

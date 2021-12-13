@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: MailjetRestPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailjet-rest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project mailjet-rest is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/mailjet-rest/
+        package_name: mailjet-rest

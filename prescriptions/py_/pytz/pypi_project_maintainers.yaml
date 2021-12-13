@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytzPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytz
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pytz has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pytz/
+        package_name: pytz

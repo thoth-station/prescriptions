@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Gnofract4dPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gnofract4d
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project gnofract4d has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/gnofract4d/
+        package_name: gnofract4d

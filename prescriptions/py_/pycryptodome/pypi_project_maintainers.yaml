@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycryptodomePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycryptodome
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pycryptodome has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pycryptodome/
+        package_name: pycryptodome

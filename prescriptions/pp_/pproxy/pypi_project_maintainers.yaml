@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PproxyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pproxy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pproxy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pproxy/
+        package_name: pproxy

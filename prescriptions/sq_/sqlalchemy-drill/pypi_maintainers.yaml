@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SqlalchemyDrillPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-drill
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project sqlalchemy-drill is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/sqlalchemy-drill/
+        package_name: sqlalchemy-drill

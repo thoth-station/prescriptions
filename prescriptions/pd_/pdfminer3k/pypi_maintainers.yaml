@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pdfminer3kPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdfminer3k
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project pdfminer3k is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/pdfminer3k/
+        package_name: pdfminer3k

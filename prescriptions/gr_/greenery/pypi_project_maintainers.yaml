@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GreeneryPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: greenery
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project greenery has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/greenery/
+        package_name: greenery

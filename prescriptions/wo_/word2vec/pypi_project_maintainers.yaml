@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Word2vecPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: word2vec
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project word2vec has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/word2vec/
+        package_name: word2vec

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InterfilePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interfile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project interfile has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/interfile/
+        package_name: interfile

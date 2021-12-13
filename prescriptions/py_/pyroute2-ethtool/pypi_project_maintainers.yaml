@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyroute2EthtoolPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyroute2-ethtool
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyroute2-ethtool has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyroute2-ethtool/
+        package_name: pyroute2-ethtool

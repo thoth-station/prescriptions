@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KwonlyArgsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kwonly-args
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project kwonly-args has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/kwonly-args/
+        package_name: kwonly-args

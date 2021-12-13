@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GspreadPandasPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-pandas
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project gspread-pandas has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/gspread-pandas/
+        package_name: gspread-pandas

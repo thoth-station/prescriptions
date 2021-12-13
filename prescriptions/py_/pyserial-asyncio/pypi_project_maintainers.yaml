@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyserialAsyncioPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyserial-asyncio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyserial-asyncio has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyserial-asyncio/
+        package_name: pyserial-asyncio

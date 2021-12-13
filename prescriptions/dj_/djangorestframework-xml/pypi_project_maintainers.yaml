@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangorestframeworkXmlPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangorestframework-xml
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project djangorestframework-xml has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/djangorestframework-xml/
+        package_name: djangorestframework-xml

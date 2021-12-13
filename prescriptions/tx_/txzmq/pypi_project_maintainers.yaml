@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TxzmqPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txzmq
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project txzmq has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/txzmq/
+        package_name: txzmq

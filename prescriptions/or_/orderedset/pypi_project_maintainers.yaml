@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OrderedsetPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: orderedset
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project orderedset has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/orderedset/
+        package_name: orderedset

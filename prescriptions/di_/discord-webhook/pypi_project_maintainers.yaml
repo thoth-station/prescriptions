@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiscordWebhookPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-webhook
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project discord-webhook has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/discord-webhook/
+        package_name: discord-webhook

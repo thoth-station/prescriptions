@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TypingInspectPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-inspect
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project typing-inspect has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/typing-inspect/
+        package_name: typing-inspect

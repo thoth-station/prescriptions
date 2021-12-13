@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoSentryPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sentry
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-sentry has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-sentry/
+        package_name: django-sentry

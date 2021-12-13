@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ec2MetadataPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ec2-metadata
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project ec2-metadata has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/ec2-metadata/
+        package_name: ec2-metadata

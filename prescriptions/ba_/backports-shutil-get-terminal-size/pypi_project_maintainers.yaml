@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsShutilGetTerminalSizePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-shutil-get-terminal-size
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project backports-shutil-get-terminal-size has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/backports-shutil-get-terminal-size/
+        package_name: backports-shutil-get-terminal-size

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AutoPyToExePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: auto-py-to-exe
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project auto-py-to-exe has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/auto-py-to-exe/
+        package_name: auto-py-to-exe

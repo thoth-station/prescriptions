@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SmdebugRulesconfigPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smdebug-rulesconfig
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project smdebug-rulesconfig has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/smdebug-rulesconfig/
+        package_name: smdebug-rulesconfig

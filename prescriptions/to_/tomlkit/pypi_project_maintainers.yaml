@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TomlkitPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tomlkit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tomlkit has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tomlkit/
+        package_name: tomlkit

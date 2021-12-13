@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScanBuildPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scan-build
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project scan-build has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/scan-build/
+        package_name: scan-build

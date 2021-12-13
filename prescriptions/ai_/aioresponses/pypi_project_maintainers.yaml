@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioresponsesPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioresponses
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project aioresponses has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/aioresponses/
+        package_name: aioresponses

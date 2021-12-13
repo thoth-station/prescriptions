@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StrsimpyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: strsimpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project strsimpy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/strsimpy/
+        package_name: strsimpy

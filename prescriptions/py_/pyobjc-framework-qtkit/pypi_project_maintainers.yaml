@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyobjcFrameworkQtkitPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-qtkit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyobjc-framework-qtkit has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyobjc-framework-qtkit/
+        package_name: pyobjc-framework-qtkit

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SanicJwtPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic-jwt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sanic-jwt has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sanic-jwt/
+        package_name: sanic-jwt

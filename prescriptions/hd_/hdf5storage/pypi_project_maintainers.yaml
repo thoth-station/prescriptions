@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Hdf5storagePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdf5storage
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project hdf5storage has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/hdf5storage/
+        package_name: hdf5storage

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterRequirePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-require
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jupyter-require has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jupyter-require/
+        package_name: jupyter-require

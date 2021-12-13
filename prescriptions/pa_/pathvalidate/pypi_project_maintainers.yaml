@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathvalidatePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathvalidate
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pathvalidate has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pathvalidate/
+        package_name: pathvalidate

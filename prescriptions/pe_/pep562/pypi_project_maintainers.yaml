@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pep562PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pep562
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pep562 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pep562/
+        package_name: pep562

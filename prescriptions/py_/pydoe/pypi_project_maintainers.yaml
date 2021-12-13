@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydoePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydoe
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pydoe has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pydoe/
+        package_name: pydoe

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TangledUpInUnicodePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tangled-up-in-unicode
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tangled-up-in-unicode has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tangled-up-in-unicode/
+        package_name: tangled-up-in-unicode

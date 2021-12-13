@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CircleciPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: circleci
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project circleci has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/circleci/
+        package_name: circleci

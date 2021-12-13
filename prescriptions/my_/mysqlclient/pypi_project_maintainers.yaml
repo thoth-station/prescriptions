@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MysqlclientPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysqlclient
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project mysqlclient has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/mysqlclient/
+        package_name: mysqlclient

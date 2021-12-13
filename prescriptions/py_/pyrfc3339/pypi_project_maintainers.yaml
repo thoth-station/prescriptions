@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyrfc3339PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrfc3339
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyrfc3339 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyrfc3339/
+        package_name: pyrfc3339

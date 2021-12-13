@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KeyringsAltPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyrings-alt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project keyrings-alt has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/keyrings-alt/
+        package_name: keyrings-alt

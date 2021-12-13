@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ArgoptPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argopt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project argopt has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/argopt/
+        package_name: argopt

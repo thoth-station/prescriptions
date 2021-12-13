@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AtherisPyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atheris
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project atheris has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/atheris/
+        package_name: atheris

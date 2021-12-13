@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PandasMarketCalendarsPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandas-market-calendars
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project pandas-market-calendars is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/pandas-market-calendars/
+        package_name: pandas-market-calendars

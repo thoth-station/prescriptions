@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InterfaceMetaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interface-meta
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project interface-meta has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/interface-meta/
+        package_name: interface-meta

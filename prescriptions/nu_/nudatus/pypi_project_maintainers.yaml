@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NudatusPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nudatus
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project nudatus has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/nudatus/
+        package_name: nudatus

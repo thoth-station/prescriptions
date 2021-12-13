@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoNinePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-nine
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-nine has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-nine/
+        package_name: django-nine

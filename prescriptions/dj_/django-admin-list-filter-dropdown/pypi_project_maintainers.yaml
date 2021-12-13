@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoAdminListFilterDropdownPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-admin-list-filter-dropdown
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-admin-list-filter-dropdown has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-admin-list-filter-dropdown/
+        package_name: django-admin-list-filter-dropdown

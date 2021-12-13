@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TextdistancePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textdistance
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project textdistance has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/textdistance/
+        package_name: textdistance

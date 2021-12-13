@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8StringFormatPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-string-format
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project flake8-string-format is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/flake8-string-format/
+        package_name: flake8-string-format

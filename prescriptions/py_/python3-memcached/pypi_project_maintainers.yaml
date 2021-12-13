@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Python3MemcachedPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-memcached
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project python3-memcached has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/python3-memcached/
+        package_name: python3-memcached

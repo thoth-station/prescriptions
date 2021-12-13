@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProtoGoogleCloudVisionV1PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: proto-google-cloud-vision-v1
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project proto-google-cloud-vision-v1 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/proto-google-cloud-vision-v1/
+        package_name: proto-google-cloud-vision-v1

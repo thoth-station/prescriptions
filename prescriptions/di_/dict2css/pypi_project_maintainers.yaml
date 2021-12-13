@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Dict2cssPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dict2css
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project dict2css has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/dict2css/
+        package_name: dict2css

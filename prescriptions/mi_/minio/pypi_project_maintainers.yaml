@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MinioPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project minio has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/minio/
+        package_name: minio

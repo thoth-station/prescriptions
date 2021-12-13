@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JupyterHttpOverWsPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-http-over-ws
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project jupyter-http-over-ws is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/jupyter-http-over-ws/
+        package_name: jupyter-http-over-ws

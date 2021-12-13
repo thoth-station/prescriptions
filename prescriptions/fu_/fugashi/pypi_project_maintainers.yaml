@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FugashiPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fugashi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project fugashi has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/fugashi/
+        package_name: fugashi

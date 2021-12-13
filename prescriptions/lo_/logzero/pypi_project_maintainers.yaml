@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LogzeroPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logzero
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project logzero has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/logzero/
+        package_name: logzero

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NatsortPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: natsort
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project natsort has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/natsort/
+        package_name: natsort

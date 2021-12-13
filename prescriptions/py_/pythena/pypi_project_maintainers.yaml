@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythenaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythena
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pythena has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pythena/
+        package_name: pythena

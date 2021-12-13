@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JcPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jc has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jc/
+        package_name: jc

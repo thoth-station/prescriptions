@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Socks5linePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: socks5line
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project socks5line has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/socks5line/
+        package_name: socks5line

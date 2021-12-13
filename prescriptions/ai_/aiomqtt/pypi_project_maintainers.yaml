@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiomqttPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiomqtt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project aiomqtt has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/aiomqtt/
+        package_name: aiomqtt

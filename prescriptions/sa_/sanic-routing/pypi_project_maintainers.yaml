@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SanicRoutingPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic-routing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sanic-routing has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sanic-routing/
+        package_name: sanic-routing

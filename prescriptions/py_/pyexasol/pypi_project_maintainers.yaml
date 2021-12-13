@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyexasolPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexasol
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyexasol has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyexasol/
+        package_name: pyexasol

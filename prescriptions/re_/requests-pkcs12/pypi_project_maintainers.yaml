@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsPkcs12PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-pkcs12
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project requests-pkcs12 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/requests-pkcs12/
+        package_name: requests-pkcs12

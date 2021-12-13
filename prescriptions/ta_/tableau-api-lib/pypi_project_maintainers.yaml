@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TableauApiLibPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tableau-api-lib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tableau-api-lib has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tableau-api-lib/
+        package_name: tableau-api-lib

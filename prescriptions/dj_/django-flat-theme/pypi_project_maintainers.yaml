@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoFlatThemePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-flat-theme
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-flat-theme has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-flat-theme/
+        package_name: django-flat-theme

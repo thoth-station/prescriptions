@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AwscrtPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awscrt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project awscrt has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/awscrt/
+        package_name: awscrt

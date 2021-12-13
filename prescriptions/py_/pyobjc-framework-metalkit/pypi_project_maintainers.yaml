@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyobjcFrameworkMetalkitPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-metalkit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyobjc-framework-metalkit has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyobjc-framework-metalkit/
+        package_name: pyobjc-framework-metalkit

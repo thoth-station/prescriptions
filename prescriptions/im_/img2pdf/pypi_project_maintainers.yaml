@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Img2pdfPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: img2pdf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project img2pdf has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/img2pdf/
+        package_name: img2pdf

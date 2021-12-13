@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TracemoepyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tracemoepy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tracemoepy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tracemoepy/
+        package_name: tracemoepy

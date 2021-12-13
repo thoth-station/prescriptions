@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RustyRlpPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rusty-rlp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project rusty-rlp has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/rusty-rlp/
+        package_name: rusty-rlp

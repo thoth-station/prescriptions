@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TfrecordLitePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfrecord-lite
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tfrecord-lite has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tfrecord-lite/
+        package_name: tfrecord-lite

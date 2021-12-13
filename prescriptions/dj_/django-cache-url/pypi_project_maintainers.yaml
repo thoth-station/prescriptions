@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoCacheUrlPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cache-url
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-cache-url has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-cache-url/
+        package_name: django-cache-url

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxAutosummaryAccessorsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-autosummary-accessors
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sphinx-autosummary-accessors has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sphinx-autosummary-accessors/
+        package_name: sphinx-autosummary-accessors

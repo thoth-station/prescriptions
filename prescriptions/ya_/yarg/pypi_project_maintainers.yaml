@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YargPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yarg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project yarg has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/yarg/
+        package_name: yarg

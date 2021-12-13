@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlackerLogHandlerPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker-log-handler
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project slacker-log-handler has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/slacker-log-handler/
+        package_name: slacker-log-handler

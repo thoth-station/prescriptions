@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FlaskJwtExtendedPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-jwt-extended
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project flask-jwt-extended is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/flask-jwt-extended/
+        package_name: flask-jwt-extended

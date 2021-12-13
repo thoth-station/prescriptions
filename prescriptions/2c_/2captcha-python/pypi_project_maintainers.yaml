@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: 2captchaPythonPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: 2captcha-python
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project 2captcha-python has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/2captcha-python/
+        package_name: 2captcha-python

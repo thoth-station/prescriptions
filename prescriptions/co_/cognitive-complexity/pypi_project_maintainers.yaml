@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CognitiveComplexityPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cognitive-complexity
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project cognitive-complexity has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/cognitive-complexity/
+        package_name: cognitive-complexity

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PynlplPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynlpl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pynlpl has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pynlpl/
+        package_name: pynlpl

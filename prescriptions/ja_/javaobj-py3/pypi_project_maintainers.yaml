@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JavaobjPy3PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: javaobj-py3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project javaobj-py3 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/javaobj-py3/
+        package_name: javaobj-py3

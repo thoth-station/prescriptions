@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TeamcityMessagesPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: teamcity-messages
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project teamcity-messages has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/teamcity-messages/
+        package_name: teamcity-messages

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JcconvPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jcconv
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jcconv has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jcconv/
+        package_name: jcconv

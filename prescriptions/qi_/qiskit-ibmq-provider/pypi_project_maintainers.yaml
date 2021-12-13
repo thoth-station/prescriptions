@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QiskitIbmqProviderPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qiskit-ibmq-provider
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project qiskit-ibmq-provider has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/qiskit-ibmq-provider/
+        package_name: qiskit-ibmq-provider

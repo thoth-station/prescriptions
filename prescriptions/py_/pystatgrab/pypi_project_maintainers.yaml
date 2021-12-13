@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PystatgrabPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pystatgrab
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pystatgrab has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pystatgrab/
+        package_name: pystatgrab

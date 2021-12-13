@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClickConfigFilePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-config-file
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project click-config-file has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/click-config-file/
+        package_name: click-config-file

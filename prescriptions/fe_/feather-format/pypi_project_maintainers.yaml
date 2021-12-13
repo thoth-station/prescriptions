@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FeatherFormatPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feather-format
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project feather-format has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/feather-format/
+        package_name: feather-format

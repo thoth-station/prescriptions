@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WheelInspectPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-inspect
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project wheel-inspect has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/wheel-inspect/
+        package_name: wheel-inspect

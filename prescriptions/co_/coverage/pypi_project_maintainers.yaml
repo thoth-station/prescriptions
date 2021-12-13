@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CoveragePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project coverage has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/coverage/
+        package_name: coverage

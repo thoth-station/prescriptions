@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pybase64PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybase64
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pybase64 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pybase64/
+        package_name: pybase64

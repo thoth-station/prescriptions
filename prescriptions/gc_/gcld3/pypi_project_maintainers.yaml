@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Gcld3PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcld3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project gcld3 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/gcld3/
+        package_name: gcld3

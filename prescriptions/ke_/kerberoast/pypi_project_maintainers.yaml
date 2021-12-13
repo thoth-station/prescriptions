@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerberoastPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberoast
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project kerberoast has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/kerberoast/
+        package_name: kerberoast

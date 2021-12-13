@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrpcGooglePubsubV1PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-pubsub-v1
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project grpc-google-pubsub-v1 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/grpc-google-pubsub-v1/
+        package_name: grpc-google-pubsub-v1

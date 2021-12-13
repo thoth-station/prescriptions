@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TensorflowModelOptimizationPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-model-optimization
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tensorflow-model-optimization has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tensorflow-model-optimization/
+        package_name: tensorflow-model-optimization

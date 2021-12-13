@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonrpclibPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonrpclib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jsonrpclib has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jsonrpclib/
+        package_name: jsonrpclib

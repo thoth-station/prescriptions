@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: H2oPysparkling21PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h2o-pysparkling-2-1
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project h2o-pysparkling-2-1 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/h2o-pysparkling-2-1/
+        package_name: h2o-pysparkling-2-1

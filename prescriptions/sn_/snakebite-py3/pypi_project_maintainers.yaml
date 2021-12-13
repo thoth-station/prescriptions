@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnakebitePy3PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snakebite-py3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project snakebite-py3 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/snakebite-py3/
+        package_name: snakebite-py3

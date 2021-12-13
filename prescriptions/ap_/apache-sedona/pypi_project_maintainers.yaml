@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ApacheSedonaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-sedona
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project apache-sedona has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/apache-sedona/
+        package_name: apache-sedona

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HdxPythonUtilitiesPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdx-python-utilities
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project hdx-python-utilities has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/hdx-python-utilities/
+        package_name: hdx-python-utilities

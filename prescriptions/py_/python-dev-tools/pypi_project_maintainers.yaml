@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonDevToolsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dev-tools
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project python-dev-tools has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/python-dev-tools/
+        package_name: python-dev-tools

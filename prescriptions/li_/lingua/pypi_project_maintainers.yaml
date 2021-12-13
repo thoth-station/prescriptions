@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LinguaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lingua
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project lingua has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/lingua/
+        package_name: lingua

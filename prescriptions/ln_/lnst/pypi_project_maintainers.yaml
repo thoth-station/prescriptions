@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LnstPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lnst
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project lnst has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/lnst/
+        package_name: lnst

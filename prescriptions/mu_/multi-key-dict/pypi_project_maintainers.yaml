@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultiKeyDictPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multi-key-dict
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project multi-key-dict has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/multi-key-dict/
+        package_name: multi-key-dict

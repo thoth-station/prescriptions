@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UserAgentPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: user-agent
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project user-agent has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/user-agent/
+        package_name: user-agent

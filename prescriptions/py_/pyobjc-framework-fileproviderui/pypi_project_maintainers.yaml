@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyobjcFrameworkFileprovideruiPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-fileproviderui
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyobjc-framework-fileproviderui has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyobjc-framework-fileproviderui/
+        package_name: pyobjc-framework-fileproviderui

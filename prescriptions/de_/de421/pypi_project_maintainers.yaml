@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: De421PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: de421
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project de421 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/de421/
+        package_name: de421

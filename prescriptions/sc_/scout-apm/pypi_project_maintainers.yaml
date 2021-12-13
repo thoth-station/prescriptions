@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScoutApmPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scout-apm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project scout-apm has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/scout-apm/
+        package_name: scout-apm

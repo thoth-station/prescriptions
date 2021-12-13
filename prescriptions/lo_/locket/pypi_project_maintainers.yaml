@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LocketPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: locket
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project locket has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/locket/
+        package_name: locket

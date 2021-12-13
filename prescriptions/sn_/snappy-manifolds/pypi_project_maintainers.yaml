@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnappyManifoldsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snappy-manifolds
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project snappy-manifolds has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/snappy-manifolds/
+        package_name: snappy-manifolds

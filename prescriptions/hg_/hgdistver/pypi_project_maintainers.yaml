@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HgdistverPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hgdistver
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project hgdistver has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/hgdistver/
+        package_name: hgdistver

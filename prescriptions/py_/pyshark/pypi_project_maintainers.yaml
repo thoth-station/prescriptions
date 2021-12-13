@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysharkPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyshark
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyshark has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyshark/
+        package_name: pyshark

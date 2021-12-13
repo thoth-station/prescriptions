@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyobjcFrameworkClasskitPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-classkit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyobjc-framework-classkit has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyobjc-framework-classkit/
+        package_name: pyobjc-framework-classkit

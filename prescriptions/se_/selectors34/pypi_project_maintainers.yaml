@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Selectors34PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selectors34
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project selectors34 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/selectors34/
+        package_name: selectors34

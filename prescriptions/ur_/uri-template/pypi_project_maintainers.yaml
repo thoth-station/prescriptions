@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UriTemplatePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uri-template
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project uri-template has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/uri-template/
+        package_name: uri-template

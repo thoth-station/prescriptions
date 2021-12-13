@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SeleniumWirePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selenium-wire
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project selenium-wire has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/selenium-wire/
+        package_name: selenium-wire

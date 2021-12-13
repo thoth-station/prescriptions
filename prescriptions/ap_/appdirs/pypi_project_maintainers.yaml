@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AppdirsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: appdirs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project appdirs has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/appdirs/
+        package_name: appdirs

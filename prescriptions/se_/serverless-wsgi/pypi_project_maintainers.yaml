@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ServerlessWsgiPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serverless-wsgi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project serverless-wsgi has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/serverless-wsgi/
+        package_name: serverless-wsgi

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyalsaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyalsa
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyalsa has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyalsa/
+        package_name: pyalsa

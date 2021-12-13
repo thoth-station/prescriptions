@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RichPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rich
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project rich has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/rich/
+        package_name: rich

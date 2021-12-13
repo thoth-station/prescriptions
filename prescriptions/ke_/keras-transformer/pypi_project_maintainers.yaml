@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerasTransformerPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-transformer
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project keras-transformer has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/keras-transformer/
+        package_name: keras-transformer

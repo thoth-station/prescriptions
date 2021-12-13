@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JsonsubschemaPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonsubschema
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project jsonsubschema is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/jsonsubschema/
+        package_name: jsonsubschema

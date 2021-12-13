@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydevdPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydevd
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pydevd has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pydevd/
+        package_name: pydevd

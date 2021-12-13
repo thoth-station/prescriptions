@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Py3dnsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3dns
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project py3dns has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/py3dns/
+        package_name: py3dns

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuzzyfinderPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzyfinder
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project fuzzyfinder has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/fuzzyfinder/
+        package_name: fuzzyfinder

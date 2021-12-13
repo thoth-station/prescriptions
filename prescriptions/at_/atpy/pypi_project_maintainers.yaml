@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AtpyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project atpy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/atpy/
+        package_name: atpy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NumpyroPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpyro
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project numpyro has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/numpyro/
+        package_name: numpyro

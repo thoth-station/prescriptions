@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiounittestPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiounittest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project aiounittest has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/aiounittest/
+        package_name: aiounittest

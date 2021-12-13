@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonTricksPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-tricks
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project json-tricks has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/json-tricks/
+        package_name: json-tricks

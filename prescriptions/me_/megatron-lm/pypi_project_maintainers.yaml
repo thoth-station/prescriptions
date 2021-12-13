@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MegatronLmPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: megatron-lm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project megatron-lm has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/megatron-lm/
+        package_name: megatron-lm

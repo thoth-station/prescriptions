@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SqlalchemyReprPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-repr
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sqlalchemy-repr has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sqlalchemy-repr/
+        package_name: sqlalchemy-repr

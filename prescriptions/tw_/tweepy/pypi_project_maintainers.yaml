@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TweepyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tweepy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tweepy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tweepy/
+        package_name: tweepy

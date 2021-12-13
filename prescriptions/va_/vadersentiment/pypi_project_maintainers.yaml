@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VadersentimentPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vadersentiment
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project vadersentiment has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/vadersentiment/
+        package_name: vadersentiment

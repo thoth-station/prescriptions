@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylintExitPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-exit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pylint-exit has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pylint-exit/
+        package_name: pylint-exit

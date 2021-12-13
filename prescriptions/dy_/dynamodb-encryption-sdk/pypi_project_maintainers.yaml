@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DynamodbEncryptionSdkPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynamodb-encryption-sdk
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project dynamodb-encryption-sdk has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/dynamodb-encryption-sdk/
+        package_name: dynamodb-encryption-sdk

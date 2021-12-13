@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PplpyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pplpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pplpy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pplpy/
+        package_name: pplpy

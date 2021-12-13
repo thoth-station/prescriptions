@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Aniso8601PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aniso8601
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project aniso8601 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/aniso8601/
+        package_name: aniso8601

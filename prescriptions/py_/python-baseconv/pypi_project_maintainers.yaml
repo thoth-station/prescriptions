@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonBaseconvPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-baseconv
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project python-baseconv has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/python-baseconv/
+        package_name: python-baseconv

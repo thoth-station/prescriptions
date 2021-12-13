@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Doxytag2zealdbPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doxytag2zealdb
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project doxytag2zealdb is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/doxytag2zealdb/
+        package_name: doxytag2zealdb

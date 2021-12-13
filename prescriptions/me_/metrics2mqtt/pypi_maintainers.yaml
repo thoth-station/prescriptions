@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Metrics2mqttPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metrics2mqtt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project metrics2mqtt is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/metrics2mqtt/
+        package_name: metrics2mqtt

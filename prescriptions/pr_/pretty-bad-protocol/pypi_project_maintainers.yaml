@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrettyBadProtocolPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretty-bad-protocol
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pretty-bad-protocol has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pretty-bad-protocol/
+        package_name: pretty-bad-protocol

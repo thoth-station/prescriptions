@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StufPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stuf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project stuf has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/stuf/
+        package_name: stuf

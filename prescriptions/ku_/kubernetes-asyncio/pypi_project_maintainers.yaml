@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KubernetesAsyncioPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes-asyncio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project kubernetes-asyncio has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/kubernetes-asyncio/
+        package_name: kubernetes-asyncio

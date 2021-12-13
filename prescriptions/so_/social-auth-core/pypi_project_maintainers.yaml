@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SocialAuthCorePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: social-auth-core
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project social-auth-core has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/social-auth-core/
+        package_name: social-auth-core

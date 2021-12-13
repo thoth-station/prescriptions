@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SplunkHandlerPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: splunk-handler
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project splunk-handler has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/splunk-handler/
+        package_name: splunk-handler

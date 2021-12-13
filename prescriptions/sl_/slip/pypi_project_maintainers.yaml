@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlipPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slip
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project slip has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/slip/
+        package_name: slip

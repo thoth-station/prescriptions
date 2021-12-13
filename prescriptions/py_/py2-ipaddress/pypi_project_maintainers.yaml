@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Py2IpaddressPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py2-ipaddress
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project py2-ipaddress has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/py2-ipaddress/
+        package_name: py2-ipaddress

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pgpdump3PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgpdump3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pgpdump3 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pgpdump3/
+        package_name: pgpdump3

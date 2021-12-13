@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SmbprotocolPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbprotocol
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project smbprotocol has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/smbprotocol/
+        package_name: smbprotocol

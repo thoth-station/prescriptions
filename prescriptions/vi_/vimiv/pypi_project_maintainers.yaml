@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VimivPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vimiv
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project vimiv has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/vimiv/
+        package_name: vimiv

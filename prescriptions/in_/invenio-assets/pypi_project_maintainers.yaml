@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InvenioAssetsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-assets
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project invenio-assets has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/invenio-assets/
+        package_name: invenio-assets

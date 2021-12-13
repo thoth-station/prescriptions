@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycdioPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycdio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pycdio has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pycdio/
+        package_name: pycdio

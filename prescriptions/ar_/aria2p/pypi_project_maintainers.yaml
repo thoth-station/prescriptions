@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Aria2pPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aria2p
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project aria2p has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/aria2p/
+        package_name: aria2p

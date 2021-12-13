@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UlidPyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ulid-py
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project ulid-py has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/ulid-py/
+        package_name: ulid-py

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ResampyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: resampy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project resampy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/resampy/
+        package_name: resampy

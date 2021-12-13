@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AirthingsPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airthings
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project airthings has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/airthings/
+        package_name: airthings

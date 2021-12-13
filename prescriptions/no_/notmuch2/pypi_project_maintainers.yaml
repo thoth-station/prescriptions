@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Notmuch2PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notmuch2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project notmuch2 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/notmuch2/
+        package_name: notmuch2

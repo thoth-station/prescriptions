@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BraceexpandPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: braceexpand
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project braceexpand has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/braceexpand/
+        package_name: braceexpand

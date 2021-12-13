@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GiacpyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: giacpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project giacpy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/giacpy/
+        package_name: giacpy

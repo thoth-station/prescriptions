@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoDockerPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-docker
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jaraco-docker has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jaraco-docker/
+        package_name: jaraco-docker

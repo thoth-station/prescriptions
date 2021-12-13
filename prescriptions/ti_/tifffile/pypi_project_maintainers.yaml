@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TifffilePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tifffile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project tifffile has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/tifffile/
+        package_name: tifffile

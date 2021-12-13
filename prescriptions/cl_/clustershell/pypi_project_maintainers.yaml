@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClustershellPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clustershell
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project clustershell has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/clustershell/
+        package_name: clustershell

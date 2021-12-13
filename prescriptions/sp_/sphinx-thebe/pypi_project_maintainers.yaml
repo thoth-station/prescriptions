@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxThebePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-thebe
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sphinx-thebe has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sphinx-thebe/
+        package_name: sphinx-thebe

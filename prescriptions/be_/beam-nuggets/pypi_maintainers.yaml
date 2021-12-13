@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: BeamNuggetsPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beam-nuggets
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project beam-nuggets is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/beam-nuggets/
+        package_name: beam-nuggets

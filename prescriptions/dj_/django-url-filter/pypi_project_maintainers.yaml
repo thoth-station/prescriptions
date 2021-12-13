@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoUrlFilterPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-url-filter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project django-url-filter has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/django-url-filter/
+        package_name: django-url-filter

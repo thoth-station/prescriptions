@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonlinesPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonlines
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jsonlines has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jsonlines/
+        package_name: jsonlines

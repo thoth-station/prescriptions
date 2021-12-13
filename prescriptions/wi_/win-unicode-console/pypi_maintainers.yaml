@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: WinUnicodeConsolePyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: win-unicode-console
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project win-unicode-console is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/win-unicode-console/
+        package_name: win-unicode-console

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NutterPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nutter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project nutter has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/nutter/
+        package_name: nutter

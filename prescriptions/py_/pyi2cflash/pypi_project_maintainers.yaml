@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyi2cflashPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyi2cflash
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pyi2cflash has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pyi2cflash/
+        package_name: pyi2cflash

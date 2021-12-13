@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ComboPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: combo
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project combo has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/combo/
+        package_name: combo

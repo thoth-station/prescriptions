@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Jinja2CliPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2-cli
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jinja2-cli has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jinja2-cli/
+        package_name: jinja2-cli

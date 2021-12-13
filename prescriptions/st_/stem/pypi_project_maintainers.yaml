@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StemPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stem
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project stem has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/stem/
+        package_name: stem

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pdir2PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdir2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project pdir2 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/pdir2/
+        package_name: pdir2

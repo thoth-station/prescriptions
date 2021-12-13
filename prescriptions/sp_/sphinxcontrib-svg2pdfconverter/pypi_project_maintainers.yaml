@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxcontribSvg2pdfconverterPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-svg2pdfconverter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project sphinxcontrib-svg2pdfconverter has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/sphinxcontrib-svg2pdfconverter/
+        package_name: sphinxcontrib-svg2pdfconverter

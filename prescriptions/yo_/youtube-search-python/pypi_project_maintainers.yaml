@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YoutubeSearchPythonPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: youtube-search-python
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project youtube-search-python has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/youtube-search-python/
+        package_name: youtube-search-python

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GatspyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gatspy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project gatspy has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/gatspy/
+        package_name: gatspy

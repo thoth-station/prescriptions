@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LarkParserPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lark-parser
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project lark-parser has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/lark-parser/
+        package_name: lark-parser

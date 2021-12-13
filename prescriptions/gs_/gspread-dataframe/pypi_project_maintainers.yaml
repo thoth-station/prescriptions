@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GspreadDataframePyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-dataframe
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project gspread-dataframe has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/gspread-dataframe/
+        package_name: gspread-dataframe

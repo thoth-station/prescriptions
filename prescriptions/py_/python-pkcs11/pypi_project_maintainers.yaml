@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonPkcs11PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-pkcs11
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project python-pkcs11 has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/python-pkcs11/
+        package_name: python-pkcs11

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeptuneOptunaPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-optuna
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project neptune-optuna has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/neptune-optuna/
+        package_name: neptune-optuna

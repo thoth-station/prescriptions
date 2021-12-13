@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonsirPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonsir
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: WARNING
+        message: Project jsonsir has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/jsonsir/
+        package_name: jsonsir
