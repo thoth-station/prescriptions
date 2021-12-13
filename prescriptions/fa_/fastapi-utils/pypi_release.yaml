@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastapiUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastapi-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastapi-utils' has no recent release, last release dates back to 2020-03-07 05:55:05.518632
+        link: https://pypi.org/project/fastapi-utils/#history
+        package_name: fastapi-utils

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CachezPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachez
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cachez' has no recent release, last release dates back to 2017-05-16 07:51:10.181828
+        link: https://pypi.org/project/cachez/#history
+        package_name: cachez

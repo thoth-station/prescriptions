@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleTransNewPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-trans-new
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-trans-new' has no recent release, last release dates back to 2020-12-04 07:12:37.596825
+        link: https://pypi.org/project/google-trans-new/#history
+        package_name: google-trans-new

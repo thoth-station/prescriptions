@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NietPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: niet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'niet' has no recent release, last release dates back to 2021-04-26 08:17:47.918524
+        link: https://pypi.org/project/niet/#history
+        package_name: niet

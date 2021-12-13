@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ManagesievePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: managesieve
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'managesieve' has no recent release, last release dates back to 2021-03-11 19:59:23.857585
+        link: https://pypi.org/project/managesieve/#history
+        package_name: managesieve

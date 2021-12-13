@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OnnxruntimeToolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxruntime-tools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'onnxruntime-tools' has no recent release, last release dates back to 2021-03-25 21:42:42.571675
+        link: https://pypi.org/project/onnxruntime-tools/#history
+        package_name: onnxruntime-tools

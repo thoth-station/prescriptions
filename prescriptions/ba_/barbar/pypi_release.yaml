@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BarbarPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: barbar
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'barbar' has no recent release, last release dates back to 2019-04-11 08:15:52.648599
+        link: https://pypi.org/project/barbar/#history
+        package_name: barbar

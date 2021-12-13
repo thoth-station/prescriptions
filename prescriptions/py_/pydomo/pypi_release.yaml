@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydomoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydomo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydomo' has no recent release, last release dates back to 2021-02-09 20:43:55.282666
+        link: https://pypi.org/project/pydomo/#history
+        package_name: pydomo

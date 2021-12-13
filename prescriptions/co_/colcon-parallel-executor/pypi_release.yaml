@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColconParallelExecutorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-parallel-executor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colcon-parallel-executor' has no recent release, last release dates back to 2019-04-11 16:10:35.729700
+        link: https://pypi.org/project/colcon-parallel-executor/#history
+        package_name: colcon-parallel-executor

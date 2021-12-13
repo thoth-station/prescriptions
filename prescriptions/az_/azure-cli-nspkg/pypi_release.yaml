@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureCliNspkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cli-nspkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-cli-nspkg' has no recent release, last release dates back to 2020-03-31 02:05:20.725292
+        link: https://pypi.org/project/azure-cli-nspkg/#history
+        package_name: azure-cli-nspkg

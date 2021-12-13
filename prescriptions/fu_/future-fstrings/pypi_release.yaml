@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FutureFstringsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: future-fstrings
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'future-fstrings' has no recent release, last release dates back to 2019-06-16 03:04:42.651982
+        link: https://pypi.org/project/future-fstrings/#history
+        package_name: future-fstrings

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpidevPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spidev
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spidev' has no recent release, last release dates back to 2020-06-02 20:17:18.159102
+        link: https://pypi.org/project/spidev/#history
+        package_name: spidev

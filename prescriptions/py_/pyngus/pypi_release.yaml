@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyngusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyngus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyngus' has no recent release, last release dates back to 2020-05-12 19:46:30.887216
+        link: https://pypi.org/project/pyngus/#history
+        package_name: pyngus

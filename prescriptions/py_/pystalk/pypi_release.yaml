@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PystalkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pystalk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pystalk' has no recent release, last release dates back to 2020-07-14 02:31:42.574519
+        link: https://pypi.org/project/pystalk/#history
+        package_name: pystalk

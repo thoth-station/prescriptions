@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobotframeworkExcellibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-excellib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'robotframework-excellib' has no recent release, last release dates back to 2020-06-18 08:04:33.799512
+        link: https://pypi.org/project/robotframework-excellib/#history
+        package_name: robotframework-excellib

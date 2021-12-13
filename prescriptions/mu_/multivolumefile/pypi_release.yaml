@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultivolumefilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multivolumefile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multivolumefile' has no recent release, last release dates back to 2021-04-29 12:18:39.882802
+        link: https://pypi.org/project/multivolumefile/#history
+        package_name: multivolumefile

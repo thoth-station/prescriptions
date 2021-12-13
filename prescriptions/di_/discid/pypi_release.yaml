@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiscidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'discid' has no recent release, last release dates back to 2019-02-23 11:16:55.652520
+        link: https://pypi.org/project/discid/#history
+        package_name: discid

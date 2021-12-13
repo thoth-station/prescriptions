@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TendoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tendo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tendo' has no recent release, last release dates back to 2019-05-23 13:42:45.272206
+        link: https://pypi.org/project/tendo/#history
+        package_name: tendo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpaserverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaserver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipaserver' has no recent release, last release dates back to 2020-08-20 10:53:39.922353
+        link: https://pypi.org/project/ipaserver/#history
+        package_name: ipaserver

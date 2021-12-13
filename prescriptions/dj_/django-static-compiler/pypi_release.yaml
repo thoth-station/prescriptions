@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoStaticCompilerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-static-compiler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-static-compiler' has no recent release, last release dates back to 2013-05-23 01:36:53.303374
+        link: https://pypi.org/project/django-static-compiler/#history
+        package_name: django-static-compiler

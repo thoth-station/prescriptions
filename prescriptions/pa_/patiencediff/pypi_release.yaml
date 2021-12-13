@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PatiencediffPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patiencediff
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'patiencediff' has no recent release, last release dates back to 2021-03-26 00:25:36.487579
+        link: https://pypi.org/project/patiencediff/#history
+        package_name: patiencediff

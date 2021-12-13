@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KeyboardPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyboard
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keyboard' has no recent release, last release dates back to 2020-03-23 21:47:06.614324
+        link: https://pypi.org/project/keyboard/#history
+        package_name: keyboard

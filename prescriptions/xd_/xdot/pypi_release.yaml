@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XdotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xdot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xdot' has no recent release, last release dates back to 2020-11-21 11:56:29.794995
+        link: https://pypi.org/project/xdot/#history
+        package_name: xdot

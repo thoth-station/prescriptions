@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylibmcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibmc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylibmc' has no recent release, last release dates back to 2019-08-15 14:55:07.958567
+        link: https://pypi.org/project/pylibmc/#history
+        package_name: pylibmc

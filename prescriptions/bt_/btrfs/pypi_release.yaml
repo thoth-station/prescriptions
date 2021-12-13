@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BtrfsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btrfs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'btrfs' has no recent release, last release dates back to 2021-04-29 11:50:00.045069
+        link: https://pypi.org/project/btrfs/#history
+        package_name: btrfs

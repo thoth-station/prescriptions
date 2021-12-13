@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PiexifPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: piexif
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'piexif' has no recent release, last release dates back to 2019-07-01 15:43:20.907670
+        link: https://pypi.org/project/piexif/#history
+        package_name: piexif

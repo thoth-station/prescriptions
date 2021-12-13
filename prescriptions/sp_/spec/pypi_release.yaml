@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpecPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spec
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spec' has no recent release, last release dates back to 2017-09-02 23:35:07.482230
+        link: https://pypi.org/project/spec/#history
+        package_name: spec

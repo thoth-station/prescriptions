@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyaesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyaes' has no recent release, last release dates back to 2017-09-20 21:17:54.230245
+        link: https://pypi.org/project/pyaes/#history
+        package_name: pyaes

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FacePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: face
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'face' has no recent release, last release dates back to 2020-01-22 20:03:46.102781
+        link: https://pypi.org/project/face/#history
+        package_name: face

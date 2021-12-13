@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Python2SecretsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python2-secrets
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python2-secrets' has no recent release, last release dates back to 2019-01-29 09:10:13.720920
+        link: https://pypi.org/project/python2-secrets/#history
+        package_name: python2-secrets

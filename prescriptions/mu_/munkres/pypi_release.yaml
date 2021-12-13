@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MunkresPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: munkres
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'munkres' has no recent release, last release dates back to 2020-09-15 15:12:20.956794
+        link: https://pypi.org/project/munkres/#history
+        package_name: munkres

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TornadoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tornado
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tornado' has no recent release, last release dates back to 2020-10-30 22:53:24.023023
+        link: https://pypi.org/project/tornado/#history
+        package_name: tornado

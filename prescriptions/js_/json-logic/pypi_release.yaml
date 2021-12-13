@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonLogicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-logic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'json-logic' has no recent release, last release dates back to 2015-12-04 10:35:17.322153
+        link: https://pypi.org/project/json-logic/#history
+        package_name: json-logic

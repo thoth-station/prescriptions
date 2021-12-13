@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoPartialIndexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-partial-index
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-partial-index' has no recent release, last release dates back to 2019-07-07 21:53:53.780630
+        link: https://pypi.org/project/django-partial-index/#history
+        package_name: django-partial-index

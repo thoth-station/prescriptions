@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FiveFormlibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: five-formlib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'five-formlib' has no recent release, last release dates back to 2020-10-26 14:52:56.446802
+        link: https://pypi.org/project/five-formlib/#history
+        package_name: five-formlib

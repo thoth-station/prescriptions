@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TrafaretPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trafaret
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trafaret' has no recent release, last release dates back to 2020-09-10 10:02:39.738780
+        link: https://pypi.org/project/trafaret/#history
+        package_name: trafaret

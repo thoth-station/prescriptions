@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpynbnamePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipynbname
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipynbname' has no recent release, last release dates back to 2021-01-28 08:08:27.543322
+        link: https://pypi.org/project/ipynbname/#history
+        package_name: ipynbname

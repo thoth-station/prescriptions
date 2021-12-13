@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GerttyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gertty
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gertty' has no recent release, last release dates back to 2019-04-24 02:52:57.363463
+        link: https://pypi.org/project/gertty/#history
+        package_name: gertty

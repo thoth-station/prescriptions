@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DeepcutPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deepcut
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'deepcut' has no recent release, last release dates back to 2019-11-06 05:12:42.777886
+        link: https://pypi.org/project/deepcut/#history
+        package_name: deepcut

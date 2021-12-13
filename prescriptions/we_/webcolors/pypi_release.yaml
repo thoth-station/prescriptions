@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebcolorsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webcolors
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webcolors' has no recent release, last release dates back to 2020-02-17 16:18:49.982012
+        link: https://pypi.org/project/webcolors/#history
+        package_name: webcolors

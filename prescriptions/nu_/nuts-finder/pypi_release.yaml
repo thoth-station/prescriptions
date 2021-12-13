@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NutsFinderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nuts-finder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nuts-finder' has no recent release, last release dates back to 2021-05-06 08:43:12.768756
+        link: https://pypi.org/project/nuts-finder/#history
+        package_name: nuts-finder

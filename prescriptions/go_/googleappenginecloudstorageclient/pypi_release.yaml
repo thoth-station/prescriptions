@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleappenginecloudstorageclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleappenginecloudstorageclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'googleappenginecloudstorageclient' has no recent release, last release dates back to 2015-06-25 20:54:02.140372
+        link: https://pypi.org/project/googleappenginecloudstorageclient/#history
+        package_name: googleappenginecloudstorageclient

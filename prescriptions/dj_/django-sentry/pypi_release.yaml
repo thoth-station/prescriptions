@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoSentryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sentry
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-sentry' has no recent release, last release dates back to 2011-11-04 01:55:13.172834
+        link: https://pypi.org/project/django-sentry/#history
+        package_name: django-sentry

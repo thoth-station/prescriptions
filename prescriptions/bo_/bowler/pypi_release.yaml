@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BowlerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bowler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bowler' has no recent release, last release dates back to 2020-09-17 01:55:40.877972
+        link: https://pypi.org/project/bowler/#history
+        package_name: bowler

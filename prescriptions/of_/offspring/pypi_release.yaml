@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OffspringPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: offspring
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'offspring' has no recent release, last release dates back to 2018-01-04 19:18:00.644731
+        link: https://pypi.org/project/offspring/#history
+        package_name: offspring

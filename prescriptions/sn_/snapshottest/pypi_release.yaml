@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnapshottestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snapshottest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'snapshottest' has no recent release, last release dates back to 2020-09-29 03:54:51.005648
+        link: https://pypi.org/project/snapshottest/#history
+        package_name: snapshottest

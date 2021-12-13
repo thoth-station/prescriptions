@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XesmfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xesmf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xesmf' has no recent release, last release dates back to 2020-03-13 18:56:00.486626
+        link: https://pypi.org/project/xesmf/#history
+        package_name: xesmf

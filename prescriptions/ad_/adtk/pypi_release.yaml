@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AdtkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adtk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'adtk' has no recent release, last release dates back to 2020-04-17 02:18:01.587122
+        link: https://pypi.org/project/adtk/#history
+        package_name: adtk

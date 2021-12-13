@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoSmtpSslPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-smtp-ssl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-smtp-ssl' has no recent release, last release dates back to 2011-12-01 18:32:35.381754
+        link: https://pypi.org/project/django-smtp-ssl/#history
+        package_name: django-smtp-ssl

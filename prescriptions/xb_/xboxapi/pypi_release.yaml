@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XboxapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xboxapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xboxapi' has no recent release, last release dates back to 2020-07-27 18:10:05.138792
+        link: https://pypi.org/project/xboxapi/#history
+        package_name: xboxapi

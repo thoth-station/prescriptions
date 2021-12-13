@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StopWordsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stop-words
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stop-words' has no recent release, last release dates back to 2018-07-23 20:55:55.275244
+        link: https://pypi.org/project/stop-words/#history
+        package_name: stop-words

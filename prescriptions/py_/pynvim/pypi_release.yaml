@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PynvimPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynvim
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pynvim' has no recent release, last release dates back to 2021-02-25 15:25:08.253070
+        link: https://pypi.org/project/pynvim/#history
+        package_name: pynvim

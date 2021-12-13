@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Boto3TypeAnnotationsWithDocsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto3-type-annotations-with-docs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'boto3-type-annotations-with-docs' has no recent release, last release dates back to 2019-05-02 06:21:07.562997
+        link: https://pypi.org/project/boto3-type-annotations-with-docs/#history
+        package_name: boto3-type-annotations-with-docs

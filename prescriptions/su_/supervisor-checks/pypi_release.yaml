@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SupervisorChecksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supervisor-checks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'supervisor-checks' has no recent release, last release dates back to 2018-08-01 18:19:49.342467
+        link: https://pypi.org/project/supervisor-checks/#history
+        package_name: supervisor-checks

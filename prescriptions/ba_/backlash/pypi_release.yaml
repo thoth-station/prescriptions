@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BacklashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backlash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backlash' has no recent release, last release dates back to 2020-05-06 21:35:38.698293
+        link: https://pypi.org/project/backlash/#history
+        package_name: backlash

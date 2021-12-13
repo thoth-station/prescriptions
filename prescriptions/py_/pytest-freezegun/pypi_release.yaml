@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestFreezegunPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-freezegun
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-freezegun' has no recent release, last release dates back to 2020-07-19 17:50:03.678786
+        link: https://pypi.org/project/pytest-freezegun/#history
+        package_name: pytest-freezegun

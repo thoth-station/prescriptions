@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymel' has no recent release, last release dates back to 2021-02-08 20:09:39.414400
+        link: https://pypi.org/project/pymel/#history
+        package_name: pymel

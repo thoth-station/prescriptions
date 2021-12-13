@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygresqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygresql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygresql' has no recent release, last release dates back to 2020-12-09 12:55:15.774030
+        link: https://pypi.org/project/pygresql/#history
+        package_name: pygresql

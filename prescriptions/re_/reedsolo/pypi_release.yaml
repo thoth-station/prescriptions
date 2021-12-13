@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReedsoloPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reedsolo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'reedsolo' has no recent release, last release dates back to 2020-05-20 06:38:49.952256
+        link: https://pypi.org/project/reedsolo/#history
+        package_name: reedsolo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RosdistroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rosdistro
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rosdistro' has no recent release, last release dates back to 2020-09-28 21:32:26.110633
+        link: https://pypi.org/project/rosdistro/#history
+        package_name: rosdistro

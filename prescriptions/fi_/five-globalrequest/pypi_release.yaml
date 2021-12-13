@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FiveGlobalrequestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: five-globalrequest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'five-globalrequest' has no recent release, last release dates back to 2017-06-08 10:25:56.396752
+        link: https://pypi.org/project/five-globalrequest/#history
+        package_name: five-globalrequest

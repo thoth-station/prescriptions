@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TxaioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txaio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'txaio' has no recent release, last release dates back to 2021-02-20 14:35:13.456680
+        link: https://pypi.org/project/txaio/#history
+        package_name: txaio

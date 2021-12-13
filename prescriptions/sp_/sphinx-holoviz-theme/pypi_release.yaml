@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxHolovizThemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-holoviz-theme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-holoviz-theme' has no recent release, last release dates back to 2020-12-10 10:32:55.153014
+        link: https://pypi.org/project/sphinx-holoviz-theme/#history
+        package_name: sphinx-holoviz-theme

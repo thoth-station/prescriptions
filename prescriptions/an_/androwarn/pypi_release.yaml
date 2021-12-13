@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AndrowarnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: androwarn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'androwarn' has no recent release, last release dates back to 2019-05-30 13:32:02.054955
+        link: https://pypi.org/project/androwarn/#history
+        package_name: androwarn

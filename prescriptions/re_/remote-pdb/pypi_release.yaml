@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RemotePdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: remote-pdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'remote-pdb' has no recent release, last release dates back to 2020-07-24 13:31:32.985550
+        link: https://pypi.org/project/remote-pdb/#history
+        package_name: remote-pdb

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParameterizedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parameterized
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'parameterized' has no recent release, last release dates back to 2021-01-09 20:35:18.235639
+        link: https://pypi.org/project/parameterized/#history
+        package_name: parameterized

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8ImportOrderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-import-order
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-import-order' has no recent release, last release dates back to 2019-03-04 08:39:13.091251
+        link: https://pypi.org/project/flake8-import-order/#history
+        package_name: flake8-import-order

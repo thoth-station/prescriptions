@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiocarbonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocarbon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiocarbon' has no recent release, last release dates back to 2020-05-27 15:26:32.894776
+        link: https://pypi.org/project/aiocarbon/#history
+        package_name: aiocarbon

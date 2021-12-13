@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TermcolorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: termcolor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'termcolor' has no recent release, last release dates back to 2011-01-13 18:45:33.979856
+        link: https://pypi.org/project/termcolor/#history
+        package_name: termcolor

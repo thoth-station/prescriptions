@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DnsgenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dnsgen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dnsgen' has no recent release, last release dates back to 2020-03-04 22:38:51.296732
+        link: https://pypi.org/project/dnsgen/#history
+        package_name: dnsgen

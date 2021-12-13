@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestServicesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-services
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-services' has no recent release, last release dates back to 2020-10-30 12:07:56.340025
+        link: https://pypi.org/project/pytest-services/#history
+        package_name: pytest-services

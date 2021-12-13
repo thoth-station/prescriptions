@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TorchcsprngPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchcsprng
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'torchcsprng' has no recent release, last release dates back to 2021-03-25 16:30:57.337376
+        link: https://pypi.org/project/torchcsprng/#history
+        package_name: torchcsprng

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SshpubkeysPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshpubkeys
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sshpubkeys' has no recent release, last release dates back to 2021-02-04 12:24:32.101720
+        link: https://pypi.org/project/sshpubkeys/#history
+        package_name: sshpubkeys

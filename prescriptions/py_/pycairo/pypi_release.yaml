@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycairoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycairo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycairo' has no recent release, last release dates back to 2021-06-03 17:33:41.020044
+        link: https://pypi.org/project/pycairo/#history
+        package_name: pycairo

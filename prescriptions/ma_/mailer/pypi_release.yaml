@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MailerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mailer' has no recent release, last release dates back to 2015-04-22 03:10:28.641436
+        link: https://pypi.org/project/mailer/#history
+        package_name: mailer

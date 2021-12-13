@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: W3libPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: w3lib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'w3lib' has no recent release, last release dates back to 2020-05-13 19:29:59.454079
+        link: https://pypi.org/project/w3lib/#history
+        package_name: w3lib

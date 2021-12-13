@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxIoamThemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-ioam-theme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-ioam-theme' has no recent release, last release dates back to 2018-09-01 14:58:05.517434
+        link: https://pypi.org/project/sphinx-ioam-theme/#history
+        package_name: sphinx-ioam-theme

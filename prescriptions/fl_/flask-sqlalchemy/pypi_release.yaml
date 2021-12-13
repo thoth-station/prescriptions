@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskSqlalchemyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sqlalchemy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-sqlalchemy' has no recent release, last release dates back to 2021-03-18 19:03:02.733091
+        link: https://pypi.org/project/flask-sqlalchemy/#history
+        package_name: flask-sqlalchemy

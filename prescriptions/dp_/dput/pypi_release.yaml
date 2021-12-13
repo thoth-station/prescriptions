@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DputPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dput
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dput' has no recent release, last release dates back to 2014-01-08 18:51:51.097563
+        link: https://pypi.org/project/dput/#history
+        package_name: dput

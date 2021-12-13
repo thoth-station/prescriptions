@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastscriptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastscript
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastscript' has no recent release, last release dates back to 2020-08-20 12:33:36.663226
+        link: https://pypi.org/project/fastscript/#history
+        package_name: fastscript

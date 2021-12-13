@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyalsaaudioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyalsaaudio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyalsaaudio' has no recent release, last release dates back to 2020-07-13 20:09:32.692074
+        link: https://pypi.org/project/pyalsaaudio/#history
+        package_name: pyalsaaudio

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WekaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: weka
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'weka' has no recent release, last release dates back to 2019-04-09 18:30:37.806558
+        link: https://pypi.org/project/weka/#history
+        package_name: weka

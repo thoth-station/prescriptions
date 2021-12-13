@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: path-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'path-py' has no recent release, last release dates back to 2020-07-27 23:53:38.373584
+        link: https://pypi.org/project/path-py/#history
+        package_name: path-py

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsFunctoolsPartialmethodPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-functools-partialmethod
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-functools-partialmethod' has no recent release, last release dates back to 2016-03-04 06:31:19.005164
+        link: https://pypi.org/project/backports-functools-partialmethod/#history
+        package_name: backports-functools-partialmethod

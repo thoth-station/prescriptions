@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoCacheUrlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cache-url
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-cache-url' has no recent release, last release dates back to 2021-02-11 16:33:33.263690
+        link: https://pypi.org/project/django-cache-url/#history
+        package_name: django-cache-url

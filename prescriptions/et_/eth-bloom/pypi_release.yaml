@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthBloomPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-bloom
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eth-bloom' has no recent release, last release dates back to 2021-04-21 15:29:37.673058
+        link: https://pypi.org/project/eth-bloom/#history
+        package_name: eth-bloom

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SampleratePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: samplerate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'samplerate' has no recent release, last release dates back to 2017-02-24 00:01:56.505278
+        link: https://pypi.org/project/samplerate/#history
+        package_name: samplerate

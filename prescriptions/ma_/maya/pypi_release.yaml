@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MayaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: maya
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'maya' has no recent release, last release dates back to 2019-01-06 11:23:22.495004
+        link: https://pypi.org/project/maya/#history
+        package_name: maya

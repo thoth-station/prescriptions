@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycomfoairPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycomfoair
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycomfoair' has no recent release, last release dates back to 2020-08-10 00:54:36.442241
+        link: https://pypi.org/project/pycomfoair/#history
+        package_name: pycomfoair

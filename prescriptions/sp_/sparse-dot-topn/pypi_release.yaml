@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SparseDotTopnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparse-dot-topn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sparse-dot-topn' has no recent release, last release dates back to 2021-06-10 19:53:39.565161
+        link: https://pypi.org/project/sparse-dot-topn/#history
+        package_name: sparse-dot-topn

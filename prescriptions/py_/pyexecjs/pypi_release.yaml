@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyexecjsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexecjs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyexecjs' has no recent release, last release dates back to 2018-01-18 04:33:55.126031
+        link: https://pypi.org/project/pyexecjs/#history
+        package_name: pyexecjs

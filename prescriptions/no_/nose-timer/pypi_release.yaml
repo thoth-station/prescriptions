@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NoseTimerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-timer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nose-timer' has no recent release, last release dates back to 2021-03-09 06:03:29.359885
+        link: https://pypi.org/project/nose-timer/#history
+        package_name: nose-timer

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8SuperCallPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-super-call
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-super-call' has no recent release, last release dates back to 2018-04-13 20:17:36.632319
+        link: https://pypi.org/project/flake8-super-call/#history
+        package_name: flake8-super-call

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HkdfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hkdf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hkdf' has no recent release, last release dates back to 2015-06-16 03:55:40.044215
+        link: https://pypi.org/project/hkdf/#history
+        package_name: hkdf

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Op1repackerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: op1repacker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'op1repacker' has no recent release, last release dates back to 2020-08-05 12:08:09.967533
+        link: https://pypi.org/project/op1repacker/#history
+        package_name: op1repacker

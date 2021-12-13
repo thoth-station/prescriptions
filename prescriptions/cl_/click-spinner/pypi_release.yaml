@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClickSpinnerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-spinner
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'click-spinner' has no recent release, last release dates back to 2020-04-24 07:14:51.955895
+        link: https://pypi.org/project/click-spinner/#history
+        package_name: click-spinner

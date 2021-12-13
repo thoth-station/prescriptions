@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthtokenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethtoken
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ethtoken' has no recent release, last release dates back to 2018-10-10 18:28:04.391507
+        link: https://pypi.org/project/ethtoken/#history
+        package_name: ethtoken

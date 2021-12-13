@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FudgePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fudge
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fudge' has no recent release, last release dates back to 2017-12-12 15:19:07.636674
+        link: https://pypi.org/project/fudge/#history
+        package_name: fudge

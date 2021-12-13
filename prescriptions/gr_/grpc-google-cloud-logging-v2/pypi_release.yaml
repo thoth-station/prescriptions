@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrpcGoogleCloudLoggingV2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-cloud-logging-v2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grpc-google-cloud-logging-v2' has no recent release, last release dates back to 2016-12-09 17:52:05.281352
+        link: https://pypi.org/project/grpc-google-cloud-logging-v2/#history
+        package_name: grpc-google-cloud-logging-v2

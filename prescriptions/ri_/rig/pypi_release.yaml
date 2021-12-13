@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RigPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rig
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rig' has no recent release, last release dates back to 2018-05-13 14:24:50.256395
+        link: https://pypi.org/project/rig/#history
+        package_name: rig

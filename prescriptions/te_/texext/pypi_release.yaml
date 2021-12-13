@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TexextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: texext
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'texext' has no recent release, last release dates back to 2020-04-12 17:52:10.890676
+        link: https://pypi.org/project/texext/#history
+        package_name: texext

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MidoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mido
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mido' has no recent release, last release dates back to 2021-05-10 15:44:57.790780
+        link: https://pypi.org/project/mido/#history
+        package_name: mido

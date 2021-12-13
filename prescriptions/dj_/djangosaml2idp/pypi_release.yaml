@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Djangosaml2idpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangosaml2idp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'djangosaml2idp' has no recent release, last release dates back to 2020-04-14 21:24:42.620629
+        link: https://pypi.org/project/djangosaml2idp/#history
+        package_name: djangosaml2idp

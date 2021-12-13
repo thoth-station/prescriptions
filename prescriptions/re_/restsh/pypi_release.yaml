@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RestshPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restsh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'restsh' has no recent release, last release dates back to 2012-05-02 23:59:54.678628
+        link: https://pypi.org/project/restsh/#history
+        package_name: restsh

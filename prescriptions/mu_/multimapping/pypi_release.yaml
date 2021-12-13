@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultimappingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multimapping
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multimapping' has no recent release, last release dates back to 2018-10-05 12:35:28.029640
+        link: https://pypi.org/project/multimapping/#history
+        package_name: multimapping

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SparkSklearnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spark-sklearn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spark-sklearn' has no recent release, last release dates back to 2019-01-30 20:22:00.355582
+        link: https://pypi.org/project/spark-sklearn/#history
+        package_name: spark-sklearn

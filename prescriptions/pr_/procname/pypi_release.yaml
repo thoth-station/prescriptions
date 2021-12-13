@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProcnamePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: procname
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'procname' has no recent release, last release dates back to 2009-10-06 22:17:55.849137
+        link: https://pypi.org/project/procname/#history
+        package_name: procname

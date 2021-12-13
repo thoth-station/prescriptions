@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OlefilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: olefile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'olefile' has no recent release, last release dates back to 2018-09-10 18:35:52.289073
+        link: https://pypi.org/project/olefile/#history
+        package_name: olefile

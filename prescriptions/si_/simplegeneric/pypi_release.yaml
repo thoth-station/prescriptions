@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimplegenericPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplegeneric
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'simplegeneric' has no recent release, last release dates back to 2012-04-01 23:39:06.146671
+        link: https://pypi.org/project/simplegeneric/#history
+        package_name: simplegeneric

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Static3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: static3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'static3' has no recent release, last release dates back to 2016-05-10 11:43:45.170146
+        link: https://pypi.org/project/static3/#history
+        package_name: static3

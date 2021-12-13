@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImageClassifiersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: image-classifiers
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'image-classifiers' has no recent release, last release dates back to 2019-10-04 10:27:28.193930
+        link: https://pypi.org/project/image-classifiers/#history
+        package_name: image-classifiers

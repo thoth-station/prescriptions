@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrettyprinterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prettyprinter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prettyprinter' has no recent release, last release dates back to 2019-06-22 07:04:43.916516
+        link: https://pypi.org/project/prettyprinter/#history
+        package_name: prettyprinter

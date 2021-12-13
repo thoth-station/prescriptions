@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Etcd3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etcd3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'etcd3' has no recent release, last release dates back to 2020-03-31 17:12:28.503401
+        link: https://pypi.org/project/etcd3/#history
+        package_name: etcd3

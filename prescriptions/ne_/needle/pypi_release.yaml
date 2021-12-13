@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeedlePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: needle
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'needle' has no recent release, last release dates back to 2017-04-02 23:28:24.964111
+        link: https://pypi.org/project/needle/#history
+        package_name: needle

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoCompatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-compat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-compat' has no recent release, last release dates back to 2020-11-27 18:55:30.546064
+        link: https://pypi.org/project/jaraco-compat/#history
+        package_name: jaraco-compat

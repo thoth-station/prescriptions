@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TracnavPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tracnav
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tracnav' has no recent release, last release dates back to 2021-02-26 17:30:36.931929
+        link: https://pypi.org/project/tracnav/#history
+        package_name: tracnav

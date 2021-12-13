@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtDevtestlabsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-devtestlabs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-devtestlabs' has no recent release, last release dates back to 2021-01-04 03:58:38.920244
+        link: https://pypi.org/project/azure-mgmt-devtestlabs/#history
+        package_name: azure-mgmt-devtestlabs

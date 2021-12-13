@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LiacArffPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: liac-arff
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'liac-arff' has no recent release, last release dates back to 2020-08-31 18:59:16.878749
+        link: https://pypi.org/project/liac-arff/#history
+        package_name: liac-arff

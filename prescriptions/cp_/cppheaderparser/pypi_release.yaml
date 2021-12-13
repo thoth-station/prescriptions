@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CppheaderparserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cppheaderparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cppheaderparser' has no recent release, last release dates back to 2016-11-22 01:21:47.955828
+        link: https://pypi.org/project/cppheaderparser/#history
+        package_name: cppheaderparser

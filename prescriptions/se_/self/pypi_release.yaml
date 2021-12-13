@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SelfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: self
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'self' has no recent release, last release dates back to 2020-12-03 20:39:29.035166
+        link: https://pypi.org/project/self/#history
+        package_name: self

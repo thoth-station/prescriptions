@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyelftoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyelftools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyelftools' has no recent release, last release dates back to 2020-10-27 13:45:22.536679
+        link: https://pypi.org/project/pyelftools/#history
+        package_name: pyelftools

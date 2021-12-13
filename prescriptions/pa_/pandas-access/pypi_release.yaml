@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PandasAccessPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandas-access
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pandas-access' has no recent release, last release dates back to 2016-06-07 21:02:38.242462
+        link: https://pypi.org/project/pandas-access/#history
+        package_name: pandas-access

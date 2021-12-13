@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BotoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'boto' has no recent release, last release dates back to 2018-07-11 20:58:58.057325
+        link: https://pypi.org/project/boto/#history
+        package_name: boto

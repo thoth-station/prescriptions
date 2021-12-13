@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NavalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: naval
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'naval' has no recent release, last release dates back to 2019-06-04 21:32:04.822385
+        link: https://pypi.org/project/naval/#history
+        package_name: naval

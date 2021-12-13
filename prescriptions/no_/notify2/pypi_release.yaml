@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Notify2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notify2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'notify2' has no recent release, last release dates back to 2017-04-28 14:03:44.487146
+        link: https://pypi.org/project/notify2/#history
+        package_name: notify2

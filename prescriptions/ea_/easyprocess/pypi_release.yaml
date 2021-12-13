@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EasyprocessPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyprocess
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'easyprocess' has no recent release, last release dates back to 2020-05-03 10:09:37.726345
+        link: https://pypi.org/project/easyprocess/#history
+        package_name: easyprocess

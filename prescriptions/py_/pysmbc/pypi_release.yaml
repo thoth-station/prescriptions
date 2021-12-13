@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysmbcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmbc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysmbc' has no recent release, last release dates back to 2020-10-26 02:36:59.410488
+        link: https://pypi.org/project/pysmbc/#history
+        package_name: pysmbc

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythreejsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythreejs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pythreejs' has no recent release, last release dates back to 2021-02-26 14:01:23.354785
+        link: https://pypi.org/project/pythreejs/#history
+        package_name: pythreejs

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UkpostcodeparserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ukpostcodeparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ukpostcodeparser' has no recent release, last release dates back to 2017-09-04 22:39:30.812026
+        link: https://pypi.org/project/ukpostcodeparser/#history
+        package_name: ukpostcodeparser

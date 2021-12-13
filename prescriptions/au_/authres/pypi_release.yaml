@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AuthresPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authres
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'authres' has no recent release, last release dates back to 2019-08-03 19:38:00.494937
+        link: https://pypi.org/project/authres/#history
+        package_name: authres

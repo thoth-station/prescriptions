@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SelinonlibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selinonlib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'selinonlib' has no recent release, last release dates back to 2017-12-09 11:15:43.700661
+        link: https://pypi.org/project/selinonlib/#history
+        package_name: selinonlib

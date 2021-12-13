@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VerspecPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: verspec
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'verspec' has no recent release, last release dates back to 2020-11-30 02:24:09.646641
+        link: https://pypi.org/project/verspec/#history
+        package_name: verspec

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TestingPostgresqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testing-postgresql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'testing-postgresql' has no recent release, last release dates back to 2016-02-04 13:57:11.857386
+        link: https://pypi.org/project/testing-postgresql/#history
+        package_name: testing-postgresql

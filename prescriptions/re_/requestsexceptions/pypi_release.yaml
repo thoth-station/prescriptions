@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsexceptionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requestsexceptions
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'requestsexceptions' has no recent release, last release dates back to 2018-02-01 17:04:45.294607
+        link: https://pypi.org/project/requestsexceptions/#history
+        package_name: requestsexceptions

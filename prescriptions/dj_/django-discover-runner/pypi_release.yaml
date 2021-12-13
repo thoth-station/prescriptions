@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoDiscoverRunnerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-discover-runner
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-discover-runner' has no recent release, last release dates back to 2013-09-11 15:36:05.817197
+        link: https://pypi.org/project/django-discover-runner/#history
+        package_name: django-discover-runner

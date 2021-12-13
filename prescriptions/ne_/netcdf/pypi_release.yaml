@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NetcdfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netcdf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'netcdf' has no recent release, last release dates back to 2015-12-06 22:44:54.207688
+        link: https://pypi.org/project/netcdf/#history
+        package_name: netcdf

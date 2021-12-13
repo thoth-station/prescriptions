@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TabulatorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabulator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tabulator' has no recent release, last release dates back to 2021-03-21 07:47:02.403294
+        link: https://pypi.org/project/tabulator/#history
+        package_name: tabulator

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrandalfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grandalf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grandalf' has no recent release, last release dates back to 2020-03-19 19:00:22.005780
+        link: https://pypi.org/project/grandalf/#history
+        package_name: grandalf

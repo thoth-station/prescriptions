@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PretrainedmodelsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretrainedmodels
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pretrainedmodels' has no recent release, last release dates back to 2018-10-29 08:18:45.373216
+        link: https://pypi.org/project/pretrainedmodels/#history
+        package_name: pretrainedmodels

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathmatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathmatch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pathmatch' has no recent release, last release dates back to 2020-05-03 23:38:51.226942
+        link: https://pypi.org/project/pathmatch/#history
+        package_name: pathmatch

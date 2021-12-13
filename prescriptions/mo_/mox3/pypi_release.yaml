@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Mox3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mox3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mox3' has no recent release, last release dates back to 2020-06-04 10:42:17.463671
+        link: https://pypi.org/project/mox3/#history
+        package_name: mox3

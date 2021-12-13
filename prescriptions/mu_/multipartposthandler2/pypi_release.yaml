@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Multipartposthandler2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multipartposthandler2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multipartposthandler2' has no recent release, last release dates back to 2014-09-25 02:05:21.335055
+        link: https://pypi.org/project/multipartposthandler2/#history
+        package_name: multipartposthandler2

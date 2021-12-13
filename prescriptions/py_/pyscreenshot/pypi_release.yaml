@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyscreenshotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyscreenshot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyscreenshot' has no recent release, last release dates back to 2021-04-18 19:30:24.431271
+        link: https://pypi.org/project/pyscreenshot/#history
+        package_name: pyscreenshot

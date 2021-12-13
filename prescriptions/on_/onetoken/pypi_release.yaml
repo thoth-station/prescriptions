@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OnetokenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onetoken
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'onetoken' has no recent release, last release dates back to 2021-02-01 08:18:21.656965
+        link: https://pypi.org/project/onetoken/#history
+        package_name: onetoken

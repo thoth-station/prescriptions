@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterlabTemplatesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterlab-templates
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyterlab-templates' has no recent release, last release dates back to 2021-03-28 03:21:45.063988
+        link: https://pypi.org/project/jupyterlab-templates/#history
+        package_name: jupyterlab-templates

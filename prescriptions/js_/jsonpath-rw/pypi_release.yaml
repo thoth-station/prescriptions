@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonpathRwPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpath-rw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonpath-rw' has no recent release, last release dates back to 2015-04-19 01:47:15.060153
+        link: https://pypi.org/project/jsonpath-rw/#history
+        package_name: jsonpath-rw

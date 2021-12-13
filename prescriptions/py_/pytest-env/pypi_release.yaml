@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestEnvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-env
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-env' has no recent release, last release dates back to 2017-06-16 19:51:35.860385
+        link: https://pypi.org/project/pytest-env/#history
+        package_name: pytest-env

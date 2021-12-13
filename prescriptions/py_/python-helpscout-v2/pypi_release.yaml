@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonHelpscoutV2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-helpscout-v2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-helpscout-v2' has no recent release, last release dates back to 2019-10-14 15:59:16.099918
+        link: https://pypi.org/project/python-helpscout-v2/#history
+        package_name: python-helpscout-v2

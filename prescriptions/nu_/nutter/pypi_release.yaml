@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NutterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nutter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nutter' has no recent release, last release dates back to 2020-11-09 21:28:00.669014
+        link: https://pypi.org/project/nutter/#history
+        package_name: nutter

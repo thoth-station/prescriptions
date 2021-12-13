@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeSendmailPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-sendmail
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-sendmail' has no recent release, last release dates back to 2021-01-18 13:36:35.296415
+        link: https://pypi.org/project/zope-sendmail/#history
+        package_name: zope-sendmail

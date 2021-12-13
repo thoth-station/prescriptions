@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjrillPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djrill
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'djrill' has no recent release, last release dates back to 2016-04-15 00:24:23.540820
+        link: https://pypi.org/project/djrill/#history
+        package_name: djrill

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColconPkgConfigPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-pkg-config
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colcon-pkg-config' has no recent release, last release dates back to 2018-06-28 19:51:40.688020
+        link: https://pypi.org/project/colcon-pkg-config/#history
+        package_name: colcon-pkg-config

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YamlordereddictloaderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yamlordereddictloader
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yamlordereddictloader' has no recent release, last release dates back to 2017-08-03 17:06:31.254022
+        link: https://pypi.org/project/yamlordereddictloader/#history
+        package_name: yamlordereddictloader

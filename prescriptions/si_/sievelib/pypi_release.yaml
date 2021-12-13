@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SievelibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sievelib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sievelib' has no recent release, last release dates back to 2020-12-07 10:24:05.394467
+        link: https://pypi.org/project/sievelib/#history
+        package_name: sievelib

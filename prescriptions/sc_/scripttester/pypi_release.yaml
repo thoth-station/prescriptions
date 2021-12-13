@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScripttesterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scripttester
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scripttester' has no recent release, last release dates back to 2018-02-03 18:09:01.966394
+        link: https://pypi.org/project/scripttester/#history
+        package_name: scripttester

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HiredisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hiredis
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hiredis' has no recent release, last release dates back to 2021-03-28 15:17:42.842787
+        link: https://pypi.org/project/hiredis/#history
+        package_name: hiredis

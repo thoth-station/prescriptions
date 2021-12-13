@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyobjcFrameworkQtkitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyobjc-framework-qtkit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyobjc-framework-qtkit' has no recent release, last release dates back to 2020-07-08 20:02:58.554893
+        link: https://pypi.org/project/pyobjc-framework-qtkit/#history
+        package_name: pyobjc-framework-qtkit

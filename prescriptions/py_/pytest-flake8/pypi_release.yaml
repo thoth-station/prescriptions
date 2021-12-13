@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestFlake8PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flake8
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-flake8' has no recent release, last release dates back to 2020-12-16 22:39:55.431814
+        link: https://pypi.org/project/pytest-flake8/#history
+        package_name: pytest-flake8

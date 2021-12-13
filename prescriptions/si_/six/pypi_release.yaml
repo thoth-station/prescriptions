@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SixPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: six
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'six' has no recent release, last release dates back to 2021-05-05 14:18:18.379524
+        link: https://pypi.org/project/six/#history
+        package_name: six

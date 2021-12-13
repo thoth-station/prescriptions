@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MsgpackNumpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msgpack-numpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'msgpack-numpy' has no recent release, last release dates back to 2020-09-30 21:23:11.334778
+        link: https://pypi.org/project/msgpack-numpy/#history
+        package_name: msgpack-numpy

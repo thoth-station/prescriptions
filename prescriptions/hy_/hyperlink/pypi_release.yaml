@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HyperlinkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hyperlink
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hyperlink' has no recent release, last release dates back to 2021-01-08 05:51:22.906881
+        link: https://pypi.org/project/hyperlink/#history
+        package_name: hyperlink

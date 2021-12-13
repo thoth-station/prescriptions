@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureCliCommandModulesNspkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cli-command-modules-nspkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-cli-command-modules-nspkg' has no recent release, last release dates back to 2020-03-31 02:05:17.302792
+        link: https://pypi.org/project/azure-cli-command-modules-nspkg/#history
+        package_name: azure-cli-command-modules-nspkg

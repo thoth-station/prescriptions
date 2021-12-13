@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TypingCompatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-compat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'typing-compat' has no recent release, last release dates back to 2020-02-23 07:28:48.106168
+        link: https://pypi.org/project/typing-compat/#history
+        package_name: typing-compat

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycmdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycmd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycmd' has no recent release, last release dates back to 2015-04-22 19:00:25.756291
+        link: https://pypi.org/project/pycmd/#history
+        package_name: pycmd

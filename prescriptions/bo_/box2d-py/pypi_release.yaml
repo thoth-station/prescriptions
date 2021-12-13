@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Box2dPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: box2d-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'box2d-py' has no recent release, last release dates back to 2018-11-17 00:55:06.152730
+        link: https://pypi.org/project/box2d-py/#history
+        package_name: box2d-py

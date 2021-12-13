@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pysha3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysha3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysha3' has no recent release, last release dates back to 2017-07-18 12:50:13.470631
+        link: https://pypi.org/project/pysha3/#history
+        package_name: pysha3

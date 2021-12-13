@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8StringFormatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-string-format
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-string-format' has no recent release, last release dates back to 2020-02-16 15:27:51.045089
+        link: https://pypi.org/project/flake8-string-format/#history
+        package_name: flake8-string-format

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskJwtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-jwt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-jwt' has no recent release, last release dates back to 2015-11-03 14:41:45.333883
+        link: https://pypi.org/project/flask-jwt/#history
+        package_name: flask-jwt

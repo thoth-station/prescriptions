@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GlobrePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: globre
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'globre' has no recent release, last release dates back to 2016-10-29 20:19:27.413346
+        link: https://pypi.org/project/globre/#history
+        package_name: globre

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Js2pyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: js2py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'js2py' has no recent release, last release dates back to 2021-04-01 18:29:45.838370
+        link: https://pypi.org/project/js2py/#history
+        package_name: js2py

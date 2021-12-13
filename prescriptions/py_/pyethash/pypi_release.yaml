@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyethashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyethash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyethash' has no recent release, last release dates back to 2015-08-11 06:55:48.891223
+        link: https://pypi.org/project/pyethash/#history
+        package_name: pyethash

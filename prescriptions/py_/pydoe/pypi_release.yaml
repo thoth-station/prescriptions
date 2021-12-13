@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydoePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydoe
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydoe' has no recent release, last release dates back to 2015-07-13 20:56:28.603545
+        link: https://pypi.org/project/pydoe/#history
+        package_name: pydoe

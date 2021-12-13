@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoJsonfieldPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-jsonfield
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-jsonfield' has no recent release, last release dates back to 2020-10-28 17:32:08.170487
+        link: https://pypi.org/project/django-jsonfield/#history
+        package_name: django-jsonfield

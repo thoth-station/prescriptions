@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeurodspPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neurodsp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neurodsp' has no recent release, last release dates back to 2020-07-21 23:05:33.068781
+        link: https://pypi.org/project/neurodsp/#history
+        package_name: neurodsp

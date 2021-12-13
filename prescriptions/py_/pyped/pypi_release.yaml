@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyped
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyped' has no recent release, last release dates back to 2014-06-14 12:09:42.344726
+        link: https://pypi.org/project/pyped/#history
+        package_name: pyped

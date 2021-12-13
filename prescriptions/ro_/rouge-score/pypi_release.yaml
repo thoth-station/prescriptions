@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RougeScorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rouge-score
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rouge-score' has no recent release, last release dates back to 2020-06-12 05:23:16.070689
+        link: https://pypi.org/project/rouge-score/#history
+        package_name: rouge-score

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygmentsGithubLexersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygments-github-lexers
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygments-github-lexers' has no recent release, last release dates back to 2015-01-21 02:12:03.768466
+        link: https://pypi.org/project/pygments-github-lexers/#history
+        package_name: pygments-github-lexers

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UpnpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: upnpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'upnpy' has no recent release, last release dates back to 2020-08-14 16:35:00.880256
+        link: https://pypi.org/project/upnpy/#history
+        package_name: upnpy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CsiphashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: csiphash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'csiphash' has no recent release, last release dates back to 2017-04-27 09:36:26.633075
+        link: https://pypi.org/project/csiphash/#history
+        package_name: csiphash

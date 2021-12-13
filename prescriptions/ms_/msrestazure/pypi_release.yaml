@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MsrestazurePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msrestazure
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'msrestazure' has no recent release, last release dates back to 2020-06-29 20:04:05.634198
+        link: https://pypi.org/project/msrestazure/#history
+        package_name: msrestazure

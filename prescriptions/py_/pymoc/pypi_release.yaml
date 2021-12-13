@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymocPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymoc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymoc' has no recent release, last release dates back to 2017-05-31 03:07:10.411678
+        link: https://pypi.org/project/pymoc/#history
+        package_name: pymoc

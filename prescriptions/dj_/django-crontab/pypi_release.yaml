@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoCrontabPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crontab
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-crontab' has no recent release, last release dates back to 2016-03-07 19:35:54.714528
+        link: https://pypi.org/project/django-crontab/#history
+        package_name: django-crontab

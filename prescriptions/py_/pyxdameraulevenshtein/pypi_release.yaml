@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyxdameraulevenshteinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxdameraulevenshtein
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyxdameraulevenshtein' has no recent release, last release dates back to 2021-02-09 18:51:44.034560
+        link: https://pypi.org/project/pyxdameraulevenshtein/#history
+        package_name: pyxdameraulevenshtein

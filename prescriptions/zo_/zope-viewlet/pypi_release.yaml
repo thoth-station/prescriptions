@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeViewletPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-viewlet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-viewlet' has no recent release, last release dates back to 2018-12-17 07:21:46.692218
+        link: https://pypi.org/project/zope-viewlet/#history
+        package_name: zope-viewlet

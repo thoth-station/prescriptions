@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProbablepeoplePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: probablepeople
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'probablepeople' has no recent release, last release dates back to 2017-05-30 15:12:14.993762
+        link: https://pypi.org/project/probablepeople/#history
+        package_name: probablepeople

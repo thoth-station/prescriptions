@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PcapyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pcapy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pcapy' has no recent release, last release dates back to 2018-06-17 13:29:02.860145
+        link: https://pypi.org/project/pcapy/#history
+        package_name: pcapy

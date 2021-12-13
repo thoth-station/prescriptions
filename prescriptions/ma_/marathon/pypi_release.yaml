@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MarathonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marathon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'marathon' has no recent release, last release dates back to 2020-08-21 16:31:22.413649
+        link: https://pypi.org/project/marathon/#history
+        package_name: marathon

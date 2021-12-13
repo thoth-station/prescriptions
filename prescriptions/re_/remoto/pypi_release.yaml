@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RemotoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: remoto
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'remoto' has no recent release, last release dates back to 2021-05-18 20:09:44.753897
+        link: https://pypi.org/project/remoto/#history
+        package_name: remoto

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiocometdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocometd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiocometd' has no recent release, last release dates back to 2019-03-14 16:44:40.143531
+        link: https://pypi.org/project/aiocometd/#history
+        package_name: aiocometd

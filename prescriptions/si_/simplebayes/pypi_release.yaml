@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimplebayesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplebayes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'simplebayes' has no recent release, last release dates back to 2015-04-22 01:20:15.253740
+        link: https://pypi.org/project/simplebayes/#history
+        package_name: simplebayes

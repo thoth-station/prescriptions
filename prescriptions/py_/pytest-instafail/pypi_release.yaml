@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestInstafailPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-instafail
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-instafail' has no recent release, last release dates back to 2020-06-14 09:54:25.918969
+        link: https://pypi.org/project/pytest-instafail/#history
+        package_name: pytest-instafail

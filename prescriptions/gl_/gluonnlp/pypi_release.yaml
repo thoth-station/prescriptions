@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GluonnlpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gluonnlp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gluonnlp' has no recent release, last release dates back to 2020-08-13 19:17:42.482782
+        link: https://pypi.org/project/gluonnlp/#history
+        package_name: gluonnlp

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vit' has no recent release, last release dates back to 2021-02-28 21:22:21.358868
+        link: https://pypi.org/project/vit/#history
+        package_name: vit

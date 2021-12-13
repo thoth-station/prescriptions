@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YellowbrickPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yellowbrick
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yellowbrick' has no recent release, last release dates back to 2021-02-13 20:42:48.494542
+        link: https://pypi.org/project/yellowbrick/#history
+        package_name: yellowbrick

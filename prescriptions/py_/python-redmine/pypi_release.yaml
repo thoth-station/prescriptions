@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonRedminePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-redmine
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-redmine' has no recent release, last release dates back to 2020-05-21 11:55:51.068506
+        link: https://pypi.org/project/python-redmine/#history
+        package_name: python-redmine

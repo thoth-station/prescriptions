@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeComponentvocabularyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-componentvocabulary
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-componentvocabulary' has no recent release, last release dates back to 2018-10-19 13:10:09.318354
+        link: https://pypi.org/project/zope-componentvocabulary/#history
+        package_name: zope-componentvocabulary

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AaarghPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aaargh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aaargh' has no recent release, last release dates back to 2014-03-13 22:15:49.892405
+        link: https://pypi.org/project/aaargh/#history
+        package_name: aaargh

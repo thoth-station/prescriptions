@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Stix2PatternsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stix2-patterns
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stix2-patterns' has no recent release, last release dates back to 2020-12-10 20:14:56.822556
+        link: https://pypi.org/project/stix2-patterns/#history
+        package_name: stix2-patterns

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProdyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prody
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prody' has no recent release, last release dates back to 2021-02-07 16:25:36.701318
+        link: https://pypi.org/project/prody/#history
+        package_name: prody

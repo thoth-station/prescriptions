@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyfluxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyflux
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyflux' has no recent release, last release dates back to 2017-06-16 09:44:56.157938
+        link: https://pypi.org/project/pyflux/#history
+        package_name: pyflux

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylintFailUnderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-fail-under
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylint-fail-under' has no recent release, last release dates back to 2019-10-14 23:30:24.794830
+        link: https://pypi.org/project/pylint-fail-under/#history
+        package_name: pylint-fail-under

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NudatusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nudatus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nudatus' has no recent release, last release dates back to 2021-02-03 00:42:54.947067
+        link: https://pypi.org/project/nudatus/#history
+        package_name: nudatus

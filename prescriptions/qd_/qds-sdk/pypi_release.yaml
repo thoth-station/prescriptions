@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QdsSdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qds-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'qds-sdk' has no recent release, last release dates back to 2020-10-06 10:38:45.822614
+        link: https://pypi.org/project/qds-sdk/#history
+        package_name: qds-sdk

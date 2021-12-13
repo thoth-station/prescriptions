@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HilbertcurvePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hilbertcurve
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hilbertcurve' has no recent release, last release dates back to 2021-03-29 20:43:27.794785
+        link: https://pypi.org/project/hilbertcurve/#history
+        package_name: hilbertcurve

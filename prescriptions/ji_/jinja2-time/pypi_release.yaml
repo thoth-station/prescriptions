@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Jinja2TimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2-time
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jinja2-time' has no recent release, last release dates back to 2016-06-08 23:36:52.454491
+        link: https://pypi.org/project/jinja2-time/#history
+        package_name: jinja2-time

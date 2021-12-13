@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskSslifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-sslify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-sslify' has no recent release, last release dates back to 2015-04-02 20:25:24.407301
+        link: https://pypi.org/project/flask-sslify/#history
+        package_name: flask-sslify

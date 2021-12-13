@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GekitchenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gekitchen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gekitchen' has no recent release, last release dates back to 2020-12-20 00:12:55.906742
+        link: https://pypi.org/project/gekitchen/#history
+        package_name: gekitchen

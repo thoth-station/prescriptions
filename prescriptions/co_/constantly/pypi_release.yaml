@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConstantlyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: constantly
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'constantly' has no recent release, last release dates back to 2015-08-11 13:39:30.204993
+        link: https://pypi.org/project/constantly/#history
+        package_name: constantly

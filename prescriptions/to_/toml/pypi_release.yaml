@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TomlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'toml' has no recent release, last release dates back to 2020-11-01 01:40:22.204866
+        link: https://pypi.org/project/toml/#history
+        package_name: toml

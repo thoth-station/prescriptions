@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MapboxVectorTilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapbox-vector-tile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mapbox-vector-tile' has no recent release, last release dates back to 2021-05-20 22:52:53.116377
+        link: https://pypi.org/project/mapbox-vector-tile/#history
+        package_name: mapbox-vector-tile

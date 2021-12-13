@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydenticonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydenticon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydenticon' has no recent release, last release dates back to 2017-09-04 12:50:03.107569
+        link: https://pypi.org/project/pydenticon/#history
+        package_name: pydenticon

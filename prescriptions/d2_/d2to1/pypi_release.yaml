@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: D2to1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: d2to1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'd2to1' has no recent release, last release dates back to 2015-10-02 18:24:38.101331
+        link: https://pypi.org/project/d2to1/#history
+        package_name: d2to1

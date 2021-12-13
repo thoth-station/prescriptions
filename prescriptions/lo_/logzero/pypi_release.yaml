@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LogzeroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logzero
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'logzero' has no recent release, last release dates back to 2021-03-17 11:24:21.059685
+        link: https://pypi.org/project/logzero/#history
+        package_name: logzero

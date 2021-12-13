@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlatdictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatdict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flatdict' has no recent release, last release dates back to 2020-02-13 19:16:14.300444
+        link: https://pypi.org/project/flatdict/#history
+        package_name: flatdict

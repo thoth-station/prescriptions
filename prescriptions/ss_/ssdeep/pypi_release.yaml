@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SsdeepPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssdeep
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ssdeep' has no recent release, last release dates back to 2019-10-03 20:50:23.924264
+        link: https://pypi.org/project/ssdeep/#history
+        package_name: ssdeep

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Mmh3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mmh3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mmh3' has no recent release, last release dates back to 2021-02-23 14:45:45.962059
+        link: https://pypi.org/project/mmh3/#history
+        package_name: mmh3

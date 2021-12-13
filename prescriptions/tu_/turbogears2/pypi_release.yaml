@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Turbogears2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: turbogears2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'turbogears2' has no recent release, last release dates back to 2020-03-01 15:35:47.870988
+        link: https://pypi.org/project/turbogears2/#history
+        package_name: turbogears2

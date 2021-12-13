@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyzipperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzipper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyzipper' has no recent release, last release dates back to 2021-04-08 03:45:40.432238
+        link: https://pypi.org/project/pyzipper/#history
+        package_name: pyzipper

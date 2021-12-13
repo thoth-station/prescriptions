@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BeanbagPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beanbag
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'beanbag' has no recent release, last release dates back to 2015-03-31 13:07:33.499392
+        link: https://pypi.org/project/beanbag/#history
+        package_name: beanbag

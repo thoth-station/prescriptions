@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PtkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ptk' has no recent release, last release dates back to 2020-11-02 10:19:44.470778
+        link: https://pypi.org/project/ptk/#history
+        package_name: ptk

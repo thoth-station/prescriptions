@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RstLinkerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst-linker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rst-linker' has no recent release, last release dates back to 2021-03-10 22:12:39.678194
+        link: https://pypi.org/project/rst-linker/#history
+        package_name: rst-linker

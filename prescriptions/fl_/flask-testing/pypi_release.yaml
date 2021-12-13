@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskTestingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-testing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-testing' has no recent release, last release dates back to 2020-12-24 16:51:48.067985
+        link: https://pypi.org/project/flask-testing/#history
+        package_name: flask-testing

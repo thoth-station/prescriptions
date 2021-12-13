@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonDocxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-docx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-docx' has no recent release, last release dates back to 2021-05-15 22:18:24.824934
+        link: https://pypi.org/project/python-docx/#history
+        package_name: python-docx

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MyhdlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: myhdl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'myhdl' has no recent release, last release dates back to 2019-05-31 22:28:03.007378
+        link: https://pypi.org/project/myhdl/#history
+        package_name: myhdl

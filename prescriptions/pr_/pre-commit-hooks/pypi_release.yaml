@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PreCommitHooksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit-hooks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pre-commit-hooks' has no recent release, last release dates back to 2021-05-16 15:30:29.739534
+        link: https://pypi.org/project/pre-commit-hooks/#history
+        package_name: pre-commit-hooks

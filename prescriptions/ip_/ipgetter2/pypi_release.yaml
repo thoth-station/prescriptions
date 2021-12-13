@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ipgetter2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipgetter2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipgetter2' has no recent release, last release dates back to 2020-01-26 11:03:13.742702
+        link: https://pypi.org/project/ipgetter2/#history
+        package_name: ipgetter2

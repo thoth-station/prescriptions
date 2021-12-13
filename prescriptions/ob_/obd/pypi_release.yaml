@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ObdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: obd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'obd' has no recent release, last release dates back to 2019-05-15 04:25:17.745965
+        link: https://pypi.org/project/obd/#history
+        package_name: obd

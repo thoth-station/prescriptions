@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SklearnPandasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sklearn-pandas
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sklearn-pandas' has no recent release, last release dates back to 2021-05-08 08:14:29.164963
+        link: https://pypi.org/project/sklearn-pandas/#history
+        package_name: sklearn-pandas

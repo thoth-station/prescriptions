@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UrwidtreesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urwidtrees
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'urwidtrees' has no recent release, last release dates back to 2020-07-05 11:49:20.631221
+        link: https://pypi.org/project/urwidtrees/#history
+        package_name: urwidtrees

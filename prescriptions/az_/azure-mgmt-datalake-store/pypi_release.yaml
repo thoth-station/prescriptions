@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtDatalakeStorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-datalake-store
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-datalake-store' has no recent release, last release dates back to 2018-06-14 20:57:07.149884
+        link: https://pypi.org/project/azure-mgmt-datalake-store/#history
+        package_name: azure-mgmt-datalake-store

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsFunctoolsLruCachePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-functools-lru-cache
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-functools-lru-cache' has no recent release, last release dates back to 2021-04-11 19:31:40.088100
+        link: https://pypi.org/project/backports-functools-lru-cache/#history
+        package_name: backports-functools-lru-cache

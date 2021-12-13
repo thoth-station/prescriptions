@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VincentyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vincenty
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vincenty' has no recent release, last release dates back to 2016-01-24 08:49:26.739341
+        link: https://pypi.org/project/vincenty/#history
+        package_name: vincenty

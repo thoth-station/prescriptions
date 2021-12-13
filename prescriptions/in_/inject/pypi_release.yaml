@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InjectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inject
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'inject' has no recent release, last release dates back to 2020-08-17 17:52:55.100941
+        link: https://pypi.org/project/inject/#history
+        package_name: inject

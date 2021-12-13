@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InstantPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: instant
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'instant' has no recent release, last release dates back to 2017-05-09 12:41:13.535740
+        link: https://pypi.org/project/instant/#history
+        package_name: instant

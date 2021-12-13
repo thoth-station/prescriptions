@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TimeunitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeunit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'timeunit' has no recent release, last release dates back to 2018-03-28 01:45:20.470354
+        link: https://pypi.org/project/timeunit/#history
+        package_name: timeunit

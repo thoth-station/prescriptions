@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StepsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: steps
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'steps' has no recent release, last release dates back to 2015-07-03 04:35:12.526404
+        link: https://pypi.org/project/steps/#history
+        package_name: steps

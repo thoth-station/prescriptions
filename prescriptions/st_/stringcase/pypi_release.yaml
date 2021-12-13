@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StringcasePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stringcase
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stringcase' has no recent release, last release dates back to 2017-08-06 01:40:57.021784
+        link: https://pypi.org/project/stringcase/#history
+        package_name: stringcase

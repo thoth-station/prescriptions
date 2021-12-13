@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsimarkupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansimarkup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansimarkup' has no recent release, last release dates back to 2021-01-27 15:37:21.526552
+        link: https://pypi.org/project/ansimarkup/#history
+        package_name: ansimarkup

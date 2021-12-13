@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PastelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pastel' has no recent release, last release dates back to 2020-09-16 19:21:12.430848
+        link: https://pypi.org/project/pastel/#history
+        package_name: pastel

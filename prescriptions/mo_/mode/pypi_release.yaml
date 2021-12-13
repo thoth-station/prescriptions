@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ModePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mode
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mode' has no recent release, last release dates back to 2020-09-28 10:22:09.381047
+        link: https://pypi.org/project/mode/#history
+        package_name: mode

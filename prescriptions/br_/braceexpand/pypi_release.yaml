@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BraceexpandPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: braceexpand
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'braceexpand' has no recent release, last release dates back to 2021-05-07 13:49:07.323370
+        link: https://pypi.org/project/braceexpand/#history
+        package_name: braceexpand

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FirehosePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: firehose
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'firehose' has no recent release, last release dates back to 2017-05-26 18:14:14.162203
+        link: https://pypi.org/project/firehose/#history
+        package_name: firehose

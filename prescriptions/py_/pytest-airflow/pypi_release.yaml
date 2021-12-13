@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestAirflowPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-airflow
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-airflow' has no recent release, last release dates back to 2019-04-03 16:16:42.381040
+        link: https://pypi.org/project/pytest-airflow/#history
+        package_name: pytest-airflow

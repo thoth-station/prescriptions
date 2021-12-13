@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GumboPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gumbo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gumbo' has no recent release, last release dates back to 2015-05-01 02:52:53.027353
+        link: https://pypi.org/project/gumbo/#history
+        package_name: gumbo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrettyBadProtocolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretty-bad-protocol
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pretty-bad-protocol' has no recent release, last release dates back to 2018-08-01 22:04:55.141568
+        link: https://pypi.org/project/pretty-bad-protocol/#history
+        package_name: pretty-bad-protocol

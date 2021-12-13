@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpypublishPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipypublish
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipypublish' has no recent release, last release dates back to 2020-08-06 16:53:27.016171
+        link: https://pypi.org/project/ipypublish/#history
+        package_name: ipypublish

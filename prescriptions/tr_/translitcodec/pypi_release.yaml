@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TranslitcodecPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: translitcodec
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'translitcodec' has no recent release, last release dates back to 2021-05-08 18:39:09.432301
+        link: https://pypi.org/project/translitcodec/#history
+        package_name: translitcodec

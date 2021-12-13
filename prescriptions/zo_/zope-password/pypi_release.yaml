@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopePasswordPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-password
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-password' has no recent release, last release dates back to 2017-09-01 13:10:20.714123
+        link: https://pypi.org/project/zope-password/#history
+        package_name: zope-password

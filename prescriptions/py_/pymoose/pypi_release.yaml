@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymoosePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymoose
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymoose' has no recent release, last release dates back to 2020-02-05 08:01:07.665578
+        link: https://pypi.org/project/pymoose/#history
+        package_name: pymoose

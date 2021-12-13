@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonrefPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonref
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonref' has no recent release, last release dates back to 2018-10-07 19:24:09.853881
+        link: https://pypi.org/project/jsonref/#history
+        package_name: jsonref

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoRestSwaggerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-rest-swagger
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-rest-swagger' has no recent release, last release dates back to 2018-04-30 19:59:59.734230
+        link: https://pypi.org/project/django-rest-swagger/#history
+        package_name: django-rest-swagger

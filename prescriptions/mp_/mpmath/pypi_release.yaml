@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MpmathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mpmath
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mpmath' has no recent release, last release dates back to 2021-02-09 15:22:27.278987
+        link: https://pypi.org/project/mpmath/#history
+        package_name: mpmath

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysingularPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysingular
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysingular' has no recent release, last release dates back to 2019-02-15 16:17:36.571345
+        link: https://pypi.org/project/pysingular/#history
+        package_name: pysingular

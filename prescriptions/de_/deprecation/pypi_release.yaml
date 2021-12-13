@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DeprecationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'deprecation' has no recent release, last release dates back to 2020-04-20 14:23:38.738331
+        link: https://pypi.org/project/deprecation/#history
+        package_name: deprecation

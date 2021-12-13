@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Json2htmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json2html
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'json2html' has no recent release, last release dates back to 2019-07-03 20:50:03.023972
+        link: https://pypi.org/project/json2html/#history
+        package_name: json2html

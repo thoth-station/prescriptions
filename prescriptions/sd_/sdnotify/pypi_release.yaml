@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SdnotifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sdnotify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sdnotify' has no recent release, last release dates back to 2017-08-02 20:03:44.395986
+        link: https://pypi.org/project/sdnotify/#history
+        package_name: sdnotify

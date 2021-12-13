@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MutagenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mutagen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mutagen' has no recent release, last release dates back to 2020-07-31 08:42:56.843322
+        link: https://pypi.org/project/mutagen/#history
+        package_name: mutagen

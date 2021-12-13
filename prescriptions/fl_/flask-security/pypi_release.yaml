@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskSecurityPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-security
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-security' has no recent release, last release dates back to 2017-06-14 13:28:38.057992
+        link: https://pypi.org/project/flask-security/#history
+        package_name: flask-security

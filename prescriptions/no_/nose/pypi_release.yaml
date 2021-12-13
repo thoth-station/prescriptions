@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NosePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nose' has no recent release, last release dates back to 2015-06-02 09:12:40.570975
+        link: https://pypi.org/project/nose/#history
+        package_name: nose

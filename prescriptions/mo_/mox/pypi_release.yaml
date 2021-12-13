@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MoxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mox' has no recent release, last release dates back to 2010-08-15 14:07:07.549376
+        link: https://pypi.org/project/mox/#history
+        package_name: mox

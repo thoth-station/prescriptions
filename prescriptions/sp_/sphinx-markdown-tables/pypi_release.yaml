@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxMarkdownTablesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-markdown-tables
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-markdown-tables' has no recent release, last release dates back to 2020-12-14 01:24:36.048159
+        link: https://pypi.org/project/sphinx-markdown-tables/#history
+        package_name: sphinx-markdown-tables

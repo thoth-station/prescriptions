@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RepresentPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: represent
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'represent' has no recent release, last release dates back to 2020-12-22 00:50:34.806891
+        link: https://pypi.org/project/represent/#history
+        package_name: represent

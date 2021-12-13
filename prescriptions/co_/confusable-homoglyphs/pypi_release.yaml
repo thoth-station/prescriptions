@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConfusableHomoglyphsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: confusable-homoglyphs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'confusable-homoglyphs' has no recent release, last release dates back to 2018-08-31 13:04:08.055754
+        link: https://pypi.org/project/confusable-homoglyphs/#history
+        package_name: confusable-homoglyphs

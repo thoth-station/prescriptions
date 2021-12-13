@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoQueryinspectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-queryinspect
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-queryinspect' has no recent release, last release dates back to 2019-09-10 21:12:32.017092
+        link: https://pypi.org/project/django-queryinspect/#history
+        package_name: django-queryinspect

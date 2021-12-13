@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'iml' has no recent release, last release dates back to 2018-08-01 16:15:02.004766
+        link: https://pypi.org/project/iml/#history
+        package_name: iml

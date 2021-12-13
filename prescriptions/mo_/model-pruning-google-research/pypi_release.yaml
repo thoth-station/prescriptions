@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ModelPruningGoogleResearchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: model-pruning-google-research
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'model-pruning-google-research' has no recent release, last release dates back to 2021-02-19 01:12:00.931619
+        link: https://pypi.org/project/model-pruning-google-research/#history
+        package_name: model-pruning-google-research

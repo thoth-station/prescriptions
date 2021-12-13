@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrefixedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prefixed
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prefixed' has no recent release, last release dates back to 2020-08-31 23:45:14.623653
+        link: https://pypi.org/project/prefixed/#history
+        package_name: prefixed

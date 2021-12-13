@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VpollerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vpoller
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vpoller' has no recent release, last release dates back to 2019-01-28 07:59:08.377830
+        link: https://pypi.org/project/vpoller/#history
+        package_name: vpoller

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShazamapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shazamapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shazamapi' has no recent release, last release dates back to 2020-12-09 17:27:43.493824
+        link: https://pypi.org/project/shazamapi/#history
+        package_name: shazamapi

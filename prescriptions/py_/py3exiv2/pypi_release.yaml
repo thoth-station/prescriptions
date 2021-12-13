@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Py3exiv2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3exiv2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py3exiv2' has no recent release, last release dates back to 2020-12-26 10:18:10.659283
+        link: https://pypi.org/project/py3exiv2/#history
+        package_name: py3exiv2

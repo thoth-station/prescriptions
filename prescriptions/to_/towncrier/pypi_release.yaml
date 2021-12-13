@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TowncrierPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: towncrier
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'towncrier' has no recent release, last release dates back to 2021-04-05 23:32:30.556311
+        link: https://pypi.org/project/towncrier/#history
+        package_name: towncrier

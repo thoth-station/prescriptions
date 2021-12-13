@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlimurlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slimurl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slimurl' has no recent release, last release dates back to 2017-01-10 10:09:43.966832
+        link: https://pypi.org/project/slimurl/#history
+        package_name: slimurl

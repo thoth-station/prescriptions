@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeSizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-size
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-size' has no recent release, last release dates back to 2018-10-05 15:03:16.898824
+        link: https://pypi.org/project/zope-size/#history
+        package_name: zope-size

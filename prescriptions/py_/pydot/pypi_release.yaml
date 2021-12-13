@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydot' has no recent release, last release dates back to 2021-02-15 15:43:08.870780
+        link: https://pypi.org/project/pydot/#history
+        package_name: pydot

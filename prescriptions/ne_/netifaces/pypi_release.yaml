@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NetifacesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netifaces
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'netifaces' has no recent release, last release dates back to 2021-05-31 08:33:02.506796
+        link: https://pypi.org/project/netifaces/#history
+        package_name: netifaces

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SefrCutPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sefr-cut
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sefr-cut' has no recent release, last release dates back to 2020-10-05 14:56:12.532416
+        link: https://pypi.org/project/sefr-cut/#history
+        package_name: sefr-cut

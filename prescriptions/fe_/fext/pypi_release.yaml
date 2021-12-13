@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fext
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fext' has no recent release, last release dates back to 2020-11-30 19:18:18.218817
+        link: https://pypi.org/project/fext/#history
+        package_name: fext

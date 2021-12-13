@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RetryingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retrying
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'retrying' has no recent release, last release dates back to 2014-12-15 01:15:08.281010
+        link: https://pypi.org/project/retrying/#history
+        package_name: retrying

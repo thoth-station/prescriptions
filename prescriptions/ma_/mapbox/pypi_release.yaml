@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MapboxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapbox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mapbox' has no recent release, last release dates back to 2019-03-06 00:24:35.817988
+        link: https://pypi.org/project/mapbox/#history
+        package_name: mapbox

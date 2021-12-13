@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VcstoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vcstools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vcstools' has no recent release, last release dates back to 2019-08-07 18:30:30.521920
+        link: https://pypi.org/project/vcstools/#history
+        package_name: vcstools

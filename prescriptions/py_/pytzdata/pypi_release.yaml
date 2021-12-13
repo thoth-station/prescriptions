@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytzdataPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytzdata
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytzdata' has no recent release, last release dates back to 2020-07-13 10:42:12.083824
+        link: https://pypi.org/project/pytzdata/#history
+        package_name: pytzdata

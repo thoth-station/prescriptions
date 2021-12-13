@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycryptoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycrypto
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycrypto' has no recent release, last release dates back to 2014-06-20 08:10:20.813938
+        link: https://pypi.org/project/pycrypto/#history
+        package_name: pycrypto

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonextendedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonextended
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonextended' has no recent release, last release dates back to 2019-06-18 03:07:07.414995
+        link: https://pypi.org/project/jsonextended/#history
+        package_name: jsonextended

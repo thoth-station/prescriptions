@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpenoptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openopt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'openopt' has no recent release, last release dates back to 2018-12-23 19:52:27.351621
+        link: https://pypi.org/project/openopt/#history
+        package_name: openopt

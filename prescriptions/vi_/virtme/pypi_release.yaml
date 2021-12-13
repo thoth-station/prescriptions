@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VirtmePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: virtme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'virtme' has no recent release, last release dates back to 2014-09-10 18:05:28.397416
+        link: https://pypi.org/project/virtme/#history
+        package_name: virtme

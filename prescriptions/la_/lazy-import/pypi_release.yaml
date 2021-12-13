@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LazyImportPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy-import
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lazy-import' has no recent release, last release dates back to 2018-01-22 02:19:32.029357
+        link: https://pypi.org/project/lazy-import/#history
+        package_name: lazy-import

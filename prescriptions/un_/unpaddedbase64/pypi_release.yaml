@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Unpaddedbase64PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unpaddedbase64
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'unpaddedbase64' has no recent release, last release dates back to 2021-03-09 11:35:47.729536
+        link: https://pypi.org/project/unpaddedbase64/#history
+        package_name: unpaddedbase64

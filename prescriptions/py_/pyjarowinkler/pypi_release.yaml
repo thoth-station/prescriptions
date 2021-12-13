@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyjarowinklerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyjarowinkler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyjarowinkler' has no recent release, last release dates back to 2016-03-23 02:09:46.887986
+        link: https://pypi.org/project/pyjarowinkler/#history
+        package_name: pyjarowinkler

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureServicemanagementLegacyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-servicemanagement-legacy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-servicemanagement-legacy' has no recent release, last release dates back to 2020-05-05 22:43:57.077703
+        link: https://pypi.org/project/azure-servicemanagement-legacy/#history
+        package_name: azure-servicemanagement-legacy

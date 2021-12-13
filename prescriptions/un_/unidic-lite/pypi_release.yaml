@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UnidicLitePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unidic-lite
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'unidic-lite' has no recent release, last release dates back to 2021-01-25 06:07:54.719093
+        link: https://pypi.org/project/unidic-lite/#history
+        package_name: unidic-lite

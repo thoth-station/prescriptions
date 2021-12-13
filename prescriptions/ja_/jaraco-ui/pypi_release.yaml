@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoUiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-ui
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-ui' has no recent release, last release dates back to 2021-02-11 01:11:50.265827
+        link: https://pypi.org/project/jaraco-ui/#history
+        package_name: jaraco-ui

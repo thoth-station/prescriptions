@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImpylaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: impyla
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'impyla' has no recent release, last release dates back to 2021-05-26 14:03:23.385281
+        link: https://pypi.org/project/impyla/#history
+        package_name: impyla

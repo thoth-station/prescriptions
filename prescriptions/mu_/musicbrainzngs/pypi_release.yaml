@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MusicbrainzngsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: musicbrainzngs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'musicbrainzngs' has no recent release, last release dates back to 2020-01-11 17:38:47.581139
+        link: https://pypi.org/project/musicbrainzngs/#history
+        package_name: musicbrainzngs

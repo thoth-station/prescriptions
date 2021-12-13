@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RtreePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rtree
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rtree' has no recent release, last release dates back to 2020-12-24 15:39:21.366388
+        link: https://pypi.org/project/rtree/#history
+        package_name: rtree

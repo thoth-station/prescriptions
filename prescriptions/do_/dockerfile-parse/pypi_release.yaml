@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DockerfileParsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dockerfile-parse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dockerfile-parse' has no recent release, last release dates back to 2021-06-09 13:19:35.365922
+        link: https://pypi.org/project/dockerfile-parse/#history
+        package_name: dockerfile-parse

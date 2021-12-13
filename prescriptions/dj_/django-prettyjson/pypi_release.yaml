@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoPrettyjsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-prettyjson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-prettyjson' has no recent release, last release dates back to 2018-08-07 17:45:22.324860
+        link: https://pypi.org/project/django-prettyjson/#history
+        package_name: django-prettyjson

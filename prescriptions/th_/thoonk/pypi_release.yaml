@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ThoonkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoonk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'thoonk' has no recent release, last release dates back to 2012-03-15 23:28:45.538861
+        link: https://pypi.org/project/thoonk/#history
+        package_name: thoonk

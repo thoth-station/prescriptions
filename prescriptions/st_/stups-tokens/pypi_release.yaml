@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StupsTokensPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-tokens
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stups-tokens' has no recent release, last release dates back to 2017-01-04 17:23:57.247263
+        link: https://pypi.org/project/stups-tokens/#history
+        package_name: stups-tokens

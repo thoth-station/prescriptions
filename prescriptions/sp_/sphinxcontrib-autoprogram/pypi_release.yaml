@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxcontribAutoprogramPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-autoprogram
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxcontrib-autoprogram' has no recent release, last release dates back to 2021-02-10 17:16:04.428447
+        link: https://pypi.org/project/sphinxcontrib-autoprogram/#history
+        package_name: sphinxcontrib-autoprogram

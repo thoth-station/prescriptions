@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: De421PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: de421
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'de421' has no recent release, last release dates back to 2014-01-06 17:54:05.165088
+        link: https://pypi.org/project/de421/#history
+        package_name: de421

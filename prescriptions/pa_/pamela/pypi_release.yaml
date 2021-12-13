@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PamelaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pamela
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pamela' has no recent release, last release dates back to 2019-01-17 15:21:28.570504
+        link: https://pypi.org/project/pamela/#history
+        package_name: pamela

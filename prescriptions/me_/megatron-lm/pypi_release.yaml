@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MegatronLmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: megatron-lm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'megatron-lm' has no recent release, last release dates back to 2021-03-22 21:41:24.683806
+        link: https://pypi.org/project/megatron-lm/#history
+        package_name: megatron-lm

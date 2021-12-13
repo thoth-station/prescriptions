@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpeedtestCliPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speedtest-cli
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'speedtest-cli' has no recent release, last release dates back to 2021-04-08 13:51:33.627769
+        link: https://pypi.org/project/speedtest-cli/#history
+        package_name: speedtest-cli

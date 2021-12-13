@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BinaryornotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binaryornot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'binaryornot' has no recent release, last release dates back to 2017-08-03 15:55:31.230298
+        link: https://pypi.org/project/binaryornot/#history
+        package_name: binaryornot

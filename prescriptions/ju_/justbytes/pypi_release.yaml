@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JustbytesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: justbytes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'justbytes' has no recent release, last release dates back to 2020-12-17 14:12:47.054344
+        link: https://pypi.org/project/justbytes/#history
+        package_name: justbytes

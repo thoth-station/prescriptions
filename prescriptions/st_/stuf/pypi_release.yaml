@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StufPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stuf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stuf' has no recent release, last release dates back to 2015-05-14 21:17:47.944705
+        link: https://pypi.org/project/stuf/#history
+        package_name: stuf

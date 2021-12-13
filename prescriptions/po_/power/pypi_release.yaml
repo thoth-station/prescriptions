@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PowerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: power
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'power' has no recent release, last release dates back to 2015-01-08 20:27:10.891239
+        link: https://pypi.org/project/power/#history
+        package_name: power

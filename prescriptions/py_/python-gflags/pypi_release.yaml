@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonGflagsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-gflags
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-gflags' has no recent release, last release dates back to 2017-10-27 13:04:08.546650
+        link: https://pypi.org/project/python-gflags/#history
+        package_name: python-gflags

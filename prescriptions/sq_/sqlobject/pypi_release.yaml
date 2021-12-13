@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SqlobjectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlobject
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sqlobject' has no recent release, last release dates back to 2021-02-27 13:48:00.002908
+        link: https://pypi.org/project/sqlobject/#history
+        package_name: sqlobject

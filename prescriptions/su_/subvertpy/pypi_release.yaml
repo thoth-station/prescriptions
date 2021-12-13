@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SubvertpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subvertpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'subvertpy' has no recent release, last release dates back to 2021-01-11 01:15:09.711647
+        link: https://pypi.org/project/subvertpy/#history
+        package_name: subvertpy

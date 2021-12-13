@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CmigemoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmigemo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cmigemo' has no recent release, last release dates back to 2015-07-28 10:06:36.764165
+        link: https://pypi.org/project/cmigemo/#history
+        package_name: cmigemo

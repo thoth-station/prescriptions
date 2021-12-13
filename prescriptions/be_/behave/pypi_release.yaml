@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BehavePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: behave
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'behave' has no recent release, last release dates back to 2018-02-25 20:06:38.851473
+        link: https://pypi.org/project/behave/#history
+        package_name: behave

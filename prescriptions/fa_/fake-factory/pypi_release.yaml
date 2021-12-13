@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FakeFactoryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fake-factory
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fake-factory' has no recent release, last release dates back to 2016-12-16 16:17:41.950717
+        link: https://pypi.org/project/fake-factory/#history
+        package_name: fake-factory

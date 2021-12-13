@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeProcesslifetimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-processlifetime
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-processlifetime' has no recent release, last release dates back to 2018-10-05 14:55:48.524430
+        link: https://pypi.org/project/zope-processlifetime/#history
+        package_name: zope-processlifetime

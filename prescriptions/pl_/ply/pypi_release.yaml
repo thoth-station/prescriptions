@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PlyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ply
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ply' has no recent release, last release dates back to 2018-02-15 19:01:31.097641
+        link: https://pypi.org/project/ply/#history
+        package_name: ply

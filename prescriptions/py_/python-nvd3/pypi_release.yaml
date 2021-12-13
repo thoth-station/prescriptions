@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonNvd3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-nvd3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-nvd3' has no recent release, last release dates back to 2018-03-26 13:58:13.085679
+        link: https://pypi.org/project/python-nvd3/#history
+        package_name: python-nvd3

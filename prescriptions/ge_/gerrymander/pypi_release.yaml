@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GerrymanderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gerrymander
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gerrymander' has no recent release, last release dates back to 2016-02-22 14:39:48.201757
+        link: https://pypi.org/project/gerrymander/#history
+        package_name: gerrymander

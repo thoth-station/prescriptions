@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyhdfePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhdfe
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyhdfe' has no recent release, last release dates back to 2019-11-10 22:03:12.852431
+        link: https://pypi.org/project/pyhdfe/#history
+        package_name: pyhdfe

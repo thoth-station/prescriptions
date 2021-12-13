@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UnipathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unipath
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'unipath' has no recent release, last release dates back to 2015-02-11 04:36:15.424748
+        link: https://pypi.org/project/unipath/#history
+        package_name: unipath

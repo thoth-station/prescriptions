@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpalibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipalib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipalib' has no recent release, last release dates back to 2020-08-20 10:53:32.590778
+        link: https://pypi.org/project/ipalib/#history
+        package_name: ipalib

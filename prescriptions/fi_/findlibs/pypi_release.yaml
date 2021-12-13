@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FindlibsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findlibs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'findlibs' has no recent release, last release dates back to 2021-05-20 13:31:58.186224
+        link: https://pypi.org/project/findlibs/#history
+        package_name: findlibs

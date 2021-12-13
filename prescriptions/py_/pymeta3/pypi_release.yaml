@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pymeta3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymeta3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymeta3' has no recent release, last release dates back to 2015-02-22 16:30:06.858725
+        link: https://pypi.org/project/pymeta3/#history
+        package_name: pymeta3

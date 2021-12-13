@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrakoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grako
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grako' has no recent release, last release dates back to 2017-05-06 21:49:40.546286
+        link: https://pypi.org/project/grako/#history
+        package_name: grako

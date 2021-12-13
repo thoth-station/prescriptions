@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pep562PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pep562
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pep562' has no recent release, last release dates back to 2021-05-21 16:12:38.934783
+        link: https://pypi.org/project/pep562/#history
+        package_name: pep562

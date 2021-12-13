@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pymod2pkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymod2pkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymod2pkg' has no recent release, last release dates back to 2020-10-02 08:45:38.023759
+        link: https://pypi.org/project/pymod2pkg/#history
+        package_name: pymod2pkg

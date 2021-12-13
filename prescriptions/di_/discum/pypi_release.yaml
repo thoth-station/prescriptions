@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiscumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'discum' has no recent release, last release dates back to 2021-03-04 14:55:41.050191
+        link: https://pypi.org/project/discum/#history
+        package_name: discum

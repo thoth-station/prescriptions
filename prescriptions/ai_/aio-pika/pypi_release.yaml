@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioPikaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aio-pika
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aio-pika' has no recent release, last release dates back to 2021-02-16 20:35:08.930068
+        link: https://pypi.org/project/aio-pika/#history
+        package_name: aio-pika

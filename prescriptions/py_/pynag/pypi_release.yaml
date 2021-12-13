@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PynagPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynag
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pynag' has no recent release, last release dates back to 2019-11-08 13:08:24.036300
+        link: https://pypi.org/project/pynag/#history
+        package_name: pynag

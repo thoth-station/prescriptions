@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyhclPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhcl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyhcl' has no recent release, last release dates back to 2020-04-26 19:33:01.713684
+        link: https://pypi.org/project/pyhcl/#history
+        package_name: pyhcl

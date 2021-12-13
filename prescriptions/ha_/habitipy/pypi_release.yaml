@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HabitipyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: habitipy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'habitipy' has no recent release, last release dates back to 2019-01-13 23:28:00.975603
+        link: https://pypi.org/project/habitipy/#history
+        package_name: habitipy

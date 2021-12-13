@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NteractScrapbookPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nteract-scrapbook
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nteract-scrapbook' has no recent release, last release dates back to 2021-01-06 19:12:21.110141
+        link: https://pypi.org/project/nteract-scrapbook/#history
+        package_name: nteract-scrapbook

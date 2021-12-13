@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebdrivermanagerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webdrivermanager
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webdrivermanager' has no recent release, last release dates back to 2021-02-22 11:53:49.911971
+        link: https://pypi.org/project/webdrivermanager/#history
+        package_name: webdrivermanager

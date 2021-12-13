@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YaswfpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yaswfp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yaswfp' has no recent release, last release dates back to 2014-08-27 02:13:05.637189
+        link: https://pypi.org/project/yaswfp/#history
+        package_name: yaswfp

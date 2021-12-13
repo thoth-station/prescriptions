@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TimesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: times
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'times' has no recent release, last release dates back to 2014-08-24 06:13:25.293843
+        link: https://pypi.org/project/times/#history
+        package_name: times

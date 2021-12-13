@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SandcastlePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sandcastle
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sandcastle' has no recent release, last release dates back to 2019-07-04 15:33:27.881160
+        link: https://pypi.org/project/sandcastle/#history
+        package_name: sandcastle

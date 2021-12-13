@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HexdumpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hexdump
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hexdump' has no recent release, last release dates back to 2016-01-22 14:40:19.589402
+        link: https://pypi.org/project/hexdump/#history
+        package_name: hexdump

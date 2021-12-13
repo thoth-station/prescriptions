@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SqlalchemyStubsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-stubs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sqlalchemy-stubs' has no recent release, last release dates back to 2021-01-12 14:02:04.438453
+        link: https://pypi.org/project/sqlalchemy-stubs/#history
+        package_name: sqlalchemy-stubs

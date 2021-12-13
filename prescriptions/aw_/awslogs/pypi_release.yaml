@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AwslogsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awslogs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'awslogs' has no recent release, last release dates back to 2020-07-10 07:14:52.852816
+        link: https://pypi.org/project/awslogs/#history
+        package_name: awslogs

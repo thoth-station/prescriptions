@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShareplumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shareplum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shareplum' has no recent release, last release dates back to 2020-04-22 01:12:16.445390
+        link: https://pypi.org/project/shareplum/#history
+        package_name: shareplum

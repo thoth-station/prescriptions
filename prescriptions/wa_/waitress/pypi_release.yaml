@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WaitressPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waitress
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'waitress' has no recent release, last release dates back to 2021-03-08 07:25:29.300302
+        link: https://pypi.org/project/waitress/#history
+        package_name: waitress

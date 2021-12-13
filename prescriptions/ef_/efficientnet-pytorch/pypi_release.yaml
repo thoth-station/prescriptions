@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EfficientnetPytorchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: efficientnet-pytorch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'efficientnet-pytorch' has no recent release, last release dates back to 2021-04-15 15:17:23.111861
+        link: https://pypi.org/project/efficientnet-pytorch/#history
+        package_name: efficientnet-pytorch

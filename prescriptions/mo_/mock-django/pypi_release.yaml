@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MockDjangoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mock-django
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mock-django' has no recent release, last release dates back to 2016-02-09 19:15:30.956270
+        link: https://pypi.org/project/mock-django/#history
+        package_name: mock-django

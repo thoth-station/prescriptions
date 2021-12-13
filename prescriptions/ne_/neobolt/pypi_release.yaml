@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeoboltPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neobolt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neobolt' has no recent release, last release dates back to 2020-04-09 08:59:23.405177
+        link: https://pypi.org/project/neobolt/#history
+        package_name: neobolt

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureStorageFilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-file
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-storage-file' has no recent release, last release dates back to 2019-08-02 04:24:23.065282
+        link: https://pypi.org/project/azure-storage-file/#history
+        package_name: azure-storage-file

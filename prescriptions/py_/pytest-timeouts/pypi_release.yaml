@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestTimeoutsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-timeouts
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-timeouts' has no recent release, last release dates back to 2019-09-21 06:03:25.167873
+        link: https://pypi.org/project/pytest-timeouts/#history
+        package_name: pytest-timeouts

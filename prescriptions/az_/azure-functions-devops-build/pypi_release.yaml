@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureFunctionsDevopsBuildPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-functions-devops-build
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-functions-devops-build' has no recent release, last release dates back to 2019-05-14 00:35:08.486682
+        link: https://pypi.org/project/azure-functions-devops-build/#history
+        package_name: azure-functions-devops-build

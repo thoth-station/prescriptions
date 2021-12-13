@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MarkdownIncludePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markdown-include
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'markdown-include' has no recent release, last release dates back to 2020-08-20 23:10:25.382961
+        link: https://pypi.org/project/markdown-include/#history
+        package_name: markdown-include

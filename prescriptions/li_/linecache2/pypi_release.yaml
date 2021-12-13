@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Linecache2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linecache2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'linecache2' has no recent release, last release dates back to 2015-03-06 01:33:36.657840
+        link: https://pypi.org/project/linecache2/#history
+        package_name: linecache2

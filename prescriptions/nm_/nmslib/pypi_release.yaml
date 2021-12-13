@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NmslibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nmslib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nmslib' has no recent release, last release dates back to 2021-02-03 03:15:16.511817
+        link: https://pypi.org/project/nmslib/#history
+        package_name: nmslib

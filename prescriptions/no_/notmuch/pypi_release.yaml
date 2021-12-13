@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NotmuchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notmuch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'notmuch' has no recent release, last release dates back to 2019-10-21 10:09:35.908131
+        link: https://pypi.org/project/notmuch/#history
+        package_name: notmuch

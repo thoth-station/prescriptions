@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShutilwhichPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shutilwhich
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shutilwhich' has no recent release, last release dates back to 2015-04-25 14:03:13.563367
+        link: https://pypi.org/project/shutilwhich/#history
+        package_name: shutilwhich

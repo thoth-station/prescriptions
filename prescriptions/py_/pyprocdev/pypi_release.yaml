@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyprocdevPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyprocdev
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyprocdev' has no recent release, last release dates back to 2016-06-07 14:17:14.494619
+        link: https://pypi.org/project/pyprocdev/#history
+        package_name: pyprocdev

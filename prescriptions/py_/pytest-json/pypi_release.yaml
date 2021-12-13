@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestJsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-json
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-json' has no recent release, last release dates back to 2016-01-18 06:33:27.713814
+        link: https://pypi.org/project/pytest-json/#history
+        package_name: pytest-json

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RomanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: roman
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'roman' has no recent release, last release dates back to 2020-07-12 15:28:48.472128
+        link: https://pypi.org/project/roman/#history
+        package_name: roman

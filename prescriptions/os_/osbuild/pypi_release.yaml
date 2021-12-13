@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OsbuildPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: osbuild
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'osbuild' has no recent release, last release dates back to 2013-05-24 21:27:07.453326
+        link: https://pypi.org/project/osbuild/#history
+        package_name: osbuild

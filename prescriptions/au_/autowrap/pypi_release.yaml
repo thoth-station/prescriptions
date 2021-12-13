@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AutowrapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autowrap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autowrap' has no recent release, last release dates back to 2021-03-01 09:48:14.017218
+        link: https://pypi.org/project/autowrap/#history
+        package_name: autowrap

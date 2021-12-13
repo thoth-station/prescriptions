@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TradingCalendarsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trading-calendars
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'trading-calendars' has no recent release, last release dates back to 2021-01-05 01:45:52.525722
+        link: https://pypi.org/project/trading-calendars/#history
+        package_name: trading-calendars

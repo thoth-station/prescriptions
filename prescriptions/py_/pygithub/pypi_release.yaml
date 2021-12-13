@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygithubPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygithub
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygithub' has no recent release, last release dates back to 2021-04-26 04:45:21.348781
+        link: https://pypi.org/project/pygithub/#history
+        package_name: pygithub

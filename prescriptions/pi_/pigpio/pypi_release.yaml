@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PigpioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pigpio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pigpio' has no recent release, last release dates back to 2020-09-29 23:55:12.610786
+        link: https://pypi.org/project/pigpio/#history
+        package_name: pigpio

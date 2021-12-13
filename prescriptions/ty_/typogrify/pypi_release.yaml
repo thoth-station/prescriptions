@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TypogrifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typogrify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'typogrify' has no recent release, last release dates back to 2014-09-18 22:13:14.629826
+        link: https://pypi.org/project/typogrify/#history
+        package_name: typogrify

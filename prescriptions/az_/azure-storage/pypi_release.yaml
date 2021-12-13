@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureStoragePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-storage' has no recent release, last release dates back to 2020-05-11 23:24:28.503553
+        link: https://pypi.org/project/azure-storage/#history
+        package_name: azure-storage

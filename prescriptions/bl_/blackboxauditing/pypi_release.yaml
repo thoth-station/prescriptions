@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BlackboxauditingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blackboxauditing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'blackboxauditing' has no recent release, last release dates back to 2019-05-22 00:26:58.842796
+        link: https://pypi.org/project/blackboxauditing/#history
+        package_name: blackboxauditing

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VerboselogsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: verboselogs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'verboselogs' has no recent release, last release dates back to 2017-08-07 19:46:16.674766
+        link: https://pypi.org/project/verboselogs/#history
+        package_name: verboselogs

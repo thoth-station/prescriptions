@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Feedfinder2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedfinder2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'feedfinder2' has no recent release, last release dates back to 2016-01-25 15:09:17.492229
+        link: https://pypi.org/project/feedfinder2/#history
+        package_name: feedfinder2

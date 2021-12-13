@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StsciRtdThemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stsci-rtd-theme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stsci-rtd-theme' has no recent release, last release dates back to 2018-11-01 14:13:49.029867
+        link: https://pypi.org/project/stsci-rtd-theme/#history
+        package_name: stsci-rtd-theme

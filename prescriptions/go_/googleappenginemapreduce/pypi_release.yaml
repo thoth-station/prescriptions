@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleappenginemapreducePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleappenginemapreduce
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'googleappenginemapreduce' has no recent release, last release dates back to 2015-06-25 23:29:45.722565
+        link: https://pypi.org/project/googleappenginemapreduce/#history
+        package_name: googleappenginemapreduce

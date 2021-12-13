@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SortedcollectionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sortedcollections
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sortedcollections' has no recent release, last release dates back to 2021-01-18 22:15:16.623248
+        link: https://pypi.org/project/sortedcollections/#history
+        package_name: sortedcollections

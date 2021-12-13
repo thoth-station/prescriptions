@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyspfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyspf' has no recent release, last release dates back to 2020-01-02 02:54:37.109874
+        link: https://pypi.org/project/pyspf/#history
+        package_name: pyspf

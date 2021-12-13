@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuturePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: future
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'future' has no recent release, last release dates back to 2019-10-31 00:58:13.043307
+        link: https://pypi.org/project/future/#history
+        package_name: future

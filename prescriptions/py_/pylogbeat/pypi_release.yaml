@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylogbeatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylogbeat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylogbeat' has no recent release, last release dates back to 2020-10-04 16:44:39.248026
+        link: https://pypi.org/project/pylogbeat/#history
+        package_name: pylogbeat

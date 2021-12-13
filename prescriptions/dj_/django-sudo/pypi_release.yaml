@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoSudoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sudo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-sudo' has no recent release, last release dates back to 2020-01-09 22:51:45.670554
+        link: https://pypi.org/project/django-sudo/#history
+        package_name: django-sudo

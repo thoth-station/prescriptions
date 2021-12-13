@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NudepyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nudepy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nudepy' has no recent release, last release dates back to 2020-11-23 13:49:17.578276
+        link: https://pypi.org/project/nudepy/#history
+        package_name: nudepy

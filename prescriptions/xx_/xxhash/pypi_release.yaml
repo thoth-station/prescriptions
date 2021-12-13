@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XxhashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xxhash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xxhash' has no recent release, last release dates back to 2021-04-14 18:09:11.870034
+        link: https://pypi.org/project/xxhash/#history
+        package_name: xxhash

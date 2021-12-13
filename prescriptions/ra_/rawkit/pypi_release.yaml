@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RawkitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rawkit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rawkit' has no recent release, last release dates back to 2017-07-09 12:54:58.927455
+        link: https://pypi.org/project/rawkit/#history
+        package_name: rawkit

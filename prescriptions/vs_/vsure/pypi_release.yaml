@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VsurePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsure
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vsure' has no recent release, last release dates back to 2021-03-31 20:10:02.743077
+        link: https://pypi.org/project/vsure/#history
+        package_name: vsure

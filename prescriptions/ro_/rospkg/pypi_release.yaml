@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RospkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rospkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rospkg' has no recent release, last release dates back to 2021-03-31 17:33:26.808110
+        link: https://pypi.org/project/rospkg/#history
+        package_name: rospkg

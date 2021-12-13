@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyactivetwoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyactivetwo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyactivetwo' has no recent release, last release dates back to 2015-06-04 12:58:54.493741
+        link: https://pypi.org/project/pyactivetwo/#history
+        package_name: pyactivetwo

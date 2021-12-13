@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RedbaronPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: redbaron
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'redbaron' has no recent release, last release dates back to 2019-03-17 18:59:01.529362
+        link: https://pypi.org/project/redbaron/#history
+        package_name: redbaron

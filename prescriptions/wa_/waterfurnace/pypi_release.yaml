@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WaterfurnacePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waterfurnace
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'waterfurnace' has no recent release, last release dates back to 2019-01-07 13:27:31.566354
+        link: https://pypi.org/project/waterfurnace/#history
+        package_name: waterfurnace

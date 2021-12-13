@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PastescriptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastescript
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pastescript' has no recent release, last release dates back to 2021-04-27 14:37:19.588643
+        link: https://pypi.org/project/pastescript/#history
+        package_name: pastescript

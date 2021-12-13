@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestOrderingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-ordering
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-ordering' has no recent release, last release dates back to 2018-11-14 00:55:26.004117
+        link: https://pypi.org/project/pytest-ordering/#history
+        package_name: pytest-ordering

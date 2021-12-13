@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RepltalkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: repltalk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'repltalk' has no recent release, last release dates back to 2021-04-18 19:07:41.042221
+        link: https://pypi.org/project/repltalk/#history
+        package_name: repltalk

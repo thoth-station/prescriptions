@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonCoverallsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-coveralls
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-coveralls' has no recent release, last release dates back to 2019-08-01 19:12:20.159405
+        link: https://pypi.org/project/python-coveralls/#history
+        package_name: python-coveralls

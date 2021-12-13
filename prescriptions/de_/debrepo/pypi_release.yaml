@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DebrepoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: debrepo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'debrepo' has no recent release, last release dates back to 2017-07-05 19:10:46.169810
+        link: https://pypi.org/project/debrepo/#history
+        package_name: debrepo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HyperasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hyperas
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hyperas' has no recent release, last release dates back to 2019-02-28 09:16:57.137352
+        link: https://pypi.org/project/hyperas/#history
+        package_name: hyperas

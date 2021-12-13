@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestEthereumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-ethereum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-ethereum' has no recent release, last release dates back to 2018-10-02 15:43:15.892972
+        link: https://pypi.org/project/pytest-ethereum/#history
+        package_name: pytest-ethereum

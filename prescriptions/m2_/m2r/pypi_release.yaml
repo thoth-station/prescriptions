@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: M2rPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: m2r
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'm2r' has no recent release, last release dates back to 2018-10-11 23:38:30.264403
+        link: https://pypi.org/project/m2r/#history
+        package_name: m2r

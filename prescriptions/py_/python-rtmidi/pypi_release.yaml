@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonRtmidiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-rtmidi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-rtmidi' has no recent release, last release dates back to 2021-04-26 17:58:36.277485
+        link: https://pypi.org/project/python-rtmidi/#history
+        package_name: python-rtmidi

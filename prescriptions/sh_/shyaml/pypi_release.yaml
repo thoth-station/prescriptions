@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShyamlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shyaml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shyaml' has no recent release, last release dates back to 2020-12-15 20:08:00.023554
+        link: https://pypi.org/project/shyaml/#history
+        package_name: shyaml

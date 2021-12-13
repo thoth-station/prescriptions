@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SshuttlePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshuttle
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sshuttle' has no recent release, last release dates back to 2020-12-28 23:40:00.218334
+        link: https://pypi.org/project/sshuttle/#history
+        package_name: sshuttle

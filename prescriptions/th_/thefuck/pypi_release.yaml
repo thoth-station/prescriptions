@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ThefuckPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thefuck
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'thefuck' has no recent release, last release dates back to 2021-06-09 19:52:50.591539
+        link: https://pypi.org/project/thefuck/#history
+        package_name: thefuck

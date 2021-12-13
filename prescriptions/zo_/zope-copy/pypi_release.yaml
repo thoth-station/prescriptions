@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeCopyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-copy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-copy' has no recent release, last release dates back to 2018-10-04 08:45:23.552887
+        link: https://pypi.org/project/zope-copy/#history
+        package_name: zope-copy

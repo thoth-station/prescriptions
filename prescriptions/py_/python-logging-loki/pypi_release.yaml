@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonLoggingLokiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-logging-loki
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-logging-loki' has no recent release, last release dates back to 2019-11-28 22:34:38.273654
+        link: https://pypi.org/project/python-logging-loki/#history
+        package_name: python-logging-loki

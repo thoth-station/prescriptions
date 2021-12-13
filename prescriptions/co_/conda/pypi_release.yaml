@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CondaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conda
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'conda' has no recent release, last release dates back to 2017-04-22 23:38:35.809127
+        link: https://pypi.org/project/conda/#history
+        package_name: conda

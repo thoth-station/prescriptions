@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpeechrecognitionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: speechrecognition
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'speechrecognition' has no recent release, last release dates back to 2017-12-05 13:58:29.977238
+        link: https://pypi.org/project/speechrecognition/#history
+        package_name: speechrecognition

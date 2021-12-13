@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SetuptoolsGitVersionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-git-version
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'setuptools-git-version' has no recent release, last release dates back to 2015-04-23 21:17:36.628784
+        link: https://pypi.org/project/setuptools-git-version/#history
+        package_name: setuptools-git-version

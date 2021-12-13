@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MailParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mail-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mail-parser' has no recent release, last release dates back to 2021-02-26 17:37:05.312872
+        link: https://pypi.org/project/mail-parser/#history
+        package_name: mail-parser

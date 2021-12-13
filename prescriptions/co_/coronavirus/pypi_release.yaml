@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CoronavirusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coronavirus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'coronavirus' has no recent release, last release dates back to 2020-06-09 22:44:10.230468
+        link: https://pypi.org/project/coronavirus/#history
+        package_name: coronavirus

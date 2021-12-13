@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AjpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ajpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ajpy' has no recent release, last release dates back to 2020-04-29 09:37:15.957945
+        link: https://pypi.org/project/ajpy/#history
+        package_name: ajpy

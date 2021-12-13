@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HanzidentifierPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hanzidentifier
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hanzidentifier' has no recent release, last release dates back to 2015-08-06 20:44:18.057752
+        link: https://pypi.org/project/hanzidentifier/#history
+        package_name: hanzidentifier

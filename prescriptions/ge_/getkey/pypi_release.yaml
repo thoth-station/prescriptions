@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GetkeyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: getkey
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'getkey' has no recent release, last release dates back to 2016-09-01 23:42:33.546775
+        link: https://pypi.org/project/getkey/#history
+        package_name: getkey

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MatrixprofilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matrixprofile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'matrixprofile' has no recent release, last release dates back to 2021-01-16 14:06:20.175057
+        link: https://pypi.org/project/matrixprofile/#history
+        package_name: matrixprofile

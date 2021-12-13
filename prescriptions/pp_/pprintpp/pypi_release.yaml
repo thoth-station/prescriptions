@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PprintppPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pprintpp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pprintpp' has no recent release, last release dates back to 2018-07-01 01:42:36.496104
+        link: https://pypi.org/project/pprintpp/#history
+        package_name: pprintpp

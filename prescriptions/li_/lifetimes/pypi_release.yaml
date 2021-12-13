@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LifetimesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lifetimes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lifetimes' has no recent release, last release dates back to 2020-07-06 22:34:25.058503
+        link: https://pypi.org/project/lifetimes/#history
+        package_name: lifetimes

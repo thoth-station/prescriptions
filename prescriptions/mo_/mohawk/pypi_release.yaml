@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MohawkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mohawk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mohawk' has no recent release, last release dates back to 2019-10-28 15:15:32.514330
+        link: https://pypi.org/project/mohawk/#history
+        package_name: mohawk

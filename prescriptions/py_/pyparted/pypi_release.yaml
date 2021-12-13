@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypartedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyparted
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyparted' has no recent release, last release dates back to 2020-10-23 19:42:04.546362
+        link: https://pypi.org/project/pyparted/#history
+        package_name: pyparted

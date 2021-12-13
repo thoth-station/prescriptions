@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TransactionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transaction
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'transaction' has no recent release, last release dates back to 2020-12-11 11:41:50.555810
+        link: https://pypi.org/project/transaction/#history
+        package_name: transaction

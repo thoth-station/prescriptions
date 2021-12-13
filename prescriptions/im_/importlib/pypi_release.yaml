@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImportlibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'importlib' has no recent release, last release dates back to 2016-08-31 19:40:00.728096
+        link: https://pypi.org/project/importlib/#history
+        package_name: importlib

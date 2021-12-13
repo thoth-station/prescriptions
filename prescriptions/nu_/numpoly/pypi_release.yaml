@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NumpolyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpoly
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'numpoly' has no recent release, last release dates back to 2021-05-26 14:36:59.091167
+        link: https://pypi.org/project/numpoly/#history
+        package_name: numpoly

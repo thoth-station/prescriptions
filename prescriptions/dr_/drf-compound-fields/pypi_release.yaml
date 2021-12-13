@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DrfCompoundFieldsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drf-compound-fields
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'drf-compound-fields' has no recent release, last release dates back to 2019-09-22 01:03:02.411364
+        link: https://pypi.org/project/drf-compound-fields/#history
+        package_name: drf-compound-fields

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YancPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yanc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yanc' has no recent release, last release dates back to 2014-12-15 23:50:49.652716
+        link: https://pypi.org/project/yanc/#history
+        package_name: yanc

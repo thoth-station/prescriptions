@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HgapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hgapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hgapi' has no recent release, last release dates back to 2017-10-17 15:40:47.578827
+        link: https://pypi.org/project/hgapi/#history
+        package_name: hgapi

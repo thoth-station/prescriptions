@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: XbrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xbr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'xbr' has no recent release, last release dates back to 2021-02-20 16:53:58.150300
+        link: https://pypi.org/project/xbr/#history
+        package_name: xbr

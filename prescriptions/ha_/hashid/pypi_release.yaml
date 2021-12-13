@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HashidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hashid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hashid' has no recent release, last release dates back to 2015-03-09 18:44:14.748228
+        link: https://pypi.org/project/hashid/#history
+        package_name: hashid

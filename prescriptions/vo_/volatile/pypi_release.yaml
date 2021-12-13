@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VolatilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: volatile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'volatile' has no recent release, last release dates back to 2016-04-04 15:02:57.405790
+        link: https://pypi.org/project/volatile/#history
+        package_name: volatile

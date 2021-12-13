@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SqlalchemyContinuumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-continuum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sqlalchemy-continuum' has no recent release, last release dates back to 2020-05-24 07:04:13.398504
+        link: https://pypi.org/project/sqlalchemy-continuum/#history
+        package_name: sqlalchemy-continuum

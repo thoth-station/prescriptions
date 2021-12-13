@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WsaccelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsaccel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wsaccel' has no recent release, last release dates back to 2020-12-10 00:40:22.697294
+        link: https://pypi.org/project/wsaccel/#history
+        package_name: wsaccel

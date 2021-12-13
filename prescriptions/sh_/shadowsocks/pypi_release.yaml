@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShadowsocksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shadowsocks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shadowsocks' has no recent release, last release dates back to 2015-08-10 07:46:52.074368
+        link: https://pypi.org/project/shadowsocks/#history
+        package_name: shadowsocks

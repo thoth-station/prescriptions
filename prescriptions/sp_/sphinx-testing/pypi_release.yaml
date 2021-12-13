@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxTestingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-testing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-testing' has no recent release, last release dates back to 2019-04-15 14:51:57.273467
+        link: https://pypi.org/project/sphinx-testing/#history
+        package_name: sphinx-testing

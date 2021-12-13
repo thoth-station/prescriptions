@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RepomdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: repomd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'repomd' has no recent release, last release dates back to 2019-03-25 16:10:55.697236
+        link: https://pypi.org/project/repomd/#history
+        package_name: repomd

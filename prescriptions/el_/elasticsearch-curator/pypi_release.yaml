@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ElasticsearchCuratorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-curator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'elasticsearch-curator' has no recent release, last release dates back to 2021-04-28 03:50:23.695309
+        link: https://pypi.org/project/elasticsearch-curator/#history
+        package_name: elasticsearch-curator

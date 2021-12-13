@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VstsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsts
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vsts' has no recent release, last release dates back to 2019-01-15 15:35:17.772474
+        link: https://pypi.org/project/vsts/#history
+        package_name: vsts

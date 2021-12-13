@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SqlacodegenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlacodegen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sqlacodegen' has no recent release, last release dates back to 2020-07-13 12:22:10.875142
+        link: https://pypi.org/project/sqlacodegen/#history
+        package_name: sqlacodegen

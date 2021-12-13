@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CachedPropertyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cached-property
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cached-property' has no recent release, last release dates back to 2020-09-21 18:39:27.069525
+        link: https://pypi.org/project/cached-property/#history
+        package_name: cached-property

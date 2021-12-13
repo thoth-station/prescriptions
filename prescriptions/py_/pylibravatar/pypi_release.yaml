@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylibravatarPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibravatar
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylibravatar' has no recent release, last release dates back to 2015-06-28 04:49:54.304443
+        link: https://pypi.org/project/pylibravatar/#history
+        package_name: pylibravatar

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TransliteratePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transliterate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'transliterate' has no recent release, last release dates back to 2018-09-17 20:52:40.332011
+        link: https://pypi.org/project/transliterate/#history
+        package_name: transliterate

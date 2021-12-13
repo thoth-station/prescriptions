@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TimeoutDecoratorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeout-decorator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'timeout-decorator' has no recent release, last release dates back to 2020-11-15 00:53:06.506211
+        link: https://pypi.org/project/timeout-decorator/#history
+        package_name: timeout-decorator

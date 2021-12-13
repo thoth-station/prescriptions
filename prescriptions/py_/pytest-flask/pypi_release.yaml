@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestFlaskPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flask
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-flask' has no recent release, last release dates back to 2021-02-27 03:48:10.244276
+        link: https://pypi.org/project/pytest-flask/#history
+        package_name: pytest-flask

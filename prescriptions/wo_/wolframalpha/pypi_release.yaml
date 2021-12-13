@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WolframalphaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wolframalpha
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wolframalpha' has no recent release, last release dates back to 2021-02-15 01:43:48.049173
+        link: https://pypi.org/project/wolframalpha/#history
+        package_name: wolframalpha

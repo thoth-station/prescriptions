@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeTraversingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-traversing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-traversing' has no recent release, last release dates back to 2020-03-31 10:29:52.668064
+        link: https://pypi.org/project/zope-traversing/#history
+        package_name: zope-traversing

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeExceptionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-exceptions
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-exceptions' has no recent release, last release dates back to 2020-07-16 06:49:27.689127
+        link: https://pypi.org/project/zope-exceptions/#history
+        package_name: zope-exceptions

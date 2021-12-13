@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyinsane2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinsane2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyinsane2' has no recent release, last release dates back to 2018-08-06 22:11:09.895753
+        link: https://pypi.org/project/pyinsane2/#history
+        package_name: pyinsane2

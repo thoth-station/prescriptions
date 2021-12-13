@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimpleparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simpleparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'simpleparse' has no recent release, last release dates back to 2020-03-07 01:40:45.091395
+        link: https://pypi.org/project/simpleparse/#history
+        package_name: simpleparse

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QuerystringParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: querystring-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'querystring-parser' has no recent release, last release dates back to 2020-10-21 22:33:33.170796
+        link: https://pypi.org/project/querystring-parser/#history
+        package_name: querystring-parser

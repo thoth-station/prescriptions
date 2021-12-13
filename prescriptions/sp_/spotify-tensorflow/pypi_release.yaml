@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpotifyTensorflowPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spotify-tensorflow
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spotify-tensorflow' has no recent release, last release dates back to 2020-01-31 19:48:48.183240
+        link: https://pypi.org/project/spotify-tensorflow/#history
+        package_name: spotify-tensorflow

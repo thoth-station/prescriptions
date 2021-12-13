@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Bugzilla2fedmsgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bugzilla2fedmsg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bugzilla2fedmsg' has no recent release, last release dates back to 2019-08-12 17:55:25.863252
+        link: https://pypi.org/project/bugzilla2fedmsg/#history
+        package_name: bugzilla2fedmsg

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SlicerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slicer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'slicer' has no recent release, last release dates back to 2020-12-16 02:38:02.265490
+        link: https://pypi.org/project/slicer/#history
+        package_name: slicer

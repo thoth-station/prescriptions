@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyfastnoisesimdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfastnoisesimd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyfastnoisesimd' has no recent release, last release dates back to 2021-03-31 03:37:01.364143
+        link: https://pypi.org/project/pyfastnoisesimd/#history
+        package_name: pyfastnoisesimd

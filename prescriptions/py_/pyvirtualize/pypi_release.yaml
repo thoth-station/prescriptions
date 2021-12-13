@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyvirtualizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvirtualize
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyvirtualize' has no recent release, last release dates back to 2019-06-11 10:35:06.407423
+        link: https://pypi.org/project/pyvirtualize/#history
+        package_name: pyvirtualize

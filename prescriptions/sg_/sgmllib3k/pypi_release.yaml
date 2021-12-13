@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Sgmllib3kPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sgmllib3k
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sgmllib3k' has no recent release, last release dates back to 2010-08-24 14:33:52.445724
+        link: https://pypi.org/project/sgmllib3k/#history
+        package_name: sgmllib3k

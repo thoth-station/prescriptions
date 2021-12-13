@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsUnittestMockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-unittest-mock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-unittest-mock' has no recent release, last release dates back to 2019-08-22 20:02:58.308559
+        link: https://pypi.org/project/backports-unittest-mock/#history
+        package_name: backports-unittest-mock

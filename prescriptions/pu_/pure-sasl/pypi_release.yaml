@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PureSaslPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pure-sasl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pure-sasl' has no recent release, last release dates back to 2019-10-14 21:43:58.807919
+        link: https://pypi.org/project/pure-sasl/#history
+        package_name: pure-sasl

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyserialPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyserial
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyserial' has no recent release, last release dates back to 2020-11-23 03:59:15.045513
+        link: https://pypi.org/project/pyserial/#history
+        package_name: pyserial

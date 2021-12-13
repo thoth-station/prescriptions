@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CypyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cypy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cypy' has no recent release, last release dates back to 2016-04-12 07:02:31.083439
+        link: https://pypi.org/project/cypy/#history
+        package_name: cypy

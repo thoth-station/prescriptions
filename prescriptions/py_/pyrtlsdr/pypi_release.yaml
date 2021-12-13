@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyrtlsdrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrtlsdr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyrtlsdr' has no recent release, last release dates back to 2020-03-06 20:02:19.286837
+        link: https://pypi.org/project/pyrtlsdr/#history
+        package_name: pyrtlsdr

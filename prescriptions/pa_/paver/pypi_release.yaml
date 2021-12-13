@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PaverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'paver' has no recent release, last release dates back to 2017-12-31 01:13:43.758279
+        link: https://pypi.org/project/paver/#history
+        package_name: paver

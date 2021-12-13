@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PureEvalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pure-eval
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pure-eval' has no recent release, last release dates back to 2021-03-26 15:18:43.083904
+        link: https://pypi.org/project/pure-eval/#history
+        package_name: pure-eval

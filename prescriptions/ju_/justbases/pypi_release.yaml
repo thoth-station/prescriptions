@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JustbasesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: justbases
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'justbases' has no recent release, last release dates back to 2020-12-16 04:40:40.339392
+        link: https://pypi.org/project/justbases/#history
+        package_name: justbases

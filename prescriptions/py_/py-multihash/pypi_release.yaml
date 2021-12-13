@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyMultihashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-multihash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-multihash' has no recent release, last release dates back to 2020-12-01 13:03:37.930503
+        link: https://pypi.org/project/py-multihash/#history
+        package_name: py-multihash

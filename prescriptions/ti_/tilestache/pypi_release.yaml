@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TilestachePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tilestache
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tilestache' has no recent release, last release dates back to 2019-03-30 16:48:35.486012
+        link: https://pypi.org/project/tilestache/#history
+        package_name: tilestache

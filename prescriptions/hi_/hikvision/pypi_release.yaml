@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HikvisionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hikvision
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hikvision' has no recent release, last release dates back to 2020-12-08 14:53:28.640182
+        link: https://pypi.org/project/hikvision/#history
+        package_name: hikvision

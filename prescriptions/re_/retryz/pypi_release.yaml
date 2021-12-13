@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RetryzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retryz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'retryz' has no recent release, last release dates back to 2017-05-21 15:19:55.480925
+        link: https://pypi.org/project/retryz/#history
+        package_name: retryz

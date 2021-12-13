@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysocksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysocks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysocks' has no recent release, last release dates back to 2019-09-20 02:07:35.714783
+        link: https://pypi.org/project/pysocks/#history
+        package_name: pysocks

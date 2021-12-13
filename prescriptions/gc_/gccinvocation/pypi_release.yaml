@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GccinvocationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gccinvocation
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gccinvocation' has no recent release, last release dates back to 2013-05-31 19:58:50.302499
+        link: https://pypi.org/project/gccinvocation/#history
+        package_name: gccinvocation

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureKeyvaultNspkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-keyvault-nspkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-keyvault-nspkg' has no recent release, last release dates back to 2019-09-10 23:38:02.689358
+        link: https://pypi.org/project/azure-keyvault-nspkg/#history
+        package_name: azure-keyvault-nspkg

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Textwrap3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textwrap3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'textwrap3' has no recent release, last release dates back to 2019-01-23 21:57:11.241758
+        link: https://pypi.org/project/textwrap3/#history
+        package_name: textwrap3

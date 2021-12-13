@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrabbitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabbit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grabbit' has no recent release, last release dates back to 2019-01-11 14:48:06.960270
+        link: https://pypi.org/project/grabbit/#history
+        package_name: grabbit

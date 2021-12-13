@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyeclibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyeclib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyeclib' has no recent release, last release dates back to 2019-04-02 22:28:49.458038
+        link: https://pypi.org/project/pyeclib/#history
+        package_name: pyeclib

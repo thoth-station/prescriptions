@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PachiPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pachi-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pachi-py' has no recent release, last release dates back to 2016-06-09 23:33:35.745647
+        link: https://pypi.org/project/pachi-py/#history
+        package_name: pachi-py

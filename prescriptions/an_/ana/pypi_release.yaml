@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ana
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ana' has no recent release, last release dates back to 2019-06-06 21:01:27.234958
+        link: https://pypi.org/project/ana/#history
+        package_name: ana

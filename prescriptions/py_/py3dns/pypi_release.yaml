@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Py3dnsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3dns
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py3dns' has no recent release, last release dates back to 2019-09-04 12:24:45.006434
+        link: https://pypi.org/project/py3dns/#history
+        package_name: py3dns

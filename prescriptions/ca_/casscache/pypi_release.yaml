@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CasscachePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: casscache
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'casscache' has no recent release, last release dates back to 2014-08-25 23:51:21.356279
+        link: https://pypi.org/project/casscache/#history
+        package_name: casscache

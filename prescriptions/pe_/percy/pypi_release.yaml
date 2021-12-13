@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PercyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: percy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'percy' has no recent release, last release dates back to 2019-03-07 00:28:33.207077
+        link: https://pypi.org/project/percy/#history
+        package_name: percy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParamikoTunnelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paramiko-tunnel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'paramiko-tunnel' has no recent release, last release dates back to 2017-08-08 11:05:08.213821
+        link: https://pypi.org/project/paramiko-tunnel/#history
+        package_name: paramiko-tunnel

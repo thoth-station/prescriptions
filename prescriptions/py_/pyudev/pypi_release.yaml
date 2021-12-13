@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyudevPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyudev
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyudev' has no recent release, last release dates back to 2020-01-27 16:02:38.299208
+        link: https://pypi.org/project/pyudev/#history
+        package_name: pyudev

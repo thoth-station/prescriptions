@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestLoggingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-logging
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-logging' has no recent release, last release dates back to 2015-11-04 12:15:54.122959
+        link: https://pypi.org/project/pytest-logging/#history
+        package_name: pytest-logging

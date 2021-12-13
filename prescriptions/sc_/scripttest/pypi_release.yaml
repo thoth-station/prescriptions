@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScripttestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scripttest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scripttest' has no recent release, last release dates back to 2013-08-22 02:07:44.808457
+        link: https://pypi.org/project/scripttest/#history
+        package_name: scripttest

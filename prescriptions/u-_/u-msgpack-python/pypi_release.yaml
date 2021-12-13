@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UMsgpackPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: u-msgpack-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'u-msgpack-python' has no recent release, last release dates back to 2020-10-25 03:53:38.147270
+        link: https://pypi.org/project/u-msgpack-python/#history
+        package_name: u-msgpack-python

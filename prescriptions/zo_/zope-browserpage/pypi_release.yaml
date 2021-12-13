@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeBrowserpagePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-browserpage
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-browserpage' has no recent release, last release dates back to 2019-06-18 06:29:23.407350
+        link: https://pypi.org/project/zope-browserpage/#history
+        package_name: zope-browserpage

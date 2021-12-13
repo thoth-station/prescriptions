@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CmoceanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmocean
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cmocean' has no recent release, last release dates back to 2019-01-11 19:26:42.760444
+        link: https://pypi.org/project/cmocean/#history
+        package_name: cmocean

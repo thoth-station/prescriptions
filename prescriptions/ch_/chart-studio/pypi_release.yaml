@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ChartStudioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chart-studio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'chart-studio' has no recent release, last release dates back to 2020-04-01 14:40:10.876189
+        link: https://pypi.org/project/chart-studio/#history
+        package_name: chart-studio

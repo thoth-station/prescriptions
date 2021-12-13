@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GraphemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grapheme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grapheme' has no recent release, last release dates back to 2020-03-07 17:13:55.492961
+        link: https://pypi.org/project/grapheme/#history
+        package_name: grapheme

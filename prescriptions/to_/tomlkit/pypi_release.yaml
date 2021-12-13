@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TomlkitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tomlkit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tomlkit' has no recent release, last release dates back to 2021-05-20 20:28:07.937071
+        link: https://pypi.org/project/tomlkit/#history
+        package_name: tomlkit

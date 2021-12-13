@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SerpentPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serpent
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'serpent' has no recent release, last release dates back to 2021-05-09 14:36:24.789764
+        link: https://pypi.org/project/serpent/#history
+        package_name: serpent

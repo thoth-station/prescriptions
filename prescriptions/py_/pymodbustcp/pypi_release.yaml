@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymodbustcpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymodbustcp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymodbustcp' has no recent release, last release dates back to 2021-03-02 18:55:03.541181
+        link: https://pypi.org/project/pymodbustcp/#history
+        package_name: pymodbustcp

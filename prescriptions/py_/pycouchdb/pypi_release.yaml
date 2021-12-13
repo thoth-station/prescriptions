@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PycouchdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycouchdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycouchdb' has no recent release, last release dates back to 2020-02-20 08:50:19.225760
+        link: https://pypi.org/project/pycouchdb/#history
+        package_name: pycouchdb

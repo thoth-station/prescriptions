@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AsyncExitStackPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: async-exit-stack
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'async-exit-stack' has no recent release, last release dates back to 2018-05-07 15:54:46.715973
+        link: https://pypi.org/project/async-exit-stack/#history
+        package_name: async-exit-stack

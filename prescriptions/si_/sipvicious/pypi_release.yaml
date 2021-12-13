@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SipviciousPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sipvicious
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sipvicious' has no recent release, last release dates back to 2021-06-02 09:53:40.572743
+        link: https://pypi.org/project/sipvicious/#history
+        package_name: sipvicious

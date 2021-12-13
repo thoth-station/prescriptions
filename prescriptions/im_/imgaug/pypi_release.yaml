@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImgaugPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imgaug
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'imgaug' has no recent release, last release dates back to 2020-02-05 20:54:24.835248
+        link: https://pypi.org/project/imgaug/#history
+        package_name: imgaug

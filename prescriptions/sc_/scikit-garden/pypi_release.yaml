@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScikitGardenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-garden
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scikit-garden' has no recent release, last release dates back to 2017-06-07 12:00:29.080697
+        link: https://pypi.org/project/scikit-garden/#history
+        package_name: scikit-garden

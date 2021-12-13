@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NtplibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ntplib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ntplib' has no recent release, last release dates back to 2021-05-28 19:08:54.394369
+        link: https://pypi.org/project/ntplib/#history
+        package_name: ntplib

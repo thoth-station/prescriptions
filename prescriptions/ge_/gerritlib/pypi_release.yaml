@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GerritlibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gerritlib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gerritlib' has no recent release, last release dates back to 2020-12-03 17:56:48.695655
+        link: https://pypi.org/project/gerritlib/#history
+        package_name: gerritlib

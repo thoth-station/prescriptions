@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureStorageNspkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-nspkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-storage-nspkg' has no recent release, last release dates back to 2018-11-10 02:23:17.347681
+        link: https://pypi.org/project/azure-storage-nspkg/#history
+        package_name: azure-storage-nspkg

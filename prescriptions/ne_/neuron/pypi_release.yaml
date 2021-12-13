@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeuronPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neuron
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neuron' has no recent release, last release dates back to 2021-04-30 22:19:48.334392
+        link: https://pypi.org/project/neuron/#history
+        package_name: neuron

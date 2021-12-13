@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LockfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lockfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lockfile' has no recent release, last release dates back to 2015-11-25 18:29:58.279992
+        link: https://pypi.org/project/lockfile/#history
+        package_name: lockfile

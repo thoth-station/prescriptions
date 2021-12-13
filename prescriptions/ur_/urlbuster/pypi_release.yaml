@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UrlbusterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urlbuster
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'urlbuster' has no recent release, last release dates back to 2021-01-30 13:38:25.606826
+        link: https://pypi.org/project/urlbuster/#history
+        package_name: urlbuster

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UsortPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: usort
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'usort' has no recent release, last release dates back to 2021-04-02 20:05:01.750314
+        link: https://pypi.org/project/usort/#history
+        package_name: usort

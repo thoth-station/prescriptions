@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AsciitreePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asciitree
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'asciitree' has no recent release, last release dates back to 2016-09-05 19:10:42.681945
+        link: https://pypi.org/project/asciitree/#history
+        package_name: asciitree

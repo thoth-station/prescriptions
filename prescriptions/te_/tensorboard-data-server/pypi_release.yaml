@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TensorboardDataServerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard-data-server
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tensorboard-data-server' has no recent release, last release dates back to 2021-05-05 21:49:51.761951
+        link: https://pypi.org/project/tensorboard-data-server/#history
+        package_name: tensorboard-data-server

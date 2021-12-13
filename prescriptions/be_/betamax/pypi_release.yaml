@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BetamaxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: betamax
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'betamax' has no recent release, last release dates back to 2018-03-13 22:25:26.219515
+        link: https://pypi.org/project/betamax/#history
+        package_name: betamax

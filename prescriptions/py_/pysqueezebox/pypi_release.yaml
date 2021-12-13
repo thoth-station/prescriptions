@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysqueezeboxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysqueezebox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysqueezebox' has no recent release, last release dates back to 2020-11-08 02:06:16.120855
+        link: https://pypi.org/project/pysqueezebox/#history
+        package_name: pysqueezebox

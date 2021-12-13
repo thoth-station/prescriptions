@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CalmsizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: calmsize
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'calmsize' has no recent release, last release dates back to 2019-05-28 01:01:42.977718
+        link: https://pypi.org/project/calmsize/#history
+        package_name: calmsize

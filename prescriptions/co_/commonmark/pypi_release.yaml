@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CommonmarkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commonmark
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'commonmark' has no recent release, last release dates back to 2019-10-04 15:37:39.817349
+        link: https://pypi.org/project/commonmark/#history
+        package_name: commonmark

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeEventPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-event
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-event' has no recent release, last release dates back to 2020-09-18 10:19:55.685846
+        link: https://pypi.org/project/zope-event/#history
+        package_name: zope-event

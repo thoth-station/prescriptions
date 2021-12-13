@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AwakePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awake
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'awake' has no recent release, last release dates back to 2012-12-14 08:02:27.661506
+        link: https://pypi.org/project/awake/#history
+        package_name: awake

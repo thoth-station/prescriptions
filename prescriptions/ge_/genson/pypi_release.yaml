@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GensonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: genson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'genson' has no recent release, last release dates back to 2020-08-19 17:04:45.090787
+        link: https://pypi.org/project/genson/#history
+        package_name: genson

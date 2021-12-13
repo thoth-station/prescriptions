@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultiKeyDictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multi-key-dict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multi-key-dict' has no recent release, last release dates back to 2015-09-20 19:49:13.425785
+        link: https://pypi.org/project/multi-key-dict/#history
+        package_name: multi-key-dict

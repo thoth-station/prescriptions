@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CodacyCoveragePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codacy-coverage
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'codacy-coverage' has no recent release, last release dates back to 2018-03-24 15:16:52.306174
+        link: https://pypi.org/project/codacy-coverage/#history
+        package_name: codacy-coverage

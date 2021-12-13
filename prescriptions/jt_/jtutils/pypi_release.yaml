@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JtutilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jtutils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jtutils' has no recent release, last release dates back to 2020-08-11 02:35:47.310436
+        link: https://pypi.org/project/jtutils/#history
+        package_name: jtutils

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LegofyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: legofy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'legofy' has no recent release, last release dates back to 2015-12-03 02:24:15.787652
+        link: https://pypi.org/project/legofy/#history
+        package_name: legofy

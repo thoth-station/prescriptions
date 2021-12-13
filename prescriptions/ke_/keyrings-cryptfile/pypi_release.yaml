@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KeyringsCryptfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyrings-cryptfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keyrings-cryptfile' has no recent release, last release dates back to 2021-02-05 13:28:09.922896
+        link: https://pypi.org/project/keyrings-cryptfile/#history
+        package_name: keyrings-cryptfile

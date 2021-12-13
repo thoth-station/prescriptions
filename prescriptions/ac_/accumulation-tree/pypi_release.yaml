@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AccumulationTreePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: accumulation-tree
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'accumulation-tree' has no recent release, last release dates back to 2020-05-09 17:49:07.119329
+        link: https://pypi.org/project/accumulation-tree/#history
+        package_name: accumulation-tree

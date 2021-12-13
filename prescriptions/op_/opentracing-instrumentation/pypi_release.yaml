@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpentracingInstrumentationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentracing-instrumentation
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opentracing-instrumentation' has no recent release, last release dates back to 2020-06-23 22:17:03.010854
+        link: https://pypi.org/project/opentracing-instrumentation/#history
+        package_name: opentracing-instrumentation

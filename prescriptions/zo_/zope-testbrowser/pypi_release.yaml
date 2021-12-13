@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeTestbrowserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-testbrowser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-testbrowser' has no recent release, last release dates back to 2019-11-12 09:53:06.935608
+        link: https://pypi.org/project/zope-testbrowser/#history
+        package_name: zope-testbrowser

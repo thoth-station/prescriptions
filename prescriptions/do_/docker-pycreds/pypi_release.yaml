@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DockerPycredsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker-pycreds
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'docker-pycreds' has no recent release, last release dates back to 2018-11-29 03:26:50.996087
+        link: https://pypi.org/project/docker-pycreds/#history
+        package_name: docker-pycreds

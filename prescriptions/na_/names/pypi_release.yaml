@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NamesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: names
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'names' has no recent release, last release dates back to 2013-05-14 14:55:49.073301
+        link: https://pypi.org/project/names/#history
+        package_name: names

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RootpathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rootpath
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rootpath' has no recent release, last release dates back to 2019-03-10 11:21:09.266888
+        link: https://pypi.org/project/rootpath/#history
+        package_name: rootpath

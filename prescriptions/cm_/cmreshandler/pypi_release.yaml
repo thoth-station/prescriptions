@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CmreshandlerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmreshandler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cmreshandler' has no recent release, last release dates back to 2017-10-08 21:11:39.448260
+        link: https://pypi.org/project/cmreshandler/#history
+        package_name: cmreshandler

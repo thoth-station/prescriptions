@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LuhnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: luhn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'luhn' has no recent release, last release dates back to 2015-06-23 07:08:35.749681
+        link: https://pypi.org/project/luhn/#history
+        package_name: luhn

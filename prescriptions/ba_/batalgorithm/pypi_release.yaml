@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BatalgorithmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batalgorithm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'batalgorithm' has no recent release, last release dates back to 2019-05-28 16:16:26.745613
+        link: https://pypi.org/project/batalgorithm/#history
+        package_name: batalgorithm

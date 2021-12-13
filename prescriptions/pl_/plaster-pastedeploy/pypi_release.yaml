@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PlasterPastedeployPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plaster-pastedeploy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'plaster-pastedeploy' has no recent release, last release dates back to 2019-04-12 06:21:18.056381
+        link: https://pypi.org/project/plaster-pastedeploy/#history
+        package_name: plaster-pastedeploy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerasRetinanetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-retinanet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keras-retinanet' has no recent release, last release dates back to 2020-09-25 09:26:04.042966
+        link: https://pypi.org/project/keras-retinanet/#history
+        package_name: keras-retinanet

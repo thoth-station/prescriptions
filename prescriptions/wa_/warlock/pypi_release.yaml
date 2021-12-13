@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WarlockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: warlock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'warlock' has no recent release, last release dates back to 2019-05-20 10:11:38.911721
+        link: https://pypi.org/project/warlock/#history
+        package_name: warlock

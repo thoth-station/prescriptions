@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoExtraFieldsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-extra-fields
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-extra-fields' has no recent release, last release dates back to 2020-09-22 13:38:21.467682
+        link: https://pypi.org/project/django-extra-fields/#history
+        package_name: django-extra-fields

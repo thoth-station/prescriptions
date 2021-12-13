@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobotframeworkDatabaselibraryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-databaselibrary
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'robotframework-databaselibrary' has no recent release, last release dates back to 2019-07-18 17:45:42.744519
+        link: https://pypi.org/project/robotframework-databaselibrary/#history
+        package_name: robotframework-databaselibrary

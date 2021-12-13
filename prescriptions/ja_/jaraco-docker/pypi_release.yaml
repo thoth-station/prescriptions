@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoDockerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-docker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-docker' has no recent release, last release dates back to 2019-01-01 22:04:40.401467
+        link: https://pypi.org/project/jaraco-docker/#history
+        package_name: jaraco-docker

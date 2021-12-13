@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoSlowtestsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-slowtests
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-slowtests' has no recent release, last release dates back to 2019-02-12 16:58:30.043984
+        link: https://pypi.org/project/django-slowtests/#history
+        package_name: django-slowtests

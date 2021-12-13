@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShellinghamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shellingham
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'shellingham' has no recent release, last release dates back to 2021-02-01 09:27:49.559685
+        link: https://pypi.org/project/shellingham/#history
+        package_name: shellingham

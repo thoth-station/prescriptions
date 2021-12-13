@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SepPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sep
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sep' has no recent release, last release dates back to 2021-05-01 17:35:34.381681
+        link: https://pypi.org/project/sep/#history
+        package_name: sep

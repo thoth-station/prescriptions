@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoAptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-apt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-apt' has no recent release, last release dates back to 2019-01-01 16:20:33.069760
+        link: https://pypi.org/project/jaraco-apt/#history
+        package_name: jaraco-apt

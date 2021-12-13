@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PsutilPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psutil
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'psutil' has no recent release, last release dates back to 2020-12-19 01:20:42.916847
+        link: https://pypi.org/project/psutil/#history
+        package_name: psutil

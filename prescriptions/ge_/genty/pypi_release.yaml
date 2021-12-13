@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GentyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: genty
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'genty' has no recent release, last release dates back to 2016-02-23 23:22:46.783573
+        link: https://pypi.org/project/genty/#history
+        package_name: genty

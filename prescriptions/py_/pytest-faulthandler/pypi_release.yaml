@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestFaulthandlerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-faulthandler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-faulthandler' has no recent release, last release dates back to 2019-07-04 20:39:46.211413
+        link: https://pypi.org/project/pytest-faulthandler/#history
+        package_name: pytest-faulthandler

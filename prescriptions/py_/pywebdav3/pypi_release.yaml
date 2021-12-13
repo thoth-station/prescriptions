@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pywebdav3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywebdav3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pywebdav3' has no recent release, last release dates back to 2019-09-03 00:48:00.832368
+        link: https://pypi.org/project/pywebdav3/#history
+        package_name: pywebdav3

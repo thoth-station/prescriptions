@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxtestersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxtesters
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinxtesters' has no recent release, last release dates back to 2019-08-07 13:24:40.716526
+        link: https://pypi.org/project/sphinxtesters/#history
+        package_name: sphinxtesters

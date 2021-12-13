@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QgridPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qgrid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'qgrid' has no recent release, last release dates back to 2020-04-07 16:43:54.895025
+        link: https://pypi.org/project/qgrid/#history
+        package_name: qgrid

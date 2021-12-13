@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SniffioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sniffio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sniffio' has no recent release, last release dates back to 2020-10-11 18:25:37.671257
+        link: https://pypi.org/project/sniffio/#history
+        package_name: sniffio

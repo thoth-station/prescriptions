@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LibpagurePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libpagure
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'libpagure' has no recent release, last release dates back to 2019-07-31 09:26:11.132668
+        link: https://pypi.org/project/libpagure/#history
+        package_name: libpagure

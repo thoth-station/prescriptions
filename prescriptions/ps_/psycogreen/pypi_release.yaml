@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PsycogreenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycogreen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'psycogreen' has no recent release, last release dates back to 2020-02-22 19:55:22.020770
+        link: https://pypi.org/project/psycogreen/#history
+        package_name: psycogreen

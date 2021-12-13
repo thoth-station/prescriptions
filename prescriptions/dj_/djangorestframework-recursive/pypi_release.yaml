@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangorestframeworkRecursivePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangorestframework-recursive
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'djangorestframework-recursive' has no recent release, last release dates back to 2017-07-04 07:49:24.206403
+        link: https://pypi.org/project/djangorestframework-recursive/#history
+        package_name: djangorestframework-recursive

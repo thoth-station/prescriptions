@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoEnumfieldsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-enumfields
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-enumfields' has no recent release, last release dates back to 2021-02-23 06:41:07.843856
+        link: https://pypi.org/project/django-enumfields/#history
+        package_name: django-enumfields

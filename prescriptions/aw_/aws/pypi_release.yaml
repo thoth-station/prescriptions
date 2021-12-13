@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AwsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aws' has no recent release, last release dates back to 2013-06-10 13:22:48.293233
+        link: https://pypi.org/project/aws/#history
+        package_name: aws

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SingletonDecoratorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: singleton-decorator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'singleton-decorator' has no recent release, last release dates back to 2017-08-10 19:52:45.903156
+        link: https://pypi.org/project/singleton-decorator/#history
+        package_name: singleton-decorator

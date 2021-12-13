@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pykcs11PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykcs11
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pykcs11' has no recent release, last release dates back to 2020-12-31 14:47:10.320265
+        link: https://pypi.org/project/pykcs11/#history
+        package_name: pykcs11

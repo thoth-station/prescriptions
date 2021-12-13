@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpaddressPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaddress
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipaddress' has no recent release, last release dates back to 2019-10-18 01:30:27.002293
+        link: https://pypi.org/project/ipaddress/#history
+        package_name: ipaddress

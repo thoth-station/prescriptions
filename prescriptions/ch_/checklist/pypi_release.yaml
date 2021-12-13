@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ChecklistPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: checklist
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'checklist' has no recent release, last release dates back to 2021-05-24 16:45:59.518964
+        link: https://pypi.org/project/checklist/#history
+        package_name: checklist

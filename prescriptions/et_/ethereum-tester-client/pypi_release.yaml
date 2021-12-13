@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthereumTesterClientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethereum-tester-client
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ethereum-tester-client' has no recent release, last release dates back to 2016-10-05 15:55:26.043346
+        link: https://pypi.org/project/ethereum-tester-client/#history
+        package_name: ethereum-tester-client

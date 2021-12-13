@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CapstonePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: capstone
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'capstone' has no recent release, last release dates back to 2020-05-11 02:28:35.393405
+        link: https://pypi.org/project/capstone/#history
+        package_name: capstone

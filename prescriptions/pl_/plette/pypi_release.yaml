@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PlettePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plette
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'plette' has no recent release, last release dates back to 2019-10-19 12:56:21.230370
+        link: https://pypi.org/project/plette/#history
+        package_name: plette

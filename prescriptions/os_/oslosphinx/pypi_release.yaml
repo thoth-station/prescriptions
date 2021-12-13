@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OslosphinxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oslosphinx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'oslosphinx' has no recent release, last release dates back to 2018-01-08 14:15:04.264171
+        link: https://pypi.org/project/oslosphinx/#history
+        package_name: oslosphinx

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RuffusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruffus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ruffus' has no recent release, last release dates back to 2020-04-24 19:58:08.799423
+        link: https://pypi.org/project/ruffus/#history
+        package_name: ruffus

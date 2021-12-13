@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NmstatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nmstate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nmstate' has no recent release, last release dates back to 2021-04-15 11:47:16.502974
+        link: https://pypi.org/project/nmstate/#history
+        package_name: nmstate

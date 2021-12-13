@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SmbusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'smbus' has no recent release, last release dates back to 2019-03-08 16:25:59.532808
+        link: https://pypi.org/project/smbus/#history
+        package_name: smbus

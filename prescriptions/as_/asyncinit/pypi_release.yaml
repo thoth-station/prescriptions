@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AsyncinitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncinit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'asyncinit' has no recent release, last release dates back to 2018-10-19 17:33:00.792772
+        link: https://pypi.org/project/asyncinit/#history
+        package_name: asyncinit

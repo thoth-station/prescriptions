@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParamnbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paramnb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'paramnb' has no recent release, last release dates back to 2018-07-08 18:24:15.512507
+        link: https://pypi.org/project/paramnb/#history
+        package_name: paramnb

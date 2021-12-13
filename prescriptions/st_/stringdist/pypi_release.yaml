@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StringdistPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stringdist
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stringdist' has no recent release, last release dates back to 2017-05-11 07:54:54.261901
+        link: https://pypi.org/project/stringdist/#history
+        package_name: stringdist

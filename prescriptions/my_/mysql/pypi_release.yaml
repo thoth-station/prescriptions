@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MysqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mysql' has no recent release, last release dates back to 2021-05-25 19:52:16.818488
+        link: https://pypi.org/project/mysql/#history
+        package_name: mysql

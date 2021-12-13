@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RequestsOauthlibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-oauthlib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'requests-oauthlib' has no recent release, last release dates back to 2019-11-06 14:41:48.125034
+        link: https://pypi.org/project/requests-oauthlib/#history
+        package_name: requests-oauthlib

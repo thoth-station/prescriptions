@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DynamodbJsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynamodb-json
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dynamodb-json' has no recent release, last release dates back to 2018-05-09 21:35:42.170058
+        link: https://pypi.org/project/dynamodb-json/#history
+        package_name: dynamodb-json

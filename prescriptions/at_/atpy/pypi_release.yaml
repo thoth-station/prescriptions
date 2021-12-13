@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AtpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'atpy' has no recent release, last release dates back to 2013-07-30 13:05:23.278263
+        link: https://pypi.org/project/atpy/#history
+        package_name: atpy

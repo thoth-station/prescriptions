@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EphemeralPortReservePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ephemeral-port-reserve
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ephemeral-port-reserve' has no recent release, last release dates back to 2021-02-11 17:18:58.971311
+        link: https://pypi.org/project/ephemeral-port-reserve/#history
+        package_name: ephemeral-port-reserve

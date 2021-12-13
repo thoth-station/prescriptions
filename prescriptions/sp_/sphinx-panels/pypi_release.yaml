@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxPanelsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-panels
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-panels' has no recent release, last release dates back to 2021-06-03 21:37:06.613291
+        link: https://pypi.org/project/sphinx-panels/#history
+        package_name: sphinx-panels

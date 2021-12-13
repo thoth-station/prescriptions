@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GnupgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gnupg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gnupg' has no recent release, last release dates back to 2017-09-06 23:51:24.876793
+        link: https://pypi.org/project/gnupg/#history
+        package_name: gnupg

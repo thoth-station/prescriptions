@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CompoundWordSplitterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: compound-word-splitter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'compound-word-splitter' has no recent release, last release dates back to 2017-05-25 14:05:03.110933
+        link: https://pypi.org/project/compound-word-splitter/#history
+        package_name: compound-word-splitter

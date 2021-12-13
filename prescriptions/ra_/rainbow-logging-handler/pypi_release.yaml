@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RainbowLoggingHandlerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rainbow-logging-handler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rainbow-logging-handler' has no recent release, last release dates back to 2014-08-06 23:43:22.887228
+        link: https://pypi.org/project/rainbow-logging-handler/#history
+        package_name: rainbow-logging-handler

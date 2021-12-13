@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BcryptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcrypt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bcrypt' has no recent release, last release dates back to 2020-08-16 17:28:26.481935
+        link: https://pypi.org/project/bcrypt/#history
+        package_name: bcrypt

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydrivePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydrive
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydrive' has no recent release, last release dates back to 2016-10-24 20:48:39.976841
+        link: https://pypi.org/project/pydrive/#history
+        package_name: pydrive

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PaternosterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paternoster
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'paternoster' has no recent release, last release dates back to 2020-09-03 11:40:57.838359
+        link: https://pypi.org/project/paternoster/#history
+        package_name: paternoster

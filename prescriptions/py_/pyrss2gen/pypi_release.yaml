@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyrss2genPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrss2gen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyrss2gen' has no recent release, last release dates back to 2013-02-21 03:23:02.807534
+        link: https://pypi.org/project/pyrss2gen/#history
+        package_name: pyrss2gen

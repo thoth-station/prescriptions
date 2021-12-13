@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PynvxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynvx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pynvx' has no recent release, last release dates back to 2020-12-13 08:19:53.926136
+        link: https://pypi.org/project/pynvx/#history
+        package_name: pynvx

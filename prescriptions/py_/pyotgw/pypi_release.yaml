@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyotgwPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyotgw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyotgw' has no recent release, last release dates back to 2021-03-05 11:08:02.987745
+        link: https://pypi.org/project/pyotgw/#history
+        package_name: pyotgw

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StupsCliSupportPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-cli-support
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stups-cli-support' has no recent release, last release dates back to 2021-05-03 09:35:21.222781
+        link: https://pypi.org/project/stups-cli-support/#history
+        package_name: stups-cli-support

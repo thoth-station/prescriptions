@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AubioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aubio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aubio' has no recent release, last release dates back to 2019-02-08 11:21:02.438010
+        link: https://pypi.org/project/aubio/#history
+        package_name: aubio

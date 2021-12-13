@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoAdminListFilterDropdownPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-admin-list-filter-dropdown
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-admin-list-filter-dropdown' has no recent release, last release dates back to 2019-10-14 10:21:28.447749
+        link: https://pypi.org/project/django-admin-list-filter-dropdown/#history
+        package_name: django-admin-list-filter-dropdown

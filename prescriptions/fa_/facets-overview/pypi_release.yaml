@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FacetsOverviewPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facets-overview
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'facets-overview' has no recent release, last release dates back to 2019-07-24 15:57:06.805547
+        link: https://pypi.org/project/facets-overview/#history
+        package_name: facets-overview

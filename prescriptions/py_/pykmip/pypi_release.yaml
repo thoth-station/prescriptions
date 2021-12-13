@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PykmipPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykmip
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pykmip' has no recent release, last release dates back to 2020-02-25 16:28:52.863484
+        link: https://pypi.org/project/pykmip/#history
+        package_name: pykmip

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RobotframeworkFakerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-faker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'robotframework-faker' has no recent release, last release dates back to 2020-01-31 07:51:30.432045
+        link: https://pypi.org/project/robotframework-faker/#history
+        package_name: robotframework-faker

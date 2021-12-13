@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GnocchiclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gnocchiclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gnocchiclient' has no recent release, last release dates back to 2020-08-21 13:17:09.037963
+        link: https://pypi.org/project/gnocchiclient/#history
+        package_name: gnocchiclient

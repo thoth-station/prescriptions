@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpenapiSpecValidatorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openapi-spec-validator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'openapi-spec-validator' has no recent release, last release dates back to 2021-05-12 19:39:15.550328
+        link: https://pypi.org/project/openapi-spec-validator/#history
+        package_name: openapi-spec-validator

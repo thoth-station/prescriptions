@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: YgLockfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yg-lockfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'yg-lockfile' has no recent release, last release dates back to 2017-08-14 01:35:34.677825
+        link: https://pypi.org/project/yg-lockfile/#history
+        package_name: yg-lockfile

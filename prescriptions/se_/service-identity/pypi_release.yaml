@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ServiceIdentityPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: service-identity
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'service-identity' has no recent release, last release dates back to 2021-05-09 12:23:20.768746
+        link: https://pypi.org/project/service-identity/#history
+        package_name: service-identity

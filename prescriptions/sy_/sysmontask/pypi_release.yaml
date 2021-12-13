@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SysmontaskPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sysmontask
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sysmontask' has no recent release, last release dates back to 2021-03-12 08:05:10.698663
+        link: https://pypi.org/project/sysmontask/#history
+        package_name: sysmontask

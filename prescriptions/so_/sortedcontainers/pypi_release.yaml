@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SortedcontainersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sortedcontainers
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sortedcontainers' has no recent release, last release dates back to 2021-05-16 22:03:42.897871
+        link: https://pypi.org/project/sortedcontainers/#history
+        package_name: sortedcontainers

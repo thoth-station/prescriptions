@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyarloPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyarlo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyarlo' has no recent release, last release dates back to 2020-12-06 04:55:52.426050
+        link: https://pypi.org/project/pyarlo/#history
+        package_name: pyarlo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PurepngPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: purepng
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'purepng' has no recent release, last release dates back to 2016-09-30 12:42:57.366636
+        link: https://pypi.org/project/purepng/#history
+        package_name: purepng

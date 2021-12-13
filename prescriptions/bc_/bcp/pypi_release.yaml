@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BcpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bcp' has no recent release, last release dates back to 2020-02-03 00:37:37.181794
+        link: https://pypi.org/project/bcp/#history
+        package_name: bcp

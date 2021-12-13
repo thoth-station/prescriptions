@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskJsonpifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-jsonpify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-jsonpify' has no recent release, last release dates back to 2015-02-12 05:46:44.067768
+        link: https://pypi.org/project/flask-jsonpify/#history
+        package_name: flask-jsonpify

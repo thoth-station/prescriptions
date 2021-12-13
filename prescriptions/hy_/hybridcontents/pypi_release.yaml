@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HybridcontentsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hybridcontents
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hybridcontents' has no recent release, last release dates back to 2020-01-22 20:27:13.095288
+        link: https://pypi.org/project/hybridcontents/#history
+        package_name: hybridcontents

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylintQuotesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-quotes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylint-quotes' has no recent release, last release dates back to 2021-05-25 12:27:47.850345
+        link: https://pypi.org/project/pylint-quotes/#history
+        package_name: pylint-quotes

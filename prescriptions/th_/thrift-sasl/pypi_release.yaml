@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ThriftSaslPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thrift-sasl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'thrift-sasl' has no recent release, last release dates back to 2021-05-26 12:40:20.875612
+        link: https://pypi.org/project/thrift-sasl/#history
+        package_name: thrift-sasl

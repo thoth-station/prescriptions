@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeDatetimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-datetime
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-datetime' has no recent release, last release dates back to 2021-02-26 15:38:44.521826
+        link: https://pypi.org/project/zope-datetime/#history
+        package_name: zope-datetime

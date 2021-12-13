@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SmartypantsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smartypants
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'smartypants' has no recent release, last release dates back to 2017-12-20 16:24:38.080582
+        link: https://pypi.org/project/smartypants/#history
+        package_name: smartypants

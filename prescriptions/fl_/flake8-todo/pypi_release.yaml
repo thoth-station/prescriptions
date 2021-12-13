@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8TodoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-todo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-todo' has no recent release, last release dates back to 2016-11-15 16:11:39.623992
+        link: https://pypi.org/project/flake8-todo/#history
+        package_name: flake8-todo

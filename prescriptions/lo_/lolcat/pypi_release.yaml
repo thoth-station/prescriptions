@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LolcatPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lolcat
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lolcat' has no recent release, last release dates back to 2019-05-14 07:22:40.965915
+        link: https://pypi.org/project/lolcat/#history
+        package_name: lolcat

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EsvaluesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: esvalues
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'esvalues' has no recent release, last release dates back to 2016-11-04 16:40:11.119053
+        link: https://pypi.org/project/esvalues/#history
+        package_name: esvalues

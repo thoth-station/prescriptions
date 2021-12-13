@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MrcrowbarPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mrcrowbar
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mrcrowbar' has no recent release, last release dates back to 2021-01-14 14:18:40.826822
+        link: https://pypi.org/project/mrcrowbar/#history
+        package_name: mrcrowbar

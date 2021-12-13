@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeDublincorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-dublincore
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-dublincore' has no recent release, last release dates back to 2020-10-14 06:10:25.703085
+        link: https://pypi.org/project/zope-dublincore/#history
+        package_name: zope-dublincore

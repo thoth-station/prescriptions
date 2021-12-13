@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyperclipPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyperclip
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyperclip' has no recent release, last release dates back to 2021-02-21 01:04:55.809084
+        link: https://pypi.org/project/pyperclip/#history
+        package_name: pyperclip

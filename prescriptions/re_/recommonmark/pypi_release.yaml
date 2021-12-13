@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RecommonmarkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: recommonmark
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'recommonmark' has no recent release, last release dates back to 2020-12-17 19:24:56.523747
+        link: https://pypi.org/project/recommonmark/#history
+        package_name: recommonmark

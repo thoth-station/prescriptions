@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InterfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'interfile' has no recent release, last release dates back to 2015-11-23 13:13:28.910479
+        link: https://pypi.org/project/interfile/#history
+        package_name: interfile

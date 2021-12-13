@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FancycompleterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fancycompleter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fancycompleter' has no recent release, last release dates back to 2020-02-04 13:30:09.183788
+        link: https://pypi.org/project/fancycompleter/#history
+        package_name: fancycompleter

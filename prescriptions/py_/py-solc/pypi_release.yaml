@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PySolcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-solc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-solc' has no recent release, last release dates back to 2018-10-04 15:23:42.247812
+        link: https://pypi.org/project/py-solc/#history
+        package_name: py-solc

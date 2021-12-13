@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BoomPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boom
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'boom' has no recent release, last release dates back to 2016-09-05 17:00:16.285608
+        link: https://pypi.org/project/boom/#history
+        package_name: boom

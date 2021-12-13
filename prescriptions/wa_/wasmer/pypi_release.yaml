@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WasmerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wasmer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wasmer' has no recent release, last release dates back to 2021-05-12 03:17:42.334094
+        link: https://pypi.org/project/wasmer/#history
+        package_name: wasmer

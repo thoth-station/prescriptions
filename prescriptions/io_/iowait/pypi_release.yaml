@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IowaitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iowait
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'iowait' has no recent release, last release dates back to 2013-09-08 14:22:16.682348
+        link: https://pypi.org/project/iowait/#history
+        package_name: iowait

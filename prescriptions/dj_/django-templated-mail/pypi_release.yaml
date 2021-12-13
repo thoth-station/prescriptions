@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoTemplatedMailPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-templated-mail
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-templated-mail' has no recent release, last release dates back to 2018-02-01 21:38:36.083776
+        link: https://pypi.org/project/django-templated-mail/#history
+        package_name: django-templated-mail

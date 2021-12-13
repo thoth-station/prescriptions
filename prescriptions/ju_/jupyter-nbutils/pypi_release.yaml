@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterNbutilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-nbutils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-nbutils' has no recent release, last release dates back to 2019-05-08 06:49:43.662760
+        link: https://pypi.org/project/jupyter-nbutils/#history
+        package_name: jupyter-nbutils

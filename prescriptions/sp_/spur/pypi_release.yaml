@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SpurPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spur
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'spur' has no recent release, last release dates back to 2020-10-11 13:31:22.547581
+        link: https://pypi.org/project/spur/#history
+        package_name: spur

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeometPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geomet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geomet' has no recent release, last release dates back to 2020-12-29 00:48:29.404727
+        link: https://pypi.org/project/geomet/#history
+        package_name: geomet

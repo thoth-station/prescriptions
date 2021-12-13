@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GenderGuesserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gender-guesser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gender-guesser' has no recent release, last release dates back to 2016-12-05 11:41:47.759557
+        link: https://pypi.org/project/gender-guesser/#history
+        package_name: gender-guesser

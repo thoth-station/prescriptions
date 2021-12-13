@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParselPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parsel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'parsel' has no recent release, last release dates back to 2020-05-07 20:46:57.110554
+        link: https://pypi.org/project/parsel/#history
+        package_name: parsel

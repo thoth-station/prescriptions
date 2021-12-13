@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProtoGoogleCloudSpannerAdminDatabaseV1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: proto-google-cloud-spanner-admin-database-v1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'proto-google-cloud-spanner-admin-database-v1' has no recent release, last release dates back to 2017-03-06 17:19:50.574953
+        link: https://pypi.org/project/proto-google-cloud-spanner-admin-database-v1/#history
+        package_name: proto-google-cloud-spanner-admin-database-v1

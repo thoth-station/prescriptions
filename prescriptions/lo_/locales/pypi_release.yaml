@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LocalesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: locales
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'locales' has no recent release, last release dates back to 2019-02-04 09:48:00.815011
+        link: https://pypi.org/project/locales/#history
+        package_name: locales

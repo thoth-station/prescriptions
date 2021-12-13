@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VenusianPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: venusian
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'venusian' has no recent release, last release dates back to 2019-11-05 19:51:12.508881
+        link: https://pypi.org/project/venusian/#history
+        package_name: venusian

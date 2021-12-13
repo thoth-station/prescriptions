@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MergedeepPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mergedeep
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mergedeep' has no recent release, last release dates back to 2021-02-05 18:55:30.623988
+        link: https://pypi.org/project/mergedeep/#history
+        package_name: mergedeep

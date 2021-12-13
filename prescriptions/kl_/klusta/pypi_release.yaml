@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KlustaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: klusta
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'klusta' has no recent release, last release dates back to 2017-02-21 12:45:08.398531
+        link: https://pypi.org/project/klusta/#history
+        package_name: klusta

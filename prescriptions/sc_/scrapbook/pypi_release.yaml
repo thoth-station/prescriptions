@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScrapbookPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scrapbook
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scrapbook' has no recent release, last release dates back to 2021-01-06 19:16:26.400235
+        link: https://pypi.org/project/scrapbook/#history
+        package_name: scrapbook

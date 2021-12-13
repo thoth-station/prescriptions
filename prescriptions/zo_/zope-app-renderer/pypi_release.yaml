@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppRendererPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-renderer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-renderer' has no recent release, last release dates back to 2017-05-25 11:24:28.718198
+        link: https://pypi.org/project/zope-app-renderer/#history
+        package_name: zope-app-renderer

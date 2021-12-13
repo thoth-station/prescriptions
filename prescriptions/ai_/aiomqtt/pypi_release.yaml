@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiomqttPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiomqtt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiomqtt' has no recent release, last release dates back to 2021-05-22 19:14:57.288459
+        link: https://pypi.org/project/aiomqtt/#history
+        package_name: aiomqtt

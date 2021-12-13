@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TestinfraPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testinfra
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'testinfra' has no recent release, last release dates back to 2020-11-12 21:39:44.264261
+        link: https://pypi.org/project/testinfra/#history
+        package_name: testinfra

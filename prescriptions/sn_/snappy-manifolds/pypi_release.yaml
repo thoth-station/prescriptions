@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnappyManifoldsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snappy-manifolds
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'snappy-manifolds' has no recent release, last release dates back to 2020-08-25 15:52:35.335617
+        link: https://pypi.org/project/snappy-manifolds/#history
+        package_name: snappy-manifolds

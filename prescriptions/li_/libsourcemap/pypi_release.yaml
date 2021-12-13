@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LibsourcemapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libsourcemap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'libsourcemap' has no recent release, last release dates back to 2017-08-30 09:07:28.612375
+        link: https://pypi.org/project/libsourcemap/#history
+        package_name: libsourcemap

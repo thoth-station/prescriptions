@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RqDashboardPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rq-dashboard
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rq-dashboard' has no recent release, last release dates back to 2019-11-29 21:10:14.169054
+        link: https://pypi.org/project/rq-dashboard/#history
+        package_name: rq-dashboard

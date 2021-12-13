@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NewlinejsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: newlinejson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'newlinejson' has no recent release, last release dates back to 2015-09-22 18:44:12.460322
+        link: https://pypi.org/project/newlinejson/#history
+        package_name: newlinejson

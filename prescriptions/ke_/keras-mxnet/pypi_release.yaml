@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerasMxnetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-mxnet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keras-mxnet' has no recent release, last release dates back to 2020-07-02 18:36:20.969475
+        link: https://pypi.org/project/keras-mxnet/#history
+        package_name: keras-mxnet

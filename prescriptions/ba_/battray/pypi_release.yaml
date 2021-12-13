@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BattrayPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: battray
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'battray' has no recent release, last release dates back to 2017-11-07 23:34:36.212377
+        link: https://pypi.org/project/battray/#history
+        package_name: battray

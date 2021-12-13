@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NpyscreenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: npyscreen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'npyscreen' has no recent release, last release dates back to 2015-10-12 09:08:22.152317
+        link: https://pypi.org/project/npyscreen/#history
+        package_name: npyscreen

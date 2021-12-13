@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZipstreamNewPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream-new
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zipstream-new' has no recent release, last release dates back to 2020-09-14 09:26:44.566776
+        link: https://pypi.org/project/zipstream-new/#history
+        package_name: zipstream-new

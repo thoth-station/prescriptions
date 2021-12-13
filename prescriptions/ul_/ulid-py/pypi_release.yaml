@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UlidPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ulid-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ulid-py' has no recent release, last release dates back to 2020-09-15 15:35:09.414672
+        link: https://pypi.org/project/ulid-py/#history
+        package_name: ulid-py

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TblibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tblib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tblib' has no recent release, last release dates back to 2020-07-23 23:17:44.703542
+        link: https://pypi.org/project/tblib/#history
+        package_name: tblib

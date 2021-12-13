@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyyamlEnvTagPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml-env-tag
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyyaml-env-tag' has no recent release, last release dates back to 2020-11-12 02:38:26.239904
+        link: https://pypi.org/project/pyyaml-env-tag/#history
+        package_name: pyyaml-env-tag

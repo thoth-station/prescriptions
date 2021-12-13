@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyctPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyct
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyct' has no recent release, last release dates back to 2020-09-11 21:35:52.606217
+        link: https://pypi.org/project/pyct/#history
+        package_name: pyct

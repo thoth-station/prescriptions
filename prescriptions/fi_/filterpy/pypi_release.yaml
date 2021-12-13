@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FilterpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: filterpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'filterpy' has no recent release, last release dates back to 2018-10-10 22:38:24.630027
+        link: https://pypi.org/project/filterpy/#history
+        package_name: filterpy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylatexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylatex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylatex' has no recent release, last release dates back to 2020-10-18 09:06:23.534152
+        link: https://pypi.org/project/pylatex/#history
+        package_name: pylatex

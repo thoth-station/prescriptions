@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ContentfulPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contentful
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'contentful' has no recent release, last release dates back to 2021-06-15 08:28:26.193133
+        link: https://pypi.org/project/contentful/#history
+        package_name: contentful

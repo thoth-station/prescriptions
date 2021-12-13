@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GpgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gpg' has no recent release, last release dates back to 2018-02-15 13:43:18.325748
+        link: https://pypi.org/project/gpg/#history
+        package_name: gpg

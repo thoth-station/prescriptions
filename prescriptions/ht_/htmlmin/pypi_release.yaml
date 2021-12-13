@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HtmlminPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: htmlmin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'htmlmin' has no recent release, last release dates back to 2017-12-29 16:41:36.589939
+        link: https://pypi.org/project/htmlmin/#history
+        package_name: htmlmin

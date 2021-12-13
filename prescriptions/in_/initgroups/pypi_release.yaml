@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InitgroupsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: initgroups
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'initgroups' has no recent release, last release dates back to 2017-10-13 06:08:22.680323
+        link: https://pypi.org/project/initgroups/#history
+        package_name: initgroups

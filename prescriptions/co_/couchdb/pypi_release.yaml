@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CouchdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: couchdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'couchdb' has no recent release, last release dates back to 2018-02-09 13:12:52.727353
+        link: https://pypi.org/project/couchdb/#history
+        package_name: couchdb

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtCommonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-common
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-common' has no recent release, last release dates back to 2015-08-31 18:06:59.643086
+        link: https://pypi.org/project/azure-mgmt-common/#history
+        package_name: azure-mgmt-common

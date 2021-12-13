@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GlogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'glog' has no recent release, last release dates back to 2016-12-14 01:52:18.216465
+        link: https://pypi.org/project/glog/#history
+        package_name: glog

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8TypeAnnotationsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-type-annotations
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-type-annotations' has no recent release, last release dates back to 2018-09-29 09:26:43.076134
+        link: https://pypi.org/project/flake8-type-annotations/#history
+        package_name: flake8-type-annotations

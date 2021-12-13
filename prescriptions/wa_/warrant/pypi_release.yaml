@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WarrantPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: warrant
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'warrant' has no recent release, last release dates back to 2017-12-11 16:09:37.568495
+        link: https://pypi.org/project/warrant/#history
+        package_name: warrant

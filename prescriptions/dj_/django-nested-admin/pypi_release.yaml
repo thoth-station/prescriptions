@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoNestedAdminPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-nested-admin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-nested-admin' has no recent release, last release dates back to 2020-12-17 15:31:35.504011
+        link: https://pypi.org/project/django-nested-admin/#history
+        package_name: django-nested-admin

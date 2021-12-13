@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtNotificationhubsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-notificationhubs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-notificationhubs' has no recent release, last release dates back to 2021-01-04 06:16:02.945070
+        link: https://pypi.org/project/azure-mgmt-notificationhubs/#history
+        package_name: azure-mgmt-notificationhubs

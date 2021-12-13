@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EasycoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyco
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'easyco' has no recent release, last release dates back to 2020-09-11 05:45:32.690153
+        link: https://pypi.org/project/easyco/#history
+        package_name: easyco

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportCollectionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backport-collections
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backport-collections' has no recent release, last release dates back to 2014-09-01 09:47:50.279752
+        link: https://pypi.org/project/backport-collections/#history
+        package_name: backport-collections

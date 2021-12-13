@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonDynamodbLockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dynamodb-lock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-dynamodb-lock' has no recent release, last release dates back to 2018-10-28 17:50:46.633874
+        link: https://pypi.org/project/python-dynamodb-lock/#history
+        package_name: python-dynamodb-lock

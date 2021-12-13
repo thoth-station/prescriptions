@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AttributedictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attributedict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'attributedict' has no recent release, last release dates back to 2019-03-10 11:04:29.810782
+        link: https://pypi.org/project/attributedict/#history
+        package_name: attributedict

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioodbcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioodbc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioodbc' has no recent release, last release dates back to 2019-07-06 03:18:00.545299
+        link: https://pypi.org/project/aioodbc/#history
+        package_name: aioodbc

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InotifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inotify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'inotify' has no recent release, last release dates back to 2018-07-07 06:46:46.084659
+        link: https://pypi.org/project/inotify/#history
+        package_name: inotify

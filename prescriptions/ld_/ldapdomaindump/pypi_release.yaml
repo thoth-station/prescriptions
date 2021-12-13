@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LdapdomaindumpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ldapdomaindump
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ldapdomaindump' has no recent release, last release dates back to 2020-05-31 18:24:29.851521
+        link: https://pypi.org/project/ldapdomaindump/#history
+        package_name: ldapdomaindump

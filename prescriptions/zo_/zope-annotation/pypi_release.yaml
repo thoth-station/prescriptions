@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAnnotationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-annotation
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-annotation' has no recent release, last release dates back to 2018-10-16 15:49:38.881561
+        link: https://pypi.org/project/zope-annotation/#history
+        package_name: zope-annotation

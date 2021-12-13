@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PreludePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prelude
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prelude' has no recent release, last release dates back to 2020-08-05 17:23:02.714173
+        link: https://pypi.org/project/prelude/#history
+        package_name: prelude

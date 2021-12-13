@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IdnaSslPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna-ssl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'idna-ssl' has no recent release, last release dates back to 2018-07-05 09:15:37.206167
+        link: https://pypi.org/project/idna-ssl/#history
+        package_name: idna-ssl

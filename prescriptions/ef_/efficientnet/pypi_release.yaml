@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EfficientnetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: efficientnet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'efficientnet' has no recent release, last release dates back to 2020-09-15 16:26:01.845208
+        link: https://pypi.org/project/efficientnet/#history
+        package_name: efficientnet

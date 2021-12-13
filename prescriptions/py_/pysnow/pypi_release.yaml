@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PysnowPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysnow
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pysnow' has no recent release, last release dates back to 2021-03-06 14:39:59.393091
+        link: https://pypi.org/project/pysnow/#history
+        package_name: pysnow

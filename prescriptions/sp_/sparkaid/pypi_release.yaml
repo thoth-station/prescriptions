@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SparkaidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparkaid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sparkaid' has no recent release, last release dates back to 2019-08-23 05:45:41.363444
+        link: https://pypi.org/project/sparkaid/#history
+        package_name: sparkaid

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureStorageLoggingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-logging
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-storage-logging' has no recent release, last release dates back to 2016-10-09 16:18:48.113515
+        link: https://pypi.org/project/azure-storage-logging/#history
+        package_name: azure-storage-logging

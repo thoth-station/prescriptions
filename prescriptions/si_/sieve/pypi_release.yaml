@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SievePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sieve
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sieve' has no recent release, last release dates back to 2013-09-11 12:38:55.884511
+        link: https://pypi.org/project/sieve/#history
+        package_name: sieve

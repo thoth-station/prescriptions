@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SupervisorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supervisor
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'supervisor' has no recent release, last release dates back to 2021-02-26 20:45:56.285547
+        link: https://pypi.org/project/supervisor/#history
+        package_name: supervisor

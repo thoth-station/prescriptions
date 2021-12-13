@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RpqueuePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpqueue
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rpqueue' has no recent release, last release dates back to 2021-05-27 02:40:00.786779
+        link: https://pypi.org/project/rpqueue/#history
+        package_name: rpqueue

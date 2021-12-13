@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BinwalkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binwalk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'binwalk' has no recent release, last release dates back to 2015-01-22 07:31:34.356713
+        link: https://pypi.org/project/binwalk/#history
+        package_name: binwalk

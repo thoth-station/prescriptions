@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KazooPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kazoo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kazoo' has no recent release, last release dates back to 2020-07-11 16:18:58.141986
+        link: https://pypi.org/project/kazoo/#history
+        package_name: kazoo

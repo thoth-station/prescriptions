@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppDependablePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-dependable
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-dependable' has no recent release, last release dates back to 2018-10-22 12:38:34.253050
+        link: https://pypi.org/project/zope-app-dependable/#history
+        package_name: zope-app-dependable

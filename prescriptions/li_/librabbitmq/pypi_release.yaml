@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LibrabbitmqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: librabbitmq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'librabbitmq' has no recent release, last release dates back to 2018-05-30 14:48:52.935135
+        link: https://pypi.org/project/librabbitmq/#history
+        package_name: librabbitmq

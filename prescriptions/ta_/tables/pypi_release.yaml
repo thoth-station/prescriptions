@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TablesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tables
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tables' has no recent release, last release dates back to 2020-11-17 18:14:57.430782
+        link: https://pypi.org/project/tables/#history
+        package_name: tables

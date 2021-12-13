@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClickCompletionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-completion
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'click-completion' has no recent release, last release dates back to 2019-10-15 16:21:42.420260
+        link: https://pypi.org/project/click-completion/#history
+        package_name: click-completion

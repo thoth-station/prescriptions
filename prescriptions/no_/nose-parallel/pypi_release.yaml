@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NoseParallelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-parallel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nose-parallel' has no recent release, last release dates back to 2020-05-01 21:14:31.708973
+        link: https://pypi.org/project/nose-parallel/#history
+        package_name: nose-parallel

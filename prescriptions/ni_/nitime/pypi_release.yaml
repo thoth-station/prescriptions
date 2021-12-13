@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NitimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitime
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nitime' has no recent release, last release dates back to 2020-12-19 20:41:45.475796
+        link: https://pypi.org/project/nitime/#history
+        package_name: nitime

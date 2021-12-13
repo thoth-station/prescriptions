@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppContainerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-container
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-container' has no recent release, last release dates back to 2017-04-24 16:02:33.685765
+        link: https://pypi.org/project/zope-app-container/#history
+        package_name: zope-app-container

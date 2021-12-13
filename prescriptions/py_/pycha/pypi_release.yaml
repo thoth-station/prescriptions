@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PychaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycha
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycha' has no recent release, last release dates back to 2019-11-18 06:47:16.270781
+        link: https://pypi.org/project/pycha/#history
+        package_name: pycha

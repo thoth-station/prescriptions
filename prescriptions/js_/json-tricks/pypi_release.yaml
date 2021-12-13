@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonTricksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-tricks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'json-tricks' has no recent release, last release dates back to 2020-12-02 21:29:38.071923
+        link: https://pypi.org/project/json-tricks/#history
+        package_name: json-tricks

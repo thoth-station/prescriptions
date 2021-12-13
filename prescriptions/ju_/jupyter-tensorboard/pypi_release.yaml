@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterTensorboardPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-tensorboard
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-tensorboard' has no recent release, last release dates back to 2020-02-16 07:15:03.567866
+        link: https://pypi.org/project/jupyter-tensorboard/#history
+        package_name: jupyter-tensorboard

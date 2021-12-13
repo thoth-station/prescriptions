@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsiconPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansicon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansicon' has no recent release, last release dates back to 2019-04-29 20:23:57.314778
+        link: https://pypi.org/project/ansicon/#history
+        package_name: ansicon

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestDependencyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-dependency
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-dependency' has no recent release, last release dates back to 2020-02-14 21:07:09.217021
+        link: https://pypi.org/project/pytest-dependency/#history
+        package_name: pytest-dependency

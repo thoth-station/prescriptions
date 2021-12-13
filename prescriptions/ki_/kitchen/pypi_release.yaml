@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KitchenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kitchen
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kitchen' has no recent release, last release dates back to 2019-05-14 19:52:35.342077
+        link: https://pypi.org/project/kitchen/#history
+        package_name: kitchen

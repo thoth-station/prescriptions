@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiorpcxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiorpcx
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiorpcx' has no recent release, last release dates back to 2021-05-25 14:13:35.721863
+        link: https://pypi.org/project/aiorpcx/#history
+        package_name: aiorpcx

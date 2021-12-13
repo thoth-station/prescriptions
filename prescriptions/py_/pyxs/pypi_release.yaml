@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyxsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyxs' has no recent release, last release dates back to 2016-05-10 21:15:05.775225
+        link: https://pypi.org/project/pyxs/#history
+        package_name: pyxs

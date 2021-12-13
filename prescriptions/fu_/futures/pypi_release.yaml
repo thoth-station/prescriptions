@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuturesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: futures
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'futures' has no recent release, last release dates back to 2019-07-15 09:33:01.743768
+        link: https://pypi.org/project/futures/#history
+        package_name: futures

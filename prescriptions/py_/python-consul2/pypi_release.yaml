@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonConsul2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-consul2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-consul2' has no recent release, last release dates back to 2020-10-20 06:19:54.982790
+        link: https://pypi.org/project/python-consul2/#history
+        package_name: python-consul2

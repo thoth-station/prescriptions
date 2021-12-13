@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyblake2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyblake2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyblake2' has no recent release, last release dates back to 2018-04-11 16:25:53.660900
+        link: https://pypi.org/project/pyblake2/#history
+        package_name: pyblake2

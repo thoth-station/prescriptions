@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pywin32CtypesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywin32-ctypes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pywin32-ctypes' has no recent release, last release dates back to 2018-08-17 12:34:55.844127
+        link: https://pypi.org/project/pywin32-ctypes/#history
+        package_name: pywin32-ctypes

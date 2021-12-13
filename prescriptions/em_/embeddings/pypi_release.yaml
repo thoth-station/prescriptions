@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EmbeddingsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: embeddings
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'embeddings' has no recent release, last release dates back to 2020-02-11 20:47:25.607317
+        link: https://pypi.org/project/embeddings/#history
+        package_name: embeddings

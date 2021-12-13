@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LazyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lazy' has no recent release, last release dates back to 2019-01-28 18:32:18.666855
+        link: https://pypi.org/project/lazy/#history
+        package_name: lazy

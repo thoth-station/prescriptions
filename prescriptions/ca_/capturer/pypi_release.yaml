@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CapturerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: capturer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'capturer' has no recent release, last release dates back to 2020-03-07 00:34:50.566051
+        link: https://pypi.org/project/capturer/#history
+        package_name: capturer

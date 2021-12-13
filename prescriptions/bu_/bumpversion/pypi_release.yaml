@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BumpversionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bumpversion
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bumpversion' has no recent release, last release dates back to 2020-05-14 02:19:39.534322
+        link: https://pypi.org/project/bumpversion/#history
+        package_name: bumpversion

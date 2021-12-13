@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScikitSparkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-spark
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scikit-spark' has no recent release, last release dates back to 2020-02-24 12:47:44.808412
+        link: https://pypi.org/project/scikit-spark/#history
+        package_name: scikit-spark

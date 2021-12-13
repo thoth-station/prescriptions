@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProtegoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: protego
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'protego' has no recent release, last release dates back to 2019-12-09 12:10:14.599571
+        link: https://pypi.org/project/protego/#history
+        package_name: protego

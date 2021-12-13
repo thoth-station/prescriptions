@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PymongoAuthAwsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymongo-auth-aws
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pymongo-auth-aws' has no recent release, last release dates back to 2020-09-24 17:39:05.723649
+        link: https://pypi.org/project/pymongo-auth-aws/#history
+        package_name: pymongo-auth-aws

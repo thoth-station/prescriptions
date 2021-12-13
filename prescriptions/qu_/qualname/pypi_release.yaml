@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QualnamePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qualname
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'qualname' has no recent release, last release dates back to 2015-04-11 22:51:43.936914
+        link: https://pypi.org/project/qualname/#history
+        package_name: qualname

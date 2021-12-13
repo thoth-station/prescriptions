@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TwistedDevToolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-dev-tools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'twisted-dev-tools' has no recent release, last release dates back to 2013-06-15 00:03:18.047528
+        link: https://pypi.org/project/twisted-dev-tools/#history
+        package_name: twisted-dev-tools

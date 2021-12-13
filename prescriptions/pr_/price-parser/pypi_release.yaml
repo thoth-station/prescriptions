@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PriceParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: price-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'price-parser' has no recent release, last release dates back to 2020-11-25 09:35:50.870328
+        link: https://pypi.org/project/price-parser/#history
+        package_name: price-parser

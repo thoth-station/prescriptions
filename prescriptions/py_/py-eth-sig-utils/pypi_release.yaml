@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyEthSigUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-eth-sig-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-eth-sig-utils' has no recent release, last release dates back to 2020-01-13 14:44:15.672837
+        link: https://pypi.org/project/py-eth-sig-utils/#history
+        package_name: py-eth-sig-utils

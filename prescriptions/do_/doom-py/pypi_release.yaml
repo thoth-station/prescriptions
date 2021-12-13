@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DoomPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doom-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'doom-py' has no recent release, last release dates back to 2016-06-12 17:08:33.609648
+        link: https://pypi.org/project/doom-py/#history
+        package_name: doom-py

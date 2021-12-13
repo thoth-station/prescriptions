@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygetwindowPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygetwindow
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygetwindow' has no recent release, last release dates back to 2020-10-04 02:12:50.806764
+        link: https://pypi.org/project/pygetwindow/#history
+        package_name: pygetwindow

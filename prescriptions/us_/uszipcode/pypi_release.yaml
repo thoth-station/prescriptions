@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UszipcodePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uszipcode
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'uszipcode' has no recent release, last release dates back to 2021-06-08 01:29:40.551382
+        link: https://pypi.org/project/uszipcode/#history
+        package_name: uszipcode

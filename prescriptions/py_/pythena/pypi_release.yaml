@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythenaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythena
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pythena' has no recent release, last release dates back to 2020-09-15 13:07:57.407535
+        link: https://pypi.org/project/pythena/#history
+        package_name: pythena

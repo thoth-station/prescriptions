@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PykafkaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykafka
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pykafka' has no recent release, last release dates back to 2018-09-24 23:17:50.307677
+        link: https://pypi.org/project/pykafka/#history
+        package_name: pykafka

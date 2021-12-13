@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopePrincipalannotationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-principalannotation
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-principalannotation' has no recent release, last release dates back to 2018-10-19 13:24:02.332081
+        link: https://pypi.org/project/zope-principalannotation/#history
+        package_name: zope-principalannotation

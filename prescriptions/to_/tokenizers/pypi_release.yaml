@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TokenizersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tokenizers
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tokenizers' has no recent release, last release dates back to 2021-05-24 21:48:22.595069
+        link: https://pypi.org/project/tokenizers/#history
+        package_name: tokenizers

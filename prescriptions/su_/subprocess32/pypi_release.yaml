@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Subprocess32PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subprocess32
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'subprocess32' has no recent release, last release dates back to 2020-06-16 21:37:28.226848
+        link: https://pypi.org/project/subprocess32/#history
+        package_name: subprocess32

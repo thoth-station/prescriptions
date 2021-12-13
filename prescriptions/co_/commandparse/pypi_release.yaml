@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CommandparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commandparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'commandparse' has no recent release, last release dates back to 2020-12-22 20:38:28.332631
+        link: https://pypi.org/project/commandparse/#history
+        package_name: commandparse

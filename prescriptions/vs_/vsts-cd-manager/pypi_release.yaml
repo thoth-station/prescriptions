@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VstsCdManagerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsts-cd-manager
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vsts-cd-manager' has no recent release, last release dates back to 2018-06-13 05:21:55.582024
+        link: https://pypi.org/project/vsts-cd-manager/#history
+        package_name: vsts-cd-manager

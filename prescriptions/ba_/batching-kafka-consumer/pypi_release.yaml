@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BatchingKafkaConsumerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batching-kafka-consumer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'batching-kafka-consumer' has no recent release, last release dates back to 2019-07-24 22:43:21.410471
+        link: https://pypi.org/project/batching-kafka-consumer/#history
+        package_name: batching-kafka-consumer

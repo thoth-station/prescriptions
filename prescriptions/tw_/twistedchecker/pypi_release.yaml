@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TwistedcheckerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twistedchecker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'twistedchecker' has no recent release, last release dates back to 2020-04-15 17:23:41.711381
+        link: https://pypi.org/project/twistedchecker/#history
+        package_name: twistedchecker

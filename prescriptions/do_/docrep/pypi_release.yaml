@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DocrepPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docrep
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'docrep' has no recent release, last release dates back to 2021-02-16 09:01:50.183297
+        link: https://pypi.org/project/docrep/#history
+        package_name: docrep

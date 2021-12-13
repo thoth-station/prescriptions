@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'patch' has no recent release, last release dates back to 2016-02-13 15:18:58.285721
+        link: https://pypi.org/project/patch/#history
+        package_name: patch

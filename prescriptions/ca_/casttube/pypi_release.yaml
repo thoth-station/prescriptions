@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CasttubePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: casttube
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'casttube' has no recent release, last release dates back to 2020-04-08 12:54:07.745949
+        link: https://pypi.org/project/casttube/#history
+        package_name: casttube

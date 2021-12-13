@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TestscenariosPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testscenarios
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'testscenarios' has no recent release, last release dates back to 2015-05-04 01:37:23.545859
+        link: https://pypi.org/project/testscenarios/#history
+        package_name: testscenarios

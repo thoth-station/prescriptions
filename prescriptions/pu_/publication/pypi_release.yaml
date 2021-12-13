@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PublicationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: publication
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'publication' has no recent release, last release dates back to 2019-01-15 07:52:23.914233
+        link: https://pypi.org/project/publication/#history
+        package_name: publication

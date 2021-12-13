@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rpy2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpy2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rpy2' has no recent release, last release dates back to 2021-06-04 02:50:54.187029
+        link: https://pypi.org/project/rpy2/#history
+        package_name: rpy2

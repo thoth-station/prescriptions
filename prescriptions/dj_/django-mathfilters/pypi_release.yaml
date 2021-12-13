@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoMathfiltersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-mathfilters
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-mathfilters' has no recent release, last release dates back to 2020-02-10 12:02:09.819544
+        link: https://pypi.org/project/django-mathfilters/#history
+        package_name: django-mathfilters

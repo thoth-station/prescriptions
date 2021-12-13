@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyradPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrad
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyrad' has no recent release, last release dates back to 2020-11-23 23:12:08.818771
+        link: https://pypi.org/project/pyrad/#history
+        package_name: pyrad

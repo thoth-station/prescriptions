@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HpackPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hpack
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hpack' has no recent release, last release dates back to 2020-08-30 10:35:57.868380
+        link: https://pypi.org/project/hpack/#history
+        package_name: hpack

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopePtresourcePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-ptresource
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-ptresource' has no recent release, last release dates back to 2018-10-05 14:59:16.249630
+        link: https://pypi.org/project/zope-ptresource/#history
+        package_name: zope-ptresource

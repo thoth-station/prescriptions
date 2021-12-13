@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PcodedmpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pcodedmp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pcodedmp' has no recent release, last release dates back to 2019-07-30 18:05:42.516848
+        link: https://pypi.org/project/pcodedmp/#history
+        package_name: pcodedmp

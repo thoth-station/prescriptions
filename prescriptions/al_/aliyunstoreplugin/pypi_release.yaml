@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AliyunstorepluginPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aliyunstoreplugin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aliyunstoreplugin' has no recent release, last release dates back to 2020-06-09 09:21:37.022350
+        link: https://pypi.org/project/aliyunstoreplugin/#history
+        package_name: aliyunstoreplugin

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylintCommonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-common
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylint-common' has no recent release, last release dates back to 2017-03-15 06:40:51.209206
+        link: https://pypi.org/project/pylint-common/#history
+        package_name: pylint-common

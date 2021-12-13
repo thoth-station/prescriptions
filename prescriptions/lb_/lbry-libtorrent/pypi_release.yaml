@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LbryLibtorrentPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lbry-libtorrent
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lbry-libtorrent' has no recent release, last release dates back to 2020-03-10 01:30:43.536100
+        link: https://pypi.org/project/lbry-libtorrent/#history
+        package_name: lbry-libtorrent

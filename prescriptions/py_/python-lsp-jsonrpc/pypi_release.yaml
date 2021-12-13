@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonLspJsonrpcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-lsp-jsonrpc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-lsp-jsonrpc' has no recent release, last release dates back to 2021-04-14 21:19:20.659105
+        link: https://pypi.org/project/python-lsp-jsonrpc/#history
+        package_name: python-lsp-jsonrpc

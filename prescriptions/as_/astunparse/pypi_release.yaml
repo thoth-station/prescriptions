@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AstunparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astunparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'astunparse' has no recent release, last release dates back to 2019-12-22 18:12:13.129415
+        link: https://pypi.org/project/astunparse/#history
+        package_name: astunparse

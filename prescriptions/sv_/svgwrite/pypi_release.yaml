@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SvgwritePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: svgwrite
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'svgwrite' has no recent release, last release dates back to 2021-01-15 09:38:24.759628
+        link: https://pypi.org/project/svgwrite/#history
+        package_name: svgwrite

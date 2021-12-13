@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OptionalDjangoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optional-django
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'optional-django' has no recent release, last release dates back to 2015-05-04 10:28:00.455839
+        link: https://pypi.org/project/optional-django/#history
+        package_name: optional-django

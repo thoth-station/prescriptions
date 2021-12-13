@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MlpackPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlpack
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mlpack' has no recent release, last release dates back to 2020-10-28 20:22:05.327182
+        link: https://pypi.org/project/mlpack/#history
+        package_name: mlpack

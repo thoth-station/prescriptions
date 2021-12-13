@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8PerFileIgnoresPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-per-file-ignores
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-per-file-ignores' has no recent release, last release dates back to 2019-01-30 18:51:29.563422
+        link: https://pypi.org/project/flake8-per-file-ignores/#history
+        package_name: flake8-per-file-ignores

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SvnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: svn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'svn' has no recent release, last release dates back to 2020-02-01 21:11:02.626187
+        link: https://pypi.org/project/svn/#history
+        package_name: svn

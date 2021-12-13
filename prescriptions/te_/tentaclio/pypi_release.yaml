@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TentaclioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tentaclio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tentaclio' has no recent release, last release dates back to 2021-03-23 11:26:00.569950
+        link: https://pypi.org/project/tentaclio/#history
+        package_name: tentaclio

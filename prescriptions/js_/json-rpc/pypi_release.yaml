@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonRpcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-rpc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'json-rpc' has no recent release, last release dates back to 2020-01-07 15:27:30.402774
+        link: https://pypi.org/project/json-rpc/#history
+        package_name: json-rpc

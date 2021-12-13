@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyprindPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyprind
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyprind' has no recent release, last release dates back to 2021-04-18 18:10:04.594516
+        link: https://pypi.org/project/pyprind/#history
+        package_name: pyprind

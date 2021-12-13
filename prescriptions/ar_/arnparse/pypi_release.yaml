@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ArnparsePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arnparse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'arnparse' has no recent release, last release dates back to 2019-03-12 21:17:04.586447
+        link: https://pypi.org/project/arnparse/#history
+        package_name: arnparse

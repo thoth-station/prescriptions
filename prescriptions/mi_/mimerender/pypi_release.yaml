@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MimerenderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimerender
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mimerender' has no recent release, last release dates back to 2016-02-23 03:31:15.009467
+        link: https://pypi.org/project/mimerender/#history
+        package_name: mimerender

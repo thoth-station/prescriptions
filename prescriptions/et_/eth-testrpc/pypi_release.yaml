@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthTestrpcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-testrpc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eth-testrpc' has no recent release, last release dates back to 2018-05-17 17:19:25.268215
+        link: https://pypi.org/project/eth-testrpc/#history
+        package_name: eth-testrpc

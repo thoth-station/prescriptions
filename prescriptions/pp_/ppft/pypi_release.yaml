@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PpftPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ppft
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ppft' has no recent release, last release dates back to 2021-06-13 22:34:28.714975
+        link: https://pypi.org/project/ppft/#history
+        package_name: ppft

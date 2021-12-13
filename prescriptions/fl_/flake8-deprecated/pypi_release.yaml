@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8DeprecatedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-deprecated
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-deprecated' has no recent release, last release dates back to 2017-10-31 16:36:42.802595
+        link: https://pypi.org/project/flake8-deprecated/#history
+        package_name: flake8-deprecated

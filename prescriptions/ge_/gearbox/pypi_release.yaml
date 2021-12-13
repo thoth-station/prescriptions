@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GearboxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gearbox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gearbox' has no recent release, last release dates back to 2021-03-09 20:20:01.044799
+        link: https://pypi.org/project/gearbox/#history
+        package_name: gearbox

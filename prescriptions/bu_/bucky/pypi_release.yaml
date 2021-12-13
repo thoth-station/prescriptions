@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BuckyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bucky
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bucky' has no recent release, last release dates back to 2015-02-19 18:42:33.175236
+        link: https://pypi.org/project/bucky/#history
+        package_name: bucky

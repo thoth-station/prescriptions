@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyzolibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzolib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyzolib' has no recent release, last release dates back to 2015-09-07 08:12:57.863005
+        link: https://pypi.org/project/pyzolib/#history
+        package_name: pyzolib

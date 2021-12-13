@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Python3OpenidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-openid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python3-openid' has no recent release, last release dates back to 2020-06-29 12:15:49.026621
+        link: https://pypi.org/project/python3-openid/#history
+        package_name: python3-openid

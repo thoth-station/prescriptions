@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PdpboxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdpbox
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pdpbox' has no recent release, last release dates back to 2021-03-14 16:21:17.914092
+        link: https://pypi.org/project/pdpbox/#history
+        package_name: pdpbox

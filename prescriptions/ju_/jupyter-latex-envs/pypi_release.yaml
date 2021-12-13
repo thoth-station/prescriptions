@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterLatexEnvsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-latex-envs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-latex-envs' has no recent release, last release dates back to 2018-12-02 22:31:10.096048
+        link: https://pypi.org/project/jupyter-latex-envs/#history
+        package_name: jupyter-latex-envs

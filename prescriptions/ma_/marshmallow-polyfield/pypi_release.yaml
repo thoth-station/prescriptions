@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MarshmallowPolyfieldPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-polyfield
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'marshmallow-polyfield' has no recent release, last release dates back to 2021-02-23 00:40:03.458785
+        link: https://pypi.org/project/marshmallow-polyfield/#history
+        package_name: marshmallow-polyfield

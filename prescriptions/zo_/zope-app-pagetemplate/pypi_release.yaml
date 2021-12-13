@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppPagetemplatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-pagetemplate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-pagetemplate' has no recent release, last release dates back to 2017-04-22 15:49:21.591953
+        link: https://pypi.org/project/zope-app-pagetemplate/#history
+        package_name: zope-app-pagetemplate

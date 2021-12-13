@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ExtrasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: extras
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'extras' has no recent release, last release dates back to 2016-05-18 09:18:31.400476
+        link: https://pypi.org/project/extras/#history
+        package_name: extras

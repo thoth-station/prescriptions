@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestBlackPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-black
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-black' has no recent release, last release dates back to 2020-10-05 09:42:27.431290
+        link: https://pypi.org/project/pytest-black/#history
+        package_name: pytest-black

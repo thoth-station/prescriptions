@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LdclientPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ldclient-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ldclient-py' has no recent release, last release dates back to 2019-04-26 20:13:38.346116
+        link: https://pypi.org/project/ldclient-py/#history
+        package_name: ldclient-py

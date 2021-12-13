@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultiaddrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multiaddr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multiaddr' has no recent release, last release dates back to 2019-12-23 07:06:21.146073
+        link: https://pypi.org/project/multiaddr/#history
+        package_name: multiaddr

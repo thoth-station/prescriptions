@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NibabelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nibabel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nibabel' has no recent release, last release dates back to 2020-11-28 22:18:28.678354
+        link: https://pypi.org/project/nibabel/#history
+        package_name: nibabel

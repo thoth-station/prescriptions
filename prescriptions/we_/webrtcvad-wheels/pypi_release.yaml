@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WebrtcvadWheelsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webrtcvad-wheels
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'webrtcvad-wheels' has no recent release, last release dates back to 2021-01-11 12:20:18.694945
+        link: https://pypi.org/project/webrtcvad-wheels/#history
+        package_name: webrtcvad-wheels

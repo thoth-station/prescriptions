@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: M2cryptoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: m2crypto
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'm2crypto' has no recent release, last release dates back to 2021-06-14 21:01:17.382878
+        link: https://pypi.org/project/m2crypto/#history
+        package_name: m2crypto

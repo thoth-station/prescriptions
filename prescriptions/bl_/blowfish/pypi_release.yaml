@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BlowfishPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blowfish
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'blowfish' has no recent release, last release dates back to 2015-02-28 23:38:39.186413
+        link: https://pypi.org/project/blowfish/#history
+        package_name: blowfish

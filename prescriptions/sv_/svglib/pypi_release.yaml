@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SvglibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: svglib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'svglib' has no recent release, last release dates back to 2021-04-10 09:22:06.267207
+        link: https://pypi.org/project/svglib/#history
+        package_name: svglib

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestTrioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-trio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-trio' has no recent release, last release dates back to 2020-10-16 13:39:58.147570
+        link: https://pypi.org/project/pytest-trio/#history
+        package_name: pytest-trio

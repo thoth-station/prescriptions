@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UdatetimePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: udatetime
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'udatetime' has no recent release, last release dates back to 2018-02-14 12:18:28.547747
+        link: https://pypi.org/project/udatetime/#history
+        package_name: udatetime

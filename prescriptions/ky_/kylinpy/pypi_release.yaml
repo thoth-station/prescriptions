@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KylinpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kylinpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kylinpy' has no recent release, last release dates back to 2020-08-11 02:57:23.157495
+        link: https://pypi.org/project/kylinpy/#history
+        package_name: kylinpy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WiotpSdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wiotp-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wiotp-sdk' has no recent release, last release dates back to 2019-12-23 17:42:24.337608
+        link: https://pypi.org/project/wiotp-sdk/#history
+        package_name: wiotp-sdk

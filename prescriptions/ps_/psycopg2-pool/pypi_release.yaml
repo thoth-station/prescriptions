@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Psycopg2PoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycopg2-pool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'psycopg2-pool' has no recent release, last release dates back to 2019-10-08 11:02:59.167047
+        link: https://pypi.org/project/psycopg2-pool/#history
+        package_name: psycopg2-pool

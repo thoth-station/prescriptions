@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PywatchmanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywatchman
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pywatchman' has no recent release, last release dates back to 2017-09-01 14:20:22.217429
+        link: https://pypi.org/project/pywatchman/#history
+        package_name: pywatchman

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WadPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wad
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wad' has no recent release, last release dates back to 2020-09-28 07:52:26.465081
+        link: https://pypi.org/project/wad/#history
+        package_name: wad

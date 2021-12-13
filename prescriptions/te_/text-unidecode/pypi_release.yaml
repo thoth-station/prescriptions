@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TextUnidecodePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: text-unidecode
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'text-unidecode' has no recent release, last release dates back to 2019-08-30 21:37:03.543829
+        link: https://pypi.org/project/text-unidecode/#history
+        package_name: text-unidecode

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyphiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyphi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyphi' has no recent release, last release dates back to 2019-06-22 00:01:27.237377
+        link: https://pypi.org/project/pyphi/#history
+        package_name: pyphi

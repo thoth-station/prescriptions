@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyedimaxPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyedimax
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyedimax' has no recent release, last release dates back to 2019-10-22 19:12:04.843286
+        link: https://pypi.org/project/pyedimax/#history
+        package_name: pyedimax

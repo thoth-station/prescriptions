@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestBlackMultipyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-black-multipy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-black-multipy' has no recent release, last release dates back to 2021-01-14 01:05:44.082525
+        link: https://pypi.org/project/pytest-black-multipy/#history
+        package_name: pytest-black-multipy

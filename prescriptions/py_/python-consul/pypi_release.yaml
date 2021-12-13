@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonConsulPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-consul
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-consul' has no recent release, last release dates back to 2018-07-09 04:13:48.221888
+        link: https://pypi.org/project/python-consul/#history
+        package_name: python-consul

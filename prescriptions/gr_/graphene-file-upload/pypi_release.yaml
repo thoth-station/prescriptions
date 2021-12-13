@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrapheneFileUploadPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphene-file-upload
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'graphene-file-upload' has no recent release, last release dates back to 2021-02-20 19:28:13.011998
+        link: https://pypi.org/project/graphene-file-upload/#history
+        package_name: graphene-file-upload

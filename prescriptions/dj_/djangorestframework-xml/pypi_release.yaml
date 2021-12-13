@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangorestframeworkXmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangorestframework-xml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'djangorestframework-xml' has no recent release, last release dates back to 2020-04-12 22:38:43.862048
+        link: https://pypi.org/project/djangorestframework-xml/#history
+        package_name: djangorestframework-xml

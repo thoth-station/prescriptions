@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TimeloopPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timeloop
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'timeloop' has no recent release, last release dates back to 2019-02-12 12:06:15.779292
+        link: https://pypi.org/project/timeloop/#history
+        package_name: timeloop

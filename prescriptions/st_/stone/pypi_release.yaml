@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StonePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stone
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stone' has no recent release, last release dates back to 2020-12-03 22:05:52.363354
+        link: https://pypi.org/project/stone/#history
+        package_name: stone

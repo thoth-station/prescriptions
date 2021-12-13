@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColconMixinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-mixin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colcon-mixin' has no recent release, last release dates back to 2020-07-18 05:10:04.101569
+        link: https://pypi.org/project/colcon-mixin/#history
+        package_name: colcon-mixin

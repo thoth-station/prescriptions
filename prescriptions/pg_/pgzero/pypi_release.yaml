@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PgzeroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgzero
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pgzero' has no recent release, last release dates back to 2021-03-02 23:34:48.918772
+        link: https://pypi.org/project/pgzero/#history
+        package_name: pgzero

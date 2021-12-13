@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyxidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyxid' has no recent release, last release dates back to 2011-03-30 19:52:28.603054
+        link: https://pypi.org/project/pyxid/#history
+        package_name: pyxid

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppAuthenticationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-authentication
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-authentication' has no recent release, last release dates back to 2017-05-02 14:27:00.360279
+        link: https://pypi.org/project/zope-app-authentication/#history
+        package_name: zope-app-authentication

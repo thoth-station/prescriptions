@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NtlmAuthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ntlm-auth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ntlm-auth' has no recent release, last release dates back to 2020-06-16 06:26:34.051825
+        link: https://pypi.org/project/ntlm-auth/#history
+        package_name: ntlm-auth

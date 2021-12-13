@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyotpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyotp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyotp' has no recent release, last release dates back to 2021-02-04 19:47:50.417163
+        link: https://pypi.org/project/pyotp/#history
+        package_name: pyotp

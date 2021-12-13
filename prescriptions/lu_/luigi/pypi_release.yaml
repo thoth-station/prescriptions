@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LuigiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: luigi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'luigi' has no recent release, last release dates back to 2021-04-15 11:19:37.959908
+        link: https://pypi.org/project/luigi/#history
+        package_name: luigi

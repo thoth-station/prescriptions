@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VmprofPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vmprof
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vmprof' has no recent release, last release dates back to 2019-05-30 15:01:52.604044
+        link: https://pypi.org/project/vmprof/#history
+        package_name: vmprof

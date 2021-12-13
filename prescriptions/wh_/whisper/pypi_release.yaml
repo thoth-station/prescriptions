@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WhisperPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: whisper
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'whisper' has no recent release, last release dates back to 2021-04-19 10:24:07.409033
+        link: https://pypi.org/project/whisper/#history
+        package_name: whisper

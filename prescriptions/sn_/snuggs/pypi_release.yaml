@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SnuggsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snuggs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'snuggs' has no recent release, last release dates back to 2019-09-18 18:54:51.598801
+        link: https://pypi.org/project/snuggs/#history
+        package_name: snuggs

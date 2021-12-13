@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PipfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pipfile' has no recent release, last release dates back to 2017-03-11 03:27:44.308744
+        link: https://pypi.org/project/pipfile/#history
+        package_name: pipfile

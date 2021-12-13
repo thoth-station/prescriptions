@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RqSchedulerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rq-scheduler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rq-scheduler' has no recent release, last release dates back to 2021-03-07 12:26:06.046783
+        link: https://pypi.org/project/rq-scheduler/#history
+        package_name: rq-scheduler

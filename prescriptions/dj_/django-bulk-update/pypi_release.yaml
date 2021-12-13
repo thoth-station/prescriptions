@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoBulkUpdatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-bulk-update
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-bulk-update' has no recent release, last release dates back to 2017-08-12 07:46:53.680496
+        link: https://pypi.org/project/django-bulk-update/#history
+        package_name: django-bulk-update

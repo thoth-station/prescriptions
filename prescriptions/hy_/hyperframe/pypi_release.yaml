@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HyperframePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hyperframe
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hyperframe' has no recent release, last release dates back to 2021-04-17 12:11:22.757153
+        link: https://pypi.org/project/hyperframe/#history
+        package_name: hyperframe

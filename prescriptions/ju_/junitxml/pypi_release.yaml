@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JunitxmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: junitxml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'junitxml' has no recent release, last release dates back to 2012-11-18 20:55:49.499946
+        link: https://pypi.org/project/junitxml/#history
+        package_name: junitxml

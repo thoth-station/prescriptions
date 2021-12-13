@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pyasn1ModulesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyasn1-modules
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyasn1-modules' has no recent release, last release dates back to 2020-01-09 17:24:21.956266
+        link: https://pypi.org/project/pyasn1-modules/#history
+        package_name: pyasn1-modules

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyinotifyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinotify
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyinotify' has no recent release, last release dates back to 2015-06-04 15:50:23.633153
+        link: https://pypi.org/project/pyinotify/#history
+        package_name: pyinotify

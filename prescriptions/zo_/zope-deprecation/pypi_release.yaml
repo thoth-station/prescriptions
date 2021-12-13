@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeDeprecationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-deprecation
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-deprecation' has no recent release, last release dates back to 2018-12-03 13:35:27.101696
+        link: https://pypi.org/project/zope-deprecation/#history
+        package_name: zope-deprecation

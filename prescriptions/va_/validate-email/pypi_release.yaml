@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ValidateEmailPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: validate-email
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'validate-email' has no recent release, last release dates back to 2015-03-23 04:22:45.115283
+        link: https://pypi.org/project/validate-email/#history
+        package_name: validate-email

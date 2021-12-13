@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastcachePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastcache
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastcache' has no recent release, last release dates back to 2019-04-29 16:35:55.586731
+        link: https://pypi.org/project/fastcache/#history
+        package_name: fastcache

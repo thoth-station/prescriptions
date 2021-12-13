@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AssertpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: assertpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'assertpy' has no recent release, last release dates back to 2020-07-19 14:39:02.462738
+        link: https://pypi.org/project/assertpy/#history
+        package_name: assertpy

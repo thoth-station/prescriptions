@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OauthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'oauth' has no recent release, last release dates back to 2009-09-29 21:02:22.075605
+        link: https://pypi.org/project/oauth/#history
+        package_name: oauth

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RavenAiohttpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: raven-aiohttp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'raven-aiohttp' has no recent release, last release dates back to 2018-03-20 19:25:08.541846
+        link: https://pypi.org/project/raven-aiohttp/#history
+        package_name: raven-aiohttp

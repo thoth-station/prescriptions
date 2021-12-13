@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EasyargsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyargs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'easyargs' has no recent release, last release dates back to 2017-07-05 20:16:05.980765
+        link: https://pypi.org/project/easyargs/#history
+        package_name: easyargs

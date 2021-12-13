@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FusepyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fusepy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fusepy' has no recent release, last release dates back to 2018-09-17 00:14:52.666439
+        link: https://pypi.org/project/fusepy/#history
+        package_name: fusepy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AbimapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: abimap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'abimap' has no recent release, last release dates back to 2019-08-05 11:45:08.881066
+        link: https://pypi.org/project/abimap/#history
+        package_name: abimap

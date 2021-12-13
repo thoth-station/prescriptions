@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DrfJwtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drf-jwt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'drf-jwt' has no recent release, last release dates back to 2021-05-18 05:19:02.298820
+        link: https://pypi.org/project/drf-jwt/#history
+        package_name: drf-jwt

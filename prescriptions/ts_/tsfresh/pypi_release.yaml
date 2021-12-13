@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TsfreshPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tsfresh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tsfresh' has no recent release, last release dates back to 2021-03-06 08:56:43.723812
+        link: https://pypi.org/project/tsfresh/#history
+        package_name: tsfresh

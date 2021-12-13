@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyppdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyppd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyppd' has no recent release, last release dates back to 2013-09-12 22:04:26.851700
+        link: https://pypi.org/project/pyppd/#history
+        package_name: pyppd

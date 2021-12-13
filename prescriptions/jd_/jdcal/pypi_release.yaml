@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JdcalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jdcal
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jdcal' has no recent release, last release dates back to 2019-04-24 10:22:15.079347
+        link: https://pypi.org/project/jdcal/#history
+        package_name: jdcal

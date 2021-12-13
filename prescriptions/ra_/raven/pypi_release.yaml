@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RavenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: raven
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'raven' has no recent release, last release dates back to 2018-12-19 11:55:50.498169
+        link: https://pypi.org/project/raven/#history
+        package_name: raven

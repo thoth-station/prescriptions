@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TlshPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tlsh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tlsh' has no recent release, last release dates back to 2019-06-26 20:40:00.244814
+        link: https://pypi.org/project/tlsh/#history
+        package_name: tlsh

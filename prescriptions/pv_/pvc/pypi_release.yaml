@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PvcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pvc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pvc' has no recent release, last release dates back to 2019-01-28 07:52:55.839410
+        link: https://pypi.org/project/pvc/#history
+        package_name: pvc

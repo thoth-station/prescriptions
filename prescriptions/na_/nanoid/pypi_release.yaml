@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NanoidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nanoid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nanoid' has no recent release, last release dates back to 2018-11-20 14:45:51.578634
+        link: https://pypi.org/project/nanoid/#history
+        package_name: nanoid

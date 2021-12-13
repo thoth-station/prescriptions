@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SharepyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sharepy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sharepy' has no recent release, last release dates back to 2018-06-27 21:11:37.382012
+        link: https://pypi.org/project/sharepy/#history
+        package_name: sharepy

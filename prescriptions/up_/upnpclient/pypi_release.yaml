@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UpnpclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: upnpclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'upnpclient' has no recent release, last release dates back to 2020-12-04 15:51:40.973380
+        link: https://pypi.org/project/upnpclient/#history
+        package_name: upnpclient

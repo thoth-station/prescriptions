@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TimestampPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timestamp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'timestamp' has no recent release, last release dates back to 2014-08-15 23:56:08.277890
+        link: https://pypi.org/project/timestamp/#history
+        package_name: timestamp

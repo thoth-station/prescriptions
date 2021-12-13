@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WaqiasyncPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waqiasync
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'waqiasync' has no recent release, last release dates back to 2017-07-07 08:31:15.609791
+        link: https://pypi.org/project/waqiasync/#history
+        package_name: waqiasync

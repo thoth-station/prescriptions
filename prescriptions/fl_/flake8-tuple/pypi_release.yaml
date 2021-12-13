@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8TuplePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-tuple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-tuple' has no recent release, last release dates back to 2020-11-15 20:00:10.175970
+        link: https://pypi.org/project/flake8-tuple/#history
+        package_name: flake8-tuple

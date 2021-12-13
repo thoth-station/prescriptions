@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProductsMimetoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-mimetools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'products-mimetools' has no recent release, last release dates back to 2021-03-16 08:15:07.723201
+        link: https://pypi.org/project/products-mimetools/#history
+        package_name: products-mimetools

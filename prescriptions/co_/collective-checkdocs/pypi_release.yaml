@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CollectiveCheckdocsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: collective-checkdocs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'collective-checkdocs' has no recent release, last release dates back to 2014-06-06 10:05:03.747421
+        link: https://pypi.org/project/collective-checkdocs/#history
+        package_name: collective-checkdocs

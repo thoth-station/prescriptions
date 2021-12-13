@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrabserialPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabserial
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grabserial' has no recent release, last release dates back to 2020-04-09 08:00:17.505908
+        link: https://pypi.org/project/grabserial/#history
+        package_name: grabserial

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KaggleCliPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaggle-cli
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kaggle-cli' has no recent release, last release dates back to 2017-11-06 13:19:14.178986
+        link: https://pypi.org/project/kaggle-cli/#history
+        package_name: kaggle-cli

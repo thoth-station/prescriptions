@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: q
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'q' has no recent release, last release dates back to 2015-06-22 07:25:25.411794
+        link: https://pypi.org/project/q/#history
+        package_name: q

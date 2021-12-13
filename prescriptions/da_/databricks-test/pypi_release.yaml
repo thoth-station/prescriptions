@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DatabricksTestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databricks-test
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'databricks-test' has no recent release, last release dates back to 2020-03-04 12:50:32.696047
+        link: https://pypi.org/project/databricks-test/#history
+        package_name: databricks-test

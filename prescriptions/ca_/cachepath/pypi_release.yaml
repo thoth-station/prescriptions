@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CachepathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachepath
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cachepath' has no recent release, last release dates back to 2018-12-09 15:09:47.610068
+        link: https://pypi.org/project/cachepath/#history
+        package_name: cachepath

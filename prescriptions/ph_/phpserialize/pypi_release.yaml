@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PhpserializePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phpserialize
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'phpserialize' has no recent release, last release dates back to 2012-01-22 12:48:05.828255
+        link: https://pypi.org/project/phpserialize/#history
+        package_name: phpserialize

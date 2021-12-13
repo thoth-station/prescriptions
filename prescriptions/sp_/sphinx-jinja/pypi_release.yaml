@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SphinxJinjaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-jinja
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sphinx-jinja' has no recent release, last release dates back to 2020-01-21 20:22:08.701274
+        link: https://pypi.org/project/sphinx-jinja/#history
+        package_name: sphinx-jinja

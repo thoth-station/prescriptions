@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeIntidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-intid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-intid' has no recent release, last release dates back to 2021-03-19 11:37:35.248759
+        link: https://pypi.org/project/zope-intid/#history
+        package_name: zope-intid

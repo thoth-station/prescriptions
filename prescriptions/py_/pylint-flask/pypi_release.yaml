@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylintFlaskPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-flask
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylint-flask' has no recent release, last release dates back to 2019-01-30 19:26:02.848850
+        link: https://pypi.org/project/pylint-flask/#history
+        package_name: pylint-flask

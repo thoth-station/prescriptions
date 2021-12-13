@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IluaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ilua
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ilua' has no recent release, last release dates back to 2019-01-13 18:30:52.771903
+        link: https://pypi.org/project/ilua/#history
+        package_name: ilua

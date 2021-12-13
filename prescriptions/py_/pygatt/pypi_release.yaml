@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PygattPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygatt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pygatt' has no recent release, last release dates back to 2019-09-10 14:08:50.110178
+        link: https://pypi.org/project/pygatt/#history
+        package_name: pygatt

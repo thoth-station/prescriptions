@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SignedjsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: signedjson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'signedjson' has no recent release, last release dates back to 2020-03-27 19:49:12.654888
+        link: https://pypi.org/project/signedjson/#history
+        package_name: signedjson

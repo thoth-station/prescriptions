@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ProtoGoogleCloudDatastoreV1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: proto-google-cloud-datastore-v1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'proto-google-cloud-datastore-v1' has no recent release, last release dates back to 2017-04-28 21:22:56.871983
+        link: https://pypi.org/project/proto-google-cloud-datastore-v1/#history
+        package_name: proto-google-cloud-datastore-v1

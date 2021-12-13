@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerasPreprocessingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-preprocessing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keras-preprocessing' has no recent release, last release dates back to 2020-05-14 03:53:48.526594
+        link: https://pypi.org/project/keras-preprocessing/#history
+        package_name: keras-preprocessing

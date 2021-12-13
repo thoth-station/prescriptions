@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'parver' has no recent release, last release dates back to 2020-09-28 20:11:45.065452
+        link: https://pypi.org/project/parver/#history
+        package_name: parver

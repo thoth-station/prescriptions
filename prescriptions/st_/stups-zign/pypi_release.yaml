@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StupsZignPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-zign
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'stups-zign' has no recent release, last release dates back to 2019-08-28 16:01:03.519723
+        link: https://pypi.org/project/stups-zign/#history
+        package_name: stups-zign

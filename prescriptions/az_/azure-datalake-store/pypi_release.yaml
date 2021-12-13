@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureDatalakeStorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-datalake-store
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-datalake-store' has no recent release, last release dates back to 2021-04-02 20:21:05.323401
+        link: https://pypi.org/project/azure-datalake-store/#history
+        package_name: azure-datalake-store

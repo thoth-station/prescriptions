@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ServerlessrepoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serverlessrepo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'serverlessrepo' has no recent release, last release dates back to 2019-08-16 23:01:28.913251
+        link: https://pypi.org/project/serverlessrepo/#history
+        package_name: serverlessrepo

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PynisherPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynisher
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pynisher' has no recent release, last release dates back to 2021-02-24 19:58:20.089542
+        link: https://pypi.org/project/pynisher/#history
+        package_name: pynisher

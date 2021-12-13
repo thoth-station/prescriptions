@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LinearTsvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linear-tsv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'linear-tsv' has no recent release, last release dates back to 2018-01-20 10:05:31.119852
+        link: https://pypi.org/project/linear-tsv/#history
+        package_name: linear-tsv

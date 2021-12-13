@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MwclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mwclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mwclient' has no recent release, last release dates back to 2020-05-28 17:15:49.559190
+        link: https://pypi.org/project/mwclient/#history
+        package_name: mwclient

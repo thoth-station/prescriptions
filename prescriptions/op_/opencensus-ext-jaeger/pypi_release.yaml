@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpencensusExtJaegerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus-ext-jaeger
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opencensus-ext-jaeger' has no recent release, last release dates back to 2019-08-06 00:48:11.208398
+        link: https://pypi.org/project/opencensus-ext-jaeger/#history
+        package_name: opencensus-ext-jaeger

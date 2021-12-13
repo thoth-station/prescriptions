@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AutogradGammaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autograd-gamma
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autograd-gamma' has no recent release, last release dates back to 2020-10-15 16:51:06.785118
+        link: https://pypi.org/project/autograd-gamma/#history
+        package_name: autograd-gamma

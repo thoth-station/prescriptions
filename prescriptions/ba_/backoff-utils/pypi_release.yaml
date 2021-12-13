@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackoffUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backoff-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backoff-utils' has no recent release, last release dates back to 2020-07-11 20:37:00.846030
+        link: https://pypi.org/project/backoff-utils/#history
+        package_name: backoff-utils

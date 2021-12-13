@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AlotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'alot' has no recent release, last release dates back to 2018-02-27 19:09:36.762022
+        link: https://pypi.org/project/alot/#history
+        package_name: alot

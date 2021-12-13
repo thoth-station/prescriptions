@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ToxVenvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-venv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tox-venv' has no recent release, last release dates back to 2019-03-29 04:44:23.932481
+        link: https://pypi.org/project/tox-venv/#history
+        package_name: tox-venv

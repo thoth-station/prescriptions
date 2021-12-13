@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZmqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zmq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zmq' has no recent release, last release dates back to 2015-05-21 17:34:26.603945
+        link: https://pypi.org/project/zmq/#history
+        package_name: zmq

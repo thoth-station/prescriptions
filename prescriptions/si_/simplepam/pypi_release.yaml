@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SimplepamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplepam
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'simplepam' has no recent release, last release dates back to 2014-03-25 11:08:32.940321
+        link: https://pypi.org/project/simplepam/#history
+        package_name: simplepam

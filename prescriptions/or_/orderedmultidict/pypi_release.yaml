@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OrderedmultidictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: orderedmultidict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'orderedmultidict' has no recent release, last release dates back to 2019-07-10 20:11:47.305097
+        link: https://pypi.org/project/orderedmultidict/#history
+        package_name: orderedmultidict

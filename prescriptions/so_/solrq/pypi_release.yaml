@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SolrqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: solrq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'solrq' has no recent release, last release dates back to 2017-03-05 15:49:06.655379
+        link: https://pypi.org/project/solrq/#history
+        package_name: solrq

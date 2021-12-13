@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VegaDatasetsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vega-datasets
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vega-datasets' has no recent release, last release dates back to 2020-11-26 13:56:59.421583
+        link: https://pypi.org/project/vega-datasets/#history
+        package_name: vega-datasets

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SkeinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: skein
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'skein' has no recent release, last release dates back to 2021-03-02 17:15:16.627626
+        link: https://pypi.org/project/skein/#history
+        package_name: skein

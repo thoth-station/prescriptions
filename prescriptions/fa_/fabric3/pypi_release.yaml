@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Fabric3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fabric3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fabric3' has no recent release, last release dates back to 2018-02-11 12:11:25.713387
+        link: https://pypi.org/project/fabric3/#history
+        package_name: fabric3

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VisvisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visvis
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'visvis' has no recent release, last release dates back to 2020-12-14 11:27:27.892919
+        link: https://pypi.org/project/visvis/#history
+        package_name: visvis

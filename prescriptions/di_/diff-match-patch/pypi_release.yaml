@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiffMatchPatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diff-match-patch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'diff-match-patch' has no recent release, last release dates back to 2020-07-13 18:12:11.125321
+        link: https://pypi.org/project/diff-match-patch/#history
+        package_name: diff-match-patch

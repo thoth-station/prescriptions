@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PaypalrestsdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paypalrestsdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'paypalrestsdk' has no recent release, last release dates back to 2017-06-29 18:58:40.394151
+        link: https://pypi.org/project/paypalrestsdk/#history
+        package_name: paypalrestsdk

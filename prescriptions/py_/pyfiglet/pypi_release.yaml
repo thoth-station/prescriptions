@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyfigletPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfiglet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyfiglet' has no recent release, last release dates back to 2019-02-05 13:50:22.689994
+        link: https://pypi.org/project/pyfiglet/#history
+        package_name: pyfiglet

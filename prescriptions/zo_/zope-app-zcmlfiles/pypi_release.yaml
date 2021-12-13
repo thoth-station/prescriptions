@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppZcmlfilesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-zcmlfiles
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-zcmlfiles' has no recent release, last release dates back to 2017-05-29 14:38:32.108200
+        link: https://pypi.org/project/zope-app-zcmlfiles/#history
+        package_name: zope-app-zcmlfiles

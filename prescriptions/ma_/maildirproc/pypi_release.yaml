@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MaildirprocPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: maildirproc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'maildirproc' has no recent release, last release dates back to 2015-10-04 18:53:45.552658
+        link: https://pypi.org/project/maildirproc/#history
+        package_name: maildirproc

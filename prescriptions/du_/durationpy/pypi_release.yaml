@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DurationpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: durationpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'durationpy' has no recent release, last release dates back to 2017-08-01 18:56:59.886189
+        link: https://pypi.org/project/durationpy/#history
+        package_name: durationpy

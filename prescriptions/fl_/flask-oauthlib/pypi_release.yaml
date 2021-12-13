@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskOauthlibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-oauthlib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-oauthlib' has no recent release, last release dates back to 2020-09-07 03:20:32.408356
+        link: https://pypi.org/project/flask-oauthlib/#history
+        package_name: flask-oauthlib

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PydbusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydbus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pydbus' has no recent release, last release dates back to 2016-12-18 16:44:31.904494
+        link: https://pypi.org/project/pydbus/#history
+        package_name: pydbus

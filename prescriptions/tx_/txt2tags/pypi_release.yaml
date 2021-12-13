@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Txt2tagsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txt2tags
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'txt2tags' has no recent release, last release dates back to 2020-02-10 09:16:49.169817
+        link: https://pypi.org/project/txt2tags/#history
+        package_name: txt2tags

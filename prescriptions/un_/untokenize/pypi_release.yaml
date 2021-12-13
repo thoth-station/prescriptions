@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UntokenizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: untokenize
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'untokenize' has no recent release, last release dates back to 2014-02-08 16:30:40.631383
+        link: https://pypi.org/project/untokenize/#history
+        package_name: untokenize

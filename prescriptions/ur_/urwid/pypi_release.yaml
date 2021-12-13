@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: UrwidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: urwid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'urwid' has no recent release, last release dates back to 2020-09-26 20:12:02.338045
+        link: https://pypi.org/project/urwid/#history
+        package_name: urwid

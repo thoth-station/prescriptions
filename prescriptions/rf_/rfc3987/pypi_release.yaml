@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Rfc3987PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc3987
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rfc3987' has no recent release, last release dates back to 2018-07-29 17:23:47.954044
+        link: https://pypi.org/project/rfc3987/#history
+        package_name: rfc3987

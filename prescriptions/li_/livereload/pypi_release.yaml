@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LivereloadPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: livereload
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'livereload' has no recent release, last release dates back to 2020-08-22 15:31:53.202849
+        link: https://pypi.org/project/livereload/#history
+        package_name: livereload

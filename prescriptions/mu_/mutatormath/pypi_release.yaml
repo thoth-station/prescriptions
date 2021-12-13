@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MutatormathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mutatormath
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mutatormath' has no recent release, last release dates back to 2020-04-24 09:23:32.876471
+        link: https://pypi.org/project/mutatormath/#history
+        package_name: mutatormath

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RecordsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: records
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'records' has no recent release, last release dates back to 2019-02-21 13:34:43.700359
+        link: https://pypi.org/project/records/#history
+        package_name: records

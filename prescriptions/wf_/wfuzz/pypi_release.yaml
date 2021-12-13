@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WfuzzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wfuzz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'wfuzz' has no recent release, last release dates back to 2020-11-06 11:06:16.082197
+        link: https://pypi.org/project/wfuzz/#history
+        package_name: wfuzz

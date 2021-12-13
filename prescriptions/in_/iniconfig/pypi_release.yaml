@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IniconfigPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iniconfig
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'iniconfig' has no recent release, last release dates back to 2020-10-16 17:37:23.050185
+        link: https://pypi.org/project/iniconfig/#history
+        package_name: iniconfig

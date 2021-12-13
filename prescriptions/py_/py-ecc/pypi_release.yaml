@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyEccPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-ecc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'py-ecc' has no recent release, last release dates back to 2021-03-09 16:26:25.318401
+        link: https://pypi.org/project/py-ecc/#history
+        package_name: py-ecc

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pycld2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycld2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pycld2' has no recent release, last release dates back to 2019-10-14 15:23:39.130781
+        link: https://pypi.org/project/pycld2/#history
+        package_name: pycld2

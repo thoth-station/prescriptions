@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZthreadingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zthreading
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zthreading' has no recent release, last release dates back to 2020-10-30 16:20:50.161523
+        link: https://pypi.org/project/zthreading/#history
+        package_name: zthreading

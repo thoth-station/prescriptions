@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MarshmallowJsonapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-jsonapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'marshmallow-jsonapi' has no recent release, last release dates back to 2020-12-27 16:52:52.390373
+        link: https://pypi.org/project/marshmallow-jsonapi/#history
+        package_name: marshmallow-jsonapi

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CudfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cudf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cudf' has no recent release, last release dates back to 2020-06-01 20:07:47.085184
+        link: https://pypi.org/project/cudf/#history
+        package_name: cudf

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GputilPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gputil
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gputil' has no recent release, last release dates back to 2018-12-18 09:12:13.630573
+        link: https://pypi.org/project/gputil/#history
+        package_name: gputil

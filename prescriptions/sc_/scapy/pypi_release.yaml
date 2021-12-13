@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ScapyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scapy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'scapy' has no recent release, last release dates back to 2021-04-19 18:29:34.172262
+        link: https://pypi.org/project/scapy/#history
+        package_name: scapy

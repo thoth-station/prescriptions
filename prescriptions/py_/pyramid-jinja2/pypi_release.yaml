@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyramidJinja2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyramid-jinja2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyramid-jinja2' has no recent release, last release dates back to 2019-01-25 19:53:10.513587
+        link: https://pypi.org/project/pyramid-jinja2/#history
+        package_name: pyramid-jinja2

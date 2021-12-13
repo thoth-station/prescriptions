@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TortillaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tortilla
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'tortilla' has no recent release, last release dates back to 2018-04-13 06:32:21.928350
+        link: https://pypi.org/project/tortilla/#history
+        package_name: tortilla

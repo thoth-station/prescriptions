@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PastePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paste
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'paste' has no recent release, last release dates back to 2020-10-12 12:48:35.007277
+        link: https://pypi.org/project/paste/#history
+        package_name: paste

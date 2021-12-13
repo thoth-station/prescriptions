@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AsyncurbanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncurban
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'asyncurban' has no recent release, last release dates back to 2018-01-31 05:56:37.406892
+        link: https://pypi.org/project/asyncurban/#history
+        package_name: asyncurban

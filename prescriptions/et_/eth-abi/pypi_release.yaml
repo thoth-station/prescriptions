@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthAbiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-abi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eth-abi' has no recent release, last release dates back to 2020-02-27 23:14:44.452347
+        link: https://pypi.org/project/eth-abi/#history
+        package_name: eth-abi

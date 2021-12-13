@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PronouncingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pronouncing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pronouncing' has no recent release, last release dates back to 2018-07-02 04:13:05.370763
+        link: https://pypi.org/project/pronouncing/#history
+        package_name: pronouncing

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: TypingInspectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typing-inspect
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'typing-inspect' has no recent release, last release dates back to 2021-06-07 16:12:11.264041
+        link: https://pypi.org/project/typing-inspect/#history
+        package_name: typing-inspect

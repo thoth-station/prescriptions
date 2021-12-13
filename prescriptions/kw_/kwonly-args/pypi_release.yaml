@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KwonlyArgsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kwonly-args
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kwonly-args' has no recent release, last release dates back to 2016-04-14 00:22:53.328860
+        link: https://pypi.org/project/kwonly-args/#history
+        package_name: kwonly-args

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ZopeAppTestingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-testing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'zope-app-testing' has no recent release, last release dates back to 2018-10-24 10:55:57.722835
+        link: https://pypi.org/project/zope-app-testing/#history
+        package_name: zope-app-testing

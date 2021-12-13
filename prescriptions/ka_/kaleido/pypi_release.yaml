@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KaleidoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaleido
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'kaleido' has no recent release, last release dates back to 2021-04-14 11:26:19.068960
+        link: https://pypi.org/project/kaleido/#history
+        package_name: kaleido

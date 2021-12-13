@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NdjsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ndjson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ndjson' has no recent release, last release dates back to 2020-02-25 05:01:07.873737
+        link: https://pypi.org/project/ndjson/#history
+        package_name: ndjson

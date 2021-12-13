@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SafetyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: safety
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'safety' has no recent release, last release dates back to 2021-01-15 19:34:48.329357
+        link: https://pypi.org/project/safety/#history
+        package_name: safety

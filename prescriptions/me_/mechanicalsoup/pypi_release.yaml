@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MechanicalsoupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mechanicalsoup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mechanicalsoup' has no recent release, last release dates back to 2021-05-29 23:11:15.565807
+        link: https://pypi.org/project/mechanicalsoup/#history
+        package_name: mechanicalsoup

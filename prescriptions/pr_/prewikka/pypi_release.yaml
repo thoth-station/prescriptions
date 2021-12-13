@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrewikkaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prewikka
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'prewikka' has no recent release, last release dates back to 2019-02-12 22:44:00.259804
+        link: https://pypi.org/project/prewikka/#history
+        package_name: prewikka

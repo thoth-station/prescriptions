@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Dot2texPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dot2tex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dot2tex' has no recent release, last release dates back to 2019-03-31 08:11:31.010972
+        link: https://pypi.org/project/dot2tex/#history
+        package_name: dot2tex

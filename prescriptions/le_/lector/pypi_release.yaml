@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LectorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lector
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lector' has no recent release, last release dates back to 2017-05-20 23:50:48.647322
+        link: https://pypi.org/project/lector/#history
+        package_name: lector

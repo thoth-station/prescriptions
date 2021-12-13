@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImagefactoryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagefactory
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'imagefactory' has no recent release, last release dates back to 2017-01-13 10:20:31.278162
+        link: https://pypi.org/project/imagefactory/#history
+        package_name: imagefactory

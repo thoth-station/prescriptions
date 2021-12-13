@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PrettyMidiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretty-midi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pretty-midi' has no recent release, last release dates back to 2020-04-09 19:19:20.628562
+        link: https://pypi.org/project/pretty-midi/#history
+        package_name: pretty-midi

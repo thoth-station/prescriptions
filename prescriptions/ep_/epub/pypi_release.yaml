@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EpubPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epub
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'epub' has no recent release, last release dates back to 2014-04-01 17:28:00.058120
+        link: https://pypi.org/project/epub/#history
+        package_name: epub

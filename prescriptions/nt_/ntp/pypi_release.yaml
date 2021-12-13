@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NtpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ntp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ntp' has no recent release, last release dates back to 2020-03-08 18:00:43.346834
+        link: https://pypi.org/project/ntp/#history
+        package_name: ntp

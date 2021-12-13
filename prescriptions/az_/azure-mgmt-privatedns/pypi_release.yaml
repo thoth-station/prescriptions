@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtPrivatednsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-privatedns
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-privatedns' has no recent release, last release dates back to 2021-03-29 02:38:41.308986
+        link: https://pypi.org/project/azure-mgmt-privatedns/#history
+        package_name: azure-mgmt-privatedns

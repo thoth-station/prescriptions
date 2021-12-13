@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BetacalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: betacal
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'betacal' has no recent release, last release dates back to 2021-04-01 21:16:54.940180
+        link: https://pypi.org/project/betacal/#history
+        package_name: betacal

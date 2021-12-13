@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: SacredPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sacred
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sacred' has no recent release, last release dates back to 2020-12-14 15:21:05.165790
+        link: https://pypi.org/project/sacred/#history
+        package_name: sacred

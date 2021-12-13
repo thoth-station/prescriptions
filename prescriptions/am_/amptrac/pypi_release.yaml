@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AmptracPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amptrac
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'amptrac' has no recent release, last release dates back to 2013-06-13 01:39:32.944528
+        link: https://pypi.org/project/amptrac/#history
+        package_name: amptrac

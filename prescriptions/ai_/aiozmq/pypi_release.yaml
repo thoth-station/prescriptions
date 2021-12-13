@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiozmqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiozmq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiozmq' has no recent release, last release dates back to 2020-01-29 16:19:53.163042
+        link: https://pypi.org/project/aiozmq/#history
+        package_name: aiozmq

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrapheneSqlalchemyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphene-sqlalchemy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'graphene-sqlalchemy' has no recent release, last release dates back to 2020-06-04 22:01:08.444086
+        link: https://pypi.org/project/graphene-sqlalchemy/#history
+        package_name: graphene-sqlalchemy

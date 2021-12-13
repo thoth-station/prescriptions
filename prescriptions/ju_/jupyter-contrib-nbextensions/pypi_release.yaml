@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterContribNbextensionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-contrib-nbextensions
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-contrib-nbextensions' has no recent release, last release dates back to 2019-01-02 13:39:54.974954
+        link: https://pypi.org/project/jupyter-contrib-nbextensions/#history
+        package_name: jupyter-contrib-nbextensions

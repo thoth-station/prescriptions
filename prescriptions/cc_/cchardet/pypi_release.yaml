@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CchardetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cchardet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cchardet' has no recent release, last release dates back to 2020-10-28 10:23:52.306785
+        link: https://pypi.org/project/cchardet/#history
+        package_name: cchardet

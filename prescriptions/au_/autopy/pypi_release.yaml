@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AutopyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autopy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autopy' has no recent release, last release dates back to 2020-02-26 21:50:01.350912
+        link: https://pypi.org/project/autopy/#history
+        package_name: autopy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: StatsdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: statsd
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'statsd' has no recent release, last release dates back to 2018-08-22 14:19:48.492019
+        link: https://pypi.org/project/statsd/#history
+        package_name: statsd

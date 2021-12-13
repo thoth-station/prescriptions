@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpadicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipadic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipadic' has no recent release, last release dates back to 2020-07-20 03:35:40.209427
+        link: https://pypi.org/project/ipadic/#history
+        package_name: ipadic

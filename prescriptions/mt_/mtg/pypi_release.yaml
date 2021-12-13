@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MtgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mtg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mtg' has no recent release, last release dates back to 2016-05-17 15:26:33.498695
+        link: https://pypi.org/project/mtg/#history
+        package_name: mtg

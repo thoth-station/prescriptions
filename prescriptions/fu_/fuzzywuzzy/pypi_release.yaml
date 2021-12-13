@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuzzywuzzyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzywuzzy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fuzzywuzzy' has no recent release, last release dates back to 2020-02-13 21:06:27.054783
+        link: https://pypi.org/project/fuzzywuzzy/#history
+        package_name: fuzzywuzzy

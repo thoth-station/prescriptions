@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Html5libPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: html5lib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'html5lib' has no recent release, last release dates back to 2020-06-22 23:32:38.834992
+        link: https://pypi.org/project/html5lib/#history
+        package_name: html5lib

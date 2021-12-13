@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyquaternionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyquaternion
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyquaternion' has no recent release, last release dates back to 2020-10-05 01:31:37.575115
+        link: https://pypi.org/project/pyquaternion/#history
+        package_name: pyquaternion

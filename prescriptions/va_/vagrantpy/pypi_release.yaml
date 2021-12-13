@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: VagrantpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vagrantpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'vagrantpy' has no recent release, last release dates back to 2020-01-16 01:46:54.025736
+        link: https://pypi.org/project/vagrantpy/#history
+        package_name: vagrantpy

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsiwrapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansiwrap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansiwrap' has no recent release, last release dates back to 2019-01-23 22:17:10.095499
+        link: https://pypi.org/project/ansiwrap/#history
+        package_name: ansiwrap

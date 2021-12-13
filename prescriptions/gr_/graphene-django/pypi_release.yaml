@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrapheneDjangoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphene-django
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'graphene-django' has no recent release, last release dates back to 2020-12-31 06:55:59.220921
+        link: https://pypi.org/project/graphene-django/#history
+        package_name: graphene-django

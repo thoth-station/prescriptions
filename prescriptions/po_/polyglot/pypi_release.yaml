@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PolyglotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: polyglot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'polyglot' has no recent release, last release dates back to 2016-07-03 20:05:42.197691
+        link: https://pypi.org/project/polyglot/#history
+        package_name: polyglot

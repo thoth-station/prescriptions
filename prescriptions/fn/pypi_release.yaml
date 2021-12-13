@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fn' has no recent release, last release dates back to 2014-08-08 11:02:13.890249
+        link: https://pypi.org/project/fn/#history
+        package_name: fn

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OptEinsumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opt-einsum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opt-einsum' has no recent release, last release dates back to 2020-07-19 22:40:32.141899
+        link: https://pypi.org/project/opt-einsum/#history
+        package_name: opt-einsum

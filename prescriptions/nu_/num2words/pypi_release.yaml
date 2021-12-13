@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Num2wordsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: num2words
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'num2words' has no recent release, last release dates back to 2019-05-12 17:41:09.328279
+        link: https://pypi.org/project/num2words/#history
+        package_name: num2words

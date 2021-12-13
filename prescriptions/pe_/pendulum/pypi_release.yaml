@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PendulumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pendulum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pendulum' has no recent release, last release dates back to 2020-07-24 18:17:03.724212
+        link: https://pypi.org/project/pendulum/#history
+        package_name: pendulum

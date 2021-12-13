@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastdiffPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastdiff
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastdiff' has no recent release, last release dates back to 2021-05-12 07:28:11.305996
+        link: https://pypi.org/project/fastdiff/#history
+        package_name: fastdiff

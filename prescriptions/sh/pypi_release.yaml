@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ShPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sh
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'sh' has no recent release, last release dates back to 2021-05-15 03:40:53.122784
+        link: https://pypi.org/project/sh/#history
+        package_name: sh

@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DbutilsTypehintPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dbutils-typehint
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dbutils-typehint' has no recent release, last release dates back to 2020-08-04 18:07:43.107052
+        link: https://pypi.org/project/dbutils-typehint/#history
+        package_name: dbutils-typehint

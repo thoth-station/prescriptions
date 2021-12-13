@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: WalkscoreApiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: walkscore-api
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'walkscore-api' has no recent release, last release dates back to 2020-01-04 21:16:22.473702
+        link: https://pypi.org/project/walkscore-api/#history
+        package_name: walkscore-api

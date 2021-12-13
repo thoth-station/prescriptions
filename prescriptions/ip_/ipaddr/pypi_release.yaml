@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpaddrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipaddr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipaddr' has no recent release, last release dates back to 2017-09-15 20:08:39.692751
+        link: https://pypi.org/project/ipaddr/#history
+        package_name: ipaddr
