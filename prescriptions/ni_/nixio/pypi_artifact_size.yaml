@@ -1,6 +1,42 @@
 units:
   wraps:
-  - name: Nixio152PyPIArtifactSizeWrap
+  - name: Nixio1x3x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nixio
+          version: ==1.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nixio' in version
+          '1.3.1' can have up to 5.31MiB
+        link: https://pypi.org/project/nixio/1.3.1/#files
+        package_name: nixio
+  - name: Nixio1x5x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nixio
+          version: ==1.5.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nixio' in version
+          '1.5.1' can have up to 14.86MiB
+        link: https://pypi.org/project/nixio/1.5.1/#files
+        package_name: nixio
+  - name: Nixio1x5x2PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

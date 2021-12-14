@@ -1,6 +1,42 @@
 units:
   wraps:
-  - name: Artagger0103PyPIArtifactSizeWrap
+  - name: Artagger0x1x0x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: artagger
+          version: ==0.1.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'artagger' in version
+          '0.1.0.1' can have up to 10.13MiB
+        link: https://pypi.org/project/artagger/0.1.0.1/#files
+        package_name: artagger
+  - name: Artagger0x1x0x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: artagger
+          version: ==0.1.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'artagger' in version
+          '0.1.0.2' can have up to 10.13MiB
+        link: https://pypi.org/project/artagger/0.1.0.2/#files
+        package_name: artagger
+  - name: Artagger0x1x0x3PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

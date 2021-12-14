@@ -1,6 +1,24 @@
 units:
   wraps:
-  - name: Libtorrent205PyPIArtifactSizeWrap
+  - name: Libtorrent1x2x15PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libtorrent
+          version: ==1.2.15
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'libtorrent' in version
+          '1.2.15' can have up to 7.89MiB
+        link: https://pypi.org/project/libtorrent/1.2.15/#files
+        package_name: libtorrent
+  - name: Libtorrent2x0x5PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

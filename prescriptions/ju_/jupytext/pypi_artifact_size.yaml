@@ -1,6 +1,24 @@
 units:
   wraps:
-  - name: Jupytext191PyPIArtifactSizeWrap
+  - name: Jupytext1x10x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupytext
+          version: ==1.10.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupytext' in version
+          '1.10.0' can have up to 42.68MiB
+        link: https://pypi.org/project/jupytext/1.10.0/#files
+        package_name: jupytext
+  - name: Jupytext1x9x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

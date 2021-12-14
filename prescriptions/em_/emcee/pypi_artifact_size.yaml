@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Emcee311rc1PyPIArtifactSizeWrap
+  - name: Emcee3x0x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: emcee
-          version: ==3.1.1rc1
+          version: ==3.0.1
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'emcee' in version
-          '3.1.1rc1' can have up to 2.74MiB
-        link: https://pypi.org/project/emcee/3.1.1rc1/#files
+          '3.0.1' can have up to 3.60MiB
+        link: https://pypi.org/project/emcee/3.0.1/#files
+        package_name: emcee
+  - name: Emcee3x0x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: emcee
+          version: ==3.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'emcee' in version
+          '3.0.2' can have up to 3.87MiB
+        link: https://pypi.org/project/emcee/3.0.2/#files
         package_name: emcee

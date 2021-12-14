@@ -1,6 +1,42 @@
 units:
   wraps:
-  - name: Libcomps0115post1PyPIArtifactSizeWrap
+  - name: Libcomps0x1x11xpost1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libcomps
+          version: ==0.1.11.post1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'libcomps' in version
+          '0.1.11.post1' can have up to 3.49MiB
+        link: https://pypi.org/project/libcomps/0.1.11.post1/#files
+        package_name: libcomps
+  - name: Libcomps0x1x14xpost1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libcomps
+          version: ==0.1.14.post1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'libcomps' in version
+          '0.1.14.post1' can have up to 3.49MiB
+        link: https://pypi.org/project/libcomps/0.1.14.post1/#files
+        package_name: libcomps
+  - name: Libcomps0x1x15xpost1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

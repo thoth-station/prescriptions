@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: AzureStorageBlob210PyPIArtifactSizeWrap
+  - name: AzureStorageBlob12x0x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: azure-storage-blob
-          version: ==2.1.0
+          version: ==12.0.0
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'azure-storage-blob' in version
-          '2.1.0' can have up to 86.07KiB
-        link: https://pypi.org/project/azure-storage-blob/2.1.0/#files
+          '12.0.0' can have up to 3.29MiB
+        link: https://pypi.org/project/azure-storage-blob/12.0.0/#files
+        package_name: azure-storage-blob
+  - name: AzureStorageBlob12x0x0b4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-storage-blob
+          version: ==12.0.0b4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-storage-blob' in version
+          '12.0.0b4' can have up to 22.94MiB
+        link: https://pypi.org/project/azure-storage-blob/12.0.0b4/#files
         package_name: azure-storage-blob

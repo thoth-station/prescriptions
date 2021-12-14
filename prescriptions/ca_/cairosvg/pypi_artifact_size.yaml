@@ -1,6 +1,42 @@
 units:
   wraps:
-  - name: Cairosvg252PyPIArtifactSizeWrap
+  - name: Cairosvg2x0x0rc3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cairosvg
+          version: ==2.0.0rc3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cairosvg' in version
+          '2.0.0rc3' can have up to 7.96MiB
+        link: https://pypi.org/project/cairosvg/2.0.0rc3/#files
+        package_name: cairosvg
+  - name: Cairosvg2x5x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cairosvg
+          version: ==2.5.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cairosvg' in version
+          '2.5.1' can have up to 8.01MiB
+        link: https://pypi.org/project/cairosvg/2.5.1/#files
+        package_name: cairosvg
+  - name: Cairosvg2x5x2PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

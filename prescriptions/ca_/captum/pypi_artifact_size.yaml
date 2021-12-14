@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Captum041PyPIArtifactSizeWrap
+  - name: Captum0x3x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: captum
-          version: ==0.4.1
+          version: ==0.3.0
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'captum' in version
-          '0.4.1' can have up to 1.33MiB
-        link: https://pypi.org/project/captum/0.4.1/#files
+          '0.3.0' can have up to 5.43MiB
+        link: https://pypi.org/project/captum/0.3.0/#files
+        package_name: captum
+  - name: Captum0x3x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: captum
+          version: ==0.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'captum' in version
+          '0.3.1' can have up to 4.22MiB
+        link: https://pypi.org/project/captum/0.3.1/#files
         package_name: captum

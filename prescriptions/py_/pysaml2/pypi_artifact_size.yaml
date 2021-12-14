@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Pysaml2710PyPIArtifactSizeWrap
+  - name: Pysaml24x0x5rc1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: pysaml2
-          version: ==7.1.0
+          version: ==4.0.5rc1
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'pysaml2' in version
-          '7.1.0' can have up to 391.27KiB
-        link: https://pypi.org/project/pysaml2/7.1.0/#files
+          '4.0.5rc1' can have up to 13.03MiB
+        link: https://pypi.org/project/pysaml2/4.0.5rc1/#files
+        package_name: pysaml2
+  - name: Pysaml24x5x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysaml2
+          version: ==4.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysaml2' in version
+          '4.5.0' can have up to 19.10MiB
+        link: https://pypi.org/project/pysaml2/4.5.0/#files
         package_name: pysaml2
