@@ -1,0 +1,29 @@
+units:
+  sieves:
+  - name: PyTorchCPUIndexSieve
+    type: sieve
+    should_include:
+      labels:
+        index: pytorch-cpu
+    match:
+      package_version:
+        index_url:
+          not: https://download.pytorch.org/whl/cpu
+    run:
+      stack_info:
+      - type: INFO
+        message: Using PyTorch CPU index as a source of Python packages
+        link: https://download.pytorch.org/whl/cpu
+  - name: NoPyTorchCPUIndexSieve
+    type: sieve
+    should_include:
+      labels:
+        index: no-pytorch-cpu
+    match:
+      package_version:
+        index_url: https://download.pytorch.org/whl/cpu
+    run:
+      stack_info:
+      - type: INFO
+        message: Ignoring packages provided by PyTorch CPU index
+        link: https://download.pytorch.org/whl/cpu

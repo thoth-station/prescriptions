@@ -1,0 +1,29 @@
+units:
+  sieves:
+  - name: PyPIIndexSieve
+    type: sieve
+    should_include:
+      labels:
+        index: pypi
+    match:
+      package_version:
+        index_url:
+          not: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: INFO
+        message: Using PyPI as a source of Python packages
+        link: https://pypi.org/simple
+  - name: NoPyPIIndexSieve
+    type: sieve
+    should_include:
+      labels:
+        index: no-pypi
+    match:
+      package_version:
+        index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: INFO
+        message: Ignoring packages provided by PyPI
+        link: https://pypi.org/simple
