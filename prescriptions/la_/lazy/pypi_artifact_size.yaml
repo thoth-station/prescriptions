@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Lazy14PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lazy' in version
+          '1.4' can have up to 10.30KiB
+        link: https://pypi.org/project/lazy/1.4/#files
+        package_name: lazy

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CythonTestExceptionRaiser102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cython-test-exception-raiser
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cython-test-exception-raiser' in version
+          '1.0.2' can have up to 47.06KiB
+        link: https://pypi.org/project/cython-test-exception-raiser/1.0.2/#files
+        package_name: cython-test-exception-raiser

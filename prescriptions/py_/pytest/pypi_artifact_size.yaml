@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pytest700rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest' in version
+          '7.0.0rc1' can have up to 1.19MiB
+        link: https://pypi.org/project/pytest/7.0.0rc1/#files
+        package_name: pytest

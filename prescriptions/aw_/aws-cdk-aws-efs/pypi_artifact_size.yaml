@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AwsCdkAwsEfs1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-efs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-efs' in version
+          '1.99.0' can have up to 79.91KiB
+        link: https://pypi.org/project/aws-cdk-aws-efs/1.99.0/#files
+        package_name: aws-cdk-aws-efs

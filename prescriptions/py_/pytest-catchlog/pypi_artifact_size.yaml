@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestCatchlog122PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-catchlog
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-catchlog' in version
+          '1.2.2' can have up to 17.61KiB
+        link: https://pypi.org/project/pytest-catchlog/1.2.2/#files
+        package_name: pytest-catchlog

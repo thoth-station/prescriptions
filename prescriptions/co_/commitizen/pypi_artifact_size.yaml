@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Commitizen290PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commitizen
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'commitizen' in version
+          '2.9.0' can have up to 40.10KiB
+        link: https://pypi.org/project/commitizen/2.9.0/#files
+        package_name: commitizen

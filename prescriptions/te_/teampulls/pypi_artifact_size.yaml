@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Teampulls026PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: teampulls
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'teampulls' in version
+          '0.2.6' can have up to 16.51KiB
+        link: https://pypi.org/project/teampulls/0.2.6/#files
+        package_name: teampulls

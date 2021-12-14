@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Embeddings008PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: embeddings
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'embeddings' in version
+          '0.0.8' can have up to 11.96KiB
+        link: https://pypi.org/project/embeddings/0.0.8/#files
+        package_name: embeddings

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pywinrm042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywinrm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pywinrm' in version
+          '0.4.2' can have up to 43.24KiB
+        link: https://pypi.org/project/pywinrm/0.4.2/#files
+        package_name: pywinrm

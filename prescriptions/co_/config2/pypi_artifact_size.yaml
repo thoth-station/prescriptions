@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Config2032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: config2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'config2' in version
+          '0.3.2' can have up to 37.61KiB
+        link: https://pypi.org/project/config2/0.3.2/#files
+        package_name: config2

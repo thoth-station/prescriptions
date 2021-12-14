@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SqlalchemyRepr002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-repr
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sqlalchemy-repr' in version
+          '0.0.2' can have up to 4.16KiB
+        link: https://pypi.org/project/sqlalchemy-repr/0.0.2/#files
+        package_name: sqlalchemy-repr

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Backoff192PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backoff
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backoff' in version
+          '1.9.2' can have up to 14.50KiB
+        link: https://pypi.org/project/backoff/1.9.2/#files
+        package_name: backoff

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Spherogram21PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spherogram
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spherogram' in version
+          '2.1' can have up to 452.50KiB
+        link: https://pypi.org/project/spherogram/2.1/#files
+        package_name: spherogram

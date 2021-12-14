@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ifcfg094PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ifcfg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ifcfg' in version
+          '0.9.4' can have up to 6.70KiB
+        link: https://pypi.org/project/ifcfg/0.9.4/#files
+        package_name: ifcfg

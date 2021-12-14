@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Minimock128PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minimock
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'minimock' in version
+          '1.2.8' can have up to 13.54KiB
+        link: https://pypi.org/project/minimock/1.2.8/#files
+        package_name: minimock

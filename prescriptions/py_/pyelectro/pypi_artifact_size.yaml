@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyelectro021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyelectro
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyelectro' in version
+          '0.2.1' can have up to 17.12KiB
+        link: https://pypi.org/project/pyelectro/0.2.1/#files
+        package_name: pyelectro

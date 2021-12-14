@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Supervisor422PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supervisor
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'supervisor' in version
+          '4.2.2' can have up to 725.77KiB
+        link: https://pypi.org/project/supervisor/4.2.2/#files
+        package_name: supervisor

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GspreadPandas231PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-pandas
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gspread-pandas' in version
+          '2.3.1' can have up to 53.07KiB
+        link: https://pypi.org/project/gspread-pandas/2.3.1/#files
+        package_name: gspread-pandas

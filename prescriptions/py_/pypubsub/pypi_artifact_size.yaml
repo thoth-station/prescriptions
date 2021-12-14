@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pypubsub403PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypubsub
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pypubsub' in version
+          '4.0.3' can have up to 59.93KiB
+        link: https://pypi.org/project/pypubsub/4.0.3/#files
+        package_name: pypubsub

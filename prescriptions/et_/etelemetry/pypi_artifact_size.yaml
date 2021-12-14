@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Etelemetry022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etelemetry
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'etelemetry' in version
+          '0.2.2' can have up to 6.06KiB
+        link: https://pypi.org/project/etelemetry/0.2.2/#files
+        package_name: etelemetry

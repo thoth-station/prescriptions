@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ipatests489PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipatests
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ipatests' in version
+          '4.8.9' can have up to 1.65KiB
+        link: https://pypi.org/project/ipatests/4.8.9/#files
+        package_name: ipatests

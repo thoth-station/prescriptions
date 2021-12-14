@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Snuggs147PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snuggs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'snuggs' in version
+          '1.4.7' can have up to 8.00KiB
+        link: https://pypi.org/project/snuggs/1.4.7/#files
+        package_name: snuggs

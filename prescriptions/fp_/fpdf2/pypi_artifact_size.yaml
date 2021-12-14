@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fpdf2246PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fpdf2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fpdf2' in version
+          '2.4.6' can have up to 140.14KiB
+        link: https://pypi.org/project/fpdf2/2.4.6/#files
+        package_name: fpdf2

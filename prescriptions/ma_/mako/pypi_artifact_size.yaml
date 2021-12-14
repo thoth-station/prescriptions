@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mako116PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mako
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mako' in version
+          '1.1.6' can have up to 483.53KiB
+        link: https://pypi.org/project/mako/1.1.6/#files
+        package_name: mako

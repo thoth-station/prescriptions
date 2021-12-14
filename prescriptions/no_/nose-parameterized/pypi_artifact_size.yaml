@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: NoseParameterized060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-parameterized
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nose-parameterized' in version
+          '0.6.0' can have up to 17.74KiB
+        link: https://pypi.org/project/nose-parameterized/0.6.0/#files
+        package_name: nose-parameterized

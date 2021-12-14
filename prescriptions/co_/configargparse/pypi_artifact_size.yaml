@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Configargparse153PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configargparse
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'configargparse' in version
+          '1.5.3' can have up to 38.26KiB
+        link: https://pypi.org/project/configargparse/1.5.3/#files
+        package_name: configargparse

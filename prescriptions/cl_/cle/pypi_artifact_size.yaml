@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cle909947PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cle
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cle' in version
+          '9.0.9947' can have up to 142.84KiB
+        link: https://pypi.org/project/cle/9.0.9947/#files
+        package_name: cle

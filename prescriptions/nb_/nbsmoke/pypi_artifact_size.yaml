@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nbsmoke060a3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbsmoke
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nbsmoke' in version
+          '0.6.0a3' can have up to 27.60KiB
+        link: https://pypi.org/project/nbsmoke/0.6.0a3/#files
+        package_name: nbsmoke

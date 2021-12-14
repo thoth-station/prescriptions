@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Commentjson090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commentjson
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'commentjson' in version
+          '0.9.0' can have up to 8.45KiB
+        link: https://pypi.org/project/commentjson/0.9.0/#files
+        package_name: commentjson

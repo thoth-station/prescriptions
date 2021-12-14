@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Docopt062PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docopt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docopt' in version
+          '0.6.2' can have up to 25.29KiB
+        link: https://pypi.org/project/docopt/0.6.2/#files
+        package_name: docopt

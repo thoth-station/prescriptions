@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FuncTimeout435PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: func-timeout
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'func-timeout' in version
+          '4.3.5' can have up to 43.23KiB
+        link: https://pypi.org/project/func-timeout/4.3.5/#files
+        package_name: func-timeout

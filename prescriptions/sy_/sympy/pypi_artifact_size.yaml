@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sympy19rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sympy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sympy' in version
+          '1.9rc1' can have up to 6.61MiB
+        link: https://pypi.org/project/sympy/1.9rc1/#files
+        package_name: sympy

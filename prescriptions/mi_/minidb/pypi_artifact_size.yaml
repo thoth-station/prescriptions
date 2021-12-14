@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Minidb205PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minidb
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'minidb' in version
+          '2.0.5' can have up to 11.68KiB
+        link: https://pypi.org/project/minidb/2.0.5/#files
+        package_name: minidb

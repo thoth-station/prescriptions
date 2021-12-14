@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tldextract312PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tldextract
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tldextract' in version
+          '3.1.2' can have up to 100.83KiB
+        link: https://pypi.org/project/tldextract/3.1.2/#files
+        package_name: tldextract

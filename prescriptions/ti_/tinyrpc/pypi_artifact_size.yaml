@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tinyrpc112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tinyrpc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tinyrpc' in version
+          '1.1.2' can have up to 28.12KiB
+        link: https://pypi.org/project/tinyrpc/1.1.2/#files
+        package_name: tinyrpc

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ipynbname202132PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipynbname
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ipynbname' in version
+          '2021.3.2' can have up to 3.95KiB
+        link: https://pypi.org/project/ipynbname/2021.3.2/#files
+        package_name: ipynbname

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rpy2345PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpy2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rpy2' in version
+          '3.4.5' can have up to 229.88KiB
+        link: https://pypi.org/project/rpy2/3.4.5/#files
+        package_name: rpy2

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Hashid314PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hashid
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hashid' in version
+          '3.1.4' can have up to 30.18KiB
+        link: https://pypi.org/project/hashid/3.1.4/#files
+        package_name: hashid

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Messaging12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: messaging
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'messaging' in version
+          '1.2' can have up to 131.84KiB
+        link: https://pypi.org/project/messaging/1.2/#files
+        package_name: messaging

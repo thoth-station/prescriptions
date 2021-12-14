@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Stix2Patterns132PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stix2-patterns
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stix2-patterns' in version
+          '1.3.2' can have up to 63.67KiB
+        link: https://pypi.org/project/stix2-patterns/1.3.2/#files
+        package_name: stix2-patterns

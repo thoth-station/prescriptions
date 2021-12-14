@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestEnv062PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-env
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-env' in version
+          '0.6.2' can have up to 1.65KiB
+        link: https://pypi.org/project/pytest-env/0.6.2/#files
+        package_name: pytest-env

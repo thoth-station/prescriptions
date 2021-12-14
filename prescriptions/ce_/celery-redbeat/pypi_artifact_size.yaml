@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CeleryRedbeat200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: celery-redbeat
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'celery-redbeat' in version
+          '2.0.0' can have up to 14.91KiB
+        link: https://pypi.org/project/celery-redbeat/2.0.0/#files
+        package_name: celery-redbeat

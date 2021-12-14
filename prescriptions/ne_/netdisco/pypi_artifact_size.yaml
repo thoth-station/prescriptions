@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Netdisco300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netdisco
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netdisco' in version
+          '3.0.0' can have up to 19.94KiB
+        link: https://pypi.org/project/netdisco/3.0.0/#files
+        package_name: netdisco

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KerberosSspi02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberos-sspi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kerberos-sspi' in version
+          '0.2' can have up to 6.02KiB
+        link: https://pypi.org/project/kerberos-sspi/0.2/#files
+        package_name: kerberos-sspi

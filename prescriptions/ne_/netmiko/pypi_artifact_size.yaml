@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Netmiko340PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netmiko
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netmiko' in version
+          '3.4.0' can have up to 490.30KiB
+        link: https://pypi.org/project/netmiko/3.4.0/#files
+        package_name: netmiko

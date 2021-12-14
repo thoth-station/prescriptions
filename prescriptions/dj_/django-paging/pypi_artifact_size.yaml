@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoPaging025PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-paging
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-paging' in version
+          '0.2.5' can have up to 4.00KiB
+        link: https://pypi.org/project/django-paging/0.2.5/#files
+        package_name: django-paging

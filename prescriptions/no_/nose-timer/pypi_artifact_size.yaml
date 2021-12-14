@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: NoseTimer101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-timer
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nose-timer' in version
+          '1.0.1' can have up to 8.45KiB
+        link: https://pypi.org/project/nose-timer/1.0.1/#files
+        package_name: nose-timer

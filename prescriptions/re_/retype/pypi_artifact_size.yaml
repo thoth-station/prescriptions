@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Retype2150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retype
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'retype' in version
+          '21.5.0' can have up to 37.62KiB
+        link: https://pypi.org/project/retype/21.5.0/#files
+        package_name: retype

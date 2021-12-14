@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyngrok510PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyngrok
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyngrok' in version
+          '5.1.0' can have up to 727.83KiB
+        link: https://pypi.org/project/pyngrok/5.1.0/#files
+        package_name: pyngrok

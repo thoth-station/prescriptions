@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyperclip182PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyperclip
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyperclip' in version
+          '1.8.2' can have up to 20.43KiB
+        link: https://pypi.org/project/pyperclip/1.8.2/#files
+        package_name: pyperclip

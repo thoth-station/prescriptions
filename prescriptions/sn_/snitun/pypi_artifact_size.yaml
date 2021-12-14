@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Snitun09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snitun
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'snitun' in version
+          '0.9' can have up to 20.55KiB
+        link: https://pypi.org/project/snitun/0.9/#files
+        package_name: snitun

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JupyterRequire061PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-require
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-require' in version
+          '0.6.1' can have up to 41.32KiB
+        link: https://pypi.org/project/jupyter-require/0.6.1/#files
+        package_name: jupyter-require

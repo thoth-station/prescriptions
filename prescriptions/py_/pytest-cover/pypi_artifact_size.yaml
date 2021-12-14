@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestCover300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cover
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-cover' in version
+          '3.0.0' can have up to 3.68KiB
+        link: https://pypi.org/project/pytest-cover/3.0.0/#files
+        package_name: pytest-cover

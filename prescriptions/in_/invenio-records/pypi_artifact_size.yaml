@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: InvenioRecords161PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-records
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'invenio-records' in version
+          '1.6.1' can have up to 130.52KiB
+        link: https://pypi.org/project/invenio-records/1.6.1/#files
+        package_name: invenio-records

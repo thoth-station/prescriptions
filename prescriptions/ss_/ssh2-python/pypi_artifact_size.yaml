@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ssh2Python091PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssh2-python
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ssh2-python' in version
+          '0.9.1' can have up to 2.98MiB
+        link: https://pypi.org/project/ssh2-python/0.9.1/#files
+        package_name: ssh2-python

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Glom2080PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glom
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'glom' in version
+          '20.8.0' can have up to 180.10KiB
+        link: https://pypi.org/project/glom/20.8.0/#files
+        package_name: glom

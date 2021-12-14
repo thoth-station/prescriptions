@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: HealpyGithubDevelPyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: healpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'healpy' in version
+          'github-devel' can have up to 1.40MiB
+        link: https://pypi.org/project/healpy/github-devel/#files
+        package_name: healpy

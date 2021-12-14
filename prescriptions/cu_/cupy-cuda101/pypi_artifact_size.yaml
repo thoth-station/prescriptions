@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CupyCuda101960PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda101
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cupy-cuda101' in version
+          '9.6.0' can have up to 59.72MiB
+        link: https://pypi.org/project/cupy-cuda101/9.6.0/#files
+        package_name: cupy-cuda101

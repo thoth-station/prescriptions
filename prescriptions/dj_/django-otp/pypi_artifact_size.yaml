@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoOtp113PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-otp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-otp' in version
+          '1.1.3' can have up to 60.00KiB
+        link: https://pypi.org/project/django-otp/1.1.3/#files
+        package_name: django-otp

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ansiwrap084PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansiwrap
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansiwrap' in version
+          '0.8.4' can have up to 17.25KiB
+        link: https://pypi.org/project/ansiwrap/0.8.4/#files
+        package_name: ansiwrap

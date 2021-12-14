@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: NeptuneSklearn095PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-sklearn
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'neptune-sklearn' in version
+          '0.9.5' can have up to 24.28KiB
+        link: https://pypi.org/project/neptune-sklearn/0.9.5/#files
+        package_name: neptune-sklearn

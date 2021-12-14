@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyotgw11b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyotgw
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyotgw' in version
+          '1.1b1' can have up to 50.30KiB
+        link: https://pypi.org/project/pyotgw/1.1b1/#files
+        package_name: pyotgw

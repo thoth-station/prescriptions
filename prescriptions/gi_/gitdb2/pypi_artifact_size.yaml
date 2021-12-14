@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gitdb2402PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitdb2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gitdb2' in version
+          '4.0.2' can have up to 1.11KiB
+        link: https://pypi.org/project/gitdb2/4.0.2/#files
+        package_name: gitdb2

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CiInfo020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ci-info
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ci-info' in version
+          '0.2.0' can have up to 20.16KiB
+        link: https://pypi.org/project/ci-info/0.2.0/#files
+        package_name: ci-info

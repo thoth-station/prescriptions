@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mitogen030rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mitogen
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mitogen' in version
+          '0.3.0rc1' can have up to 279.20KiB
+        link: https://pypi.org/project/mitogen/0.3.0rc1/#files
+        package_name: mitogen

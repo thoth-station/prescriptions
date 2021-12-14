@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeSession440PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-session
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-session' in version
+          '4.4.0' can have up to 34.90KiB
+        link: https://pypi.org/project/zope-session/4.4.0/#files
+        package_name: zope-session

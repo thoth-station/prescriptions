@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Yaspin210PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yaspin
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'yaspin' in version
+          '2.1.0' can have up to 33.66KiB
+        link: https://pypi.org/project/yaspin/2.1.0/#files
+        package_name: yaspin

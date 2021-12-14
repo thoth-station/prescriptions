@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mercantile12b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mercantile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mercantile' in version
+          '1.2b1' can have up to 14.77KiB
+        link: https://pypi.org/project/mercantile/1.2b1/#files
+        package_name: mercantile

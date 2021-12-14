@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Geohash211PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geohash2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'geohash2' in version
+          '1.1' can have up to 15.00KiB
+        link: https://pypi.org/project/geohash2/1.1/#files
+        package_name: geohash2

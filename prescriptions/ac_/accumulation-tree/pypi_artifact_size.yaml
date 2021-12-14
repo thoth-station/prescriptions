@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AccumulationTree062PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: accumulation-tree
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'accumulation-tree' in version
+          '0.6.2' can have up to 12.03KiB
+        link: https://pypi.org/project/accumulation-tree/0.6.2/#files
+        package_name: accumulation-tree

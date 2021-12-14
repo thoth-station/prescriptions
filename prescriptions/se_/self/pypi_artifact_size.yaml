@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Self202071PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: self
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'self' in version
+          '2020.7.1' can have up to 1.45KiB
+        link: https://pypi.org/project/self/2020.7.1/#files
+        package_name: self

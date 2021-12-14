@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KerasMxnet224b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-mxnet
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'keras-mxnet' in version
+          '2.2.4b1' can have up to 364.30KiB
+        link: https://pypi.org/project/keras-mxnet/2.2.4b1/#files
+        package_name: keras-mxnet

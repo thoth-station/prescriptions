@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Markupsafe201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markupsafe
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'markupsafe' in version
+          '2.0.1' can have up to 31.56KiB
+        link: https://pypi.org/project/markupsafe/2.0.1/#files
+        package_name: markupsafe

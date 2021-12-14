@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sasl03a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sasl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sasl' in version
+          '0.3a1' can have up to 492.86KiB
+        link: https://pypi.org/project/sasl/0.3a1/#files
+        package_name: sasl

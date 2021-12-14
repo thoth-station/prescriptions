@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bbcode110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bbcode
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bbcode' in version
+          '1.1.0' can have up to 11.00KiB
+        link: https://pypi.org/project/bbcode/1.1.0/#files
+        package_name: bbcode

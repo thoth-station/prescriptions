@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GoogleCloudVision263PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-vision
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-cloud-vision' in version
+          '2.6.3' can have up to 625.61KiB
+        link: https://pypi.org/project/google-cloud-vision/2.6.3/#files
+        package_name: google-cloud-vision

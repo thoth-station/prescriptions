@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: MlflowDbstore101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlflow-dbstore
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mlflow-dbstore' in version
+          '1.0.1' can have up to 8.35KiB
+        link: https://pypi.org/project/mlflow-dbstore/1.0.1/#files
+        package_name: mlflow-dbstore

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pgzero121PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgzero
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pgzero' in version
+          '1.2.1' can have up to 2.15MiB
+        link: https://pypi.org/project/pgzero/1.2.1/#files
+        package_name: pgzero

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Getkey065PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: getkey
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'getkey' in version
+          '0.6.5' can have up to 13.43KiB
+        link: https://pypi.org/project/getkey/0.6.5/#files
+        package_name: getkey

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Atheris207PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atheris
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'atheris' in version
+          '2.0.7' can have up to 25.83MiB
+        link: https://pypi.org/project/atheris/2.0.7/#files
+        package_name: atheris

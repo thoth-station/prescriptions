@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Smbprotocol183PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbprotocol
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'smbprotocol' in version
+          '1.8.3' can have up to 120.77KiB
+        link: https://pypi.org/project/smbprotocol/1.8.3/#files
+        package_name: smbprotocol

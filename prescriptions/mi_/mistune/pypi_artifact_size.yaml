@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mistune200rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mistune
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mistune' in version
+          '2.0.0rc1' can have up to 70.82KiB
+        link: https://pypi.org/project/mistune/2.0.0rc1/#files
+        package_name: mistune

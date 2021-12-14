@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TamrUnifyClient150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tamr-unify-client
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tamr-unify-client' in version
+          '1.5.0' can have up to 93.22KiB
+        link: https://pypi.org/project/tamr-unify-client/1.5.0/#files
+        package_name: tamr-unify-client

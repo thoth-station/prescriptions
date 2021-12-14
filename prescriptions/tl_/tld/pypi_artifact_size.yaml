@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tld098PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tld
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tld' in version
+          '0.9.8' can have up to 247.01KiB
+        link: https://pypi.org/project/tld/0.9.8/#files
+        package_name: tld

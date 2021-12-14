@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Reaction202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reaction
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'reaction' in version
+          '20.2' can have up to 10.65KiB
+        link: https://pypi.org/project/reaction/20.2/#files
+        package_name: reaction

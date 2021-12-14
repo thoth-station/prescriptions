@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtCosmosdb700b2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-cosmosdb
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-cosmosdb' in version
+          '7.0.0b2' can have up to 365.83KiB
+        link: https://pypi.org/project/azure-mgmt-cosmosdb/7.0.0b2/#files
+        package_name: azure-mgmt-cosmosdb

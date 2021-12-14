@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Minidump009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minidump
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'minidump' in version
+          '0.0.9' can have up to 44.83KiB
+        link: https://pypi.org/project/minidump/0.0.9/#files
+        package_name: minidump

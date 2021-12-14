@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Html5lib11PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: html5lib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'html5lib' in version
+          '1.1' can have up to 265.83KiB
+        link: https://pypi.org/project/html5lib/1.1/#files
+        package_name: html5lib

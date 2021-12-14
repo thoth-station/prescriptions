@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pygerduty0383PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygerduty
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pygerduty' in version
+          '0.38.3' can have up to 16.43KiB
+        link: https://pypi.org/project/pygerduty/0.38.3/#files
+        package_name: pygerduty

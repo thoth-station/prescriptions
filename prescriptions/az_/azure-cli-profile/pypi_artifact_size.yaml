@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureCliProfile215PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cli-profile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-cli-profile' in version
+          '2.1.5' can have up to 9.70KiB
+        link: https://pypi.org/project/azure-cli-profile/2.1.5/#files
+        package_name: azure-cli-profile

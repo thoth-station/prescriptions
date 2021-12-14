@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonBaseconv122PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-baseconv
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-baseconv' in version
+          '1.2.2' can have up to 4.81KiB
+        link: https://pypi.org/project/python-baseconv/1.2.2/#files
+        package_name: python-baseconv

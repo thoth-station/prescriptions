@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Aioflo2021110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioflo
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aioflo' in version
+          '2021.11.0' can have up to 10.51KiB
+        link: https://pypi.org/project/aioflo/2021.11.0/#files
+        package_name: aioflo

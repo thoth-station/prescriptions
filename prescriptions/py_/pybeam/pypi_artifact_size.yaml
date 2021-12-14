@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pybeam07rc3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybeam
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pybeam' in version
+          '0.7rc3' can have up to 11.83KiB
+        link: https://pypi.org/project/pybeam/0.7rc3/#files
+        package_name: pybeam

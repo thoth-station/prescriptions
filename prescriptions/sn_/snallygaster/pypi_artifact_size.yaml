@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Snallygaster009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snallygaster
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'snallygaster' in version
+          '0.0.9' can have up to 23.49KiB
+        link: https://pypi.org/project/snallygaster/0.0.9/#files
+        package_name: snallygaster

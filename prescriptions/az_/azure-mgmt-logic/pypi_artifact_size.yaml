@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtLogic900b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-logic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-logic' in version
+          '9.0.0b1' can have up to 250.70KiB
+        link: https://pypi.org/project/azure-mgmt-logic/9.0.0b1/#files
+        package_name: azure-mgmt-logic

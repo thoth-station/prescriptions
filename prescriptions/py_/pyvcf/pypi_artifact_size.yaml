@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyvcf068PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvcf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyvcf' in version
+          '0.6.8' can have up to 1.02MiB
+        link: https://pypi.org/project/pyvcf/0.6.8/#files
+        package_name: pyvcf

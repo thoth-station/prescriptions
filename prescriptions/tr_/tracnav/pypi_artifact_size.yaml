@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tracnav43PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tracnav
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tracnav' in version
+          '4.3' can have up to 14.65KiB
+        link: https://pypi.org/project/tracnav/4.3/#files
+        package_name: tracnav

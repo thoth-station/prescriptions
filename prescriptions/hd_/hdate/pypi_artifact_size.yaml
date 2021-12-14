@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Hdate098PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdate
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hdate' in version
+          '0.9.8' can have up to 48.37KiB
+        link: https://pypi.org/project/hdate/0.9.8/#files
+        package_name: hdate

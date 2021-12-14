@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AtlassianPythonApi391PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atlassian-python-api
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'atlassian-python-api' in version
+          '3.9.1' can have up to 117.22KiB
+        link: https://pypi.org/project/atlassian-python-api/3.9.1/#files
+        package_name: atlassian-python-api

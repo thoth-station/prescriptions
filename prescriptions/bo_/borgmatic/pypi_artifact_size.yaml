@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Borgmatic159PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: borgmatic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'borgmatic' in version
+          '1.5.9' can have up to 122.75KiB
+        link: https://pypi.org/project/borgmatic/1.5.9/#files
+        package_name: borgmatic

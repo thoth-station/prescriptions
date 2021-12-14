@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DiffMatchPatch20200713PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diff-match-patch
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'diff-match-patch' in version
+          '20200713' can have up to 60.20KiB
+        link: https://pypi.org/project/diff-match-patch/20200713/#files
+        package_name: diff-match-patch

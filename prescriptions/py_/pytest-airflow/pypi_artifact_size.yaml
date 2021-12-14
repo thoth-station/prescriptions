@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestAirflow003PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-airflow
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-airflow' in version
+          '0.0.3' can have up to 35.15KiB
+        link: https://pypi.org/project/pytest-airflow/0.0.3/#files
+        package_name: pytest-airflow

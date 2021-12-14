@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ScikitSpark040PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-spark
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'scikit-spark' in version
+          '0.4.0' can have up to 64.41KiB
+        link: https://pypi.org/project/scikit-spark/0.4.0/#files
+        package_name: scikit-spark

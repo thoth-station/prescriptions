@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Lorax0949PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lorax
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lorax' in version
+          '0.94.9' can have up to 292.48KiB
+        link: https://pypi.org/project/lorax/0.94.9/#files
+        package_name: lorax

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestDjango452PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-django
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-django' in version
+          '4.5.2' can have up to 78.08KiB
+        link: https://pypi.org/project/pytest-django/4.5.2/#files
+        package_name: pytest-django

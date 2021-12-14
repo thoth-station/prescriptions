@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pipx0164PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipx
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pipx' in version
+          '0.16.4' can have up to 339.96KiB
+        link: https://pypi.org/project/pipx/0.16.4/#files
+        package_name: pipx

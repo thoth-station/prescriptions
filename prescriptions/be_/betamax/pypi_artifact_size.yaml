@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Betamax081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: betamax
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'betamax' in version
+          '0.8.1' can have up to 75.71KiB
+        link: https://pypi.org/project/betamax/0.8.1/#files
+        package_name: betamax

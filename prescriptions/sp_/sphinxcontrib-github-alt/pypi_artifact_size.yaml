@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SphinxcontribGithubAlt12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-github-alt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinxcontrib-github-alt' in version
+          '1.2' can have up to 4.17KiB
+        link: https://pypi.org/project/sphinxcontrib-github-alt/1.2/#files
+        package_name: sphinxcontrib-github-alt

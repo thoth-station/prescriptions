@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Imgtag010a3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imgtag
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'imgtag' in version
+          '0.1.0a3' can have up to 15.35KiB
+        link: https://pypi.org/project/imgtag/0.1.0a3/#files
+        package_name: imgtag

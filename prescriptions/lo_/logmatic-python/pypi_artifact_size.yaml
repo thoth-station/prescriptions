@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: LogmaticPython017PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logmatic-python
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'logmatic-python' in version
+          '0.1.7' can have up to 3.26KiB
+        link: https://pypi.org/project/logmatic-python/0.1.7/#files
+        package_name: logmatic-python

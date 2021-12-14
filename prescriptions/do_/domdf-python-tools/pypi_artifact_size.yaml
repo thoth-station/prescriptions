@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DomdfPythonTools310PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: domdf-python-tools
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'domdf-python-tools' in version
+          '3.1.0' can have up to 117.79KiB
+        link: https://pypi.org/project/domdf-python-tools/3.1.0/#files
+        package_name: domdf-python-tools

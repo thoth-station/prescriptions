@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SetuptoolsScmGitArchive11PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-scm-git-archive
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'setuptools-scm-git-archive' in version
+          '1.1' can have up to 3.18KiB
+        link: https://pypi.org/project/setuptools-scm-git-archive/1.1/#files
+        package_name: setuptools-scm-git-archive

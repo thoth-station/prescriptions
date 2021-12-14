@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wxpython411PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wxpython
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wxpython' in version
+          '4.1.1' can have up to 62.98MiB
+        link: https://pypi.org/project/wxpython/4.1.1/#files
+        package_name: wxpython

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pefile202193PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pefile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pefile' in version
+          '2021.9.3' can have up to 70.49KiB
+        link: https://pypi.org/project/pefile/2021.9.3/#files
+        package_name: pefile

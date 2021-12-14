@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: EdxRbac151PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edx-rbac
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'edx-rbac' in version
+          '1.5.1' can have up to 39.70KiB
+        link: https://pypi.org/project/edx-rbac/1.5.1/#files
+        package_name: edx-rbac

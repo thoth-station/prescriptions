@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Blivet342PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blivet
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'blivet' in version
+          '3.4.2' can have up to 838.11KiB
+        link: https://pypi.org/project/blivet/3.4.2/#files
+        package_name: blivet

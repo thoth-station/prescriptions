@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ncclient069PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ncclient
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ncclient' in version
+          '0.6.9' can have up to 115.31KiB
+        link: https://pypi.org/project/ncclient/0.6.9/#files
+        package_name: ncclient

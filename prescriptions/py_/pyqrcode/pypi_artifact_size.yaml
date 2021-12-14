@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyqrcode121PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyqrcode
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyqrcode' in version
+          '1.2.1' can have up to 40.94KiB
+        link: https://pypi.org/project/pyqrcode/1.2.1/#files
+        package_name: pyqrcode

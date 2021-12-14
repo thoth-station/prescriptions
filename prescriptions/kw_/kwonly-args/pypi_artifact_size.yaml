@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KwonlyArgs109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kwonly-args
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kwonly-args' in version
+          '1.0.9' can have up to 19.86KiB
+        link: https://pypi.org/project/kwonly-args/1.0.9/#files
+        package_name: kwonly-args

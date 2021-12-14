@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeTal45PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-tal
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-tal' in version
+          '4.5' can have up to 135.34KiB
+        link: https://pypi.org/project/zope-tal/4.5/#files
+        package_name: zope-tal

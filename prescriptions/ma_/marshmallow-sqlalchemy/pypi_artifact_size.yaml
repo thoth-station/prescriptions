@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: MarshmallowSqlalchemy090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marshmallow-sqlalchemy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'marshmallow-sqlalchemy' in version
+          '0.9.0' can have up to 36.48KiB
+        link: https://pypi.org/project/marshmallow-sqlalchemy/0.9.0/#files
+        package_name: marshmallow-sqlalchemy

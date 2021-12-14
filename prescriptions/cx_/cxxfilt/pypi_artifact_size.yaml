@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cxxfilt030PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cxxfilt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cxxfilt' in version
+          '0.3.0' can have up to 4.69KiB
+        link: https://pypi.org/project/cxxfilt/0.3.0/#files
+        package_name: cxxfilt

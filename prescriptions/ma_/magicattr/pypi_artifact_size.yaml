@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Magicattr015PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: magicattr
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'magicattr' in version
+          '0.1.5' can have up to 4.54KiB
+        link: https://pypi.org/project/magicattr/0.1.5/#files
+        package_name: magicattr

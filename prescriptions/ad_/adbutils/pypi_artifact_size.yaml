@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Adbutils093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adbutils
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'adbutils' in version
+          '0.9.3' can have up to 1.37MiB
+        link: https://pypi.org/project/adbutils/0.9.3/#files
+        package_name: adbutils

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Appnope012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: appnope
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'appnope' in version
+          '0.1.2' can have up to 4.24KiB
+        link: https://pypi.org/project/appnope/0.1.2/#files
+        package_name: appnope

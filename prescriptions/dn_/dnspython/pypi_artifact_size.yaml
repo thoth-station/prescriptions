@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dnspython210rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dnspython
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dnspython' in version
+          '2.1.0rc1' can have up to 379.74KiB
+        link: https://pypi.org/project/dnspython/2.1.0rc1/#files
+        package_name: dnspython

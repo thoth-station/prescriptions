@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Walkdir041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: walkdir
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'walkdir' in version
+          '0.4.1' can have up to 18.13KiB
+        link: https://pypi.org/project/walkdir/0.4.1/#files
+        package_name: walkdir

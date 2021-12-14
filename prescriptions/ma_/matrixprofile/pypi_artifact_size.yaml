@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Matrixprofile119PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matrixprofile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'matrixprofile' in version
+          '1.1.9' can have up to 94.43KiB
+        link: https://pypi.org/project/matrixprofile/1.1.9/#files
+        package_name: matrixprofile

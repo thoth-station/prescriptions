@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fastpurge103PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastpurge
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fastpurge' in version
+          '1.0.3' can have up to 19.39KiB
+        link: https://pypi.org/project/fastpurge/1.0.3/#files
+        package_name: fastpurge

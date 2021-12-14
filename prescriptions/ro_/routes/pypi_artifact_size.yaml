@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Routes251PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: routes
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'routes' in version
+          '2.5.1' can have up to 186.43KiB
+        link: https://pypi.org/project/routes/2.5.1/#files
+        package_name: routes

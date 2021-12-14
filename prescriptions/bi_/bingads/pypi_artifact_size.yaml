@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bingads934PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bingads
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bingads' in version
+          '9.3.4' can have up to 132.05KiB
+        link: https://pypi.org/project/bingads/9.3.4/#files
+        package_name: bingads

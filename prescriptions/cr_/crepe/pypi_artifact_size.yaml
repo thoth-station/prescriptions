@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Crepe009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crepe
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'crepe' in version
+          '0.0.9' can have up to 15.13KiB
+        link: https://pypi.org/project/crepe/0.0.9/#files
+        package_name: crepe

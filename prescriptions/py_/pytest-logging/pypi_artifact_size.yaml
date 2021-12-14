@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestLogging2015114PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-logging
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-logging' in version
+          '2015.11.4' can have up to 3.82KiB
+        link: https://pypi.org/project/pytest-logging/2015.11.4/#files
+        package_name: pytest-logging

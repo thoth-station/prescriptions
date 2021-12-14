@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AminoPy203PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amino-py
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'amino-py' in version
+          '2.0.3' can have up to 56.42KiB
+        link: https://pypi.org/project/amino-py/2.0.3/#files
+        package_name: amino-py

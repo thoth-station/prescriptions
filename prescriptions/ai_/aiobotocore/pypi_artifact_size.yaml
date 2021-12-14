@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Aiobotocore201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiobotocore
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiobotocore' in version
+          '2.0.1' can have up to 53.24KiB
+        link: https://pypi.org/project/aiobotocore/2.0.1/#files
+        package_name: aiobotocore

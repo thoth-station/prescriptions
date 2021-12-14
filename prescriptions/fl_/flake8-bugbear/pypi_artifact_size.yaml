@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8Bugbear2192PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-bugbear
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-bugbear' in version
+          '21.9.2' can have up to 27.32KiB
+        link: https://pypi.org/project/flake8-bugbear/21.9.2/#files
+        package_name: flake8-bugbear

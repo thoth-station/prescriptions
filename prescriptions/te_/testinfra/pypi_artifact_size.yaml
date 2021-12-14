@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Testinfra600PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testinfra
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'testinfra' in version
+          '6.0.0' can have up to 2.08KiB
+        link: https://pypi.org/project/testinfra/6.0.0/#files
+        package_name: testinfra

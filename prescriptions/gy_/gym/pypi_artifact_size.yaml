@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gym097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gym
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gym' in version
+          '0.9.7' can have up to 106.11KiB
+        link: https://pypi.org/project/gym/0.9.7/#files
+        package_name: gym

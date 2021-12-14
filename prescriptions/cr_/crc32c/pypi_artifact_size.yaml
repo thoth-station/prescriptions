@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Crc32c22post0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crc32c
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'crc32c' in version
+          '2.2.post0' can have up to 49.13KiB
+        link: https://pypi.org/project/crc32c/2.2.post0/#files
+        package_name: crc32c

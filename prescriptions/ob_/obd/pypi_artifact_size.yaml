@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Obd071PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: obd
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'obd' in version
+          '0.7.1' can have up to 50.79KiB
+        link: https://pypi.org/project/obd/0.7.1/#files
+        package_name: obd

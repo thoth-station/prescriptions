@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fastparquet072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastparquet
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fastparquet' in version
+          '0.7.2' can have up to 1.26MiB
+        link: https://pypi.org/project/fastparquet/0.7.2/#files
+        package_name: fastparquet

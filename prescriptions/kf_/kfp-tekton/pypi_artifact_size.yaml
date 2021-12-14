@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KfpTekton101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp-tekton
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kfp-tekton' in version
+          '1.0.1' can have up to 53.89KiB
+        link: https://pypi.org/project/kfp-tekton/1.0.1/#files
+        package_name: kfp-tekton

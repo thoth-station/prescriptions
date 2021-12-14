@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PrometheusApiClient042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-api-client
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'prometheus-api-client' in version
+          '0.4.2' can have up to 23.47KiB
+        link: https://pypi.org/project/prometheus-api-client/0.4.2/#files
+        package_name: prometheus-api-client

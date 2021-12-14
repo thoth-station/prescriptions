@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestCheck104PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-check
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-check' in version
+          '1.0.4' can have up to 12.04KiB
+        link: https://pypi.org/project/pytest-check/1.0.4/#files
+        package_name: pytest-check

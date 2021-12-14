@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Demjson224PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: demjson
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'demjson' in version
+          '2.2.4' can have up to 128.38KiB
+        link: https://pypi.org/project/demjson/2.2.4/#files
+        package_name: demjson

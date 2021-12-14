@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Orjson365PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: orjson
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'orjson' in version
+          '3.6.5' can have up to 536.00KiB
+        link: https://pypi.org/project/orjson/3.6.5/#files
+        package_name: orjson

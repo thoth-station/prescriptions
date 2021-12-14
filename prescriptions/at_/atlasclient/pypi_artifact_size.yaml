@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Atlasclient100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atlasclient
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'atlasclient' in version
+          '1.0.0' can have up to 44.94KiB
+        link: https://pypi.org/project/atlasclient/1.0.0/#files
+        package_name: atlasclient

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ProductsGenericsetup215PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-genericsetup
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'products-genericsetup' in version
+          '2.1.5' can have up to 173.08KiB
+        link: https://pypi.org/project/products-genericsetup/2.1.5/#files
+        package_name: products-genericsetup

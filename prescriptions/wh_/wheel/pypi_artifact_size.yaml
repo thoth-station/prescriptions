@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wheel097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wheel' in version
+          '0.9.7' can have up to 41.17KiB
+        link: https://pypi.org/project/wheel/0.9.7/#files
+        package_name: wheel

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Etcd3090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etcd3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'etcd3' in version
+          '0.9.0' can have up to 58.80KiB
+        link: https://pypi.org/project/etcd3/0.9.0/#files
+        package_name: etcd3

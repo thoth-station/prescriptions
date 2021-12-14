@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: RequestsFile151PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-file
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'requests-file' in version
+          '1.5.1' can have up to 5.54KiB
+        link: https://pypi.org/project/requests-file/1.5.1/#files
+        package_name: requests-file

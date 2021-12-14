@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AwsCdkCxApi210PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-cx-api
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-cx-api' in version
+          '2.1.0' can have up to 135.91KiB
+        link: https://pypi.org/project/aws-cdk-cx-api/2.1.0/#files
+        package_name: aws-cdk-cx-api

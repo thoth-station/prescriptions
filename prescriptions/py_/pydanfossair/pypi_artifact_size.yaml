@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pydanfossair010PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydanfossair
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pydanfossair' in version
+          '0.1.0' can have up to 2.60KiB
+        link: https://pypi.org/project/pydanfossair/0.1.0/#files
+        package_name: pydanfossair

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cligj072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cligj
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cligj' in version
+          '0.7.2' can have up to 9.57KiB
+        link: https://pypi.org/project/cligj/0.7.2/#files
+        package_name: cligj

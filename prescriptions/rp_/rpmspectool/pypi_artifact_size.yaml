@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rpmspectool1997PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpmspectool
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rpmspectool' in version
+          '1.99.7' can have up to 20.37KiB
+        link: https://pypi.org/project/rpmspectool/1.99.7/#files
+        package_name: rpmspectool

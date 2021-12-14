@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PyinstallerHooksContrib20214PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinstaller-hooks-contrib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyinstaller-hooks-contrib' in version
+          '2021.4' can have up to 210.16KiB
+        link: https://pypi.org/project/pyinstaller-hooks-contrib/2021.4/#files
+        package_name: pyinstaller-hooks-contrib

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FcmDjango105PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fcm-django
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fcm-django' in version
+          '1.0.5' can have up to 15.98KiB
+        link: https://pypi.org/project/fcm-django/1.0.5/#files
+        package_name: fcm-django

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjDatabaseUrl050PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dj-database-url
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dj-database-url' in version
+          '0.5.0' can have up to 5.37KiB
+        link: https://pypi.org/project/dj-database-url/0.5.0/#files
+        package_name: dj-database-url

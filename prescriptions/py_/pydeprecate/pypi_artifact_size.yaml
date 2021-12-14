@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pydeprecate032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydeprecate
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pydeprecate' in version
+          '0.3.2' can have up to 10.89KiB
+        link: https://pypi.org/project/pydeprecate/0.3.2/#files
+        package_name: pydeprecate

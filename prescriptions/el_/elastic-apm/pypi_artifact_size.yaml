@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ElasticApm672PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elastic-apm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'elastic-apm' in version
+          '6.7.2' can have up to 360.45KiB
+        link: https://pypi.org/project/elastic-apm/6.7.2/#files
+        package_name: elastic-apm

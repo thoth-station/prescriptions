@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ToxMonorepo012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-monorepo
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tox-monorepo' in version
+          '0.1.2' can have up to 3.84KiB
+        link: https://pypi.org/project/tox-monorepo/0.1.2/#files
+        package_name: tox-monorepo

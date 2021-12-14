@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gcsfs202190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcsfs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gcsfs' in version
+          '2021.9.0' can have up to 62.89KiB
+        link: https://pypi.org/project/gcsfs/2021.9.0/#files
+        package_name: gcsfs

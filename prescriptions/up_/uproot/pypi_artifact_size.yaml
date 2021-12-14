@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Uproot419PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uproot
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'uproot' in version
+          '4.1.9' can have up to 318.10KiB
+        link: https://pypi.org/project/uproot/4.1.9/#files
+        package_name: uproot

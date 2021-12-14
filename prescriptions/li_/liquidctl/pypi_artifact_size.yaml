@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Liquidctl172PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: liquidctl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'liquidctl' in version
+          '1.7.2' can have up to 1.97MiB
+        link: https://pypi.org/project/liquidctl/1.7.2/#files
+        package_name: liquidctl

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Xmlrunner177PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xmlrunner
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xmlrunner' in version
+          '1.7.7' can have up to 5.43KiB
+        link: https://pypi.org/project/xmlrunner/1.7.7/#files
+        package_name: xmlrunner

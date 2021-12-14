@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonGraphCore182PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-graph-core
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-graph-core' in version
+          '1.8.2' can have up to 26.77KiB
+        link: https://pypi.org/project/python-graph-core/1.8.2/#files
+        package_name: python-graph-core

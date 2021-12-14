@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Black219b0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: black
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'black' in version
+          '21.9b0' can have up to 547.80KiB
+        link: https://pypi.org/project/black/21.9b0/#files
+        package_name: black

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gerrymander15PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gerrymander
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gerrymander' in version
+          '1.5' can have up to 41.54KiB
+        link: https://pypi.org/project/gerrymander/1.5/#files
+        package_name: gerrymander

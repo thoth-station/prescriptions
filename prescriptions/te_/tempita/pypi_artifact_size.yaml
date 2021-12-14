@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tempita05devPyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tempita
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tempita' in version
+          '0.5dev' can have up to 11.52KiB
+        link: https://pypi.org/project/tempita/0.5dev/#files
+        package_name: tempita

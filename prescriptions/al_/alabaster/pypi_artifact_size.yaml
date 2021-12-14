@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Alabaster079PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alabaster
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'alabaster' in version
+          '0.7.9' can have up to 12.71KiB
+        link: https://pypi.org/project/alabaster/0.7.9/#files
+        package_name: alabaster

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sacred082PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sacred
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sacred' in version
+          '0.8.2' can have up to 103.55KiB
+        link: https://pypi.org/project/sacred/0.8.2/#files
+        package_name: sacred

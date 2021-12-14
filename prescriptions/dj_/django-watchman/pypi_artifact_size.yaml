@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoWatchman120a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-watchman
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-watchman' in version
+          '1.2.0a1' can have up to 38.03KiB
+        link: https://pypi.org/project/django-watchman/1.2.0a1/#files
+        package_name: django-watchman

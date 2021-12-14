@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dnsgen104PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dnsgen
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dnsgen' in version
+          '1.0.4' can have up to 6.78KiB
+        link: https://pypi.org/project/dnsgen/1.0.4/#files
+        package_name: dnsgen

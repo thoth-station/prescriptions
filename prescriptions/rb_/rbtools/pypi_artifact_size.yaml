@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rbtools201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rbtools
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rbtools' in version
+          '2.0.1' can have up to 584.56KiB
+        link: https://pypi.org/project/rbtools/2.0.1/#files
+        package_name: rbtools

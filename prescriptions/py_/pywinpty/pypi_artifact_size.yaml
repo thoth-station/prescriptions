@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pywinpty116PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywinpty
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pywinpty' in version
+          '1.1.6' can have up to 1.29MiB
+        link: https://pypi.org/project/pywinpty/1.1.6/#files
+        package_name: pywinpty

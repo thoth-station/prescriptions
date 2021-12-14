@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Httpie260PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpie
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'httpie' in version
+          '2.6.0' can have up to 208.95KiB
+        link: https://pypi.org/project/httpie/2.6.0/#files
+        package_name: httpie

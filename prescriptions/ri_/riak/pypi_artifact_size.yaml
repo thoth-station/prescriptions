@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Riak270PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riak
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'riak' in version
+          '2.7.0' can have up to 459.29KiB
+        link: https://pypi.org/project/riak/2.7.0/#files
+        package_name: riak

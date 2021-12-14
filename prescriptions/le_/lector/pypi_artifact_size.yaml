@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Lector003a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lector
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lector' in version
+          '0.0.3a1' can have up to 8.19KiB
+        link: https://pypi.org/project/lector/0.0.3a1/#files
+        package_name: lector

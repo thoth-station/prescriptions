@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersSamba301rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-samba
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-samba' in version
+          '3.0.1rc1' can have up to 12.50KiB
+        link: https://pypi.org/project/apache-airflow-providers-samba/3.0.1rc1/#files
+        package_name: apache-airflow-providers-samba

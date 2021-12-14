@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Valid8512PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: valid8
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'valid8' in version
+          '5.1.2' can have up to 860.55KiB
+        link: https://pypi.org/project/valid8/5.1.2/#files
+        package_name: valid8

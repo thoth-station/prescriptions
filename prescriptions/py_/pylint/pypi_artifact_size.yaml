@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pylint300a4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylint' in version
+          '3.0.0a4' can have up to 362.66KiB
+        link: https://pypi.org/project/pylint/3.0.0a4/#files
+        package_name: pylint

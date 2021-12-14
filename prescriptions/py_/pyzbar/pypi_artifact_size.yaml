@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyzbar018PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzbar
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyzbar' in version
+          '0.1.8' can have up to 794.41KiB
+        link: https://pypi.org/project/pyzbar/0.1.8/#files
+        package_name: pyzbar

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GoogleTransNew119PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-trans-new
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-trans-new' in version
+          '1.1.9' can have up to 9.20KiB
+        link: https://pypi.org/project/google-trans-new/1.1.9/#files
+        package_name: google-trans-new

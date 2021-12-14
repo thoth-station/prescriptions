@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Amqplib102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amqplib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'amqplib' in version
+          '1.0.2' can have up to 57.17KiB
+        link: https://pypi.org/project/amqplib/1.0.2/#files
+        package_name: amqplib

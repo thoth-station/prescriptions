@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Aiosmtpd142PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosmtpd
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiosmtpd' in version
+          '1.4.2' can have up to 140.37KiB
+        link: https://pypi.org/project/aiosmtpd/1.4.2/#files
+        package_name: aiosmtpd

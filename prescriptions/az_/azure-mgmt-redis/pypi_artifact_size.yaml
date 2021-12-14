@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtRedis700rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-redis
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-redis' in version
+          '7.0.0rc2' can have up to 48.08KiB
+        link: https://pypi.org/project/azure-mgmt-redis/7.0.0rc2/#files
+        package_name: azure-mgmt-redis

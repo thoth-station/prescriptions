@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyethash0127PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyethash
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyethash' in version
+          '0.1.27' can have up to 37.75KiB
+        link: https://pypi.org/project/pyethash/0.1.27/#files
+        package_name: pyethash

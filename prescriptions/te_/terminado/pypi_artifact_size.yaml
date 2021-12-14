@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Terminado095PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: terminado
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'terminado' in version
+          '0.9.5' can have up to 14.33KiB
+        link: https://pypi.org/project/terminado/0.9.5/#files
+        package_name: terminado

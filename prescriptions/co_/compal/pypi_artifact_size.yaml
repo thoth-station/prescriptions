@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Compal040PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: compal
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'compal' in version
+          '0.4.0' can have up to 26.04KiB
+        link: https://pypi.org/project/compal/0.4.0/#files
+        package_name: compal

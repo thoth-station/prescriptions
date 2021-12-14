@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SanicRouting072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic-routing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sanic-routing' in version
+          '0.7.2' can have up to 22.81KiB
+        link: https://pypi.org/project/sanic-routing/0.7.2/#files
+        package_name: sanic-routing

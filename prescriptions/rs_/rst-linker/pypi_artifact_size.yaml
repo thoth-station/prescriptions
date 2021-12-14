@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: RstLinker220PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rst-linker
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rst-linker' in version
+          '2.2.0' can have up to 14.00KiB
+        link: https://pypi.org/project/rst-linker/2.2.0/#files
+        package_name: rst-linker

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ProcessTests212PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: process-tests
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'process-tests' in version
+          '2.1.2' can have up to 11.28KiB
+        link: https://pypi.org/project/process-tests/2.1.2/#files
+        package_name: process-tests

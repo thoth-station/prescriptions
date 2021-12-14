@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mattermostwrapper22PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mattermostwrapper
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mattermostwrapper' in version
+          '2.2' can have up to 2.40KiB
+        link: https://pypi.org/project/mattermostwrapper/2.2/#files
+        package_name: mattermostwrapper

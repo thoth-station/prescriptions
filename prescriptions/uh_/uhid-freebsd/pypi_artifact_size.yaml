@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: UhidFreebsd122PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uhid-freebsd
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'uhid-freebsd' in version
+          '1.2.2' can have up to 4.42KiB
+        link: https://pypi.org/project/uhid-freebsd/1.2.2/#files
+        package_name: uhid-freebsd

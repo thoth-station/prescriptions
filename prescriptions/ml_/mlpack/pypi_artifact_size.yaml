@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mlpack342PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlpack
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mlpack' in version
+          '3.4.2' can have up to 88.78MiB
+        link: https://pypi.org/project/mlpack/3.4.2/#files
+        package_name: mlpack

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ParseType052PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parse-type
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'parse-type' in version
+          '0.5.2' can have up to 265.71KiB
+        link: https://pypi.org/project/parse-type/0.5.2/#files
+        package_name: parse-type

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Friendlyloris101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: friendlyloris
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'friendlyloris' in version
+          '1.0.1' can have up to 4.96KiB
+        link: https://pypi.org/project/friendlyloris/1.0.1/#files
+        package_name: friendlyloris

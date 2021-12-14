@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: StdlibList080PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlib-list
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stdlib-list' in version
+          '0.8.0' can have up to 80.81KiB
+        link: https://pypi.org/project/stdlib-list/0.8.0/#files
+        package_name: stdlib-list

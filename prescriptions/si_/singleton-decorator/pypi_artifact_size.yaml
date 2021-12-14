@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SingletonDecorator100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: singleton-decorator
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'singleton-decorator' in version
+          '1.0.0' can have up to 2.73KiB
+        link: https://pypi.org/project/singleton-decorator/1.0.0/#files
+        package_name: singleton-decorator

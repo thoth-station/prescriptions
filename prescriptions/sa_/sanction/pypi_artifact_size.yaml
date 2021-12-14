@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sanction041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanction
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sanction' in version
+          '0.4.1' can have up to 6.21KiB
+        link: https://pypi.org/project/sanction/0.4.1/#files
+        package_name: sanction

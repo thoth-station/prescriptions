@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wapiti3308PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wapiti3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wapiti3' in version
+          '3.0.8' can have up to 652.07KiB
+        link: https://pypi.org/project/wapiti3/3.0.8/#files
+        package_name: wapiti3

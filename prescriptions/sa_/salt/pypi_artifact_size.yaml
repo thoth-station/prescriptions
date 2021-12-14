@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Salt3004rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: salt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'salt' in version
+          '3004rc1' can have up to 16.85MiB
+        link: https://pypi.org/project/salt/3004rc1/#files
+        package_name: salt

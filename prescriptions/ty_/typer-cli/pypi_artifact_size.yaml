@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TyperCli009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typer-cli
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'typer-cli' in version
+          '0.0.9' can have up to 10.44KiB
+        link: https://pypi.org/project/typer-cli/0.0.9/#files
+        package_name: typer-cli

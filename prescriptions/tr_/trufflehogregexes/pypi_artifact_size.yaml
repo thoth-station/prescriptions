@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Trufflehogregexes007PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trufflehogregexes
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'trufflehogregexes' in version
+          '0.0.7' can have up to 2.40KiB
+        link: https://pypi.org/project/trufflehogregexes/0.0.7/#files
+        package_name: trufflehogregexes

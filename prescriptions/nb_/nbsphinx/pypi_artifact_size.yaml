@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nbsphinx087PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbsphinx
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nbsphinx' in version
+          '0.8.7' can have up to 142.96KiB
+        link: https://pypi.org/project/nbsphinx/0.8.7/#files
+        package_name: nbsphinx

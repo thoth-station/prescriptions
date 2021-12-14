@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AwsCdkLambdaLayerAwscli1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-lambda-layer-awscli
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-lambda-layer-awscli' in version
+          '1.99.0' can have up to 10.46MiB
+        link: https://pypi.org/project/aws-cdk-lambda-layer-awscli/1.99.0/#files
+        package_name: aws-cdk-lambda-layer-awscli

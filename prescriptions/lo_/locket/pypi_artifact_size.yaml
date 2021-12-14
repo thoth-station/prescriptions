@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Locket021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: locket
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'locket' in version
+          '0.2.1' can have up to 3.99KiB
+        link: https://pypi.org/project/locket/0.2.1/#files
+        package_name: locket

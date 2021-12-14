@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Progress16PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: progress
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'progress' in version
+          '1.6' can have up to 7.66KiB
+        link: https://pypi.org/project/progress/1.6/#files
+        package_name: progress

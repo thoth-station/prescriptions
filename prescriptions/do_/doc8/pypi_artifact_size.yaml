@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Doc8091PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doc8
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'doc8' in version
+          '0.9.1' can have up to 30.39KiB
+        link: https://pypi.org/project/doc8/0.9.1/#files
+        package_name: doc8

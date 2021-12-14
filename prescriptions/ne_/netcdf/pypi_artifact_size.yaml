@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Netcdf021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netcdf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netcdf' in version
+          '0.2.1' can have up to 15.75MiB
+        link: https://pypi.org/project/netcdf/0.2.1/#files
+        package_name: netcdf

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: HassNabucasa09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hass-nabucasa
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hass-nabucasa' in version
+          '0.9' can have up to 30.47KiB
+        link: https://pypi.org/project/hass-nabucasa/0.9/#files
+        package_name: hass-nabucasa

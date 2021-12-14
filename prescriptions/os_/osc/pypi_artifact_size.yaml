@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Osc01672PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: osc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'osc' in version
+          '0.167.2' can have up to 255.85KiB
+        link: https://pypi.org/project/osc/0.167.2/#files
+        package_name: osc

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Vdf34PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vdf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vdf' in version
+          '3.4' can have up to 10.87KiB
+        link: https://pypi.org/project/vdf/3.4/#files
+        package_name: vdf

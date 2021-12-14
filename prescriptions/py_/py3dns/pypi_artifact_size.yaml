@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Py3dns321PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3dns
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py3dns' in version
+          '3.2.1' can have up to 29.97KiB
+        link: https://pypi.org/project/py3dns/3.2.1/#files
+        package_name: py3dns

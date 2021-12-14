@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Webthing092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webthing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'webthing' in version
+          '0.9.2' can have up to 19.46KiB
+        link: https://pypi.org/project/webthing/0.9.2/#files
+        package_name: webthing

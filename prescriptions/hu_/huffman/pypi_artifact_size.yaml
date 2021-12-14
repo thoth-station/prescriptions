@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Huffman012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: huffman
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'huffman' in version
+          '0.1.2' can have up to 4.50KiB
+        link: https://pypi.org/project/huffman/0.1.2/#files
+        package_name: huffman

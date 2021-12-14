@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fabric3114post1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fabric3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fabric3' in version
+          '1.14.post1' can have up to 225.45KiB
+        link: https://pypi.org/project/fabric3/1.14.post1/#files
+        package_name: fabric3

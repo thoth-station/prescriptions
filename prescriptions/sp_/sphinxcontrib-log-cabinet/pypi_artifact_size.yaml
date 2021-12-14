@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SphinxcontribLogCabinet101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-log-cabinet
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinxcontrib-log-cabinet' in version
+          '1.0.1' can have up to 4.77KiB
+        link: https://pypi.org/project/sphinxcontrib-log-cabinet/1.0.1/#files
+        package_name: sphinxcontrib-log-cabinet

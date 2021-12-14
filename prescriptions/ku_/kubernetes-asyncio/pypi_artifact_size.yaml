@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KubernetesAsyncio910PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes-asyncio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kubernetes-asyncio' in version
+          '9.1.0' can have up to 614.38KiB
+        link: https://pypi.org/project/kubernetes-asyncio/9.1.0/#files
+        package_name: kubernetes-asyncio

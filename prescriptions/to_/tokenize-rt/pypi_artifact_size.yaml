@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TokenizeRt421PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tokenize-rt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tokenize-rt' in version
+          '4.2.1' can have up to 5.96KiB
+        link: https://pypi.org/project/tokenize-rt/4.2.1/#files
+        package_name: tokenize-rt

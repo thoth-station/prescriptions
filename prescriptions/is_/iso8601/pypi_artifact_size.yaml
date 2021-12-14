@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Iso8601102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iso8601
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'iso8601' in version
+          '1.0.2' can have up to 12.36KiB
+        link: https://pypi.org/project/iso8601/1.0.2/#files
+        package_name: iso8601

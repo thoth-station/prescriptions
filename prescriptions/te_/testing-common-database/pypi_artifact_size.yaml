@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TestingCommonDatabase203PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testing-common-database
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'testing-common-database' in version
+          '2.0.3' can have up to 11.26KiB
+        link: https://pypi.org/project/testing-common-database/2.0.3/#files
+        package_name: testing-common-database

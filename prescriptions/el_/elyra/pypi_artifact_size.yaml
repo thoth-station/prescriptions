@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Elyra330rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elyra
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'elyra' in version
+          '3.3.0rc2' can have up to 27.37MiB
+        link: https://pypi.org/project/elyra/3.3.0rc2/#files
+        package_name: elyra

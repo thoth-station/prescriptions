@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rpqueue0333PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpqueue
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rpqueue' in version
+          '0.33.3' can have up to 25.84KiB
+        link: https://pypi.org/project/rpqueue/0.33.3/#files
+        package_name: rpqueue

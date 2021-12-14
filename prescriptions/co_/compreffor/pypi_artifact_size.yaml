@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Compreffor051post1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: compreffor
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'compreffor' in version
+          '0.5.1.post1' can have up to 553.82KiB
+        link: https://pypi.org/project/compreffor/0.5.1.post1/#files
+        package_name: compreffor

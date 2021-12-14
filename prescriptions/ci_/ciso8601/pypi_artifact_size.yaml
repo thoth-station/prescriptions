@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ciso8601220PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ciso8601
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ciso8601' in version
+          '2.2.0' can have up to 18.01KiB
+        link: https://pypi.org/project/ciso8601/2.2.0/#files
+        package_name: ciso8601

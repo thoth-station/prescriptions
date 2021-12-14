@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Torchelastic022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchelastic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'torchelastic' in version
+          '0.2.2' can have up to 239.99KiB
+        link: https://pypi.org/project/torchelastic/0.2.2/#files
+        package_name: torchelastic

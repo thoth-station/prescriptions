@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: EdxEnterprise399PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edx-enterprise
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'edx-enterprise' in version
+          '3.9.9' can have up to 363.22KiB
+        link: https://pypi.org/project/edx-enterprise/3.9.9/#files
+        package_name: edx-enterprise

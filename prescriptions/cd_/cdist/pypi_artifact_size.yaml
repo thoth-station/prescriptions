@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cdist698PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cdist
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cdist' in version
+          '6.9.8' can have up to 1.40MiB
+        link: https://pypi.org/project/cdist/6.9.8/#files
+        package_name: cdist

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dotnetcore2219PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotnetcore2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dotnetcore2' in version
+          '2.1.9' can have up to 30.61MiB
+        link: https://pypi.org/project/dotnetcore2/2.1.9/#files
+        package_name: dotnetcore2

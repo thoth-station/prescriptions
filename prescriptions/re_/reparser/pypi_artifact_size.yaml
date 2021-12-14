@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Reparser143PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reparser
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'reparser' in version
+          '1.4.3' can have up to 4.45KiB
+        link: https://pypi.org/project/reparser/1.4.3/#files
+        package_name: reparser

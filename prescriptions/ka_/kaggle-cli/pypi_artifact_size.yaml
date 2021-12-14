@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KaggleCli092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaggle-cli
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kaggle-cli' in version
+          '0.9.2' can have up to 4.68KiB
+        link: https://pypi.org/project/kaggle-cli/0.9.2/#files
+        package_name: kaggle-cli

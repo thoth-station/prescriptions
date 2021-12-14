@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PylintCommon025PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-common
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylint-common' in version
+          '0.2.5' can have up to 8.98KiB
+        link: https://pypi.org/project/pylint-common/0.2.5/#files
+        package_name: pylint-common

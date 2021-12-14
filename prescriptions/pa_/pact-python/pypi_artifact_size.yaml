@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PactPython145PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pact-python
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pact-python' in version
+          '1.4.5' can have up to 27.86MiB
+        link: https://pypi.org/project/pact-python/1.4.5/#files
+        package_name: pact-python

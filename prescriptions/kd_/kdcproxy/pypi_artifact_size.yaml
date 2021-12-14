@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Kdcproxy100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kdcproxy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kdcproxy' in version
+          '1.0.0' can have up to 21.76KiB
+        link: https://pypi.org/project/kdcproxy/1.0.0/#files
+        package_name: kdcproxy

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mapscript760PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapscript
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mapscript' in version
+          '7.6.0' can have up to 415.14KiB
+        link: https://pypi.org/project/mapscript/7.6.0/#files
+        package_name: mapscript

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cpplint155PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cpplint
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cpplint' in version
+          '1.5.5' can have up to 352.88KiB
+        link: https://pypi.org/project/cpplint/1.5.5/#files
+        package_name: cpplint

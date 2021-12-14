@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pytzdata20201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytzdata
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytzdata' in version
+          '2020.1' can have up to 478.47KiB
+        link: https://pypi.org/project/pytzdata/2020.1/#files
+        package_name: pytzdata

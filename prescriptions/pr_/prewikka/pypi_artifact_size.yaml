@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Prewikka500PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prewikka
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'prewikka' in version
+          '5.0.0' can have up to 1.55MiB
+        link: https://pypi.org/project/prewikka/5.0.0/#files
+        package_name: prewikka

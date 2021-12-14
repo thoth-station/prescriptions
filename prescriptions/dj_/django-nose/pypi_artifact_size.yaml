@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoNose147PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-nose
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-nose' in version
+          '1.4.7' can have up to 43.99KiB
+        link: https://pypi.org/project/django-nose/1.4.7/#files
+        package_name: django-nose

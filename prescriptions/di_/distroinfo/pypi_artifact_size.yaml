@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Distroinfo051PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distroinfo
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'distroinfo' in version
+          '0.5.1' can have up to 233.14KiB
+        link: https://pypi.org/project/distroinfo/0.5.1/#files
+        package_name: distroinfo

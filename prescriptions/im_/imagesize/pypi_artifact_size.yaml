@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Imagesize130PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagesize
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'imagesize' in version
+          '1.3.0' can have up to 1.22MiB
+        link: https://pypi.org/project/imagesize/1.3.0/#files
+        package_name: imagesize

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Hypothesis692PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hypothesis' in version
+          '6.9.2' can have up to 354.93KiB
+        link: https://pypi.org/project/hypothesis/6.9.2/#files
+        package_name: hypothesis

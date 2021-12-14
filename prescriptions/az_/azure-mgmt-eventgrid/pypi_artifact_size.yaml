@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtEventgrid900PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-eventgrid
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-eventgrid' in version
+          '9.0.0' can have up to 202.35KiB
+        link: https://pypi.org/project/azure-mgmt-eventgrid/9.0.0/#files
+        package_name: azure-mgmt-eventgrid

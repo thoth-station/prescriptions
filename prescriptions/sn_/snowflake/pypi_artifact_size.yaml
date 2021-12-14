@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Snowflake003PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snowflake
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'snowflake' in version
+          '0.0.3' can have up to 2.04KiB
+        link: https://pypi.org/project/snowflake/0.0.3/#files
+        package_name: snowflake

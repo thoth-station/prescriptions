@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GhpImport202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ghp-import
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ghp-import' in version
+          '2.0.2' can have up to 10.78KiB
+        link: https://pypi.org/project/ghp-import/2.0.2/#files
+        package_name: ghp-import

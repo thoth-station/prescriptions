@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gwebsockets07PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gwebsockets
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gwebsockets' in version
+          '0.7' can have up to 8.69KiB
+        link: https://pypi.org/project/gwebsockets/0.7/#files
+        package_name: gwebsockets

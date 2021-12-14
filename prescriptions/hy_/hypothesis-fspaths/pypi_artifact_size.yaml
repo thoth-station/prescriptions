@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: HypothesisFspaths01PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesis-fspaths
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hypothesis-fspaths' in version
+          '0.1' can have up to 4.08KiB
+        link: https://pypi.org/project/hypothesis-fspaths/0.1/#files
+        package_name: hypothesis-fspaths

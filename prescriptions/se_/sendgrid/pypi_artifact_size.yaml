@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sendgrid692PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sendgrid
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sendgrid' in version
+          '6.9.2' can have up to 75.33KiB
+        link: https://pypi.org/project/sendgrid/6.9.2/#files
+        package_name: sendgrid

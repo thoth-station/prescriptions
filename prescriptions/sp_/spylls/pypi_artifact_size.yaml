@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Spylls016PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spylls
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spylls' in version
+          '0.1.6' can have up to 1.44MiB
+        link: https://pypi.org/project/spylls/0.1.6/#files
+        package_name: spylls

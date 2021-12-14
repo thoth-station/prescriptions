@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoPushNotifications200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-push-notifications
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-push-notifications' in version
+          '2.0.0' can have up to 31.21KiB
+        link: https://pypi.org/project/django-push-notifications/2.0.0/#files
+        package_name: django-push-notifications

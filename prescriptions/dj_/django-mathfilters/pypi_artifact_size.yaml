@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoMathfilters100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-mathfilters
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-mathfilters' in version
+          '1.0.0' can have up to 5.77KiB
+        link: https://pypi.org/project/django-mathfilters/1.0.0/#files
+        package_name: django-mathfilters

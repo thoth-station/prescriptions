@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dockerpty041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dockerpty
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dockerpty' in version
+          '0.4.1' can have up to 13.60KiB
+        link: https://pypi.org/project/dockerpty/0.4.1/#files
+        package_name: dockerpty

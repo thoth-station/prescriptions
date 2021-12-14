@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyopenssl2100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyopenssl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyopenssl' in version
+          '21.0.0' can have up to 171.54KiB
+        link: https://pypi.org/project/pyopenssl/21.0.0/#files
+        package_name: pyopenssl

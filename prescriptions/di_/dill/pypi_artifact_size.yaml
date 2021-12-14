@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dill034PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dill
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dill' in version
+          '0.3.4' can have up to 182.44KiB
+        link: https://pypi.org/project/dill/0.3.4/#files
+        package_name: dill

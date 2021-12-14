@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pycurl7441PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycurl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycurl' in version
+          '7.44.1' can have up to 222.23KiB
+        link: https://pypi.org/project/pycurl/7.44.1/#files
+        package_name: pycurl

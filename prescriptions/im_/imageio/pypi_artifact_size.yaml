@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Imageio290PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imageio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'imageio' in version
+          '2.9.0' can have up to 3.19MiB
+        link: https://pypi.org/project/imageio/2.9.0/#files
+        package_name: imageio

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Langdetect109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: langdetect
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'langdetect' in version
+          '1.0.9' can have up to 969.94KiB
+        link: https://pypi.org/project/langdetect/1.0.9/#files
+        package_name: langdetect

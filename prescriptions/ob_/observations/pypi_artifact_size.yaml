@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Observations014PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: observations
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'observations' in version
+          '0.1.4' can have up to 1.26MiB
+        link: https://pypi.org/project/observations/0.1.4/#files
+        package_name: observations

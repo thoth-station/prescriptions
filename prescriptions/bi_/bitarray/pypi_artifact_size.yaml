@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bitarray234PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitarray
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bitarray' in version
+          '2.3.4' can have up to 86.16KiB
+        link: https://pypi.org/project/bitarray/2.3.4/#files
+        package_name: bitarray

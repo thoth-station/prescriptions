@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Purl16PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: purl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'purl' in version
+          '1.6' can have up to 11.95KiB
+        link: https://pypi.org/project/purl/1.6/#files
+        package_name: purl

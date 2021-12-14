@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pydenticon031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydenticon
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pydenticon' in version
+          '0.3.1' can have up to 25.57KiB
+        link: https://pypi.org/project/pydenticon/0.3.1/#files
+        package_name: pydenticon

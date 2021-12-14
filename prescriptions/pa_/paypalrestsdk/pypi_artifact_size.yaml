@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Paypalrestsdk200rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paypalrestsdk
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'paypalrestsdk' in version
+          '2.0.0rc2' can have up to 332.17KiB
+        link: https://pypi.org/project/paypalrestsdk/2.0.0rc2/#files
+        package_name: paypalrestsdk

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Authheaders093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authheaders
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'authheaders' in version
+          '0.9.3' can have up to 71.62KiB
+        link: https://pypi.org/project/authheaders/0.9.3/#files
+        package_name: authheaders

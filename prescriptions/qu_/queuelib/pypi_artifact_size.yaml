@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Queuelib162PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: queuelib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'queuelib' in version
+          '1.6.2' can have up to 12.97KiB
+        link: https://pypi.org/project/queuelib/1.6.2/#files
+        package_name: queuelib

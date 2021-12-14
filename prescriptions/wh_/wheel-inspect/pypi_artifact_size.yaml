@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: WheelInspect170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wheel-inspect
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wheel-inspect' in version
+          '1.7.0' can have up to 1.22MiB
+        link: https://pypi.org/project/wheel-inspect/1.7.0/#files
+        package_name: wheel-inspect

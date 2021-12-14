@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Shyaml062PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shyaml
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'shyaml' in version
+          '0.6.2' can have up to 37.20KiB
+        link: https://pypi.org/project/shyaml/0.6.2/#files
+        package_name: shyaml

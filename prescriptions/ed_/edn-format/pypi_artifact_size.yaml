@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: EdnFormat075PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edn-format
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'edn-format' in version
+          '0.7.5' can have up to 18.04KiB
+        link: https://pypi.org/project/edn-format/0.7.5/#files
+        package_name: edn-format

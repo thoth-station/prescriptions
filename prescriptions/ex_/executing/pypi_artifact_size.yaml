@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Executing082PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: executing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'executing' in version
+          '0.8.2' can have up to 470.38KiB
+        link: https://pypi.org/project/executing/0.8.2/#files
+        package_name: executing

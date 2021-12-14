@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Udatetime009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: udatetime
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'udatetime' in version
+          '0.0.9' can have up to 32.45KiB
+        link: https://pypi.org/project/udatetime/0.0.9/#files
+        package_name: udatetime

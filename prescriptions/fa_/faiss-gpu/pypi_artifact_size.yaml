@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FaissGpu171post3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: faiss-gpu
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'faiss-gpu' in version
+          '1.7.1.post3' can have up to 85.97MiB
+        link: https://pypi.org/project/faiss-gpu/1.7.1.post3/#files
+        package_name: faiss-gpu

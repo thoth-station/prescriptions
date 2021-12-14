@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cooldict104PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cooldict
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cooldict' in version
+          '1.04' can have up to 5.49KiB
+        link: https://pypi.org/project/cooldict/1.04/#files
+        package_name: cooldict

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Asyncpg090dev1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncpg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'asyncpg' in version
+          '0.9.0.dev1' can have up to 1.44MiB
+        link: https://pypi.org/project/asyncpg/0.9.0.dev1/#files
+        package_name: asyncpg

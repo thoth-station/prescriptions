@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Etcd3gw100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: etcd3gw
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'etcd3gw' in version
+          '1.0.0' can have up to 26.40KiB
+        link: https://pypi.org/project/etcd3gw/1.0.0/#files
+        package_name: etcd3gw

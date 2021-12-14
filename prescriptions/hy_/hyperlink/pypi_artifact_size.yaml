@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Hyperlink2100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hyperlink
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hyperlink' in version
+          '21.0.0' can have up to 137.44KiB
+        link: https://pypi.org/project/hyperlink/21.0.0/#files
+        package_name: hyperlink

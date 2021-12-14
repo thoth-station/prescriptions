@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pacpy1031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pacpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pacpy' in version
+          '1.0.3.1' can have up to 678.22KiB
+        link: https://pypi.org/project/pacpy/1.0.3.1/#files
+        package_name: pacpy

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Jinxed110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinxed
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jinxed' in version
+          '1.1.0' can have up to 56.42KiB
+        link: https://pypi.org/project/jinxed/1.1.0/#files
+        package_name: jinxed

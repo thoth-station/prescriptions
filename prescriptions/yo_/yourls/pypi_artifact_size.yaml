@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Yourls123PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yourls
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'yourls' in version
+          '1.2.3' can have up to 20.73KiB
+        link: https://pypi.org/project/yourls/1.2.3/#files
+        package_name: yourls

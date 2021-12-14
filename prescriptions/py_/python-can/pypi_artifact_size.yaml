@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonCan400dev2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-can
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-can' in version
+          '4.0.0.dev2' can have up to 428.99KiB
+        link: https://pypi.org/project/python-can/4.0.0.dev2/#files
+        package_name: python-can

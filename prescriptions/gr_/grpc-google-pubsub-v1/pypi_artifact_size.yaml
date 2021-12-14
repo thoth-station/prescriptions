@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GrpcGooglePubsubV1093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-pubsub-v1
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grpc-google-pubsub-v1' in version
+          '0.9.3' can have up to 13.30KiB
+        link: https://pypi.org/project/grpc-google-pubsub-v1/0.9.3/#files
+        package_name: grpc-google-pubsub-v1

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: BackportsShutilWhich352PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-shutil-which
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backports-shutil-which' in version
+          '3.5.2' can have up to 3.12KiB
+        link: https://pypi.org/project/backports-shutil-which/3.5.2/#files
+        package_name: backports-shutil-which

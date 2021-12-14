@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Slack002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slack
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'slack' in version
+          '0.0.2' can have up to 2.40KiB
+        link: https://pypi.org/project/slack/0.0.2/#files
+        package_name: slack

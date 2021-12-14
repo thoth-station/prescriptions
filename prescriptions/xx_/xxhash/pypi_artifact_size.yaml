@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Xxhash202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xxhash
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xxhash' in version
+          '2.0.2' can have up to 238.25KiB
+        link: https://pypi.org/project/xxhash/2.0.2/#files
+        package_name: xxhash

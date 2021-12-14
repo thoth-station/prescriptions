@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Productivity060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: productivity
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'productivity' in version
+          '0.6.0' can have up to 17.87KiB
+        link: https://pypi.org/project/productivity/0.6.0/#files
+        package_name: productivity

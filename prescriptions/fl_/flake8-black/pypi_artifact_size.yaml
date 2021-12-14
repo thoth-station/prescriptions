@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8Black023PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-black
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-black' in version
+          '0.2.3' can have up to 13.30KiB
+        link: https://pypi.org/project/flake8-black/0.2.3/#files
+        package_name: flake8-black

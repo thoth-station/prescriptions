@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Myhdl090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: myhdl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'myhdl' in version
+          '0.9.0' can have up to 663.56KiB
+        link: https://pypi.org/project/myhdl/0.9.0/#files
+        package_name: myhdl

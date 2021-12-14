@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SsmCache29PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssm-cache
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ssm-cache' in version
+          '2.9' can have up to 20.97KiB
+        link: https://pypi.org/project/ssm-cache/2.9/#files
+        package_name: ssm-cache

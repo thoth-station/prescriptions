@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8Annotations270PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-annotations
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-annotations' in version
+          '2.7.0' can have up to 21.20KiB
+        link: https://pypi.org/project/flake8-annotations/2.7.0/#files
+        package_name: flake8-annotations

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SpotifyTensorflow077PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spotify-tensorflow
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spotify-tensorflow' in version
+          '0.7.7' can have up to 319.35KiB
+        link: https://pypi.org/project/spotify-tensorflow/0.7.7/#files
+        package_name: spotify-tensorflow

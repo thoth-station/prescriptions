@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Whisper118PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: whisper
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'whisper' in version
+          '1.1.8' can have up to 37.27KiB
+        link: https://pypi.org/project/whisper/1.1.8/#files
+        package_name: whisper

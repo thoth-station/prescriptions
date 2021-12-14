@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Chiabip15810PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chiabip158
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'chiabip158' in version
+          '1.0' can have up to 2.22MiB
+        link: https://pypi.org/project/chiabip158/1.0/#files
+        package_name: chiabip158

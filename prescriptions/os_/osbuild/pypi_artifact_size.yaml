@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Osbuild09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: osbuild
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'osbuild' in version
+          '0.9' can have up to 13.15KiB
+        link: https://pypi.org/project/osbuild/0.9/#files
+        package_name: osbuild

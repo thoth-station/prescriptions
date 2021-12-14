@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Andriller361PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: andriller
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'andriller' in version
+          '3.6.1' can have up to 1.25MiB
+        link: https://pypi.org/project/andriller/3.6.1/#files
+        package_name: andriller

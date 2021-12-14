@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PyEvm050a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-evm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-evm' in version
+          '0.5.0a1' can have up to 267.26KiB
+        link: https://pypi.org/project/py-evm/0.5.0a1/#files
+        package_name: py-evm

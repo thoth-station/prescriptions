@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Blessed195PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blessed
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'blessed' in version
+          '1.9.5' can have up to 80.98KiB
+        link: https://pypi.org/project/blessed/1.9.5/#files
+        package_name: blessed

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pproxy278PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pproxy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pproxy' in version
+          '2.7.8' can have up to 56.90KiB
+        link: https://pypi.org/project/pproxy/2.7.8/#files
+        package_name: pproxy

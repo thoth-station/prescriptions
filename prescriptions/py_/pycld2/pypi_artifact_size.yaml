@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pycld2041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycld2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycld2' in version
+          '0.41' can have up to 39.49MiB
+        link: https://pypi.org/project/pycld2/0.41/#files
+        package_name: pycld2

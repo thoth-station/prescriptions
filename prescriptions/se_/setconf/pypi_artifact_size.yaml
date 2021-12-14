@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Setconf077PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setconf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'setconf' in version
+          '0.7.7' can have up to 17.48KiB
+        link: https://pypi.org/project/setconf/0.7.7/#files
+        package_name: setconf

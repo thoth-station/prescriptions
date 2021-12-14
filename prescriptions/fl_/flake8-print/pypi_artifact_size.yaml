@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8Print400PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-print
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-print' in version
+          '4.0.0' can have up to 4.77KiB
+        link: https://pypi.org/project/flake8-print/4.0.0/#files
+        package_name: flake8-print

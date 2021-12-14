@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Vtk910rc4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vtk
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vtk' in version
+          '9.1.0rc4' can have up to 84.25MiB
+        link: https://pypi.org/project/vtk/9.1.0rc4/#files
+        package_name: vtk

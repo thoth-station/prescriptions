@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Multivolumefile023PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multivolumefile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'multivolumefile' in version
+          '0.2.3' can have up to 76.16KiB
+        link: https://pypi.org/project/multivolumefile/0.2.3/#files
+        package_name: multivolumefile

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GoogleCloudOsLogin251PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-os-login
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-cloud-os-login' in version
+          '2.5.1' can have up to 41.15KiB
+        link: https://pypi.org/project/google-cloud-os-login/2.5.1/#files
+        package_name: google-cloud-os-login

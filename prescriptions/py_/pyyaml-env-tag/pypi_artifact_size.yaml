@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PyyamlEnvTag01PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml-env-tag
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyyaml-env-tag' in version
+          '0.1' can have up to 5.50KiB
+        link: https://pypi.org/project/pyyaml-env-tag/0.1/#files
+        package_name: pyyaml-env-tag

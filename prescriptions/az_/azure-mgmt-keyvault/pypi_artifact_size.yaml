@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtKeyvault930PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-keyvault
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-keyvault' in version
+          '9.3.0' can have up to 486.84KiB
+        link: https://pypi.org/project/azure-mgmt-keyvault/9.3.0/#files
+        package_name: azure-mgmt-keyvault

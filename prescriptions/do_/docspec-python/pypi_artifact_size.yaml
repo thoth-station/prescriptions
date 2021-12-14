@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DocspecPython120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docspec-python
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docspec-python' in version
+          '1.2.0' can have up to 14.09KiB
+        link: https://pypi.org/project/docspec-python/1.2.0/#files
+        package_name: docspec-python

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Owslib092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: owslib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'owslib' in version
+          '0.9.2' can have up to 104.39KiB
+        link: https://pypi.org/project/owslib/0.9.2/#files
+        package_name: owslib

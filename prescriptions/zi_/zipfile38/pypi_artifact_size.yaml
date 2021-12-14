@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Zipfile38003PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipfile38
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zipfile38' in version
+          '0.0.3' can have up to 21.53KiB
+        link: https://pypi.org/project/zipfile38/0.0.3/#files
+        package_name: zipfile38

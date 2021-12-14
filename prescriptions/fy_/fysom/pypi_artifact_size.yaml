@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fysom216PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fysom
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fysom' in version
+          '2.1.6' can have up to 19.25KiB
+        link: https://pypi.org/project/fysom/2.1.6/#files
+        package_name: fysom

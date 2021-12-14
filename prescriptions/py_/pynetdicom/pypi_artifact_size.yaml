@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pynetdicom157PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynetdicom
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pynetdicom' in version
+          '1.5.7' can have up to 1.51MiB
+        link: https://pypi.org/project/pynetdicom/1.5.7/#files
+        package_name: pynetdicom

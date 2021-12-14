@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pplpy087PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pplpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pplpy' in version
+          '0.8.7' can have up to 64.13KiB
+        link: https://pypi.org/project/pplpy/0.8.7/#files
+        package_name: pplpy

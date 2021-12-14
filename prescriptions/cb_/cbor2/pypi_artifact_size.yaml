@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cbor2542PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cbor2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cbor2' in version
+          '5.4.2' can have up to 230.83KiB
+        link: https://pypi.org/project/cbor2/5.4.2/#files
+        package_name: cbor2

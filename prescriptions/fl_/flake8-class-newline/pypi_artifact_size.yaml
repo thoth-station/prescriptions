@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8ClassNewline160PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-class-newline
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-class-newline' in version
+          '1.6.0' can have up to 5.12KiB
+        link: https://pypi.org/project/flake8-class-newline/1.6.0/#files
+        package_name: flake8-class-newline

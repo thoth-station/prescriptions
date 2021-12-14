@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: MatrixClient040PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matrix-client
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'matrix-client' in version
+          '0.4.0' can have up to 47.83KiB
+        link: https://pypi.org/project/matrix-client/0.4.0/#files
+        package_name: matrix-client

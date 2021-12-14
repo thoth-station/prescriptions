@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Schema075PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: schema
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'schema' in version
+          '0.7.5' can have up to 47.04KiB
+        link: https://pypi.org/project/schema/0.7.5/#files
+        package_name: schema

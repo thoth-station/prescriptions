@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Globre015PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: globre
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'globre' in version
+          '0.1.5' can have up to 19.91KiB
+        link: https://pypi.org/project/globre/0.1.5/#files
+        package_name: globre

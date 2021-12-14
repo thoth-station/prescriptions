@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyvmomi703PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvmomi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyvmomi' in version
+          '7.0.3' can have up to 578.39KiB
+        link: https://pypi.org/project/pyvmomi/7.0.3/#files
+        package_name: pyvmomi

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Adal127PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adal
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'adal' in version
+          '1.2.7' can have up to 54.24KiB
+        link: https://pypi.org/project/adal/1.2.7/#files
+        package_name: adal

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Persistence31PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: persistence
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'persistence' in version
+          '3.1' can have up to 30.14KiB
+        link: https://pypi.org/project/persistence/3.1/#files
+        package_name: persistence

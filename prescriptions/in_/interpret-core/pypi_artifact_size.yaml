@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: InterpretCore027PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interpret-core
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'interpret-core' in version
+          '0.2.7' can have up to 6.32MiB
+        link: https://pypi.org/project/interpret-core/0.2.7/#files
+        package_name: interpret-core

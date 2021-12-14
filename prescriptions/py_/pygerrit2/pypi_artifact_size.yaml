@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pygerrit2209PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygerrit2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pygerrit2' in version
+          '2.0.9' can have up to 23.03KiB
+        link: https://pypi.org/project/pygerrit2/2.0.9/#files
+        package_name: pygerrit2

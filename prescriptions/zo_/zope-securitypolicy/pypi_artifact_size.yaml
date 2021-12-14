@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeSecuritypolicy432PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-securitypolicy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-securitypolicy' in version
+          '4.3.2' can have up to 54.56KiB
+        link: https://pypi.org/project/zope-securitypolicy/4.3.2/#files
+        package_name: zope-securitypolicy

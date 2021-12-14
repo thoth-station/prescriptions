@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Paramz095PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paramz
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'paramz' in version
+          '0.9.5' can have up to 69.62KiB
+        link: https://pypi.org/project/paramz/0.9.5/#files
+        package_name: paramz

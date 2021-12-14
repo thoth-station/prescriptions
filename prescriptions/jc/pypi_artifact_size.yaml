@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Jc193PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jc' in version
+          '1.9.3' can have up to 1.83MiB
+        link: https://pypi.org/project/jc/1.9.3/#files
+        package_name: jc

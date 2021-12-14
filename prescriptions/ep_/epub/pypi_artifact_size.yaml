@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Epub052PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epub
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'epub' in version
+          '0.5.2' can have up to 43.50KiB
+        link: https://pypi.org/project/epub/0.5.2/#files
+        package_name: epub

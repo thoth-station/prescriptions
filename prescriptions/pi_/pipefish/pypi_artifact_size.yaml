@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pipefish042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipefish
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pipefish' in version
+          '0.4.2' can have up to 16.81KiB
+        link: https://pypi.org/project/pipefish/0.4.2/#files
+        package_name: pipefish

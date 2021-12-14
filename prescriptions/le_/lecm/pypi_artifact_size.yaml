@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Lecm009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lecm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lecm' in version
+          '0.0.9' can have up to 17.91KiB
+        link: https://pypi.org/project/lecm/0.0.9/#files
+        package_name: lecm

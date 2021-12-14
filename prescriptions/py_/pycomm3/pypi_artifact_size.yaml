@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pycomm3126PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycomm3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycomm3' in version
+          '1.2.6' can have up to 92.77KiB
+        link: https://pypi.org/project/pycomm3/1.2.6/#files
+        package_name: pycomm3

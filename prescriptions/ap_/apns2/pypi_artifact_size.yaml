@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Apns2072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apns2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apns2' in version
+          '0.7.2' can have up to 12.35KiB
+        link: https://pypi.org/project/apns2/0.7.2/#files
+        package_name: apns2

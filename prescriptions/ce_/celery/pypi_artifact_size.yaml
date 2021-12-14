@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Celery521PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: celery
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'celery' in version
+          '5.2.1' can have up to 1.40MiB
+        link: https://pypi.org/project/celery/5.2.1/#files
+        package_name: celery

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: H5py360PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h5py
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'h5py' in version
+          '3.6.0' can have up to 8.10MiB
+        link: https://pypi.org/project/h5py/3.6.0/#files
+        package_name: h5py

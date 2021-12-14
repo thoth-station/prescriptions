@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: RequestsNtlm110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-ntlm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'requests-ntlm' in version
+          '1.1.0' can have up to 5.58KiB
+        link: https://pypi.org/project/requests-ntlm/1.1.0/#files
+        package_name: requests-ntlm

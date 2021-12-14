@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Injecta093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: injecta
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'injecta' in version
+          '0.9.3' can have up to 57.15KiB
+        link: https://pypi.org/project/injecta/0.9.3/#files
+        package_name: injecta

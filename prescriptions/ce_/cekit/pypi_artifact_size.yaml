@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cekit39PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cekit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cekit' in version
+          '3.9' can have up to 48.50KiB
+        link: https://pypi.org/project/cekit/3.9/#files
+        package_name: cekit

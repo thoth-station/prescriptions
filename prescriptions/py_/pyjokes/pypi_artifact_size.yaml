@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyjokes060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyjokes
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyjokes' in version
+          '0.6.0' can have up to 25.98KiB
+        link: https://pypi.org/project/pyjokes/0.6.0/#files
+        package_name: pyjokes

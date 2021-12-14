@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyside25152PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyside2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyside2' in version
+          '5.15.2' can have up to 156.69MiB
+        link: https://pypi.org/project/pyside2/5.15.2/#files
+        package_name: pyside2

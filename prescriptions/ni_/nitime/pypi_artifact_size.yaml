@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nitime09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitime
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nitime' in version
+          '0.9' can have up to 5.93MiB
+        link: https://pypi.org/project/nitime/0.9/#files
+        package_name: nitime

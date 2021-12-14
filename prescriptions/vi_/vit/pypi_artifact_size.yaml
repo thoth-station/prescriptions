@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Vit220b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vit' in version
+          '2.2.0b1' can have up to 93.18KiB
+        link: https://pypi.org/project/vit/2.2.0b1/#files
+        package_name: vit

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cupy960PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cupy' in version
+          '9.6.0' can have up to 1.55MiB
+        link: https://pypi.org/project/cupy/9.6.0/#files
+        package_name: cupy

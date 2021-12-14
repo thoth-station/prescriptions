@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bokeh300dev2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bokeh
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bokeh' in version
+          '3.0.0.dev2' can have up to 15.21MiB
+        link: https://pypi.org/project/bokeh/3.0.0.dev2/#files
+        package_name: bokeh

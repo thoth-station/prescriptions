@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PipShims060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-shims
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pip-shims' in version
+          '0.6.0' can have up to 45.53KiB
+        link: https://pypi.org/project/pip-shims/0.6.0/#files
+        package_name: pip-shims

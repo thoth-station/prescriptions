@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Strictyaml161PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: strictyaml
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'strictyaml' in version
+          '1.6.1' can have up to 134.48KiB
+        link: https://pypi.org/project/strictyaml/1.6.1/#files
+        package_name: strictyaml

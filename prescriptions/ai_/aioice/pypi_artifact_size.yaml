@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Aioice075PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioice
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aioice' in version
+          '0.7.5' can have up to 36.99KiB
+        link: https://pypi.org/project/aioice/0.7.5/#files
+        package_name: aioice

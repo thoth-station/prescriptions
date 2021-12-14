@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Podman321PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: podman
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'podman' in version
+          '3.2.1' can have up to 87.44KiB
+        link: https://pypi.org/project/podman/3.2.1/#files
+        package_name: podman

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Lomond033a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lomond
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lomond' in version
+          '0.3.3a1' can have up to 34.71KiB
+        link: https://pypi.org/project/lomond/0.3.3a1/#files
+        package_name: lomond

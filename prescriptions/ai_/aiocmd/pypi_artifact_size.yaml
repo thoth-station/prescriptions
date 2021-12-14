@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Aiocmd015PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocmd
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiocmd' in version
+          '0.1.5' can have up to 5.65KiB
+        link: https://pypi.org/project/aiocmd/0.1.5/#files
+        package_name: aiocmd

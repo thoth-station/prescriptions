@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Netifaces08PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netifaces
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netifaces' in version
+          '0.8' can have up to 15.12KiB
+        link: https://pypi.org/project/netifaces/0.8/#files
+        package_name: netifaces

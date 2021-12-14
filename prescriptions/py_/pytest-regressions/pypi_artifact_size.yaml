@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestRegressions220PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-regressions
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-regressions' in version
+          '2.2.0' can have up to 95.86KiB
+        link: https://pypi.org/project/pytest-regressions/2.2.0/#files
+        package_name: pytest-regressions

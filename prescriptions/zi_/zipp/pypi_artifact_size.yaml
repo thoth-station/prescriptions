@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Zipp360PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zipp' in version
+          '3.6.0' can have up to 12.74KiB
+        link: https://pypi.org/project/zipp/3.6.0/#files
+        package_name: zipp

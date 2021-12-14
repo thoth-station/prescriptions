@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AlchemyCatalyst203PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alchemy-catalyst
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'alchemy-catalyst' in version
+          '20.3' can have up to 8.70KiB
+        link: https://pypi.org/project/alchemy-catalyst/20.3/#files
+        package_name: alchemy-catalyst

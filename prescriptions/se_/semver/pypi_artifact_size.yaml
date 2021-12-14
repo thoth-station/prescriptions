@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Semver300dev2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: semver
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'semver' in version
+          '3.0.0.dev2' can have up to 55.24KiB
+        link: https://pypi.org/project/semver/3.0.0.dev2/#files
+        package_name: semver

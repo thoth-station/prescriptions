@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: OpentelemetryExporterJaeger171PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentelemetry-exporter-jaeger
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'opentelemetry-exporter-jaeger' in version
+          '1.7.1' can have up to 7.55KiB
+        link: https://pypi.org/project/opentelemetry-exporter-jaeger/1.7.1/#files
+        package_name: opentelemetry-exporter-jaeger

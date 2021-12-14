@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ipy101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ipy' in version
+          '1.01' can have up to 32.85KiB
+        link: https://pypi.org/project/ipy/1.01/#files
+        package_name: ipy

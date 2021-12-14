@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Earthpy094PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: earthpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'earthpy' in version
+          '0.9.4' can have up to 1.30MiB
+        link: https://pypi.org/project/earthpy/0.9.4/#files
+        package_name: earthpy

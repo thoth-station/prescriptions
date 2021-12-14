@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Kombu522PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kombu
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kombu' in version
+          '5.2.2' can have up to 410.54KiB
+        link: https://pypi.org/project/kombu/5.2.2/#files
+        package_name: kombu

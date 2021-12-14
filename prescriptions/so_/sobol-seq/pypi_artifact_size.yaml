@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SobolSeq020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sobol-seq
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sobol-seq' in version
+          '0.2.0' can have up to 16.22KiB
+        link: https://pypi.org/project/sobol-seq/0.2.0/#files
+        package_name: sobol-seq

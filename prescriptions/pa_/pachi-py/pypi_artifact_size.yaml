@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PachiPy009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pachi-py
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pachi-py' in version
+          '0.0.9' can have up to 1.01MiB
+        link: https://pypi.org/project/pachi-py/0.0.9/#files
+        package_name: pachi-py

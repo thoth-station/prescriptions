@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Timestamp001PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: timestamp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'timestamp' in version
+          '0.0.1' can have up to 637.00B
+        link: https://pypi.org/project/timestamp/0.0.1/#files
+        package_name: timestamp

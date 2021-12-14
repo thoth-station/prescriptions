@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sudachipy062PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sudachipy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sudachipy' in version
+          '0.6.2' can have up to 2.07MiB
+        link: https://pypi.org/project/sudachipy/0.6.2/#files
+        package_name: sudachipy

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fn043PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fn
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fn' in version
+          '0.4.3' can have up to 37.73KiB
+        link: https://pypi.org/project/fn/0.4.3/#files
+        package_name: fn

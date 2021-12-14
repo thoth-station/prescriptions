@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeAppSecurity510PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-security
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-app-security' in version
+          '5.1.0' can have up to 44.25KiB
+        link: https://pypi.org/project/zope-app-security/5.1.0/#files
+        package_name: zope-app-security

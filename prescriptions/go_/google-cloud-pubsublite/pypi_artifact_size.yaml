@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GoogleCloudPubsublite120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-pubsublite
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-cloud-pubsublite' in version
+          '1.2.0' can have up to 246.66KiB
+        link: https://pypi.org/project/google-cloud-pubsublite/1.2.0/#files
+        package_name: google-cloud-pubsublite

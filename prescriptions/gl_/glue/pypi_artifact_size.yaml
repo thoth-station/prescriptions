@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Glue094PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glue
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'glue' in version
+          '0.9.4' can have up to 286.55KiB
+        link: https://pypi.org/project/glue/0.9.4/#files
+        package_name: glue

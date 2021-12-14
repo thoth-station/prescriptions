@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Xrootd540PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xrootd
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xrootd' in version
+          '5.4.0' can have up to 2.94MiB
+        link: https://pypi.org/project/xrootd/5.4.0/#files
+        package_name: xrootd

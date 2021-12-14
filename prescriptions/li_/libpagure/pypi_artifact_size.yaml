@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Libpagure09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libpagure
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'libpagure' in version
+          '0.9' can have up to 4.58KiB
+        link: https://pypi.org/project/libpagure/0.9/#files
+        package_name: libpagure

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ConcurrentLogHandler099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: concurrent-log-handler
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'concurrent-log-handler' in version
+          '0.9.9' can have up to 40.74KiB
+        link: https://pypi.org/project/concurrent-log-handler/0.9.9/#files
+        package_name: concurrent-log-handler

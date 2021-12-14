@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: IntuitOauth124PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intuit-oauth
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'intuit-oauth' in version
+          '1.2.4' can have up to 15.58KiB
+        link: https://pypi.org/project/intuit-oauth/1.2.4/#files
+        package_name: intuit-oauth

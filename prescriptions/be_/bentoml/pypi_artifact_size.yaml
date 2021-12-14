@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bentoml100a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bentoml
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bentoml' in version
+          '1.0.0a1' can have up to 548.59KiB
+        link: https://pypi.org/project/bentoml/1.0.0a1/#files
+        package_name: bentoml

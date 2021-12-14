@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Parameterized081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parameterized
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'parameterized' in version
+          '0.8.1' can have up to 25.74KiB
+        link: https://pypi.org/project/parameterized/0.8.1/#files
+        package_name: parameterized

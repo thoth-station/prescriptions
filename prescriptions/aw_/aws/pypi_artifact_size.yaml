@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Aws025PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws' in version
+          '0.2.5' can have up to 5.51KiB
+        link: https://pypi.org/project/aws/0.2.5/#files
+        package_name: aws

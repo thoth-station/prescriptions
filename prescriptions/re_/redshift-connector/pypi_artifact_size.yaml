@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: RedshiftConnector20901PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: redshift-connector
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'redshift-connector' in version
+          '2.0.901' can have up to 92.64KiB
+        link: https://pypi.org/project/redshift-connector/2.0.901/#files
+        package_name: redshift-connector

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wsproto100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsproto
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wsproto' in version
+          '1.0.0' can have up to 52.17KiB
+        link: https://pypi.org/project/wsproto/1.0.0/#files
+        package_name: wsproto

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Niaclass012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: niaclass
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'niaclass' in version
+          '0.1.2' can have up to 16.33KiB
+        link: https://pypi.org/project/niaclass/0.1.2/#files
+        package_name: niaclass

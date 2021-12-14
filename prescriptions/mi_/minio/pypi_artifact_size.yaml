@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Minio712PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'minio' in version
+          '7.1.2' can have up to 112.00KiB
+        link: https://pypi.org/project/minio/7.1.2/#files
+        package_name: minio

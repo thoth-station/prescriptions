@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Netron544PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netron
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netron' in version
+          '5.4.4' can have up to 1.28MiB
+        link: https://pypi.org/project/netron/5.4.4/#files
+        package_name: netron

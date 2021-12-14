@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersMysql211rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-mysql
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-mysql' in version
+          '2.1.1rc1' can have up to 25.74KiB
+        link: https://pypi.org/project/apache-airflow-providers-mysql/2.1.1rc1/#files
+        package_name: apache-airflow-providers-mysql

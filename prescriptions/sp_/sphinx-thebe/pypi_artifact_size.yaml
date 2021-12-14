@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SphinxThebe009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-thebe
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinx-thebe' in version
+          '0.0.9' can have up to 7.23KiB
+        link: https://pypi.org/project/sphinx-thebe/0.0.9/#files
+        package_name: sphinx-thebe

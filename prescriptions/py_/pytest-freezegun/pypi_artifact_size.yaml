@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestFreezegun042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-freezegun
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-freezegun' in version
+          '0.4.2' can have up to 8.85KiB
+        link: https://pypi.org/project/pytest-freezegun/0.4.2/#files
+        package_name: pytest-freezegun

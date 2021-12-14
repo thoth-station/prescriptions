@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Monotonic16PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: monotonic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'monotonic' in version
+          '1.6' can have up to 7.96KiB
+        link: https://pypi.org/project/monotonic/1.6/#files
+        package_name: monotonic

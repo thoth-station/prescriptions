@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersSlack410rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-slack
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-slack' in version
+          '4.1.0rc1' can have up to 21.74KiB
+        link: https://pypi.org/project/apache-airflow-providers-slack/4.1.0rc1/#files
+        package_name: apache-airflow-providers-slack

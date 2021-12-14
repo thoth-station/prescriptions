@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Hmsclient011PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hmsclient
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hmsclient' in version
+          '0.1.1' can have up to 88.32KiB
+        link: https://pypi.org/project/hmsclient/0.1.1/#files
+        package_name: hmsclient

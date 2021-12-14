@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoPglocks104PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pglocks
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-pglocks' in version
+          '1.0.4' can have up to 3.99KiB
+        link: https://pypi.org/project/django-pglocks/1.0.4/#files
+        package_name: django-pglocks

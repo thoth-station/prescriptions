@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: WinInetPton110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: win-inet-pton
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'win-inet-pton' in version
+          '1.1.0' can have up to 4.73KiB
+        link: https://pypi.org/project/win-inet-pton/1.1.0/#files
+        package_name: win-inet-pton

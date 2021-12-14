@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestBenchmark341PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-benchmark
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-benchmark' in version
+          '3.4.1' can have up to 332.37KiB
+        link: https://pypi.org/project/pytest-benchmark/3.4.1/#files
+        package_name: pytest-benchmark

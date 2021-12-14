@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gearbox021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gearbox
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gearbox' in version
+          '0.2.1' can have up to 26.32KiB
+        link: https://pypi.org/project/gearbox/0.2.1/#files
+        package_name: gearbox

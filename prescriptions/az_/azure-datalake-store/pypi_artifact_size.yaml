@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureDatalakeStore009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-datalake-store
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-datalake-store' in version
+          '0.0.9' can have up to 46.49KiB
+        link: https://pypi.org/project/azure-datalake-store/0.0.9/#files
+        package_name: azure-datalake-store

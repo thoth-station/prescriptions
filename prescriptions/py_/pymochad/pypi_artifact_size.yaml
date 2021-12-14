@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pymochad020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymochad
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymochad' in version
+          '0.2.0' can have up to 19.95KiB
+        link: https://pypi.org/project/pymochad/0.2.0/#files
+        package_name: pymochad

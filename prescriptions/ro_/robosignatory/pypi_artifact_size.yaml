@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Robosignatory067PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robosignatory
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'robosignatory' in version
+          '0.6.7' can have up to 26.56KiB
+        link: https://pypi.org/project/robosignatory/0.6.7/#files
+        package_name: robosignatory

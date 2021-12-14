@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SalesforceBulk220PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: salesforce-bulk
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'salesforce-bulk' in version
+          '2.2.0' can have up to 12.02KiB
+        link: https://pypi.org/project/salesforce-bulk/2.2.0/#files
+        package_name: salesforce-bulk

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Regex2021930PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: regex
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'regex' in version
+          '2021.9.30' can have up to 745.22KiB
+        link: https://pypi.org/project/regex/2021.9.30/#files
+        package_name: regex

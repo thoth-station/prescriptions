@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Thoonk1010PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoonk
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'thoonk' in version
+          '1.0.1.0' can have up to 11.36KiB
+        link: https://pypi.org/project/thoonk/1.0.1.0/#files
+        package_name: thoonk

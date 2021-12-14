@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CxFreeze69PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cx-freeze
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cx-freeze' in version
+          '6.9' can have up to 203.77KiB
+        link: https://pypi.org/project/cx-freeze/6.9/#files
+        package_name: cx-freeze

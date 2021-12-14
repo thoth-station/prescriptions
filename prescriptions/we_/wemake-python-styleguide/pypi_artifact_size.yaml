@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: WemakePythonStyleguide091PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wemake-python-styleguide
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wemake-python-styleguide' in version
+          '0.9.1' can have up to 301.80KiB
+        link: https://pypi.org/project/wemake-python-styleguide/0.9.1/#files
+        package_name: wemake-python-styleguide

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Moreorless040PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moreorless
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'moreorless' in version
+          '0.4.0' can have up to 9.89KiB
+        link: https://pypi.org/project/moreorless/0.4.0/#files
+        package_name: moreorless

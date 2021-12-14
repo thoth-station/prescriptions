@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pysmi034PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysmi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysmi' in version
+          '0.3.4' can have up to 179.46KiB
+        link: https://pypi.org/project/pysmi/0.3.4/#files
+        package_name: pysmi

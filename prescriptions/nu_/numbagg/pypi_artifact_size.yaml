@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Numbagg021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numbagg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'numbagg' in version
+          '0.2.1' can have up to 20.10KiB
+        link: https://pypi.org/project/numbagg/0.2.1/#files
+        package_name: numbagg

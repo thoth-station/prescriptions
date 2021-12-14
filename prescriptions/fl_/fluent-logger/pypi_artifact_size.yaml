@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FluentLogger096PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fluent-logger
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fluent-logger' in version
+          '0.9.6' can have up to 12.21KiB
+        link: https://pypi.org/project/fluent-logger/0.9.6/#files
+        package_name: fluent-logger

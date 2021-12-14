@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FlaskTesting081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-testing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flask-testing' in version
+          '0.8.1' can have up to 44.15KiB
+        link: https://pypi.org/project/flask-testing/0.8.1/#files
+        package_name: flask-testing

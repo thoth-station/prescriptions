@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Robotremoteserver11rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotremoteserver
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'robotremoteserver' in version
+          '1.1rc2' can have up to 19.31KiB
+        link: https://pypi.org/project/robotremoteserver/1.1rc2/#files
+        package_name: robotremoteserver

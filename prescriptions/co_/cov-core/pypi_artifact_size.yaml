@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CovCore19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cov-core
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cov-core' in version
+          '1.9' can have up to 5.68KiB
+        link: https://pypi.org/project/cov-core/1.9/#files
+        package_name: cov-core

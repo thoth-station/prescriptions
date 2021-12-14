@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pygeoip032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygeoip
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pygeoip' in version
+          '0.3.2' can have up to 24.45KiB
+        link: https://pypi.org/project/pygeoip/0.3.2/#files
+        package_name: pygeoip

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Miniupnpc223PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: miniupnpc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'miniupnpc' in version
+          '2.2.3' can have up to 12.05KiB
+        link: https://pypi.org/project/miniupnpc/2.2.3/#files
+        package_name: miniupnpc

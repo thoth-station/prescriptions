@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Whoosh274PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: whoosh
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'whoosh' in version
+          '2.7.4' can have up to 1.05MiB
+        link: https://pypi.org/project/whoosh/2.7.4/#files
+        package_name: whoosh

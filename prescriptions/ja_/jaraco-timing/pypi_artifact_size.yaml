@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JaracoTiming20PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-timing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jaraco-timing' in version
+          '2.0' can have up to 8.36KiB
+        link: https://pypi.org/project/jaraco-timing/2.0/#files
+        package_name: jaraco-timing

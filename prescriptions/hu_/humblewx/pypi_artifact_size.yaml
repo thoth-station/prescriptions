@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Humblewx022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: humblewx
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'humblewx' in version
+          '0.2.2' can have up to 64.04KiB
+        link: https://pypi.org/project/humblewx/0.2.2/#files
+        package_name: humblewx

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopePtresource420PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-ptresource
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-ptresource' in version
+          '4.2.0' can have up to 8.65KiB
+        link: https://pypi.org/project/zope-ptresource/4.2.0/#files
+        package_name: zope-ptresource

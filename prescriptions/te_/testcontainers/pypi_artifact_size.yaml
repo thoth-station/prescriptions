@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Testcontainers342PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testcontainers
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'testcontainers' in version
+          '3.4.2' can have up to 30.65KiB
+        link: https://pypi.org/project/testcontainers/3.4.2/#files
+        package_name: testcontainers

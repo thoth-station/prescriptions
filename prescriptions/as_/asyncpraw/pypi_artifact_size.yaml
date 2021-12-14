@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Asyncpraw750PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncpraw
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'asyncpraw' in version
+          '7.5.0' can have up to 9.47MiB
+        link: https://pypi.org/project/asyncpraw/7.5.0/#files
+        package_name: asyncpraw

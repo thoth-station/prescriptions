@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureGraphrbac0611PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-graphrbac
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-graphrbac' in version
+          '0.61.1' can have up to 271.41KiB
+        link: https://pypi.org/project/azure-graphrbac/0.61.1/#files
+        package_name: azure-graphrbac

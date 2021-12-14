@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Artagger0103PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: artagger
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'artagger' in version
+          '0.1.0.3' can have up to 10.13MiB
+        link: https://pypi.org/project/artagger/0.1.0.3/#files
+        package_name: artagger

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureKeyvaultSecrets440b2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-keyvault-secrets
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-keyvault-secrets' in version
+          '4.4.0b2' can have up to 320.28KiB
+        link: https://pypi.org/project/azure-keyvault-secrets/4.4.0b2/#files
+        package_name: azure-keyvault-secrets

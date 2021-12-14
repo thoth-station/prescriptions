@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Smbpasswd102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbpasswd
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'smbpasswd' in version
+          '1.0.2' can have up to 13.19KiB
+        link: https://pypi.org/project/smbpasswd/1.0.2/#files
+        package_name: smbpasswd

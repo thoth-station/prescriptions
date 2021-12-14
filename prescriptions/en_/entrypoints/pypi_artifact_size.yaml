@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Entrypoints03PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entrypoints
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'entrypoints' in version
+          '0.3' can have up to 12.03KiB
+        link: https://pypi.org/project/entrypoints/0.3/#files
+        package_name: entrypoints

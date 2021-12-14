@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PromptToolkit309PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prompt-toolkit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'prompt-toolkit' in version
+          '3.0.9' can have up to 2.88MiB
+        link: https://pypi.org/project/prompt-toolkit/3.0.9/#files
+        package_name: prompt-toolkit

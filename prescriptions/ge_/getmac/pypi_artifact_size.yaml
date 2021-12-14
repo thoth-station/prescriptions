@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Getmac083PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: getmac
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'getmac' in version
+          '0.8.3' can have up to 49.45KiB
+        link: https://pypi.org/project/getmac/0.8.3/#files
+        package_name: getmac

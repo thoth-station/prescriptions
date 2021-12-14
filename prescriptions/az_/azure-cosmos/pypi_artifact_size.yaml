@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureCosmos420PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cosmos
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-cosmos' in version
+          '4.2.0' can have up to 266.82KiB
+        link: https://pypi.org/project/azure-cosmos/4.2.0/#files
+        package_name: azure-cosmos

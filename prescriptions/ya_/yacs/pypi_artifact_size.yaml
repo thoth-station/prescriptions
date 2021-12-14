@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Yacs018PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yacs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'yacs' in version
+          '0.1.8' can have up to 14.40KiB
+        link: https://pypi.org/project/yacs/0.1.8/#files
+        package_name: yacs

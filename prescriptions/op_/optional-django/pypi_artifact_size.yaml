@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: OptionalDjango030PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optional-django
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'optional-django' in version
+          '0.3.0' can have up to 9.55KiB
+        link: https://pypi.org/project/optional-django/0.3.0/#files
+        package_name: optional-django

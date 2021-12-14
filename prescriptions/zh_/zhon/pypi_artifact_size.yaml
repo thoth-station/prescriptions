@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Zhon115PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zhon
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zhon' in version
+          '1.1.5' can have up to 97.47KiB
+        link: https://pypi.org/project/zhon/1.1.5/#files
+        package_name: zhon

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tortilla050PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tortilla
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tortilla' in version
+          '0.5.0' can have up to 10.05KiB
+        link: https://pypi.org/project/tortilla/0.5.0/#files
+        package_name: tortilla

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bluepyopt1998PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bluepyopt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bluepyopt' in version
+          '1.9.98' can have up to 173.49KiB
+        link: https://pypi.org/project/bluepyopt/1.9.98/#files
+        package_name: bluepyopt

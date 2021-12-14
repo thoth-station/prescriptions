@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gcld33013PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcld3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gcld3' in version
+          '3.0.13' can have up to 3.59MiB
+        link: https://pypi.org/project/gcld3/3.0.13/#files
+        package_name: gcld3

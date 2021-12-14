@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Retask10PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retask
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'retask' in version
+          '1.0' can have up to 23.86KiB
+        link: https://pypi.org/project/retask/1.0/#files
+        package_name: retask

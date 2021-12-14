@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GoogleCloudFirestore234PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-firestore
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-cloud-firestore' in version
+          '2.3.4' can have up to 310.25KiB
+        link: https://pypi.org/project/google-cloud-firestore/2.3.4/#files
+        package_name: google-cloud-firestore

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeIndex510PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-index
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-index' in version
+          '5.1.0' can have up to 102.03KiB
+        link: https://pypi.org/project/zope-index/5.1.0/#files
+        package_name: zope-index

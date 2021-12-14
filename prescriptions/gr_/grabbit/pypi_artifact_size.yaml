@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Grabbit026PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabbit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grabbit' in version
+          '0.2.6' can have up to 69.34KiB
+        link: https://pypi.org/project/grabbit/0.2.6/#files
+        package_name: grabbit

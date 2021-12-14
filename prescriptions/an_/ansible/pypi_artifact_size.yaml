@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ansible501PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible' in version
+          '5.0.1' can have up to 36.67MiB
+        link: https://pypi.org/project/ansible/5.0.1/#files
+        package_name: ansible

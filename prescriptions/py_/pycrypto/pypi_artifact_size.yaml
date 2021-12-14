@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pycrypto261PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycrypto
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycrypto' in version
+          '2.6.1' can have up to 435.78KiB
+        link: https://pypi.org/project/pycrypto/2.6.1/#files
+        package_name: pycrypto

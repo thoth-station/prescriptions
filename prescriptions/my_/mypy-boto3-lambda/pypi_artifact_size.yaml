@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: MypyBoto3Lambda1209PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy-boto3-lambda
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mypy-boto3-lambda' in version
+          '1.20.9' can have up to 39.56KiB
+        link: https://pypi.org/project/mypy-boto3-lambda/1.20.9/#files
+        package_name: mypy-boto3-lambda

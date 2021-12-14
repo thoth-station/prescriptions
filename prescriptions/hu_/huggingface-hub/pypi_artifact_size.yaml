@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: HuggingfaceHub021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: huggingface-hub
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'huggingface-hub' in version
+          '0.2.1' can have up to 60.46KiB
+        link: https://pypi.org/project/huggingface-hub/0.2.1/#files
+        package_name: huggingface-hub

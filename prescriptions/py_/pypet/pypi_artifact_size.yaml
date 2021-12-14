@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pypet060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypet
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pypet' in version
+          '0.6.0' can have up to 337.72KiB
+        link: https://pypi.org/project/pypet/0.6.0/#files
+        package_name: pypet

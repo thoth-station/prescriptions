@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestSpark060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-spark
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-spark' in version
+          '0.6.0' can have up to 6.73KiB
+        link: https://pypi.org/project/pytest-spark/0.6.0/#files
+        package_name: pytest-spark

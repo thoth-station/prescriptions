@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TypedAst151PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typed-ast
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'typed-ast' in version
+          '1.5.1' can have up to 876.18KiB
+        link: https://pypi.org/project/typed-ast/1.5.1/#files
+        package_name: typed-ast

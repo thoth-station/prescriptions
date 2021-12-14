@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Inflect530PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inflect
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'inflect' in version
+          '5.3.0' can have up to 72.39KiB
+        link: https://pypi.org/project/inflect/5.3.0/#files
+        package_name: inflect

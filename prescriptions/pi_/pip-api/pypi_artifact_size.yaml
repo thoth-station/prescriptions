@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PipApi009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-api
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pip-api' in version
+          '0.0.9' can have up to 13.26KiB
+        link: https://pypi.org/project/pip-api/0.0.9/#files
+        package_name: pip-api

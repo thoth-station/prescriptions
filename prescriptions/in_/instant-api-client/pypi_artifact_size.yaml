@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: InstantApiClient012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: instant-api-client
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'instant-api-client' in version
+          '0.1.2' can have up to 5.16KiB
+        link: https://pypi.org/project/instant-api-client/0.1.2/#files
+        package_name: instant-api-client

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeAppZcmlfiles400PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-zcmlfiles
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-app-zcmlfiles' in version
+          '4.0.0' can have up to 9.15KiB
+        link: https://pypi.org/project/zope-app-zcmlfiles/4.0.0/#files
+        package_name: zope-app-zcmlfiles

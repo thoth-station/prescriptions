@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PyMultihash201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-multihash
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-multihash' in version
+          '2.0.1' can have up to 22.15KiB
+        link: https://pypi.org/project/py-multihash/2.0.1/#files
+        package_name: py-multihash

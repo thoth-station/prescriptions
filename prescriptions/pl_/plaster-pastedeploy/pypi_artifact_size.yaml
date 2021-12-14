@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PlasterPastedeploy07PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plaster-pastedeploy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'plaster-pastedeploy' in version
+          '0.7' can have up to 19.39KiB
+        link: https://pypi.org/project/plaster-pastedeploy/0.7/#files
+        package_name: plaster-pastedeploy

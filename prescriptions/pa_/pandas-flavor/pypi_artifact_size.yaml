@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PandasFlavor020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandas-flavor
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pandas-flavor' in version
+          '0.2.0' can have up to 6.41KiB
+        link: https://pypi.org/project/pandas-flavor/0.2.0/#files
+        package_name: pandas-flavor

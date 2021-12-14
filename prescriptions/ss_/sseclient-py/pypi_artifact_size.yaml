@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SseclientPy172PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sseclient-py
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sseclient-py' in version
+          '1.7.2' can have up to 8.18KiB
+        link: https://pypi.org/project/sseclient-py/1.7.2/#files
+        package_name: sseclient-py

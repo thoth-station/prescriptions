@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: MypyExtensions043PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy-extensions
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mypy-extensions' in version
+          '0.4.3' can have up to 4.37KiB
+        link: https://pypi.org/project/mypy-extensions/0.4.3/#files
+        package_name: mypy-extensions

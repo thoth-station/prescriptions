@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JunitXml19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: junit-xml
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'junit-xml' in version
+          '1.9' can have up to 6.96KiB
+        link: https://pypi.org/project/junit-xml/1.9/#files
+        package_name: junit-xml

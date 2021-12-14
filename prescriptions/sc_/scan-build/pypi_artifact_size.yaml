@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ScanBuild2020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scan-build
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'scan-build' in version
+          '2.0.20' can have up to 48.22KiB
+        link: https://pypi.org/project/scan-build/2.0.20/#files
+        package_name: scan-build

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoExtraFields302PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-extra-fields
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-extra-fields' in version
+          '3.0.2' can have up to 17.95KiB
+        link: https://pypi.org/project/django-extra-fields/3.0.2/#files
+        package_name: django-extra-fields

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ColconZsh040PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-zsh
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colcon-zsh' in version
+          '0.4.0' can have up to 6.40KiB
+        link: https://pypi.org/project/colcon-zsh/0.4.0/#files
+        package_name: colcon-zsh

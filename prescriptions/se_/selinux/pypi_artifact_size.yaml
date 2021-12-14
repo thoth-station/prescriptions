@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Selinux021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selinux
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'selinux' in version
+          '0.2.1' can have up to 10.96KiB
+        link: https://pypi.org/project/selinux/0.2.1/#files
+        package_name: selinux

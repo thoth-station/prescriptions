@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Geoip2450PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoip2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'geoip2' in version
+          '4.5.0' can have up to 344.85KiB
+        link: https://pypi.org/project/geoip2/4.5.0/#files
+        package_name: geoip2

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ropgadget66PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ropgadget
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ropgadget' in version
+          '6.6' can have up to 30.28KiB
+        link: https://pypi.org/project/ropgadget/6.6/#files
+        package_name: ropgadget

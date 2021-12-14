@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FiveGlobalrequest991PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: five-globalrequest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'five-globalrequest' in version
+          '99.1' can have up to 4.14KiB
+        link: https://pypi.org/project/five-globalrequest/99.1/#files
+        package_name: five-globalrequest

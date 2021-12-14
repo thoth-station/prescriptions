@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8Mutable120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-mutable
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-mutable' in version
+          '1.2.0' can have up to 3.35KiB
+        link: https://pypi.org/project/flake8-mutable/1.2.0/#files
+        package_name: flake8-mutable

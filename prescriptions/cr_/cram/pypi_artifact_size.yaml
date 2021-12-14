@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cram07PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cram
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cram' in version
+          '0.7' can have up to 32.74KiB
+        link: https://pypi.org/project/cram/0.7/#files
+        package_name: cram

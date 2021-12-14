@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyyaml60b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyyaml' in version
+          '6.0b1' can have up to 739.77KiB
+        link: https://pypi.org/project/pyyaml/6.0b1/#files
+        package_name: pyyaml

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Netdata101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netdata
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netdata' in version
+          '1.0.1' can have up to 3.91KiB
+        link: https://pypi.org/project/netdata/1.0.1/#files
+        package_name: netdata

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Slip20191113PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slip
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'slip' in version
+          '20191113' can have up to 16.64MiB
+        link: https://pypi.org/project/slip/20191113/#files
+        package_name: slip

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DocWarden072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doc-warden
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'doc-warden' in version
+          '0.7.2' can have up to 39.15KiB
+        link: https://pypi.org/project/doc-warden/0.7.2/#files
+        package_name: doc-warden

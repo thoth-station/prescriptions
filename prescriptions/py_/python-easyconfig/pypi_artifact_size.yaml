@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonEasyconfig017PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-easyconfig
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-easyconfig' in version
+          '0.1.7' can have up to 5.23KiB
+        link: https://pypi.org/project/python-easyconfig/0.1.7/#files
+        package_name: python-easyconfig

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Idstools064PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idstools
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'idstools' in version
+          '0.6.4' can have up to 60.94KiB
+        link: https://pypi.org/project/idstools/0.6.4/#files
+        package_name: idstools

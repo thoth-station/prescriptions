@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeSendmail52PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-sendmail
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-sendmail' in version
+          '5.2' can have up to 47.62KiB
+        link: https://pypi.org/project/zope-sendmail/5.2/#files
+        package_name: zope-sendmail

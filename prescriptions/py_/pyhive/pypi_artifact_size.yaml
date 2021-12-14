@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyhive064rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhive
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyhive' in version
+          '0.6.4rc2' can have up to 43.66KiB
+        link: https://pypi.org/project/pyhive/0.6.4rc2/#files
+        package_name: pyhive

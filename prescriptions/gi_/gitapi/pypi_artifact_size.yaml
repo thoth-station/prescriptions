@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gitapi110a2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitapi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gitapi' in version
+          '1.1.0a2' can have up to 7.63KiB
+        link: https://pypi.org/project/gitapi/1.1.0a2/#files
+        package_name: gitapi

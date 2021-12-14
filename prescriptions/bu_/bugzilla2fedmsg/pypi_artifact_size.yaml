@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bugzilla2fedmsg100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bugzilla2fedmsg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bugzilla2fedmsg' in version
+          '1.0.0' can have up to 20.41KiB
+        link: https://pypi.org/project/bugzilla2fedmsg/1.0.0/#files
+        package_name: bugzilla2fedmsg

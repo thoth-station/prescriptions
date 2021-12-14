@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cmreshandler100b4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmreshandler
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cmreshandler' in version
+          '1.0.0b4' can have up to 15.03KiB
+        link: https://pypi.org/project/cmreshandler/1.0.0b4/#files
+        package_name: cmreshandler

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bodhi55PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bodhi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bodhi' in version
+          '5.5' can have up to 4.98MiB
+        link: https://pypi.org/project/bodhi/5.5/#files
+        package_name: bodhi

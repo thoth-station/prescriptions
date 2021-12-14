@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pysam0914PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysam
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysam' in version
+          '0.9.1.4' can have up to 2.08MiB
+        link: https://pypi.org/project/pysam/0.9.1.4/#files
+        package_name: pysam

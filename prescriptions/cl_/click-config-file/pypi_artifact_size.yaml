@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ClickConfigFile060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-config-file
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'click-config-file' in version
+          '0.6.0' can have up to 5.82KiB
+        link: https://pypi.org/project/click-config-file/0.6.0/#files
+        package_name: click-config-file

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Crashtest031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crashtest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'crashtest' in version
+          '0.3.1' can have up to 6.80KiB
+        link: https://pypi.org/project/crashtest/0.3.1/#files
+        package_name: crashtest

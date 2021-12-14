@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Kopf135rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kopf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kopf' in version
+          '1.35rc1' can have up to 1.13MiB
+        link: https://pypi.org/project/kopf/1.35rc1/#files
+        package_name: kopf

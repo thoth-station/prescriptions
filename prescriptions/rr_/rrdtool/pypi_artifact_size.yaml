@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rrdtool019PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rrdtool
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rrdtool' in version
+          '0.1.9' can have up to 22.65KiB
+        link: https://pypi.org/project/rrdtool/0.1.9/#files
+        package_name: rrdtool

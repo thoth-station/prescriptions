@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: BackportsAbc05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-abc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backports-abc' in version
+          '0.5' can have up to 9.58KiB
+        link: https://pypi.org/project/backports-abc/0.5/#files
+        package_name: backports-abc

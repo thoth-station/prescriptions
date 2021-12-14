@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gcovr50PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcovr
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gcovr' in version
+          '5.0' can have up to 55.90KiB
+        link: https://pypi.org/project/gcovr/5.0/#files
+        package_name: gcovr

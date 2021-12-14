@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pocketlint022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pocketlint
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pocketlint' in version
+          '0.22' can have up to 26.88KiB
+        link: https://pypi.org/project/pocketlint/0.22/#files
+        package_name: pocketlint

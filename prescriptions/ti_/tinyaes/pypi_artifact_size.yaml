@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tinyaes103rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tinyaes
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tinyaes' in version
+          '1.0.3rc1' can have up to 75.00KiB
+        link: https://pypi.org/project/tinyaes/1.0.3rc1/#files
+        package_name: tinyaes

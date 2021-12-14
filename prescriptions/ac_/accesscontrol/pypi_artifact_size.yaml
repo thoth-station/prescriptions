@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Accesscontrol52PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: accesscontrol
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'accesscontrol' in version
+          '5.2' can have up to 138.82KiB
+        link: https://pypi.org/project/accesscontrol/5.2/#files
+        package_name: accesscontrol

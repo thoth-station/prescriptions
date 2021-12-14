@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyftdi063PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyftdi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyftdi' in version
+          '0.6.3' can have up to 34.27KiB
+        link: https://pypi.org/project/pyftdi/0.6.3/#files
+        package_name: pyftdi

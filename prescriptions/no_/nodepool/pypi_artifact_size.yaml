@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nodepool430PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nodepool
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nodepool' in version
+          '4.3.0' can have up to 326.52KiB
+        link: https://pypi.org/project/nodepool/4.3.0/#files
+        package_name: nodepool

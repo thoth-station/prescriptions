@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gower005PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gower
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gower' in version
+          '0.0.5' can have up to 4.32KiB
+        link: https://pypi.org/project/gower/0.0.5/#files
+        package_name: gower

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Socialscan142PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: socialscan
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'socialscan' in version
+          '1.4.2' can have up to 20.84KiB
+        link: https://pypi.org/project/socialscan/1.4.2/#files
+        package_name: socialscan

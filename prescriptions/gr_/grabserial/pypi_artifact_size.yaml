@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Grabserial204PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grabserial
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grabserial' in version
+          '2.0.4' can have up to 16.61KiB
+        link: https://pypi.org/project/grabserial/2.0.4/#files
+        package_name: grabserial

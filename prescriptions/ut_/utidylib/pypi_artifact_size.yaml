@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Utidylib08PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utidylib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'utidylib' in version
+          '0.8' can have up to 14.93KiB
+        link: https://pypi.org/project/utidylib/0.8/#files
+        package_name: utidylib

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Vagrantpy060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vagrantpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vagrantpy' in version
+          '0.6.0' can have up to 28.89KiB
+        link: https://pypi.org/project/vagrantpy/0.6.0/#files
+        package_name: vagrantpy

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ninja190post1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ninja
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ninja' in version
+          '1.9.0.post1' can have up to 232.34KiB
+        link: https://pypi.org/project/ninja/1.9.0.post1/#files
+        package_name: ninja

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonPam184PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-pam
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-pam' in version
+          '1.8.4' can have up to 5.68KiB
+        link: https://pypi.org/project/python-pam/1.8.4/#files
+        package_name: python-pam

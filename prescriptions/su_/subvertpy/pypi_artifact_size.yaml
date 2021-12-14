@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Subvertpy093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subvertpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'subvertpy' in version
+          '0.9.3' can have up to 544.37KiB
+        link: https://pypi.org/project/subvertpy/0.9.3/#files
+        package_name: subvertpy

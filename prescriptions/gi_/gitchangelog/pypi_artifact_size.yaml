@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gitchangelog304PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitchangelog
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gitchangelog' in version
+          '3.0.4' can have up to 70.86KiB
+        link: https://pypi.org/project/gitchangelog/3.0.4/#files
+        package_name: gitchangelog

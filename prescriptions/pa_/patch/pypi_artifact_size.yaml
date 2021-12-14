@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Patch116PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patch
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'patch' in version
+          '1.16' can have up to 12.51KiB
+        link: https://pypi.org/project/patch/1.16/#files
+        package_name: patch

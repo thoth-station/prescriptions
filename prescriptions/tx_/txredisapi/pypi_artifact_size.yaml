@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Txredisapi147PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txredisapi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'txredisapi' in version
+          '1.4.7' can have up to 25.19KiB
+        link: https://pypi.org/project/txredisapi/1.4.7/#files
+        package_name: txredisapi

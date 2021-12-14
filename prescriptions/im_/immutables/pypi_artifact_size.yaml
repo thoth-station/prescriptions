@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Immutables09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: immutables
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'immutables' in version
+          '0.9' can have up to 90.32KiB
+        link: https://pypi.org/project/immutables/0.9/#files
+        package_name: immutables

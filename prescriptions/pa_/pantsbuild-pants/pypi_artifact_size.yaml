@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PantsbuildPants290dev3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pantsbuild-pants
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pantsbuild-pants' in version
+          '2.9.0.dev3' can have up to 41.10MiB
+        link: https://pypi.org/project/pantsbuild-pants/2.9.0.dev3/#files
+        package_name: pantsbuild-pants

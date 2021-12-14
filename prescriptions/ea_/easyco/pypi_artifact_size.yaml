@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Easyco023PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyco
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'easyco' in version
+          '0.2.3' can have up to 11.27KiB
+        link: https://pypi.org/project/easyco/0.2.3/#files
+        package_name: easyco

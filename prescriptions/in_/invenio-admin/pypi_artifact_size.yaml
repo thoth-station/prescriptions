@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: InvenioAdmin131PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-admin
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'invenio-admin' in version
+          '1.3.1' can have up to 27.64KiB
+        link: https://pypi.org/project/invenio-admin/1.3.1/#files
+        package_name: invenio-admin

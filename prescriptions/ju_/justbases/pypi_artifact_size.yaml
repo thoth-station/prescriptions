@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Justbases09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: justbases
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'justbases' in version
+          '0.9' can have up to 56.63KiB
+        link: https://pypi.org/project/justbases/0.9/#files
+        package_name: justbases

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rjsmin120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rjsmin
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rjsmin' in version
+          '1.2.0' can have up to 410.03KiB
+        link: https://pypi.org/project/rjsmin/1.2.0/#files
+        package_name: rjsmin

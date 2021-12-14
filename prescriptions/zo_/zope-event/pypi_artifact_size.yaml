@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ZopeEvent450PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-event
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-event' in version
+          '4.5.0' can have up to 18.28KiB
+        link: https://pypi.org/project/zope-event/4.5.0/#files
+        package_name: zope-event

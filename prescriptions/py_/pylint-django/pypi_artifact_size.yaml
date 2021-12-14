@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PylintDjango244PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-django
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylint-django' in version
+          '2.4.4' can have up to 76.62KiB
+        link: https://pypi.org/project/pylint-django/2.4.4/#files
+        package_name: pylint-django

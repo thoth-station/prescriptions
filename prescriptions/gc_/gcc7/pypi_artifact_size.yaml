@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gcc7009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcc7
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gcc7' in version
+          '0.0.9' can have up to 30.40MiB
+        link: https://pypi.org/project/gcc7/0.0.9/#files
+        package_name: gcc7

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Elasticsearch6682PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch6
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'elasticsearch6' in version
+          '6.8.2' can have up to 88.66KiB
+        link: https://pypi.org/project/elasticsearch6/6.8.2/#files
+        package_name: elasticsearch6

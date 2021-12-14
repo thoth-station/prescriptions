@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flake8Html041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-html
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-html' in version
+          '0.4.1' can have up to 13.48KiB
+        link: https://pypi.org/project/flake8-html/0.4.1/#files
+        package_name: flake8-html

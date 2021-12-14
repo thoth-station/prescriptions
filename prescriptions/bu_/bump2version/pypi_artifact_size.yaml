@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bump2version101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bump2version
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bump2version' in version
+          '1.0.1' can have up to 35.39KiB
+        link: https://pypi.org/project/bump2version/1.0.1/#files
+        package_name: bump2version

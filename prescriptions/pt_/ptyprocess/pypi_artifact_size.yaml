@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ptyprocess070PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ptyprocess
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ptyprocess' in version
+          '0.7.0' can have up to 69.10KiB
+        link: https://pypi.org/project/ptyprocess/0.7.0/#files
+        package_name: ptyprocess

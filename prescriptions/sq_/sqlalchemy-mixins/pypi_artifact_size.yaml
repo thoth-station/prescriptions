@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SqlalchemyMixins15PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-mixins
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sqlalchemy-mixins' in version
+          '1.5' can have up to 18.04KiB
+        link: https://pypi.org/project/sqlalchemy-mixins/1.5/#files
+        package_name: sqlalchemy-mixins

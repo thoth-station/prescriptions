@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DopamineRl402PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dopamine-rl
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dopamine-rl' in version
+          '4.0.2' can have up to 161.13KiB
+        link: https://pypi.org/project/dopamine-rl/4.0.2/#files
+        package_name: dopamine-rl

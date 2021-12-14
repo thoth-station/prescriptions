@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TensorflowText273PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-text
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tensorflow-text' in version
+          '2.7.3' can have up to 4.66MiB
+        link: https://pypi.org/project/tensorflow-text/2.7.3/#files
+        package_name: tensorflow-text

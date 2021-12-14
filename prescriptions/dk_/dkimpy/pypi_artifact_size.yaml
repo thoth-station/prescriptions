@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dkimpy105PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dkimpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dkimpy' in version
+          '1.0.5' can have up to 58.40KiB
+        link: https://pypi.org/project/dkimpy/1.0.5/#files
+        package_name: dkimpy

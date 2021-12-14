@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ClickhouseCityhash1023PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clickhouse-cityhash
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'clickhouse-cityhash' in version
+          '1.0.2.3' can have up to 104.27KiB
+        link: https://pypi.org/project/clickhouse-cityhash/1.0.2.3/#files
+        package_name: clickhouse-cityhash

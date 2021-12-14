@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: WasmerCompilerCranelift100Beta2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wasmer-compiler-cranelift
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wasmer-compiler-cranelift' in version
+          '1.0.0-beta2' can have up to 1.52MiB
+        link: https://pypi.org/project/wasmer-compiler-cranelift/1.0.0-beta2/#files
+        package_name: wasmer-compiler-cranelift

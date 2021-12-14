@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Koalas182PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: koalas
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'koalas' in version
+          '1.8.2' can have up to 381.62KiB
+        link: https://pypi.org/project/koalas/1.8.2/#files
+        package_name: koalas

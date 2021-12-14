@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Molten102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: molten
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'molten' in version
+          '1.0.2' can have up to 95.87KiB
+        link: https://pypi.org/project/molten/1.0.2/#files
+        package_name: molten

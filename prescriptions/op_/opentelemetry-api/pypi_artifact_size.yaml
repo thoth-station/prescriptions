@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: OpentelemetryApi171PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentelemetry-api
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'opentelemetry-api' in version
+          '1.7.1' can have up to 47.91KiB
+        link: https://pypi.org/project/opentelemetry-api/1.7.1/#files
+        package_name: opentelemetry-api

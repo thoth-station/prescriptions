@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Databand0563PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databand
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'databand' in version
+          '0.56.3' can have up to 8.08KiB
+        link: https://pypi.org/project/databand/0.56.3/#files
+        package_name: databand

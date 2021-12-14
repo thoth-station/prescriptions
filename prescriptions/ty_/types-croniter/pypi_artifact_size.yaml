@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TypesCroniter103PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-croniter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'types-croniter' in version
+          '1.0.3' can have up to 2.65KiB
+        link: https://pypi.org/project/types-croniter/1.0.3/#files
+        package_name: types-croniter

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sanic2193PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sanic' in version
+          '21.9.3' can have up to 193.74KiB
+        link: https://pypi.org/project/sanic/21.9.3/#files
+        package_name: sanic

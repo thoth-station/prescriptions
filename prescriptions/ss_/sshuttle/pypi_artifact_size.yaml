@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sshuttle105PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sshuttle
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sshuttle' in version
+          '1.0.5' can have up to 86.74KiB
+        link: https://pypi.org/project/sshuttle/1.0.5/#files
+        package_name: sshuttle

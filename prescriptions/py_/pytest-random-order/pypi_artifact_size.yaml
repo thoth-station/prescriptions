@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestRandomOrder104PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-random-order
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-random-order' in version
+          '1.0.4' can have up to 17.62KiB
+        link: https://pypi.org/project/pytest-random-order/1.0.4/#files
+        package_name: pytest-random-order

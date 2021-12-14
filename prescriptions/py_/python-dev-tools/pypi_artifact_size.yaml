@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonDevTools202097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dev-tools
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-dev-tools' in version
+          '2020.9.7' can have up to 12.80KiB
+        link: https://pypi.org/project/python-dev-tools/2020.9.7/#files
+        package_name: python-dev-tools

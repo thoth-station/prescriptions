@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Py7zr099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py7zr
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py7zr' in version
+          '0.9.9' can have up to 2.65MiB
+        link: https://pypi.org/project/py7zr/0.9.9/#files
+        package_name: py7zr

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Thrift093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thrift
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'thrift' in version
+          '0.9.3' can have up to 37.60KiB
+        link: https://pypi.org/project/thrift/0.9.3/#files
+        package_name: thrift

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: D2to1029PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: d2to1
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'd2to1' in version
+          '0.2.9' can have up to 36.29KiB
+        link: https://pypi.org/project/d2to1/0.2.9/#files
+        package_name: d2to1

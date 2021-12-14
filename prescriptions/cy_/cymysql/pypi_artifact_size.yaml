@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cymysql099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cymysql
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cymysql' in version
+          '0.9.9' can have up to 41.89KiB
+        link: https://pypi.org/project/cymysql/0.9.9/#files
+        package_name: cymysql

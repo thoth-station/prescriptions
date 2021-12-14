@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Vega350PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vega
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vega' in version
+          '3.5.0' can have up to 1.25MiB
+        link: https://pypi.org/project/vega/3.5.0/#files
+        package_name: vega

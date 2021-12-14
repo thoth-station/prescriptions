@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pynag112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynag
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pynag' in version
+          '1.1.2' can have up to 222.70KiB
+        link: https://pypi.org/project/pynag/1.1.2/#files
+        package_name: pynag

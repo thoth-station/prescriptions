@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Twilio732PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twilio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'twilio' in version
+          '7.3.2' can have up to 1.26MiB
+        link: https://pypi.org/project/twilio/7.3.2/#files
+        package_name: twilio

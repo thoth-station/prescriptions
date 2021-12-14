@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureFunctionsDevopsBuild009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-functions-devops-build
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-functions-devops-build' in version
+          '0.0.9' can have up to 38.14KiB
+        link: https://pypi.org/project/azure-functions-devops-build/0.0.9/#files
+        package_name: azure-functions-devops-build

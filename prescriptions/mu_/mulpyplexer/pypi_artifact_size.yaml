@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mulpyplexer009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mulpyplexer
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mulpyplexer' in version
+          '0.09' can have up to 2.78KiB
+        link: https://pypi.org/project/mulpyplexer/0.09/#files
+        package_name: mulpyplexer

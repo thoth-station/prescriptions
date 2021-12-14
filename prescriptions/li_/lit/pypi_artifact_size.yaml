@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Lit1300rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lit' in version
+          '13.0.0rc1' can have up to 122.07KiB
+        link: https://pypi.org/project/lit/13.0.0rc1/#files
+        package_name: lit

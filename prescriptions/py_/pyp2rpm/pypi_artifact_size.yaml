@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyp2rpm337PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyp2rpm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyp2rpm' in version
+          '3.3.7' can have up to 2.51MiB
+        link: https://pypi.org/project/pyp2rpm/3.3.7/#files
+        package_name: pyp2rpm

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pymeeus059PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymeeus
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymeeus' in version
+          '0.5.9' can have up to 5.11MiB
+        link: https://pypi.org/project/pymeeus/0.5.9/#files
+        package_name: pymeeus

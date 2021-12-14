@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Terrawrap089PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: terrawrap
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'terrawrap' in version
+          '0.8.9' can have up to 33.87KiB
+        link: https://pypi.org/project/terrawrap/0.8.9/#files
+        package_name: terrawrap

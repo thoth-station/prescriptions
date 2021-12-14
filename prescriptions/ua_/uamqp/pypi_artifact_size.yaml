@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Uamqp143PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uamqp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'uamqp' in version
+          '1.4.3' can have up to 4.20MiB
+        link: https://pypi.org/project/uamqp/1.4.3/#files
+        package_name: uamqp

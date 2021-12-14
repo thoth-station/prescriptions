@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pykcs11159PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykcs11
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pykcs11' in version
+          '1.5.9' can have up to 192.93KiB
+        link: https://pypi.org/project/pykcs11/1.5.9/#files
+        package_name: pykcs11

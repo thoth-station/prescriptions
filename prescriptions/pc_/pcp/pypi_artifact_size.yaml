@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pcp50PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pcp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pcp' in version
+          '5.0' can have up to 72.32KiB
+        link: https://pypi.org/project/pcp/5.0/#files
+        package_name: pcp

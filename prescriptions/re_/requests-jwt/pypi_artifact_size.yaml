@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: RequestsJwt060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-jwt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'requests-jwt' in version
+          '0.6.0' can have up to 5.09KiB
+        link: https://pypi.org/project/requests-jwt/0.6.0/#files
+        package_name: requests-jwt

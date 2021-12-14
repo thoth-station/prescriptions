@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Geojson250PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geojson
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'geojson' in version
+          '2.5.0' can have up to 22.54KiB
+        link: https://pypi.org/project/geojson/2.5.0/#files
+        package_name: geojson

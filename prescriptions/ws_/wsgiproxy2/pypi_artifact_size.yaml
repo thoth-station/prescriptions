@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wsgiproxy2051PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsgiproxy2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wsgiproxy2' in version
+          '0.5.1' can have up to 16.18KiB
+        link: https://pypi.org/project/wsgiproxy2/0.5.1/#files
+        package_name: wsgiproxy2

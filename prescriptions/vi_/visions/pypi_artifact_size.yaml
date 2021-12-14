@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Visions075PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: visions
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'visions' in version
+          '0.7.5' can have up to 453.31KiB
+        link: https://pypi.org/project/visions/0.7.5/#files
+        package_name: visions

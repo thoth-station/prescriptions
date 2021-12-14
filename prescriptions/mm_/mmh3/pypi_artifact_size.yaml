@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mmh3300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mmh3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mmh3' in version
+          '3.0.0' can have up to 50.36KiB
+        link: https://pypi.org/project/mmh3/3.0.0/#files
+        package_name: mmh3

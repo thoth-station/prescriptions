@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Editdistance060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: editdistance
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'editdistance' in version
+          '0.6.0' can have up to 279.72KiB
+        link: https://pypi.org/project/editdistance/0.6.0/#files
+        package_name: editdistance

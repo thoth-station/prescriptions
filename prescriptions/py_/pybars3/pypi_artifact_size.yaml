@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pybars3097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybars3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pybars3' in version
+          '0.9.7' can have up to 28.52KiB
+        link: https://pypi.org/project/pybars3/0.9.7/#files
+        package_name: pybars3

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Volatile210PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: volatile
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'volatile' in version
+          '2.1.0' can have up to 3.21KiB
+        link: https://pypi.org/project/volatile/2.1.0/#files
+        package_name: volatile

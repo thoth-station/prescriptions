@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CerberusPythonClient252PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cerberus-python-client
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cerberus-python-client' in version
+          '2.5.2' can have up to 29.15KiB
+        link: https://pypi.org/project/cerberus-python-client/2.5.2/#files
+        package_name: cerberus-python-client

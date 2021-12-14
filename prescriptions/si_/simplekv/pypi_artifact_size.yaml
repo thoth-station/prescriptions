@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Simplekv093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplekv
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'simplekv' in version
+          '0.9.3' can have up to 14.24KiB
+        link: https://pypi.org/project/simplekv/0.9.3/#files
+        package_name: simplekv

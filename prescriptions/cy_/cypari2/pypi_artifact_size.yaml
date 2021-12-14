@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cypari2212PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cypari2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cypari2' in version
+          '2.1.2' can have up to 2.08MiB
+        link: https://pypi.org/project/cypari2/2.1.2/#files
+        package_name: cypari2

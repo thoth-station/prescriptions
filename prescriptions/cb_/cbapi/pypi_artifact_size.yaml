@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cbapi175PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cbapi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cbapi' in version
+          '1.7.5' can have up to 232.58KiB
+        link: https://pypi.org/project/cbapi/1.7.5/#files
+        package_name: cbapi

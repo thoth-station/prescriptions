@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SailthruClient235PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sailthru-client
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sailthru-client' in version
+          '2.3.5' can have up to 11.47KiB
+        link: https://pypi.org/project/sailthru-client/2.3.5/#files
+        package_name: sailthru-client

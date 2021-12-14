@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Daemonocle123PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: daemonocle
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'daemonocle' in version
+          '1.2.3' can have up to 40.42KiB
+        link: https://pypi.org/project/daemonocle/1.2.3/#files
+        package_name: daemonocle

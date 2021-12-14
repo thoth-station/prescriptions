@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Goose3319PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: goose3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'goose3' in version
+          '3.1.9' can have up to 84.50KiB
+        link: https://pypi.org/project/goose3/3.1.9/#files
+        package_name: goose3

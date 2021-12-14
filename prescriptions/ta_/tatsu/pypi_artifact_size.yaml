@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tatsu571PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tatsu
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tatsu' in version
+          '5.7.1' can have up to 196.48KiB
+        link: https://pypi.org/project/tatsu/5.7.1/#files
+        package_name: tatsu

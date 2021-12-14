@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AllurePytest2945PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: allure-pytest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'allure-pytest' in version
+          '2.9.45' can have up to 30.10KiB
+        link: https://pypi.org/project/allure-pytest/2.9.45/#files
+        package_name: allure-pytest

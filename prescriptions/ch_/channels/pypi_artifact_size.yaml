@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Channels304PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: channels
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'channels' in version
+          '3.0.4' can have up to 37.37KiB
+        link: https://pypi.org/project/channels/3.0.4/#files
+        package_name: channels

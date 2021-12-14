@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Slackweb105PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slackweb
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'slackweb' in version
+          '1.0.5' can have up to 1.31KiB
+        link: https://pypi.org/project/slackweb/1.0.5/#files
+        package_name: slackweb

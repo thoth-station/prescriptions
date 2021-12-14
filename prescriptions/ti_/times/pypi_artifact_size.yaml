@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Times07PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: times
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'times' in version
+          '0.7' can have up to 4.13KiB
+        link: https://pypi.org/project/times/0.7/#files
+        package_name: times

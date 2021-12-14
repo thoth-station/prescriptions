@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Secp256k1090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: secp256k1
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'secp256k1' in version
+          '0.9.0' can have up to 6.47KiB
+        link: https://pypi.org/project/secp256k1/0.9.0/#files
+        package_name: secp256k1

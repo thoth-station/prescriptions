@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Minikerberos029PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minikerberos
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'minikerberos' in version
+          '0.2.9' can have up to 104.62KiB
+        link: https://pypi.org/project/minikerberos/0.2.9/#files
+        package_name: minikerberos

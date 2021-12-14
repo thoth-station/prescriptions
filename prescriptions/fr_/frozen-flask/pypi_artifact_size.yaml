@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FrozenFlask09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: frozen-flask
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'frozen-flask' in version
+          '0.9' can have up to 71.88KiB
+        link: https://pypi.org/project/frozen-flask/0.9/#files
+        package_name: frozen-flask

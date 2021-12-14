@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Veusz34PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: veusz
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'veusz' in version
+          '3.4' can have up to 3.11MiB
+        link: https://pypi.org/project/veusz/3.4/#files
+        package_name: veusz

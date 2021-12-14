@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Restrictedpython52a1dev0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restrictedpython
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'restrictedpython' in version
+          '5.2a1.dev0' can have up to 434.29KiB
+        link: https://pypi.org/project/restrictedpython/5.2a1.dev0/#files
+        package_name: restrictedpython

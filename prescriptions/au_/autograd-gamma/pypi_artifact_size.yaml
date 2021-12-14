@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AutogradGamma050PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autograd-gamma
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'autograd-gamma' in version
+          '0.5.0' can have up to 3.86KiB
+        link: https://pypi.org/project/autograd-gamma/0.5.0/#files
+        package_name: autograd-gamma

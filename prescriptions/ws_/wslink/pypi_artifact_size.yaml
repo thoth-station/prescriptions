@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wslink121PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wslink
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wslink' in version
+          '1.2.1' can have up to 20.53KiB
+        link: https://pypi.org/project/wslink/1.2.1/#files
+        package_name: wslink

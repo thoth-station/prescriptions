@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SlackBolt194PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slack-bolt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'slack-bolt' in version
+          '1.9.4' can have up to 168.99KiB
+        link: https://pypi.org/project/slack-bolt/1.9.4/#files
+        package_name: slack-bolt

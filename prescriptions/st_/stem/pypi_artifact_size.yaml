@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Stem180PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stem
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stem' in version
+          '1.8.0' can have up to 2.72MiB
+        link: https://pypi.org/project/stem/1.8.0/#files
+        package_name: stem

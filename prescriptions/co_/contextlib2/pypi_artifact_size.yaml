@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Contextlib22160PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contextlib2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'contextlib2' in version
+          '21.6.0' can have up to 42.77KiB
+        link: https://pypi.org/project/contextlib2/21.6.0/#files
+        package_name: contextlib2

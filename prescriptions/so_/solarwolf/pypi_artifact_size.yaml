@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Solarwolf160a4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: solarwolf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'solarwolf' in version
+          '1.6.0a4' can have up to 1.93MiB
+        link: https://pypi.org/project/solarwolf/1.6.0a4/#files
+        package_name: solarwolf

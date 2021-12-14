@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pss143PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pss
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pss' in version
+          '1.43' can have up to 26.01KiB
+        link: https://pypi.org/project/pss/1.43/#files
+        package_name: pss

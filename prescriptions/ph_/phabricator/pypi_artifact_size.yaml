@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Phabricator081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phabricator
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'phabricator' in version
+          '0.8.1' can have up to 20.20KiB
+        link: https://pypi.org/project/phabricator/0.8.1/#files
+        package_name: phabricator

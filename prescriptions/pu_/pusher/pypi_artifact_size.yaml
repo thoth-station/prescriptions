@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pusher310PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pusher
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pusher' in version
+          '3.1.0' can have up to 130.62KiB
+        link: https://pypi.org/project/pusher/3.1.0/#files
+        package_name: pusher

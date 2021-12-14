@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Epitran19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epitran
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'epitran' in version
+          '1.9' can have up to 134.47KiB
+        link: https://pypi.org/project/epitran/1.9/#files
+        package_name: epitran

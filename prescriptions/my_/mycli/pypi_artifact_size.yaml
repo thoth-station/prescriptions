@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mycli190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mycli
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mycli' in version
+          '1.9.0' can have up to 56.28KiB
+        link: https://pypi.org/project/mycli/1.9.0/#files
+        package_name: mycli

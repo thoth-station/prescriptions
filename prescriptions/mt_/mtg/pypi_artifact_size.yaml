@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mtg161PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mtg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mtg' in version
+          '1.6.1' can have up to 11.94KiB
+        link: https://pypi.org/project/mtg/1.6.1/#files
+        package_name: mtg

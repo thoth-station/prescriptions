@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Aiohomekit065PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohomekit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiohomekit' in version
+          '0.6.5' can have up to 96.48KiB
+        link: https://pypi.org/project/aiohomekit/0.6.5/#files
+        package_name: aiohomekit

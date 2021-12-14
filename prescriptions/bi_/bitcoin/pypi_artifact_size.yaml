@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bitcoin119PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitcoin
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bitcoin' in version
+          '1.1.9' can have up to 15.26KiB
+        link: https://pypi.org/project/bitcoin/1.1.9/#files
+        package_name: bitcoin

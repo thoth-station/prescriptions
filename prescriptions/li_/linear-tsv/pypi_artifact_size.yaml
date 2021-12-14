@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: LinearTsv110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linear-tsv
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'linear-tsv' in version
+          '1.1.0' can have up to 9.36KiB
+        link: https://pypi.org/project/linear-tsv/1.1.0/#files
+        package_name: linear-tsv

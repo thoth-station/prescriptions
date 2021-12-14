@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ToxGhActions300a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-gh-actions
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tox-gh-actions' in version
+          '3.0.0a1' can have up to 14.78KiB
+        link: https://pypi.org/project/tox-gh-actions/3.0.0a1/#files
+        package_name: tox-gh-actions

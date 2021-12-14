@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonSpidermonkey009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-spidermonkey
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-spidermonkey' in version
+          '0.0.9' can have up to 779.80KiB
+        link: https://pypi.org/project/python-spidermonkey/0.0.9/#files
+        package_name: python-spidermonkey

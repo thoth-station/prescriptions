@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rebulk310PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rebulk
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rebulk' in version
+          '3.1.0' can have up to 253.99KiB
+        link: https://pypi.org/project/rebulk/3.1.0/#files
+        package_name: rebulk

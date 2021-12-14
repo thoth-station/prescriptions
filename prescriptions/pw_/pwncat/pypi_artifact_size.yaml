@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pwncat012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pwncat
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pwncat' in version
+          '0.1.2' can have up to 101.08KiB
+        link: https://pypi.org/project/pwncat/0.1.2/#files
+        package_name: pwncat

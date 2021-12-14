@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AwsCdkAwsS3Assets1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-s3-assets
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-s3-assets' in version
+          '1.99.0' can have up to 39.76KiB
+        link: https://pypi.org/project/aws-cdk-aws-s3-assets/1.99.0/#files
+        package_name: aws-cdk-aws-s3-assets

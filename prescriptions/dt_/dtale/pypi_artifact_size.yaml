@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dtale192PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dtale
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dtale' in version
+          '1.9.2' can have up to 7.04MiB
+        link: https://pypi.org/project/dtale/1.9.2/#files
+        package_name: dtale

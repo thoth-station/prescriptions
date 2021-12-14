@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pid304PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pid
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pid' in version
+          '3.0.4' can have up to 15.85KiB
+        link: https://pypi.org/project/pid/3.0.4/#files
+        package_name: pid

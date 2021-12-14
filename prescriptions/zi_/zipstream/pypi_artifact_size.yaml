@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Zipstream114PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipstream
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zipstream' in version
+          '1.1.4' can have up to 5.65KiB
+        link: https://pypi.org/project/zipstream/1.1.4/#files
+        package_name: zipstream

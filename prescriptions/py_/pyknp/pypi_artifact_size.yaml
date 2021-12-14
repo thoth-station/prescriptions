@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyknp061PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyknp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyknp' in version
+          '0.6.1' can have up to 41.46KiB
+        link: https://pypi.org/project/pyknp/0.6.1/#files
+        package_name: pyknp

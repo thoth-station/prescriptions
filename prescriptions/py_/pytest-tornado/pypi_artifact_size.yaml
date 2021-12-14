@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestTornado081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornado
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-tornado' in version
+          '0.8.1' can have up to 9.36KiB
+        link: https://pypi.org/project/pytest-tornado/0.8.1/#files
+        package_name: pytest-tornado

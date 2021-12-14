@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pygraphviz17rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygraphviz
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pygraphviz' in version
+          '1.7rc2' can have up to 114.84KiB
+        link: https://pypi.org/project/pygraphviz/1.7rc2/#files
+        package_name: pygraphviz

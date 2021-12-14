@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pdpbox021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdpbox
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pdpbox' in version
+          '0.2.1' can have up to 32.45MiB
+        link: https://pypi.org/project/pdpbox/0.2.1/#files
+        package_name: pdpbox

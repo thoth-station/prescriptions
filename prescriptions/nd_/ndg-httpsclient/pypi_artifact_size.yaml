@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: NdgHttpsclient051PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ndg-httpsclient
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ndg-httpsclient' in version
+          '0.5.1' can have up to 33.24KiB
+        link: https://pypi.org/project/ndg-httpsclient/0.5.1/#files
+        package_name: ndg-httpsclient

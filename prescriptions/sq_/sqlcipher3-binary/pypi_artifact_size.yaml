@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sqlcipher3Binary045PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlcipher3-binary
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sqlcipher3-binary' in version
+          '0.4.5' can have up to 4.35MiB
+        link: https://pypi.org/project/sqlcipher3-binary/0.4.5/#files
+        package_name: sqlcipher3-binary

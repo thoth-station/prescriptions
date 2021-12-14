@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PloneTesting803PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plone-testing
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'plone-testing' in version
+          '8.0.3' can have up to 159.64KiB
+        link: https://pypi.org/project/plone-testing/8.0.3/#files
+        package_name: plone-testing

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Asysocks012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asysocks
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'asysocks' in version
+          '0.1.2' can have up to 46.66KiB
+        link: https://pypi.org/project/asysocks/0.1.2/#files
+        package_name: asysocks

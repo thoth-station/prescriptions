@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Spur039PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spur
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spur' in version
+          '0.3.9' can have up to 10.10KiB
+        link: https://pypi.org/project/spur/0.3.9/#files
+        package_name: spur

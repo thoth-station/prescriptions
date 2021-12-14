@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pickleshare075PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pickleshare
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pickleshare' in version
+          '0.7.5' can have up to 6.72KiB
+        link: https://pypi.org/project/pickleshare/0.7.5/#files
+        package_name: pickleshare

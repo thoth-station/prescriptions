@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Scapy24rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scapy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'scapy' in version
+          '2.4rc2' can have up to 2.08MiB
+        link: https://pypi.org/project/scapy/2.4rc2/#files
+        package_name: scapy

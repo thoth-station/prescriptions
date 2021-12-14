@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Agate163PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: agate
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'agate' in version
+          '1.6.3' can have up to 197.37KiB
+        link: https://pypi.org/project/agate/1.6.3/#files
+        package_name: agate

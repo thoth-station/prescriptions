@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Numexpr281PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numexpr
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'numexpr' in version
+          '2.8.1' can have up to 909.61KiB
+        link: https://pypi.org/project/numexpr/2.8.1/#files
+        package_name: numexpr

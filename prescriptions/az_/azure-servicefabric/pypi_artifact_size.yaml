@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureServicefabric8000PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-servicefabric
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-servicefabric' in version
+          '8.0.0.0' can have up to 401.73KiB
+        link: https://pypi.org/project/azure-servicefabric/8.0.0.0/#files
+        package_name: azure-servicefabric

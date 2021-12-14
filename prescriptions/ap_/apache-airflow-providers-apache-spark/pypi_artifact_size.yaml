@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersApacheSpark202rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-apache-spark
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-apache-spark' in version
+          '2.0.2rc1' can have up to 36.47KiB
+        link: https://pypi.org/project/apache-airflow-providers-apache-spark/2.0.2rc1/#files
+        package_name: apache-airflow-providers-apache-spark

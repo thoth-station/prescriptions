@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Neurom310PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neurom
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'neurom' in version
+          '3.1.0' can have up to 462.30KiB
+        link: https://pypi.org/project/neurom/3.1.0/#files
+        package_name: neurom

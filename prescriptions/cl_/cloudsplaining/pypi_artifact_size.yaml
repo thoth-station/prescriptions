@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cloudsplaining049PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cloudsplaining
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cloudsplaining' in version
+          '0.4.9' can have up to 1.56MiB
+        link: https://pypi.org/project/cloudsplaining/0.4.9/#files
+        package_name: cloudsplaining

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fdb202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fdb
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fdb' in version
+          '2.0.2' can have up to 876.64KiB
+        link: https://pypi.org/project/fdb/2.0.2/#files
+        package_name: fdb

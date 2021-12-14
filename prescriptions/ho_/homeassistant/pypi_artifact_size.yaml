@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Homeassistant202197PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: homeassistant
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'homeassistant' in version
+          '2021.9.7' can have up to 13.32MiB
+        link: https://pypi.org/project/homeassistant/2021.9.7/#files
+        package_name: homeassistant

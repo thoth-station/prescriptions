@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AwsCdkAwsCodestar1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-codestar
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-codestar' in version
+          '1.99.0' can have up to 37.96KiB
+        link: https://pypi.org/project/aws-cdk-aws-codestar/1.99.0/#files
+        package_name: aws-cdk-aws-codestar

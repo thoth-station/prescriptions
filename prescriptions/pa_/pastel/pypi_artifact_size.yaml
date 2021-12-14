@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pastel021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pastel
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pastel' in version
+          '0.2.1' can have up to 7.38KiB
+        link: https://pypi.org/project/pastel/0.2.1/#files
+        package_name: pastel

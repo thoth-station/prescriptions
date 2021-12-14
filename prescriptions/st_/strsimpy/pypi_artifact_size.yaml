@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Strsimpy021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: strsimpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'strsimpy' in version
+          '0.2.1' can have up to 44.79KiB
+        link: https://pypi.org/project/strsimpy/0.2.1/#files
+        package_name: strsimpy

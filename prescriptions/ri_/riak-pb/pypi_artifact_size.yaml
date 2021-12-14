@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: RiakPb2110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: riak-pb
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'riak-pb' in version
+          '2.1.1.0' can have up to 45.49KiB
+        link: https://pypi.org/project/riak-pb/2.1.1.0/#files
+        package_name: riak-pb

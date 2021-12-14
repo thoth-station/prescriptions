@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Columnize039PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: columnize
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'columnize' in version
+          '0.3.9' can have up to 8.70KiB
+        link: https://pypi.org/project/columnize/0.3.9/#files
+        package_name: columnize

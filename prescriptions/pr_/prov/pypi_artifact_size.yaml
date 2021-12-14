@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Prov200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prov
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'prov' in version
+          '2.0.0' can have up to 411.61KiB
+        link: https://pypi.org/project/prov/2.0.0/#files
+        package_name: prov

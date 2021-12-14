@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestConsoleScripts121PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-console-scripts
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-console-scripts' in version
+          '1.2.1' can have up to 13.30KiB
+        link: https://pypi.org/project/pytest-console-scripts/1.2.1/#files
+        package_name: pytest-console-scripts

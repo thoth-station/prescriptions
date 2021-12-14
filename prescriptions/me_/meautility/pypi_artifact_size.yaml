@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Meautility150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: meautility
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'meautility' in version
+          '1.5.0' can have up to 38.65KiB
+        link: https://pypi.org/project/meautility/1.5.0/#files
+        package_name: meautility

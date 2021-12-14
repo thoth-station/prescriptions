@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wstools048PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wstools
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wstools' in version
+          '0.4.8' can have up to 195.01KiB
+        link: https://pypi.org/project/wstools/0.4.8/#files
+        package_name: wstools

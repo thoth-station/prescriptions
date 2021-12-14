@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pretend109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pretend
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pretend' in version
+          '1.0.9' can have up to 4.73KiB
+        link: https://pypi.org/project/pretend/1.0.9/#files
+        package_name: pretend

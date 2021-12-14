@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nmrglue08PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nmrglue
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nmrglue' in version
+          '0.8' can have up to 213.81KiB
+        link: https://pypi.org/project/nmrglue/0.8/#files
+        package_name: nmrglue

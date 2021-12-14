@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Wikipedia140PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wikipedia
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wikipedia' in version
+          '1.4.0' can have up to 27.10KiB
+        link: https://pypi.org/project/wikipedia/1.4.0/#files
+        package_name: wikipedia

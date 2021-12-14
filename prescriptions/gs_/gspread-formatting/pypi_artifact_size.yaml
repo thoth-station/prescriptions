@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GspreadFormatting105PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-formatting
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gspread-formatting' in version
+          '1.0.5' can have up to 41.14KiB
+        link: https://pypi.org/project/gspread-formatting/1.0.5/#files
+        package_name: gspread-formatting

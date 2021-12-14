@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ply39PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ply
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ply' in version
+          '3.9' can have up to 147.22KiB
+        link: https://pypi.org/project/ply/3.9/#files
+        package_name: ply

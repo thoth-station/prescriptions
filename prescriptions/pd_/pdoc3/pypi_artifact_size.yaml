@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pdoc3092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdoc3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pdoc3' in version
+          '0.9.2' can have up to 82.82KiB
+        link: https://pypi.org/project/pdoc3/0.9.2/#files
+        package_name: pdoc3

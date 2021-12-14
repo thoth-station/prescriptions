@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Q26PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: q
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'q' in version
+          '2.6' can have up to 7.51KiB
+        link: https://pypi.org/project/q/2.6/#files
+        package_name: q

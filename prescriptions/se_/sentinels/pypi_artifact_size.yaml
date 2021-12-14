@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Sentinels100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentinels
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sentinels' in version
+          '1.0.0' can have up to 3.98KiB
+        link: https://pypi.org/project/sentinels/1.0.0/#files
+        package_name: sentinels

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestFlake8107PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flake8
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-flake8' in version
+          '1.0.7' can have up to 9.34KiB
+        link: https://pypi.org/project/pytest-flake8/1.0.7/#files
+        package_name: pytest-flake8

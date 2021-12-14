@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tableauserverclient09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tableauserverclient
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tableauserverclient' in version
+          '0.9' can have up to 79.41KiB
+        link: https://pypi.org/project/tableauserverclient/0.9/#files
+        package_name: tableauserverclient

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SnowflakeConnectorPython271PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snowflake-connector-python
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'snowflake-connector-python' in version
+          '2.7.1' can have up to 14.22MiB
+        link: https://pypi.org/project/snowflake-connector-python/2.7.1/#files
+        package_name: snowflake-connector-python

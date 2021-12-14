@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Functoolz04PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: functoolz
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'functoolz' in version
+          '0.4' can have up to 2.78KiB
+        link: https://pypi.org/project/functoolz/0.4/#files
+        package_name: functoolz

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ed2551915PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ed25519
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ed25519' in version
+          '1.5' can have up to 848.61KiB
+        link: https://pypi.org/project/ed25519/1.5/#files
+        package_name: ed25519

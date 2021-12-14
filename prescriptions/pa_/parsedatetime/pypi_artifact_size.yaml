@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Parsedatetime26PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parsedatetime
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'parsedatetime' in version
+          '2.6' can have up to 58.71KiB
+        link: https://pypi.org/project/parsedatetime/2.6/#files
+        package_name: parsedatetime

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonGilt123PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-gilt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-gilt' in version
+          '1.2.3' can have up to 22.03KiB
+        link: https://pypi.org/project/python-gilt/1.2.3/#files
+        package_name: python-gilt

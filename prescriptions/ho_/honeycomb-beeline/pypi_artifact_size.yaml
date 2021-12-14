@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: HoneycombBeeline292PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: honeycomb-beeline
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'honeycomb-beeline' in version
+          '2.9.2' can have up to 34.33KiB
+        link: https://pypi.org/project/honeycomb-beeline/2.9.2/#files
+        package_name: honeycomb-beeline

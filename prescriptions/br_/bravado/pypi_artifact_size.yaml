@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bravado932PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bravado
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bravado' in version
+          '9.3.2' can have up to 27.00KiB
+        link: https://pypi.org/project/bravado/9.3.2/#files
+        package_name: bravado

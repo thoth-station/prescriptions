@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DockerPycreds040PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker-pycreds
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docker-pycreds' in version
+          '0.4.0' can have up to 8.77KiB
+        link: https://pypi.org/project/docker-pycreds/0.4.0/#files
+        package_name: docker-pycreds

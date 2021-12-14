@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Boto31999PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'boto3' in version
+          '1.9.99' can have up to 125.51KiB
+        link: https://pypi.org/project/boto3/1.9.99/#files
+        package_name: boto3

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Py3status39PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3status
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py3status' in version
+          '3.9' can have up to 269.12KiB
+        link: https://pypi.org/project/py3status/3.9/#files
+        package_name: py3status

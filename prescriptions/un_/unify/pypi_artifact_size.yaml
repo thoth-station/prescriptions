@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Unify05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unify
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'unify' in version
+          '0.5' can have up to 4.26KiB
+        link: https://pypi.org/project/unify/0.5/#files
+        package_name: unify

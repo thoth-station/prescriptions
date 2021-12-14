@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Flasgger095PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flasgger
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flasgger' in version
+          '0.9.5' can have up to 3.73MiB
+        link: https://pypi.org/project/flasgger/0.9.5/#files
+        package_name: flasgger

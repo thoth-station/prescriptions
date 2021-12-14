@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JupyterNbutils013PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-nbutils
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-nbutils' in version
+          '0.1.3' can have up to 7.53KiB
+        link: https://pypi.org/project/jupyter-nbutils/0.1.3/#files
+        package_name: jupyter-nbutils

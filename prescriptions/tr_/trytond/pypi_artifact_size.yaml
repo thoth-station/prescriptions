@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Trytond622PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trytond
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'trytond' in version
+          '6.2.2' can have up to 987.63KiB
+        link: https://pypi.org/project/trytond/6.2.2/#files
+        package_name: trytond

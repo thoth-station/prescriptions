@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cfscrape211PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfscrape
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cfscrape' in version
+          '2.1.1' can have up to 15.01KiB
+        link: https://pypi.org/project/cfscrape/2.1.1/#files
+        package_name: cfscrape

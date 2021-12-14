@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ColconPowershell036PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-powershell
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colcon-powershell' in version
+          '0.3.6' can have up to 8.28KiB
+        link: https://pypi.org/project/colcon-powershell/0.3.6/#files
+        package_name: colcon-powershell

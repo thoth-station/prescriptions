@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Findlibs002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: findlibs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'findlibs' in version
+          '0.0.2' can have up to 6.07KiB
+        link: https://pypi.org/project/findlibs/0.0.2/#files
+        package_name: findlibs

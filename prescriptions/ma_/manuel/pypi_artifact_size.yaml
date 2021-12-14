@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Manuel190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: manuel
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'manuel' in version
+          '1.9.0' can have up to 38.71KiB
+        link: https://pypi.org/project/manuel/1.9.0/#files
+        package_name: manuel

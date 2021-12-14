@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Ecdsa09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ecdsa
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ecdsa' in version
+          '0.9' can have up to 44.12KiB
+        link: https://pypi.org/project/ecdsa/0.9/#files
+        package_name: ecdsa

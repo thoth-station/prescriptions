@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Kaleido021post1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaleido
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kaleido' in version
+          '0.2.1.post1' can have up to 68.33MiB
+        link: https://pypi.org/project/kaleido/0.2.1.post1/#files
+        package_name: kaleido

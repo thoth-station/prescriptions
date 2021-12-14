@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersApacheHive210rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-apache-hive
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-apache-hive' in version
+          '2.1.0rc1' can have up to 51.96KiB
+        link: https://pypi.org/project/apache-airflow-providers-apache-hive/2.1.0rc1/#files
+        package_name: apache-airflow-providers-apache-hive

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Invectio020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invectio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'invectio' in version
+          '0.2.0' can have up to 8.61KiB
+        link: https://pypi.org/project/invectio/0.2.0/#files
+        package_name: invectio

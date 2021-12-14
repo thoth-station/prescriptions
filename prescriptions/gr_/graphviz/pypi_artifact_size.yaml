@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Graphviz09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphviz
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'graphviz' in version
+          '0.9' can have up to 162.29KiB
+        link: https://pypi.org/project/graphviz/0.9/#files
+        package_name: graphviz

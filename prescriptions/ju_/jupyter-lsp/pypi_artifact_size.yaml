@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JupyterLsp151PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-lsp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-lsp' in version
+          '1.5.1' can have up to 52.75KiB
+        link: https://pypi.org/project/jupyter-lsp/1.5.1/#files
+        package_name: jupyter-lsp

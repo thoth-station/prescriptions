@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersOpenfaas200rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-openfaas
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-openfaas' in version
+          '2.0.0rc2' can have up to 11.48KiB
+        link: https://pypi.org/project/apache-airflow-providers-openfaas/2.0.0rc2/#files
+        package_name: apache-airflow-providers-openfaas

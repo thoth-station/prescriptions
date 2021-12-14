@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Picard270b3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: picard
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'picard' in version
+          '2.7.0b3' can have up to 4.08MiB
+        link: https://pypi.org/project/picard/2.7.0b3/#files
+        package_name: picard

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Simpleparse222PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simpleparse
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'simpleparse' in version
+          '2.2.2' can have up to 240.49KiB
+        link: https://pypi.org/project/simpleparse/2.2.2/#files
+        package_name: simpleparse

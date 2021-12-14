@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cffsubr029post1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cffsubr
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cffsubr' in version
+          '0.2.9.post1' can have up to 12.08MiB
+        link: https://pypi.org/project/cffsubr/0.2.9.post1/#files
+        package_name: cffsubr

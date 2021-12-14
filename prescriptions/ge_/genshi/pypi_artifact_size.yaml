@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Genshi075PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: genshi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'genshi' in version
+          '0.7.5' can have up to 259.83KiB
+        link: https://pypi.org/project/genshi/0.7.5/#files
+        package_name: genshi

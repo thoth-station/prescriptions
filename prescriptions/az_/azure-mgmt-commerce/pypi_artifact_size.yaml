@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtCommerce600b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-commerce
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-commerce' in version
+          '6.0.0b1' can have up to 3.98MiB
+        link: https://pypi.org/project/azure-mgmt-commerce/6.0.0b1/#files
+        package_name: azure-mgmt-commerce

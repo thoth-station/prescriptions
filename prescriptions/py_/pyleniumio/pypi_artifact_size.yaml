@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyleniumio198PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyleniumio
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyleniumio' in version
+          '1.9.8' can have up to 32.03KiB
+        link: https://pypi.org/project/pyleniumio/1.9.8/#files
+        package_name: pyleniumio

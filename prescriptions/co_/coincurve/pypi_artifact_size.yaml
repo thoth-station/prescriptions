@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Coincurve900PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coincurve
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'coincurve' in version
+          '9.0.0' can have up to 919.36KiB
+        link: https://pypi.org/project/coincurve/9.0.0/#files
+        package_name: coincurve

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Barbar021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: barbar
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'barbar' in version
+          '0.2.1' can have up to 3.81KiB
+        link: https://pypi.org/project/barbar/0.2.1/#files
+        package_name: barbar

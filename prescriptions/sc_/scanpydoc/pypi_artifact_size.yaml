@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Scanpydoc073PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scanpydoc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'scanpydoc' in version
+          '0.7.3' can have up to 30.98KiB
+        link: https://pypi.org/project/scanpydoc/0.7.3/#files
+        package_name: scanpydoc

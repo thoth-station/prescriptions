@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Jaxns007PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaxns
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jaxns' in version
+          '0.0.7' can have up to 80.11KiB
+        link: https://pypi.org/project/jaxns/0.0.7/#files
+        package_name: jaxns

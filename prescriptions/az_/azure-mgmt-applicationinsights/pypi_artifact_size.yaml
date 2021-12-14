@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtApplicationinsights200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-applicationinsights
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-applicationinsights' in version
+          '2.0.0' can have up to 427.28KiB
+        link: https://pypi.org/project/azure-mgmt-applicationinsights/2.0.0/#files
+        package_name: azure-mgmt-applicationinsights

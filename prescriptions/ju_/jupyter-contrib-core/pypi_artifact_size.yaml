@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JupyterContribCore033PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-contrib-core
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-contrib-core' in version
+          '0.3.3' can have up to 17.64KiB
+        link: https://pypi.org/project/jupyter-contrib-core/0.3.3/#files
+        package_name: jupyter-contrib-core

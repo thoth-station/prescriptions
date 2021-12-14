@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonDateutil282PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-dateutil
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-dateutil' in version
+          '2.8.2' can have up to 348.95KiB
+        link: https://pypi.org/project/python-dateutil/2.8.2/#files
+        package_name: python-dateutil

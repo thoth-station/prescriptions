@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoAuthLdap300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-auth-ldap
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-auth-ldap' in version
+          '3.0.0' can have up to 51.15KiB
+        link: https://pypi.org/project/django-auth-ldap/3.0.0/#files
+        package_name: django-auth-ldap

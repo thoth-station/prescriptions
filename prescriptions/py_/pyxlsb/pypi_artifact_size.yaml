@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyxlsb109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxlsb
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyxlsb' in version
+          '1.0.9' can have up to 23.28KiB
+        link: https://pypi.org/project/pyxlsb/1.0.9/#files
+        package_name: pyxlsb

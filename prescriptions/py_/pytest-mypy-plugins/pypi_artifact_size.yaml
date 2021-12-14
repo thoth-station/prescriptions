@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestMypyPlugins192PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-mypy-plugins
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-mypy-plugins' in version
+          '1.9.2' can have up to 16.86KiB
+        link: https://pypi.org/project/pytest-mypy-plugins/1.9.2/#files
+        package_name: pytest-mypy-plugins

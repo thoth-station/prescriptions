@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AbslPy100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: absl-py
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'absl-py' in version
+          '1.0.0' can have up to 123.69KiB
+        link: https://pypi.org/project/absl-py/1.0.0/#files
+        package_name: absl-py

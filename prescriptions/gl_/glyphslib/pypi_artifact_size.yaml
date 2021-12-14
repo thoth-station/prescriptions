@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Glyphslib601PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glyphslib
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'glyphslib' in version
+          '6.0.1' can have up to 28.98MiB
+        link: https://pypi.org/project/glyphslib/6.0.1/#files
+        package_name: glyphslib

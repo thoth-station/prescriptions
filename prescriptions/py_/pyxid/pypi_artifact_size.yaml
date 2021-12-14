@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyxid10b6PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxid
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyxid' in version
+          '1.0b6' can have up to 9.28KiB
+        link: https://pypi.org/project/pyxid/1.0b6/#files
+        package_name: pyxid

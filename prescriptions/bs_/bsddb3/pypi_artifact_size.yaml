@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bsddb3629PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bsddb3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bsddb3' in version
+          '6.2.9' can have up to 225.07KiB
+        link: https://pypi.org/project/bsddb3/6.2.9/#files
+        package_name: bsddb3

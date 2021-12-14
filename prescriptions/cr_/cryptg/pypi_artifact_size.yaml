@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cryptg02post4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cryptg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cryptg' in version
+          '0.2.post4' can have up to 40.81KiB
+        link: https://pypi.org/project/cryptg/0.2.post4/#files
+        package_name: cryptg

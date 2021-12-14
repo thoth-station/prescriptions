@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Contentful191PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contentful
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'contentful' in version
+          '1.9.1' can have up to 18.39KiB
+        link: https://pypi.org/project/contentful/1.9.1/#files
+        package_name: contentful

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PreCommit293PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pre-commit' in version
+          '2.9.3' can have up to 180.62KiB
+        link: https://pypi.org/project/pre-commit/2.9.3/#files
+        package_name: pre-commit

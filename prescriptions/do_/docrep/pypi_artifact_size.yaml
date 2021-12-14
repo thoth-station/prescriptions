@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Docrep032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docrep
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docrep' in version
+          '0.3.2' can have up to 32.42KiB
+        link: https://pypi.org/project/docrep/0.3.2/#files
+        package_name: docrep

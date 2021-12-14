@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Llvmlite090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: llvmlite
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'llvmlite' in version
+          '0.9.0' can have up to 94.29KiB
+        link: https://pypi.org/project/llvmlite/0.9.0/#files
+        package_name: llvmlite

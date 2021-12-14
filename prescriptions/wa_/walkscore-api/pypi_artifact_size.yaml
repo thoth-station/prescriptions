@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: WalkscoreApi101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: walkscore-api
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'walkscore-api' in version
+          '1.0.1' can have up to 20.02KiB
+        link: https://pypi.org/project/walkscore-api/1.0.1/#files
+        package_name: walkscore-api

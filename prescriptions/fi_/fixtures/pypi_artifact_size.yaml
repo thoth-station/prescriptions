@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fixtures300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fixtures
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fixtures' in version
+          '3.0.0' can have up to 65.90KiB
+        link: https://pypi.org/project/fixtures/3.0.0/#files
+        package_name: fixtures

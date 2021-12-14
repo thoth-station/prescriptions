@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tqdm490PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tqdm
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tqdm' in version
+          '4.9.0' can have up to 99.60KiB
+        link: https://pypi.org/project/tqdm/4.9.0/#files
+        package_name: tqdm

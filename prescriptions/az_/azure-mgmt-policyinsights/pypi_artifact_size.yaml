@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtPolicyinsights110b2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-policyinsights
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-policyinsights' in version
+          '1.1.0b2' can have up to 102.48KiB
+        link: https://pypi.org/project/azure-mgmt-policyinsights/1.1.0b2/#files
+        package_name: azure-mgmt-policyinsights

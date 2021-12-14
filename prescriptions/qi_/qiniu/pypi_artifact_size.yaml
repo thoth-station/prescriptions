@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Qiniu750PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qiniu
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'qiniu' in version
+          '7.5.0' can have up to 35.96KiB
+        link: https://pypi.org/project/qiniu/7.5.0/#files
+        package_name: qiniu

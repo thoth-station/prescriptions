@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cachez012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachez
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cachez' in version
+          '0.1.2' can have up to 10.95KiB
+        link: https://pypi.org/project/cachez/0.1.2/#files
+        package_name: cachez

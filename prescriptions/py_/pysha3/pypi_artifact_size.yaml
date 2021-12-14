@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pysha310b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysha3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysha3' in version
+          '1.0b1' can have up to 808.80KiB
+        link: https://pypi.org/project/pysha3/1.0b1/#files
+        package_name: pysha3

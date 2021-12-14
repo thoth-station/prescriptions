@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Zanata2fedmsg02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zanata2fedmsg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zanata2fedmsg' in version
+          '0.2' can have up to 9.11KiB
+        link: https://pypi.org/project/zanata2fedmsg/0.2/#files
+        package_name: zanata2fedmsg

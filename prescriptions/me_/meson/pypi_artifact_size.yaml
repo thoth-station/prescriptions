@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Meson0602PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: meson
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'meson' in version
+          '0.60.2' can have up to 1.91MiB
+        link: https://pypi.org/project/meson/0.60.2/#files
+        package_name: meson

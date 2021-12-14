@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gitlint090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitlint
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gitlint' in version
+          '0.9.0' can have up to 60.96KiB
+        link: https://pypi.org/project/gitlint/0.9.0/#files
+        package_name: gitlint

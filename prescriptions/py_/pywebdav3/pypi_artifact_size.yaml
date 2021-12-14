@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pywebdav3099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywebdav3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pywebdav3' in version
+          '0.9.9' can have up to 51.22KiB
+        link: https://pypi.org/project/pywebdav3/0.9.9/#files
+        package_name: pywebdav3

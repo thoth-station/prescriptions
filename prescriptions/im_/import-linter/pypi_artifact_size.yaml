@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ImportLinter126PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: import-linter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'import-linter' in version
+          '1.2.6' can have up to 20.78KiB
+        link: https://pypi.org/project/import-linter/1.2.6/#files
+        package_name: import-linter

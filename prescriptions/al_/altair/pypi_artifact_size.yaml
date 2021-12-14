@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Altair420rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: altair
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'altair' in version
+          '4.2.0rc1' can have up to 793.09KiB
+        link: https://pypi.org/project/altair/4.2.0rc1/#files
+        package_name: altair

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rosinstall078PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rosinstall
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rosinstall' in version
+          '0.7.8' can have up to 25.81KiB
+        link: https://pypi.org/project/rosinstall/0.7.8/#files
+        package_name: rosinstall

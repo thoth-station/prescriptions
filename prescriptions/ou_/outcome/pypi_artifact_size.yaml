@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Outcome110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: outcome
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'outcome' in version
+          '1.1.0' can have up to 17.74KiB
+        link: https://pypi.org/project/outcome/1.1.0/#files
+        package_name: outcome

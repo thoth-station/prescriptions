@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rasa302PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasa
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rasa' in version
+          '3.0.2' can have up to 776.19KiB
+        link: https://pypi.org/project/rasa/3.0.2/#files
+        package_name: rasa

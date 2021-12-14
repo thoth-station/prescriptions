@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fastecdsa223PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastecdsa
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fastecdsa' in version
+          '2.2.3' can have up to 55.59KiB
+        link: https://pypi.org/project/fastecdsa/2.2.3/#files
+        package_name: fastecdsa

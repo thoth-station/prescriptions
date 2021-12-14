@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Beanstalkc040PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beanstalkc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'beanstalkc' in version
+          '0.4.0' can have up to 13.59KiB
+        link: https://pypi.org/project/beanstalkc/0.4.0/#files
+        package_name: beanstalkc

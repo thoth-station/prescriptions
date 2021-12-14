@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Netssh2017PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netssh2
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netssh2' in version
+          '0.1.7' can have up to 32.21KiB
+        link: https://pypi.org/project/netssh2/0.1.7/#files
+        package_name: netssh2

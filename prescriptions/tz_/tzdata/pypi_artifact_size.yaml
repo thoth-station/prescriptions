@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Tzdata20215PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tzdata
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tzdata' in version
+          '2021.5' can have up to 331.48KiB
+        link: https://pypi.org/project/tzdata/2021.5/#files
+        package_name: tzdata

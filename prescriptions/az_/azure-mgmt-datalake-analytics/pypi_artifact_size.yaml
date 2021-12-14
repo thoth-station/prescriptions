@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtDatalakeAnalytics060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-datalake-analytics
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-datalake-analytics' in version
+          '0.6.0' can have up to 302.65KiB
+        link: https://pypi.org/project/azure-mgmt-datalake-analytics/0.6.0/#files
+        package_name: azure-mgmt-datalake-analytics

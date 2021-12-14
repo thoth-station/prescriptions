@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: LineProfiler331PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: line-profiler
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'line-profiler' in version
+          '3.3.1' can have up to 66.41KiB
+        link: https://pypi.org/project/line-profiler/3.3.1/#files
+        package_name: line-profiler

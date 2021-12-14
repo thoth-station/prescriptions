@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Logan072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: logan
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'logan' in version
+          '0.7.2' can have up to 6.61KiB
+        link: https://pypi.org/project/logan/0.7.2/#files
+        package_name: logan

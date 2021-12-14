@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pypck079PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypck
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pypck' in version
+          '0.7.9' can have up to 50.08KiB
+        link: https://pypi.org/project/pypck/0.7.9/#files
+        package_name: pypck

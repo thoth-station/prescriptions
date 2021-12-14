@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rustcfg002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rustcfg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rustcfg' in version
+          '0.0.2' can have up to 4.70KiB
+        link: https://pypi.org/project/rustcfg/0.0.2/#files
+        package_name: rustcfg

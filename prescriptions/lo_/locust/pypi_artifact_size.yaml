@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Locust252dev2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: locust
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'locust' in version
+          '2.5.2.dev2' can have up to 1.23MiB
+        link: https://pypi.org/project/locust/2.5.2.dev2/#files
+        package_name: locust

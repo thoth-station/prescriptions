@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DjangoMoney21PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-money
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-money' in version
+          '2.1' can have up to 33.14KiB
+        link: https://pypi.org/project/django-money/2.1/#files
+        package_name: django-money

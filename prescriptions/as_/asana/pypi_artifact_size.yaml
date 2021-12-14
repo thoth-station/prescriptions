@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Asana092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asana
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'asana' in version
+          '0.9.2' can have up to 42.43KiB
+        link: https://pypi.org/project/asana/0.9.2/#files
+        package_name: asana

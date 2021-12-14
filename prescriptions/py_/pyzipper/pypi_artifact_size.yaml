@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyzipper035PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzipper
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyzipper' in version
+          '0.3.5' can have up to 158.99KiB
+        link: https://pypi.org/project/pyzipper/0.3.5/#files
+        package_name: pyzipper

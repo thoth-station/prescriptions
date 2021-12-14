@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AwsCdkAwsEks1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-eks
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-eks' in version
+          '1.99.0' can have up to 432.12KiB
+        link: https://pypi.org/project/aws-cdk-aws-eks/1.99.0/#files
+        package_name: aws-cdk-aws-eks

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pdoc801PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdoc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pdoc' in version
+          '8.0.1' can have up to 104.39KiB
+        link: https://pypi.org/project/pdoc/8.0.1/#files
+        package_name: pdoc

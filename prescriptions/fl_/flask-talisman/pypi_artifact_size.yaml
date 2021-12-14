@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FlaskTalisman081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-talisman
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flask-talisman' in version
+          '0.8.1' can have up to 23.24KiB
+        link: https://pypi.org/project/flask-talisman/0.8.1/#files
+        package_name: flask-talisman

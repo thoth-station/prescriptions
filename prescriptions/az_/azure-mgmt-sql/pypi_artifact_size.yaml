@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtSql301PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-sql
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-sql' in version
+          '3.0.1' can have up to 973.27KiB
+        link: https://pypi.org/project/azure-mgmt-sql/3.0.1/#files
+        package_name: azure-mgmt-sql

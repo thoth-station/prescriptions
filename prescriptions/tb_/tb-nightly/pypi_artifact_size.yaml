@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TbNightly280a20211212PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tb-nightly
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tb-nightly' in version
+          '2.8.0a20211212' can have up to 5.50MiB
+        link: https://pypi.org/project/tb-nightly/2.8.0a20211212/#files
+        package_name: tb-nightly

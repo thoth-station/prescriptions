@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rpkg163PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpkg
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rpkg' in version
+          '1.63' can have up to 183.95KiB
+        link: https://pypi.org/project/rpkg/1.63/#files
+        package_name: rpkg

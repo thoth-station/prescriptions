@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Slacker099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'slacker' in version
+          '0.9.9' can have up to 5.94KiB
+        link: https://pypi.org/project/slacker/0.9.9/#files
+        package_name: slacker

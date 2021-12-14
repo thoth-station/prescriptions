@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Locales002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: locales
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'locales' in version
+          '0.0.2' can have up to 3.59KiB
+        link: https://pypi.org/project/locales/0.0.2/#files
+        package_name: locales

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Bcc018PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bcc' in version
+          '0.1.8' can have up to 8.98KiB
+        link: https://pypi.org/project/bcc/0.1.8/#files
+        package_name: bcc

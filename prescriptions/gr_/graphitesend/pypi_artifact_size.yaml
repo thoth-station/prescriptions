@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Graphitesend070PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphitesend
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'graphitesend' in version
+          '0.7.0' can have up to 5.31KiB
+        link: https://pypi.org/project/graphitesend/0.7.0/#files
+        package_name: graphitesend

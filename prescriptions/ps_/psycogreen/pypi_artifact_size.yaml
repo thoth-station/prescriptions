@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Psycogreen102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycogreen
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'psycogreen' in version
+          '1.0.2' can have up to 5.28KiB
+        link: https://pypi.org/project/psycogreen/1.0.2/#files
+        package_name: psycogreen

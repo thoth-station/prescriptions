@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Stevedore350PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stevedore
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stevedore' in version
+          '3.5.0' can have up to 501.51KiB
+        link: https://pypi.org/project/stevedore/3.5.0/#files
+        package_name: stevedore

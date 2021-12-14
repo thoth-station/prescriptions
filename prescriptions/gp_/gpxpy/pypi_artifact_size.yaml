@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Gpxpy150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpxpy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gpxpy' in version
+          '1.5.0' can have up to 108.98KiB
+        link: https://pypi.org/project/gpxpy/1.5.0/#files
+        package_name: gpxpy

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pysrt112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysrt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysrt' in version
+          '1.1.2' can have up to 101.92KiB
+        link: https://pypi.org/project/pysrt/1.1.2/#files
+        package_name: pysrt

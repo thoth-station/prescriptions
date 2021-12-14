@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pykeops15PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pykeops
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pykeops' in version
+          '1.5' can have up to 357.93KiB
+        link: https://pypi.org/project/pykeops/1.5/#files
+        package_name: pykeops

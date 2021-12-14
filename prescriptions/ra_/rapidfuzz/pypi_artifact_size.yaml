@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Rapidfuzz191PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rapidfuzz
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rapidfuzz' in version
+          '1.9.1' can have up to 1.16MiB
+        link: https://pypi.org/project/rapidfuzz/1.9.1/#files
+        package_name: rapidfuzz

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Kerberoast016PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kerberoast
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kerberoast' in version
+          '0.1.6' can have up to 9.20KiB
+        link: https://pypi.org/project/kerberoast/0.1.6/#files
+        package_name: kerberoast

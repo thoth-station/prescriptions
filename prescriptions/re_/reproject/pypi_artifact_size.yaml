@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Reproject08PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: reproject
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'reproject' in version
+          '0.8' can have up to 1.26MiB
+        link: https://pypi.org/project/reproject/0.8/#files
+        package_name: reproject

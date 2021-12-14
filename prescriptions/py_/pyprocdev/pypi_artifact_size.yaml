@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyprocdev02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyprocdev
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyprocdev' in version
+          '0.2' can have up to 23.68KiB
+        link: https://pypi.org/project/pyprocdev/0.2/#files
+        package_name: pyprocdev

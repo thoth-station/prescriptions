@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mtranslate18PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mtranslate
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mtranslate' in version
+          '1.8' can have up to 2.39KiB
+        link: https://pypi.org/project/mtranslate/1.8/#files
+        package_name: mtranslate

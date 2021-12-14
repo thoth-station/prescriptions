@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Paddlepaddle221PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paddlepaddle
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'paddlepaddle' in version
+          '2.2.1' can have up to 103.39MiB
+        link: https://pypi.org/project/paddlepaddle/2.2.1/#files
+        package_name: paddlepaddle

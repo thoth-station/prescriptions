@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Contextvars24PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contextvars
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'contextvars' in version
+          '2.4' can have up to 9.35KiB
+        link: https://pypi.org/project/contextvars/2.4/#files
+        package_name: contextvars

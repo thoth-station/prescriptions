@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dipy141PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dipy
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dipy' in version
+          '1.4.1' can have up to 11.08MiB
+        link: https://pypi.org/project/dipy/1.4.1/#files
+        package_name: dipy

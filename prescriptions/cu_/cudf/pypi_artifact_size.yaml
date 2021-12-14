@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cudf061post1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cudf
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cudf' in version
+          '0.6.1.post1' can have up to 1.11KiB
+        link: https://pypi.org/project/cudf/0.6.1.post1/#files
+        package_name: cudf

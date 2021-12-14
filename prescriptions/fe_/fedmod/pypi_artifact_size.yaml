@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fedmod005PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fedmod
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fedmod' in version
+          '0.0.5' can have up to 13.91KiB
+        link: https://pypi.org/project/fedmod/0.0.5/#files
+        package_name: fedmod

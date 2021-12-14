@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AiohttpSocks071PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-socks
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiohttp-socks' in version
+          '0.7.1' can have up to 9.05KiB
+        link: https://pypi.org/project/aiohttp-socks/0.7.1/#files
+        package_name: aiohttp-socks

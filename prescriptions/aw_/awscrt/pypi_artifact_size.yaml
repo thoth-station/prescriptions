@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Awscrt097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awscrt
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awscrt' in version
+          '0.9.7' can have up to 3.77MiB
+        link: https://pypi.org/project/awscrt/0.9.7/#files
+        package_name: awscrt

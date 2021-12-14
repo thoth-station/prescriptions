@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PytestAzurepipelines100rc5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-azurepipelines
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-azurepipelines' in version
+          '1.0.0rc5' can have up to 9.55KiB
+        link: https://pypi.org/project/pytest-azurepipelines/1.0.0rc5/#files
+        package_name: pytest-azurepipelines

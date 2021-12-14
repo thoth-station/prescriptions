@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DottedDict113PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotted-dict
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dotted-dict' in version
+          '1.1.3' can have up to 3.61KiB
+        link: https://pypi.org/project/dotted-dict/1.1.3/#files
+        package_name: dotted-dict

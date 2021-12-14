@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Mapbox090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mapbox
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mapbox' in version
+          '0.9.0' can have up to 16.66KiB
+        link: https://pypi.org/project/mapbox/0.9.0/#files
+        package_name: mapbox

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Kfp189PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kfp' in version
+          '1.8.9' can have up to 289.37KiB
+        link: https://pypi.org/project/kfp/1.8.9/#files
+        package_name: kfp

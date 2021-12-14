@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Retext722PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retext
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'retext' in version
+          '7.2.2' can have up to 510.40KiB
+        link: https://pypi.org/project/retext/7.2.2/#files
+        package_name: retext

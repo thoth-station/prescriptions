@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nose137PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nose' in version
+          '1.3.7' can have up to 273.91KiB
+        link: https://pypi.org/project/nose/1.3.7/#files
+        package_name: nose

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Multiprocess0709PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multiprocess
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'multiprocess' in version
+          '0.70.9' can have up to 1.50MiB
+        link: https://pypi.org/project/multiprocess/0.70.9/#files
+        package_name: multiprocess

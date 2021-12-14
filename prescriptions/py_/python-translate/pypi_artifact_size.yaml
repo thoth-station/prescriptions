@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonTranslate109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-translate
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-translate' in version
+          '1.0.9' can have up to 20.76KiB
+        link: https://pypi.org/project/python-translate/1.0.9/#files
+        package_name: python-translate

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Fabric260PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fabric
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fabric' in version
+          '2.6.0' can have up to 160.04KiB
+        link: https://pypi.org/project/fabric/2.6.0/#files
+        package_name: fabric

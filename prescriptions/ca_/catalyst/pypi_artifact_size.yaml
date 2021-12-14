@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Catalyst219rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catalyst
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'catalyst' in version
+          '21.9rc1' can have up to 562.73KiB
+        link: https://pypi.org/project/catalyst/21.9rc1/#files
+        package_name: catalyst

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nosexcover109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nosexcover
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nosexcover' in version
+          '1.0.9' can have up to 2.66KiB
+        link: https://pypi.org/project/nosexcover/1.0.9/#files
+        package_name: nosexcover

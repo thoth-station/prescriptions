@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AliyunPythonSdkCore295PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aliyun-python-sdk-core
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aliyun-python-sdk-core' in version
+          '2.9.5' can have up to 27.74KiB
+        link: https://pypi.org/project/aliyun-python-sdk-core/2.9.5/#files
+        package_name: aliyun-python-sdk-core

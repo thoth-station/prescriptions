@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pyshark043PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyshark
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyshark' in version
+          '0.4.3' can have up to 30.16KiB
+        link: https://pypi.org/project/pyshark/0.4.3/#files
+        package_name: pyshark

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DatadogApiClient170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datadog-api-client
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'datadog-api-client' in version
+          '1.7.0' can have up to 2.13MiB
+        link: https://pypi.org/project/datadog-api-client/1.7.0/#files
+        package_name: datadog-api-client

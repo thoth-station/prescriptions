@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Networkx26rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: networkx
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'networkx' in version
+          '2.6rc2' can have up to 1.84MiB
+        link: https://pypi.org/project/networkx/2.6rc2/#files
+        package_name: networkx

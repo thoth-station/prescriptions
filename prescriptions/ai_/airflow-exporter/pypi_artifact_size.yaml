@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AirflowExporter153PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airflow-exporter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'airflow-exporter' in version
+          '1.5.3' can have up to 8.96KiB
+        link: https://pypi.org/project/airflow-exporter/1.5.3/#files
+        package_name: airflow-exporter

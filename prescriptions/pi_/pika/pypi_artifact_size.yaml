@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pika120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pika
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pika' in version
+          '1.2.0' can have up to 150.71KiB
+        link: https://pypi.org/project/pika/1.2.0/#files
+        package_name: pika

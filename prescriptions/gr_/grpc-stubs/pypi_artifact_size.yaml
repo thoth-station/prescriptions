@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: GrpcStubs1247PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-stubs
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grpc-stubs' in version
+          '1.24.7' can have up to 11.37KiB
+        link: https://pypi.org/project/grpc-stubs/1.24.7/#files
+        package_name: grpc-stubs

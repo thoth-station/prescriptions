@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonSlugify502PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-slugify
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-slugify' in version
+          '5.0.2' can have up to 11.68KiB
+        link: https://pypi.org/project/python-slugify/5.0.2/#files
+        package_name: python-slugify

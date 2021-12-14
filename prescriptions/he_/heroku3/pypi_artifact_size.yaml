@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Heroku3514PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: heroku3
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'heroku3' in version
+          '5.1.4' can have up to 156.63KiB
+        link: https://pypi.org/project/heroku3/5.1.4/#files
+        package_name: heroku3

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Pynuvo02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynuvo
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pynuvo' in version
+          '0.2' can have up to 5.56KiB
+        link: https://pypi.org/project/pynuvo/0.2/#files
+        package_name: pynuvo

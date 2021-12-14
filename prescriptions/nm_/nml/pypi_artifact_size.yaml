@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: NmlR1512PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nml
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nml' in version
+          'r1512' can have up to 325.93KiB
+        link: https://pypi.org/project/nml/r1512/#files
+        package_name: nml

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersJenkins203rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-jenkins
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-jenkins' in version
+          '2.0.3rc1' can have up to 17.98KiB
+        link: https://pypi.org/project/apache-airflow-providers-jenkins/2.0.3rc1/#files
+        package_name: apache-airflow-providers-jenkins

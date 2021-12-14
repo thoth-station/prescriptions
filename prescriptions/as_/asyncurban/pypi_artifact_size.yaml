@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Asyncurban033PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncurban
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'asyncurban' in version
+          '0.3.3' can have up to 7.35KiB
+        link: https://pypi.org/project/asyncurban/0.3.3/#files
+        package_name: asyncurban

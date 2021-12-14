@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Kubernetes901PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kubernetes
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kubernetes' in version
+          '9.0.1' can have up to 1.33MiB
+        link: https://pypi.org/project/kubernetes/9.0.1/#files
+        package_name: kubernetes

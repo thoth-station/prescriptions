@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AxPlatform022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ax-platform
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ax-platform' in version
+          '0.2.2' can have up to 9.06MiB
+        link: https://pypi.org/project/ax-platform/0.2.2/#files
+        package_name: ax-platform

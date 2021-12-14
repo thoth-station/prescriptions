@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AwsCdkAwsRedshift1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-redshift
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-redshift' in version
+          '1.99.0' can have up to 91.08KiB
+        link: https://pypi.org/project/aws-cdk-aws-redshift/1.99.0/#files
+        package_name: aws-cdk-aws-redshift

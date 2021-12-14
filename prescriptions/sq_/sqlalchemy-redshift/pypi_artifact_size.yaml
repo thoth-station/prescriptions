@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SqlalchemyRedshift088PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sqlalchemy-redshift
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sqlalchemy-redshift' in version
+          '0.8.8' can have up to 38.02KiB
+        link: https://pypi.org/project/sqlalchemy-redshift/0.8.8/#files
+        package_name: sqlalchemy-redshift

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Publication003PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: publication
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'publication' in version
+          '0.0.3' can have up to 7.51KiB
+        link: https://pypi.org/project/publication/0.0.3/#files
+        package_name: publication

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AzureMgmtManagementgroups100b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-managementgroups
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-managementgroups' in version
+          '1.0.0b1' can have up to 65.02KiB
+        link: https://pypi.org/project/azure-mgmt-managementgroups/1.0.0b1/#files
+        package_name: azure-mgmt-managementgroups

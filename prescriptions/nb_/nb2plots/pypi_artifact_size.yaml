@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nb2plots06PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nb2plots
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nb2plots' in version
+          '0.6' can have up to 115.16KiB
+        link: https://pypi.org/project/nb2plots/0.6/#files
+        package_name: nb2plots

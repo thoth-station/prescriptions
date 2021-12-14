@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PylintPytest112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-pytest
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylint-pytest' in version
+          '1.1.2' can have up to 8.93KiB
+        link: https://pypi.org/project/pylint-pytest/1.1.2/#files
+        package_name: pylint-pytest

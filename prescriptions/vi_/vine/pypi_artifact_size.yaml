@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Vine500a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vine
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vine' in version
+          '5.0.0a1' can have up to 49.99KiB
+        link: https://pypi.org/project/vine/5.0.0a1/#files
+        package_name: vine

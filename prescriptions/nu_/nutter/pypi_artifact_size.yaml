@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Nutter0134PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nutter
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nutter' in version
+          '0.1.34' can have up to 50.81KiB
+        link: https://pypi.org/project/nutter/0.1.34/#files
+        package_name: nutter

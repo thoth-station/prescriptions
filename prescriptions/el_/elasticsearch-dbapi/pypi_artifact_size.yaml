@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ElasticsearchDbapi027PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-dbapi
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'elasticsearch-dbapi' in version
+          '0.2.7' can have up to 83.23KiB
+        link: https://pypi.org/project/elasticsearch-dbapi/0.2.7/#files
+        package_name: elasticsearch-dbapi

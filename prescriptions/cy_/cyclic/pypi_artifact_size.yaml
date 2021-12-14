@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Cyclic100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyclic
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cyclic' in version
+          '1.0.0' can have up to 2.49KiB
+        link: https://pypi.org/project/cyclic/1.0.0/#files
+        package_name: cyclic

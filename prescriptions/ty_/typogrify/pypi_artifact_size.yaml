@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Typogrify207PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typogrify
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'typogrify' in version
+          '2.0.7' can have up to 12.60KiB
+        link: https://pypi.org/project/typogrify/2.0.7/#files
+        package_name: typogrify

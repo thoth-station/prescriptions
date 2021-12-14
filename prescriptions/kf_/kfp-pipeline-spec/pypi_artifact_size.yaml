@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KfpPipelineSpec019PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp-pipeline-spec
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kfp-pipeline-spec' in version
+          '0.1.9' can have up to 17.18KiB
+        link: https://pypi.org/project/kfp-pipeline-spec/0.1.9/#files
+        package_name: kfp-pipeline-spec

@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Treq2150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: treq
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'treq' in version
+          '21.5.0' can have up to 69.65KiB
+        link: https://pypi.org/project/treq/21.5.0/#files
+        package_name: treq

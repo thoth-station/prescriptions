@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Dvc292PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dvc
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dvc' in version
+          '2.9.2' can have up to 509.94KiB
+        link: https://pypi.org/project/dvc/2.9.2/#files
+        package_name: dvc

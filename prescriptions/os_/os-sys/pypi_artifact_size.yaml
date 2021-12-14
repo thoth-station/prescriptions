@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: OsSys214PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: os-sys
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'os-sys' in version
+          '2.1.4' can have up to 14.84MiB
+        link: https://pypi.org/project/os-sys/2.1.4/#files
+        package_name: os-sys

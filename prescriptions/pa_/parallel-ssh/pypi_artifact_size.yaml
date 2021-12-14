@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ParallelSsh280PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parallel-ssh
+          index_url: "https://pypi.org/simple"
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'parallel-ssh' in version
+          '2.8.0' can have up to 80.93KiB
+        link: https://pypi.org/project/parallel-ssh/2.8.0/#files
+        package_name: parallel-ssh
