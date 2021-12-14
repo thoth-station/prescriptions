@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Gtts223PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gtts
+          version: ==2.2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gtts' in version
+          '2.2.3' can have up to 27.54KiB
+        link: https://pypi.org/project/gtts/2.2.3/#files
+        package_name: gtts

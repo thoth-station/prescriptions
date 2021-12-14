@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Jsonpickle200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpickle
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jsonpickle' in version
+          '2.0.0' can have up to 107.75KiB
+        link: https://pypi.org/project/jsonpickle/2.0.0/#files
+        package_name: jsonpickle

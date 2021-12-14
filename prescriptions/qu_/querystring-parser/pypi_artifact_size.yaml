@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: QuerystringParser124PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: querystring-parser
+          version: ==1.2.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'querystring-parser' in version
+          '1.2.4' can have up to 7.72KiB
+        link: https://pypi.org/project/querystring-parser/1.2.4/#files
+        package_name: querystring-parser

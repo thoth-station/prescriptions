@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Py4j092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py4j
+          version: ==0.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py4j' in version
+          '0.9.2' can have up to 1.25MiB
+        link: https://pypi.org/project/py4j/0.9.2/#files
+        package_name: py4j

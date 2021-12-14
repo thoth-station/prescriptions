@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Glob207PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glob2
+          version: ==0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'glob2' in version
+          '0.7' can have up to 10.45KiB
+        link: https://pypi.org/project/glob2/0.7/#files
+        package_name: glob2

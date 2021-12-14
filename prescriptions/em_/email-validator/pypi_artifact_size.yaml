@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: EmailValidator113PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: email-validator
+          version: ==1.1.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'email-validator' in version
+          '1.1.3' can have up to 23.91KiB
+        link: https://pypi.org/project/email-validator/1.1.3/#files
+        package_name: email-validator

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CupyCuda80780PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda80
+          version: ==7.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cupy-cuda80' in version
+          '7.8.0' can have up to 200.68MiB
+        link: https://pypi.org/project/cupy-cuda80/7.8.0/#files
+        package_name: cupy-cuda80

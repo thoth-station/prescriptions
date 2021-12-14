@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Munch251dev12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: munch
+          version: ==2.5.1.dev12
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'munch' in version
+          '2.5.1.dev12' can have up to 16.91KiB
+        link: https://pypi.org/project/munch/2.5.1.dev12/#files
+        package_name: munch

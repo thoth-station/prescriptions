@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Gevent2180PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gevent
+          version: ==21.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gevent' in version
+          '21.8.0' can have up to 6.18MiB
+        link: https://pypi.org/project/gevent/21.8.0/#files
+        package_name: gevent

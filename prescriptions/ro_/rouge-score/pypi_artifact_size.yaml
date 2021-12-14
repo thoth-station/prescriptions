@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: RougeScore004PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rouge-score
+          version: ==0.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rouge-score' in version
+          '0.0.4' can have up to 21.54KiB
+        link: https://pypi.org/project/rouge-score/0.0.4/#files
+        package_name: rouge-score

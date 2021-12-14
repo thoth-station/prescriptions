@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Plotly540PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plotly
+          version: ==5.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'plotly' in version
+          '5.4.0' can have up to 24.14MiB
+        link: https://pypi.org/project/plotly/5.4.0/#files
+        package_name: plotly

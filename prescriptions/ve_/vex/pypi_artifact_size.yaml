@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Vex009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vex
+          version: ==0.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vex' in version
+          '0.0.9' can have up to 29.59KiB
+        link: https://pypi.org/project/vex/0.0.9/#files
+        package_name: vex

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Hexbytes022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hexbytes
+          version: ==0.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hexbytes' in version
+          '0.2.2' can have up to 4.49MiB
+        link: https://pypi.org/project/hexbytes/0.2.2/#files
+        package_name: hexbytes

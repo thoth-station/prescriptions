@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonTwitter35PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-twitter
+          version: ==3.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-twitter' in version
+          '3.5' can have up to 85.65KiB
+        link: https://pypi.org/project/python-twitter/3.5/#files
+        package_name: python-twitter

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pylibravatar17PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibravatar
+          version: ==1.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylibravatar' in version
+          '1.7' can have up to 4.61KiB
+        link: https://pypi.org/project/pylibravatar/1.7/#files
+        package_name: pylibravatar

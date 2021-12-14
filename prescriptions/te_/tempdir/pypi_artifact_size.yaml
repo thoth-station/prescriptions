@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tempdir071PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tempdir
+          version: ==0.7.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tempdir' in version
+          '0.7.1' can have up to 5.75KiB
+        link: https://pypi.org/project/tempdir/0.7.1/#files
+        package_name: tempdir

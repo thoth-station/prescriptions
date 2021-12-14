@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ProductsZodbmountpoint12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-zodbmountpoint
+          version: ==1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'products-zodbmountpoint' in version
+          '1.2' can have up to 13.32KiB
+        link: https://pypi.org/project/products-zodbmountpoint/1.2/#files
+        package_name: products-zodbmountpoint

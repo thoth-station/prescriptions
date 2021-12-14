@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: TfdsNightly440dev202112140108PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfds-nightly
+          version: ==4.4.0.dev202112140108
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tfds-nightly' in version
+          '4.4.0.dev202112140108' can have up to 3.92MiB
+        link: https://pypi.org/project/tfds-nightly/4.4.0.dev202112140108/#files
+        package_name: tfds-nightly

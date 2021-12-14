@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BackportsShutilGetTerminalSize100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-shutil-get-terminal-size
+          version: ==1.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backports-shutil-get-terminal-size' in version
+          '1.0.0' can have up to 6.34KiB
+        link: https://pypi.org/project/backports-shutil-get-terminal-size/1.0.0/#files
+        package_name: backports-shutil-get-terminal-size

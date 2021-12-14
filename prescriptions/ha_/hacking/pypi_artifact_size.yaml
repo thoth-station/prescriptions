@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Hacking410PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hacking
+          version: ==4.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hacking' in version
+          '4.1.0' can have up to 60.46KiB
+        link: https://pypi.org/project/hacking/4.1.0/#files
+        package_name: hacking

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ec2Metadata260PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ec2-metadata
+          version: ==2.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ec2-metadata' in version
+          '2.6.0' can have up to 12.91KiB
+        link: https://pypi.org/project/ec2-metadata/2.6.0/#files
+        package_name: ec2-metadata

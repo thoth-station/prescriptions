@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Interfile031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interfile
+          version: ==0.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'interfile' in version
+          '0.3.1' can have up to 7.43KiB
+        link: https://pypi.org/project/interfile/0.3.1/#files
+        package_name: interfile

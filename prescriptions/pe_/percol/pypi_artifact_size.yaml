@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Percol021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: percol
+          version: ==0.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'percol' in version
+          '0.2.1' can have up to 20.14KiB
+        link: https://pypi.org/project/percol/0.2.1/#files
+        package_name: percol

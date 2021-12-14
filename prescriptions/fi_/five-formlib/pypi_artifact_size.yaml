@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FiveFormlib22PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: five-formlib
+          version: ==2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'five-formlib' in version
+          '2.2' can have up to 26.74KiB
+        link: https://pypi.org/project/five-formlib/2.2/#files
+        package_name: five-formlib

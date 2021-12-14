@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestCases365PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-cases
+          version: ==3.6.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-cases' in version
+          '3.6.5' can have up to 1.03MiB
+        link: https://pypi.org/project/pytest-cases/3.6.5/#files
+        package_name: pytest-cases

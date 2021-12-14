@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Bloom098PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bloom
+          version: ==0.9.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bloom' in version
+          '0.9.8' can have up to 141.17KiB
+        link: https://pypi.org/project/bloom/0.9.8/#files
+        package_name: bloom

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pythreejs230PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythreejs
+          version: ==2.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pythreejs' in version
+          '2.3.0' can have up to 4.50MiB
+        link: https://pypi.org/project/pythreejs/2.3.0/#files
+        package_name: pythreejs

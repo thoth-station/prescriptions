@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PyvisaPy052PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvisa-py
+          version: ==0.5.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyvisa-py' in version
+          '0.5.2' can have up to 75.14KiB
+        link: https://pypi.org/project/pyvisa-py/0.5.2/#files
+        package_name: pyvisa-py

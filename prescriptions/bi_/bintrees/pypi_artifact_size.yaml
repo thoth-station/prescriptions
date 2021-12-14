@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Bintrees220PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bintrees
+          version: ==2.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bintrees' in version
+          '2.2.0' can have up to 105.74KiB
+        link: https://pypi.org/project/bintrees/2.2.0/#files
+        package_name: bintrees

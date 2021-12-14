@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mpmath121PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mpmath
+          version: ==1.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mpmath' in version
+          '1.2.1' can have up to 2.04MiB
+        link: https://pypi.org/project/mpmath/1.2.1/#files
+        package_name: mpmath

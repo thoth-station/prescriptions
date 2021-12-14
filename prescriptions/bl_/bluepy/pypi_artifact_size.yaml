@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Bluepy130PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bluepy
+          version: ==1.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bluepy' in version
+          '1.3.0' can have up to 212.83KiB
+        link: https://pypi.org/project/bluepy/1.3.0/#files
+        package_name: bluepy

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Rxjson03PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rxjson
+          version: ==0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rxjson' in version
+          '0.3' can have up to 9.47KiB
+        link: https://pypi.org/project/rxjson/0.3/#files
+        package_name: rxjson

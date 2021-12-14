@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Parso083PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parso
+          version: ==0.8.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'parso' in version
+          '0.8.3' can have up to 390.69KiB
+        link: https://pypi.org/project/parso/0.8.3/#files
+        package_name: parso

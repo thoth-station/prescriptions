@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Checkov2099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: checkov
+          version: ==2.0.99
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'checkov' in version
+          '2.0.99' can have up to 656.10KiB
+        link: https://pypi.org/project/checkov/2.0.99/#files
+        package_name: checkov

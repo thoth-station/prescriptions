@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ElasticsearchCurator584PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-curator
+          version: ==5.8.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'elasticsearch-curator' in version
+          '5.8.4' can have up to 230.29KiB
+        link: https://pypi.org/project/elasticsearch-curator/5.8.4/#files
+        package_name: elasticsearch-curator

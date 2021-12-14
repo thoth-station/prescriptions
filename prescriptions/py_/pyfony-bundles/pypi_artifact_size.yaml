@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PyfonyBundles042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyfony-bundles
+          version: ==0.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyfony-bundles' in version
+          '0.4.2' can have up to 5.70KiB
+        link: https://pypi.org/project/pyfony-bundles/0.4.2/#files
+        package_name: pyfony-bundles

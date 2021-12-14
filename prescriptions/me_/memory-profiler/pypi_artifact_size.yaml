@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: MemoryProfiler09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: memory-profiler
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'memory-profiler' in version
+          '0.9' can have up to 4.64KiB
+        link: https://pypi.org/project/memory-profiler/0.9/#files
+        package_name: memory-profiler

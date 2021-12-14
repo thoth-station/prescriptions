@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Toposort17PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toposort
+          version: ==1.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'toposort' in version
+          '1.7' can have up to 10.42KiB
+        link: https://pypi.org/project/toposort/1.7/#files
+        package_name: toposort

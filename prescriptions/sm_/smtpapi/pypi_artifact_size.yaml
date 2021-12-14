@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Smtpapi049PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smtpapi
+          version: ==0.4.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'smtpapi' in version
+          '0.4.9' can have up to 4.54KiB
+        link: https://pypi.org/project/smtpapi/0.4.9/#files
+        package_name: smtpapi

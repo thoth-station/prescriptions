@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pgpy054PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgpy
+          version: ==0.5.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pgpy' in version
+          '0.5.4' can have up to 587.37KiB
+        link: https://pypi.org/project/pgpy/0.5.4/#files
+        package_name: pgpy

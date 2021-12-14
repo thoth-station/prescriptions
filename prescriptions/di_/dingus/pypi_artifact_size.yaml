@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Dingus034PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dingus
+          version: ==0.3.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dingus' in version
+          '0.3.4' can have up to 6.06KiB
+        link: https://pypi.org/project/dingus/0.3.4/#files
+        package_name: dingus

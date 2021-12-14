@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Traceback2140PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: traceback2
+          version: ==1.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'traceback2' in version
+          '1.4.0' can have up to 16.40KiB
+        link: https://pypi.org/project/traceback2/1.4.0/#files
+        package_name: traceback2

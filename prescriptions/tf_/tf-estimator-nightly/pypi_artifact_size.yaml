@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: TfEstimatorNightly280dev2021121409PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tf-estimator-nightly
+          version: ==2.8.0.dev2021121409
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tf-estimator-nightly' in version
+          '2.8.0.dev2021121409' can have up to 451.64KiB
+        link: https://pypi.org/project/tf-estimator-nightly/2.8.0.dev2021121409/#files
+        package_name: tf-estimator-nightly

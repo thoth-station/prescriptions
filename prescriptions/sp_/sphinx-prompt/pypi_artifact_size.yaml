@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SphinxPrompt150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-prompt
+          version: ==1.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinx-prompt' in version
+          '1.5.0' can have up to 4.39KiB
+        link: https://pypi.org/project/sphinx-prompt/1.5.0/#files
+        package_name: sphinx-prompt

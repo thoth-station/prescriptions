@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ClvmTools043PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clvm-tools
+          version: ==0.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'clvm-tools' in version
+          '0.4.3' can have up to 35.38KiB
+        link: https://pypi.org/project/clvm-tools/0.4.3/#files
+        package_name: clvm-tools

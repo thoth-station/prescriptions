@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Gtimelog093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gtimelog
+          version: ==0.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gtimelog' in version
+          '0.9.3' can have up to 248.60KiB
+        link: https://pypi.org/project/gtimelog/0.9.3/#files
+        package_name: gtimelog

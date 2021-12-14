@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PropertyCached164PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: property-cached
+          version: ==1.6.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'property-cached' in version
+          '1.6.4' can have up to 22.99KiB
+        link: https://pypi.org/project/property-cached/1.6.4/#files
+        package_name: property-cached

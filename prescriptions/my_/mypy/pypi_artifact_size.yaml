@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mypy0910PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy
+          version: ==0.910
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mypy' in version
+          '0.910' can have up to 22.11MiB
+        link: https://pypi.org/project/mypy/0.910/#files
+        package_name: mypy

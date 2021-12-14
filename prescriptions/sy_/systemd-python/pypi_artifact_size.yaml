@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SystemdPython234PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: systemd-python
+          version: ==234
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'systemd-python' in version
+          '234' can have up to 52.37KiB
+        link: https://pypi.org/project/systemd-python/234/#files
+        package_name: systemd-python

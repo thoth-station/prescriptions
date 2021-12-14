@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flex690PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flex
+          version: ==6.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flex' in version
+          '6.9.0' can have up to 75.36KiB
+        link: https://pypi.org/project/flex/6.9.0/#files
+        package_name: flex

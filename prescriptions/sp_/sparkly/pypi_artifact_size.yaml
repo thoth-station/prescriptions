@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sparkly282PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparkly
+          version: ==2.8.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sparkly' in version
+          '2.8.2' can have up to 32.88KiB
+        link: https://pypi.org/project/sparkly/2.8.2/#files
+        package_name: sparkly

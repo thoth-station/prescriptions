@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Durationpy05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: durationpy
+          version: ==0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'durationpy' in version
+          '0.5' can have up to 1.68KiB
+        link: https://pypi.org/project/durationpy/0.5/#files
+        package_name: durationpy

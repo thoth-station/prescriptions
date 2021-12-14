@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CppCoveralls042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cpp-coveralls
+          version: ==0.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cpp-coveralls' in version
+          '0.4.2' can have up to 15.62KiB
+        link: https://pypi.org/project/cpp-coveralls/0.4.2/#files
+        package_name: cpp-coveralls

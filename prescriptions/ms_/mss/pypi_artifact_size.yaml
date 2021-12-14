@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mss610PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mss
+          version: ==6.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mss' in version
+          '6.1.0' can have up to 75.10KiB
+        link: https://pypi.org/project/mss/6.1.0/#files
+        package_name: mss

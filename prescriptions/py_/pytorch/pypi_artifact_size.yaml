@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pytorch102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytorch
+          version: ==1.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytorch' in version
+          '1.0.2' can have up to 689.00B
+        link: https://pypi.org/project/pytorch/1.0.2/#files
+        package_name: pytorch

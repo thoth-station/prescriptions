@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Distro160PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distro
+          version: ==1.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'distro' in version
+          '1.6.0' can have up to 52.26KiB
+        link: https://pypi.org/project/distro/1.6.0/#files
+        package_name: distro

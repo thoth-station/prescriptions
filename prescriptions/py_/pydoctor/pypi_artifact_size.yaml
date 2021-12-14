@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pydoctor2192PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydoctor
+          version: ==21.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pydoctor' in version
+          '21.9.2' can have up to 382.73KiB
+        link: https://pypi.org/project/pydoctor/21.9.2/#files
+        package_name: pydoctor

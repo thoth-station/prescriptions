@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: First202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: first
+          version: ==2.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'first' in version
+          '2.0.2' can have up to 6.80KiB
+        link: https://pypi.org/project/first/2.0.2/#files
+        package_name: first

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DmHaiku005dev0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dm-haiku
+          version: ==0.0.5.dev0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dm-haiku' in version
+          '0.0.5.dev0' can have up to 277.91KiB
+        link: https://pypi.org/project/dm-haiku/0.0.5.dev0/#files
+        package_name: dm-haiku

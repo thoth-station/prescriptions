@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Petlink034PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: petlink
+          version: ==0.3.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'petlink' in version
+          '0.3.4' can have up to 6.19KiB
+        link: https://pypi.org/project/petlink/0.3.4/#files
+        package_name: petlink

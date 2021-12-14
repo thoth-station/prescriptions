@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Vcrpy411PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vcrpy
+          version: ==4.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vcrpy' in version
+          '4.1.1' can have up to 76.36KiB
+        link: https://pypi.org/project/vcrpy/4.1.1/#files
+        package_name: vcrpy

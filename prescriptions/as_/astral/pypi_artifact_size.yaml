@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Astral22PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astral
+          version: ==2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'astral' in version
+          '2.2' can have up to 564.67KiB
+        link: https://pypi.org/project/astral/2.2/#files
+        package_name: astral

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CeleryBatches05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: celery-batches
+          version: ==0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'celery-batches' in version
+          '0.5' can have up to 10.00KiB
+        link: https://pypi.org/project/celery-batches/0.5/#files
+        package_name: celery-batches

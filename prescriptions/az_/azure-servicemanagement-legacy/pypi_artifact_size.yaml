@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureServicemanagementLegacy0207PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-servicemanagement-legacy
+          version: ==0.20.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-servicemanagement-legacy' in version
+          '0.20.7' can have up to 84.88KiB
+        link: https://pypi.org/project/azure-servicemanagement-legacy/0.20.7/#files
+        package_name: azure-servicemanagement-legacy

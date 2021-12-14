@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Cortex0410PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cortex
+          version: ==0.41.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cortex' in version
+          '0.41.0' can have up to 6.78KiB
+        link: https://pypi.org/project/cortex/0.41.0/#files
+        package_name: cortex

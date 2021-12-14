@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Docutils091PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docutils
+          version: ==0.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docutils' in version
+          '0.9.1' can have up to 1.47MiB
+        link: https://pypi.org/project/docutils/0.9.1/#files
+        package_name: docutils

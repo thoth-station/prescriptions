@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ffpuppet087PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ffpuppet
+          version: ==0.8.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ffpuppet' in version
+          '0.8.7' can have up to 62.42KiB
+        link: https://pypi.org/project/ffpuppet/0.8.7/#files
+        package_name: ffpuppet

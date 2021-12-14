@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Shazamapi002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shazamapi
+          version: ==0.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'shazamapi' in version
+          '0.0.2' can have up to 8.62KiB
+        link: https://pypi.org/project/shazamapi/0.0.2/#files
+        package_name: shazamapi

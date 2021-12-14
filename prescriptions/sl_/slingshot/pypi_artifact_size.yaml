@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Slingshot005PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slingshot
+          version: ==0.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'slingshot' in version
+          '0.0.5' can have up to 7.65KiB
+        link: https://pypi.org/project/slingshot/0.0.5/#files
+        package_name: slingshot

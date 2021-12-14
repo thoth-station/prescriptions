@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SetuptoolsRust112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-rust
+          version: ==1.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'setuptools-rust' in version
+          '1.1.2' can have up to 278.57KiB
+        link: https://pypi.org/project/setuptools-rust/1.1.2/#files
+        package_name: setuptools-rust

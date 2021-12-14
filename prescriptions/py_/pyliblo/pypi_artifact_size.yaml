@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyliblo092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyliblo
+          version: ==0.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyliblo' in version
+          '0.9.2' can have up to 97.73KiB
+        link: https://pypi.org/project/pyliblo/0.9.2/#files
+        package_name: pyliblo

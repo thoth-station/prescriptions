@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Click803PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click
+          version: ==8.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'click' in version
+          '8.0.3' can have up to 321.32KiB
+        link: https://pypi.org/project/click/8.0.3/#files
+        package_name: click

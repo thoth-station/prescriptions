@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Protego01dev0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: protego
+          version: ==0.1.dev0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'protego' in version
+          '0.1.dev0' can have up to 9.07KiB
+        link: https://pypi.org/project/protego/0.1.dev0/#files
+        package_name: protego

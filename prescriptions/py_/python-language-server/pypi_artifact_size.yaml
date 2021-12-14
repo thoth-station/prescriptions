@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonLanguageServer090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-language-server
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-language-server' in version
+          '0.9.0' can have up to 40.74KiB
+        link: https://pypi.org/project/python-language-server/0.9.0/#files
+        package_name: python-language-server

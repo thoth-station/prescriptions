@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Metar180PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metar
+          version: ==1.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'metar' in version
+          '1.8.0' can have up to 206.13KiB
+        link: https://pypi.org/project/metar/1.8.0/#files
+        package_name: metar

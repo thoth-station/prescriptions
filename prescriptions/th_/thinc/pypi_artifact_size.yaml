@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Thinc809PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thinc
+          version: ==8.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'thinc' in version
+          '8.0.9' can have up to 1017.21KiB
+        link: https://pypi.org/project/thinc/8.0.9/#files
+        package_name: thinc

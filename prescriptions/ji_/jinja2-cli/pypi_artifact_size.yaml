@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Jinja2Cli070PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jinja2-cli
+          version: ==0.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jinja2-cli' in version
+          '0.7.0' can have up to 6.07KiB
+        link: https://pypi.org/project/jinja2-cli/0.7.0/#files
+        package_name: jinja2-cli

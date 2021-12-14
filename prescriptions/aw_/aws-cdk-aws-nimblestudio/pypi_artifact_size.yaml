@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AwsCdkAwsNimblestudio11350PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-nimblestudio
+          version: ==1.135.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-nimblestudio' in version
+          '1.135.0' can have up to 64.03KiB
+        link: https://pypi.org/project/aws-cdk-aws-nimblestudio/1.135.0/#files
+        package_name: aws-cdk-aws-nimblestudio

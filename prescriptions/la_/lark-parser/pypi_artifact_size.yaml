@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: LarkParser090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lark-parser
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lark-parser' in version
+          '0.9.0' can have up to 291.19KiB
+        link: https://pypi.org/project/lark-parser/0.9.0/#files
+        package_name: lark-parser

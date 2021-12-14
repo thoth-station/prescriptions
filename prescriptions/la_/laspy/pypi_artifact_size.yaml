@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Laspy203PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: laspy
+          version: ==2.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'laspy' in version
+          '2.0.3' can have up to 583.65KiB
+        link: https://pypi.org/project/laspy/2.0.3/#files
+        package_name: laspy

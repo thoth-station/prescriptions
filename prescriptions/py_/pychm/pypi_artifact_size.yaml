@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pychm086PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pychm
+          version: ==0.8.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pychm' in version
+          '0.8.6' can have up to 19.10KiB
+        link: https://pypi.org/project/pychm/0.8.6/#files
+        package_name: pychm

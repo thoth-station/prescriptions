@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SphinxcontribImages094PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxcontrib-images
+          version: ==0.9.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinxcontrib-images' in version
+          '0.9.4' can have up to 115.93KiB
+        link: https://pypi.org/project/sphinxcontrib-images/0.9.4/#files
+        package_name: sphinxcontrib-images

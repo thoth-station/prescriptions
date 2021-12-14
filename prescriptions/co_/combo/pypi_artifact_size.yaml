@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Combo012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: combo
+          version: ==0.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'combo' in version
+          '0.1.2' can have up to 36.26KiB
+        link: https://pypi.org/project/combo/0.1.2/#files
+        package_name: combo

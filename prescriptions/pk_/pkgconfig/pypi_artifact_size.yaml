@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pkgconfig155PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pkgconfig
+          version: ==1.5.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pkgconfig' in version
+          '1.5.5' can have up to 6.57KiB
+        link: https://pypi.org/project/pkgconfig/1.5.5/#files
+        package_name: pkgconfig

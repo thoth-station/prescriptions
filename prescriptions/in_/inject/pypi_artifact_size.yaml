@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Inject431PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inject
+          version: ==4.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'inject' in version
+          '4.3.1' can have up to 16.17KiB
+        link: https://pypi.org/project/inject/4.3.1/#files
+        package_name: inject

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Okaara1037PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: okaara
+          version: ==1.0.37
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'okaara' in version
+          '1.0.37' can have up to 37.76KiB
+        link: https://pypi.org/project/okaara/1.0.37/#files
+        package_name: okaara

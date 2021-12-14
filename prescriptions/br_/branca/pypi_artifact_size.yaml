@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Branca042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: branca
+          version: ==0.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'branca' in version
+          '0.4.2' can have up to 39.63KiB
+        link: https://pypi.org/project/branca/0.4.2/#files
+        package_name: branca

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pendulum212PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pendulum
+          version: ==2.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pendulum' in version
+          '2.1.2' can have up to 152.06KiB
+        link: https://pypi.org/project/pendulum/2.1.2/#files
+        package_name: pendulum

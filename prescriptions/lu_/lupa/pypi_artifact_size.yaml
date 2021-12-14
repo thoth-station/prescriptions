@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Lupa19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lupa
+          version: ==1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lupa' in version
+          '1.9' can have up to 991.03KiB
+        link: https://pypi.org/project/lupa/1.9/#files
+        package_name: lupa

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pycosat063PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycosat
+          version: ==0.6.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycosat' in version
+          '0.6.3' can have up to 65.26KiB
+        link: https://pypi.org/project/pycosat/0.6.3/#files
+        package_name: pycosat

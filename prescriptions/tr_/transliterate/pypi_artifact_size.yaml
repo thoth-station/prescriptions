@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Transliterate19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: transliterate
+          version: ==1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'transliterate' in version
+          '1.9' can have up to 49.14KiB
+        link: https://pypi.org/project/transliterate/1.9/#files
+        package_name: transliterate

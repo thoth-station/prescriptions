@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Initgroups40PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: initgroups
+          version: ==4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'initgroups' in version
+          '4.0' can have up to 4.32KiB
+        link: https://pypi.org/project/initgroups/4.0/#files
+        package_name: initgroups

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Qrcodegen170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qrcodegen
+          version: ==1.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'qrcodegen' in version
+          '1.7.0' can have up to 18.32KiB
+        link: https://pypi.org/project/qrcodegen/1.7.0/#files
+        package_name: qrcodegen

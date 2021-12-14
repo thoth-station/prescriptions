@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pcapy0114PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pcapy
+          version: ==0.11.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pcapy' in version
+          '0.11.4' can have up to 36.18KiB
+        link: https://pypi.org/project/pcapy/0.11.4/#files
+        package_name: pcapy

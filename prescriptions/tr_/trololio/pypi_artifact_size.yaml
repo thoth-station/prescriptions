@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Trololio10bPyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trololio
+          version: ==1.0b
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'trololio' in version
+          '1.0b' can have up to 4.61KiB
+        link: https://pypi.org/project/trololio/1.0b/#files
+        package_name: trololio

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ConfluentKafka170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: confluent-kafka
+          version: ==1.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'confluent-kafka' in version
+          '1.7.0' can have up to 2.62MiB
+        link: https://pypi.org/project/confluent-kafka/1.7.0/#files
+        package_name: confluent-kafka

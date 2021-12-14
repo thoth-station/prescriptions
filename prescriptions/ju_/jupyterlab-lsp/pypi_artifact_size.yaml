@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JupyterlabLsp392PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterlab-lsp
+          version: ==3.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyterlab-lsp' in version
+          '3.9.2' can have up to 537.74KiB
+        link: https://pypi.org/project/jupyterlab-lsp/3.9.2/#files
+        package_name: jupyterlab-lsp

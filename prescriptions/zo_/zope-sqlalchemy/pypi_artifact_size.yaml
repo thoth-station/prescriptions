@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ZopeSqlalchemy16PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-sqlalchemy
+          version: ==1.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-sqlalchemy' in version
+          '1.6' can have up to 27.64KiB
+        link: https://pypi.org/project/zope-sqlalchemy/1.6/#files
+        package_name: zope-sqlalchemy

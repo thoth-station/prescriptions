@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Smbus11post2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smbus
+          version: ==1.1.post2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'smbus' in version
+          '1.1.post2' can have up to 102.53KiB
+        link: https://pypi.org/project/smbus/1.1.post2/#files
+        package_name: smbus

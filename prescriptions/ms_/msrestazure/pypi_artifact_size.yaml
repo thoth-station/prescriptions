@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Msrestazure064PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: msrestazure
+          version: ==0.6.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'msrestazure' in version
+          '0.6.4' can have up to 46.61KiB
+        link: https://pypi.org/project/msrestazure/0.6.4/#files
+        package_name: msrestazure

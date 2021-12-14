@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Bz2file098PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bz2file
+          version: ==0.98
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bz2file' in version
+          '0.98' can have up to 11.07KiB
+        link: https://pypi.org/project/bz2file/0.98/#files
+        package_name: bz2file

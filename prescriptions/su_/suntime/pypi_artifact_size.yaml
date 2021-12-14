@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Suntime125PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: suntime
+          version: ==1.2.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'suntime' in version
+          '1.2.5' can have up to 7.17KiB
+        link: https://pypi.org/project/suntime/1.2.5/#files
+        package_name: suntime

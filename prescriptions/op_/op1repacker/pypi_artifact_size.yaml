@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Op1repacker026PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: op1repacker
+          version: ==0.2.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'op1repacker' in version
+          '0.2.6' can have up to 470.75KiB
+        link: https://pypi.org/project/op1repacker/0.2.6/#files
+        package_name: op1repacker

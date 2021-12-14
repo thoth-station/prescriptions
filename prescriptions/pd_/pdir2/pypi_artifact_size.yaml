@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pdir2032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdir2
+          version: ==0.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pdir2' in version
+          '0.3.2' can have up to 13.68KiB
+        link: https://pypi.org/project/pdir2/0.3.2/#files
+        package_name: pdir2

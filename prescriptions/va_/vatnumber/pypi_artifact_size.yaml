@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Vatnumber12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vatnumber
+          version: ==1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vatnumber' in version
+          '1.2' can have up to 18.63KiB
+        link: https://pypi.org/project/vatnumber/1.2/#files
+        package_name: vatnumber

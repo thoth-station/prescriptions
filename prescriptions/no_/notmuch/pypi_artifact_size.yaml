@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Notmuch0292PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notmuch
+          version: ==0.29.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'notmuch' in version
+          '0.29.2' can have up to 49.90KiB
+        link: https://pypi.org/project/notmuch/0.29.2/#files
+        package_name: notmuch

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JaracoServices310PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-services
+          version: ==3.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jaraco-services' in version
+          '3.1.0' can have up to 14.68KiB
+        link: https://pypi.org/project/jaraco-services/3.1.0/#files
+        package_name: jaraco-services

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pamqp301PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pamqp
+          version: ==3.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pamqp' in version
+          '3.0.1' can have up to 30.22KiB
+        link: https://pypi.org/project/pamqp/3.0.1/#files
+        package_name: pamqp

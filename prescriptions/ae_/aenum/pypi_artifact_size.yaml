@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Aenum315PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aenum
+          version: ==3.1.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aenum' in version
+          '3.1.5' can have up to 125.92KiB
+        link: https://pypi.org/project/aenum/3.1.5/#files
+        package_name: aenum

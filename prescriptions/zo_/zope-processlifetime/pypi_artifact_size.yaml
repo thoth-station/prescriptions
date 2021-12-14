@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ZopeProcesslifetime230PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-processlifetime
+          version: ==2.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-processlifetime' in version
+          '2.3.0' can have up to 14.23KiB
+        link: https://pypi.org/project/zope-processlifetime/2.3.0/#files
+        package_name: zope-processlifetime

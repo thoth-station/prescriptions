@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Bna502PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bna
+          version: ==5.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bna' in version
+          '5.0.2' can have up to 9.83KiB
+        link: https://pypi.org/project/bna/5.0.2/#files
+        package_name: bna

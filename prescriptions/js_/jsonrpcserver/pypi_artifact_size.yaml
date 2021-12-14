@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Jsonrpcserver505PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonrpcserver
+          version: ==5.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jsonrpcserver' in version
+          '5.0.5' can have up to 14.14KiB
+        link: https://pypi.org/project/jsonrpcserver/5.0.5/#files
+        package_name: jsonrpcserver

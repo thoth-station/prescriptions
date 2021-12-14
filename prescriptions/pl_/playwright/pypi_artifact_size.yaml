@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Playwright192PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: playwright
+          version: ==1.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'playwright' in version
+          '1.9.2' can have up to 56.33MiB
+        link: https://pypi.org/project/playwright/1.9.2/#files
+        package_name: playwright

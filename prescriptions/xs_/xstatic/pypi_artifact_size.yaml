@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Xstatic102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xstatic
+          version: ==1.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xstatic' in version
+          '1.0.2' can have up to 2.53KiB
+        link: https://pypi.org/project/xstatic/1.0.2/#files
+        package_name: xstatic

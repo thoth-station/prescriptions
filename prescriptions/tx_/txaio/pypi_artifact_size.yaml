@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Txaio2121PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: txaio
+          version: ==21.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'txaio' in version
+          '21.2.1' can have up to 52.13KiB
+        link: https://pypi.org/project/txaio/21.2.1/#files
+        package_name: txaio

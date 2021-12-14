@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pypromise04PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypromise
+          version: ==0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pypromise' in version
+          '0.4' can have up to 6.64KiB
+        link: https://pypi.org/project/pypromise/0.4/#files
+        package_name: pypromise

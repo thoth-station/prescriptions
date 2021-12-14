@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ChartStudio110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chart-studio
+          version: ==1.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'chart-studio' in version
+          '1.1.0' can have up to 62.91KiB
+        link: https://pypi.org/project/chart-studio/1.1.0/#files
+        package_name: chart-studio

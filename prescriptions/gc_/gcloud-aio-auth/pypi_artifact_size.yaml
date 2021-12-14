@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GcloudAioAuth370PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcloud-aio-auth
+          version: ==3.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gcloud-aio-auth' in version
+          '3.7.0' can have up to 16.68KiB
+        link: https://pypi.org/project/gcloud-aio-auth/3.7.0/#files
+        package_name: gcloud-aio-auth

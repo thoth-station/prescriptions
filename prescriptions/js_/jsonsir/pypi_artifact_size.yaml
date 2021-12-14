@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Jsonsir002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonsir
+          version: ==0.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jsonsir' in version
+          '0.0.2' can have up to 5.37KiB
+        link: https://pypi.org/project/jsonsir/0.0.2/#files
+        package_name: jsonsir

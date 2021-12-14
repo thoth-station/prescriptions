@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Snorkel098PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snorkel
+          version: ==0.9.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'snorkel' in version
+          '0.9.8' can have up to 100.80KiB
+        link: https://pypi.org/project/snorkel/0.9.8/#files
+        package_name: snorkel

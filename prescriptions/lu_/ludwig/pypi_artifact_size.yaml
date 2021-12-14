@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ludwig04rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ludwig
+          version: ==0.4rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ludwig' in version
+          '0.4rc1' can have up to 331.83KiB
+        link: https://pypi.org/project/ludwig/0.4rc1/#files
+        package_name: ludwig

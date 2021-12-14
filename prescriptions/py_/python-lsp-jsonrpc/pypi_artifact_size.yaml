@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonLspJsonrpc100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-lsp-jsonrpc
+          version: ==1.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-lsp-jsonrpc' in version
+          '1.0.0' can have up to 9.78KiB
+        link: https://pypi.org/project/python-lsp-jsonrpc/1.0.0/#files
+        package_name: python-lsp-jsonrpc

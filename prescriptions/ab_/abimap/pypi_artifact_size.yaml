@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Abimap032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: abimap
+          version: ==0.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'abimap' in version
+          '0.3.2' can have up to 50.53KiB
+        link: https://pypi.org/project/abimap/0.3.2/#files
+        package_name: abimap

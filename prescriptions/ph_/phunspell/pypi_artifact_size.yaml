@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Phunspell016PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: phunspell
+          version: ==0.1.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'phunspell' in version
+          '0.1.6' can have up to 45.33MiB
+        link: https://pypi.org/project/phunspell/0.1.6/#files
+        package_name: phunspell

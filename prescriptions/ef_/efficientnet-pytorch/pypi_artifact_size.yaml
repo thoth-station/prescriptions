@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: EfficientnetPytorch071PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: efficientnet-pytorch
+          version: ==0.7.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'efficientnet-pytorch' in version
+          '0.7.1' can have up to 20.52KiB
+        link: https://pypi.org/project/efficientnet-pytorch/0.7.1/#files
+        package_name: efficientnet-pytorch

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Webob187PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webob
+          version: ==1.8.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'webob' in version
+          '1.8.7' can have up to 272.02KiB
+        link: https://pypi.org/project/webob/1.8.7/#files
+        package_name: webob

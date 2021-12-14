@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoCoveragePlugin202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-coverage-plugin
+          version: ==2.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-coverage-plugin' in version
+          '2.0.2' can have up to 13.75KiB
+        link: https://pypi.org/project/django-coverage-plugin/2.0.2/#files
+        package_name: django-coverage-plugin

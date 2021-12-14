@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: NrOptional020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nr-optional
+          version: ==0.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nr-optional' in version
+          '0.2.0' can have up to 3.16KiB
+        link: https://pypi.org/project/nr-optional/0.2.0/#files
+        package_name: nr-optional

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonPkcs11070PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-pkcs11
+          version: ==0.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-pkcs11' in version
+          '0.7.0' can have up to 104.02KiB
+        link: https://pypi.org/project/python-pkcs11/0.7.0/#files
+        package_name: python-pkcs11

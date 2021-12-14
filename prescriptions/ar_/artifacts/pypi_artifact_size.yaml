@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Artifacts20211205PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: artifacts
+          version: ==20211205
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'artifacts' in version
+          '20211205' can have up to 99.88KiB
+        link: https://pypi.org/project/artifacts/20211205/#files
+        package_name: artifacts

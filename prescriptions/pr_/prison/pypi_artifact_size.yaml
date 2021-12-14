@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Prison021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prison
+          version: ==0.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'prison' in version
+          '0.2.1' can have up to 11.76KiB
+        link: https://pypi.org/project/prison/0.2.1/#files
+        package_name: prison

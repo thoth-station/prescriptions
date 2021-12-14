@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Markuppy114PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markuppy
+          version: ==1.14
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'markuppy' in version
+          '1.14' can have up to 6.66KiB
+        link: https://pypi.org/project/markuppy/1.14/#files
+        package_name: markuppy

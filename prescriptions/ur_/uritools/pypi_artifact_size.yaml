@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Uritools302PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uritools
+          version: ==3.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'uritools' in version
+          '3.0.2' can have up to 22.69KiB
+        link: https://pypi.org/project/uritools/3.0.2/#files
+        package_name: uritools

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Funsor042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: funsor
+          version: ==0.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'funsor' in version
+          '0.4.2' can have up to 209.02KiB
+        link: https://pypi.org/project/funsor/0.4.2/#files
+        package_name: funsor

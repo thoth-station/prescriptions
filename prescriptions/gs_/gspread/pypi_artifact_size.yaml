@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Gspread500PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread
+          version: ==5.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gspread' in version
+          '5.0.0' can have up to 40.10KiB
+        link: https://pypi.org/project/gspread/5.0.0/#files
+        package_name: gspread

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: NestAsyncio154PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nest-asyncio
+          version: ==1.5.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nest-asyncio' in version
+          '1.5.4' can have up to 5.75KiB
+        link: https://pypi.org/project/nest-asyncio/1.5.4/#files
+        package_name: nest-asyncio

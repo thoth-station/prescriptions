@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoCrum079PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crum
+          version: ==0.7.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-crum' in version
+          '0.7.9' can have up to 5.05KiB
+        link: https://pypi.org/project/django-crum/0.7.9/#files
+        package_name: django-crum

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Jxmlease103PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jxmlease
+          version: ==1.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jxmlease' in version
+          '1.0.3' can have up to 49.72KiB
+        link: https://pypi.org/project/jxmlease/1.0.3/#files
+        package_name: jxmlease

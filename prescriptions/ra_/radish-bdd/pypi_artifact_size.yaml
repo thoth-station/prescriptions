@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: RadishBdd100a5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: radish-bdd
+          version: ==1.0.0a5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'radish-bdd' in version
+          '1.0.0a5' can have up to 548.37KiB
+        link: https://pypi.org/project/radish-bdd/1.0.0a5/#files
+        package_name: radish-bdd

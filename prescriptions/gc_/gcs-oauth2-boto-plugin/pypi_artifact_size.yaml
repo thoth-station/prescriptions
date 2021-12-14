@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GcsOauth2BotoPlugin30PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcs-oauth2-boto-plugin
+          version: ==3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gcs-oauth2-boto-plugin' in version
+          '3.0' can have up to 20.42KiB
+        link: https://pypi.org/project/gcs-oauth2-boto-plugin/3.0/#files
+        package_name: gcs-oauth2-boto-plugin

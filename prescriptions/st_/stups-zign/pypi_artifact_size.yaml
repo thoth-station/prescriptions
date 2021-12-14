@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: StupsZign12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stups-zign
+          version: ==1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stups-zign' in version
+          '1.2' can have up to 11.73KiB
+        link: https://pypi.org/project/stups-zign/1.2/#files
+        package_name: stups-zign

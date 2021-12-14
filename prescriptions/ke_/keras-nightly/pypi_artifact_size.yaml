@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: KerasNightly280dev2021121408PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-nightly
+          version: ==2.8.0.dev2021121408
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'keras-nightly' in version
+          '2.8.0.dev2021121408' can have up to 1.32MiB
+        link: https://pypi.org/project/keras-nightly/2.8.0.dev2021121408/#files
+        package_name: keras-nightly

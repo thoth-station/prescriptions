@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Molecule352PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: molecule
+          version: ==3.5.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'molecule' in version
+          '3.5.2' can have up to 284.14KiB
+        link: https://pypi.org/project/molecule/3.5.2/#files
+        package_name: molecule

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sh1142PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sh
+          version: ==1.14.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sh' in version
+          '1.14.2' can have up to 62.28KiB
+        link: https://pypi.org/project/sh/1.14.2/#files
+        package_name: sh

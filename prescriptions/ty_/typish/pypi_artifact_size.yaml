@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Typish193PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: typish
+          version: ==1.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'typish' in version
+          '1.9.3' can have up to 44.01KiB
+        link: https://pypi.org/project/typish/1.9.3/#files
+        package_name: typish

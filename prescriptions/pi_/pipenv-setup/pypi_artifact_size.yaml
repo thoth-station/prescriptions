@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PipenvSetup314PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipenv-setup
+          version: ==3.1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pipenv-setup' in version
+          '3.1.4' can have up to 24.56KiB
+        link: https://pypi.org/project/pipenv-setup/3.1.4/#files
+        package_name: pipenv-setup

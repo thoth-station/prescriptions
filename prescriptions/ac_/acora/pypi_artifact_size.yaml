@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Acora23PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: acora
+          version: ==2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'acora' in version
+          '2.3' can have up to 210.55KiB
+        link: https://pypi.org/project/acora/2.3/#files
+        package_name: acora

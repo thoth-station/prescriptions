@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestCheckLinks433PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-check-links
+          version: ==4.3.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-check-links' in version
+          '4.3.3' can have up to 13.59KiB
+        link: https://pypi.org/project/pytest-check-links/4.3.3/#files
+        package_name: pytest-check-links

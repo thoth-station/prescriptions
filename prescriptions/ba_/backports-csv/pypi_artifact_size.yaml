@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BackportsCsv107PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-csv
+          version: ==1.0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backports-csv' in version
+          '1.0.7' can have up to 20.35KiB
+        link: https://pypi.org/project/backports-csv/1.0.7/#files
+        package_name: backports-csv

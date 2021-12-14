@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Fitsio115PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fitsio
+          version: ==1.1.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fitsio' in version
+          '1.1.5' can have up to 4.80MiB
+        link: https://pypi.org/project/fitsio/1.1.5/#files
+        package_name: fitsio

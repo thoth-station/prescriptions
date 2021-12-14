@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pytype202199PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytype
+          version: ==2021.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytype' in version
+          '2021.9.9' can have up to 2.41MiB
+        link: https://pypi.org/project/pytype/2021.9.9/#files
+        package_name: pytype

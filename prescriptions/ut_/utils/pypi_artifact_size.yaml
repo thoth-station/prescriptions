@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Utils101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: utils
+          version: ==1.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'utils' in version
+          '1.0.1' can have up to 20.78KiB
+        link: https://pypi.org/project/utils/1.0.1/#files
+        package_name: utils

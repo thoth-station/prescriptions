@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoTastypie099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-tastypie
+          version: ==0.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-tastypie' in version
+          '0.9.9' can have up to 35.48KiB
+        link: https://pypi.org/project/django-tastypie/0.9.9/#files
+        package_name: django-tastypie

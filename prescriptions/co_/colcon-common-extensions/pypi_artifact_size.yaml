@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ColconCommonExtensions021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-common-extensions
+          version: ==0.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colcon-common-extensions' in version
+          '0.2.1' can have up to 2.21KiB
+        link: https://pypi.org/project/colcon-common-extensions/0.2.1/#files
+        package_name: colcon-common-extensions

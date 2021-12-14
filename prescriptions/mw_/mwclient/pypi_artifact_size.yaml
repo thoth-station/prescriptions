@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mwclient093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mwclient
+          version: ==0.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mwclient' in version
+          '0.9.3' can have up to 34.38KiB
+        link: https://pypi.org/project/mwclient/0.9.3/#files
+        package_name: mwclient

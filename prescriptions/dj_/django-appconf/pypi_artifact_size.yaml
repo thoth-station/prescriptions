@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoAppconf105PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-appconf
+          version: ==1.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-appconf' in version
+          '1.0.5' can have up to 15.52KiB
+        link: https://pypi.org/project/django-appconf/1.0.5/#files
+        package_name: django-appconf

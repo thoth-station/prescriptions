@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyspike060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspike
+          version: ==0.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyspike' in version
+          '0.6.0' can have up to 1.46MiB
+        link: https://pypi.org/project/pyspike/0.6.0/#files
+        package_name: pyspike

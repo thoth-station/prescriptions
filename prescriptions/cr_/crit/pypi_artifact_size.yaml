@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Crit01PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crit
+          version: ==0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'crit' in version
+          '0.1' can have up to 9.79KiB
+        link: https://pypi.org/project/crit/0.1/#files
+        package_name: crit

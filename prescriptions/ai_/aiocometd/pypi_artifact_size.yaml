@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Aiocometd045PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocometd
+          version: ==0.4.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiocometd' in version
+          '0.4.5' can have up to 52.71KiB
+        link: https://pypi.org/project/aiocometd/0.4.5/#files
+        package_name: aiocometd

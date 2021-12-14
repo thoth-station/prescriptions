@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Textdistance422PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textdistance
+          version: ==4.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'textdistance' in version
+          '4.2.2' can have up to 28.28KiB
+        link: https://pypi.org/project/textdistance/4.2.2/#files
+        package_name: textdistance

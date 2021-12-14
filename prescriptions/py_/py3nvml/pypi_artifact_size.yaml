@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Py3nvml027PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py3nvml
+          version: ==0.2.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py3nvml' in version
+          '0.2.7' can have up to 56.86KiB
+        link: https://pypi.org/project/py3nvml/0.2.7/#files
+        package_name: py3nvml

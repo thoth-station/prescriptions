@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Webdrivermanager090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webdrivermanager
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'webdrivermanager' in version
+          '0.9.0' can have up to 31.96KiB
+        link: https://pypi.org/project/webdrivermanager/0.9.0/#files
+        package_name: webdrivermanager

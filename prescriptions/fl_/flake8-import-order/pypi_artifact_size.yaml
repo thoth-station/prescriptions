@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flake8ImportOrder092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-import-order
+          version: ==0.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-import-order' in version
+          '0.9.2' can have up to 14.74KiB
+        link: https://pypi.org/project/flake8-import-order/0.9.2/#files
+        package_name: flake8-import-order

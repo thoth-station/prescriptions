@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Cartopy0201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cartopy
+          version: ==0.20.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cartopy' in version
+          '0.20.1' can have up to 10.30MiB
+        link: https://pypi.org/project/cartopy/0.20.1/#files
+        package_name: cartopy

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyelftools027PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyelftools
+          version: ==0.27
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyelftools' in version
+          '0.27' can have up to 2.51MiB
+        link: https://pypi.org/project/pyelftools/0.27/#files
+        package_name: pyelftools

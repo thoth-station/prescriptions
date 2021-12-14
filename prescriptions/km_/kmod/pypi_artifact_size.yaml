@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Kmod092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kmod
+          version: ==0.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kmod' in version
+          '0.9.2' can have up to 17.37KiB
+        link: https://pypi.org/project/kmod/0.9.2/#files
+        package_name: kmod

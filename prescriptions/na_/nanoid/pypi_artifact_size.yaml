@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Nanoid200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nanoid
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nanoid' in version
+          '2.0.0' can have up to 5.71KiB
+        link: https://pypi.org/project/nanoid/2.0.0/#files
+        package_name: nanoid

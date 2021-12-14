@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyarmor722PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyarmor
+          version: ==7.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyarmor' in version
+          '7.2.2' can have up to 2.71MiB
+        link: https://pypi.org/project/pyarmor/7.2.2/#files
+        package_name: pyarmor

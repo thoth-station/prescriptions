@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ModinSpreadsheet012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: modin-spreadsheet
+          version: ==0.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'modin-spreadsheet' in version
+          '0.1.2' can have up to 1.73MiB
+        link: https://pypi.org/project/modin-spreadsheet/0.1.2/#files
+        package_name: modin-spreadsheet

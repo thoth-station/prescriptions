@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Duplicity0822dev6PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: duplicity
+          version: ==0.8.22.dev6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'duplicity' in version
+          '0.8.22.dev6' can have up to 1.30MiB
+        link: https://pypi.org/project/duplicity/0.8.22.dev6/#files
+        package_name: duplicity

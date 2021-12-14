@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mido129PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mido
+          version: ==1.2.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mido' in version
+          '1.2.9' can have up to 93.86KiB
+        link: https://pypi.org/project/mido/1.2.9/#files
+        package_name: mido

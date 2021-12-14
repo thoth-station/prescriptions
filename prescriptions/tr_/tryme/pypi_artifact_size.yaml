@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tryme005PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tryme
+          version: ==0.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tryme' in version
+          '0.0.5' can have up to 19.27KiB
+        link: https://pypi.org/project/tryme/0.0.5/#files
+        package_name: tryme

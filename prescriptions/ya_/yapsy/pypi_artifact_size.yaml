@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Yapsy192Pythons2n3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yapsy
+          version: ==1.9.2-pythons2n3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'yapsy' in version
+          '1.9.2-pythons2n3' can have up to 114.95KiB
+        link: https://pypi.org/project/yapsy/1.9.2-pythons2n3/#files
+        package_name: yapsy

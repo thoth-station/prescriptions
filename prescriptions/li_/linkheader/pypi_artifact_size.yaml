@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Linkheader043PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linkheader
+          version: ==0.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'linkheader' in version
+          '0.4.3' can have up to 4.15KiB
+        link: https://pypi.org/project/linkheader/0.4.3/#files
+        package_name: linkheader

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Stopit112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stopit
+          version: ==1.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stopit' in version
+          '1.1.2' can have up to 17.85KiB
+        link: https://pypi.org/project/stopit/1.1.2/#files
+        package_name: stopit

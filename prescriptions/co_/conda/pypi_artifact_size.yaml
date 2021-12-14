@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Conda4316PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conda
+          version: ==4.3.16
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'conda' in version
+          '4.3.16' can have up to 292.24KiB
+        link: https://pypi.org/project/conda/4.3.16/#files
+        package_name: conda

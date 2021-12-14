@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Biscuits030PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: biscuits
+          version: ==0.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'biscuits' in version
+          '0.3.0' can have up to 57.21KiB
+        link: https://pypi.org/project/biscuits/0.3.0/#files
+        package_name: biscuits

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Shellescape381PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shellescape
+          version: ==3.8.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'shellescape' in version
+          '3.8.1' can have up to 5.12KiB
+        link: https://pypi.org/project/shellescape/3.8.1/#files
+        package_name: shellescape

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AllureBehave2945PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: allure-behave
+          version: ==2.9.45
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'allure-behave' in version
+          '2.9.45' can have up to 12.70KiB
+        link: https://pypi.org/project/allure-behave/2.9.45/#files
+        package_name: allure-behave

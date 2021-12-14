@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FakeFactory999999PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fake-factory
+          version: ==9999.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fake-factory' in version
+          '9999.9.9' can have up to 543.47KiB
+        link: https://pypi.org/project/fake-factory/9999.9.9/#files
+        package_name: fake-factory

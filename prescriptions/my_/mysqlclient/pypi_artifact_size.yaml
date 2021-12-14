@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mysqlclient210rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysqlclient
+          version: ==2.1.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mysqlclient' in version
+          '2.1.0rc1' can have up to 176.20KiB
+        link: https://pypi.org/project/mysqlclient/2.1.0rc1/#files
+        package_name: mysqlclient

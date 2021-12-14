@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyrad24PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrad
+          version: ==2.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyrad' in version
+          '2.4' can have up to 31.78KiB
+        link: https://pypi.org/project/pyrad/2.4/#files
+        package_name: pyrad

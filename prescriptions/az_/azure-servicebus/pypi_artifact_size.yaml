@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureServicebus740b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-servicebus
+          version: ==7.4.0b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-servicebus' in version
+          '7.4.0b1' can have up to 414.36KiB
+        link: https://pypi.org/project/azure-servicebus/7.4.0b1/#files
+        package_name: azure-servicebus

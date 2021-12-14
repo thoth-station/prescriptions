@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ToxTravis09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-travis
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tox-travis' in version
+          '0.9' can have up to 10.97KiB
+        link: https://pypi.org/project/tox-travis/0.9/#files
+        package_name: tox-travis

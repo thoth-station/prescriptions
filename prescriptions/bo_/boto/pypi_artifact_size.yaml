@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Boto299PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto
+          version: ==2.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'boto' in version
+          '2.9.9' can have up to 927.18KiB
+        link: https://pypi.org/project/boto/2.9.9/#files
+        package_name: boto

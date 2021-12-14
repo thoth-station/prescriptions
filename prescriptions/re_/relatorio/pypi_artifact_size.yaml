@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Relatorio093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: relatorio
+          version: ==0.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'relatorio' in version
+          '0.9.3' can have up to 1.06MiB
+        link: https://pypi.org/project/relatorio/0.9.3/#files
+        package_name: relatorio

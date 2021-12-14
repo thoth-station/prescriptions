@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ZopeAppApplicationcontrol400PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-applicationcontrol
+          version: ==4.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-app-applicationcontrol' in version
+          '4.0.0' can have up to 32.83KiB
+        link: https://pypi.org/project/zope-app-applicationcontrol/4.0.0/#files
+        package_name: zope-app-applicationcontrol

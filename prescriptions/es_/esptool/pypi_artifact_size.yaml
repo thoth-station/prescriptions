@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Esptool32PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: esptool
+          version: ==3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'esptool' in version
+          '3.2' can have up to 201.30KiB
+        link: https://pypi.org/project/esptool/3.2/#files
+        package_name: esptool

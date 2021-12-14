@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Testfixtures690PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testfixtures
+          version: ==6.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'testfixtures' in version
+          '6.9.0' can have up to 108.89KiB
+        link: https://pypi.org/project/testfixtures/6.9.0/#files
+        package_name: testfixtures

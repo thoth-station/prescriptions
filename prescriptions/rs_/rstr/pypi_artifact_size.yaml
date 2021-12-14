@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Rstr300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rstr
+          version: ==3.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rstr' in version
+          '3.0.0' can have up to 11.12KiB
+        link: https://pypi.org/project/rstr/3.0.0/#files
+        package_name: rstr

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Voila030rc0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: voila
+          version: ==0.3.0rc0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'voila' in version
+          '0.3.0rc0' can have up to 1.58MiB
+        link: https://pypi.org/project/voila/0.3.0rc0/#files
+        package_name: voila

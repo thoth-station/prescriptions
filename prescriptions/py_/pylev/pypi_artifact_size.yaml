@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pylev140PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylev
+          version: ==1.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylev' in version
+          '1.4.0' can have up to 5.94KiB
+        link: https://pypi.org/project/pylev/1.4.0/#files
+        package_name: pylev

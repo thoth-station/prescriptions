@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Trac143PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trac
+          version: ==1.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'trac' in version
+          '1.4.3' can have up to 5.39MiB
+        link: https://pypi.org/project/trac/1.4.3/#files
+        package_name: trac

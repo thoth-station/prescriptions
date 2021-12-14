@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Importlib104PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: importlib
+          version: ==1.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'importlib' in version
+          '1.0.4' can have up to 6.91KiB
+        link: https://pypi.org/project/importlib/1.0.4/#files
+        package_name: importlib

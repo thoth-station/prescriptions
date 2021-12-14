@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Markdown336PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markdown
+          version: ==3.3.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'markdown' in version
+          '3.3.6' can have up to 316.00KiB
+        link: https://pypi.org/project/markdown/3.3.6/#files
+        package_name: markdown

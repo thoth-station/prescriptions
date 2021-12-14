@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tabview144PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabview
+          version: ==1.4.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tabview' in version
+          '1.4.4' can have up to 24.42KiB
+        link: https://pypi.org/project/tabview/1.4.4/#files
+        package_name: tabview

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Viivakoodi080PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: viivakoodi
+          version: ==0.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'viivakoodi' in version
+          '0.8.0' can have up to 219.52KiB
+        link: https://pypi.org/project/viivakoodi/0.8.0/#files
+        package_name: viivakoodi

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Jmespath095PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jmespath
+          version: ==0.9.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jmespath' in version
+          '0.9.5' can have up to 26.45KiB
+        link: https://pypi.org/project/jmespath/0.9.5/#files
+        package_name: jmespath

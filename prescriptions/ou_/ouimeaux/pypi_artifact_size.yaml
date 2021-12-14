@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ouimeaux082PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ouimeaux
+          version: ==0.8.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ouimeaux' in version
+          '0.8.2' can have up to 593.88KiB
+        link: https://pypi.org/project/ouimeaux/0.8.2/#files
+        package_name: ouimeaux

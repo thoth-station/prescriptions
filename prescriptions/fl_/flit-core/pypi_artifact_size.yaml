@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FlitCore351PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flit-core
+          version: ==3.5.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flit-core' in version
+          '3.5.1' can have up to 44.39KiB
+        link: https://pypi.org/project/flit-core/3.5.1/#files
+        package_name: flit-core

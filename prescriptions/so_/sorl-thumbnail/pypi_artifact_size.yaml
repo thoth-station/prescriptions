@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SorlThumbnail325PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sorl-thumbnail
+          version: ==3.2.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sorl-thumbnail' in version
+          '3.2.5' can have up to 19.16KiB
+        link: https://pypi.org/project/sorl-thumbnail/3.2.5/#files
+        package_name: sorl-thumbnail

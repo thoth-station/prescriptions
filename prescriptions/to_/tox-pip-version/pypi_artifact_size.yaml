@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ToxPipVersion007PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tox-pip-version
+          version: ==0.0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tox-pip-version' in version
+          '0.0.7' can have up to 8.25KiB
+        link: https://pypi.org/project/tox-pip-version/0.0.7/#files
+        package_name: tox-pip-version

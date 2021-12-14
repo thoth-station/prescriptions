@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GooglePasta020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-pasta
+          version: ==0.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-pasta' in version
+          '0.2.0' can have up to 56.12KiB
+        link: https://pypi.org/project/google-pasta/0.2.0/#files
+        package_name: google-pasta

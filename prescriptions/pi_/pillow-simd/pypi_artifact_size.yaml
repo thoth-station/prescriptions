@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PillowSimd700post3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pillow-simd
+          version: ==7.0.0.post3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pillow-simd' in version
+          '7.0.0.post3' can have up to 616.09KiB
+        link: https://pypi.org/project/pillow-simd/7.0.0.post3/#files
+        package_name: pillow-simd

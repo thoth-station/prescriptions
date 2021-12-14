@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureMgmtServicefabric200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-servicefabric
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-servicefabric' in version
+          '2.0.0' can have up to 119.12KiB
+        link: https://pypi.org/project/azure-mgmt-servicefabric/2.0.0/#files
+        package_name: azure-mgmt-servicefabric

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: NtcTemplates300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ntc-templates
+          version: ==3.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ntc-templates' in version
+          '3.0.0' can have up to 296.37KiB
+        link: https://pypi.org/project/ntc-templates/3.0.0/#files
+        package_name: ntc-templates

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyathena232PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyathena
+          version: ==2.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyathena' in version
+          '2.3.2' can have up to 38.88KiB
+        link: https://pypi.org/project/pyathena/2.3.2/#files
+        package_name: pyathena

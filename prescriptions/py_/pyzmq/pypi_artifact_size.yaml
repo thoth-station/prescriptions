@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyzmq2230PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzmq
+          version: ==22.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyzmq' in version
+          '22.3.0' can have up to 1.86MiB
+        link: https://pypi.org/project/pyzmq/22.3.0/#files
+        package_name: pyzmq

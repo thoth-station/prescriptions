@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyroute2065PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyroute2
+          version: ==0.6.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyroute2' in version
+          '0.6.5' can have up to 23.41KiB
+        link: https://pypi.org/project/pyroute2/0.6.5/#files
+        package_name: pyroute2

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Amqp507PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amqp
+          version: ==5.0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'amqp' in version
+          '5.0.7' can have up to 124.16KiB
+        link: https://pypi.org/project/amqp/5.0.7/#files
+        package_name: amqp

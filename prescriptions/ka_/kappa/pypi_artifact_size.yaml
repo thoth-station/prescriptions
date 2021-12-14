@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Kappa070PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kappa
+          version: ==0.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kappa' in version
+          '0.7.0' can have up to 36.98KiB
+        link: https://pypi.org/project/kappa/0.7.0/#files
+        package_name: kappa

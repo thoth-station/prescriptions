@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Wsaccel063PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wsaccel
+          version: ==0.6.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wsaccel' in version
+          '0.6.3' can have up to 210.93KiB
+        link: https://pypi.org/project/wsaccel/0.6.3/#files
+        package_name: wsaccel

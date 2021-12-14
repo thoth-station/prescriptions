@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Papermill233PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: papermill
+          version: ==2.3.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'papermill' in version
+          '2.3.3' can have up to 71.46KiB
+        link: https://pypi.org/project/papermill/2.3.3/#files
+        package_name: papermill

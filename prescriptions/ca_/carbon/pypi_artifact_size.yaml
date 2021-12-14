@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Carbon118PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: carbon
+          version: ==1.1.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'carbon' in version
+          '1.1.8' can have up to 70.75KiB
+        link: https://pypi.org/project/carbon/1.1.8/#files
+        package_name: carbon

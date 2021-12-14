@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Telebot004PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: telebot
+          version: ==0.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'telebot' in version
+          '0.0.4' can have up to 4.49KiB
+        link: https://pypi.org/project/telebot/0.0.4/#files
+        package_name: telebot

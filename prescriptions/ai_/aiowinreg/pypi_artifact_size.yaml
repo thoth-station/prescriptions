@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Aiowinreg007PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiowinreg
+          version: ==0.0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiowinreg' in version
+          '0.0.7' can have up to 27.96KiB
+        link: https://pypi.org/project/aiowinreg/0.0.7/#files
+        package_name: aiowinreg

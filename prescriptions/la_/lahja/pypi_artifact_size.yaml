@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Lahja090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lahja
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lahja' in version
+          '0.9.0' can have up to 10.07KiB
+        link: https://pypi.org/project/lahja/0.9.0/#files
+        package_name: lahja

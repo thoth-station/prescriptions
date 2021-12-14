@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Bitmath1331PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitmath
+          version: ==1.3.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bitmath' in version
+          '1.3.3.1' can have up to 86.44KiB
+        link: https://pypi.org/project/bitmath/1.3.3.1/#files
+        package_name: bitmath

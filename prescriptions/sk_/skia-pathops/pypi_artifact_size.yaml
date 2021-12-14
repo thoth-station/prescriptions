@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SkiaPathops072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: skia-pathops
+          version: ==0.7.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'skia-pathops' in version
+          '0.7.2' can have up to 58.45MiB
+        link: https://pypi.org/project/skia-pathops/0.7.2/#files
+        package_name: skia-pathops

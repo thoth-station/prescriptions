@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: TwistedDevTools002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: twisted-dev-tools
+          version: ==0.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'twisted-dev-tools' in version
+          '0.0.2' can have up to 6.92KiB
+        link: https://pypi.org/project/twisted-dev-tools/0.0.2/#files
+        package_name: twisted-dev-tools

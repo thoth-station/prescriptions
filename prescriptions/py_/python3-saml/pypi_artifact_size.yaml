@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Python3Saml190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-saml
+          version: ==1.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python3-saml' in version
+          '1.9.0' can have up to 74.54KiB
+        link: https://pypi.org/project/python3-saml/1.9.0/#files
+        package_name: python3-saml

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AnsibleBase2109rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-base
+          version: ==2.10.9rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible-base' in version
+          '2.10.9rc1' can have up to 5.76MiB
+        link: https://pypi.org/project/ansible-base/2.10.9rc1/#files
+        package_name: ansible-base

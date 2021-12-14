@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: NoseExclude050PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nose-exclude
+          version: ==0.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nose-exclude' in version
+          '0.5.0' can have up to 7.19KiB
+        link: https://pypi.org/project/nose-exclude/0.5.0/#files
+        package_name: nose-exclude

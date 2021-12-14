@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoFakeModel014PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-fake-model
+          version: ==0.1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-fake-model' in version
+          '0.1.4' can have up to 6.96KiB
+        link: https://pypi.org/project/django-fake-model/0.1.4/#files
+        package_name: django-fake-model

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestCustomExitCode030PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-custom-exit-code
+          version: ==0.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-custom-exit-code' in version
+          '0.3.0' can have up to 3.96KiB
+        link: https://pypi.org/project/pytest-custom-exit-code/0.3.0/#files
+        package_name: pytest-custom-exit-code

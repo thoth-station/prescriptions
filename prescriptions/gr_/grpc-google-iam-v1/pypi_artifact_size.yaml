@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GrpcGoogleIamV1090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grpc-google-iam-v1
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grpc-google-iam-v1' in version
+          '0.9.0' can have up to 8.85KiB
+        link: https://pypi.org/project/grpc-google-iam-v1/0.9.0/#files
+        package_name: grpc-google-iam-v1

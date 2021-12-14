@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sgmanager144PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sgmanager
+          version: ==1.4.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sgmanager' in version
+          '1.4.4' can have up to 12.80KiB
+        link: https://pypi.org/project/sgmanager/1.4.4/#files
+        package_name: sgmanager

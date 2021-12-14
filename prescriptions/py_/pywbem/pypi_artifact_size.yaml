@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pywbem130PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywbem
+          version: ==1.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pywbem' in version
+          '1.3.0' can have up to 3.47MiB
+        link: https://pypi.org/project/pywbem/1.3.0/#files
+        package_name: pywbem

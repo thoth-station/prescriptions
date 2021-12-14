@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Stepfunctions220PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stepfunctions
+          version: ==2.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stepfunctions' in version
+          '2.2.0' can have up to 62.60KiB
+        link: https://pypi.org/project/stepfunctions/2.2.0/#files
+        package_name: stepfunctions

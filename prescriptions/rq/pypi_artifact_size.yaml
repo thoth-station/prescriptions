@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Rq190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rq
+          version: ==1.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rq' in version
+          '1.9.0' can have up to 64.87KiB
+        link: https://pypi.org/project/rq/1.9.0/#files
+        package_name: rq

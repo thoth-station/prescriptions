@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: RequestsPkcs1219PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-pkcs12
+          version: ==1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'requests-pkcs12' in version
+          '1.9' can have up to 4.83KiB
+        link: https://pypi.org/project/requests-pkcs12/1.9/#files
+        package_name: requests-pkcs12

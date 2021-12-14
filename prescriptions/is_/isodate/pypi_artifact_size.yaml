@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Isodate061PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isodate
+          version: ==0.6.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'isodate' in version
+          '0.6.1' can have up to 40.74KiB
+        link: https://pypi.org/project/isodate/0.6.1/#files
+        package_name: isodate

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Upt09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: upt
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'upt' in version
+          '0.9' can have up to 25.36KiB
+        link: https://pypi.org/project/upt/0.9/#files
+        package_name: upt

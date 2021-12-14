@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyppmd0173PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyppmd
+          version: ==0.17.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyppmd' in version
+          '0.17.3' can have up to 451.53KiB
+        link: https://pypi.org/project/pyppmd/0.17.3/#files
+        package_name: pyppmd

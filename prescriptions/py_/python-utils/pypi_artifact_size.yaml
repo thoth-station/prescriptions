@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonUtils256PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-utils
+          version: ==2.5.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-utils' in version
+          '2.5.6' can have up to 13.73KiB
+        link: https://pypi.org/project/python-utils/2.5.6/#files
+        package_name: python-utils

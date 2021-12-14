@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DmTree016PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dm-tree
+          version: ==0.1.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dm-tree' in version
+          '0.1.6' can have up to 113.73KiB
+        link: https://pypi.org/project/dm-tree/0.1.6/#files
+        package_name: dm-tree

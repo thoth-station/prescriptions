@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Coverage62PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage
+          version: ==6.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'coverage' in version
+          '6.2' can have up to 662.76KiB
+        link: https://pypi.org/project/coverage/6.2/#files
+        package_name: coverage

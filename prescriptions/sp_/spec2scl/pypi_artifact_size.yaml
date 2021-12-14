@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Spec2scl122PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spec2scl
+          version: ==1.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spec2scl' in version
+          '1.2.2' can have up to 16.90KiB
+        link: https://pypi.org/project/spec2scl/1.2.2/#files
+        package_name: spec2scl

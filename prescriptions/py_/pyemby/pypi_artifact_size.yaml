@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyemby18PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyemby
+          version: ==1.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyemby' in version
+          '1.8' can have up to 8.16KiB
+        link: https://pypi.org/project/pyemby/1.8/#files
+        package_name: pyemby

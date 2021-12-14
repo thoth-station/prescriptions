@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Newrelic724171PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: newrelic
+          version: ==7.2.4.171
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'newrelic' in version
+          '7.2.4.171' can have up to 821.42KiB
+        link: https://pypi.org/project/newrelic/7.2.4.171/#files
+        package_name: newrelic

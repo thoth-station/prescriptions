@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FlaskJwt032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-jwt
+          version: ==0.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flask-jwt' in version
+          '0.3.2' can have up to 9.66KiB
+        link: https://pypi.org/project/flask-jwt/0.3.2/#files
+        package_name: flask-jwt

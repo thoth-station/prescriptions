@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestSelenium201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-selenium
+          version: ==2.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-selenium' in version
+          '2.0.1' can have up to 43.36KiB
+        link: https://pypi.org/project/pytest-selenium/2.0.1/#files
+        package_name: pytest-selenium

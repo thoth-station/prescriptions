@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FlaskUuid02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-uuid
+          version: ==0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flask-uuid' in version
+          '0.2' can have up to 1.94KiB
+        link: https://pypi.org/project/flask-uuid/0.2/#files
+        package_name: flask-uuid

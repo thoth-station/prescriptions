@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: MysqlPython125PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysql-python
+          version: ==1.2.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mysql-python' in version
+          '1.2.5' can have up to 1.01MiB
+        link: https://pypi.org/project/mysql-python/1.2.5/#files
+        package_name: mysql-python

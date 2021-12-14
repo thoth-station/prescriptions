@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: UpdateChecker09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: update-checker
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'update-checker' in version
+          '0.9' can have up to 5.70KiB
+        link: https://pypi.org/project/update-checker/0.9/#files
+        package_name: update-checker

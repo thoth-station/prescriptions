@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sexpdata003PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sexpdata
+          version: ==0.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sexpdata' in version
+          '0.0.3' can have up to 6.13KiB
+        link: https://pypi.org/project/sexpdata/0.0.3/#files
+        package_name: sexpdata

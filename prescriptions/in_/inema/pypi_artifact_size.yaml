@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Inema085PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inema
+          version: ==0.8.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'inema' in version
+          '0.8.5' can have up to 31.06KiB
+        link: https://pypi.org/project/inema/0.8.5/#files
+        package_name: inema

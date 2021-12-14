@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestHtml311PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-html
+          version: ==3.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-html' in version
+          '3.1.1' can have up to 37.64KiB
+        link: https://pypi.org/project/pytest-html/3.1.1/#files
+        package_name: pytest-html

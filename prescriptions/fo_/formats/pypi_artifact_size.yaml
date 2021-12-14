@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Formats011PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: formats
+          version: ==0.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'formats' in version
+          '0.1.1' can have up to 6.04KiB
+        link: https://pypi.org/project/formats/0.1.1/#files
+        package_name: formats

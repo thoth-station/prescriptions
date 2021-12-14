@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JsonnetV087Pre6PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonnet
+          version: ==v0.8.7-pre6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jsonnet' in version
+          'v0.8.7-pre6' can have up to 91.31KiB
+        link: https://pypi.org/project/jsonnet/v0.8.7-pre6/#files
+        package_name: jsonnet

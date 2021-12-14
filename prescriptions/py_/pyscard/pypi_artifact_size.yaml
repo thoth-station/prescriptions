@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyscard202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyscard
+          version: ==2.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyscard' in version
+          '2.0.2' can have up to 149.71KiB
+        link: https://pypi.org/project/pyscard/2.0.2/#files
+        package_name: pyscard

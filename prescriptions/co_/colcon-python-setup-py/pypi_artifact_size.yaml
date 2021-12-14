@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ColconPythonSetupPy027PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-python-setup-py
+          version: ==0.2.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colcon-python-setup-py' in version
+          '0.2.7' can have up to 11.18KiB
+        link: https://pypi.org/project/colcon-python-setup-py/0.2.7/#files
+        package_name: colcon-python-setup-py

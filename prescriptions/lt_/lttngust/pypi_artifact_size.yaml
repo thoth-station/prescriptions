@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Lttngust271PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lttngust
+          version: ==2.7.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lttngust' in version
+          '2.7.1' can have up to 5.98KiB
+        link: https://pypi.org/project/lttngust/2.7.1/#files
+        package_name: lttngust

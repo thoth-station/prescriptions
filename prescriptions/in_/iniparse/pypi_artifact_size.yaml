@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Iniparse05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iniparse
+          version: ==0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'iniparse' in version
+          '0.5' can have up to 31.48KiB
+        link: https://pypi.org/project/iniparse/0.5/#files
+        package_name: iniparse

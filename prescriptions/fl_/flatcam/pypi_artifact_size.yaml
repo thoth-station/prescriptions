@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flatcam085PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatcam
+          version: ==0.8.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flatcam' in version
+          '0.8.5' can have up to 206.14KiB
+        link: https://pypi.org/project/flatcam/0.8.5/#files
+        package_name: flatcam

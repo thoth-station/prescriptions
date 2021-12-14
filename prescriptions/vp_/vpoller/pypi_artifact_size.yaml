@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Vpoller073PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vpoller
+          version: ==0.7.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vpoller' in version
+          '0.7.3' can have up to 25.80KiB
+        link: https://pypi.org/project/vpoller/0.7.3/#files
+        package_name: vpoller

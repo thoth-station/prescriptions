@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyexecjs151PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyexecjs
+          version: ==1.5.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyexecjs' in version
+          '1.5.1' can have up to 13.03KiB
+        link: https://pypi.org/project/pyexecjs/1.5.1/#files
+        package_name: pyexecjs

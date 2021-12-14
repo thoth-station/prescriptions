@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AiohttpRetry246PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-retry
+          version: ==2.4.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiohttp-retry' in version
+          '2.4.6' can have up to 7.49KiB
+        link: https://pypi.org/project/aiohttp-retry/2.4.6/#files
+        package_name: aiohttp-retry

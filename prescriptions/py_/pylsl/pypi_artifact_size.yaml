@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pylsl1150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylsl
+          version: ==1.15.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylsl' in version
+          '1.15.0' can have up to 669.55KiB
+        link: https://pypi.org/project/pylsl/1.15.0/#files
+        package_name: pylsl

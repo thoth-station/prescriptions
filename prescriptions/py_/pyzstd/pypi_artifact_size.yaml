@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyzstd0150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzstd
+          version: ==0.15.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyzstd' in version
+          '0.15.0' can have up to 2.79MiB
+        link: https://pypi.org/project/pyzstd/0.15.0/#files
+        package_name: pyzstd

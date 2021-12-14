@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Dasbus16PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dasbus
+          version: ==1.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dasbus' in version
+          '1.6' can have up to 71.32KiB
+        link: https://pypi.org/project/dasbus/1.6/#files
+        package_name: dasbus

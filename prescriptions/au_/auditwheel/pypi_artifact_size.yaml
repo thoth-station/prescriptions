@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Auditwheel500PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: auditwheel
+          version: ==5.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'auditwheel' in version
+          '5.0.0' can have up to 538.34KiB
+        link: https://pypi.org/project/auditwheel/5.0.0/#files
+        package_name: auditwheel

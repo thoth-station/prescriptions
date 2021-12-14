@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Missingno050PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: missingno
+          version: ==0.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'missingno' in version
+          '0.5.0' can have up to 8.55KiB
+        link: https://pypi.org/project/missingno/0.5.0/#files
+        package_name: missingno

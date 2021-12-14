@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Fedmsg112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fedmsg
+          version: ==1.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fedmsg' in version
+          '1.1.2' can have up to 306.55KiB
+        link: https://pypi.org/project/fedmsg/1.1.2/#files
+        package_name: fedmsg

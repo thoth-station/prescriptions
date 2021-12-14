@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyppd102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyppd
+          version: ==1.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyppd' in version
+          '1.0.2' can have up to 14.78KiB
+        link: https://pypi.org/project/pyppd/1.0.2/#files
+        package_name: pyppd

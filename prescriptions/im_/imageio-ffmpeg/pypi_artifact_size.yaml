@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ImageioFfmpeg045PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imageio-ffmpeg
+          version: ==0.4.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'imageio-ffmpeg' in version
+          '0.4.5' can have up to 25.65MiB
+        link: https://pypi.org/project/imageio-ffmpeg/0.4.5/#files
+        package_name: imageio-ffmpeg

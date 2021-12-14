@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: StathamSchema090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: statham-schema
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'statham-schema' in version
+          '0.9.0' can have up to 44.87KiB
+        link: https://pypi.org/project/statham-schema/0.9.0/#files
+        package_name: statham-schema

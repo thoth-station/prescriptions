@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Klein2180PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: klein
+          version: ==21.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'klein' in version
+          '21.8.0' can have up to 98.22KiB
+        link: https://pypi.org/project/klein/21.8.0/#files
+        package_name: klein

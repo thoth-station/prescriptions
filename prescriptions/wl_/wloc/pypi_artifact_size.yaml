@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Wloc070PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wloc
+          version: ==0.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wloc' in version
+          '0.7.0' can have up to 26.89KiB
+        link: https://pypi.org/project/wloc/0.7.0/#files
+        package_name: wloc

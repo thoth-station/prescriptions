@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: LazyImport022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lazy-import
+          version: ==0.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lazy-import' in version
+          '0.2.2' can have up to 14.91KiB
+        link: https://pypi.org/project/lazy-import/0.2.2/#files
+        package_name: lazy-import

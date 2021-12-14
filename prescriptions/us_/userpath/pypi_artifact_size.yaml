@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Userpath170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: userpath
+          version: ==1.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'userpath' in version
+          '1.7.0' can have up to 19.88KiB
+        link: https://pypi.org/project/userpath/1.7.0/#files
+        package_name: userpath

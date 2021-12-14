@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Gpustat100b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpustat
+          version: ==1.0.0b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gpustat' in version
+          '1.0.0b1' can have up to 80.18KiB
+        link: https://pypi.org/project/gpustat/1.0.0b1/#files
+        package_name: gpustat

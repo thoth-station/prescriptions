@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tbb202150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tbb
+          version: ==2021.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tbb' in version
+          '2021.5.0' can have up to 3.77MiB
+        link: https://pypi.org/project/tbb/2021.5.0/#files
+        package_name: tbb

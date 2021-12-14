@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Diffoscope99PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diffoscope
+          version: ==99
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'diffoscope' in version
+          '99' can have up to 9.57MiB
+        link: https://pypi.org/project/diffoscope/99/#files
+        package_name: diffoscope

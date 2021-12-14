@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Identify240PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: identify
+          version: ==2.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'identify' in version
+          '2.4.0' can have up to 96.43KiB
+        link: https://pypi.org/project/identify/2.4.0/#files
+        package_name: identify

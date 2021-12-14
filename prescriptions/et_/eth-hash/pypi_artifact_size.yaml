@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: EthHash032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-hash
+          version: ==0.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'eth-hash' in version
+          '0.3.2' can have up to 5.05MiB
+        link: https://pypi.org/project/eth-hash/0.3.2/#files
+        package_name: eth-hash

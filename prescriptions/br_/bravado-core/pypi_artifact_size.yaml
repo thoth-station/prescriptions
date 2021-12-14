@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BravadoCore5170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bravado-core
+          version: ==5.17.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bravado-core' in version
+          '5.17.0' can have up to 65.93KiB
+        link: https://pypi.org/project/bravado-core/5.17.0/#files
+        package_name: bravado-core

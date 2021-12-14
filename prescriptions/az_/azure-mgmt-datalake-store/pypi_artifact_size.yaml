@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureMgmtDatalakeStore100b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-datalake-store
+          version: ==1.0.0b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-datalake-store' in version
+          '1.0.0b1' can have up to 76.98KiB
+        link: https://pypi.org/project/azure-mgmt-datalake-store/1.0.0b1/#files
+        package_name: azure-mgmt-datalake-store

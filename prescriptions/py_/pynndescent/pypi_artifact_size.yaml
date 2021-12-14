@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pynndescent055PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynndescent
+          version: ==0.5.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pynndescent' in version
+          '0.5.5' can have up to 1.08MiB
+        link: https://pypi.org/project/pynndescent/0.5.5/#files
+        package_name: pynndescent

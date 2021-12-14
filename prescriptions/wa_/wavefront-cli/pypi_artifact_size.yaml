@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: WavefrontCli00123PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wavefront-cli
+          version: ==0.0.123
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wavefront-cli' in version
+          '0.0.123' can have up to 13.05KiB
+        link: https://pypi.org/project/wavefront-cli/0.0.123/#files
+        package_name: wavefront-cli

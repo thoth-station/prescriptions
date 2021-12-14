@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Itertoolz05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itertoolz
+          version: ==0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'itertoolz' in version
+          '0.5' can have up to 3.54KiB
+        link: https://pypi.org/project/itertoolz/0.5/#files
+        package_name: itertoolz

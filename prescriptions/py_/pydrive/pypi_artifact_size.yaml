@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pydrive131PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydrive
+          version: ==1.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pydrive' in version
+          '1.3.1' can have up to 964.30KiB
+        link: https://pypi.org/project/pydrive/1.3.1/#files
+        package_name: pydrive

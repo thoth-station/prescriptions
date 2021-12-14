@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Constructs3399PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: constructs
+          version: ==3.3.99
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'constructs' in version
+          '3.3.99' can have up to 67.68KiB
+        link: https://pypi.org/project/constructs/3.3.99/#files
+        package_name: constructs

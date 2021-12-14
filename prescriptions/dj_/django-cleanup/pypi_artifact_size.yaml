@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoCleanup520PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cleanup
+          version: ==5.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-cleanup' in version
+          '5.2.0' can have up to 12.90KiB
+        link: https://pypi.org/project/django-cleanup/5.2.0/#files
+        package_name: django-cleanup

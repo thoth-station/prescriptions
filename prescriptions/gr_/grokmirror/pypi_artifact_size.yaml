@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Grokmirror209PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grokmirror
+          version: ==2.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grokmirror' in version
+          '2.0.9' can have up to 73.49KiB
+        link: https://pypi.org/project/grokmirror/2.0.9/#files
+        package_name: grokmirror

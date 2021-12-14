@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Unipath11PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: unipath
+          version: ==1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'unipath' in version
+          '1.1' can have up to 29.57KiB
+        link: https://pypi.org/project/unipath/1.1/#files
+        package_name: unipath

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Dynaconf317PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynaconf
+          version: ==3.1.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dynaconf' in version
+          '3.1.7' can have up to 195.86KiB
+        link: https://pypi.org/project/dynaconf/3.1.7/#files
+        package_name: dynaconf

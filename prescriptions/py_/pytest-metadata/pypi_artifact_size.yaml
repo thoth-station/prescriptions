@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestMetadata190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-metadata
+          version: ==1.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-metadata' in version
+          '1.9.0' can have up to 12.39KiB
+        link: https://pypi.org/project/pytest-metadata/1.9.0/#files
+        package_name: pytest-metadata

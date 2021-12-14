@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ColconLibraryPath021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-library-path
+          version: ==0.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colcon-library-path' in version
+          '0.2.1' can have up to 4.82KiB
+        link: https://pypi.org/project/colcon-library-path/0.2.1/#files
+        package_name: colcon-library-path

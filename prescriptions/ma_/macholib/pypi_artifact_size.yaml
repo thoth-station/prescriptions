@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Macholib19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: macholib
+          version: ==1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'macholib' in version
+          '1.9' can have up to 564.87KiB
+        link: https://pypi.org/project/macholib/1.9/#files
+        package_name: macholib

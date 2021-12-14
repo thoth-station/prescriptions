@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: WinUnicodeConsole05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: win-unicode-console
+          version: ==0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'win-unicode-console' in version
+          '0.5' can have up to 30.68KiB
+        link: https://pypi.org/project/win-unicode-console/0.5/#files
+        package_name: win-unicode-console

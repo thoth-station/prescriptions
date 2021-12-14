@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CheckManifest09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: check-manifest
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'check-manifest' in version
+          '0.9' can have up to 9.34KiB
+        link: https://pypi.org/project/check-manifest/0.9/#files
+        package_name: check-manifest

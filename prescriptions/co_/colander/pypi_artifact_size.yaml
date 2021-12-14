@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Colander183PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colander
+          version: ==1.8.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colander' in version
+          '1.8.3' can have up to 107.34KiB
+        link: https://pypi.org/project/colander/1.8.3/#files
+        package_name: colander

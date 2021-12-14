@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonSnappy060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-snappy
+          version: ==0.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-snappy' in version
+          '0.6.0' can have up to 102.30KiB
+        link: https://pypi.org/project/python-snappy/0.6.0/#files
+        package_name: python-snappy

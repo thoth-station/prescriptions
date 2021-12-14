@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AnsibleTowerCli339PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-tower-cli
+          version: ==3.3.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible-tower-cli' in version
+          '3.3.9' can have up to 199.12KiB
+        link: https://pypi.org/project/ansible-tower-cli/3.3.9/#files
+        package_name: ansible-tower-cli

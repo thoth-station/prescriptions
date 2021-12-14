@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Python3Memcached151PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python3-memcached
+          version: ==1.51
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python3-memcached' in version
+          '1.51' can have up to 13.75KiB
+        link: https://pypi.org/project/python3-memcached/1.51/#files
+        package_name: python3-memcached

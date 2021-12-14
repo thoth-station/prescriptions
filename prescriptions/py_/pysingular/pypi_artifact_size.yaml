@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pysingular097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysingular
+          version: ==0.9.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysingular' in version
+          '0.9.7' can have up to 10.32KiB
+        link: https://pypi.org/project/pysingular/0.9.7/#files
+        package_name: pysingular

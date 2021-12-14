@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pysimplesoap1162PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysimplesoap
+          version: ==1.16.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysimplesoap' in version
+          '1.16.2' can have up to 43.24KiB
+        link: https://pypi.org/project/pysimplesoap/1.16.2/#files
+        package_name: pysimplesoap

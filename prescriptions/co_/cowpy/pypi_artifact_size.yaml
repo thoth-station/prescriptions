@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Cowpy114PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cowpy
+          version: ==1.1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cowpy' in version
+          '1.1.4' can have up to 26.47KiB
+        link: https://pypi.org/project/cowpy/1.1.4/#files
+        package_name: cowpy

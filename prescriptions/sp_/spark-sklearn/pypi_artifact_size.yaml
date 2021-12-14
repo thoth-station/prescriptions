@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SparkSklearn030PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spark-sklearn
+          version: ==0.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spark-sklearn' in version
+          '0.3.0' can have up to 27.58KiB
+        link: https://pypi.org/project/spark-sklearn/0.3.0/#files
+        package_name: spark-sklearn

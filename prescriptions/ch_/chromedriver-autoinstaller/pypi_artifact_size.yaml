@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ChromedriverAutoinstaller022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chromedriver-autoinstaller
+          version: ==0.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'chromedriver-autoinstaller' in version
+          '0.2.2' can have up to 5.74KiB
+        link: https://pypi.org/project/chromedriver-autoinstaller/0.2.2/#files
+        package_name: chromedriver-autoinstaller

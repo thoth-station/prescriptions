@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: OrderedSet402PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ordered-set
+          version: ==4.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ordered-set' in version
+          '4.0.2' can have up to 10.41KiB
+        link: https://pypi.org/project/ordered-set/4.0.2/#files
+        package_name: ordered-set

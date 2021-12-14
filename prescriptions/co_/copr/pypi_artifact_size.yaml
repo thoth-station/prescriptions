@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Copr199PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: copr
+          version: ==1.99
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'copr' in version
+          '1.99' can have up to 75.85KiB
+        link: https://pypi.org/project/copr/1.99/#files
+        package_name: copr

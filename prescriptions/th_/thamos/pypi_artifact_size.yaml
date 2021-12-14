@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Thamos170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thamos
+          version: ==1.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'thamos' in version
+          '1.7.0' can have up to 162.84KiB
+        link: https://pypi.org/project/thamos/1.7.0/#files
+        package_name: thamos

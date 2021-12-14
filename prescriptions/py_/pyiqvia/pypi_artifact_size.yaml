@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyiqvia2021110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyiqvia
+          version: ==2021.11.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyiqvia' in version
+          '2021.11.0' can have up to 6.88KiB
+        link: https://pypi.org/project/pyiqvia/2021.11.0/#files
+        package_name: pyiqvia

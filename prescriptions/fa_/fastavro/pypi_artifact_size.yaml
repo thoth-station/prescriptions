@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Fastavro147PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastavro
+          version: ==1.4.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fastavro' in version
+          '1.4.7' can have up to 2.57MiB
+        link: https://pypi.org/project/fastavro/1.4.7/#files
+        package_name: fastavro

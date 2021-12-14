@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyxattr072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxattr
+          version: ==0.7.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyxattr' in version
+          '0.7.2' can have up to 30.81KiB
+        link: https://pypi.org/project/pyxattr/0.7.2/#files
+        package_name: pyxattr

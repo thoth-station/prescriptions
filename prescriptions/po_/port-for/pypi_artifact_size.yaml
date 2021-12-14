@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PortFor061PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: port-for
+          version: ==0.6.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'port-for' in version
+          '0.6.1' can have up to 20.83KiB
+        link: https://pypi.org/project/port-for/0.6.1/#files
+        package_name: port-for

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyxs041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyxs
+          version: ==0.4.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyxs' in version
+          '0.4.1' can have up to 20.04KiB
+        link: https://pypi.org/project/pyxs/0.4.1/#files
+        package_name: pyxs

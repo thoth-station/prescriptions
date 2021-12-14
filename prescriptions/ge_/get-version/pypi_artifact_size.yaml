@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GetVersion353PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: get-version
+          version: ==3.5.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'get-version' in version
+          '3.5.3' can have up to 19.13KiB
+        link: https://pypi.org/project/get-version/3.5.3/#files
+        package_name: get-version

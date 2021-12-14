@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyzor100PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzor
+          version: ==1.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyzor' in version
+          '1.0.0' can have up to 39.01KiB
+        link: https://pypi.org/project/pyzor/1.0.0/#files
+        package_name: pyzor

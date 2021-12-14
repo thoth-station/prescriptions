@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pygresql522PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygresql
+          version: ==5.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pygresql' in version
+          '5.2.2' can have up to 262.52KiB
+        link: https://pypi.org/project/pygresql/5.2.2/#files
+        package_name: pygresql

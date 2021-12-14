@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tryton621PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tryton
+          version: ==6.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tryton' in version
+          '6.2.1' can have up to 583.28KiB
+        link: https://pypi.org/project/tryton/6.2.1/#files
+        package_name: tryton

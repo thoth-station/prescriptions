@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Daphne302PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: daphne
+          version: ==3.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'daphne' in version
+          '3.0.2' can have up to 25.58KiB
+        link: https://pypi.org/project/daphne/3.0.2/#files
+        package_name: daphne

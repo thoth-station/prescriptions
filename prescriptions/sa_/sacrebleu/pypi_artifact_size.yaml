@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sacrebleu200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sacrebleu
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sacrebleu' in version
+          '2.0.0' can have up to 110.35KiB
+        link: https://pypi.org/project/sacrebleu/2.0.0/#files
+        package_name: sacrebleu

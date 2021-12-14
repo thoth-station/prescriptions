@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestHttpx090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-httpx
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-httpx' in version
+          '0.9.0' can have up to 14.32KiB
+        link: https://pypi.org/project/pytest-httpx/0.9.0/#files
+        package_name: pytest-httpx

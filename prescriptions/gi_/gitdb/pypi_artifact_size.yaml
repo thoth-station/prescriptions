@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Gitdb409PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitdb
+          version: ==4.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gitdb' in version
+          '4.0.9' can have up to 385.42KiB
+        link: https://pypi.org/project/gitdb/4.0.9/#files
+        package_name: gitdb

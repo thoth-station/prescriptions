@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Btest071PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btest
+          version: ==0.71
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'btest' in version
+          '0.71' can have up to 92.50KiB
+        link: https://pypi.org/project/btest/0.71/#files
+        package_name: btest

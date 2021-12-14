@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PyEcc520PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-ecc
+          version: ==5.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-ecc' in version
+          '5.2.0' can have up to 42.37KiB
+        link: https://pypi.org/project/py-ecc/5.2.0/#files
+        package_name: py-ecc

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoExtraViews090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-extra-views
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-extra-views' in version
+          '0.9.0' can have up to 13.59KiB
+        link: https://pypi.org/project/django-extra-views/0.9.0/#files
+        package_name: django-extra-views

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Describe012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: describe
+          version: ==0.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'describe' in version
+          '0.1.2' can have up to 26.85KiB
+        link: https://pypi.org/project/describe/0.1.2/#files
+        package_name: describe

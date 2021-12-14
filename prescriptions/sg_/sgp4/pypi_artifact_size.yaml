@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sgp429PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sgp4
+          version: ==2.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sgp4' in version
+          '2.9' can have up to 241.55KiB
+        link: https://pypi.org/project/sgp4/2.9/#files
+        package_name: sgp4

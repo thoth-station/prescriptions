@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Towncrier2190rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: towncrier
+          version: ==21.9.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'towncrier' in version
+          '21.9.0rc1' can have up to 34.24KiB
+        link: https://pypi.org/project/towncrier/21.9.0rc1/#files
+        package_name: towncrier

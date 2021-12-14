@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Webencodings051PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webencodings
+          version: ==0.5.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'webencodings' in version
+          '0.5.1' can have up to 11.50KiB
+        link: https://pypi.org/project/webencodings/0.5.1/#files
+        package_name: webencodings

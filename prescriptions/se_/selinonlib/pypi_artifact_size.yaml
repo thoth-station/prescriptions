@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Selinonlib100rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selinonlib
+          version: ==1.0.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'selinonlib' in version
+          '1.0.0rc1' can have up to 112.72KiB
+        link: https://pypi.org/project/selinonlib/1.0.0rc1/#files
+        package_name: selinonlib

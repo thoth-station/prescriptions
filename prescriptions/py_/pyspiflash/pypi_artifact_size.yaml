@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyspiflash063PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspiflash
+          version: ==0.6.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyspiflash' in version
+          '0.6.3' can have up to 15.89KiB
+        link: https://pypi.org/project/pyspiflash/0.6.3/#files
+        package_name: pyspiflash

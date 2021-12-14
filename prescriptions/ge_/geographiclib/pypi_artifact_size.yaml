@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Geographiclib152PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geographiclib
+          version: ==1.52
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'geographiclib' in version
+          '1.52' can have up to 37.91KiB
+        link: https://pypi.org/project/geographiclib/1.52/#files
+        package_name: geographiclib

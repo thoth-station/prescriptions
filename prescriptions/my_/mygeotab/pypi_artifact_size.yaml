@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mygeotab087PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mygeotab
+          version: ==0.8.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mygeotab' in version
+          '0.8.7' can have up to 128.04KiB
+        link: https://pypi.org/project/mygeotab/0.8.7/#files
+        package_name: mygeotab

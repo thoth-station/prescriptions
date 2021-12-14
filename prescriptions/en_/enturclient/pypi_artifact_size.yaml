@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Enturclient022b8PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enturclient
+          version: ==0.2.2b8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'enturclient' in version
+          '0.2.2b8' can have up to 8.33KiB
+        link: https://pypi.org/project/enturclient/0.2.2b8/#files
+        package_name: enturclient

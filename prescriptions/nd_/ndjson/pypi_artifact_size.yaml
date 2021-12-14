@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ndjson031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ndjson
+          version: ==0.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ndjson' in version
+          '0.3.1' can have up to 6.30KiB
+        link: https://pypi.org/project/ndjson/0.3.1/#files
+        package_name: ndjson

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pythran099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pythran
+          version: ==0.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pythran' in version
+          '0.9.9' can have up to 4.01MiB
+        link: https://pypi.org/project/pythran/0.9.9/#files
+        package_name: pythran

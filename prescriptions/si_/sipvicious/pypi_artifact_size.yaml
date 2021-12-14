@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sipvicious034PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sipvicious
+          version: ==0.3.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sipvicious' in version
+          '0.3.4' can have up to 52.67KiB
+        link: https://pypi.org/project/sipvicious/0.3.4/#files
+        package_name: sipvicious

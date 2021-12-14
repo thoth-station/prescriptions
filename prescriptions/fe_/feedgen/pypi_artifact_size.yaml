@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Feedgen090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedgen
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'feedgen' in version
+          '0.9.0' can have up to 212.82KiB
+        link: https://pypi.org/project/feedgen/0.9.0/#files
+        package_name: feedgen

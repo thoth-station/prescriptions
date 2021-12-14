@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ray190rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ray
+          version: ==1.9.0rc2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ray' in version
+          '1.9.0rc2' can have up to 56.19MiB
+        link: https://pypi.org/project/ray/1.9.0rc2/#files
+        package_name: ray

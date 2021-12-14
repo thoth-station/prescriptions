@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Couchdb12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: couchdb
+          version: ==1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'couchdb' in version
+          '1.2' can have up to 66.36KiB
+        link: https://pypi.org/project/couchdb/1.2/#files
+        package_name: couchdb

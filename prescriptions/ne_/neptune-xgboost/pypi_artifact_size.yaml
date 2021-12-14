@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: NeptuneXgboost099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-xgboost
+          version: ==0.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'neptune-xgboost' in version
+          '0.9.9' can have up to 21.93KiB
+        link: https://pypi.org/project/neptune-xgboost/0.9.9/#files
+        package_name: neptune-xgboost

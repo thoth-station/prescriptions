@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ecos208PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ecos
+          version: ==2.0.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ecos' in version
+          '2.0.8' can have up to 187.08KiB
+        link: https://pypi.org/project/ecos/2.0.8/#files
+        package_name: ecos

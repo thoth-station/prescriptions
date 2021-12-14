@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyactivetwo01PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyactivetwo
+          version: ==0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyactivetwo' in version
+          '0.1' can have up to 6.63KiB
+        link: https://pypi.org/project/pyactivetwo/0.1/#files
+        package_name: pyactivetwo

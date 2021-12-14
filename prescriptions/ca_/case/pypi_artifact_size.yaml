@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Case153PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: case
+          version: ==1.5.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'case' in version
+          '1.5.3' can have up to 57.10KiB
+        link: https://pypi.org/project/case/1.5.3/#files
+        package_name: case

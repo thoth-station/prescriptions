@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonU2flibServer501PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-u2flib-server
+          version: ==5.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-u2flib-server' in version
+          '5.0.1' can have up to 24.47KiB
+        link: https://pypi.org/project/python-u2flib-server/5.0.1/#files
+        package_name: python-u2flib-server

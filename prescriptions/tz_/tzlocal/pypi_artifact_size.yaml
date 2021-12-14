@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tzlocal41b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tzlocal
+          version: ==4.1b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tzlocal' in version
+          '4.1b1' can have up to 31.14KiB
+        link: https://pypi.org/project/tzlocal/4.1b1/#files
+        package_name: tzlocal

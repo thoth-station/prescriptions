@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Langid11devPyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: langid
+          version: ==1.1dev
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'langid' in version
+          '1.1dev' can have up to 1.25MiB
+        link: https://pypi.org/project/langid/1.1dev/#files
+        package_name: langid

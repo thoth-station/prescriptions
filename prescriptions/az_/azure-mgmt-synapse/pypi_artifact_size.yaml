@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureMgmtSynapse210b3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-synapse
+          version: ==2.1.0b3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-synapse' in version
+          '2.1.0b3' can have up to 544.98KiB
+        link: https://pypi.org/project/azure-mgmt-synapse/2.1.0b3/#files
+        package_name: azure-mgmt-synapse

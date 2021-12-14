@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Metaextract108PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: metaextract
+          version: ==1.0.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'metaextract' in version
+          '1.0.8' can have up to 8.96KiB
+        link: https://pypi.org/project/metaextract/1.0.8/#files
+        package_name: metaextract

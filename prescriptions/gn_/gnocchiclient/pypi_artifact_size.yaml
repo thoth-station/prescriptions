@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Gnocchiclient707PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gnocchiclient
+          version: ==7.0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gnocchiclient' in version
+          '7.0.7' can have up to 156.23KiB
+        link: https://pypi.org/project/gnocchiclient/7.0.7/#files
+        package_name: gnocchiclient

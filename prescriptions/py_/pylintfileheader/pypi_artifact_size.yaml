@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pylintfileheader032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylintfileheader
+          version: ==0.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylintfileheader' in version
+          '0.3.2' can have up to 6.68KiB
+        link: https://pypi.org/project/pylintfileheader/0.3.2/#files
+        package_name: pylintfileheader

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mglob04PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mglob
+          version: ==0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mglob' in version
+          '0.4' can have up to 5.18KiB
+        link: https://pypi.org/project/mglob/0.4/#files
+        package_name: mglob

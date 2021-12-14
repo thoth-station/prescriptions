@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Qtconsole522PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qtconsole
+          version: ==5.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'qtconsole' in version
+          '5.2.2' can have up to 419.54KiB
+        link: https://pypi.org/project/qtconsole/5.2.2/#files
+        package_name: qtconsole

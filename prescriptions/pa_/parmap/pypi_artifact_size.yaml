@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Parmap153PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parmap
+          version: ==1.5.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'parmap' in version
+          '1.5.3' can have up to 24.16KiB
+        link: https://pypi.org/project/parmap/1.5.3/#files
+        package_name: parmap

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Resampy022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: resampy
+          version: ==0.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'resampy' in version
+          '0.2.2' can have up to 315.80KiB
+        link: https://pypi.org/project/resampy/0.2.2/#files
+        package_name: resampy

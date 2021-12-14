@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ZopeTesting49PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-testing
+          version: ==4.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-testing' in version
+          '4.9' can have up to 60.83KiB
+        link: https://pypi.org/project/zope-testing/4.9/#files
+        package_name: zope-testing

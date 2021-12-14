@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Waiverdb140PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: waiverdb
+          version: ==1.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'waiverdb' in version
+          '1.4.0' can have up to 140.56KiB
+        link: https://pypi.org/project/waiverdb/1.4.0/#files
+        package_name: waiverdb

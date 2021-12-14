@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ShrubPy300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shrub-py
+          version: ==3.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'shrub-py' in version
+          '3.0.0' can have up to 36.97KiB
+        link: https://pypi.org/project/shrub-py/3.0.0/#files
+        package_name: shrub-py

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Intake064PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intake
+          version: ==0.6.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'intake' in version
+          '0.6.4' can have up to 1.44MiB
+        link: https://pypi.org/project/intake/0.6.4/#files
+        package_name: intake
