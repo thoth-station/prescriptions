@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: InvenioDb109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-db
+          version: ==1.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'invenio-db' in version
+          '1.0.9' can have up to 31.49KiB
+        link: https://pypi.org/project/invenio-db/1.0.9/#files
+        package_name: invenio-db

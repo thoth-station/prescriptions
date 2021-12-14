@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Koan301PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: koan
+          version: ==3.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'koan' in version
+          '3.0.1' can have up to 45.04KiB
+        link: https://pypi.org/project/koan/3.0.1/#files
+        package_name: koan

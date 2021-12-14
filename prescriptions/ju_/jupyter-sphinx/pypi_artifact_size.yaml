@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JupyterSphinx032PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-sphinx
+          version: ==0.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-sphinx' in version
+          '0.3.2' can have up to 19.53KiB
+        link: https://pypi.org/project/jupyter-sphinx/0.3.2/#files
+        package_name: jupyter-sphinx

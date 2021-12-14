@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pymetno090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymetno
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymetno' in version
+          '0.9.0' can have up to 5.54KiB
+        link: https://pypi.org/project/pymetno/0.9.0/#files
+        package_name: pymetno

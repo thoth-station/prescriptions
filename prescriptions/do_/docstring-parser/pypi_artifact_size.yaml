@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DocstringParser091PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docstring-parser
+          version: ==0.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docstring-parser' in version
+          '0.9.1' can have up to 14.55KiB
+        link: https://pypi.org/project/docstring-parser/0.9.1/#files
+        package_name: docstring-parser

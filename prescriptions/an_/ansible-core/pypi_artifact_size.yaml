@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AnsibleCore2121rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-core
+          version: ==2.12.1rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible-core' in version
+          '2.12.1rc1' can have up to 7.06MiB
+        link: https://pypi.org/project/ansible-core/2.12.1rc1/#files
+        package_name: ansible-core

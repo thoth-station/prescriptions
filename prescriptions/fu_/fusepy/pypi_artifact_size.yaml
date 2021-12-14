@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Fusepy301PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fusepy
+          version: ==3.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fusepy' in version
+          '3.0.1' can have up to 11.25KiB
+        link: https://pypi.org/project/fusepy/3.0.1/#files
+        package_name: fusepy

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Acme190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: acme
+          version: ==1.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'acme' in version
+          '1.9.0' can have up to 89.00KiB
+        link: https://pypi.org/project/acme/1.9.0/#files
+        package_name: acme

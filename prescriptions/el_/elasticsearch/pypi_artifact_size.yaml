@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Elasticsearch800a3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch
+          version: ==8.0.0a3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'elasticsearch' in version
+          '8.0.0a3' can have up to 322.26KiB
+        link: https://pypi.org/project/elasticsearch/8.0.0a3/#files
+        package_name: elasticsearch

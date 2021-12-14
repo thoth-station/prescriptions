@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Trollius22post1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trollius
+          version: ==2.2.post1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'trollius' in version
+          '2.2.post1' can have up to 268.53KiB
+        link: https://pypi.org/project/trollius/2.2.post1/#files
+        package_name: trollius

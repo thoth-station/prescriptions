@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: MystNb092PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: myst-nb
+          version: ==0.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'myst-nb' in version
+          '0.9.2' can have up to 34.86KiB
+        link: https://pypi.org/project/myst-nb/0.9.2/#files
+        package_name: myst-nb

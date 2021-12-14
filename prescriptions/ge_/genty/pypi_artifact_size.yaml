@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Genty132PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: genty
+          version: ==1.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'genty' in version
+          '1.3.2' can have up to 20.33KiB
+        link: https://pypi.org/project/genty/1.3.2/#files
+        package_name: genty

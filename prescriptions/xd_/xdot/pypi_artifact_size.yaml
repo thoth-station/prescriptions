@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Xdot12PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xdot
+          version: ==1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xdot' in version
+          '1.2' can have up to 28.95KiB
+        link: https://pypi.org/project/xdot/1.2/#files
+        package_name: xdot

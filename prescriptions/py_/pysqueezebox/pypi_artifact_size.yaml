@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pysqueezebox055PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysqueezebox
+          version: ==0.5.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysqueezebox' in version
+          '0.5.5' can have up to 17.47KiB
+        link: https://pypi.org/project/pysqueezebox/0.5.5/#files
+        package_name: pysqueezebox

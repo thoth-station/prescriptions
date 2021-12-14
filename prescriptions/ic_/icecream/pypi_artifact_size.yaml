@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Icecream211PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: icecream
+          version: ==2.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'icecream' in version
+          '2.1.1' can have up to 12.96KiB
+        link: https://pypi.org/project/icecream/2.1.1/#files
+        package_name: icecream

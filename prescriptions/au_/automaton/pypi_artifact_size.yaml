@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Automaton240PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: automaton
+          version: ==2.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'automaton' in version
+          '2.4.0' can have up to 33.58KiB
+        link: https://pypi.org/project/automaton/2.4.0/#files
+        package_name: automaton

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Vprof038PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vprof
+          version: ==0.38
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vprof' in version
+          '0.38' can have up to 311.58KiB
+        link: https://pypi.org/project/vprof/0.38/#files
+        package_name: vprof

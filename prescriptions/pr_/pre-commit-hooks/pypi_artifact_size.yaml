@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PreCommitHooks401PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pre-commit-hooks
+          version: ==4.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pre-commit-hooks' in version
+          '4.0.1' can have up to 38.66KiB
+        link: https://pypi.org/project/pre-commit-hooks/4.0.1/#files
+        package_name: pre-commit-hooks

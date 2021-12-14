@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestAssume243PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-assume
+          version: ==2.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-assume' in version
+          '2.4.3' can have up to 8.49KiB
+        link: https://pypi.org/project/pytest-assume/2.4.3/#files
+        package_name: pytest-assume

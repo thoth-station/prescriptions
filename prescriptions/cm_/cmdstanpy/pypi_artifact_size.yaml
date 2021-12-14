@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Cmdstanpy100rc3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmdstanpy
+          version: ==1.0.0rc3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cmdstanpy' in version
+          '1.0.0rc3' can have up to 17.74MiB
+        link: https://pypi.org/project/cmdstanpy/1.0.0rc3/#files
+        package_name: cmdstanpy

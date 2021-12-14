@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flake8Todo07PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-todo
+          version: ==0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-todo' in version
+          '0.7' can have up to 2.24KiB
+        link: https://pypi.org/project/flake8-todo/0.7/#files
+        package_name: flake8-todo

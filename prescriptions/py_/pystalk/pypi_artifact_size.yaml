@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pystalk061PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pystalk
+          version: ==0.6.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pystalk' in version
+          '0.6.1' can have up to 9.86KiB
+        link: https://pypi.org/project/pystalk/0.6.1/#files
+        package_name: pystalk

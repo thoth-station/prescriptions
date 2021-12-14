@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mistletoe072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mistletoe
+          version: ==0.7.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mistletoe' in version
+          '0.7.2' can have up to 34.99KiB
+        link: https://pypi.org/project/mistletoe/0.7.2/#files
+        package_name: mistletoe

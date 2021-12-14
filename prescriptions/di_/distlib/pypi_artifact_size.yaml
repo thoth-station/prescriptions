@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Distlib034PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distlib
+          version: ==0.3.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'distlib' in version
+          '0.3.4' can have up to 617.17KiB
+        link: https://pypi.org/project/distlib/0.3.4/#files
+        package_name: distlib

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureKeyvaultKeys450b5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-keyvault-keys
+          version: ==4.5.0b5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-keyvault-keys' in version
+          '4.5.0b5' can have up to 451.99KiB
+        link: https://pypi.org/project/azure-keyvault-keys/4.5.0b5/#files
+        package_name: azure-keyvault-keys

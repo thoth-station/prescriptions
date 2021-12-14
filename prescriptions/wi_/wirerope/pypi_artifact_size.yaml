@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Wirerope045PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wirerope
+          version: ==0.4.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wirerope' in version
+          '0.4.5' can have up to 8.42KiB
+        link: https://pypi.org/project/wirerope/0.4.5/#files
+        package_name: wirerope

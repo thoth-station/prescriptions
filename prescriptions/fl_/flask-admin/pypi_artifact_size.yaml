@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FlaskAdmin158PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-admin
+          version: ==1.5.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flask-admin' in version
+          '1.5.8' can have up to 6.33MiB
+        link: https://pypi.org/project/flask-admin/1.5.8/#files
+        package_name: flask-admin

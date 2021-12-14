@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Events04PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: events
+          version: ==0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'events' in version
+          '0.4' can have up to 5.43KiB
+        link: https://pypi.org/project/events/0.4/#files
+        package_name: events

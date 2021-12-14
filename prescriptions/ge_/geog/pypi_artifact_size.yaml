@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Geog002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geog
+          version: ==0.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'geog' in version
+          '0.0.2' can have up to 4.85KiB
+        link: https://pypi.org/project/geog/0.0.2/#files
+        package_name: geog

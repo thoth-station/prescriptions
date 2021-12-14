@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyhocon039PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhocon
+          version: ==0.3.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyhocon' in version
+          '0.3.9' can have up to 67.62KiB
+        link: https://pypi.org/project/pyhocon/0.3.9/#files
+        package_name: pyhocon

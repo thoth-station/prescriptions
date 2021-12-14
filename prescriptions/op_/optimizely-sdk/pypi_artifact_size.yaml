@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: OptimizelySdk391PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optimizely-sdk
+          version: ==3.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'optimizely-sdk' in version
+          '3.9.1' can have up to 97.73KiB
+        link: https://pypi.org/project/optimizely-sdk/3.9.1/#files
+        package_name: optimizely-sdk

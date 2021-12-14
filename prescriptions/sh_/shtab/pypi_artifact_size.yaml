@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Shtab152PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shtab
+          version: ==1.5.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'shtab' in version
+          '1.5.2' can have up to 45.38KiB
+        link: https://pypi.org/project/shtab/1.5.2/#files
+        package_name: shtab

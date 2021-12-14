@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pygetwindow009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygetwindow
+          version: ==0.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pygetwindow' in version
+          '0.0.9' can have up to 9.47KiB
+        link: https://pypi.org/project/pygetwindow/0.0.9/#files
+        package_name: pygetwindow

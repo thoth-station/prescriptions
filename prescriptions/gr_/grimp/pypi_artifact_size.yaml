@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Grimp123PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grimp
+          version: ==1.2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grimp' in version
+          '1.2.3' can have up to 33.20KiB
+        link: https://pypi.org/project/grimp/1.2.3/#files
+        package_name: grimp

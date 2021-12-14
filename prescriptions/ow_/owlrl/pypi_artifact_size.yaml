@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Owlrl602PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: owlrl
+          version: ==6.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'owlrl' in version
+          '6.0.2' can have up to 55.84KiB
+        link: https://pypi.org/project/owlrl/6.0.2/#files
+        package_name: owlrl

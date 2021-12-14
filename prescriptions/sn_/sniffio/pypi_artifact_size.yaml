@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sniffio120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sniffio
+          version: ==1.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sniffio' in version
+          '1.2.0' can have up to 16.73KiB
+        link: https://pypi.org/project/sniffio/1.2.0/#files
+        package_name: sniffio

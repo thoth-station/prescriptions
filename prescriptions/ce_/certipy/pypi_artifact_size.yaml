@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Certipy013PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certipy
+          version: ==0.1.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'certipy' in version
+          '0.1.3' can have up to 22.30KiB
+        link: https://pypi.org/project/certipy/0.1.3/#files
+        package_name: certipy

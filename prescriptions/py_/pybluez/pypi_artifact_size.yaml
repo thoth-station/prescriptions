@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pybluez023PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybluez
+          version: ==0.23
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pybluez' in version
+          '0.23' can have up to 159.13KiB
+        link: https://pypi.org/project/pybluez/0.23/#files
+        package_name: pybluez

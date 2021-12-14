@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Plugnplay054PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plugnplay
+          version: ==0.5.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'plugnplay' in version
+          '0.5.4' can have up to 10.92KiB
+        link: https://pypi.org/project/plugnplay/0.5.4/#files
+        package_name: plugnplay

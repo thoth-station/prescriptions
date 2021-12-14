@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PylintQuotes023PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-quotes
+          version: ==0.2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylint-quotes' in version
+          '0.2.3' can have up to 7.48KiB
+        link: https://pypi.org/project/pylint-quotes/0.2.3/#files
+        package_name: pylint-quotes

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Toot091PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toot
+          version: ==0.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'toot' in version
+          '0.9.1' can have up to 14.11KiB
+        link: https://pypi.org/project/toot/0.9.1/#files
+        package_name: toot

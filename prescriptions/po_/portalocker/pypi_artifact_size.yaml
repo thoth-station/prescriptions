@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Portalocker232PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: portalocker
+          version: ==2.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'portalocker' in version
+          '2.3.2' can have up to 19.90KiB
+        link: https://pypi.org/project/portalocker/2.3.2/#files
+        package_name: portalocker

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonMemcached159PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-memcached
+          version: ==1.59
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-memcached' in version
+          '1.59' can have up to 21.69KiB
+        link: https://pypi.org/project/python-memcached/1.59/#files
+        package_name: python-memcached

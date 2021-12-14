@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tabulate089PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tabulate
+          version: ==0.8.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tabulate' in version
+          '0.8.9' can have up to 52.23KiB
+        link: https://pypi.org/project/tabulate/0.8.9/#files
+        package_name: tabulate

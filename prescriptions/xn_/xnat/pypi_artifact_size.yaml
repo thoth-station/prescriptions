@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Xnat039PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xnat
+          version: ==0.3.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xnat' in version
+          '0.3.9' can have up to 42.04KiB
+        link: https://pypi.org/project/xnat/0.3.9/#files
+        package_name: xnat

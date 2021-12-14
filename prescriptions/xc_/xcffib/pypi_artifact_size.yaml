@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: XcffibV014PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xcffib
+          version: ==v0.1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xcffib' in version
+          'v0.1.4' can have up to 65.35KiB
+        link: https://pypi.org/project/xcffib/v0.1.4/#files
+        package_name: xcffib

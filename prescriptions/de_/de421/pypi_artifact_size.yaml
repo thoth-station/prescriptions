@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: De42120081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: de421
+          version: ==2008.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'de421' in version
+          '2008.1' can have up to 26.04MiB
+        link: https://pypi.org/project/de421/2008.1/#files
+        package_name: de421

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pystray09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pystray
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pystray' in version
+          '0.9' can have up to 54.07KiB
+        link: https://pypi.org/project/pystray/0.9/#files
+        package_name: pystray

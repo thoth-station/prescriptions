@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureMgmtPrivatedns100b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-privatedns
+          version: ==1.0.0b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-privatedns' in version
+          '1.0.0b1' can have up to 51.83KiB
+        link: https://pypi.org/project/azure-mgmt-privatedns/1.0.0b1/#files
+        package_name: azure-mgmt-privatedns

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Fext020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fext
+          version: ==0.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fext' in version
+          '0.2.0' can have up to 185.48KiB
+        link: https://pypi.org/project/fext/0.2.0/#files
+        package_name: fext

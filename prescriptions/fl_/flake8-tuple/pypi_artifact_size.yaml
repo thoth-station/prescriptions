@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flake8Tuple041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-tuple
+          version: ==0.4.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-tuple' in version
+          '0.4.1' can have up to 5.62KiB
+        link: https://pypi.org/project/flake8-tuple/0.4.1/#files
+        package_name: flake8-tuple

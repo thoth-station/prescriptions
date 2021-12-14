@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Spython0117PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spython
+          version: ==0.1.17
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spython' in version
+          '0.1.17' can have up to 67.10KiB
+        link: https://pypi.org/project/spython/0.1.17/#files
+        package_name: spython

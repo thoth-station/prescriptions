@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Nrf24200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nrf24
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nrf24' in version
+          '2.0.0' can have up to 12.94KiB
+        link: https://pypi.org/project/nrf24/2.0.0/#files
+        package_name: nrf24

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: LambdaGit011PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lambda-git
+          version: ==0.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lambda-git' in version
+          '0.1.1' can have up to 8.55MiB
+        link: https://pypi.org/project/lambda-git/0.1.1/#files
+        package_name: lambda-git

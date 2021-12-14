@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Baluhn012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: baluhn
+          version: ==0.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'baluhn' in version
+          '0.1.2' can have up to 3.71KiB
+        link: https://pypi.org/project/baluhn/0.1.2/#files
+        package_name: baluhn

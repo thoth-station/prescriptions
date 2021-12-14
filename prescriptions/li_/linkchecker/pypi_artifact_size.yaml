@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Linkchecker940PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linkchecker
+          version: ==9.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'linkchecker' in version
+          '9.4.0' can have up to 463.78KiB
+        link: https://pypi.org/project/linkchecker/9.4.0/#files
+        package_name: linkchecker

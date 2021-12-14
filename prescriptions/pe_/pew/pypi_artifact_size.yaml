@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pew120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pew
+          version: ==1.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pew' in version
+          '1.2.0' can have up to 20.74KiB
+        link: https://pypi.org/project/pew/1.2.0/#files
+        package_name: pew

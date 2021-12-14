@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Empy334PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: empy
+          version: ==3.3.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'empy' in version
+          '3.3.4' can have up to 61.38KiB
+        link: https://pypi.org/project/empy/3.3.4/#files
+        package_name: empy

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Leveldb0201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: leveldb
+          version: ==0.201
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'leveldb' in version
+          '0.201' can have up to 230.96KiB
+        link: https://pypi.org/project/leveldb/0.201/#files
+        package_name: leveldb

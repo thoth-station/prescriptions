@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ParamikoTunnel031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paramiko-tunnel
+          version: ==0.31
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'paramiko-tunnel' in version
+          '0.31' can have up to 2.11KiB
+        link: https://pypi.org/project/paramiko-tunnel/0.31/#files
+        package_name: paramiko-tunnel

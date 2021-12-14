@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyhomeworks006PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhomeworks
+          version: ==0.0.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyhomeworks' in version
+          '0.0.6' can have up to 8.29KiB
+        link: https://pypi.org/project/pyhomeworks/0.0.6/#files
+        package_name: pyhomeworks

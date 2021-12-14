@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DockerCompose190rc4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker-compose
+          version: ==1.9.0rc4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docker-compose' in version
+          '1.9.0rc4' can have up to 152.66KiB
+        link: https://pypi.org/project/docker-compose/1.9.0rc4/#files
+        package_name: docker-compose

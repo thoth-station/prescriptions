@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Saspy376PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: saspy
+          version: ==3.7.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'saspy' in version
+          '3.7.6' can have up to 7.47MiB
+        link: https://pypi.org/project/saspy/3.7.6/#files
+        package_name: saspy

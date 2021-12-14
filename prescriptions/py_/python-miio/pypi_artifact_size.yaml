@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonMiio0591PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-miio
+          version: ==0.5.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-miio' in version
+          '0.5.9.1' can have up to 296.37KiB
+        link: https://pypi.org/project/python-miio/0.5.9.1/#files
+        package_name: python-miio

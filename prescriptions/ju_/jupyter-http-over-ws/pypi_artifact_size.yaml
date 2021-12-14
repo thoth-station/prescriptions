@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JupyterHttpOverWs008PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-http-over-ws
+          version: ==0.0.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-http-over-ws' in version
+          '0.0.8' can have up to 18.43KiB
+        link: https://pypi.org/project/jupyter-http-over-ws/0.0.8/#files
+        package_name: jupyter-http-over-ws

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BackportsInspect003PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-inspect
+          version: ==0.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backports-inspect' in version
+          '0.0.3' can have up to 3.86KiB
+        link: https://pypi.org/project/backports-inspect/0.0.3/#files
+        package_name: backports-inspect

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Anyjson033PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anyjson
+          version: ==0.3.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'anyjson' in version
+          '0.3.3' can have up to 8.14KiB
+        link: https://pypi.org/project/anyjson/0.3.3/#files
+        package_name: anyjson

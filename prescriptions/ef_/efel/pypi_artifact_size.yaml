@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Efel404PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: efel
+          version: ==4.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'efel' in version
+          '4.0.4' can have up to 4.25MiB
+        link: https://pypi.org/project/efel/4.0.4/#files
+        package_name: efel

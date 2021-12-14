@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Symspellpy675PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: symspellpy
+          version: ==6.7.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'symspellpy' in version
+          '6.7.5' can have up to 2.49MiB
+        link: https://pypi.org/project/symspellpy/6.7.5/#files
+        package_name: symspellpy

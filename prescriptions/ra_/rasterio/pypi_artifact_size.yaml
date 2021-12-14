@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Rasterio13a2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasterio
+          version: ==1.3a2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rasterio' in version
+          '1.3a2' can have up to 19.65MiB
+        link: https://pypi.org/project/rasterio/1.3a2/#files
+        package_name: rasterio

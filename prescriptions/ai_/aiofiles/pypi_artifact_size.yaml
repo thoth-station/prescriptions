@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Aiofiles080PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiofiles
+          version: ==0.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiofiles' in version
+          '0.8.0' can have up to 13.75KiB
+        link: https://pypi.org/project/aiofiles/0.8.0/#files
+        package_name: aiofiles

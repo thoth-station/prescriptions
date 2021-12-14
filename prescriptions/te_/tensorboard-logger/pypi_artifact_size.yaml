@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: TensorboardLogger010PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard-logger
+          version: ==0.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tensorboard-logger' in version
+          '0.1.0' can have up to 16.66KiB
+        link: https://pypi.org/project/tensorboard-logger/0.1.0/#files
+        package_name: tensorboard-logger

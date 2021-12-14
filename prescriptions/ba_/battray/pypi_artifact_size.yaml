@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Battray23PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: battray
+          version: ==2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'battray' in version
+          '2.3' can have up to 68.52KiB
+        link: https://pypi.org/project/battray/2.3/#files
+        package_name: battray

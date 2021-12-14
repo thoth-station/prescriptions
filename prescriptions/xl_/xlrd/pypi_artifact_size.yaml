@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Xlrd201PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xlrd
+          version: ==2.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'xlrd' in version
+          '2.0.1' can have up to 97.91KiB
+        link: https://pypi.org/project/xlrd/2.0.1/#files
+        package_name: xlrd

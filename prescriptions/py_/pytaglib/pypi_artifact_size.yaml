@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pytaglib146PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytaglib
+          version: ==1.4.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytaglib' in version
+          '1.4.6' can have up to 457.12KiB
+        link: https://pypi.org/project/pytaglib/1.4.6/#files
+        package_name: pytaglib

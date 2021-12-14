@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonCrfsuite097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-crfsuite
+          version: ==0.9.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-crfsuite' in version
+          '0.9.7' can have up to 726.52KiB
+        link: https://pypi.org/project/python-crfsuite/0.9.7/#files
+        package_name: python-crfsuite

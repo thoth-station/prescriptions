@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Webexteamssdk16PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webexteamssdk
+          version: ==1.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'webexteamssdk' in version
+          '1.6' can have up to 110.60KiB
+        link: https://pypi.org/project/webexteamssdk/1.6/#files
+        package_name: webexteamssdk

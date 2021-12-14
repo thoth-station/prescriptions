@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Justext300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: justext
+          version: ==3.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'justext' in version
+          '3.0.0' can have up to 818.17KiB
+        link: https://pypi.org/project/justext/3.0.0/#files
+        package_name: justext

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Homeconnect063PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: homeconnect
+          version: ==0.6.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'homeconnect' in version
+          '0.6.3' can have up to 7.51KiB
+        link: https://pypi.org/project/homeconnect/0.6.3/#files
+        package_name: homeconnect

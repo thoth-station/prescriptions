@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ApacheAirflowBackportProvidersSftp202133rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-backport-providers-sftp
+          version: ==2021.3.3rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-backport-providers-sftp' in version
+          '2021.3.3rc1' can have up to 23.54KiB
+        link: https://pypi.org/project/apache-airflow-backport-providers-sftp/2021.3.3rc1/#files
+        package_name: apache-airflow-backport-providers-sftp

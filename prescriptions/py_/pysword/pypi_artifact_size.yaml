@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pysword027PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysword
+          version: ==0.2.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysword' in version
+          '0.2.7' can have up to 26.81KiB
+        link: https://pypi.org/project/pysword/0.2.7/#files
+        package_name: pysword

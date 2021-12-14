@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Moto229dev9PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: moto
+          version: ==2.2.9.dev9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'moto' in version
+          '2.2.9.dev9' can have up to 1.76MiB
+        link: https://pypi.org/project/moto/2.2.9.dev9/#files
+        package_name: moto

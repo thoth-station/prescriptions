@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestBlackMultipy101PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-black-multipy
+          version: ==1.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-black-multipy' in version
+          '1.0.1' can have up to 8.99KiB
+        link: https://pypi.org/project/pytest-black-multipy/1.0.1/#files
+        package_name: pytest-black-multipy

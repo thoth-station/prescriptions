@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pytd143PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytd
+          version: ==1.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytd' in version
+          '1.4.3' can have up to 36.65KiB
+        link: https://pypi.org/project/pytd/1.4.3/#files
+        package_name: pytd

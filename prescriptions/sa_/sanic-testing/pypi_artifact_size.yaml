@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SanicTesting070b2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sanic-testing
+          version: ==0.7.0b2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sanic-testing' in version
+          '0.7.0b2' can have up to 8.95KiB
+        link: https://pypi.org/project/sanic-testing/0.7.0b2/#files
+        package_name: sanic-testing

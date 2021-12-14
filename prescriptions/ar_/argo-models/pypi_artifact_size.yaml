@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ArgoModels275PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argo-models
+          version: ==2.7.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'argo-models' in version
+          '2.7.5' can have up to 50.68KiB
+        link: https://pypi.org/project/argo-models/2.7.5/#files
+        package_name: argo-models

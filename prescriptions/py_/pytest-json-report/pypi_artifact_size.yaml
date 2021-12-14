@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestJsonReport141PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-json-report
+          version: ==1.4.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-json-report' in version
+          '1.4.1' can have up to 20.01KiB
+        link: https://pypi.org/project/pytest-json-report/1.4.1/#files
+        package_name: pytest-json-report

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pysignals012PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysignals
+          version: ==0.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysignals' in version
+          '0.1.2' can have up to 7.02KiB
+        link: https://pypi.org/project/pysignals/0.1.2/#files
+        package_name: pysignals

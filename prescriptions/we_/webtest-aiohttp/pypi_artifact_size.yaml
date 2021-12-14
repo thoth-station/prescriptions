@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: WebtestAiohttp200PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webtest-aiohttp
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'webtest-aiohttp' in version
+          '2.0.0' can have up to 8.17KiB
+        link: https://pypi.org/project/webtest-aiohttp/2.0.0/#files
+        package_name: webtest-aiohttp

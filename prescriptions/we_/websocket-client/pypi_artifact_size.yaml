@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: WebsocketClient123PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: websocket-client
+          version: ==1.2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'websocket-client' in version
+          '1.2.3' can have up to 52.23KiB
+        link: https://pypi.org/project/websocket-client/1.2.3/#files
+        package_name: websocket-client

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Dropbox950PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dropbox
+          version: ==9.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dropbox' in version
+          '9.5.0' can have up to 609.43KiB
+        link: https://pypi.org/project/dropbox/9.5.0/#files
+        package_name: dropbox

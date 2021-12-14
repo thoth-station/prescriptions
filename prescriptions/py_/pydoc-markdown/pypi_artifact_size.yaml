@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PydocMarkdown450PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydoc-markdown
+          version: ==4.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pydoc-markdown' in version
+          '4.5.0' can have up to 59.39KiB
+        link: https://pypi.org/project/pydoc-markdown/4.5.0/#files
+        package_name: pydoc-markdown

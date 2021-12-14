@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Setuptools91PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools
+          version: ==9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'setuptools' in version
+          '9.1' can have up to 843.04KiB
+        link: https://pypi.org/project/setuptools/9.1/#files
+        package_name: setuptools

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Wad046PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wad
+          version: ==0.4.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wad' in version
+          '0.4.6' can have up to 98.45KiB
+        link: https://pypi.org/project/wad/0.4.6/#files
+        package_name: wad

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DogpileCache114PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dogpile-cache
+          version: ==1.1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dogpile-cache' in version
+          '1.1.4' can have up to 380.97KiB
+        link: https://pypi.org/project/dogpile-cache/1.1.4/#files
+        package_name: dogpile-cache

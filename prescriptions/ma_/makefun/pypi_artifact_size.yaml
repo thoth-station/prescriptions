@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Makefun195PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: makefun
+          version: ==1.9.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'makefun' in version
+          '1.9.5' can have up to 57.92KiB
+        link: https://pypi.org/project/makefun/1.9.5/#files
+        package_name: makefun

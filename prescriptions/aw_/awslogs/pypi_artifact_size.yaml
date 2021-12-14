@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Awslogs080PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awslogs
+          version: ==0.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awslogs' in version
+          '0.8.0' can have up to 10.98KiB
+        link: https://pypi.org/project/awslogs/0.8.0/#files
+        package_name: awslogs

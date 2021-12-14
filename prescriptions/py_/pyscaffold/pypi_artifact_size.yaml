@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyscaffold41rc3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyscaffold
+          version: ==4.1rc3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyscaffold' in version
+          '4.1rc3' can have up to 4.99MiB
+        link: https://pypi.org/project/pyscaffold/4.1rc3/#files
+        package_name: pyscaffold

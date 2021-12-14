@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Iowait02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iowait
+          version: ==0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'iowait' in version
+          '0.2' can have up to 21.82KiB
+        link: https://pypi.org/project/iowait/0.2/#files
+        package_name: iowait

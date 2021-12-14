@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GoogleCloudLogging270PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-logging
+          version: ==2.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-cloud-logging' in version
+          '2.7.0' can have up to 182.66KiB
+        link: https://pypi.org/project/google-cloud-logging/2.7.0/#files
+        package_name: google-cloud-logging

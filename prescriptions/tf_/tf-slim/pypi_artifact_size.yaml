@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: TfSlim110PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tf-slim
+          version: ==1.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tf-slim' in version
+          '1.1.0' can have up to 343.88KiB
+        link: https://pypi.org/project/tf-slim/1.1.0/#files
+        package_name: tf-slim

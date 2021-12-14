@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: RemotePdb210PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: remote-pdb
+          version: ==2.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'remote-pdb' in version
+          '2.1.0' can have up to 21.77KiB
+        link: https://pypi.org/project/remote-pdb/2.1.0/#files
+        package_name: remote-pdb

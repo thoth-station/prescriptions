@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ws4py051PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ws4py
+          version: ==0.5.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ws4py' in version
+          '0.5.1' can have up to 50.20KiB
+        link: https://pypi.org/project/ws4py/0.5.1/#files
+        package_name: ws4py

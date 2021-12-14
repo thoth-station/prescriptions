@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Impacket0924PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: impacket
+          version: ==0.9.24
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'impacket' in version
+          '0.9.24' can have up to 6.82MiB
+        link: https://pypi.org/project/impacket/0.9.24/#files
+        package_name: impacket

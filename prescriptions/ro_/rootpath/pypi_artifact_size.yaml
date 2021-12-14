@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Rootpath011PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rootpath
+          version: ==0.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rootpath' in version
+          '0.1.1' can have up to 14.82KiB
+        link: https://pypi.org/project/rootpath/0.1.1/#files
+        package_name: rootpath

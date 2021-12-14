@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Marathon093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: marathon
+          version: ==0.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'marathon' in version
+          '0.9.3' can have up to 22.15KiB
+        link: https://pypi.org/project/marathon/0.9.3/#files
+        package_name: marathon

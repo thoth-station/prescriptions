@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pymysql102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymysql
+          version: ==1.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymysql' in version
+          '1.0.2' can have up to 44.41KiB
+        link: https://pypi.org/project/pymysql/1.0.2/#files
+        package_name: pymysql

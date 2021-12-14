@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SnakebitePy3305PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snakebite-py3
+          version: ==3.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'snakebite-py3' in version
+          '3.0.5' can have up to 83.49KiB
+        link: https://pypi.org/project/snakebite-py3/3.0.5/#files
+        package_name: snakebite-py3

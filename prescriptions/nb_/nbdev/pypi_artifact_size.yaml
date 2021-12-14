@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Nbdev119PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbdev
+          version: ==1.1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nbdev' in version
+          '1.1.9' can have up to 5.21MiB
+        link: https://pypi.org/project/nbdev/1.1.9/#files
+        package_name: nbdev

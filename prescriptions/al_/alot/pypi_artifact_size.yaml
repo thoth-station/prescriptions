@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Alot070PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alot
+          version: ==0.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'alot' in version
+          '0.7.0' can have up to 132.26KiB
+        link: https://pypi.org/project/alot/0.7.0/#files
+        package_name: alot

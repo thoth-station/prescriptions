@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PipLicenses353PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pip-licenses
+          version: ==3.5.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pip-licenses' in version
+          '3.5.3' can have up to 28.63KiB
+        link: https://pypi.org/project/pip-licenses/3.5.3/#files
+        package_name: pip-licenses

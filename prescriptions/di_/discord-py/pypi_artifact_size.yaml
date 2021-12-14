@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DiscordPy173PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-py
+          version: ==1.7.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'discord-py' in version
+          '1.7.3' can have up to 768.21KiB
+        link: https://pypi.org/project/discord-py/1.7.3/#files
+        package_name: discord-py

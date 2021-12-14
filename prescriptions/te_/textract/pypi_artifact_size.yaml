@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Textract164PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: textract
+          version: ==1.6.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'textract' in version
+          '1.6.4' can have up to 17.28KiB
+        link: https://pypi.org/project/textract/1.6.4/#files
+        package_name: textract

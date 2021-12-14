@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Word2number11PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: word2number
+          version: ==1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'word2number' in version
+          '1.1' can have up to 9.50KiB
+        link: https://pypi.org/project/word2number/1.1/#files
+        package_name: word2number

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Param193PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: param
+          version: ==1.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'param' in version
+          '1.9.3' can have up to 69.04KiB
+        link: https://pypi.org/project/param/1.9.3/#files
+        package_name: param

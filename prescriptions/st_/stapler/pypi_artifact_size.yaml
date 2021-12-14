@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Stapler100b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stapler
+          version: ==1.0.0b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'stapler' in version
+          '1.0.0b1' can have up to 39.23KiB
+        link: https://pypi.org/project/stapler/1.0.0b1/#files
+        package_name: stapler

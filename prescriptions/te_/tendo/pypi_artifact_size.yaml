@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tendo028PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tendo
+          version: ==0.2.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tendo' in version
+          '0.2.8' can have up to 16.23KiB
+        link: https://pypi.org/project/tendo/0.2.8/#files
+        package_name: tendo

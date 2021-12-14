@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sparsify090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparsify
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sparsify' in version
+          '0.9.0' can have up to 2.79MiB
+        link: https://pypi.org/project/sparsify/0.9.0/#files
+        package_name: sparsify

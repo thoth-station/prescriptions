@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Grako3999PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grako
+          version: ==3.99.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'grako' in version
+          '3.99.9' can have up to 155.54KiB
+        link: https://pypi.org/project/grako/3.99.9/#files
+        package_name: grako

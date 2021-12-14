@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: TypesDeprecated123PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: types-deprecated
+          version: ==1.2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'types-deprecated' in version
+          '1.2.3' can have up to 2.92KiB
+        link: https://pypi.org/project/types-deprecated/1.2.3/#files
+        package_name: types-deprecated

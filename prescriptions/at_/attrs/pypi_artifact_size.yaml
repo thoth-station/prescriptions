@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Attrs2120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrs
+          version: ==21.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'attrs' in version
+          '21.2.0' can have up to 180.37KiB
+        link: https://pypi.org/project/attrs/21.2.0/#files
+        package_name: attrs

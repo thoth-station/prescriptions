@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Blurb108PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blurb
+          version: ==1.0.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'blurb' in version
+          '1.0.8' can have up to 22.08KiB
+        link: https://pypi.org/project/blurb/1.0.8/#files
+        package_name: blurb

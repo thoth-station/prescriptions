@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AutoPyToExe290PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: auto-py-to-exe
+          version: ==2.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'auto-py-to-exe' in version
+          '2.9.0' can have up to 79.92KiB
+        link: https://pypi.org/project/auto-py-to-exe/2.9.0/#files
+        package_name: auto-py-to-exe

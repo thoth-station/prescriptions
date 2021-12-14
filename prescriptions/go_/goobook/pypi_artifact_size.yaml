@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Goobook35rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: goobook
+          version: ==3.5rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'goobook' in version
+          '3.5rc1' can have up to 37.05KiB
+        link: https://pypi.org/project/goobook/3.5rc1/#files
+        package_name: goobook

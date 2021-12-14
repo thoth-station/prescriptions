@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Junitxml07PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: junitxml
+          version: ==0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'junitxml' in version
+          '0.7' can have up to 25.42KiB
+        link: https://pypi.org/project/junitxml/0.7/#files
+        package_name: junitxml

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Eyed3096PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eyed3
+          version: ==0.9.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'eyed3' in version
+          '0.9.6' can have up to 240.10KiB
+        link: https://pypi.org/project/eyed3/0.9.6/#files
+        package_name: eyed3

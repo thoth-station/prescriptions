@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestTornasync060post2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-tornasync
+          version: ==0.6.0.post2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-tornasync' in version
+          '0.6.0.post2' can have up to 6.48KiB
+        link: https://pypi.org/project/pytest-tornasync/0.6.0.post2/#files
+        package_name: pytest-tornasync

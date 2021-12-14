@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Selectors3412PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: selectors34
+          version: ==1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'selectors34' in version
+          '1.2' can have up to 9.91KiB
+        link: https://pypi.org/project/selectors34/1.2/#files
+        package_name: selectors34

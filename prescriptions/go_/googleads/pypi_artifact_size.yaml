@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Googleads900PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: googleads
+          version: ==9.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'googleads' in version
+          '9.0.0' can have up to 44.41KiB
+        link: https://pypi.org/project/googleads/9.0.0/#files
+        package_name: googleads

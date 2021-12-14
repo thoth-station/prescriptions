@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Subarulink039PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subarulink
+          version: ==0.3.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'subarulink' in version
+          '0.3.9' can have up to 28.05KiB
+        link: https://pypi.org/project/subarulink/0.3.9/#files
+        package_name: subarulink

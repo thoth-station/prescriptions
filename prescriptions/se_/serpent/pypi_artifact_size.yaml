@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Serpent19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serpent
+          version: ==1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'serpent' in version
+          '1.9' can have up to 11.72KiB
+        link: https://pypi.org/project/serpent/1.9/#files
+        package_name: serpent

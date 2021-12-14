@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DevpiClient523PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devpi-client
+          version: ==5.2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'devpi-client' in version
+          '5.2.3' can have up to 74.34KiB
+        link: https://pypi.org/project/devpi-client/5.2.3/#files
+        package_name: devpi-client

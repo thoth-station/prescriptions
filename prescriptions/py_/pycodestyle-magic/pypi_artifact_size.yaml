@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PycodestyleMagic05PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycodestyle-magic
+          version: ==0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycodestyle-magic' in version
+          '0.5' can have up to 51.85KiB
+        link: https://pypi.org/project/pycodestyle-magic/0.5/#files
+        package_name: pycodestyle-magic

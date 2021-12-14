@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ruyaml100a0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ruyaml
+          version: ==1.0.0a0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ruyaml' in version
+          '1.0.0a0' can have up to 214.04KiB
+        link: https://pypi.org/project/ruyaml/1.0.0a0/#files
+        package_name: ruyaml

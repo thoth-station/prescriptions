@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ZopeAppPublisher431PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-app-publisher
+          version: ==4.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-app-publisher' in version
+          '4.3.1' can have up to 47.27KiB
+        link: https://pypi.org/project/zope-app-publisher/4.3.1/#files
+        package_name: zope-app-publisher

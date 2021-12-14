@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Autokeras109PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autokeras
+          version: ==1.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'autokeras' in version
+          '1.0.9' can have up to 64.77KiB
+        link: https://pypi.org/project/autokeras/1.0.9/#files
+        package_name: autokeras

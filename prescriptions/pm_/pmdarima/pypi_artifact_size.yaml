@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pmdarima184PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pmdarima
+          version: ==1.8.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pmdarima' in version
+          '1.8.4' can have up to 1.40MiB
+        link: https://pypi.org/project/pmdarima/1.8.4/#files
+        package_name: pmdarima

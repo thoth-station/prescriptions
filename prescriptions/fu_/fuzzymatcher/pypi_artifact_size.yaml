@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Fuzzymatcher005PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuzzymatcher
+          version: ==0.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fuzzymatcher' in version
+          '0.0.5' can have up to 14.66KiB
+        link: https://pypi.org/project/fuzzymatcher/0.0.5/#files
+        package_name: fuzzymatcher

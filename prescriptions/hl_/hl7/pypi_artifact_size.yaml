@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Hl7042PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hl7
+          version: ==0.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hl7' in version
+          '0.4.2' can have up to 46.05KiB
+        link: https://pypi.org/project/hl7/0.4.2/#files
+        package_name: hl7

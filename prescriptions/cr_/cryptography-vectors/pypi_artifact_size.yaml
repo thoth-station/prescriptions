@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CryptographyVectors3600PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cryptography-vectors
+          version: ==36.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cryptography-vectors' in version
+          '36.0.0' can have up to 34.99MiB
+        link: https://pypi.org/project/cryptography-vectors/36.0.0/#files
+        package_name: cryptography-vectors

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AwsCdkAwsAutoscaling1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-autoscaling
+          version: ==1.99.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-autoscaling' in version
+          '1.99.0' can have up to 244.89KiB
+        link: https://pypi.org/project/aws-cdk-aws-autoscaling/1.99.0/#files
+        package_name: aws-cdk-aws-autoscaling

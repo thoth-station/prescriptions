@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PyHealthcheck190PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-healthcheck
+          version: ==1.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-healthcheck' in version
+          '1.9.0' can have up to 8.10KiB
+        link: https://pypi.org/project/py-healthcheck/1.9.0/#files
+        package_name: py-healthcheck

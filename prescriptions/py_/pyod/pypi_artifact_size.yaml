@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyod095PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyod
+          version: ==0.9.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyod' in version
+          '0.9.5' can have up to 110.78KiB
+        link: https://pypi.org/project/pyod/0.9.5/#files
+        package_name: pyod

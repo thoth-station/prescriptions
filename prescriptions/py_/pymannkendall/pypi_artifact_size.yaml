@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pymannkendall142PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymannkendall
+          version: ==1.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymannkendall' in version
+          '1.4.2' can have up to 31.07KiB
+        link: https://pypi.org/project/pymannkendall/1.4.2/#files
+        package_name: pymannkendall

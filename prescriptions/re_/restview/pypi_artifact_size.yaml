@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Restview293PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: restview
+          version: ==2.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'restview' in version
+          '2.9.3' can have up to 48.75KiB
+        link: https://pypi.org/project/restview/2.9.3/#files
+        package_name: restview

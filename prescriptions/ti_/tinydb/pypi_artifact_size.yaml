@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tinydb452PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tinydb
+          version: ==4.5.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tinydb' in version
+          '4.5.2' can have up to 23.00KiB
+        link: https://pypi.org/project/tinydb/4.5.2/#files
+        package_name: tinydb

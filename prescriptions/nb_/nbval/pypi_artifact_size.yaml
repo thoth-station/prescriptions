@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Nbval096PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbval
+          version: ==0.9.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nbval' in version
+          '0.9.6' can have up to 59.50KiB
+        link: https://pypi.org/project/nbval/0.9.6/#files
+        package_name: nbval

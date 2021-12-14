@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersFtp201rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-ftp
+          version: ==2.0.1rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-ftp' in version
+          '2.0.1rc1' can have up to 14.95KiB
+        link: https://pypi.org/project/apache-airflow-providers-ftp/2.0.1rc1/#files
+        package_name: apache-airflow-providers-ftp

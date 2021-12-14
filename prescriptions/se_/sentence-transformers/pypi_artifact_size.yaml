@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SentenceTransformers210PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentence-transformers
+          version: ==2.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sentence-transformers' in version
+          '2.1.0' can have up to 76.67KiB
+        link: https://pypi.org/project/sentence-transformers/2.1.0/#files
+        package_name: sentence-transformers

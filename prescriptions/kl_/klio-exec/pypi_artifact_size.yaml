@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: KlioExec2190rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: klio-exec
+          version: ==21.9.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'klio-exec' in version
+          '21.9.0rc1' can have up to 52.47KiB
+        link: https://pypi.org/project/klio-exec/21.9.0rc1/#files
+        package_name: klio-exec

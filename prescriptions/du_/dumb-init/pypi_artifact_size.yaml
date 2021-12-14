@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DumbInit125PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dumb-init
+          version: ==1.2.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dumb-init' in version
+          '1.2.5' can have up to 282.17KiB
+        link: https://pypi.org/project/dumb-init/1.2.5/#files
+        package_name: dumb-init

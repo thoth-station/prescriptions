@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureMgmtNetwork900PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-network
+          version: ==9.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-network' in version
+          '9.0.0' can have up to 6.92MiB
+        link: https://pypi.org/project/azure-mgmt-network/9.0.0/#files
+        package_name: azure-mgmt-network

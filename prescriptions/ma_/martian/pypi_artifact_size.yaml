@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Martian14PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: martian
+          version: ==1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'martian' in version
+          '1.4' can have up to 67.07KiB
+        link: https://pypi.org/project/martian/1.4/#files
+        package_name: martian

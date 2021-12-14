@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Neo4j440b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neo4j
+          version: ==4.4.0b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'neo4j' in version
+          '4.4.0b1' can have up to 87.21KiB
+        link: https://pypi.org/project/neo4j/4.4.0b1/#files
+        package_name: neo4j

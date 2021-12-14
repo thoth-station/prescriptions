@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Asset069PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asset
+          version: ==0.6.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'asset' in version
+          '0.6.9' can have up to 27.02KiB
+        link: https://pypi.org/project/asset/0.6.9/#files
+        package_name: asset

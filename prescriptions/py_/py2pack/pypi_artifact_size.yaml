@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Py2pack087PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py2pack
+          version: ==0.8.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py2pack' in version
+          '0.8.7' can have up to 45.32KiB
+        link: https://pypi.org/project/py2pack/0.8.7/#files
+        package_name: py2pack

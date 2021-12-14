@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flock01PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flock
+          version: ==0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flock' in version
+          '0.1' can have up to 1.33KiB
+        link: https://pypi.org/project/flock/0.1/#files
+        package_name: flock

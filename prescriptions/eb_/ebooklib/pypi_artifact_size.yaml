@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ebooklib0171PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ebooklib
+          version: ==0.17.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ebooklib' in version
+          '0.17.1' can have up to 108.95KiB
+        link: https://pypi.org/project/ebooklib/0.17.1/#files
+        package_name: ebooklib

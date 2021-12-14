@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyhcl044PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyhcl
+          version: ==0.4.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyhcl' in version
+          '0.4.4' can have up to 59.64KiB
+        link: https://pypi.org/project/pyhcl/0.4.4/#files
+        package_name: pyhcl

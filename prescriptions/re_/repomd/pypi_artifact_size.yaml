@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Repomd021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: repomd
+          version: ==0.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'repomd' in version
+          '0.2.1' can have up to 7.55KiB
+        link: https://pypi.org/project/repomd/0.2.1/#files
+        package_name: repomd

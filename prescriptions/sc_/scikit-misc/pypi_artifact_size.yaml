@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ScikitMisc014PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scikit-misc
+          version: ==0.1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'scikit-misc' in version
+          '0.1.4' can have up to 10.35MiB
+        link: https://pypi.org/project/scikit-misc/0.1.4/#files
+        package_name: scikit-misc

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzureCliCommandModulesNspkg203PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-cli-command-modules-nspkg
+          version: ==2.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-cli-command-modules-nspkg' in version
+          '2.0.3' can have up to 1.84KiB
+        link: https://pypi.org/project/azure-cli-command-modules-nspkg/2.0.3/#files
+        package_name: azure-cli-command-modules-nspkg

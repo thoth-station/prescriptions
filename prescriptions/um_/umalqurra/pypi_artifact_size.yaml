@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Umalqurra02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: umalqurra
+          version: ==0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'umalqurra' in version
+          '0.2' can have up to 8.10KiB
+        link: https://pypi.org/project/umalqurra/0.2/#files
+        package_name: umalqurra

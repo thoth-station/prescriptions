@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Enrich126PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enrich
+          version: ==1.2.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'enrich' in version
+          '1.2.6' can have up to 15.22KiB
+        link: https://pypi.org/project/enrich/1.2.6/#files
+        package_name: enrich

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonCoveralls293PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-coveralls
+          version: ==2.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-coveralls' in version
+          '2.9.3' can have up to 9.65KiB
+        link: https://pypi.org/project/python-coveralls/2.9.3/#files
+        package_name: python-coveralls

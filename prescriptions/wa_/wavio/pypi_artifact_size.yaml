@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Wavio004PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wavio
+          version: ==0.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wavio' in version
+          '0.0.4' can have up to 8.75KiB
+        link: https://pypi.org/project/wavio/0.0.4/#files
+        package_name: wavio

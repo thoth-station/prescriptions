@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mailman335rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailman
+          version: ==3.3.5rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mailman' in version
+          '3.3.5rc1' can have up to 1.69MiB
+        link: https://pypi.org/project/mailman/3.3.5rc1/#files
+        package_name: mailman

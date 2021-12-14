@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DiscordWebhook090PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-webhook
+          version: ==0.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'discord-webhook' in version
+          '0.9.0' can have up to 7.79KiB
+        link: https://pypi.org/project/discord-webhook/0.9.0/#files
+        package_name: discord-webhook

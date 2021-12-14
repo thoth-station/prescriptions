@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Simpy401PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simpy
+          version: ==4.0.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'simpy' in version
+          '4.0.1' can have up to 400.47KiB
+        link: https://pypi.org/project/simpy/4.0.1/#files
+        package_name: simpy

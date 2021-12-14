@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JsonpathRw140PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpath-rw
+          version: ==1.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jsonpath-rw' in version
+          '1.4.0' can have up to 13.49KiB
+        link: https://pypi.org/project/jsonpath-rw/1.4.0/#files
+        package_name: jsonpath-rw

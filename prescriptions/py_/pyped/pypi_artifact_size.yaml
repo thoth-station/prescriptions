@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyped14PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyped
+          version: ==1.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyped' in version
+          '1.4' can have up to 15.10KiB
+        link: https://pypi.org/project/pyped/1.4/#files
+        package_name: pyped

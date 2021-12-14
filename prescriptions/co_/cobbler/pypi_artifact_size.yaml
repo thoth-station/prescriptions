@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Cobbler330PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cobbler
+          version: ==3.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cobbler' in version
+          '3.3.0' can have up to 494.28KiB
+        link: https://pypi.org/project/cobbler/3.3.0/#files
+        package_name: cobbler

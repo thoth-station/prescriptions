@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Blackboxauditing019PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blackboxauditing
+          version: ==0.1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'blackboxauditing' in version
+          '0.1.9' can have up to 11.94MiB
+        link: https://pypi.org/project/blackboxauditing/0.1.9/#files
+        package_name: blackboxauditing

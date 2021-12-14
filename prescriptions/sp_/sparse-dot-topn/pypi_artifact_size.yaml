@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SparseDotTopn031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparse-dot-topn
+          version: ==0.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sparse-dot-topn' in version
+          '0.3.1' can have up to 300.07KiB
+        link: https://pypi.org/project/sparse-dot-topn/0.3.1/#files
+        package_name: sparse-dot-topn

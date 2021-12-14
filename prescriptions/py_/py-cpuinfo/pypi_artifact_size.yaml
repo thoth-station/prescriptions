@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PyCpuinfo800PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-cpuinfo
+          version: ==8.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-cpuinfo' in version
+          '8.0.0' can have up to 97.45KiB
+        link: https://pypi.org/project/py-cpuinfo/8.0.0/#files
+        package_name: py-cpuinfo

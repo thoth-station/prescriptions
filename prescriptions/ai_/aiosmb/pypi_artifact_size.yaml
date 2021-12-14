@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Aiosmb029PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosmb
+          version: ==0.2.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiosmb' in version
+          '0.2.9' can have up to 617.16KiB
+        link: https://pypi.org/project/aiosmb/0.2.9/#files
+        package_name: aiosmb

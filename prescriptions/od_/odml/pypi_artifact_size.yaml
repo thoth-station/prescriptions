@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Odml152PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: odml
+          version: ==1.5.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'odml' in version
+          '1.5.2' can have up to 151.54KiB
+        link: https://pypi.org/project/odml/1.5.2/#files
+        package_name: odml

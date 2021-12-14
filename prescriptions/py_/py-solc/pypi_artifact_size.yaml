@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PySolc320PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-solc
+          version: ==3.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-solc' in version
+          '3.2.0' can have up to 12.59KiB
+        link: https://pypi.org/project/py-solc/3.2.0/#files
+        package_name: py-solc

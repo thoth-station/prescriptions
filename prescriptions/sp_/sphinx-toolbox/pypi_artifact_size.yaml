@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SphinxToolbox290PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx-toolbox
+          version: ==2.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinx-toolbox' in version
+          '2.9.0' can have up to 400.49KiB
+        link: https://pypi.org/project/sphinx-toolbox/2.9.0/#files
+        package_name: sphinx-toolbox

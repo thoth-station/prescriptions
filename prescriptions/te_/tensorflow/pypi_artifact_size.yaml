@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tensorflow270rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow
+          version: ==2.7.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tensorflow' in version
+          '2.7.0rc1' can have up to 466.97MiB
+        link: https://pypi.org/project/tensorflow/2.7.0rc1/#files
+        package_name: tensorflow

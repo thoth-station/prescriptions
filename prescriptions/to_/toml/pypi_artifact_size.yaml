@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Toml096PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: toml
+          version: ==0.9.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'toml' in version
+          '0.9.6' can have up to 14.08KiB
+        link: https://pypi.org/project/toml/0.9.6/#files
+        package_name: toml

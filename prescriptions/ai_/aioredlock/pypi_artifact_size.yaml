@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Aioredlock072PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioredlock
+          version: ==0.7.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aioredlock' in version
+          '0.7.2' can have up to 12.57KiB
+        link: https://pypi.org/project/aioredlock/0.7.2/#files
+        package_name: aioredlock

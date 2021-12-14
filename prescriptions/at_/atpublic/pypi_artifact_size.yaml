@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Atpublic23PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atpublic
+          version: ==2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'atpublic' in version
+          '2.3' can have up to 16.35KiB
+        link: https://pypi.org/project/atpublic/2.3/#files
+        package_name: atpublic

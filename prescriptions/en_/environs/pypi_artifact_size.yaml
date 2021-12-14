@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Environs935PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: environs
+          version: ==9.3.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'environs' in version
+          '9.3.5' can have up to 19.91KiB
+        link: https://pypi.org/project/environs/9.3.5/#files
+        package_name: environs

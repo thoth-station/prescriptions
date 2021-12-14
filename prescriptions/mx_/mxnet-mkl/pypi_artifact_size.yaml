@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: MxnetMkl160PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mxnet-mkl
+          version: ==1.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mxnet-mkl' in version
+          '1.6.0' can have up to 73.13MiB
+        link: https://pypi.org/project/mxnet-mkl/1.6.0/#files
+        package_name: mxnet-mkl

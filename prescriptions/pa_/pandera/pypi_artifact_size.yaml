@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pandera080PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandera
+          version: ==0.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pandera' in version
+          '0.8.0' can have up to 181.86KiB
+        link: https://pypi.org/project/pandera/0.8.0/#files
+        package_name: pandera

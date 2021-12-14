@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FlaskSecurity300PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-security
+          version: ==3.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flask-security' in version
+          '3.0.0' can have up to 156.61KiB
+        link: https://pypi.org/project/flask-security/3.0.0/#files
+        package_name: flask-security

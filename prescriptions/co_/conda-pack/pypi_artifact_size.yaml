@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CondaPack060PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conda-pack
+          version: ==0.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'conda-pack' in version
+          '0.6.0' can have up to 42.15KiB
+        link: https://pypi.org/project/conda-pack/0.6.0/#files
+        package_name: conda-pack

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Anyconfig099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anyconfig
+          version: ==0.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'anyconfig' in version
+          '0.9.9' can have up to 97.86KiB
+        link: https://pypi.org/project/anyconfig/0.9.9/#files
+        package_name: anyconfig

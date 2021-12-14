@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestBlack039PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-black
+          version: ==0.3.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-black' in version
+          '0.3.9' can have up to 6.16KiB
+        link: https://pypi.org/project/pytest-black/0.3.9/#files
+        package_name: pytest-black

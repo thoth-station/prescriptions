@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Rlr245PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rlr
+          version: ==2.4.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rlr' in version
+          '2.4.5' can have up to 4.71KiB
+        link: https://pypi.org/project/rlr/2.4.5/#files
+        package_name: rlr

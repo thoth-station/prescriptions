@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Feedparser608PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedparser
+          version: ==6.0.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'feedparser' in version
+          '6.0.8' can have up to 279.13KiB
+        link: https://pypi.org/project/feedparser/6.0.8/#files
+        package_name: feedparser

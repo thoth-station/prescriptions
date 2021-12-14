@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Easyocr141PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyocr
+          version: ==1.4.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'easyocr' in version
+          '1.4.1' can have up to 60.68MiB
+        link: https://pypi.org/project/easyocr/1.4.1/#files
+        package_name: easyocr

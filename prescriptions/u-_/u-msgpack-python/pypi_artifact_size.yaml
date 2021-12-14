@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: UMsgpackPython271PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: u-msgpack-python
+          version: ==2.7.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'u-msgpack-python' in version
+          '2.7.1' can have up to 20.15KiB
+        link: https://pypi.org/project/u-msgpack-python/2.7.1/#files
+        package_name: u-msgpack-python

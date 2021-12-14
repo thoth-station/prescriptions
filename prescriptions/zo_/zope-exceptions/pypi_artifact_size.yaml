@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ZopeExceptions44PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-exceptions
+          version: ==4.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-exceptions' in version
+          '4.4' can have up to 27.58KiB
+        link: https://pypi.org/project/zope-exceptions/4.4/#files
+        package_name: zope-exceptions

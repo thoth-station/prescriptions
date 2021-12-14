@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestPycodestyle220PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-pycodestyle
+          version: ==2.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-pycodestyle' in version
+          '2.2.0' can have up to 4.10KiB
+        link: https://pypi.org/project/pytest-pycodestyle/2.2.0/#files
+        package_name: pytest-pycodestyle

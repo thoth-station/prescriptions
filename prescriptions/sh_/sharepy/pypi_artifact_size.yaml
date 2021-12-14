@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Sharepy200b1post2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sharepy
+          version: ==2.0.0b1.post2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sharepy' in version
+          '2.0.0b1.post2' can have up to 11.09KiB
+        link: https://pypi.org/project/sharepy/2.0.0b1.post2/#files
+        package_name: sharepy

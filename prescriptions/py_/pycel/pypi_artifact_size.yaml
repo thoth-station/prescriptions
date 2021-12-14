@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pycel10b8PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycel
+          version: ==1.0b8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycel' in version
+          '1.0b8' can have up to 62.75KiB
+        link: https://pypi.org/project/pycel/1.0b8/#files
+        package_name: pycel

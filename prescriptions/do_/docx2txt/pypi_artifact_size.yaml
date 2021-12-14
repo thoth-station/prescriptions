@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Docx2txt08PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docx2txt
+          version: ==0.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docx2txt' in version
+          '0.8' can have up to 2.75KiB
+        link: https://pypi.org/project/docx2txt/0.8/#files
+        package_name: docx2txt

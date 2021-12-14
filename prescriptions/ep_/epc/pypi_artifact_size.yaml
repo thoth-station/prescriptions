@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Epc005PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epc
+          version: ==0.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'epc' in version
+          '0.0.5' can have up to 17.55KiB
+        link: https://pypi.org/project/epc/0.0.5/#files
+        package_name: epc

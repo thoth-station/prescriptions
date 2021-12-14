@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Scipy180rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scipy
+          version: ==1.8.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'scipy' in version
+          '1.8.0rc1' can have up to 112.88MiB
+        link: https://pypi.org/project/scipy/1.8.0rc1/#files
+        package_name: scipy

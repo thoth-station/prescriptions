@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Python2Secrets105PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python2-secrets
+          version: ==1.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python2-secrets' in version
+          '1.0.5' can have up to 4.83KiB
+        link: https://pypi.org/project/python2-secrets/1.0.5/#files
+        package_name: python2-secrets

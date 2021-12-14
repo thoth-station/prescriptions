@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AwsCdkAwsCodepipelineActions1990PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-cdk-aws-codepipeline-actions
+          version: ==1.99.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aws-cdk-aws-codepipeline-actions' in version
+          '1.99.0' can have up to 217.84KiB
+        link: https://pypi.org/project/aws-cdk-aws-codepipeline-actions/1.99.0/#files
+        package_name: aws-cdk-aws-codepipeline-actions

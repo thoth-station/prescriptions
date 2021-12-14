@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pybalboa09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pybalboa
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pybalboa' in version
+          '0.9' can have up to 10.34KiB
+        link: https://pypi.org/project/pybalboa/0.9/#files
+        package_name: pybalboa

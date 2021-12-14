@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersHashicorp211rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-hashicorp
+          version: ==2.1.1rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow-providers-hashicorp' in version
+          '2.1.1rc1' can have up to 24.06KiB
+        link: https://pypi.org/project/apache-airflow-providers-hashicorp/2.1.1rc1/#files
+        package_name: apache-airflow-providers-hashicorp

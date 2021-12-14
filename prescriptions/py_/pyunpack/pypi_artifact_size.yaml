@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyunpack022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyunpack
+          version: ==0.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyunpack' in version
+          '0.2.2' can have up to 5.36KiB
+        link: https://pypi.org/project/pyunpack/0.2.2/#files
+        package_name: pyunpack

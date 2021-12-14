@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SefrCut11PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sefr-cut
+          version: ==1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sefr-cut' in version
+          '1.1' can have up to 8.31MiB
+        link: https://pypi.org/project/sefr-cut/1.1/#files
+        package_name: sefr-cut

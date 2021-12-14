@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Hikvision204PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hikvision
+          version: ==2.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'hikvision' in version
+          '2.0.4' can have up to 6.90KiB
+        link: https://pypi.org/project/hikvision/2.0.4/#files
+        package_name: hikvision

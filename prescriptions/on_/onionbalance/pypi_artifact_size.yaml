@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Onionbalance021PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onionbalance
+          version: ==0.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'onionbalance' in version
+          '0.2.1' can have up to 93.72KiB
+        link: https://pypi.org/project/onionbalance/0.2.1/#files
+        package_name: onionbalance

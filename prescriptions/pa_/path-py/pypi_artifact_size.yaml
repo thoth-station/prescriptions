@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PathPy91PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: path-py
+          version: ==9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'path-py' in version
+          '9.1' can have up to 33.47KiB
+        link: https://pypi.org/project/path-py/9.1/#files
+        package_name: path-py

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pysubnettree035PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysubnettree
+          version: ==0.35
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pysubnettree' in version
+          '0.35' can have up to 49.97KiB
+        link: https://pypi.org/project/pysubnettree/0.35/#files
+        package_name: pysubnettree

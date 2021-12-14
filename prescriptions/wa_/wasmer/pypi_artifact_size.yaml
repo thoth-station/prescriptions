@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Wasmer100a3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wasmer
+          version: ==1.0.0a3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wasmer' in version
+          '1.0.0a3' can have up to 1.40MiB
+        link: https://pypi.org/project/wasmer/1.0.0a3/#files
+        package_name: wasmer

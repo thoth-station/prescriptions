@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Comtypes119PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: comtypes
+          version: ==1.1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'comtypes' in version
+          '1.1.9' can have up to 177.79KiB
+        link: https://pypi.org/project/comtypes/1.1.9/#files
+        package_name: comtypes

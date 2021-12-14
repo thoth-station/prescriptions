@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AlchemyMock043PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alchemy-mock
+          version: ==0.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'alchemy-mock' in version
+          '0.4.3' can have up to 13.55KiB
+        link: https://pypi.org/project/alchemy-mock/0.4.3/#files
+        package_name: alchemy-mock

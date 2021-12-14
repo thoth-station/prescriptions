@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Supersmoother04PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: supersmoother
+          version: ==0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'supersmoother' in version
+          '0.4' can have up to 228.29KiB
+        link: https://pypi.org/project/supersmoother/0.4/#files
+        package_name: supersmoother

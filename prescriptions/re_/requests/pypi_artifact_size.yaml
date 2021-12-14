@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Requests292PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests
+          version: ==2.9.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'requests' in version
+          '2.9.2' can have up to 491.03KiB
+        link: https://pypi.org/project/requests/2.9.2/#files
+        package_name: requests

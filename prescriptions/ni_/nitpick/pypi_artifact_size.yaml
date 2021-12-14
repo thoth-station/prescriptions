@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Nitpick0290PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitpick
+          version: ==0.29.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nitpick' in version
+          '0.29.0' can have up to 54.44KiB
+        link: https://pypi.org/project/nitpick/0.29.0/#files
+        package_name: nitpick

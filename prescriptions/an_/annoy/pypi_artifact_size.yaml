@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Annoy195PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: annoy
+          version: ==1.9.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'annoy' in version
+          '1.9.5' can have up to 614.88KiB
+        link: https://pypi.org/project/annoy/1.9.5/#files
+        package_name: annoy

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Naked0131PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: naked
+          version: ==0.1.31
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'naked' in version
+          '0.1.31' can have up to 576.72KiB
+        link: https://pypi.org/project/naked/0.1.31/#files
+        package_name: naked

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Colorlog660PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorlog
+          version: ==6.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colorlog' in version
+          '6.6.0' can have up to 29.99KiB
+        link: https://pypi.org/project/colorlog/6.6.0/#files
+        package_name: colorlog

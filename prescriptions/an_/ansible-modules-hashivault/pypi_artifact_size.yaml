@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AnsibleModulesHashivault464PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-modules-hashivault
+          version: ==4.6.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible-modules-hashivault' in version
+          '4.6.4' can have up to 70.29KiB
+        link: https://pypi.org/project/ansible-modules-hashivault/4.6.4/#files
+        package_name: ansible-modules-hashivault

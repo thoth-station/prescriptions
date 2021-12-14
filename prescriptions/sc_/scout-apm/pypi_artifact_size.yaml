@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ScoutApm291PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: scout-apm
+          version: ==2.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'scout-apm' in version
+          '2.9.1' can have up to 68.60KiB
+        link: https://pypi.org/project/scout-apm/2.9.1/#files
+        package_name: scout-apm

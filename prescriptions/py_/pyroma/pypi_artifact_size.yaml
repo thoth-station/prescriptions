@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyroma32b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyroma
+          version: ==3.2b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyroma' in version
+          '3.2b1' can have up to 349.43KiB
+        link: https://pypi.org/project/pyroma/3.2b1/#files
+        package_name: pyroma

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: SetuptoolsGitVersion10a2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setuptools-git-version
+          version: ==1.0a2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'setuptools-git-version' in version
+          '1.0a2' can have up to 4.74KiB
+        link: https://pypi.org/project/setuptools-git-version/1.0a2/#files
+        package_name: setuptools-git-version

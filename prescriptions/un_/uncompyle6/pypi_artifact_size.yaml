@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Uncompyle6380PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: uncompyle6
+          version: ==3.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'uncompyle6' in version
+          '3.8.0' can have up to 2.34MiB
+        link: https://pypi.org/project/uncompyle6/3.8.0/#files
+        package_name: uncompyle6

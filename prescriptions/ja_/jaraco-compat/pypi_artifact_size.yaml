@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JaracoCompat400PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-compat
+          version: ==4.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jaraco-compat' in version
+          '4.0.0' can have up to 9.50KiB
+        link: https://pypi.org/project/jaraco-compat/4.0.0/#files
+        package_name: jaraco-compat

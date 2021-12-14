@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BackportsLzma009PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-lzma
+          version: ==0.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backports-lzma' in version
+          '0.0.9' can have up to 36.00KiB
+        link: https://pypi.org/project/backports-lzma/0.0.9/#files
+        package_name: backports-lzma

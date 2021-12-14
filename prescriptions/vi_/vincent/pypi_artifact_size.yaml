@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Vincent044PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vincent
+          version: ==0.4.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'vincent' in version
+          '0.4.4' can have up to 29.21KiB
+        link: https://pypi.org/project/vincent/0.4.4/#files
+        package_name: vincent

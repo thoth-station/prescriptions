@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JupyterResourceUsage061PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-resource-usage
+          version: ==0.6.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-resource-usage' in version
+          '0.6.1' can have up to 44.71KiB
+        link: https://pypi.org/project/jupyter-resource-usage/0.6.1/#files
+        package_name: jupyter-resource-usage

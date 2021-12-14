@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Nikola813PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nikola
+          version: ==8.1.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nikola' in version
+          '8.1.3' can have up to 4.14MiB
+        link: https://pypi.org/project/nikola/8.1.3/#files
+        package_name: nikola

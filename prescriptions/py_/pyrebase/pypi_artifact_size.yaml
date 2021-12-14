@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyrebase309PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrebase
+          version: ==3.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyrebase' in version
+          '3.0.9' can have up to 5.72KiB
+        link: https://pypi.org/project/pyrebase/3.0.9/#files
+        package_name: pyrebase

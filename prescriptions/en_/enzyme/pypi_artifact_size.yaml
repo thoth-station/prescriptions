@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Enzyme041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enzyme
+          version: ==0.4.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'enzyme' in version
+          '0.4.1' can have up to 46.83KiB
+        link: https://pypi.org/project/enzyme/0.4.1/#files
+        package_name: enzyme

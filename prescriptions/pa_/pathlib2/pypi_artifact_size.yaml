@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pathlib2236PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathlib2
+          version: ==2.3.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pathlib2' in version
+          '2.3.6' can have up to 37.53KiB
+        link: https://pypi.org/project/pathlib2/2.3.6/#files
+        package_name: pathlib2

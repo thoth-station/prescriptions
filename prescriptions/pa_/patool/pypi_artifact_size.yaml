@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Patool19PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patool
+          version: ==1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'patool' in version
+          '1.9' can have up to 70.47KiB
+        link: https://pypi.org/project/patool/1.9/#files
+        package_name: patool

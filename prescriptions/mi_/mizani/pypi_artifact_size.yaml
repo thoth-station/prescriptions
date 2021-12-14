@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Mizani073PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mizani
+          version: ==0.7.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mizani' in version
+          '0.7.3' can have up to 71.92KiB
+        link: https://pypi.org/project/mizani/0.7.3/#files
+        package_name: mizani

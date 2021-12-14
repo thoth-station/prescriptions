@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestTestinfra650PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-testinfra
+          version: ==6.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-testinfra' in version
+          '6.5.0' can have up to 75.37KiB
+        link: https://pypi.org/project/pytest-testinfra/6.5.0/#files
+        package_name: pytest-testinfra

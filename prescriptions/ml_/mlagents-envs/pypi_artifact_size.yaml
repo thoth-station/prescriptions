@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: MlagentsEnvs093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mlagents-envs
+          version: ==0.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mlagents-envs' in version
+          '0.9.3' can have up to 55.40KiB
+        link: https://pypi.org/project/mlagents-envs/0.9.3/#files
+        package_name: mlagents-envs

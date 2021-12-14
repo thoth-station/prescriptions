@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Curio15PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: curio
+          version: ==1.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'curio' in version
+          '1.5' can have up to 229.41KiB
+        link: https://pypi.org/project/curio/1.5/#files
+        package_name: curio

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pymc3393PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymc3
+          version: ==3.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymc3' in version
+          '3.9.3' can have up to 1.78MiB
+        link: https://pypi.org/project/pymc3/3.9.3/#files
+        package_name: pymc3

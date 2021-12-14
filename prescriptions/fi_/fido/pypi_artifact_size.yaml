@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Fido422PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fido
+          version: ==4.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fido' in version
+          '4.2.2' can have up to 7.21KiB
+        link: https://pypi.org/project/fido/4.2.2/#files
+        package_name: fido

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Samplerate010PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: samplerate
+          version: ==0.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'samplerate' in version
+          '0.1.0' can have up to 3.86MiB
+        link: https://pypi.org/project/samplerate/0.1.0/#files
+        package_name: samplerate

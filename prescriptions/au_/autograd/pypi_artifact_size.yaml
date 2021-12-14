@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Autograd13PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autograd
+          version: ==1.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'autograd' in version
+          '1.3' can have up to 37.36KiB
+        link: https://pypi.org/project/autograd/1.3/#files
+        package_name: autograd

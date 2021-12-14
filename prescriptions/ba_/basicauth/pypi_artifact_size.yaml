@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Basicauth041PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basicauth
+          version: ==0.4.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'basicauth' in version
+          '0.4.1' can have up to 4.43KiB
+        link: https://pypi.org/project/basicauth/0.4.1/#files
+        package_name: basicauth

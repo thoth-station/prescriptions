@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BackportsTimePerfCounter004PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-time-perf-counter
+          version: ==0.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backports-time-perf-counter' in version
+          '0.0.4' can have up to 4.60KiB
+        link: https://pypi.org/project/backports-time-perf-counter/0.0.4/#files
+        package_name: backports-time-perf-counter

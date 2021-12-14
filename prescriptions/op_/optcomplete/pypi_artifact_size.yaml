@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Optcomplete12DevelPyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: optcomplete
+          version: ==1.2-devel
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'optcomplete' in version
+          '1.2-devel' can have up to 36.72KiB
+        link: https://pypi.org/project/optcomplete/1.2-devel/#files
+        package_name: optcomplete

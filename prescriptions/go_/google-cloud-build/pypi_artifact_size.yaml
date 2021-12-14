@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GoogleCloudBuild371PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-build
+          version: ==3.7.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-cloud-build' in version
+          '3.7.1' can have up to 85.64KiB
+        link: https://pypi.org/project/google-cloud-build/3.7.1/#files
+        package_name: google-cloud-build

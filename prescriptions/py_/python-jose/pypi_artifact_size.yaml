@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonJose330PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-jose
+          version: ==3.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-jose' in version
+          '3.3.0' can have up to 126.04KiB
+        link: https://pypi.org/project/python-jose/3.3.0/#files
+        package_name: python-jose

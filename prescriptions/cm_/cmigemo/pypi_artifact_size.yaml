@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Cmigemo016PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmigemo
+          version: ==0.1.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cmigemo' in version
+          '0.1.6' can have up to 3.04KiB
+        link: https://pypi.org/project/cmigemo/0.1.6/#files
+        package_name: cmigemo

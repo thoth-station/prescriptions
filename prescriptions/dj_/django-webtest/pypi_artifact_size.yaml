@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoWebtest198PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-webtest
+          version: ==1.9.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-webtest' in version
+          '1.9.8' can have up to 27.61KiB
+        link: https://pypi.org/project/django-webtest/1.9.8/#files
+        package_name: django-webtest

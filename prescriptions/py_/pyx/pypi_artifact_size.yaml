@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyx09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyx
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyx' in version
+          '0.9' can have up to 343.21KiB
+        link: https://pypi.org/project/pyx/0.9/#files
+        package_name: pyx

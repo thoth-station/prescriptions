@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Autocommand221PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autocommand
+          version: ==2.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'autocommand' in version
+          '2.2.1' can have up to 22.61KiB
+        link: https://pypi.org/project/autocommand/2.2.1/#files
+        package_name: autocommand

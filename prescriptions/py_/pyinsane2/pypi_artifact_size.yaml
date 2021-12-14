@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyinsane2209PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyinsane2
+          version: ==2.0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyinsane2' in version
+          '2.0.9' can have up to 46.91KiB
+        link: https://pypi.org/project/pyinsane2/2.0.9/#files
+        package_name: pyinsane2

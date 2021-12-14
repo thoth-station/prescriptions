@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pylibdmtx019PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylibdmtx
+          version: ==0.1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylibdmtx' in version
+          '0.1.9' can have up to 63.85KiB
+        link: https://pypi.org/project/pylibdmtx/0.1.9/#files
+        package_name: pylibdmtx

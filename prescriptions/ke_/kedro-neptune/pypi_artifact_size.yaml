@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: KedroNeptune007PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kedro-neptune
+          version: ==0.0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kedro-neptune' in version
+          '0.0.7' can have up to 37.64KiB
+        link: https://pypi.org/project/kedro-neptune/0.0.7/#files
+        package_name: kedro-neptune

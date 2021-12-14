@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PyGfm102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-gfm
+          version: ==1.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-gfm' in version
+          '1.0.2' can have up to 15.36KiB
+        link: https://pypi.org/project/py-gfm/1.0.2/#files
+        package_name: py-gfm

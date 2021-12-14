@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PrometheusFlaskExporter093PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: prometheus-flask-exporter
+          version: ==0.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'prometheus-flask-exporter' in version
+          '0.9.3' can have up to 15.62KiB
+        link: https://pypi.org/project/prometheus-flask-exporter/0.9.3/#files
+        package_name: prometheus-flask-exporter

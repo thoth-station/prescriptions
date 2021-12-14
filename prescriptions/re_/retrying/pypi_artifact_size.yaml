@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Retrying133PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: retrying
+          version: ==1.3.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'retrying' in version
+          '1.3.3' can have up to 10.63KiB
+        link: https://pypi.org/project/retrying/1.3.3/#files
+        package_name: retrying

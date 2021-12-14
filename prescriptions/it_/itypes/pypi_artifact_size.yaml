@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Itypes120PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: itypes
+          version: ==1.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'itypes' in version
+          '1.2.0' can have up to 4.64KiB
+        link: https://pypi.org/project/itypes/1.2.0/#files
+        package_name: itypes

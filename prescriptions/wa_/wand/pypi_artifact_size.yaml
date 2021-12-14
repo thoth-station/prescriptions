@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Wand067PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: wand
+          version: ==0.6.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'wand' in version
+          '0.6.7' can have up to 11.14MiB
+        link: https://pypi.org/project/wand/0.6.7/#files
+        package_name: wand

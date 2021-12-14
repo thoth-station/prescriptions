@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pylast440PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylast
+          version: ==4.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylast' in version
+          '4.4.0' can have up to 42.68KiB
+        link: https://pypi.org/project/pylast/4.4.0/#files
+        package_name: pylast

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ssdeep34PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ssdeep
+          version: ==3.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ssdeep' in version
+          '3.4' can have up to 108.24KiB
+        link: https://pypi.org/project/ssdeep/3.4/#files
+        package_name: ssdeep

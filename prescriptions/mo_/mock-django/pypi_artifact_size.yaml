@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: MockDjango069PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mock-django
+          version: ==0.6.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mock-django' in version
+          '0.6.9' can have up to 11.90KiB
+        link: https://pypi.org/project/mock-django/0.6.9/#files
+        package_name: mock-django

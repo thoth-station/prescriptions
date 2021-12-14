@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoCrontab071PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-crontab
+          version: ==0.7.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django-crontab' in version
+          '0.7.1' can have up to 6.92KiB
+        link: https://pypi.org/project/django-crontab/0.7.1/#files
+        package_name: django-crontab

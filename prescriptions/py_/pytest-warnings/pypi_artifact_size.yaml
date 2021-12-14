@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestWarnings031PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-warnings
+          version: ==0.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-warnings' in version
+          '0.3.1' can have up to 5.09KiB
+        link: https://pypi.org/project/pytest-warnings/0.3.1/#files
+        package_name: pytest-warnings

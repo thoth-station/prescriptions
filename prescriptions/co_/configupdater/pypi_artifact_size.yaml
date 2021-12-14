@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Configupdater30rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configupdater
+          version: ==3.0rc2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'configupdater' in version
+          '3.0rc2' can have up to 131.55KiB
+        link: https://pypi.org/project/configupdater/3.0rc2/#files
+        package_name: configupdater

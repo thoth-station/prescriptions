@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ColconDevtools022PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-devtools
+          version: ==0.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colcon-devtools' in version
+          '0.2.2' can have up to 5.61KiB
+        link: https://pypi.org/project/colcon-devtools/0.2.2/#files
+        package_name: colcon-devtools

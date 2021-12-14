@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Rfc5424LoggingHandler143PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rfc5424-logging-handler
+          version: ==1.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rfc5424-logging-handler' in version
+          '1.4.3' can have up to 16.08KiB
+        link: https://pypi.org/project/rfc5424-logging-handler/1.4.3/#files
+        package_name: rfc5424-logging-handler

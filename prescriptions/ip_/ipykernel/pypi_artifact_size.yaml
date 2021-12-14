@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Ipykernel660PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipykernel
+          version: ==6.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ipykernel' in version
+          '6.6.0' can have up to 123.29KiB
+        link: https://pypi.org/project/ipykernel/6.6.0/#files
+        package_name: ipykernel

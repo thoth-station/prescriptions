@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DaskMl20211130PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask-ml
+          version: ==2021.11.30
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dask-ml' in version
+          '2021.11.30' can have up to 583.23KiB
+        link: https://pypi.org/project/dask-ml/2021.11.30/#files
+        package_name: dask-ml

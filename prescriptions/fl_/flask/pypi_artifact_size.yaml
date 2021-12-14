@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flask202PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask
+          version: ==2.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flask' in version
+          '2.0.2' can have up to 613.75KiB
+        link: https://pypi.org/project/flask/2.0.2/#files
+        package_name: flask

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: TensorflowDataValidation150PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-data-validation
+          version: ==1.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tensorflow-data-validation' in version
+          '1.5.0' can have up to 1.44MiB
+        link: https://pypi.org/project/tensorflow-data-validation/1.5.0/#files
+        package_name: tensorflow-data-validation

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: OnnxruntimeTools170PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxruntime-tools
+          version: ==1.7.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'onnxruntime-tools' in version
+          '1.7.0' can have up to 207.71KiB
+        link: https://pypi.org/project/onnxruntime-tools/1.7.0/#files
+        package_name: onnxruntime-tools

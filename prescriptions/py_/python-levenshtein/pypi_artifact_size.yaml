@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PythonLevenshtein0122PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-levenshtein
+          version: ==0.12.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'python-levenshtein' in version
+          '0.12.2' can have up to 49.32KiB
+        link: https://pypi.org/project/python-levenshtein/0.12.2/#files
+        package_name: python-levenshtein

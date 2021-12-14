@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: GoogleCloudCore221PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-core
+          version: ==2.2.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-cloud-core' in version
+          '2.2.1' can have up to 34.20KiB
+        link: https://pypi.org/project/google-cloud-core/2.2.1/#files
+        package_name: google-cloud-core

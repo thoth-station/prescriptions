@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ThothStorages097PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: thoth-storages
+          version: ==0.9.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'thoth-storages' in version
+          '0.9.7' can have up to 29.20KiB
+        link: https://pypi.org/project/thoth-storages/0.9.7/#files
+        package_name: thoth-storages

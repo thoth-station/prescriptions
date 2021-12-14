@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Deprecated129PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecated
+          version: ==1.2.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'deprecated' in version
+          '1.2.9' can have up to 5.09MiB
+        link: https://pypi.org/project/deprecated/1.2.9/#files
+        package_name: deprecated

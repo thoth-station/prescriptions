@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Irc90PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: irc
+          version: ==9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'irc' in version
+          '9.0' can have up to 117.44KiB
+        link: https://pypi.org/project/irc/9.0/#files
+        package_name: irc

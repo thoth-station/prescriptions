@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pylink033PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylink
+          version: ==0.3.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pylink' in version
+          '0.3.3' can have up to 10.62KiB
+        link: https://pypi.org/project/pylink/0.3.3/#files
+        package_name: pylink

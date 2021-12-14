@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Dynarray013PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynarray
+          version: ==0.1.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dynarray' in version
+          '0.1.3' can have up to 2.81KiB
+        link: https://pypi.org/project/dynarray/0.1.3/#files
+        package_name: dynarray

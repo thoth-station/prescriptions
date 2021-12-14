@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Tesserocr252PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tesserocr
+          version: ==2.5.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tesserocr' in version
+          '2.5.2' can have up to 56.06KiB
+        link: https://pypi.org/project/tesserocr/2.5.2/#files
+        package_name: tesserocr

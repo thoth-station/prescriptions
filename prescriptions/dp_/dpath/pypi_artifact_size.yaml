@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DpathGitUnknownPyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dpath
+          version: ==git-unknown
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dpath' in version
+          'git-unknown' can have up to 7.60KiB
+        link: https://pypi.org/project/dpath/git-unknown/#files
+        package_name: dpath

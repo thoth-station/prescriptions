@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Docker503PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker
+          version: ==5.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'docker' in version
+          '5.0.3' can have up to 204.58KiB
+        link: https://pypi.org/project/docker/5.0.3/#files
+        package_name: docker

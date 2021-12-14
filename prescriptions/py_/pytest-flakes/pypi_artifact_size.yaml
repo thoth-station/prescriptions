@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PytestFlakes405PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flakes
+          version: ==4.0.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytest-flakes' in version
+          '4.0.5' can have up to 7.14KiB
+        link: https://pypi.org/project/pytest-flakes/4.0.5/#files
+        package_name: pytest-flakes

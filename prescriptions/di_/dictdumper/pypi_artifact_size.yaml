@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Dictdumper084post2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdumper
+          version: ==0.8.4.post2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dictdumper' in version
+          '0.8.4.post2' can have up to 67.08KiB
+        link: https://pypi.org/project/dictdumper/0.8.4.post2/#files
+        package_name: dictdumper

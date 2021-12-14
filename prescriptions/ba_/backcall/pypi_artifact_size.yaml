@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Backcall020PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backcall
+          version: ==0.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backcall' in version
+          '0.2.0' can have up to 17.62KiB
+        link: https://pypi.org/project/backcall/0.2.0/#files
+        package_name: backcall

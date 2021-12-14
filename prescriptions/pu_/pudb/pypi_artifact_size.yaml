@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pudb202122PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pudb
+          version: ==2021.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pudb' in version
+          '2021.2.2' can have up to 211.31KiB
+        link: https://pypi.org/project/pudb/2021.2.2/#files
+        package_name: pudb

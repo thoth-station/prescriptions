@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Presets013PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: presets
+          version: ==0.1.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'presets' in version
+          '0.1.3' can have up to 3.27KiB
+        link: https://pypi.org/project/presets/0.1.3/#files
+        package_name: presets

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Astor081PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astor
+          version: ==0.8.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'astor' in version
+          '0.8.1' can have up to 34.27KiB
+        link: https://pypi.org/project/astor/0.8.1/#files
+        package_name: astor

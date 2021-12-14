@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Netpyne1002PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netpyne
+          version: ==1.0.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'netpyne' in version
+          '1.0.0.2' can have up to 304.98KiB
+        link: https://pypi.org/project/netpyne/1.0.0.2/#files
+        package_name: netpyne

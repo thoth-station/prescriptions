@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: LinkifyItPy102PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: linkify-it-py
+          version: ==1.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'linkify-it-py' in version
+          '1.0.2' can have up to 22.06KiB
+        link: https://pypi.org/project/linkify-it-py/1.0.2/#files
+        package_name: linkify-it-py

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: FacebookSdk310PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-sdk
+          version: ==3.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'facebook-sdk' in version
+          '3.1.0' can have up to 15.90KiB
+        link: https://pypi.org/project/facebook-sdk/3.1.0/#files
+        package_name: facebook-sdk

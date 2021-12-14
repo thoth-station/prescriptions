@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ModelBakery133PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: model-bakery
+          version: ==1.3.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'model-bakery' in version
+          '1.3.3' can have up to 54.22KiB
+        link: https://pypi.org/project/model-bakery/1.3.3/#files
+        package_name: model-bakery

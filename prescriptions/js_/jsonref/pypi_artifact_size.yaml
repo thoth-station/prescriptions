@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Jsonref02PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonref
+          version: ==0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jsonref' in version
+          '0.2' can have up to 12.73KiB
+        link: https://pypi.org/project/jsonref/0.2/#files
+        package_name: jsonref

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pytz20213PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytz
+          version: ==2021.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytz' in version
+          '2021.3' can have up to 491.67KiB
+        link: https://pypi.org/project/pytz/2021.3/#files
+        package_name: pytz

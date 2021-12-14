@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Poetry120a2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: poetry
+          version: ==1.2.0a2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'poetry' in version
+          '1.2.0a2' can have up to 750.31KiB
+        link: https://pypi.org/project/poetry/1.2.0a2/#files
+        package_name: poetry

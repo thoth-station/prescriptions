@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pyro4481PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyro4
+          version: ==4.81
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyro4' in version
+          '4.81' can have up to 502.62KiB
+        link: https://pypi.org/project/pyro4/4.81/#files
+        package_name: pyro4

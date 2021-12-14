@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Aiounifi9PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiounifi
+          version: ==9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'aiounifi' in version
+          '9' can have up to 7.40KiB
+        link: https://pypi.org/project/aiounifi/9/#files
+        package_name: aiounifi

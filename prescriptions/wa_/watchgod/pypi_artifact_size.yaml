@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Watchgod07PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: watchgod
+          version: ==0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'watchgod' in version
+          '0.7' can have up to 13.26KiB
+        link: https://pypi.org/project/watchgod/0.7/#files
+        package_name: watchgod

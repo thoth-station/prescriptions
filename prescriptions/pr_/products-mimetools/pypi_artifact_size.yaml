@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ProductsMimetools32PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-mimetools
+          version: ==3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'products-mimetools' in version
+          '3.2' can have up to 10.84KiB
+        link: https://pypi.org/project/products-mimetools/3.2/#files
+        package_name: products-mimetools

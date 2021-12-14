@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pytenable143PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytenable
+          version: ==1.4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pytenable' in version
+          '1.4.3' can have up to 164.86KiB
+        link: https://pypi.org/project/pytenable/1.4.3/#files
+        package_name: pytenable

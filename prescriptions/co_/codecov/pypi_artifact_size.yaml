@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Codecov219PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codecov
+          version: ==2.1.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'codecov' in version
+          '2.1.9' can have up to 19.52KiB
+        link: https://pypi.org/project/codecov/2.1.9/#files
+        package_name: codecov

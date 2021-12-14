@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: PySpy040dev1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: py-spy
+          version: ==0.4.0.dev1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'py-spy' in version
+          '0.4.0.dev1' can have up to 2.90MiB
+        link: https://pypi.org/project/py-spy/0.4.0.dev1/#files
+        package_name: py-spy

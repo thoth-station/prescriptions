@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CupyCuda92960PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda92
+          version: ==9.6.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cupy-cuda92' in version
+          '9.6.0' can have up to 54.68MiB
+        link: https://pypi.org/project/cupy-cuda92/9.6.0/#files
+        package_name: cupy-cuda92

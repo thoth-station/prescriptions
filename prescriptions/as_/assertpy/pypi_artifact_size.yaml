@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Assertpy11PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: assertpy
+          version: ==1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'assertpy' in version
+          '1.1' can have up to 24.83KiB
+        link: https://pypi.org/project/assertpy/1.1/#files
+        package_name: assertpy

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Simplebayes158PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplebayes
+          version: ==1.5.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'simplebayes' in version
+          '1.5.8' can have up to 15.15KiB
+        link: https://pypi.org/project/simplebayes/1.5.8/#files
+        package_name: simplebayes

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Soco09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: soco
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'soco' in version
+          '0.9' can have up to 82.13KiB
+        link: https://pypi.org/project/soco/0.9/#files
+        package_name: soco

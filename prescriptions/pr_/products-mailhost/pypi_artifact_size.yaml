@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ProductsMailhost49PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: products-mailhost
+          version: ==4.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'products-mailhost' in version
+          '4.9' can have up to 27.70KiB
+        link: https://pypi.org/project/products-mailhost/4.9/#files
+        package_name: products-mailhost

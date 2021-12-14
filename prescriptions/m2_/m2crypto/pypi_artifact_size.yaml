@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: M2crypto0380PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: m2crypto
+          version: ==0.38.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'm2crypto' in version
+          '0.38.0' can have up to 1.18MiB
+        link: https://pypi.org/project/m2crypto/0.38.0/#files
+        package_name: m2crypto

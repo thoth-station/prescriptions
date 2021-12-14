@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Datetime43PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datetime
+          version: ==4.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'datetime' in version
+          '4.3' can have up to 58.65KiB
+        link: https://pypi.org/project/datetime/4.3/#files
+        package_name: datetime

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Niapy200rc9PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: niapy
+          version: ==2.0.0rc9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'niapy' in version
+          '2.0.0rc9' can have up to 189.26KiB
+        link: https://pypi.org/project/niapy/2.0.0rc9/#files
+        package_name: niapy

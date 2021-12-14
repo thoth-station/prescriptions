@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: OpentracingInstrumentation331PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentracing-instrumentation
+          version: ==3.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'opentracing-instrumentation' in version
+          '3.3.1' can have up to 43.64KiB
+        link: https://pypi.org/project/opentracing-instrumentation/3.3.1/#files
+        package_name: opentracing-instrumentation

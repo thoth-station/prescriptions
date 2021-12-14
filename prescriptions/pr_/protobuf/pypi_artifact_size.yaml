@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Protobuf400rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: protobuf
+          version: ==4.0.0rc2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'protobuf' in version
+          '4.0.0rc2' can have up to 1.22MiB
+        link: https://pypi.org/project/protobuf/4.0.0rc2/#files
+        package_name: protobuf

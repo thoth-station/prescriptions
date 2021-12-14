@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Flake8Fixme111PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-fixme
+          version: ==1.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flake8-fixme' in version
+          '1.1.1' can have up to 7.79KiB
+        link: https://pypi.org/project/flake8-fixme/1.1.1/#files
+        package_name: flake8-fixme

@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CassandraDriver390PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cassandra-driver
+          version: ==3.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cassandra-driver' in version
+          '3.9.0' can have up to 211.51KiB
+        link: https://pypi.org/project/cassandra-driver/3.9.0/#files
+        package_name: cassandra-driver

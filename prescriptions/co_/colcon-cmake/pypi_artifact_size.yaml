@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ColconCmake029PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colcon-cmake
+          version: ==0.2.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'colcon-cmake' in version
+          '0.2.9' can have up to 15.76KiB
+        link: https://pypi.org/project/colcon-cmake/0.2.9/#files
+        package_name: colcon-cmake

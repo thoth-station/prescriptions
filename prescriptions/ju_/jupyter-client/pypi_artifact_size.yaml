@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: JupyterClient710PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-client
+          version: ==7.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyter-client' in version
+          '7.1.0' can have up to 315.92KiB
+        link: https://pypi.org/project/jupyter-client/7.1.0/#files
+        package_name: jupyter-client

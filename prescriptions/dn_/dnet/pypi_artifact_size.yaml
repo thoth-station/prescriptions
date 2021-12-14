@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Dnet112PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dnet
+          version: ==1.12
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dnet' in version
+          '1.12' can have up to 75.56KiB
+        link: https://pypi.org/project/dnet/1.12/#files
+        package_name: dnet

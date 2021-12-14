@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Horovod099PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: horovod
+          version: ==0.9.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'horovod' in version
+          '0.9.9' can have up to 63.27KiB
+        link: https://pypi.org/project/horovod/0.9.9/#files
+        package_name: horovod

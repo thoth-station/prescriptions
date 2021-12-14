@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Pipdate055PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipdate
+          version: ==0.5.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pipdate' in version
+          '0.5.5' can have up to 17.65KiB
+        link: https://pypi.org/project/pipdate/0.5.5/#files
+        package_name: pipdate

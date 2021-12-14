@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ZopeCopy42PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zope-copy
+          version: ==4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'zope-copy' in version
+          '4.2' can have up to 22.39KiB
+        link: https://pypi.org/project/zope-copy/4.2/#files
+        package_name: zope-copy

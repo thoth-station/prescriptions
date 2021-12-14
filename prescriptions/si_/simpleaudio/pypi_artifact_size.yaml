@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Simpleaudio104PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simpleaudio
+          version: ==1.0.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'simpleaudio' in version
+          '1.0.4' can have up to 1.95MiB
+        link: https://pypi.org/project/simpleaudio/1.0.4/#files
+        package_name: simpleaudio

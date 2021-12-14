@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Subprocess32354rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subprocess32
+          version: ==3.5.4rc2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'subprocess32' in version
+          '3.5.4rc2' can have up to 95.07KiB
+        link: https://pypi.org/project/subprocess32/3.5.4rc2/#files
+        package_name: subprocess32

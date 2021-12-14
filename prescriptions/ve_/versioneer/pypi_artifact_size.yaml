@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Versioneer09PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: versioneer
+          version: ==0.9
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'versioneer' in version
+          '0.9' can have up to 14.79KiB
+        link: https://pypi.org/project/versioneer/0.9/#files
+        package_name: versioneer
