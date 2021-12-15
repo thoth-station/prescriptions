@@ -1,6 +1,60 @@
 units:
   wraps:
-  - name: Mimesis521PyPIArtifactSizeWrap
+  - name: Mimesis5x0x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimesis
+          version: ==5.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mimesis' in version
+          '5.0.0' can have up to 4.16MiB
+        link: https://pypi.org/project/mimesis/5.0.0/#files
+        package_name: mimesis
+  - name: Mimesis5x1x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimesis
+          version: ==5.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mimesis' in version
+          '5.1.0' can have up to 4.15MiB
+        link: https://pypi.org/project/mimesis/5.1.0/#files
+        package_name: mimesis
+  - name: Mimesis5x1x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimesis
+          version: ==5.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mimesis' in version
+          '5.1.1' can have up to 4.16MiB
+        link: https://pypi.org/project/mimesis/5.1.1/#files
+        package_name: mimesis
+  - name: Mimesis5x2x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

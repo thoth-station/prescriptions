@@ -1,6 +1,42 @@
 units:
   wraps:
-  - name: PyicuBinary274PyPIArtifactSizeWrap
+  - name: PyicuBinary2x0x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyicu-binary
+          version: ==2.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyicu-binary' in version
+          '2.0.3' can have up to 13.27MiB
+        link: https://pypi.org/project/pyicu-binary/2.0.3/#files
+        package_name: pyicu-binary
+  - name: PyicuBinary2x3x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyicu-binary
+          version: ==2.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyicu-binary' in version
+          '2.3.1' can have up to 13.97MiB
+        link: https://pypi.org/project/pyicu-binary/2.3.1/#files
+        package_name: pyicu-binary
+  - name: PyicuBinary2x7x4PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

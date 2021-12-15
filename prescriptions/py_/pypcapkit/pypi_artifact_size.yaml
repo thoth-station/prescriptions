@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Pypcapkit099rc3PyPIArtifactSizeWrap
+  - name: Pypcapkit0x10x0rc2PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: pypcapkit
-          version: ==0.9.9rc3
+          version: ==0.10.0rc2
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'pypcapkit' in version
-          '0.9.9rc3' can have up to 677.01KiB
-        link: https://pypi.org/project/pypcapkit/0.9.9rc3/#files
+          '0.10.0rc2' can have up to 6.08MiB
+        link: https://pypi.org/project/pypcapkit/0.10.0rc2/#files
+        package_name: pypcapkit
+  - name: Pypcapkit0x9x10xpost1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypcapkit
+          version: ==0.9.10.post1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pypcapkit' in version
+          '0.9.10.post1' can have up to 6.08MiB
+        link: https://pypi.org/project/pypcapkit/0.9.10.post1/#files
         package_name: pypcapkit

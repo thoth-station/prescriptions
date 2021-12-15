@@ -1,6 +1,60 @@
 units:
   wraps:
-  - name: Nitime09PyPIArtifactSizeWrap
+  - name: Nitime0x7PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitime
+          version: ==0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nitime' in version
+          '0.7' can have up to 9.54MiB
+        link: https://pypi.org/project/nitime/0.7/#files
+        package_name: nitime
+  - name: Nitime0x8PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitime
+          version: ==0.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nitime' in version
+          '0.8' can have up to 5.92MiB
+        link: https://pypi.org/project/nitime/0.8/#files
+        package_name: nitime
+  - name: Nitime0x8x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nitime
+          version: ==0.8.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nitime' in version
+          '0.8.1' can have up to 8.63MiB
+        link: https://pypi.org/project/nitime/0.8.1/#files
+        package_name: nitime
+  - name: Nitime0x9PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

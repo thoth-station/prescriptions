@@ -1,6 +1,42 @@
 units:
   wraps:
-  - name: Spectrographic093PyPIArtifactSizeWrap
+  - name: Spectrographic0x8x7PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spectrographic
+          version: ==0.8.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spectrographic' in version
+          '0.8.7' can have up to 5.36MiB
+        link: https://pypi.org/project/spectrographic/0.8.7/#files
+        package_name: spectrographic
+  - name: Spectrographic0x9x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: spectrographic
+          version: ==0.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'spectrographic' in version
+          '0.9.1' can have up to 5.36MiB
+        link: https://pypi.org/project/spectrographic/0.9.1/#files
+        package_name: spectrographic
+  - name: Spectrographic0x9x3PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

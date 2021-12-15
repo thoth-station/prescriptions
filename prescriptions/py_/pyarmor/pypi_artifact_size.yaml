@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Pyarmor722PyPIArtifactSizeWrap
+  - name: Pyarmor2x5x3PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,49 @@ units:
       state:
         resolved_dependencies:
         - name: pyarmor
-          version: ==7.2.2
+          version: ==2.5.3
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'pyarmor' in version
-          '7.2.2' can have up to 2.71MiB
-        link: https://pypi.org/project/pyarmor/7.2.2/#files
+          '2.5.3' can have up to 6.36MiB
+        link: https://pypi.org/project/pyarmor/2.5.3/#files
+        package_name: pyarmor
+  - name: Pyarmor2x5x5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyarmor
+          version: ==2.5.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyarmor' in version
+          '2.5.5' can have up to 6.37MiB
+        link: https://pypi.org/project/pyarmor/2.5.5/#files
+        package_name: pyarmor
+  - name: Pyarmor2x6x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyarmor
+          version: ==2.6.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyarmor' in version
+          '2.6.1' can have up to 6.38MiB
+        link: https://pypi.org/project/pyarmor/2.6.1/#files
         package_name: pyarmor

@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Elephant090PyPIArtifactSizeWrap
+  - name: Elephant0x6x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: elephant
-          version: ==0.9.0
+          version: ==0.6.1
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'elephant' in version
-          '0.9.0' can have up to 2.68MiB
-        link: https://pypi.org/project/elephant/0.9.0/#files
+          '0.6.1' can have up to 8.67MiB
+        link: https://pypi.org/project/elephant/0.6.1/#files
+        package_name: elephant
+  - name: Elephant0x6x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elephant
+          version: ==0.6.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'elephant' in version
+          '0.6.2' can have up to 8.67MiB
+        link: https://pypi.org/project/elephant/0.6.2/#files
         package_name: elephant

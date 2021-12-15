@@ -1,6 +1,24 @@
 units:
   wraps:
-  - name: TangledUpInUnicode020PyPIArtifactSizeWrap
+  - name: TangledUpInUnicode0x0x7PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tangled-up-in-unicode
+          version: ==0.0.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tangled-up-in-unicode' in version
+          '0.0.7' can have up to 3.00MiB
+        link: https://pypi.org/project/tangled-up-in-unicode/0.0.7/#files
+        package_name: tangled-up-in-unicode
+  - name: TangledUpInUnicode0x2x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

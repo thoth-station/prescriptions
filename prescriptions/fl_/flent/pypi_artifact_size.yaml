@@ -1,6 +1,24 @@
 units:
   wraps:
-  - name: Flent201PyPIArtifactSizeWrap
+  - name: Flent2x0x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flent
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flent' in version
+          '2.0.0' can have up to 3.48MiB
+        link: https://pypi.org/project/flent/2.0.0/#files
+        package_name: flent
+  - name: Flent2x0x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true

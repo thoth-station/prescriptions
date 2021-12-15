@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Pyunicorn061PyPIArtifactSizeWrap
+  - name: Pyunicorn0x5x2PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: pyunicorn
-          version: ==0.6.1
+          version: ==0.5.2
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'pyunicorn' in version
-          '0.6.1' can have up to 861.19KiB
-        link: https://pypi.org/project/pyunicorn/0.6.1/#files
+          '0.5.2' can have up to 4.28MiB
+        link: https://pypi.org/project/pyunicorn/0.5.2/#files
+        package_name: pyunicorn
+  - name: Pyunicorn0x6x0xpost1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyunicorn
+          version: ==0.6.0.post1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyunicorn' in version
+          '0.6.0.post1' can have up to 4.29MiB
+        link: https://pypi.org/project/pyunicorn/0.6.0.post1/#files
         package_name: pyunicorn

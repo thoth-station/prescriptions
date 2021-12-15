@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Bezier2021212PyPIArtifactSizeWrap
+  - name: Bezier0x6x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: bezier
-          version: ==2021.2.12
+          version: ==0.6.0
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'bezier' in version
-          '2021.2.12' can have up to 1.63MiB
-        link: https://pypi.org/project/bezier/2021.2.12/#files
+          '0.6.0' can have up to 3.64MiB
+        link: https://pypi.org/project/bezier/0.6.0/#files
+        package_name: bezier
+  - name: Bezier0x6x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bezier
+          version: ==0.6.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bezier' in version
+          '0.6.1' can have up to 3.64MiB
+        link: https://pypi.org/project/bezier/0.6.1/#files
         package_name: bezier
