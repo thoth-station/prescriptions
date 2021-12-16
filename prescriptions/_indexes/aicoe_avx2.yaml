@@ -1,0 +1,29 @@
+units:
+  sieves:
+  - name: AICoEAVX2TFIndexSieve
+    type: sieve
+    should_include:
+      labels:
+        aicoe-avx2-tf-index: solely
+    match:
+      package_version:
+        index_url:
+          not: https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple
+    run:
+      stack_info:
+      - type: INFO
+        message: Using AICoE AVX2 TensorFlow index as a source of Python packages
+        link: https://pypi.org/simple
+  - name: NoPyPIIndexSieve
+    type: sieve
+    should_include:
+      labels:
+        aicoe-avx2-tf-index: off
+    match:
+      package_version:
+        index_url: https://tensorflow.pypi.thoth-station.ninja/index/manylinux2010/AVX2/simple
+    run:
+      stack_info:
+      - type: INFO
+        message: Ignoring packages provided by AICoE AVX2 TensorFlow index
+        link: https://pypi.org/simple
