@@ -1,0 +1,18 @@
+units:
+  boots:
+  - name: CUDANoGPUBoot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        cuda_version: ">=0.0"
+        hardware:
+        - gpu_models: [null]
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          A CUDA is available but no GPU information provided, adjust GPU
+          configuration option to have recommendations suited for hardware
+          available
+        link: no_gpu
