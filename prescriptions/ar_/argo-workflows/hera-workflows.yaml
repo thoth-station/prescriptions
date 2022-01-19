@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ArgoWorkflowsReplaceHeraWorkflowsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argo-workflows
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'argo-workflows' is archived, use 'hera-workflows' instead
+        link: https://pypi.org/project/hera-workflows/
+        package_name: argo-workflows
