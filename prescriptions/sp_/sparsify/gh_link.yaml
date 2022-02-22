@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SparsifyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparsify
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sparsify' is hosted on GitHub
+        link: https://github.com/neuralmagic/sparsify
+        package_name: sparsify
