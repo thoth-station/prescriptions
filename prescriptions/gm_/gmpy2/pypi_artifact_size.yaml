@@ -72,3 +72,21 @@ units:
           '2.1.1' can have up to 3.39MiB
         link: https://pypi.org/project/gmpy2/2.1.1/#files
         package_name: gmpy2
+  - name: Gmpy22x1x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gmpy2
+          version: ==2.1.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gmpy2' in version
+          '2.1.2' can have up to 3.45MiB
+        link: https://pypi.org/project/gmpy2/2.1.2/#files
+        package_name: gmpy2
