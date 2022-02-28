@@ -288,3 +288,21 @@ units:
           '2.7.0' can have up to 177.79MiB
         link: https://pypi.org/project/intel-tensorflow/2.7.0/#files
         package_name: intel-tensorflow
+  - name: IntelTensorflow2x8x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intel-tensorflow
+          version: ==2.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'intel-tensorflow' in version
+          '2.8.0' can have up to 203.41MiB
+        link: https://pypi.org/project/intel-tensorflow/2.8.0/#files
+        package_name: intel-tensorflow
