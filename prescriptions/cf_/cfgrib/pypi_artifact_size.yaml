@@ -72,6 +72,24 @@ units:
           '0.9.1.post1' can have up to 5.90MiB
         link: https://pypi.org/project/cfgrib/0.9.1.post1/#files
         package_name: cfgrib
+  - name: Cfgrib0x9x10x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfgrib
+          version: ==0.9.10.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cfgrib' in version
+          '0.9.10.0' can have up to 6.07MiB
+        link: https://pypi.org/project/cfgrib/0.9.10.0/#files
+        package_name: cfgrib
   - name: Cfgrib0x9x2PyPIArtifactSizeWrap
     type: wrap
     should_include:
