@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyprindGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyprind
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyprind' is hosted on GitHub
+        link: https://github.com/rasbt/pyprind
+        package_name: pyprind
