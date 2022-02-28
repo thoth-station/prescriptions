@@ -270,3 +270,21 @@ units:
           '2.1.0' can have up to 5.61MiB
         link: https://pypi.org/project/paperwork/2.1.0/#files
         package_name: paperwork
+  - name: Paperwork2x1x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paperwork
+          version: ==2.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'paperwork' in version
+          '2.1.1' can have up to 5.61MiB
+        link: https://pypi.org/project/paperwork/2.1.1/#files
+        package_name: paperwork
