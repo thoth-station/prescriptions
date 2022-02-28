@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PuddletagGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: puddletag
+    run:
+      justification:
+      - type: INFO
+        message: Package 'puddletag' is hosted on GitHub
+        link: https://github.com/puddletag/puddletag
+        package_name: puddletag
