@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MypyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mypy' is hosted on GitHub
+        link: https://github.com/python/mypy
+        package_name: mypy
