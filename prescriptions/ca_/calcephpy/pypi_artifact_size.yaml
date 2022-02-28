@@ -252,3 +252,21 @@ units:
           '3.5.0' can have up to 22.21MiB
         link: https://pypi.org/project/calcephpy/3.5.0/#files
         package_name: calcephpy
+  - name: Calcephpy3x5x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: calcephpy
+          version: ==3.5.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'calcephpy' in version
+          '3.5.1' can have up to 60.78MiB
+        link: https://pypi.org/project/calcephpy/3.5.1/#files
+        package_name: calcephpy
