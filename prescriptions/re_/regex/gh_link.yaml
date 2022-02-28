@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RegexGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: regex
+    run:
+      justification:
+      - type: INFO
+        message: Package 'regex' is hosted on GitHub
+        link: https://github.com/mrabarnett/mrab-regex
+        package_name: regex
