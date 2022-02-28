@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiskcacheGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diskcache
+    run:
+      justification:
+      - type: INFO
+        message: Package 'diskcache' is hosted on GitHub
+        link: https://github.com/grantjenks/python-diskcache
+        package_name: diskcache
