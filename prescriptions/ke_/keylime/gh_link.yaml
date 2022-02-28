@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KeylimeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keylime
+    run:
+      justification:
+      - type: INFO
+        message: Package 'keylime' is hosted on GitHub
+        link: https://github.com/keylime/keylime
+        package_name: keylime
