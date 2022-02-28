@@ -72,3 +72,21 @@ units:
           '8.0.3' can have up to 36.38MiB
         link: https://pypi.org/project/av/8.0.3/#files
         package_name: av
+  - name: Av8x1x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: av
+          version: ==8.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'av' in version
+          '8.1.0' can have up to 44.85MiB
+        link: https://pypi.org/project/av/8.1.0/#files
+        package_name: av
