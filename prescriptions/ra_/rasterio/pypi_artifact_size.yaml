@@ -1404,3 +1404,21 @@ units:
           '1.3a2' can have up to 19.65MiB
         link: https://pypi.org/project/rasterio/1.3a2/#files
         package_name: rasterio
+  - name: Rasterio1x3a3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasterio
+          version: ==1.3a3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'rasterio' in version
+          '1.3a3' can have up to 21.44MiB
+        link: https://pypi.org/project/rasterio/1.3a3/#files
+        package_name: rasterio
