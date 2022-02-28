@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: H2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'h2' is hosted on GitHub
+        link: https://github.com/python-hyper/h2
+        package_name: h2
