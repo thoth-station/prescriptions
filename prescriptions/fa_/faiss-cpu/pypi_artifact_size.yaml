@@ -216,3 +216,21 @@ units:
           '1.7.1.post3' can have up to 9.68MiB
         link: https://pypi.org/project/faiss-cpu/1.7.1.post3/#files
         package_name: faiss-cpu
+  - name: FaissCpu1x7x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: faiss-cpu
+          version: ==1.7.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'faiss-cpu' in version
+          '1.7.2' can have up to 9.76MiB
+        link: https://pypi.org/project/faiss-cpu/1.7.2/#files
+        package_name: faiss-cpu
