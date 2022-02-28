@@ -54,3 +54,21 @@ units:
           '2.9.2' can have up to 3.36MiB
         link: https://pypi.org/project/psycopg2-binary/2.9.2/#files
         package_name: psycopg2-binary
+  - name: Psycopg2Binary2x9x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: psycopg2-binary
+          version: ==2.9.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'psycopg2-binary' in version
+          '2.9.3' can have up to 3.36MiB
+        link: https://pypi.org/project/psycopg2-binary/2.9.3/#files
+        package_name: psycopg2-binary
