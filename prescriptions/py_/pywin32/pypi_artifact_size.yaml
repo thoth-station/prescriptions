@@ -180,3 +180,21 @@ units:
           '302' can have up to 10.93MiB
         link: https://pypi.org/project/pywin32/302/#files
         package_name: pywin32
+  - name: Pywin32303PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywin32
+          version: ==303
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pywin32' in version
+          '303' can have up to 8.84MiB
+        link: https://pypi.org/project/pywin32/303/#files
+        package_name: pywin32
