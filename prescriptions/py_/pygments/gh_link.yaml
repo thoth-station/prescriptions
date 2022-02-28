@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygmentsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygments
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygments' is hosted on GitHub
+        link: https://github.com/pygments/pygments
+        package_name: pygments
