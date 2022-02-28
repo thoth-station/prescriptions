@@ -54,3 +54,39 @@ units:
           '5.0.0' can have up to 4.27MiB
         link: https://pypi.org/project/azure-mgmt-web/5.0.0/#files
         package_name: azure-mgmt-web
+  - name: AzureMgmtWeb6x0x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-web
+          version: ==6.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-web' in version
+          '6.0.0' can have up to 3.73MiB
+        link: https://pypi.org/project/azure-mgmt-web/6.0.0/#files
+        package_name: azure-mgmt-web
+  - name: AzureMgmtWeb6x1x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-web
+          version: ==6.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-web' in version
+          '6.1.0' can have up to 3.73MiB
+        link: https://pypi.org/project/azure-mgmt-web/6.1.0/#files
+        package_name: azure-mgmt-web
