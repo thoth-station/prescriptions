@@ -486,3 +486,21 @@ units:
           '2021.8.26' can have up to 29.61MiB
         link: https://pypi.org/project/imagecodecs/2021.8.26/#files
         package_name: imagecodecs
+  - name: Imagecodecs2022x2x22PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagecodecs
+          version: ==2022.2.22
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'imagecodecs' in version
+          '2022.2.22' can have up to 35.03MiB
+        link: https://pypi.org/project/imagecodecs/2022.2.22/#files
+        package_name: imagecodecs
