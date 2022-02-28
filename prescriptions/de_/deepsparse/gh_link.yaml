@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DeepsparseGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deepsparse
+    run:
+      justification:
+      - type: INFO
+        message: Package 'deepsparse' is hosted on GitHub
+        link: https://github.com/neuralmagic/deepsparse
+        package_name: deepsparse
