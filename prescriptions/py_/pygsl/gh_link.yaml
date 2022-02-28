@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PygslGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygsl
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygsl' is hosted on GitHub
+        link: https://github.com/pygsl/pygsl
+        package_name: pygsl
