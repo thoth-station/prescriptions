@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskAppbuilderCVEWarningWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-appbuilder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-appbuilder' is known to have at least 3 vulnerabilities reported in releases
+        link: cve_warning
+        package_name: flask-appbuilder
