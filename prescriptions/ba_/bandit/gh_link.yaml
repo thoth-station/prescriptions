@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BanditGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bandit
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bandit' is hosted on GitHub
+        link: https://github.com/PyCQA/bandit
+        package_name: bandit
