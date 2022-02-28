@@ -72,3 +72,21 @@ units:
           '1.4.0' can have up to 3.26MiB
         link: https://pypi.org/project/pynacl/1.4.0/#files
         package_name: pynacl
+  - name: Pynacl1x5x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynacl
+          version: ==1.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pynacl' in version
+          '1.5.0' can have up to 3.24MiB
+        link: https://pypi.org/project/pynacl/1.5.0/#files
+        package_name: pynacl
