@@ -1602,3 +1602,39 @@ units:
           '4.3.1' can have up to 6.35MiB
         link: https://pypi.org/project/sphinx/4.3.1/#files
         package_name: sphinx
+  - name: Sphinx4x3x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx
+          version: ==4.3.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinx' in version
+          '4.3.2' can have up to 6.35MiB
+        link: https://pypi.org/project/sphinx/4.3.2/#files
+        package_name: sphinx
+  - name: Sphinx4x4x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinx
+          version: ==4.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sphinx' in version
+          '4.4.0' can have up to 6.38MiB
+        link: https://pypi.org/project/sphinx/4.4.0/#files
+        package_name: sphinx
