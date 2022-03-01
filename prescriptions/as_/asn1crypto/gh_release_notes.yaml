@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Asn1cryptoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asn1crypto
+    run:
+      release_notes:
+        organization: wbond
+        repository: asn1crypto
