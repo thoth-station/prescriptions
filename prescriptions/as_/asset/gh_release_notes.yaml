@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AssetGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asset
+    run:
+      release_notes:
+        organization: metagriffin
+        repository: asset
+        tag_version_prefix: v
