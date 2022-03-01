@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AsynctestGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asynctest
+    run:
+      release_notes:
+        organization: Martiusweb
+        repository: asynctest
+        tag_version_prefix: v
