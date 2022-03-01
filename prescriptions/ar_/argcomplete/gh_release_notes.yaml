@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ArgcompleteGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argcomplete
+    run:
+      release_notes:
+        organization: kislyuk
+        repository: argcomplete
+        tag_version_prefix: v
