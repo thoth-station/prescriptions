@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GrokmirrorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grokmirror
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'grokmirror' has no recent release, last release dates back to 2021-08-06 19:33:55.474837
+        link: https://pypi.org/project/grokmirror/#history
+        package_name: grokmirror
