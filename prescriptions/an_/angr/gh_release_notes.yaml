@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AngrGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: angr
+    run:
+      release_notes:
+        organization: angr
+        repository: angr
+        tag_version_prefix: v
