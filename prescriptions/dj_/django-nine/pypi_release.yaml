@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoNinePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-nine
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-nine' has no recent release, last release dates back to 2021-08-27 00:47:58.872778
+        link: https://pypi.org/project/django-nine/#history
+        package_name: django-nine
