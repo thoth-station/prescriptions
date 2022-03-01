@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyotpGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyotp
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyotp' is hosted on GitHub
+        link: https://github.com/pyauth/pyotp
+        package_name: pyotp
