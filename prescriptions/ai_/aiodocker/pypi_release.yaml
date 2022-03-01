@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiodockerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiodocker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiodocker' has no recent release, last release dates back to 2021-07-23 09:51:27.181700
+        link: https://pypi.org/project/aiodocker/#history
+        package_name: aiodocker
