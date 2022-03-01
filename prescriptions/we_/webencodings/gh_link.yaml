@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: WebencodingsGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: webencodings
+    run:
+      justification:
+      - type: INFO
+        message: Package 'webencodings' is hosted on GitHub
+        link: https://github.com/gsnedders/python-webencodings
+        package_name: webencodings
