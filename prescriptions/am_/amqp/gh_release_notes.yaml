@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AmqpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amqp
+    run:
+      release_notes:
+        organization: celery
+        repository: py-amqp
+        tag_version_prefix: v
