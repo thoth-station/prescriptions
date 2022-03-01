@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MitogenGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mitogen
+    run:
+      release_notes:
+        organization: mitogen-hq
+        repository: mitogen
+        tag_version_prefix: v
