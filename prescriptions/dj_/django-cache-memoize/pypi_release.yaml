@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoCacheMemoizePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cache-memoize
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-cache-memoize' has no recent release, last release dates back to 2021-07-28 16:38:52.604937
+        link: https://pypi.org/project/django-cache-memoize/#history
+        package_name: django-cache-memoize
