@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CheckdigitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: checkdigit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'checkdigit' has no recent release, last release dates back to 2021-07-27 10:09:26.859367
+        link: https://pypi.org/project/checkdigit/#history
+        package_name: checkdigit
