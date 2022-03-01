@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ciso8601PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ciso8601
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ciso8601' has no recent release, last release dates back to 2021-08-06 21:00:55.549416
+        link: https://pypi.org/project/ciso8601/#history
+        package_name: ciso8601
