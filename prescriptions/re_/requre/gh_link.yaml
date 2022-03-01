@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RequreGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requre
+    run:
+      justification:
+      - type: INFO
+        message: Package 'requre' is hosted on GitHub
+        link: https://github.com/packit/requre
+        package_name: requre
