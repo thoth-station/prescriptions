@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AiosqliteGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosqlite
+    run:
+      release_notes:
+        organization: omnilib
+        repository: aiosqlite
+        tag_version_prefix: v
