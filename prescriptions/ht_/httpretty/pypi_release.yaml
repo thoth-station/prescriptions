@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HttprettyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpretty
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'httpretty' has no recent release, last release dates back to 2021-08-16 19:35:31.400695
+        link: https://pypi.org/project/httpretty/#history
+        package_name: httpretty
