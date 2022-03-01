@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SagetexGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sagetex
+    run:
+      release_notes:
+        organization: sagemath
+        repository: sagetex
+        tag_version_prefix: v
