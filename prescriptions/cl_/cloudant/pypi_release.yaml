@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CloudantPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cloudant
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cloudant' has no recent release, last release dates back to 2021-08-26 11:14:06.151024
+        link: https://pypi.org/project/cloudant/#history
+        package_name: cloudant
