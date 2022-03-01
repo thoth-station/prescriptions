@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DictdifferPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dictdiffer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dictdiffer' has no recent release, last release dates back to 2021-07-22 13:24:29.276635
+        link: https://pypi.org/project/dictdiffer/#history
+        package_name: dictdiffer
