@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoChoicesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-choices
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-choices' has no recent release, last release dates back to 2021-07-12 13:03:27.899968
+        link: https://pypi.org/project/django-choices/#history
+        package_name: django-choices
