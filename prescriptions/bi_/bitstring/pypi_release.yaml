@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BitstringPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitstring
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bitstring' has no recent release, last release dates back to 2021-07-20 17:46:21.217491
+        link: https://pypi.org/project/bitstring/#history
+        package_name: bitstring
