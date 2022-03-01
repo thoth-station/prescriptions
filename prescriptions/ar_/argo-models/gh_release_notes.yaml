@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ArgoModelsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argo-models
+    run:
+      release_notes:
+        organization: e2fyi
+        repository: argo-models
+        tag_version_prefix: v
