@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CfgvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cfgv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cfgv' has no recent release, last release dates back to 2021-08-25 14:18:49.905839
+        link: https://pypi.org/project/cfgv/#history
+        package_name: cfgv
