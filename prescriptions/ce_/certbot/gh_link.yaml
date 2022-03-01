@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CertbotGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certbot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'certbot' is hosted on GitHub
+        link: https://github.com/certbot/certbot
+        package_name: certbot
