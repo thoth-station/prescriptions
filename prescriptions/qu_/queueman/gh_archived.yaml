@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: QueuemanGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: queueman
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'queueman' is marked as archived on GitHub
+        link: https://github.com/ludeeus/queueman
+        package_name: queueman
