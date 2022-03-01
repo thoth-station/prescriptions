@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiocurrencylayerGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocurrencylayer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aiocurrencylayer' has less than 5 contributors on GitHub
+        link: https://github.com/home-assistant-ecosystem/aiocurrencylayer
+        package_name: aiocurrencylayer
