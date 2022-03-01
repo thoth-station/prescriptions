@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PdfkitGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdfkit
+    run:
+      release_notes:
+        organization: JazzCore
+        repository: python-pdfkit
