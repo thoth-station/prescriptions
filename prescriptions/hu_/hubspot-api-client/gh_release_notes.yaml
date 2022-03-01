@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HubspotApiClientGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hubspot-api-client
+    run:
+      release_notes:
+        organization: HubSpot
+        repository: hubspot-api-python
+        tag_version_prefix: v
