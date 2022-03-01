@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeptuneSklearnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-sklearn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neptune-sklearn' has no recent release, last release dates back to 2021-06-18 08:46:01.037004
+        link: https://pypi.org/project/neptune-sklearn/#history
+        package_name: neptune-sklearn
