@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AlarmdecoderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alarmdecoder
+    run:
+      release_notes:
+        organization: nutechsoftware
+        repository: alarmdecoder
