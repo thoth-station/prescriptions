@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MitogenGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mitogen
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mitogen' is hosted on GitHub
+        link: https://github.com/mitogen-hq/mitogen
+        package_name: mitogen
