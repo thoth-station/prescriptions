@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SparsifyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sparsify
+    run:
+      release_notes:
+        organization: neuralmagic
+        repository: sparsify
+        tag_version_prefix: v
