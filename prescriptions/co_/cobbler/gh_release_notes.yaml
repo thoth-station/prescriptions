@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CobblerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cobbler
+    run:
+      release_notes:
+        organization: cobbler
+        repository: cobbler
+        tag_version_prefix: v
