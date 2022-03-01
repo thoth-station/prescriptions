@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AjsonrpcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ajsonrpc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ajsonrpc' has no recent release, last release dates back to 2021-07-21 20:41:47.376855
+        link: https://pypi.org/project/ajsonrpc/#history
+        package_name: ajsonrpc
