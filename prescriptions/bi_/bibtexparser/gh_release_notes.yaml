@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BibtexparserGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bibtexparser
+    run:
+      release_notes:
+        organization: sciunto-org
+        repository: python-bibtexparser
+        tag_version_prefix: v
