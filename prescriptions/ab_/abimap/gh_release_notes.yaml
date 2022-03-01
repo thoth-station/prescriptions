@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AbimapGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: abimap
+    run:
+      release_notes:
+        organization: ansasaki
+        repository: abimap
+        tag_version_prefix: v
