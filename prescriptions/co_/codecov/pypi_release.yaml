@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CodecovPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codecov
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'codecov' has no recent release, last release dates back to 2021-08-02 17:56:50.226782
+        link: https://pypi.org/project/codecov/#history
+        package_name: codecov
