@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BuckyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bucky
+    run:
+      justification:
+      - type: INFO
+        message: Package 'bucky' is hosted on GitHub
+        link: https://github.com/trbs/bucky
+        package_name: bucky
