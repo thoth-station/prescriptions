@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtDatamigrationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-datamigration
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-datamigration' has no recent release, last release dates back to 2021-08-26 02:38:51.140932
+        link: https://pypi.org/project/azure-mgmt-datamigration/#history
+        package_name: azure-mgmt-datamigration
