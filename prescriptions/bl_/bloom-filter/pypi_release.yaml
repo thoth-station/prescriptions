@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BloomFilterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bloom-filter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bloom-filter' has no recent release, last release dates back to 2021-07-04 07:20:43.315681
+        link: https://pypi.org/project/bloom-filter/#history
+        package_name: bloom-filter
