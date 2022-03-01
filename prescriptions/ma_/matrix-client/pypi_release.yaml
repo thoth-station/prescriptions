@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MatrixClientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matrix-client
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'matrix-client' has no recent release, last release dates back to 2021-07-26 12:06:18.814178
+        link: https://pypi.org/project/matrix-client/#history
+        package_name: matrix-client
