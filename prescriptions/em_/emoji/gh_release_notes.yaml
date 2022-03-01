@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: EmojiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: emoji
+    run:
+      release_notes:
+        organization: carpedm20
+        repository: emoji
+        tag_version_prefix: v
