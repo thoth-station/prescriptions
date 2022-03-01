@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiowinregPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiowinreg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiowinreg' has no recent release, last release dates back to 2021-07-28 20:53:12.579785
+        link: https://pypi.org/project/aiowinreg/#history
+        package_name: aiowinreg
