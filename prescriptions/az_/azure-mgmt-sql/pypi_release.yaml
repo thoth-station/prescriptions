@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtSqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-sql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-sql' has no recent release, last release dates back to 2021-07-16 02:07:56.492602
+        link: https://pypi.org/project/azure-mgmt-sql/#history
+        package_name: azure-mgmt-sql
