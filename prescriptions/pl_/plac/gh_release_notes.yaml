@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PlacGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: plac
+    run:
+      release_notes:
+        organization: ialbert
+        repository: plac
+        tag_version_prefix: v
