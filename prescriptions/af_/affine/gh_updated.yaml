@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AffineGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: affine
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'affine' was last updated at 2021-02-12 15:44:31
+        link: https://github.com/sgillies/affine
+        package_name: affine
