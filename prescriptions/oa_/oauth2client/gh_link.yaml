@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Oauth2clientGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauth2client
+    run:
+      justification:
+      - type: INFO
+        message: Package 'oauth2client' is hosted on GitHub
+        link: https://github.com/googleapis/oauth2client
+        package_name: oauth2client
