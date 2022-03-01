@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlentPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flent
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flent' has no recent release, last release dates back to 2021-06-24 21:20:49.419566
+        link: https://pypi.org/project/flent/#history
+        package_name: flent
