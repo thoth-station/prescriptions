@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JsondiffGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsondiff
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jsondiff' is hosted on GitHub
+        link: https://github.com/xlwings/jsondiff
+        package_name: jsondiff
