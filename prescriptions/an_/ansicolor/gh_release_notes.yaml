@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AnsicolorGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansicolor
+    run:
+      release_notes:
+        organization: numerodix
+        repository: ansicolor
