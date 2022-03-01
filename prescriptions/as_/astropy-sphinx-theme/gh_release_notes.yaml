@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AstropySphinxThemeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astropy-sphinx-theme
+    run:
+      release_notes:
+        organization: astropy
+        repository: astropy-sphinx-theme
+        tag_version_prefix: v
