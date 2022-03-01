@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HtmlTelegraphPosterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: html-telegraph-poster
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'html-telegraph-poster' has no recent release, last release dates back to 2021-06-20 12:54:04.151560
+        link: https://pypi.org/project/html-telegraph-poster/#history
+        package_name: html-telegraph-poster
