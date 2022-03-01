@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AsciinemaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asciinema
+    run:
+      release_notes:
+        organization: asciinema
+        repository: asciinema
+        tag_version_prefix: v
