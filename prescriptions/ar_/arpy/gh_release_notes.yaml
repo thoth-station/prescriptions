@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ArpyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arpy
+    run:
+      release_notes:
+        organization: viraptor
+        repository: arpy
