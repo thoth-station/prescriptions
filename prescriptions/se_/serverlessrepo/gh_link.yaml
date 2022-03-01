@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ServerlessrepoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serverlessrepo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'serverlessrepo' is hosted on GitHub
+        link: https://github.com/amazon-archives/aws-serverlessrepo-python
+        package_name: serverlessrepo
