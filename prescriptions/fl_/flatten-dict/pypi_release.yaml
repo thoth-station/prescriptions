@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlattenDictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flatten-dict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flatten-dict' has no recent release, last release dates back to 2021-08-08 09:56:54.313653
+        link: https://pypi.org/project/flatten-dict/#history
+        package_name: flatten-dict
