@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ProtegoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: protego
+    run:
+      release_notes:
+        organization: scrapy
+        repository: protego
