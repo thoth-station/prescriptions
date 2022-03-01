@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MicawberPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: micawber
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'micawber' has no recent release, last release dates back to 2021-07-12 14:05:33.470865
+        link: https://pypi.org/project/micawber/#history
+        package_name: micawber
