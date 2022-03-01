@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: H2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h2
+    run:
+      release_notes:
+        organization: python-hyper
+        repository: h2
+        tag_version_prefix: v
