@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CmudictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmudict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cmudict' has no recent release, last release dates back to 2021-08-28 04:57:59.384077
+        link: https://pypi.org/project/cmudict/#history
+        package_name: cmudict
