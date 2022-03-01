@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FixitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fixit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fixit' has no recent release, last release dates back to 2021-07-30 20:35:04.492831
+        link: https://pypi.org/project/fixit/#history
+        package_name: fixit
