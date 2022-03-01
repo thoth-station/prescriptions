@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CodeflarePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: codeflare
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'codeflare' has no recent release, last release dates back to 2021-07-09 19:59:07.086510
+        link: https://pypi.org/project/codeflare/#history
+        package_name: codeflare
