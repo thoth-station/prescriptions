@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnalyticsPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: analytics-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'analytics-python' has no recent release, last release dates back to 2021-07-16 16:35:56.932806
+        link: https://pypi.org/project/analytics-python/#history
+        package_name: analytics-python
