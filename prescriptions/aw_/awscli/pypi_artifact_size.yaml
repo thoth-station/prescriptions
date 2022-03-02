@@ -7200,6 +7200,24 @@ units:
           '1.22.64' can have up to 3.64MiB
         link: https://pypi.org/project/awscli/1.22.64/#files
         package_name: awscli
+  - name: Awscli1x22x65PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awscli
+          version: ==1.22.65
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awscli' in version
+          '1.22.65' can have up to 3.66MiB
+        link: https://pypi.org/project/awscli/1.22.65/#files
+        package_name: awscli
   - name: Awscli1x22x7PyPIArtifactSizeWrap
     type: wrap
     should_include:
