@@ -216,3 +216,21 @@ units:
           '0.18.0' can have up to 3.11MiB
         link: https://pypi.org/project/tsfresh/0.18.0/#files
         package_name: tsfresh
+  - name: Tsfresh0x19x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tsfresh
+          version: ==0.19.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tsfresh' in version
+          '0.19.0' can have up to 3.11MiB
+        link: https://pypi.org/project/tsfresh/0.19.0/#files
+        package_name: tsfresh
