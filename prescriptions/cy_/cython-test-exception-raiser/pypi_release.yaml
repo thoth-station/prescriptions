@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CythonTestExceptionRaiserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cython-test-exception-raiser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cython-test-exception-raiser' has no recent release, last release dates back to 2021-08-10 06:46:20.338196
+        link: https://pypi.org/project/cython-test-exception-raiser/#history
+        package_name: cython-test-exception-raiser
