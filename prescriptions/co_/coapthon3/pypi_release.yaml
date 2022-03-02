@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Coapthon3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coapthon3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'coapthon3' has no recent release, last release dates back to 2021-08-03 15:46:09.074496
+        link: https://pypi.org/project/coapthon3/#history
+        package_name: coapthon3
