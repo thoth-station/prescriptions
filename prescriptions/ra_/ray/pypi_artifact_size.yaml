@@ -792,6 +792,24 @@ units:
           '1.11.0rc0' can have up to 50.26MiB
         link: https://pypi.org/project/ray/1.11.0rc0/#files
         package_name: ray
+  - name: Ray1x11x0rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ray
+          version: ==1.11.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ray' in version
+          '1.11.0rc1' can have up to 52.61MiB
+        link: https://pypi.org/project/ray/1.11.0rc1/#files
+        package_name: ray
   - name: Ray1x2x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
