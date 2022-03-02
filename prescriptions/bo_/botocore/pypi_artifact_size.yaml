@@ -16038,6 +16038,24 @@ units:
           '1.24.1' can have up to 8.36MiB
         link: https://pypi.org/project/botocore/1.24.1/#files
         package_name: botocore
+  - name: Botocore1x24x10PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: botocore
+          version: ==1.24.10
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'botocore' in version
+          '1.24.10' can have up to 8.40MiB
+        link: https://pypi.org/project/botocore/1.24.10/#files
+        package_name: botocore
   - name: Botocore1x24x2PyPIArtifactSizeWrap
     type: wrap
     should_include:
