@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BenigetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beniget
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'beniget' has no recent release, last release dates back to 2021-08-02 05:51:09.784137
+        link: https://pypi.org/project/beniget/#history
+        package_name: beniget
