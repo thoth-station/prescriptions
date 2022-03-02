@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiscordPySlashCommandPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-py-slash-command
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'discord-py-slash-command' has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/discord-py-slash-command/
+        package_name: discord-py-slash-command
