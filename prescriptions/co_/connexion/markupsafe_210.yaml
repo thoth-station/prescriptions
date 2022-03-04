@@ -1,0 +1,41 @@
+units:
+  steps:
+  - name: ConnexionMarkupsafe210Step
+    type: step.Group
+    should_include:
+      adviser_pipeline: true
+    match:
+    - group:
+      - package_version:
+          name: connexion
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: markupsafe
+          version: ">=2.1.0"
+          index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - &stack_info
+        type: WARNING
+        message: Cannot install connexion when using markupsafe>=2.1.0
+        link: https://github.com/thoth-station/user-api/pull/1681
+      not_acceptable: Cannot install connexion when using markupsafe>=2.1.0
+  sieves:
+  - name: ConnexionMarkupsafe210Sieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        # Filter connexion if Python container images are
+        # shipped with the specified markupsafe.
+        python_packages:
+        - name: markupsafe
+          version: ">=2.1.0"
+          location: ^/opt/app-root/.*
+    match:
+      package_version:
+        name: connexion
+        index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - <<: *stack_info
