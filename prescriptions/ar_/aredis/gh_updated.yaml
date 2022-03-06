@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AredisGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aredis
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aredis' was last updated at 2020-10-19 05:27:38
+        link: https://github.com/NoneGG/aredis
+        package_name: aredis
