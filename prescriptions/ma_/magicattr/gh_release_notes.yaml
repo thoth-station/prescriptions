@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MagicattrGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: magicattr
+    run:
+      release_notes:
+        organization: frmdstryr
+        repository: magicattr
+        tag_version_prefix: v
