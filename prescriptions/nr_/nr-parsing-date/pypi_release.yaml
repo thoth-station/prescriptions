@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NrParsingDatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nr-parsing-date
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nr-parsing-date' has no recent release, last release dates back to 2021-08-09 16:46:52.844614
+        link: https://pypi.org/project/nr-parsing-date/#history
+        package_name: nr-parsing-date
