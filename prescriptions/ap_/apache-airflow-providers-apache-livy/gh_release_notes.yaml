@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ApacheAirflowProvidersApacheLivyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow-providers-apache-livy
+    run:
+      release_notes:
+        organization: apache
+        repository: airflow
