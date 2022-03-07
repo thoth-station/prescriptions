@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NiaclassPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: niaclass
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'niaclass' has no recent release, last release dates back to 2021-06-27 13:39:17.094079
+        link: https://pypi.org/project/niaclass/#history
+        package_name: niaclass
