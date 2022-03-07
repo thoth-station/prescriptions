@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeptuneXgboostPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-xgboost
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neptune-xgboost' has no recent release, last release dates back to 2021-07-20 13:42:39.873364
+        link: https://pypi.org/project/neptune-xgboost/#history
+        package_name: neptune-xgboost
