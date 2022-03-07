@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoGraphqlJwtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-graphql-jwt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-graphql-jwt' has no recent release, last release dates back to 2021-08-11 20:58:31.762065
+        link: https://pypi.org/project/django-graphql-jwt/#history
+        package_name: django-graphql-jwt
