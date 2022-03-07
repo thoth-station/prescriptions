@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ClyentGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clyent
+    run:
+      release_notes:
+        organization: anaconda-graveyard
+        repository: clyent
