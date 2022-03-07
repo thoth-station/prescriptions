@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AppnopeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: appnope
+    run:
+      release_notes:
+        organization: minrk
+        repository: appnope
