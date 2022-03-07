@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AiorpcxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiorpcx
+    run:
+      release_notes:
+        organization: kyuupichan
+        repository: aiorpcX
