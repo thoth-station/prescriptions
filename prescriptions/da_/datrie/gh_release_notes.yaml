@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DatrieGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datrie
+    run:
+      release_notes:
+        organization: pytries
+        repository: datrie
