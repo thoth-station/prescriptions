@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoQPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-q
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-q' has no recent release, last release dates back to 2021-06-27 12:04:53.831233
+        link: https://pypi.org/project/django-q/#history
+        package_name: django-q
