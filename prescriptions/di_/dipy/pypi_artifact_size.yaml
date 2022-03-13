@@ -216,3 +216,21 @@ units:
           '1.4.1' can have up to 11.08MiB
         link: https://pypi.org/project/dipy/1.4.1/#files
         package_name: dipy
+  - name: Dipy1x5x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dipy
+          version: ==1.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dipy' in version
+          '1.5.0' can have up to 11.22MiB
+        link: https://pypi.org/project/dipy/1.5.0/#files
+        package_name: dipy
