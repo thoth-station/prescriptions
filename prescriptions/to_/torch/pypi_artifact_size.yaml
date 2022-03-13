@@ -144,6 +144,24 @@ units:
           '1.10.2' can have up to 841.08MiB
         link: https://pypi.org/project/torch/1.10.2/#files
         package_name: torch
+  - name: Torch1x11x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torch
+          version: ==1.11.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'torch' in version
+          '1.11.0' can have up to 715.82MiB
+        link: https://pypi.org/project/torch/1.11.0/#files
+        package_name: torch
   - name: Torch1x2x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
