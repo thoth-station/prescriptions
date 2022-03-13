@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DglGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dgl
+    run:
+      release_notes:
+        organization: dmlc
+        repository: dgl
