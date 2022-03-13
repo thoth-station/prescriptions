@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: HttpbinGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpbin
+    run:
+      release_notes:
+        organization: postmanlabs
+        repository: httpbin
+        tag_version_prefix: v
