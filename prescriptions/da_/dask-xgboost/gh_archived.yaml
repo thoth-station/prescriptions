@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DaskXgboostGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask-xgboost
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dask-xgboost' is marked as archived on GitHub
+        link: https://github.com/dask/dask-xgboost
+        package_name: dask-xgboost
