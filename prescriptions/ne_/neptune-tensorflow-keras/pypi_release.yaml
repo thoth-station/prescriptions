@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeptuneTensorflowKerasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-tensorflow-keras
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neptune-tensorflow-keras' has no recent release, last release dates back to 2021-09-07 09:58:34.961768
+        link: https://pypi.org/project/neptune-tensorflow-keras/#history
+        package_name: neptune-tensorflow-keras
