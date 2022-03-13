@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NotofonttoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notofonttools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'notofonttools' has no recent release, last release dates back to 2021-09-09 01:33:42.241960
+        link: https://pypi.org/project/notofonttools/#history
+        package_name: notofonttools
