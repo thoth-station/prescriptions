@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsLzmaGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-lzma
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-lzma' is marked as archived on GitHub
+        link: https://github.com/peterjc/backports.lzma
+        package_name: backports-lzma
