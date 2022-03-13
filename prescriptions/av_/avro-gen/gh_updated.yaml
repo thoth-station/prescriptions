@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AvroGenGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: avro-gen
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'avro-gen' was last updated at 2021-02-13 02:30:36
+        link: https://github.com/rbystrit/avro_gen
+        package_name: avro-gen
