@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ApswPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apsw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'apsw' has no recent release, last release dates back to 2021-09-07 05:59:06.409450
+        link: https://pypi.org/project/apsw/#history
+        package_name: apsw
