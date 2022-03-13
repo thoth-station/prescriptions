@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BasemapGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: basemap
+    run:
+      justification:
+      - type: INFO
+        message: Project 'basemap' has very high popularity on GitHub
+        link: https://github.com/matplotlib/basemap
+        package_name: basemap
