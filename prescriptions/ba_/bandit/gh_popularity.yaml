@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BanditGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bandit
+    run:
+      justification:
+      - type: INFO
+        message: Project 'bandit' has very high popularity on GitHub
+        link: https://github.com/PyCQA/bandit
+        package_name: bandit
