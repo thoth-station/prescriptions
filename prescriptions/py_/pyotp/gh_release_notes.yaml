@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyotpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyotp
+    run:
+      release_notes:
+        organization: pyauth
+        repository: pyotp
+        tag_version_prefix: v
