@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AltgraphPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: altgraph
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'altgraph' has no recent release, last release dates back to 2021-09-11 09:11:12.824825
+        link: https://pypi.org/project/altgraph/#history
+        package_name: altgraph
