@@ -108,6 +108,24 @@ units:
           '0.11.3' can have up to 22.13MiB
         link: https://pypi.org/project/torchvision/0.11.3/#files
         package_name: torchvision
+  - name: Torchvision0x12x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchvision
+          version: ==0.12.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'torchvision' in version
+          '0.12.0' can have up to 20.01MiB
+        link: https://pypi.org/project/torchvision/0.12.0/#files
+        package_name: torchvision
   - name: Torchvision0x4x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
