@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Music21PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: music21
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'music21' has no recent release, last release dates back to 2021-09-09 02:29:22.467575
+        link: https://pypi.org/project/music21/#history
+        package_name: music21
