@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtServicefabricPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-servicefabric
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-servicefabric' has no recent release, last release dates back to 2021-09-06 02:47:41.864515
+        link: https://pypi.org/project/azure-mgmt-servicefabric/#history
+        package_name: azure-mgmt-servicefabric
