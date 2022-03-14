@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MnemonicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mnemonic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mnemonic' has no recent release, last release dates back to 2021-07-27 13:31:43.630994
+        link: https://pypi.org/project/mnemonic/#history
+        package_name: mnemonic
