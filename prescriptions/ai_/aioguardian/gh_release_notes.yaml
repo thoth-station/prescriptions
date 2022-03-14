@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AioguardianGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioguardian
+    run:
+      release_notes:
+        organization: bachya
+        repository: aioguardian
