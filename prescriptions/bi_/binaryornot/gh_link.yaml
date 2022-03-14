@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BinaryornotGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binaryornot
+    run:
+      justification:
+      - type: INFO
+        message: Package 'binaryornot' is hosted on GitHub
+        link: https://github.com/audreyfeldroy/binaryornot
+        package_name: binaryornot
