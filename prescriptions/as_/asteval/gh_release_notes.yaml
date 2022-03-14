@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AstevalGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asteval
+    run:
+      release_notes:
+        organization: newville
+        repository: asteval
