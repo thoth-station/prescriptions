@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PylemsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylems
+    run:
+      release_notes:
+        organization: LEMS
+        repository: pylems
+        tag_version_prefix: v
