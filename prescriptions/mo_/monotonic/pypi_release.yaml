@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MonotonicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: monotonic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'monotonic' has no recent release, last release dates back to 2021-08-11 14:37:28.790436
+        link: https://pypi.org/project/monotonic/#history
+        package_name: monotonic
