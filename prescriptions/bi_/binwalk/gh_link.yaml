@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BinwalkGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binwalk
+    run:
+      justification:
+      - type: INFO
+        message: Package 'binwalk' is hosted on GitHub
+        link: https://github.com/ReFirmLabs/binwalk
+        package_name: binwalk
