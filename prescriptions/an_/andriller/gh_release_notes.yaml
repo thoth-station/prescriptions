@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AndrillerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: andriller
+    run:
+      release_notes:
+        organization: den4uk
+        repository: andriller
