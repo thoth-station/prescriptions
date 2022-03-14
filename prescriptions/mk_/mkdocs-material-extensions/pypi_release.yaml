@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MkdocsMaterialExtensionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs-material-extensions
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mkdocs-material-extensions' has no recent release, last release dates back to 2021-09-03 20:49:40.072718
+        link: https://pypi.org/project/mkdocs-material-extensions/#history
+        package_name: mkdocs-material-extensions
