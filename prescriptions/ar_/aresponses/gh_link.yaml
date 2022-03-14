@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AresponsesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aresponses
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aresponses' is hosted on GitHub
+        link: https://github.com/aresponses/aresponses
+        package_name: aresponses
