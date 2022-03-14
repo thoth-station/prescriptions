@@ -1,5 +1,23 @@
 units:
   wraps:
+  - name: Torchaudio0x11x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchaudio
+          version: ==0.11.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'torchaudio' in version
+          '0.11.0' can have up to 3.14MiB
+        link: https://pypi.org/project/torchaudio/0.11.0/#files
+        package_name: torchaudio
   - name: Torchaudio0x5x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
