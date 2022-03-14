@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AiosaslGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosasl
+    run:
+      release_notes:
+        organization: horazont
+        repository: aiosasl
+        tag_version_prefix: v
