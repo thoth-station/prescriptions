@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoAdminAutocompleteFilterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-admin-autocomplete-filter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-admin-autocomplete-filter' has no recent release, last release dates back to 2021-09-11 09:43:34.046298
+        link: https://pypi.org/project/django-admin-autocomplete-filter/#history
+        package_name: django-admin-autocomplete-filter
