@@ -1,5 +1,23 @@
 units:
   wraps:
+  - name: Btrees4x10x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btrees
+          version: ==4.10.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'btrees' in version
+          '4.10.0' can have up to 3.77MiB
+        link: https://pypi.org/project/btrees/4.10.0/#files
+        package_name: btrees
   - name: Btrees4x7x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
