@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycairoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycairo
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycairo' is hosted on GitHub
+        link: https://github.com/pygobject/pycairo
+        package_name: pycairo
