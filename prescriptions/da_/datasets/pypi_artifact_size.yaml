@@ -252,6 +252,24 @@ units:
           '1.18.3' can have up to 20.60MiB
         link: https://pypi.org/project/datasets/1.18.3/#files
         package_name: datasets
+  - name: Datasets1x18x4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datasets
+          version: ==1.18.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'datasets' in version
+          '1.18.4' can have up to 43.07MiB
+        link: https://pypi.org/project/datasets/1.18.4/#files
+        package_name: datasets
   - name: Datasets1x3x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
