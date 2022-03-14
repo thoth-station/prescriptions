@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FlaskCachingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-caching
+    run:
+      justification:
+      - type: INFO
+        message: Package 'flask-caching' is hosted on GitHub
+        link: https://github.com/pallets-eco/flask-caching
+        package_name: flask-caching
