@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtRelayPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-relay
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-relay' has no recent release, last release dates back to 2021-09-06 06:03:45.197688
+        link: https://pypi.org/project/azure-mgmt-relay/#history
+        package_name: azure-mgmt-relay
