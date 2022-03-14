@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Flake8ClassAttributesOrderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-class-attributes-order
+    run:
+      release_notes:
+        organization: best-doctor
+        repository: flake8-class-attributes-order
+        tag_version_prefix: v
