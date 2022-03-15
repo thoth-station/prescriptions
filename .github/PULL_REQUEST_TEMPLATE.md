@@ -1,16 +1,22 @@
-#### What type of PR is this?
-
-<!--
-Add one of the following kinds:
-/kind feature
-/kind bug
-/kind cleanup
-/kind documentation
--->
-
-## Related issues or additional information of the supplied change
+## Related Issues and Dependencies
 
 …
+
+## This introduces a breaking change
+
+- Yes
+- No
+
+<!-- If this introduces a breaking change, please describe the impact and migration path for existing applications below. -->
+
+## This should yield a new module release
+
+- Yes
+- No
+
+## This Pull Request implements
+
+… Explain your changes.
 
 ## Description
 
