@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CpyparsingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cpyparsing
+    run:
+      release_notes:
+        organization: evhub
+        repository: cpyparsing
+        tag_version_prefix: v
