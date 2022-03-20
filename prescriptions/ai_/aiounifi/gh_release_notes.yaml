@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AiounifiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiounifi
+    run:
+      release_notes:
+        organization: Kane610
+        repository: aiounifi
+        tag_version_prefix: v
