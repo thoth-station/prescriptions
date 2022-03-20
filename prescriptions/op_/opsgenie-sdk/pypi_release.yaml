@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpsgenieSdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opsgenie-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opsgenie-sdk' has no recent release, last release dates back to 2021-08-02 13:58:35.147127
+        link: https://pypi.org/project/opsgenie-sdk/#history
+        package_name: opsgenie-sdk
