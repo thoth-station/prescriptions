@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AiogqlcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiogqlc
+    run:
+      release_notes:
+        organization: DoctorJohn
+        repository: aiogqlc
+        tag_version_prefix: v
