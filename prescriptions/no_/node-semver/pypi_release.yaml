@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NodeSemverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: node-semver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'node-semver' has no recent release, last release dates back to 2021-09-15 05:06:59.993991
+        link: https://pypi.org/project/node-semver/#history
+        package_name: node-semver
