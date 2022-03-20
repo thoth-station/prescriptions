@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LesscpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lesscpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lesscpy' has no recent release, last release dates back to 2021-07-15 06:56:07.211884
+        link: https://pypi.org/project/lesscpy/#history
+        package_name: lesscpy
