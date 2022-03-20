@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PgdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pgdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pgdb' has no recent release, last release dates back to 2021-07-29 08:43:58.753291
+        link: https://pypi.org/project/pgdb/#history
+        package_name: pgdb
