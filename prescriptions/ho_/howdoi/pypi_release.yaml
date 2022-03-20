@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HowdoiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: howdoi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'howdoi' has no recent release, last release dates back to 2021-09-17 14:07:29.589973
+        link: https://pypi.org/project/howdoi/#history
+        package_name: howdoi
