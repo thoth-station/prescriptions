@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InterrogatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interrogate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'interrogate' has no recent release, last release dates back to 2021-09-10 23:05:22.204495
+        link: https://pypi.org/project/interrogate/#history
+        package_name: interrogate
