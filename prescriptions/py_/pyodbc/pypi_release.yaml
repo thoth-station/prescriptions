@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyodbcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyodbc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyodbc' has no recent release, last release dates back to 2021-08-19 20:37:35.902776
+        link: https://pypi.org/project/pyodbc/#history
+        package_name: pyodbc
