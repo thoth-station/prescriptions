@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nml' has no recent release, last release dates back to 2021-09-15 15:58:28.039087
+        link: https://pypi.org/project/nml/#history
+        package_name: nml
