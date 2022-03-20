@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathspecPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathspec
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pathspec' has no recent release, last release dates back to 2021-07-18 00:27:58.275389
+        link: https://pypi.org/project/pathspec/#history
+        package_name: pathspec
