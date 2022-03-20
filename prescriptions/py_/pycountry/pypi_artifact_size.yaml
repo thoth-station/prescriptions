@@ -288,3 +288,21 @@ units:
           '22.1.10' can have up to 9.59MiB
         link: https://pypi.org/project/pycountry/22.1.10/#files
         package_name: pycountry
+  - name: Pycountry22x3x5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycountry
+          version: ==22.3.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycountry' in version
+          '22.3.5' can have up to 9.67MiB
+        link: https://pypi.org/project/pycountry/22.3.5/#files
+        package_name: pycountry
