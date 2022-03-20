@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthtoolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ethtool
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ethtool' has no recent release, last release dates back to 2021-08-02 10:07:45.462518
+        link: https://pypi.org/project/ethtool/#history
+        package_name: ethtool
