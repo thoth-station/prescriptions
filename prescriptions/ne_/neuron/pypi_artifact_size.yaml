@@ -162,3 +162,21 @@ units:
           '8.0a0' can have up to 11.39MiB
         link: https://pypi.org/project/neuron/8.0a0/#files
         package_name: neuron
+  - name: Neuron8x1a0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neuron
+          version: ==8.1a0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'neuron' in version
+          '8.1a0' can have up to 15.07MiB
+        link: https://pypi.org/project/neuron/8.1a0/#files
+        package_name: neuron
