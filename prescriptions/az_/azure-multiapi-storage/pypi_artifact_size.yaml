@@ -126,3 +126,21 @@ units:
           '0.7.0' can have up to 5.22MiB
         link: https://pypi.org/project/azure-multiapi-storage/0.7.0/#files
         package_name: azure-multiapi-storage
+  - name: AzureMultiapiStorage0x8x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-multiapi-storage
+          version: ==0.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-multiapi-storage' in version
+          '0.8.0' can have up to 5.95MiB
+        link: https://pypi.org/project/azure-multiapi-storage/0.8.0/#files
+        package_name: azure-multiapi-storage
