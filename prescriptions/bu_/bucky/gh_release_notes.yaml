@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: BuckyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bucky
+    run:
+      release_notes:
+        organization: trbs
+        repository: bucky
