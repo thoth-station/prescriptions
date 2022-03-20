@@ -378,3 +378,21 @@ units:
           '1.9.0' can have up to 20.72MiB
         link: https://pypi.org/project/datasets/1.9.0/#files
         package_name: datasets
+  - name: Datasets2x0x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datasets
+          version: ==2.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'datasets' in version
+          '2.0.0' can have up to 20.41MiB
+        link: https://pypi.org/project/datasets/2.0.0/#files
+        package_name: datasets
