@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PhotocollagePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: photocollage
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'photocollage' has no recent release, last release dates back to 2021-07-09 15:09:10.470853
+        link: https://pypi.org/project/photocollage/#history
+        package_name: photocollage
