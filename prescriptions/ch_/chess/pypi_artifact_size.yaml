@@ -18,3 +18,21 @@ units:
           '1.8.0' can have up to 5.79MiB
         link: https://pypi.org/project/chess/1.8.0/#files
         package_name: chess
+  - name: Chess1x9x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chess
+          version: ==1.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'chess' in version
+          '1.9.0' can have up to 5.79MiB
+        link: https://pypi.org/project/chess/1.9.0/#files
+        package_name: chess
