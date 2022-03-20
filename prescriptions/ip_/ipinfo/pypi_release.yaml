@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IpinfoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipinfo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ipinfo' has no recent release, last release dates back to 2021-07-09 01:38:11.429123
+        link: https://pypi.org/project/ipinfo/#history
+        package_name: ipinfo
