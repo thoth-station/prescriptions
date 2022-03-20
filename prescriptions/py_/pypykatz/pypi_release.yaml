@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypykatzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypykatz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pypykatz' has no recent release, last release dates back to 2021-08-04 17:56:30.495473
+        link: https://pypi.org/project/pypykatz/#history
+        package_name: pypykatz
