@@ -504,3 +504,21 @@ units:
           '2022.2.1' can have up to 4.79MiB
         link: https://pypi.org/project/dask/2022.2.1/#files
         package_name: dask
+  - name: Dask2022x3x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask
+          version: ==2022.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dask' in version
+          '2022.3.0' can have up to 7.80MiB
+        link: https://pypi.org/project/dask/2022.3.0/#files
+        package_name: dask
