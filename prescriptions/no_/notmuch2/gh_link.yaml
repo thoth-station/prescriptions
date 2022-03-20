@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Notmuch2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: notmuch2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'notmuch2' is hosted on GitHub
+        link: https://github.com/weilbith/notmuch2-python-bindings
+        package_name: notmuch2
