@@ -234,3 +234,21 @@ units:
           '2.3.2' can have up to 4.66MiB
         link: https://pypi.org/project/gphoto2/2.3.2/#files
         package_name: gphoto2
+  - name: Gphoto22x3x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gphoto2
+          version: ==2.3.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'gphoto2' in version
+          '2.3.3' can have up to 5.82MiB
+        link: https://pypi.org/project/gphoto2/2.3.3/#files
+        package_name: gphoto2
