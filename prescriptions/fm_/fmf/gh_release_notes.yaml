@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FmfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fmf
+    run:
+      release_notes:
+        organization: teemtee
+        repository: fmf
