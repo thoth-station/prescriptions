@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PandocfiltersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandocfilters
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pandocfilters' has no recent release, last release dates back to 2021-09-14 03:37:58.577374
+        link: https://pypi.org/project/pandocfilters/#history
+        package_name: pandocfilters
