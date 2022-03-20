@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FuckitPyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fuckit
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'fuckit' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/fuckit/
+        package_name: fuckit
