@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KoanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: koan
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'koan' has no recent release, last release dates back to 2021-08-06 15:35:20.626877
+        link: https://pypi.org/project/koan/#history
+        package_name: koan
