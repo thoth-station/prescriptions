@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AioodbcGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioodbc
+    run:
+      release_notes:
+        organization: aio-libs
+        repository: aioodbc
+        tag_version_prefix: v
