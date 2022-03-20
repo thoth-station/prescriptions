@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PkgconfigPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pkgconfig
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pkgconfig' has no recent release, last release dates back to 2021-07-19 18:49:51.669103
+        link: https://pypi.org/project/pkgconfig/#history
+        package_name: pkgconfig
