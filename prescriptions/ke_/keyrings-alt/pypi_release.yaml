@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KeyringsAltPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keyrings-alt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keyrings-alt' has no recent release, last release dates back to 2021-07-16 03:00:54.089802
+        link: https://pypi.org/project/keyrings-alt/#history
+        package_name: keyrings-alt
