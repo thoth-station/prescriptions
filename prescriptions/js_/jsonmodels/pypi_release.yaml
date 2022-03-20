@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonmodelsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonmodels
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonmodels' has no recent release, last release dates back to 2021-07-26 20:23:07.040431
+        link: https://pypi.org/project/jsonmodels/#history
+        package_name: jsonmodels
