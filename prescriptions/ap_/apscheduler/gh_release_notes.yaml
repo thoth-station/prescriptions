@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ApschedulerGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apscheduler
+    run:
+      release_notes:
+        organization: agronholm
+        repository: apscheduler
