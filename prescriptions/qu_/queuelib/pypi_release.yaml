@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QueuelibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: queuelib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'queuelib' has no recent release, last release dates back to 2021-08-26 13:42:09.526789
+        link: https://pypi.org/project/queuelib/#history
+        package_name: queuelib
