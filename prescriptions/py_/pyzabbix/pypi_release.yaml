@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyzabbixPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyzabbix
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyzabbix' has no recent release, last release dates back to 2021-06-23 14:57:53.362287
+        link: https://pypi.org/project/pyzabbix/#history
+        package_name: pyzabbix
