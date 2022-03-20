@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EasyocrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: easyocr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'easyocr' has no recent release, last release dates back to 2021-09-11 09:38:37.072754
+        link: https://pypi.org/project/easyocr/#history
+        package_name: easyocr
