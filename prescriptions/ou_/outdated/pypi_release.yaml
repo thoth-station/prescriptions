@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OutdatedPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: outdated
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'outdated' has no recent release, last release dates back to 2021-07-31 22:25:04.564706
+        link: https://pypi.org/project/outdated/#history
+        package_name: outdated
