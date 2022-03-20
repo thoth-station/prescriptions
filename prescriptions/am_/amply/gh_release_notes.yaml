@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AmplyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amply
+    run:
+      release_notes:
+        organization: willu47
+        repository: amply
+        tag_version_prefix: v
