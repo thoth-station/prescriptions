@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ldap3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ldap3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ldap3' has no recent release, last release dates back to 2021-07-18 06:34:21.786987
+        link: https://pypi.org/project/ldap3/#history
+        package_name: ldap3
