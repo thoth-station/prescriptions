@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Argon2CffiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argon2-cffi
+    run:
+      release_notes:
+        organization: hynek
+        repository: argon2-cffi
