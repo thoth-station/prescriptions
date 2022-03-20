@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PypandocGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypandoc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pypandoc' is hosted on GitHub
+        link: https://github.com/NicklasTegner/pypandoc
+        package_name: pypandoc
