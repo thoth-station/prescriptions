@@ -1044,3 +1044,21 @@ units:
           '1.19.5' can have up to 8.37MiB
         link: https://pypi.org/project/pymupdf/1.19.5/#files
         package_name: pymupdf
+  - name: Pymupdf1x19x6PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymupdf
+          version: ==1.19.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymupdf' in version
+          '1.19.6' can have up to 8.41MiB
+        link: https://pypi.org/project/pymupdf/1.19.6/#files
+        package_name: pymupdf
