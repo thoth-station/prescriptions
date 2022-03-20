@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DjangoCacheUrlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cache-url
+    run:
+      release_notes:
+        organization: epicserve
+        repository: django-cache-url
+        tag_version_prefix: v
