@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PywebpushPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pywebpush
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pywebpush' has no recent release, last release dates back to 2021-07-28 14:53:29.654785
+        link: https://pypi.org/project/pywebpush/#history
+        package_name: pywebpush
