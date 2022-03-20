@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: JsondiffGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsondiff
+    run:
+      release_notes:
+        organization: xlwings
+        repository: jsondiff
