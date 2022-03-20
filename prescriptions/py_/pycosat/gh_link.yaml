@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycosatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycosat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycosat' is hosted on GitHub
+        link: https://github.com/conda/pycosat
+        package_name: pycosat
