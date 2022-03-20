@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Brian2GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: brian2
+    run:
+      release_notes:
+        organization: brian-team
+        repository: brian2
