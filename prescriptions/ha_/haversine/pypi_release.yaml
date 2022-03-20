@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HaversinePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: haversine
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'haversine' has no recent release, last release dates back to 2021-09-02 13:03:30.666059
+        link: https://pypi.org/project/haversine/#history
+        package_name: haversine
