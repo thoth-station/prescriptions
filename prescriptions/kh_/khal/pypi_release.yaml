@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KhalPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: khal
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'khal' has no recent release, last release dates back to 2021-07-29 17:39:03.328785
+        link: https://pypi.org/project/khal/#history
+        package_name: khal
