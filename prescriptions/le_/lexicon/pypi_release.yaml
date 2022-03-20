@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LexiconPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lexicon
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lexicon' has no recent release, last release dates back to 2021-09-10 18:38:40.793164
+        link: https://pypi.org/project/lexicon/#history
+        package_name: lexicon
