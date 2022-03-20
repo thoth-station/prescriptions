@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RdflibJsonldPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rdflib-jsonld
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rdflib-jsonld' has no recent release, last release dates back to 2021-09-18 03:04:27.881503
+        link: https://pypi.org/project/rdflib-jsonld/#history
+        package_name: rdflib-jsonld
