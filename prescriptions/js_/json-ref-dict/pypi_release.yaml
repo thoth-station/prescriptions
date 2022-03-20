@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonRefDictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: json-ref-dict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'json-ref-dict' has no recent release, last release dates back to 2021-09-10 09:54:16.994983
+        link: https://pypi.org/project/json-ref-dict/#history
+        package_name: json-ref-dict
