@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyopenmsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyopenms
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyopenms' has no recent release, last release dates back to 2021-09-16 22:39:29.188460
+        link: https://pypi.org/project/pyopenms/#history
+        package_name: pyopenms
