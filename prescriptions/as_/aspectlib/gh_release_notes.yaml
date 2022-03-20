@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AspectlibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aspectlib
+    run:
+      release_notes:
+        organization: ionelmc
+        repository: python-aspectlib
+        tag_version_prefix: v
