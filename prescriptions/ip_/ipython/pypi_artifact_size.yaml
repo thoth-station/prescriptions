@@ -1512,3 +1512,21 @@ units:
           '8.1.0' can have up to 5.07MiB
         link: https://pypi.org/project/ipython/8.1.0/#files
         package_name: ipython
+  - name: Ipython8x1x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipython
+          version: ==8.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ipython' in version
+          '8.1.1' can have up to 5.07MiB
+        link: https://pypi.org/project/ipython/8.1.1/#files
+        package_name: ipython
