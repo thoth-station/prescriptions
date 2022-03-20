@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LarkParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lark-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lark-parser' has no recent release, last release dates back to 2021-08-30 13:01:01.603293
+        link: https://pypi.org/project/lark-parser/#history
+        package_name: lark-parser
