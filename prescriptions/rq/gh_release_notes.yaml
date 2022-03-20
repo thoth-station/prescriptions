@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RqGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rq
+    run:
+      release_notes:
+        organization: rq
+        repository: rq
+        tag_version_prefix: v
