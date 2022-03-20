@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestRerunfailuresPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-rerunfailures
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-rerunfailures' has no recent release, last release dates back to 2021-09-17 06:08:25.903471
+        link: https://pypi.org/project/pytest-rerunfailures/#history
+        package_name: pytest-rerunfailures
