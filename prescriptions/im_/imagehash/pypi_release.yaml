@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImagehashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagehash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'imagehash' has no recent release, last release dates back to 2021-07-15 12:35:01.201881
+        link: https://pypi.org/project/imagehash/#history
+        package_name: imagehash
