@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ArvizGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: arviz
+    run:
+      release_notes:
+        organization: arviz-devs
+        repository: arviz
+        tag_version_prefix: v
