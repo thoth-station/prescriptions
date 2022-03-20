@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastjsonschemaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastjsonschema
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fastjsonschema' is hosted on GitHub
+        link: https://github.com/horejsek/python-fastjsonschema
+        package_name: fastjsonschema
