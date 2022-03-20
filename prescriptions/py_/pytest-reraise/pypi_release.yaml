@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestReraisePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-reraise
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-reraise' has no recent release, last release dates back to 2021-06-17 13:54:38.116405
+        link: https://pypi.org/project/pytest-reraise/#history
+        package_name: pytest-reraise
