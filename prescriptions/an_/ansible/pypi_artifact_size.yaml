@@ -3996,3 +3996,21 @@ units:
           '5.4.0' can have up to 36.48MiB
         link: https://pypi.org/project/ansible/5.4.0/#files
         package_name: ansible
+  - name: Ansible5x5x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible
+          version: ==5.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible' in version
+          '5.5.0' can have up to 40.10MiB
+        link: https://pypi.org/project/ansible/5.5.0/#files
+        package_name: ansible
