@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PefilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pefile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pefile' has no recent release, last release dates back to 2021-09-03 14:25:19.174860
+        link: https://pypi.org/project/pefile/#history
+        package_name: pefile
