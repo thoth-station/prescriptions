@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClyentGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clyent
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'clyent' has less than 5 contributors on GitHub
+        link: https://github.com/anaconda-graveyard/clyent
+        package_name: clyent
