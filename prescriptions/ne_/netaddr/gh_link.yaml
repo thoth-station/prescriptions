@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NetaddrGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netaddr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'netaddr' is hosted on GitHub
+        link: https://github.com/netaddr/netaddr
+        package_name: netaddr
