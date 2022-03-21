@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CatalystCodestylePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catalyst-codestyle
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'catalyst-codestyle' has no recent release, last release dates back to 2021-09-17 18:29:50.418782
+        link: https://pypi.org/project/catalyst-codestyle/#history
+        package_name: catalyst-codestyle
