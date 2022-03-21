@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FysomPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fysom
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fysom' has no recent release, last release dates back to 2021-09-10 14:17:22.894803
+        link: https://pypi.org/project/fysom/#history
+        package_name: fysom
