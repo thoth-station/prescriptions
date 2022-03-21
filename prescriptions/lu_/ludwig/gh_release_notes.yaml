@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LudwigGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ludwig
+    run:
+      release_notes:
+        organization: ludwig-ai
+        repository: ludwig
+        tag_version_prefix: v
