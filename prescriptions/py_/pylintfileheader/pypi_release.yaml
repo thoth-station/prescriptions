@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylintfileheaderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylintfileheader
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylintfileheader' has no recent release, last release dates back to 2021-09-17 20:51:32.281244
+        link: https://pypi.org/project/pylintfileheader/#history
+        package_name: pylintfileheader
