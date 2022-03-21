@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyicuBinaryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyicu-binary
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyicu-binary' has no recent release, last release dates back to 2021-09-14 01:09:39.580635
+        link: https://pypi.org/project/pyicu-binary/#history
+        package_name: pyicu-binary
