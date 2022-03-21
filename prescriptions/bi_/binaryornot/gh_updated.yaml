@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BinaryornotGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: binaryornot
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'binaryornot' was last updated at 2019-08-11 11:08:51
+        link: https://github.com/audreyfeldroy/binaryornot
+        package_name: binaryornot
