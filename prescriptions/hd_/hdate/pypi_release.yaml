@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HdatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hdate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hdate' has no recent release, last release dates back to 2021-09-17 06:56:14.558950
+        link: https://pypi.org/project/hdate/#history
+        package_name: hdate
