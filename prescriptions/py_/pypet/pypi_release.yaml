@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pypet' has no recent release, last release dates back to 2021-09-11 17:52:50.390339
+        link: https://pypi.org/project/pypet/#history
+        package_name: pypet
