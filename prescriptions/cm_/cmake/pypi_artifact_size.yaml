@@ -882,6 +882,24 @@ units:
           '3.22.2' can have up to 71.18MiB
         link: https://pypi.org/project/cmake/3.22.2/#files
         package_name: cmake
+  - name: Cmake3x22x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmake
+          version: ==3.22.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cmake' in version
+          '3.22.3' can have up to 71.19MiB
+        link: https://pypi.org/project/cmake/3.22.3/#files
+        package_name: cmake
   - name: Cmake3x6x3PyPIArtifactSizeWrap
     type: wrap
     should_include:
