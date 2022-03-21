@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DistroinfoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: distroinfo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'distroinfo' has no recent release, last release dates back to 2021-09-13 13:59:10.424644
+        link: https://pypi.org/project/distroinfo/#history
+        package_name: distroinfo
