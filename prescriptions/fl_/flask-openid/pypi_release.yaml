@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskOpenidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-openid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-openid' has no recent release, last release dates back to 2021-09-08 22:21:39.145092
+        link: https://pypi.org/project/flask-openid/#history
+        package_name: flask-openid
