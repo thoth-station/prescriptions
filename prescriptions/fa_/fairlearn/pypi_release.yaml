@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FairlearnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fairlearn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fairlearn' has no recent release, last release dates back to 2021-07-07 05:54:25.027333
+        link: https://pypi.org/project/fairlearn/#history
+        package_name: fairlearn
