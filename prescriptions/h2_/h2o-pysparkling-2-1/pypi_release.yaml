@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: H2oPysparkling21PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h2o-pysparkling-2-1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'h2o-pysparkling-2-1' has no recent release, last release dates back to 2021-09-08 15:27:26.694882
+        link: https://pypi.org/project/h2o-pysparkling-2-1/#history
+        package_name: h2o-pysparkling-2-1
