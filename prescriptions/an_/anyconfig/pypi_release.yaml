@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnyconfigPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anyconfig
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'anyconfig' has no recent release, last release dates back to 2021-09-19 11:10:42.753746
+        link: https://pypi.org/project/anyconfig/#history
+        package_name: anyconfig
