@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ExtructPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: extruct
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'extruct' has no recent release, last release dates back to 2021-07-26 10:46:51.306876
+        link: https://pypi.org/project/extruct/#history
+        package_name: extruct
