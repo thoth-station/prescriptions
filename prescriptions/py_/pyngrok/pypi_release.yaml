@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyngrokPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyngrok
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyngrok' has no recent release, last release dates back to 2021-08-25 06:11:54.781668
+        link: https://pypi.org/project/pyngrok/#history
+        package_name: pyngrok
