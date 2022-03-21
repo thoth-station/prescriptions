@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PypngPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypng
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pypng' has no recent release, last release dates back to 2021-08-25 16:34:24.590587
+        link: https://pypi.org/project/pypng/#history
+        package_name: pypng
