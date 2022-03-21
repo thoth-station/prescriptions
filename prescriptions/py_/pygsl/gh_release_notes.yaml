@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PygslGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygsl
+    run:
+      release_notes:
+        organization: pygsl
+        repository: pygsl
+        tag_version_prefix: v
