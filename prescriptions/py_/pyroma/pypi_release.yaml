@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyromaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyroma
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyroma' has no recent release, last release dates back to 2021-06-22 10:27:43.877200
+        link: https://pypi.org/project/pyroma/#history
+        package_name: pyroma
