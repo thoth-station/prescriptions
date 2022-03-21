@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylslPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylsl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylsl' has no recent release, last release dates back to 2021-08-10 17:03:54.032375
+        link: https://pypi.org/project/pylsl/#history
+        package_name: pylsl
