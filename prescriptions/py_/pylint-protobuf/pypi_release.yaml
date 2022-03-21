@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PylintProtobufPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-protobuf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pylint-protobuf' has no recent release, last release dates back to 2021-07-27 02:22:25.814534
+        link: https://pypi.org/project/pylint-protobuf/#history
+        package_name: pylint-protobuf
