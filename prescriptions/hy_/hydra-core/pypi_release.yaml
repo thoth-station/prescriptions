@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HydraCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hydra-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hydra-core' has no recent release, last release dates back to 2021-08-19 20:48:41.434783
+        link: https://pypi.org/project/hydra-core/#history
+        package_name: hydra-core
