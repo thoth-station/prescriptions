@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiohttpRetryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-retry
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiohttp-retry' has no recent release, last release dates back to 2021-09-15 11:03:19.605600
+        link: https://pypi.org/project/aiohttp-retry/#history
+        package_name: aiohttp-retry
