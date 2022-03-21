@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PycountryGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycountry
+    run:
+      release_notes:
+        organization: flyingcircusio
+        repository: pycountry
