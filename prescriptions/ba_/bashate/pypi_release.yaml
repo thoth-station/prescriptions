@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BashatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bashate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bashate' has no recent release, last release dates back to 2021-09-13 08:23:53.423048
+        link: https://pypi.org/project/bashate/#history
+        package_name: bashate
