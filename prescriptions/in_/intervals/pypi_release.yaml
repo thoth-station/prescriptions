@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IntervalsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intervals
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'intervals' has no recent release, last release dates back to 2021-07-02 10:09:30.171540
+        link: https://pypi.org/project/intervals/#history
+        package_name: intervals
