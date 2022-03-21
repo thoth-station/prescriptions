@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoMongodbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-mongodb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-mongodb' has no recent release, last release dates back to 2021-07-28 01:02:48.997855
+        link: https://pypi.org/project/jaraco-mongodb/#history
+        package_name: jaraco-mongodb
