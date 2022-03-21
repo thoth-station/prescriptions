@@ -126,3 +126,21 @@ units:
           '0.6.1' can have up to 4.25MiB
         link: https://pypi.org/project/dgl/0.6.1/#files
         package_name: dgl
+  - name: Dgl0x8x0xpost1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dgl
+          version: ==0.8.0.post1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dgl' in version
+          '0.8.0.post1' can have up to 5.83MiB
+        link: https://pypi.org/project/dgl/0.8.0.post1/#files
+        package_name: dgl
