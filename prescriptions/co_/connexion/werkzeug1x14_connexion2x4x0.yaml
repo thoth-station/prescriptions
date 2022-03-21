@@ -1,6 +1,6 @@
 units:
   steps:
-  - name: Connexion2x10x0Werkzeug1x0Step
+  - name: Connexion2x4x0Werkzeug1x14Step
     type: step.Group
     should_include:
       adviser_pipeline: true
@@ -8,21 +8,21 @@ units:
     - group:
       - package_version:
           name: connexion
-          version: ">=2.10.0"
+          version: ">=2.4.0"
           index_url: https://pypi.org/simple
       - package_version:
           name: werkzeug
-          version: <1.0,>=2.0
+          version: <=0.14
           index_url: https://pypi.org/simple
     run:
       stack_info:
       - &stack_info
         type: WARNING
-        message: Cannot install connexion >=2.10.0 when using werkzeug <1.0,>=2.0
+        message: Cannot install connexion >=2.4.0 when using werkzeug <=0.14
         link: https://github.com/thoth-station/user-api/issues/1708#issuecomment-1066969750
-      not_acceptable: Cannot install connexion >=2.10.0 when using werkzeug <1.0,>=2.0
+      not_acceptable: Cannot install connexion >=2.4.0 when using werkzeug <=0.14
   sieves:
-  - name: Connexion2x10x0Werkzeug1x0Sieve
+  - name: Connexion2x4x0Werkzeug1x14Sieve
     type: sieve
     should_include:
       adviser_pipeline: true
@@ -31,12 +31,12 @@ units:
         # shipped with the specified werkzeug.
         python_packages:
         - name: werkzeug
-          version: <1.0,>=2.0
+          version: <=0.14
           location: ^/opt/app-root/.*
     match:
       package_version:
         name: connexion
-        version: ">=2.10.0"
+        version: ">=2.4.0"
         index_url: https://pypi.org/simple
     run:
       stack_info:
