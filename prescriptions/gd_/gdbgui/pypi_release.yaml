@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GdbguiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gdbgui
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gdbgui' has no recent release, last release dates back to 2021-09-06 05:54:16.585505
+        link: https://pypi.org/project/gdbgui/#history
+        package_name: gdbgui
