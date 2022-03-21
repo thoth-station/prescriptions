@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Flake8BanditGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-bandit
+    run:
+      release_notes:
+        organization: tylerwince
+        repository: flake8-bandit
+        tag_version_prefix: v
