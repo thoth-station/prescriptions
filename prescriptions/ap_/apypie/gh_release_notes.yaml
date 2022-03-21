@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ApypieGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apypie
+    run:
+      release_notes:
+        organization: Apipie
+        repository: apypie
+        tag_version_prefix: v
