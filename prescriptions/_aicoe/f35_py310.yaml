@@ -1,0 +1,18 @@
+units:
+  boots:
+  - name: Fedora35Py310Boot
+    type: boot
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        python_version: ==3.10
+        operating_systems:
+        - name: fedora
+          version: "35"
+    run:
+      stack_info:
+      - type: WARNING
+        message: >-
+          Fedora 35 running 3.10 is not fully supported yet, some
+          recommendations might give partial results
+        link: https://github.com/thoth-station/s2i-thoth/issues/231
