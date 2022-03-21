@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IfcfgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ifcfg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ifcfg' has no recent release, last release dates back to 2021-09-05 23:16:35.616731
+        link: https://pypi.org/project/ifcfg/#history
+        package_name: ifcfg
