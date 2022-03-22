@@ -8,7 +8,7 @@ units:
     - group:
       - package_version:
           name: connexion
-          version: ">=2.4.0"
+          version: ">=2.4.0,<=2.13.0"
           index_url: https://pypi.org/simple
       - package_version:
           name: werkzeug
@@ -18,26 +18,6 @@ units:
       stack_info:
       - &stack_info
         type: WARNING
-        message: Cannot install connexion >=2.4.0 when using werkzeug <=0.14
+        message: Cannot install connexion >=2.4.0,<=2.13.0 when using werkzeug <=0.14
         link: https://github.com/thoth-station/user-api/issues/1708#issuecomment-1066969750
-      not_acceptable: Cannot install connexion >=2.4.0 when using werkzeug <=0.14
-  sieves:
-  - name: Connexion2x4x0Werkzeug1x14Sieve
-    type: sieve
-    should_include:
-      adviser_pipeline: true
-      runtime_environments:
-        # Filter connexion if Python container images are
-        # shipped with the specified werkzeug.
-        python_packages:
-        - name: werkzeug
-          version: <=0.14
-          location: ^/opt/app-root/.*
-    match:
-      package_version:
-        name: connexion
-        version: ">=2.4.0"
-        index_url: https://pypi.org/simple
-    run:
-      stack_info:
-      - <<: *stack_info
+      not_acceptable: Cannot install connexion >=2.4.0,<=2.13.0 when using werkzeug <=0.14
