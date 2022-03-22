@@ -6,12 +6,12 @@ Prescriptions for Thoth's adviser
 
 Prescriptions to heal your applications and application dependencies.
 
-What are prescriptions?
-=======================
+Why we created prescriptions?
+=============================
 
-This repository keeps a database of known issues in Python open-source
-projects as well as suggestions for Python libraries and runtime
-environments they can run in. The database is used in
+We wanted to create a repository that keeps a database of known issues in
+Python open-source eco-system, as well as suggestions for Python libraries
+and runtime environments they can run in. The database is used in
 `Thoth <https://thoth-station.ninja/>`__ to resolve high quality Python
 software stacks. The `linked blog post describes prescriptions more in-depth
 <https://developers.redhat.com/articles/2021/09/22/thoth-prescriptions-resolving-python-dependencies>`_.
