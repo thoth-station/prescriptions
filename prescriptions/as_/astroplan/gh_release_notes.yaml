@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AstroplanGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astroplan
+    run:
+      release_notes:
+        organization: astropy
+        repository: astroplan
+        tag_version_prefix: v
