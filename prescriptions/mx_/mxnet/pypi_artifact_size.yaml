@@ -648,3 +648,21 @@ units:
           '2.0.0a0' can have up to 48.62MiB
         link: https://pypi.org/project/mxnet/2.0.0a0/#files
         package_name: mxnet
+  - name: Mxnet2x0x0b1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mxnet
+          version: ==2.0.0b1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mxnet' in version
+          '2.0.0b1' can have up to 56.88MiB
+        link: https://pypi.org/project/mxnet/2.0.0b1/#files
+        package_name: mxnet
