@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ArgoWorkflowsGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argo-workflows
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'argo-workflows' is marked as archived on GitHub
+        link: https://github.com/argoproj-labs/argo-client-python
+        package_name: argo-workflows
