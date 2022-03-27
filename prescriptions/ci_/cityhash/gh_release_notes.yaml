@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CityhashGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cityhash
+    run:
+      release_notes:
+        organization: escherba
+        repository: python-cityhash
