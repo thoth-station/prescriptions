@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SlingshotGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: slingshot
+    run:
+      release_notes:
+        organization: jthi3rry
+        repository: slingshot
+        tag_version_prefix: v
