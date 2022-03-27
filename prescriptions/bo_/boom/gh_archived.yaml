@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BoomGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boom
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'boom' is marked as archived on GitHub
+        link: https://github.com/tarekziade/boom
+        package_name: boom
