@@ -810,3 +810,21 @@ units:
           '4.7.1' can have up to 37.50MiB
         link: https://pypi.org/project/httpstan/4.7.1/#files
         package_name: httpstan
+  - name: Httpstan4x7x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httpstan
+          version: ==4.7.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'httpstan' in version
+          '4.7.2' can have up to 37.50MiB
+        link: https://pypi.org/project/httpstan/4.7.2/#files
+        package_name: httpstan
