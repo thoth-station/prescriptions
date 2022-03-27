@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MbstrdecoderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mbstrdecoder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mbstrdecoder' has no recent release, last release dates back to 2021-09-20 10:24:50.084961
+        link: https://pypi.org/project/mbstrdecoder/#history
+        package_name: mbstrdecoder
