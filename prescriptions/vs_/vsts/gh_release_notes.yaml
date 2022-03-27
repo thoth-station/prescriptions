@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: VstsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vsts
+    run:
+      release_notes:
+        organization: microsoft
+        repository: azure-devops-python-api
