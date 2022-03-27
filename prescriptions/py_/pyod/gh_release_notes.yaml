@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyodGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyod
+    run:
+      release_notes:
+        organization: yzhao062
+        repository: pyod
+        tag_version_prefix: v
