@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ApplicationinsightsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: applicationinsights
+    run:
+      release_notes:
+        organization: Microsoft
+        repository: ApplicationInsights-Python
+        tag_version_prefix: v
