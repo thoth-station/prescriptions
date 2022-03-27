@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PatsyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patsy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'patsy' has no recent release, last release dates back to 2021-09-26 05:26:39.460491
+        link: https://pypi.org/project/patsy/#history
+        package_name: patsy
