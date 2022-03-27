@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: YappiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: yappi
+    run:
+      release_notes:
+        organization: sumerc
+        repository: yappi
