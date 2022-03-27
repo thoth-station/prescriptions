@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PodcastparserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: podcastparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'podcastparser' has no recent release, last release dates back to 2021-09-23 05:56:19.267136
+        link: https://pypi.org/project/podcastparser/#history
+        package_name: podcastparser
