@@ -54,3 +54,21 @@ units:
           '1.5.2' can have up to 14.86MiB
         link: https://pypi.org/project/nixio/1.5.2/#files
         package_name: nixio
+  - name: Nixio1x5x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nixio
+          version: ==1.5.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'nixio' in version
+          '1.5.3' can have up to 14.86MiB
+        link: https://pypi.org/project/nixio/1.5.3/#files
+        package_name: nixio
