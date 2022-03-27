@@ -54,3 +54,21 @@ units:
           '0.4.21' can have up to 4.70MiB
         link: https://pypi.org/project/configspace/0.4.21/#files
         package_name: configspace
+  - name: Configspace0x5x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configspace
+          version: ==0.5.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'configspace' in version
+          '0.5.0' can have up to 5.18MiB
+        link: https://pypi.org/project/configspace/0.5.0/#files
+        package_name: configspace
