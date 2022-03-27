@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GherkinOfficialPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gherkin-official
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gherkin-official' has no recent release, last release dates back to 2021-09-23 12:13:43.151169
+        link: https://pypi.org/project/gherkin-official/#history
+        package_name: gherkin-official
