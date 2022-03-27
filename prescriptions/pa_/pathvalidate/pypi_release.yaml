@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathvalidatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathvalidate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pathvalidate' has no recent release, last release dates back to 2021-09-26 13:53:12.911607
+        link: https://pypi.org/project/pathvalidate/#history
+        package_name: pathvalidate
