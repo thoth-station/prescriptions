@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoFilterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-filter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-filter' has no recent release, last release dates back to 2021-09-24 14:08:38.813353
+        link: https://pypi.org/project/django-filter/#history
+        package_name: django-filter
