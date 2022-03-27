@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DeepsparseGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deepsparse
+    run:
+      release_notes:
+        organization: neuralmagic
+        repository: deepsparse
+        tag_version_prefix: v
