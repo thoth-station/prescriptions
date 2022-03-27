@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Iso3166PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iso3166
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'iso3166' has no recent release, last release dates back to 2021-09-20 23:50:39.935747
+        link: https://pypi.org/project/iso3166/#history
+        package_name: iso3166
