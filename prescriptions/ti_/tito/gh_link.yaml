@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TitoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tito
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tito' is hosted on GitHub
+        link: https://github.com/rpm-software-management/tito
+        package_name: tito
