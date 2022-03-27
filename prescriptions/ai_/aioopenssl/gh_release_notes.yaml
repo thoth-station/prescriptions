@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AioopensslGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioopenssl
+    run:
+      release_notes:
+        organization: horazont
+        repository: aioopenssl
+        tag_version_prefix: v
