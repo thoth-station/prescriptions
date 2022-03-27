@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NetaddrGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netaddr
+    run:
+      release_notes:
+        organization: netaddr
+        repository: netaddr
