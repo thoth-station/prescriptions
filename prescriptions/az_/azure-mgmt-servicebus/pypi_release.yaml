@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtServicebusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-servicebus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-servicebus' has no recent release, last release dates back to 2021-09-23 06:15:48.396259
+        link: https://pypi.org/project/azure-mgmt-servicebus/#history
+        package_name: azure-mgmt-servicebus
