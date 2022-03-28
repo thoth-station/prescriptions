@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: TestinfraGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: testinfra
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: pytest-testinfra
