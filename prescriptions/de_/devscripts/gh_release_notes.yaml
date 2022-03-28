@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: DevscriptsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devscripts
+    run:
+      release_notes:
+        organization: tbobm
+        repository: devscripts
