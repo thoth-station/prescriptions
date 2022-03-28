@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ChangelogGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: changelog
+    run:
+      release_notes:
+        organization: sqlalchemyorg
+        repository: changelog
+        tag_version_prefix: v
