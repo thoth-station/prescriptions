@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoAppconfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-appconf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-appconf' has no recent release, last release dates back to 2021-09-24 13:59:15.584771
+        link: https://pypi.org/project/django-appconf/#history
+        package_name: django-appconf
