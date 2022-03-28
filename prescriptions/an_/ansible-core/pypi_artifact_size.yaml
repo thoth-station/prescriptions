@@ -144,6 +144,24 @@ units:
           '2.11.1' can have up to 5.86MiB
         link: https://pypi.org/project/ansible-core/2.11.1/#files
         package_name: ansible-core
+  - name: AnsibleCore2x11x10rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-core
+          version: ==2.11.10rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible-core' in version
+          '2.11.10rc1' can have up to 6.78MiB
+        link: https://pypi.org/project/ansible-core/2.11.10rc1/#files
+        package_name: ansible-core
   - name: AnsibleCore2x11x1rc1PyPIArtifactSizeWrap
     type: wrap
     should_include:
@@ -629,4 +647,22 @@ units:
           Installed artifact size for package 'ansible-core' in version
           '2.12.3rc1' can have up to 7.40MiB
         link: https://pypi.org/project/ansible-core/2.12.3rc1/#files
+        package_name: ansible-core
+  - name: AnsibleCore2x12x4rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-core
+          version: ==2.12.4rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible-core' in version
+          '2.12.4rc1' can have up to 7.40MiB
+        link: https://pypi.org/project/ansible-core/2.12.4rc1/#files
         package_name: ansible-core
