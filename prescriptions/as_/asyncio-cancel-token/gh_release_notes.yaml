@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AsyncioCancelTokenGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncio-cancel-token
+    run:
+      release_notes:
+        organization: ethereum
+        repository: asyncio-cancel-token
+        tag_version_prefix: v
