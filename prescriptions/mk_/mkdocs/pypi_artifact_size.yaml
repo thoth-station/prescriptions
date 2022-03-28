@@ -126,3 +126,39 @@ units:
           '1.2.3' can have up to 6.06MiB
         link: https://pypi.org/project/mkdocs/1.2.3/#files
         package_name: mkdocs
+  - name: Mkdocs1x2x4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs
+          version: ==1.2.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mkdocs' in version
+          '1.2.4' can have up to 6.06MiB
+        link: https://pypi.org/project/mkdocs/1.2.4/#files
+        package_name: mkdocs
+  - name: Mkdocs1x3x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs
+          version: ==1.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mkdocs' in version
+          '1.3.0' can have up to 3.49MiB
+        link: https://pypi.org/project/mkdocs/1.3.0/#files
+        package_name: mkdocs
