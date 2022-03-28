@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CclibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cclib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cclib' has no recent release, last release dates back to 2021-09-22 01:58:03.109364
+        link: https://pypi.org/project/cclib/#history
+        package_name: cclib
