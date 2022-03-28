@@ -342,3 +342,21 @@ units:
           '3.2.6' can have up to 12.53MiB
         link: https://pypi.org/project/couchbase/3.2.6/#files
         package_name: couchbase
+  - name: Couchbase3x2x7PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: couchbase
+          version: ==3.2.7
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'couchbase' in version
+          '3.2.7' can have up to 12.69MiB
+        link: https://pypi.org/project/couchbase/3.2.7/#files
+        package_name: couchbase
