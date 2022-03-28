@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AnsimarkupGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansimarkup
+    run:
+      release_notes:
+        organization: gvalkov
+        repository: python-ansimarkup
+        tag_version_prefix: v
