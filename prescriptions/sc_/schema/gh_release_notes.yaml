@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SchemaGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: schema
+    run:
+      release_notes:
+        organization: keleshev
+        repository: schema
+        tag_version_prefix: v
