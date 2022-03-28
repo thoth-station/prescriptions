@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonpathNgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonpath-ng
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonpath-ng' has no recent release, last release dates back to 2021-07-05 18:01:18.106791
+        link: https://pypi.org/project/jsonpath-ng/#history
+        package_name: jsonpath-ng
