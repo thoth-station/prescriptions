@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytestXprocessPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-xprocess
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytest-xprocess' has no recent release, last release dates back to 2021-07-28 04:47:42.699174
+        link: https://pypi.org/project/pytest-xprocess/#history
+        package_name: pytest-xprocess
