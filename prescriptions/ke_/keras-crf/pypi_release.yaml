@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KerasCrfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keras-crf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keras-crf' has no recent release, last release dates back to 2021-08-02 10:39:41.587037
+        link: https://pypi.org/project/keras-crf/#history
+        package_name: keras-crf
