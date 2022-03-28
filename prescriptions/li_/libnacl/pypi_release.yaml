@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LibnaclPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libnacl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'libnacl' has no recent release, last release dates back to 2021-07-06 20:08:02.178431
+        link: https://pypi.org/project/libnacl/#history
+        package_name: libnacl
