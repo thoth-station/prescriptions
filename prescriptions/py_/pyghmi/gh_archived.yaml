@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyghmiGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyghmi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyghmi' is marked as archived on GitHub
+        link: https://github.com/openstack-archive/pyghmi
+        package_name: pyghmi
