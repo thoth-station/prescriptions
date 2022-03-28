@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TorchserveGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: torchserve
+    run:
+      justification:
+      - type: INFO
+        message: Package 'torchserve' is hosted on GitHub
+        link: https://github.com/pytorch/serve
+        package_name: torchserve
