@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InterpretCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: interpret-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'interpret-core' has no recent release, last release dates back to 2021-09-23 19:53:17.170433
+        link: https://pypi.org/project/interpret-core/#history
+        package_name: interpret-core
