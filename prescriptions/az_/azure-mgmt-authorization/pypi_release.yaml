@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureMgmtAuthorizationPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-authorization
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-authorization' has no recent release, last release dates back to 2021-09-26 06:45:08.636199
+        link: https://pypi.org/project/azure-mgmt-authorization/#history
+        package_name: azure-mgmt-authorization
