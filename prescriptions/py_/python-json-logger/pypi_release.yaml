@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PythonJsonLoggerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-json-logger
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'python-json-logger' has no recent release, last release dates back to 2021-07-27 23:09:34.431721
+        link: https://pypi.org/project/python-json-logger/#history
+        package_name: python-json-logger
