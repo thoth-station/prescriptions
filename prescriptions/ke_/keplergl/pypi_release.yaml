@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KeplerglPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keplergl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'keplergl' has no recent release, last release dates back to 2021-09-16 04:32:14.031469
+        link: https://pypi.org/project/keplergl/#history
+        package_name: keplergl
