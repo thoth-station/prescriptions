@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: OnboardFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: onboard
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'onboard' is packaged as an RPM in Fedora 35 as 'onboard'
+        link: https://src.fedoraproject.org/rpms/onboard
+        package_name: onboard

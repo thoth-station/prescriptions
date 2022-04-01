@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: QhexeditFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: qhexedit
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'qhexedit' is packaged as an RPM in Fedora 35 as 'python3-qhexedit2-qt5'
+        link: https://src.fedoraproject.org/rpms/python3-qhexedit2-qt5
+        package_name: qhexedit

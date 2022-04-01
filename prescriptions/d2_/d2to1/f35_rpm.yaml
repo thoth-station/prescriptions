@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: D2to1Fedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: d2to1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'd2to1' is packaged as an RPM in Fedora 35 as 'python3-d2to1'
+        link: https://src.fedoraproject.org/rpms/python3-d2to1
+        package_name: d2to1

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: Wapiti3Fedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: wapiti3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'wapiti3' is packaged as an RPM in Fedora 35 as 'wapiti'
+        link: https://src.fedoraproject.org/rpms/wapiti
+        package_name: wapiti3

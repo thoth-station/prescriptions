@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PatoolFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: patool
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'patool' is packaged as an RPM in Fedora 35 as 'python3-patool'
+        link: https://src.fedoraproject.org/rpms/python3-patool
+        package_name: patool

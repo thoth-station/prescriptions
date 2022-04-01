@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: RednotebookFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: rednotebook
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rednotebook' is packaged as an RPM in Fedora 35 as 'rednotebook'
+        link: https://src.fedoraproject.org/rpms/rednotebook
+        package_name: rednotebook

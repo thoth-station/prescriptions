@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: BoutdataFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: boutdata
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boutdata' is packaged as an RPM in Fedora 35 as 'python3-boutdata'
+        link: https://src.fedoraproject.org/rpms/python3-boutdata
+        package_name: boutdata

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PyqueryFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyquery
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyquery' is packaged as an RPM in Fedora 35 as 'python3-pyquery'
+        link: https://src.fedoraproject.org/rpms/python3-pyquery
+        package_name: pyquery

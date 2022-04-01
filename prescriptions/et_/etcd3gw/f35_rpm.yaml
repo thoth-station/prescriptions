@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: Etcd3gwFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: etcd3gw
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'etcd3gw' is packaged as an RPM in Fedora 35 as 'python3-etcd3gw'
+        link: https://src.fedoraproject.org/rpms/python3-etcd3gw
+        package_name: etcd3gw

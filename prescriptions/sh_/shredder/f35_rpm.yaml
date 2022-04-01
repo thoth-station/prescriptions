@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: ShredderFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: shredder
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'shredder' is packaged as an RPM in Fedora 35 as 'rmlint'
+        link: https://src.fedoraproject.org/rpms/rmlint
+        package_name: shredder

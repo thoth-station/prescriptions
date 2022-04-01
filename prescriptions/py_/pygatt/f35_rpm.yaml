@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PygattFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygatt
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pygatt' is packaged as an RPM in Fedora 35 as 'python3-pygatt'
+        link: https://src.fedoraproject.org/rpms/python3-pygatt
+        package_name: pygatt

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PrefixedFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: prefixed
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prefixed' is packaged as an RPM in Fedora 35 as 'python3-prefixed'
+        link: https://src.fedoraproject.org/rpms/python3-prefixed
+        package_name: prefixed

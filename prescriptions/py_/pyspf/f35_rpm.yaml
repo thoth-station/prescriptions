@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PyspfFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyspf
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyspf' is packaged as an RPM in Fedora 35 as 'python3-pyspf'
+        link: https://src.fedoraproject.org/rpms/python3-pyspf
+        package_name: pyspf

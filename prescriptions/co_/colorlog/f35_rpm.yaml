@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: ColorlogFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorlog
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'colorlog' is packaged as an RPM in Fedora 35 as 'python3-colorlog'
+        link: https://src.fedoraproject.org/rpms/python3-colorlog
+        package_name: colorlog

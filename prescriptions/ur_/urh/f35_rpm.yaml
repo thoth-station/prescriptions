@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: UrhFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: urh
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'urh' is packaged as an RPM in Fedora 35 as 'urh'
+        link: https://src.fedoraproject.org/rpms/urh
+        package_name: urh

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: TargetdFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: targetd
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'targetd' is packaged as an RPM in Fedora 35 as 'targetd'
+        link: https://src.fedoraproject.org/rpms/targetd
+        package_name: targetd

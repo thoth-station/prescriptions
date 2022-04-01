@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: GphotoframeFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: gphotoframe
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'gphotoframe' is packaged as an RPM in Fedora 35 as 'gphotoframe'
+        link: https://src.fedoraproject.org/rpms/gphotoframe
+        package_name: gphotoframe

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: Oauth2Fedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: oauth2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'oauth2' is packaged as an RPM in Fedora 35 as 'python3-oauth2'
+        link: https://src.fedoraproject.org/rpms/python3-oauth2
+        package_name: oauth2

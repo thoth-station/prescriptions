@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: MetaextractFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: metaextract
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'metaextract' is packaged as an RPM in Fedora 35 as 'python3-metaextract'
+        link: https://src.fedoraproject.org/rpms/python3-metaextract
+        package_name: metaextract

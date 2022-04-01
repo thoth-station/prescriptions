@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PromiseFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: promise
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'promise' is packaged as an RPM in Fedora 35 as 'python3-promise'
+        link: https://src.fedoraproject.org/rpms/python3-promise
+        package_name: promise

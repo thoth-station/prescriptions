@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PyembyFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyemby
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyemby' is packaged as an RPM in Fedora 35 as 'python3-pyemby'
+        link: https://src.fedoraproject.org/rpms/python3-pyemby
+        package_name: pyemby

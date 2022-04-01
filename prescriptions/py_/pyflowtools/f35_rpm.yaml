@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PyflowtoolsFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyflowtools
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyflowtools' is packaged as an RPM in Fedora 35 as 'pyflowtools'
+        link: https://src.fedoraproject.org/rpms/pyflowtools
+        package_name: pyflowtools

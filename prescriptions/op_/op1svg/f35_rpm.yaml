@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: Op1svgFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: op1svg
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'op1svg' is packaged as an RPM in Fedora 35 as 'op1svg'
+        link: https://src.fedoraproject.org/rpms/op1svg
+        package_name: op1svg

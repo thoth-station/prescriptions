@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: AcademicFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: academic
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'academic' is packaged as an RPM in Fedora 35 as 'academic-admin'
+        link: https://src.fedoraproject.org/rpms/academic-admin
+        package_name: academic

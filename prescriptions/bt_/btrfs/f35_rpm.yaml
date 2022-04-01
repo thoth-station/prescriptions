@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: BtrfsFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: btrfs
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'btrfs' is packaged as an RPM in Fedora 35 as 'python3-btrfs'
+        link: https://src.fedoraproject.org/rpms/python3-btrfs
+        package_name: btrfs
