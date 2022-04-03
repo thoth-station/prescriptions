@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PlaceboPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: placebo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'placebo' has no recent release, last release dates back to 2021-09-28 11:42:07.592597
+        link: https://pypi.org/project/placebo/#history
+        package_name: placebo
