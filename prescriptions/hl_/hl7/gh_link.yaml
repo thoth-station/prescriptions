@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Hl7GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hl7
+    run:
+      justification:
+      - type: INFO
+        message: Package 'hl7' is hosted on GitHub
+        link: https://github.com/johnpaulett/python-hl7
+        package_name: hl7
