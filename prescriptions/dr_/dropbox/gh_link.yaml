@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DropboxGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dropbox
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dropbox' is hosted on GitHub
+        link: https://github.com/dropbox/dropbox-sdk-python
+        package_name: dropbox
