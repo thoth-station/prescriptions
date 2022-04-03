@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PydriveGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydrive
+    run:
+      release_notes:
+        organization: googlearchive
+        repository: PyDrive
