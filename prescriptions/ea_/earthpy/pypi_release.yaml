@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EarthpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: earthpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'earthpy' has no recent release, last release dates back to 2021-10-01 22:51:07.332978
+        link: https://pypi.org/project/earthpy/#history
+        package_name: earthpy
