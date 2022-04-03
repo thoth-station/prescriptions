@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NetdiscoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netdisco
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'netdisco' has no recent release, last release dates back to 2021-10-01 16:18:15.640907
+        link: https://pypi.org/project/netdisco/#history
+        package_name: netdisco
