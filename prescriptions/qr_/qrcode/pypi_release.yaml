@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QrcodePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qrcode
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'qrcode' has no recent release, last release dates back to 2021-10-01 18:50:43.731126
+        link: https://pypi.org/project/qrcode/#history
+        package_name: qrcode
