@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TrioTypingGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trio-typing
+    run:
+      release_notes:
+        organization: python-trio
+        repository: trio-typing
+        tag_version_prefix: v
