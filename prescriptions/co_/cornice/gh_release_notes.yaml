@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CorniceGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cornice
+    run:
+      release_notes:
+        organization: Cornices
+        repository: cornice
