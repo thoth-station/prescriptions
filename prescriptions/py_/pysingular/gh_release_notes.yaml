@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PysingularGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pysingular
+    run:
+      release_notes:
+        organization: sebasguts
+        repository: PySingular
+        tag_version_prefix: v
