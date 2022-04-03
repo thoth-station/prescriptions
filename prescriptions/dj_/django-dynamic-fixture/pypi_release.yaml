@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoDynamicFixturePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-dynamic-fixture
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-dynamic-fixture' has no recent release, last release dates back to 2021-10-02 00:14:14.620819
+        link: https://pypi.org/project/django-dynamic-fixture/#history
+        package_name: django-dynamic-fixture
