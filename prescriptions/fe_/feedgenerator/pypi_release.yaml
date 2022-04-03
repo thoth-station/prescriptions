@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FeedgeneratorPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: feedgenerator
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'feedgenerator' has no recent release, last release dates back to 2021-09-28 11:46:33.344854
+        link: https://pypi.org/project/feedgenerator/#history
+        package_name: feedgenerator
