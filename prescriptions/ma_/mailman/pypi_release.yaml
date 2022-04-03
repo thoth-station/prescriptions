@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MailmanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailman
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mailman' has no recent release, last release dates back to 2021-09-29 03:26:19.981398
+        link: https://pypi.org/project/mailman/#history
+        package_name: mailman
