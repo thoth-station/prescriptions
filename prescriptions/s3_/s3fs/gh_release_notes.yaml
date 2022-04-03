@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: S3fsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: s3fs
+    run:
+      release_notes:
+        organization: fsspec
+        repository: s3fs
