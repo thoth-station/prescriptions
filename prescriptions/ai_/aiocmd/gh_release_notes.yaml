@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AiocmdGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocmd
+    run:
+      release_notes:
+        organization: KimiNewt
+        repository: aiocmd
+        tag_version_prefix: v
