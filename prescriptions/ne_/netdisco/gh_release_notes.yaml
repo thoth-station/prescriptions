@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: NetdiscoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: netdisco
+    run:
+      release_notes:
+        organization: home-assistant-libs
+        repository: netdisco
