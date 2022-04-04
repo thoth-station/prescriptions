@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GiosPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gios
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gios' has no recent release, last release dates back to 2021-10-03 09:33:31.032436
+        link: https://pypi.org/project/gios/#history
+        package_name: gios
