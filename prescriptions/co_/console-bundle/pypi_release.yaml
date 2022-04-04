@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConsoleBundlePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: console-bundle
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'console-bundle' has no recent release, last release dates back to 2021-10-01 14:33:26.864972
+        link: https://pypi.org/project/console-bundle/#history
+        package_name: console-bundle
