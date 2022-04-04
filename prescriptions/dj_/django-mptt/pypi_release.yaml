@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoMpttPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-mptt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-mptt' has no recent release, last release dates back to 2021-09-27 12:56:02.003588
+        link: https://pypi.org/project/django-mptt/#history
+        package_name: django-mptt
