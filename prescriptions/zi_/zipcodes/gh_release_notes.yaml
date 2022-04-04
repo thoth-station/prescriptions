@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: ZipcodesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: zipcodes
+    run:
+      release_notes:
+        organization: seanpianka
+        repository: zipcodes
+        tag_version_prefix: v
