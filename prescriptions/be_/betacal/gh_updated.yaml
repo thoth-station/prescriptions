@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BetacalGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: betacal
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'betacal' was last updated at 2021-04-01 21:14:58
+        link: https://github.com/betacal/python
+        package_name: betacal
