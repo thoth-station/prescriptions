@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fdb' has no recent release, last release dates back to 2021-09-30 17:27:19.127628
+        link: https://pypi.org/project/fdb/#history
+        package_name: fdb
