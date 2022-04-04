@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SexpdataGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sexpdata
+    run:
+      release_notes:
+        organization: jd-boyd
+        repository: sexpdata
+        tag_version_prefix: v
