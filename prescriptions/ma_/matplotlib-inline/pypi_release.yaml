@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MatplotlibInlinePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matplotlib-inline
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'matplotlib-inline' has no recent release, last release dates back to 2021-09-07 15:03:26.545260
+        link: https://pypi.org/project/matplotlib-inline/#history
+        package_name: matplotlib-inline
