@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MneGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mne
+    run:
+      release_notes:
+        organization: mne-tools
+        repository: mne-python
+        tag_version_prefix: v
