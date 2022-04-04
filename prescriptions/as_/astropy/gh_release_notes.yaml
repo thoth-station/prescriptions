@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AstropyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astropy
+    run:
+      release_notes:
+        organization: astropy
+        repository: astropy
+        tag_version_prefix: v
