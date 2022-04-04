@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AionotionGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aionotion
+    run:
+      release_notes:
+        organization: bachya
+        repository: aionotion
