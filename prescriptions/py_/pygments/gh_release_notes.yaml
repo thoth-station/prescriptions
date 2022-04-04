@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PygmentsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pygments
+    run:
+      release_notes:
+        organization: pygments
+        repository: pygments
