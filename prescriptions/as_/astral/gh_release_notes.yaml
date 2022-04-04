@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AstralGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astral
+    run:
+      release_notes:
+        organization: sffjunkie
+        repository: astral
