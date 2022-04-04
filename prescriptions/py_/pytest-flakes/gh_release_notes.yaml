@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: PytestFlakesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-flakes
+    run:
+      release_notes:
+        organization: asmeurer
+        repository: pytest-flakes
