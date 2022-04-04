@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NattoPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: natto-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'natto-py' has no recent release, last release dates back to 2021-10-02 15:00:12.504829
+        link: https://pypi.org/project/natto-py/#history
+        package_name: natto-py
