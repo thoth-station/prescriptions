@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FurlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: furl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'furl' has no recent release, last release dates back to 2021-09-27 21:31:16.696167
+        link: https://pypi.org/project/furl/#history
+        package_name: furl
