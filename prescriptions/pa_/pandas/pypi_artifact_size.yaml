@@ -846,3 +846,21 @@ units:
           '1.4.1' can have up to 17.04MiB
         link: https://pypi.org/project/pandas/1.4.1/#files
         package_name: pandas
+  - name: Pandas1x4x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pandas
+          version: ==1.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pandas' in version
+          '1.4.2' can have up to 16.66MiB
+        link: https://pypi.org/project/pandas/1.4.2/#files
+        package_name: pandas
