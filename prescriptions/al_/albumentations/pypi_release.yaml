@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AlbumentationsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: albumentations
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'albumentations' has no recent release, last release dates back to 2021-10-04 09:30:35.191686
+        link: https://pypi.org/project/albumentations/#history
+        package_name: albumentations
