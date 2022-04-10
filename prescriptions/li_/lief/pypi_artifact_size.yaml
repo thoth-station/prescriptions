@@ -162,3 +162,21 @@ units:
           '0.12.0' can have up to 14.34MiB
         link: https://pypi.org/project/lief/0.12.0/#files
         package_name: lief
+  - name: Lief0x12x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lief
+          version: ==0.12.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'lief' in version
+          '0.12.1' can have up to 14.34MiB
+        link: https://pypi.org/project/lief/0.12.1/#files
+        package_name: lief
