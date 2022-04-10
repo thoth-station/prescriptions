@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BloscPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blosc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'blosc' has no recent release, last release dates back to 2021-10-07 13:08:30.434809
+        link: https://pypi.org/project/blosc/#history
+        package_name: blosc
