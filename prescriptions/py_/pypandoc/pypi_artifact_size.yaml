@@ -90,3 +90,21 @@ units:
           '1.6.4' can have up to 21.56MiB
         link: https://pypi.org/project/pypandoc/1.6.4/#files
         package_name: pypandoc
+  - name: Pypandoc1x7x5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pypandoc
+          version: ==1.7.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pypandoc' in version
+          '1.7.5' can have up to 22.11MiB
+        link: https://pypi.org/project/pypandoc/1.7.5/#files
+        package_name: pypandoc
