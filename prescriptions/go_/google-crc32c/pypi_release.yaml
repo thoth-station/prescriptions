@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleCrc32cPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-crc32c
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-crc32c' has no recent release, last release dates back to 2021-10-05 22:43:48.912379
+        link: https://pypi.org/project/google-crc32c/#history
+        package_name: google-crc32c
