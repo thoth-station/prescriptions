@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PydriveGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydrive
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pydrive' is marked as archived on GitHub
+        link: https://github.com/googlearchive/PyDrive
+        package_name: pydrive
