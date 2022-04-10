@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleCloudRuntimeconfigPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-runtimeconfig
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-cloud-runtimeconfig' has no recent release, last release dates back to 2021-10-08 16:36:27.600882
+        link: https://pypi.org/project/google-cloud-runtimeconfig/#history
+        package_name: google-cloud-runtimeconfig
