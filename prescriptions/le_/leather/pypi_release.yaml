@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LeatherPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: leather
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'leather' has no recent release, last release dates back to 2021-10-08 17:23:37.363645
+        link: https://pypi.org/project/leather/#history
+        package_name: leather
