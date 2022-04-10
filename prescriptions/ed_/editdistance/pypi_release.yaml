@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EditdistancePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: editdistance
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'editdistance' has no recent release, last release dates back to 2021-10-09 06:06:53.830973
+        link: https://pypi.org/project/editdistance/#history
+        package_name: editdistance
