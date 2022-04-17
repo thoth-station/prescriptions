@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CommonmarkGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commonmark
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'commonmark' is marked as archived on GitHub
+        link: https://github.com/readthedocs/commonmark.py
+        package_name: commonmark
