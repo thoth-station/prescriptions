@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BcjCffiGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcj-cffi
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bcj-cffi' is marked as archived on GitHub
+        link: https://github.com/miurahr/bcj-cffi
+        package_name: bcj-cffi
