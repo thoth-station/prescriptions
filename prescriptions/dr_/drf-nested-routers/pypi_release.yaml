@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DrfNestedRoutersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: drf-nested-routers
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'drf-nested-routers' has no recent release, last release dates back to 2021-10-15 21:29:04.796882
+        link: https://pypi.org/project/drf-nested-routers/#history
+        package_name: drf-nested-routers
