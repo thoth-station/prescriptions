@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8CommasGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-commas
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-commas' is marked as archived on GitHub
+        link: https://github.com/PyCQA/flake8-commas
+        package_name: flake8-commas
