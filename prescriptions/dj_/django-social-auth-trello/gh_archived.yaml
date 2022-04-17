@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DjangoSocialAuthTrelloGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-social-auth-trello
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'django-social-auth-trello' is marked as archived on GitHub
+        link: https://github.com/DamianZaremba/django-social-auth-trello
+        package_name: django-social-auth-trello
