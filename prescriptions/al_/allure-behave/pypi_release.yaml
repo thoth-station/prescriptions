@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AllureBehavePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: allure-behave
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'allure-behave' has no recent release, last release dates back to 2021-10-15 08:22:19.777967
+        link: https://pypi.org/project/allure-behave/#history
+        package_name: allure-behave
