@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SimplemediawikiGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: simplemediawiki
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'simplemediawiki' is marked as archived on GitHub
+        link: https://github.com/iliana/python-simplemediawiki
+        package_name: simplemediawiki
