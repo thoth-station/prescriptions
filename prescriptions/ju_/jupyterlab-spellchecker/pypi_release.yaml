@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterlabSpellcheckerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterlab-spellchecker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyterlab-spellchecker' has no recent release, last release dates back to 2021-10-08 10:08:32.941457
+        link: https://pypi.org/project/jupyterlab-spellchecker/#history
+        package_name: jupyterlab-spellchecker
