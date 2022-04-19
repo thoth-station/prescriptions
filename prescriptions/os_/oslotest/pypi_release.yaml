@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OslotestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: oslotest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'oslotest' has no recent release, last release dates back to 2021-09-06 08:39:14.301878
+        link: https://pypi.org/project/oslotest/#history
+        package_name: oslotest
