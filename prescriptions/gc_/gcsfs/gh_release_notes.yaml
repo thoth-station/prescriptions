@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: GcsfsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gcsfs
+    run:
+      release_notes:
+        organization: fsspec
+        repository: gcsfs
