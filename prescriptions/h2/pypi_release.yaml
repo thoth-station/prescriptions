@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: H2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'h2' has no recent release, last release dates back to 2021-10-05 18:27:47.180926
+        link: https://pypi.org/project/h2/#history
+        package_name: h2
