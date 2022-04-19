@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FutureFstringsGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: future-fstrings
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'future-fstrings' is marked as archived on GitHub
+        link: https://github.com/asottile-archive/future-fstrings
+        package_name: future-fstrings
