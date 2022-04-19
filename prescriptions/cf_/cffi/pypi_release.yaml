@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CffiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cffi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cffi' has no recent release, last release dates back to 2021-10-13 15:53:33.191461
+        link: https://pypi.org/project/cffi/#history
+        package_name: cffi
