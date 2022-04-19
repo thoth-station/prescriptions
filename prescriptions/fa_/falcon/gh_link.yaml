@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FalconGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: falcon
+    run:
+      justification:
+      - type: INFO
+        message: Package 'falcon' is hosted on GitHub
+        link: https://github.com/falconry/falcon
+        package_name: falcon
