@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoTables2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-tables2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-tables2' has no recent release, last release dates back to 2021-10-05 19:28:10.039191
+        link: https://pypi.org/project/django-tables2/#history
+        package_name: django-tables2
