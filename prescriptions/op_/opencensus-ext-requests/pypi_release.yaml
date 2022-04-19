@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpencensusExtRequestsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus-ext-requests
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opencensus-ext-requests' has no recent release, last release dates back to 2021-10-05 00:27:21.287059
+        link: https://pypi.org/project/opencensus-ext-requests/#history
+        package_name: opencensus-ext-requests
