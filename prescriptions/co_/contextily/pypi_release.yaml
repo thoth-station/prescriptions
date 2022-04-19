@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ContextilyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: contextily
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'contextily' has no recent release, last release dates back to 2021-10-16 15:50:43.767774
+        link: https://pypi.org/project/contextily/#history
+        package_name: contextily
