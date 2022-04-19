@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AccuweatherPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: accuweather
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'accuweather' has no recent release, last release dates back to 2021-10-11 19:22:02.478525
+        link: https://pypi.org/project/accuweather/#history
+        package_name: accuweather
