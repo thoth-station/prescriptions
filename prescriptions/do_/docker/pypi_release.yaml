@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DockerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'docker' has no recent release, last release dates back to 2021-10-07 22:54:52.220736
+        link: https://pypi.org/project/docker/#history
+        package_name: docker
