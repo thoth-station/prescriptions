@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AcmeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: acme
+    run:
+      release_notes:
+        organization: certbot
+        repository: certbot
+        tag_version_prefix: v
