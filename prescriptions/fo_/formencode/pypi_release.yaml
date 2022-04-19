@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FormencodePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: formencode
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'formencode' has no recent release, last release dates back to 2021-10-05 13:01:09.980906
+        link: https://pypi.org/project/formencode/#history
+        package_name: formencode
