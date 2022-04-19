@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpencensusExtSqlalchemyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opencensus-ext-sqlalchemy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opencensus-ext-sqlalchemy' has no recent release, last release dates back to 2021-10-05 00:27:46.357467
+        link: https://pypi.org/project/opencensus-ext-sqlalchemy/#history
+        package_name: opencensus-ext-sqlalchemy
