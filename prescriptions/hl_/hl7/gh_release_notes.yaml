@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Hl7GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hl7
+    run:
+      release_notes:
+        organization: johnpaulett
+        repository: python-hl7
