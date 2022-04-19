@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OwslibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: owslib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'owslib' has no recent release, last release dates back to 2021-08-23 12:25:53.615458
+        link: https://pypi.org/project/owslib/#history
+        package_name: owslib
