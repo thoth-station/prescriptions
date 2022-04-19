@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MypyBoto3LambdaGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy-boto3-lambda
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'mypy-boto3-lambda' is a GitHub fork
+        link: https://github.com/vemel/mypy_boto3_builder
+        package_name: mypy-boto3-lambda
