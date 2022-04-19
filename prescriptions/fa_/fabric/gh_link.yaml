@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FabricGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fabric
+    run:
+      justification:
+      - type: INFO
+        message: Package 'fabric' is hosted on GitHub
+        link: https://github.com/fabric/fabric
+        package_name: fabric
