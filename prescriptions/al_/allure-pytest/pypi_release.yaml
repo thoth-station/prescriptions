@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AllurePytestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: allure-pytest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'allure-pytest' has no recent release, last release dates back to 2021-10-15 08:22:29.407396
+        link: https://pypi.org/project/allure-pytest/#history
+        package_name: allure-pytest
