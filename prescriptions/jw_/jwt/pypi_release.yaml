@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JwtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jwt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jwt' has no recent release, last release dates back to 2021-10-07 05:19:03.073427
+        link: https://pypi.org/project/jwt/#history
+        package_name: jwt
