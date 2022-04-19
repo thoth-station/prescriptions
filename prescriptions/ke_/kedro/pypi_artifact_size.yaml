@@ -522,3 +522,21 @@ units:
           '0.17.7' can have up to 76.97MiB
         link: https://pypi.org/project/kedro/0.17.7/#files
         package_name: kedro
+  - name: Kedro0x18x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kedro
+          version: ==0.18.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'kedro' in version
+          '0.18.0' can have up to 76.36MiB
+        link: https://pypi.org/project/kedro/0.18.0/#files
+        package_name: kedro
