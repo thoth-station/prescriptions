@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CurtsiesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: curtsies
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'curtsies' has no recent release, last release dates back to 2021-10-09 02:42:27.421008
+        link: https://pypi.org/project/curtsies/#history
+        package_name: curtsies
