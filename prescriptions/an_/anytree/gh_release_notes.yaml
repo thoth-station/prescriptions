@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AnytreeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anytree
+    run:
+      release_notes:
+        organization: c0fec0de
+        repository: anytree
