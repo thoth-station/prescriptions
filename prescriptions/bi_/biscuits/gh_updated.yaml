@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BiscuitsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: biscuits
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'biscuits' was last updated at 2020-11-18 22:04:26
+        link: https://github.com/pyrates/biscuits
+        package_name: biscuits
