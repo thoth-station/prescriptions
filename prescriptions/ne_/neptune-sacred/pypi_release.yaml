@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeptuneSacredPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-sacred
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neptune-sacred' has no recent release, last release dates back to 2021-10-05 07:26:48.026617
+        link: https://pypi.org/project/neptune-sacred/#history
+        package_name: neptune-sacred
