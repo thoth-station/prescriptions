@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: ImagesizeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imagesize
+    run:
+      release_notes:
+        organization: shibukawa
+        repository: imagesize_py
