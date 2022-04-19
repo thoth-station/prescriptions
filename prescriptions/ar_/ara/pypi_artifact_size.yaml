@@ -162,6 +162,24 @@ units:
           '1.5.7.0rc5' can have up to 8.19MiB
         link: https://pypi.org/project/ara/1.5.7.0rc5/#files
         package_name: ara
+  - name: Ara1x5x8PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ara
+          version: ==1.5.8
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ara' in version
+          '1.5.8' can have up to 8.26MiB
+        link: https://pypi.org/project/ara/1.5.8/#files
+        package_name: ara
   - name: Ara1x5x8x0rc1PyPIArtifactSizeWrap
     type: wrap
     should_include:
