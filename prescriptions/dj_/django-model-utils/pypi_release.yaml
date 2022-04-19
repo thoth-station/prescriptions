@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoModelUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-model-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-model-utils' has no recent release, last release dates back to 2021-10-13 18:22:34.138211
+        link: https://pypi.org/project/django-model-utils/#history
+        package_name: django-model-utils
