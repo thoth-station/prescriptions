@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DateutilsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dateutils
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'dateutils' was last updated at 2020-10-23 07:10:21
+        link: https://github.com/jmcantrell/python-dateutils
+        package_name: dateutils
