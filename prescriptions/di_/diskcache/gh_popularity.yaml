@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DiskcacheGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diskcache
+    run:
+      justification:
+      - type: INFO
+        message: Project 'diskcache' has very high popularity on GitHub
+        link: https://github.com/grantjenks/python-diskcache
+        package_name: diskcache
