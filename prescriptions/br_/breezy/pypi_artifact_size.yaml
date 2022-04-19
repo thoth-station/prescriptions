@@ -198,3 +198,21 @@ units:
           '3.2.1' can have up to 9.01MiB
         link: https://pypi.org/project/breezy/3.2.1/#files
         package_name: breezy
+  - name: Breezy3x2x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: breezy
+          version: ==3.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'breezy' in version
+          '3.2.2' can have up to 8.96MiB
+        link: https://pypi.org/project/breezy/3.2.2/#files
+        package_name: breezy
