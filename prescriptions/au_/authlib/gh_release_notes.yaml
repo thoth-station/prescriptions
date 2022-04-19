@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AuthlibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authlib
+    run:
+      release_notes:
+        organization: lepture
+        repository: authlib
+        tag_version_prefix: v
