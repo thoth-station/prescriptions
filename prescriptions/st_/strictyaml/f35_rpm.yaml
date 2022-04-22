@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: StrictyamlFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: strictyaml
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'strictyaml' is packaged as an RPM in Fedora 35 as 'python3-strictyaml'
+        link: https://src.fedoraproject.org/rpms/python3-strictyaml
+        package_name: strictyaml

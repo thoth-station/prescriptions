@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: LammpsFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: lammps
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'lammps' is packaged as an RPM in Fedora 35 as 'python3-lammps'
+        link: https://src.fedoraproject.org/rpms/python3-lammps
+        package_name: lammps

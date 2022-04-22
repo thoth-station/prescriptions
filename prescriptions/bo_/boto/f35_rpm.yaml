@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: BotoFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: boto
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boto' is packaged as an RPM in Fedora 35 as 'python3-boto'
+        link: https://src.fedoraproject.org/rpms/python3-boto
+        package_name: boto

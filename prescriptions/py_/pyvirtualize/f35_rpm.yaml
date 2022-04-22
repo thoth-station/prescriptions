@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PyvirtualizeFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvirtualize
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyvirtualize' is packaged as an RPM in Fedora 35 as 'python3-pyvirtualize'
+        link: https://src.fedoraproject.org/rpms/python3-pyvirtualize
+        package_name: pyvirtualize

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: BrotherFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: brother
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'brother' is packaged as an RPM in Fedora 35 as 'python3-brother'
+        link: https://src.fedoraproject.org/rpms/python3-brother
+        package_name: brother

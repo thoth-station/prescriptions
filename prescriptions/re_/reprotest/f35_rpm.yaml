@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: ReprotestFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: reprotest
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'reprotest' is packaged as an RPM in Fedora 35 as 'reprotest'
+        link: https://src.fedoraproject.org/rpms/reprotest
+        package_name: reprotest

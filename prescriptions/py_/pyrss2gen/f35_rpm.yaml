@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: Pyrss2genFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyrss2gen
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyrss2gen' is packaged as an RPM in Fedora 35 as 'python3-PyRSS2Gen'
+        link: https://src.fedoraproject.org/rpms/python3-PyRSS2Gen
+        package_name: pyrss2gen

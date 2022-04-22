@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: SlingshotFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: slingshot
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'slingshot' is packaged as an RPM in Fedora 35 as 'slingshot'
+        link: https://src.fedoraproject.org/rpms/slingshot
+        package_name: slingshot

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: ConstantlyFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: constantly
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'constantly' is packaged as an RPM in Fedora 35 as 'python3-constantly'
+        link: https://src.fedoraproject.org/rpms/python3-constantly
+        package_name: constantly

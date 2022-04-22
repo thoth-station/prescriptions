@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: JediepcserverFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: jediepcserver
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jediepcserver' is packaged as an RPM in Fedora 35 as 'python3-jediepcserver'
+        link: https://src.fedoraproject.org/rpms/python3-jediepcserver
+        package_name: jediepcserver

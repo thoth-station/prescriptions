@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: NbconvertFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbconvert
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nbconvert' is packaged as an RPM in Fedora 35 as 'python3-nbconvert'
+        link: https://src.fedoraproject.org/rpms/python3-nbconvert
+        package_name: nbconvert

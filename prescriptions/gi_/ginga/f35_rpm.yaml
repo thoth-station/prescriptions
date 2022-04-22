@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: GingaFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: ginga
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'ginga' is packaged as an RPM in Fedora 35 as 'python3-ginga'
+        link: https://src.fedoraproject.org/rpms/python3-ginga
+        package_name: ginga

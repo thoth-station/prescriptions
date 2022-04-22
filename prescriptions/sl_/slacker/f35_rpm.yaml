@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: SlackerFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: slacker
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'slacker' is packaged as an RPM in Fedora 35 as 'python3-slacker'
+        link: https://src.fedoraproject.org/rpms/python3-slacker
+        package_name: slacker

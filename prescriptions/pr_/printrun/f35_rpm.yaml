@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PrintrunFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: printrun
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'printrun' is packaged as an RPM in Fedora 35 as 'printrun-common'
+        link: https://src.fedoraproject.org/rpms/printrun-common
+        package_name: printrun

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: Pycvc4Fedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycvc4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pycvc4' is packaged as an RPM in Fedora 35 as 'cvc4-python3'
+        link: https://src.fedoraproject.org/rpms/cvc4-python3
+        package_name: pycvc4

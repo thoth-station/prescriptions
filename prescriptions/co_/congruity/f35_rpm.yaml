@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: CongruityFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: congruity
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'congruity' is packaged as an RPM in Fedora 35 as 'congruity'
+        link: https://src.fedoraproject.org/rpms/congruity
+        package_name: congruity

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PatattFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: patatt
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'patatt' is packaged as an RPM in Fedora 35 as 'patatt'
+        link: https://src.fedoraproject.org/rpms/patatt
+        package_name: patatt

@@ -1,0 +1,21 @@
+units:
+  wraps:
+  - name: PrewikkaFedora35RPMWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+      runtime_environments:
+        operating_systems:
+        - name: fedora
+          version: "35"
+    match:
+      state:
+        resolved_dependencies:
+        - name: prewikka
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: Package 'prewikka' is packaged as an RPM in Fedora 35 as 'python3-prewikka'
+        link: https://src.fedoraproject.org/rpms/python3-prewikka
+        package_name: prewikka
