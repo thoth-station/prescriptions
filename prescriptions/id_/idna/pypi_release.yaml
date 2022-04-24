@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IdnaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: idna
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'idna' has no recent release, last release dates back to 2021-10-12 23:33:41.312885
+        link: https://pypi.org/project/idna/#history
+        package_name: idna
