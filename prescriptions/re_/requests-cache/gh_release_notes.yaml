@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RequestsCacheGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-cache
+    run:
+      release_notes:
+        organization: reclosedev
+        repository: requests-cache
+        tag_version_prefix: v
