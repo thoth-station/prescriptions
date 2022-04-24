@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8IsortPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-isort
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-isort' has no recent release, last release dates back to 2021-10-14 11:43:52.316882
+        link: https://pypi.org/project/flake8-isort/#history
+        package_name: flake8-isort
