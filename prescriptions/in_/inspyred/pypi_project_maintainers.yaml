@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InspyredPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inspyred
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'inspyred' has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/inspyred/
+        package_name: inspyred
