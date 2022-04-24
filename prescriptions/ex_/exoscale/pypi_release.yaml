@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ExoscalePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exoscale
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'exoscale' has no recent release, last release dates back to 2021-10-18 07:56:29.697997
+        link: https://pypi.org/project/exoscale/#history
+        package_name: exoscale
