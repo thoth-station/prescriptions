@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Iso639PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iso639
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'iso639' has no recent release, last release dates back to 2016-06-08 09:09:27.562507
+        link: https://pypi.org/project/iso639/#history
+        package_name: iso639
