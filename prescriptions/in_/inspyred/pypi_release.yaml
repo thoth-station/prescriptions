@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InspyredPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: inspyred
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'inspyred' has no recent release, last release dates back to 2015-07-25 14:01:04.368345
+        link: https://pypi.org/project/inspyred/#history
+        package_name: inspyred
