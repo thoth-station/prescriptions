@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CanteraGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cantera
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cantera' is hosted on GitHub
+        link: https://github.com/Cantera/cantera
+        package_name: cantera
