@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DnsvizPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dnsviz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dnsviz' has no recent release, last release dates back to 2021-09-28 03:58:21.710712
+        link: https://pypi.org/project/dnsviz/#history
+        package_name: dnsviz
