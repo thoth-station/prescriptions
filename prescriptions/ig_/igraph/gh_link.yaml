@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IgraphGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: igraph
+    run:
+      justification:
+      - type: INFO
+        message: Package 'igraph' is hosted on GitHub
+        link: https://github.com/igraph/python-igraph
+        package_name: igraph
