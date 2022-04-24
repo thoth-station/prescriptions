@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DataladGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: datalad
+    run:
+      justification:
+      - type: INFO
+        message: Package 'datalad' is hosted on GitHub
+        link: https://github.com/datalad/datalad
+        package_name: datalad
