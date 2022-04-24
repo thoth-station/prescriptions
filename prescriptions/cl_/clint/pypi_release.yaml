@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClintPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clint
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'clint' has no recent release, last release dates back to 2015-08-25 16:11:19.237015
+        link: https://pypi.org/project/clint/#history
+        package_name: clint
