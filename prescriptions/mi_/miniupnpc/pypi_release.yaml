@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MiniupnpcPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: miniupnpc
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'miniupnpc' has no recent release, last release dates back to 2021-10-12 13:19:23.720885
+        link: https://pypi.org/project/miniupnpc/#history
+        package_name: miniupnpc
