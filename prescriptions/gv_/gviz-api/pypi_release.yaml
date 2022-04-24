@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GvizApiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gviz-api
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gviz-api' has no recent release, last release dates back to 2021-10-14 01:14:13.321438
+        link: https://pypi.org/project/gviz-api/#history
+        package_name: gviz-api
