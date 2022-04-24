@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: OpentracingGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentracing
+    run:
+      justification:
+      - type: INFO
+        message: Package 'opentracing' is hosted on GitHub
+        link: https://github.com/opentracing/opentracing-python
+        package_name: opentracing
