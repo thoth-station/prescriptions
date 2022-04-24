@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MujsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mujson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mujson' has no recent release, last release dates back to 2019-01-13 14:25:16.706715
+        link: https://pypi.org/project/mujson/#history
+        package_name: mujson
