@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cle
+    run:
+      justification:
+      - type: INFO
+        message: Package 'cle' is hosted on GitHub
+        link: https://github.com/angr/cle
+        package_name: cle
