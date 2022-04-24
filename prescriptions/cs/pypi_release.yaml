@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cs' has no recent release, last release dates back to 2020-04-17 14:32:19.505627
+        link: https://pypi.org/project/cs/#history
+        package_name: cs
