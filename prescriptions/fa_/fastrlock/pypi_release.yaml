@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastrlockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastrlock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastrlock' has no recent release, last release dates back to 2021-10-22 14:02:34.264305
+        link: https://pypi.org/project/fastrlock/#history
+        package_name: fastrlock
