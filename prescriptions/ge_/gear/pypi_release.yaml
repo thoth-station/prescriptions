@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GearPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gear
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gear' has no recent release, last release dates back to 2021-10-18 15:37:48.941345
+        link: https://pypi.org/project/gear/#history
+        package_name: gear
