@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JustextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: justext
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'justext' has no recent release, last release dates back to 2021-10-21 16:57:54.204796
+        link: https://pypi.org/project/justext/#history
+        package_name: justext
