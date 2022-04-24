@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PymediawikiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymediawiki
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pymediawiki' is hosted on GitHub
+        link: https://github.com/barrust/mediawiki
+        package_name: pymediawiki
