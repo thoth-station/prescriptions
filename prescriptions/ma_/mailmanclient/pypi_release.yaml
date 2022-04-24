@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MailmanclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mailmanclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mailmanclient' has no recent release, last release dates back to 2021-09-03 03:00:19.779125
+        link: https://pypi.org/project/mailmanclient/#history
+        package_name: mailmanclient
