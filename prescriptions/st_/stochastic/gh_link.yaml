@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: StochasticGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stochastic
+    run:
+      justification:
+      - type: INFO
+        message: Package 'stochastic' is hosted on GitHub
+        link: https://github.com/crflynn/stochastic
+        package_name: stochastic
