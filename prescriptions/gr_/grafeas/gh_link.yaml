@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrafeasGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grafeas
+    run:
+      justification:
+      - type: INFO
+        message: Package 'grafeas' is hosted on GitHub
+        link: https://github.com/googleapis/python-grafeas
+        package_name: grafeas
