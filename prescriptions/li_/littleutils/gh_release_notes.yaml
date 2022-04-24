@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LittleutilsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: littleutils
+    run:
+      release_notes:
+        organization: alexmojaki
+        repository: littleutils
+        tag_version_prefix: v
