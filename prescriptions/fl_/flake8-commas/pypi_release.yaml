@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8CommasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-commas
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-commas' has no recent release, last release dates back to 2021-10-13 19:25:41.600881
+        link: https://pypi.org/project/flake8-commas/#history
+        package_name: flake8-commas
