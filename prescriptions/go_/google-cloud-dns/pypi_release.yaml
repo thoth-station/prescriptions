@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleCloudDnsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-dns
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-cloud-dns' has no recent release, last release dates back to 2021-10-12 17:25:41.444233
+        link: https://pypi.org/project/google-cloud-dns/#history
+        package_name: google-cloud-dns
