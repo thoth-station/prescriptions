@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BoutdataGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boutdata
+    run:
+      justification:
+      - type: INFO
+        message: Package 'boutdata' is hosted on GitHub
+        link: https://github.com/boutproject/boutdata
+        package_name: boutdata
