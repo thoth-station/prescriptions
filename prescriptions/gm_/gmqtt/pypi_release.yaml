@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GmqttPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gmqtt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gmqtt' has no recent release, last release dates back to 2021-10-18 13:40:49.937287
+        link: https://pypi.org/project/gmqtt/#history
+        package_name: gmqtt
