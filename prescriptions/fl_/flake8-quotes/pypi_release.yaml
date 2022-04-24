@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8QuotesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-quotes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-quotes' has no recent release, last release dates back to 2021-10-19 07:07:05.060916
+        link: https://pypi.org/project/flake8-quotes/#history
+        package_name: flake8-quotes
