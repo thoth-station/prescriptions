@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MygnuhealthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mygnuhealth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mygnuhealth' has no recent release, last release dates back to 2021-10-18 18:08:57.150791
+        link: https://pypi.org/project/mygnuhealth/#history
+        package_name: mygnuhealth
