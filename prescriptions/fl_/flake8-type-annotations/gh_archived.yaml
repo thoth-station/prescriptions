@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Flake8TypeAnnotationsGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-type-annotations
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'flake8-type-annotations' is marked as archived on GitHub
+        link: https://github.com/sobolevn/flake8-type-annotations
+        package_name: flake8-type-annotations
