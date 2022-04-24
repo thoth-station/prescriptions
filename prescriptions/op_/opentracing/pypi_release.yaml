@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpentracingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentracing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opentracing' has no recent release, last release dates back to 2020-11-19 17:10:42.862728
+        link: https://pypi.org/project/opentracing/#history
+        package_name: opentracing
