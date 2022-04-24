@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8' has no recent release, last release dates back to 2021-10-11 12:42:48.941625
+        link: https://pypi.org/project/flake8/#history
+        package_name: flake8
