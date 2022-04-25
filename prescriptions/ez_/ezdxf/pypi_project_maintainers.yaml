@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EzdxfPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ezdxf
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'ezdxf' has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/ezdxf/
+        package_name: ezdxf
