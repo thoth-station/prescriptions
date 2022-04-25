@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ProbeinterfaceGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: probeinterface
+    run:
+      justification:
+      - type: INFO
+        message: Package 'probeinterface' is hosted on GitHub
+        link: https://github.com/SpikeInterface/probeinterface
+        package_name: probeinterface
