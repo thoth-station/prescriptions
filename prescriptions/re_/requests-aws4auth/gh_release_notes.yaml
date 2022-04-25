@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RequestsAws4authGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-aws4auth
+    run:
+      release_notes:
+        organization: tedder
+        repository: requests-aws4auth
+        tag_version_prefix: v
