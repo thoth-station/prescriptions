@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CpufeatureGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cpufeature
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cpufeature' has less than 5 contributors on GitHub
+        link: https://github.com/robbmcleod/cpufeature
+        package_name: cpufeature
