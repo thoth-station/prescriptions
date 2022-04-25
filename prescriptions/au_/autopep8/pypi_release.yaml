@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Autopep8PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autopep8
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autopep8' has no recent release, last release dates back to 2021-10-24 06:47:38.852788
+        link: https://pypi.org/project/autopep8/#history
+        package_name: autopep8
