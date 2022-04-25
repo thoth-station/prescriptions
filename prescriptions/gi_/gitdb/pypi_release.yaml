@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GitdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitdb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gitdb' has no recent release, last release dates back to 2021-10-24 13:40:44.761651
+        link: https://pypi.org/project/gitdb/#history
+        package_name: gitdb
