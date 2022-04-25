@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GlymurPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glymur
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'glymur' has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/glymur/
+        package_name: glymur
