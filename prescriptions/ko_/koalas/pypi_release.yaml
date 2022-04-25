@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KoalasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: koalas
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'koalas' has no recent release, last release dates back to 2021-10-19 22:26:08.304884
+        link: https://pypi.org/project/koalas/#history
+        package_name: koalas
