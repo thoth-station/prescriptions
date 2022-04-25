@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ApplicationinsightsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: applicationinsights
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'applicationinsights' was last updated at 2021-04-22 22:49:07
+        link: https://github.com/Microsoft/ApplicationInsights-Python
+        package_name: applicationinsights
