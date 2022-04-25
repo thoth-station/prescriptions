@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SnakemakeGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snakemake
+    run:
+      justification:
+      - type: INFO
+        message: Package 'snakemake' is hosted on GitHub
+        link: https://github.com/snakemake/snakemake
+        package_name: snakemake
