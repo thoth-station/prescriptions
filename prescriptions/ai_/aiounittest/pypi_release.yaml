@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiounittestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiounittest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiounittest' has no recent release, last release dates back to 2021-10-22 14:20:37.052887
+        link: https://pypi.org/project/aiounittest/#history
+        package_name: aiounittest
