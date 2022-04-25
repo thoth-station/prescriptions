@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AutoverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autover
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autover' has no recent release, last release dates back to 2017-12-08 17:35:21.823593
+        link: https://pypi.org/project/autover/#history
+        package_name: autover
