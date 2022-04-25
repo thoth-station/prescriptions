@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FactorAnalyzerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: factor-analyzer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'factor-analyzer' has no recent release, last release dates back to 2021-10-21 16:22:01.680309
+        link: https://pypi.org/project/factor-analyzer/#history
+        package_name: factor-analyzer
