@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DoubleratchetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doubleratchet
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'doubleratchet' has no recent release, last release dates back to 2019-07-21 11:50:36.834783
+        link: https://pypi.org/project/doubleratchet/#history
+        package_name: doubleratchet
