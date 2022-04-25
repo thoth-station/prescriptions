@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: XyzservicesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: xyzservices
+    run:
+      justification:
+      - type: INFO
+        message: Package 'xyzservices' is hosted on GitHub
+        link: https://github.com/geopandas/xyzservices
+        package_name: xyzservices
