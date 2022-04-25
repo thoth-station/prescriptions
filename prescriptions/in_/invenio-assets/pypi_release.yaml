@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InvenioAssetsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invenio-assets
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'invenio-assets' has no recent release, last release dates back to 2021-10-18 12:56:40.157761
+        link: https://pypi.org/project/invenio-assets/#history
+        package_name: invenio-assets
