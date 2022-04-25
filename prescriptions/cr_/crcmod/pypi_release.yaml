@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CrcmodPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crcmod
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'crcmod' has no recent release, last release dates back to 2010-07-20 13:52:25.465775
+        link: https://pypi.org/project/crcmod/#history
+        package_name: crcmod
