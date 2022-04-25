@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AiosmbGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosmb
+    run:
+      release_notes:
+        organization: skelsec
+        repository: aiosmb
