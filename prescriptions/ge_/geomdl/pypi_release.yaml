@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeomdlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geomdl
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geomdl' has no recent release, last release dates back to 2021-01-23 06:38:59.818074
+        link: https://pypi.org/project/geomdl/#history
+        package_name: geomdl
