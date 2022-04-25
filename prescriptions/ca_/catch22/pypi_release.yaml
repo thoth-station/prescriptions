@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Catch22PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catch22
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'catch22' has no recent release, last release dates back to 2021-01-10 09:27:30.360907
+        link: https://pypi.org/project/catch22/#history
+        package_name: catch22
