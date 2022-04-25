@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DnsvizGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dnsviz
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dnsviz' is hosted on GitHub
+        link: https://github.com/dnsviz/dnsviz
+        package_name: dnsviz
