@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: DevicelyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devicely
+    run:
+      justification:
+      - type: INFO
+        message: Package 'devicely' is hosted on GitHub
+        link: https://github.com/hpi-dhc/devicely
+        package_name: devicely
