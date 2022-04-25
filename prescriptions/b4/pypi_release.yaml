@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: B4PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: b4
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'b4' has no recent release, last release dates back to 2021-09-01 13:18:28.638373
+        link: https://pypi.org/project/b4/#history
+        package_name: b4
