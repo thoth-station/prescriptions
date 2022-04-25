@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PynetboxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pynetbox
+    run:
+      release_notes:
+        organization: netbox-community
+        repository: pynetbox
+        tag_version_prefix: v
