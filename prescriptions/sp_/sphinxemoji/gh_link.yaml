@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SphinxemojiGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxemoji
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sphinxemoji' is hosted on GitHub
+        link: https://github.com/sphinx-contrib/emojicodes
+        package_name: sphinxemoji
