@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CachedPropertyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cached-property
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cached-property' was last updated at 2020-10-21 17:48:31
+        link: https://github.com/pydanny/cached-property
+        package_name: cached-property
