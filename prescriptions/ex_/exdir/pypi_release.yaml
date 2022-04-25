@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ExdirPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exdir
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'exdir' has no recent release, last release dates back to 2021-02-23 22:19:25.704946
+        link: https://pypi.org/project/exdir/#history
+        package_name: exdir
