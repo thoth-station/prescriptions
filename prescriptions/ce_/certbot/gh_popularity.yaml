@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CertbotGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: certbot
+    run:
+      justification:
+      - type: INFO
+        message: Project 'certbot' has very high popularity on GitHub
+        link: https://github.com/certbot/certbot
+        package_name: certbot
