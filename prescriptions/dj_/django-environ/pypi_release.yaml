@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoEnvironPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-environ
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-environ' has no recent release, last release dates back to 2021-10-20 12:32:59.269847
+        link: https://pypi.org/project/django-environ/#history
+        package_name: django-environ
