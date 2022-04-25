@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EntryPointsTxtPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entry-points-txt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'entry-points-txt' has no recent release, last release dates back to 2021-10-14 18:42:04.658406
+        link: https://pypi.org/project/entry-points-txt/#history
+        package_name: entry-points-txt
