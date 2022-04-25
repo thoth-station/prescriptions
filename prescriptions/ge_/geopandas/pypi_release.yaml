@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeopandasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geopandas
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geopandas' has no recent release, last release dates back to 2021-10-16 06:59:52.784881
+        link: https://pypi.org/project/geopandas/#history
+        package_name: geopandas
