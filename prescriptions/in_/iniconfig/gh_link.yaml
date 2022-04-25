@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: IniconfigGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iniconfig
+    run:
+      justification:
+      - type: INFO
+        message: Package 'iniconfig' is hosted on GitHub
+        link: https://github.com/pytest-dev/iniconfig
+        package_name: iniconfig
