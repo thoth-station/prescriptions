@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: Aif360GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aif360
+    run:
+      release_notes:
+        organization: Trusted-AI
+        repository: AIF360
+        tag_version_prefix: v
