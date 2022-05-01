@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CsGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cs
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cs' has high popularity on GitHub
+        link: https://github.com/exoscale/cs
+        package_name: cs
