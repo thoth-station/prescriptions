@@ -252,3 +252,21 @@ units:
           '0.24.2' can have up to 3.26MiB
         link: https://pypi.org/project/horovod/0.24.2/#files
         package_name: horovod
+  - name: Horovod0x24x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: horovod
+          version: ==0.24.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'horovod' in version
+          '0.24.3' can have up to 3.26MiB
+        link: https://pypi.org/project/horovod/0.24.3/#files
+        package_name: horovod
