@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CmreshandlerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmreshandler
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cmreshandler' was last updated at 2020-10-25 00:32:59
+        link: https://github.com/cmanaha/python-elasticsearch-logger
+        package_name: cmreshandler
