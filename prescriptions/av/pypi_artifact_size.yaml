@@ -180,3 +180,21 @@ units:
           '9.1.1' can have up to 27.70MiB
         link: https://pypi.org/project/av/9.1.1/#files
         package_name: av
+  - name: Av9x2x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: av
+          version: ==9.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'av' in version
+          '9.2.0' can have up to 34.13MiB
+        link: https://pypi.org/project/av/9.2.0/#files
+        package_name: av
