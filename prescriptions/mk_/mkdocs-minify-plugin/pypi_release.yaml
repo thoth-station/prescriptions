@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MkdocsMinifyPluginPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs-minify-plugin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mkdocs-minify-plugin' has no recent release, last release dates back to 2021-10-19 00:00:40.177209
+        link: https://pypi.org/project/mkdocs-minify-plugin/#history
+        package_name: mkdocs-minify-plugin
