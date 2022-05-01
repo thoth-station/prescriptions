@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyedflibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyedflib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pyedflib' is hosted on GitHub
+        link: https://github.com/holgern/pyedflib
+        package_name: pyedflib
