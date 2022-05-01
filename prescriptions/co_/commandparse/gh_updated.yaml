@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CommandparseGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commandparse
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'commandparse' was last updated at 2020-12-22 20:37:29
+        link: https://github.com/flgy/commandparse
+        package_name: commandparse
