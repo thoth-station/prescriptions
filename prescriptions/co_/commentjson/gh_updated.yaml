@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CommentjsonGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commentjson
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'commentjson' was last updated at 2021-01-23 10:41:19
+        link: https://github.com/vaidik/commentjson
+        package_name: commentjson
