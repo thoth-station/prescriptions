@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ReadthedocsSphinxSearchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: readthedocs-sphinx-search
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'readthedocs-sphinx-search' has no recent release, last release dates back to 2021-10-26 19:35:06.984888
+        link: https://pypi.org/project/readthedocs-sphinx-search/#history
+        package_name: readthedocs-sphinx-search
