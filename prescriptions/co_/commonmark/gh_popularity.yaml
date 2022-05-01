@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CommonmarkGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: commonmark
+    run:
+      justification:
+      - type: INFO
+        message: Project 'commonmark' has high popularity on GitHub
+        link: https://github.com/readthedocs/commonmark.py
+        package_name: commonmark
