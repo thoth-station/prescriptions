@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FactoryBoyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: factory-boy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'factory-boy' has no recent release, last release dates back to 2021-10-26 14:02:36.066710
+        link: https://pypi.org/project/factory-boy/#history
+        package_name: factory-boy
