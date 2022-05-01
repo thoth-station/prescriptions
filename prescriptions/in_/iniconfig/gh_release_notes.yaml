@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: IniconfigGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: iniconfig
+    run:
+      release_notes:
+        organization: pytest-dev
+        repository: iniconfig
+        tag_version_prefix: v
