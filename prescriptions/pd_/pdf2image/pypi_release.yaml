@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pdf2imagePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdf2image
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pdf2image' has no recent release, last release dates back to 2021-06-25 19:34:38.534194
+        link: https://pypi.org/project/pdf2image/#history
+        package_name: pdf2image
