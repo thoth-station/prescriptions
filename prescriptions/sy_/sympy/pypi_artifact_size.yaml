@@ -54,6 +54,24 @@ units:
           '1.10' can have up to 6.78MiB
         link: https://pypi.org/project/sympy/1.10/#files
         package_name: sympy
+  - name: Sympy1x10x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sympy
+          version: ==1.10.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'sympy' in version
+          '1.10.1' can have up to 6.78MiB
+        link: https://pypi.org/project/sympy/1.10.1/#files
+        package_name: sympy
   - name: Sympy1x10rc1PyPIArtifactSizeWrap
     type: wrap
     should_include:
