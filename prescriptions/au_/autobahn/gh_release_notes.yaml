@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AutobahnGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autobahn
+    run:
+      release_notes:
+        organization: crossbario
+        repository: autobahn-python
+        tag_version_prefix: v
