@@ -216,6 +216,24 @@ units:
           '1.11.0' can have up to 5.68MiB
         link: https://pypi.org/project/onnxruntime/1.11.0/#files
         package_name: onnxruntime
+  - name: Onnxruntime1x11x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxruntime
+          version: ==1.11.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'onnxruntime' in version
+          '1.11.1' can have up to 5.70MiB
+        link: https://pypi.org/project/onnxruntime/1.11.1/#files
+        package_name: onnxruntime
   - name: Onnxruntime1x2x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
