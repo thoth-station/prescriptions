@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutopropGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoprop
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'autoprop' has less than 5 contributors on GitHub
+        link: https://github.com/kalekundert/autoprop
+        package_name: autoprop
