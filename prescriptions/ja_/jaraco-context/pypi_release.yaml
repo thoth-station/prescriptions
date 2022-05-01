@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoContextPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-context
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-context' has no recent release, last release dates back to 2021-10-31 17:21:36.876369
+        link: https://pypi.org/project/jaraco-context/#history
+        package_name: jaraco-context
