@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: KeylimePyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: keylime
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'keylime' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/keylime/
+        package_name: keylime
