@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: RasterioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rasterio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'rasterio' has no recent release, last release dates back to 2021-10-11 17:11:10.449023
+        link: https://pypi.org/project/rasterio/#history
+        package_name: rasterio
