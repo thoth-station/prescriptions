@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CorextopicGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: corextopic
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'corextopic' was last updated at 2021-03-22 17:17:32
+        link: https://github.com/gregversteeg/corex_topic
+        package_name: corextopic
