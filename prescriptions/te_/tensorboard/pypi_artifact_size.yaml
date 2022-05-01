@@ -450,3 +450,21 @@ units:
           '2.8.0' can have up to 5.51MiB
         link: https://pypi.org/project/tensorboard/2.8.0/#files
         package_name: tensorboard
+  - name: Tensorboard2x9x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorboard
+          version: ==2.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tensorboard' in version
+          '2.9.0' can have up to 5.53MiB
+        link: https://pypi.org/project/tensorboard/2.9.0/#files
+        package_name: tensorboard
