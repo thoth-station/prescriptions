@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoStoragesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-storages
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-storages' has no recent release, last release dates back to 2021-10-30 02:35:01.919395
+        link: https://pypi.org/project/django-storages/#history
+        package_name: django-storages
