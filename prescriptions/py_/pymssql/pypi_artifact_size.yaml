@@ -72,3 +72,21 @@ units:
           '2.2.4' can have up to 3.77MiB
         link: https://pypi.org/project/pymssql/2.2.4/#files
         package_name: pymssql
+  - name: Pymssql2x2x5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymssql
+          version: ==2.2.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pymssql' in version
+          '2.2.5' can have up to 3.77MiB
+        link: https://pypi.org/project/pymssql/2.2.5/#files
+        package_name: pymssql
