@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConfigobjGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configobj
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'configobj' was last updated at 2020-10-14 22:37:57
+        link: https://github.com/DiffSK/configobj
+        package_name: configobj
