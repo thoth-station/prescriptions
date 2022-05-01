@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DevicelyGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devicely
+    run:
+      release_notes:
+        organization: hpi-dhc
+        repository: devicely
+        tag_version_prefix: v
