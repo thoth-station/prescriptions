@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ConuGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: conu
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'conu' was last updated at 2021-03-12 16:14:30
+        link: https://github.com/user-cont/conu
+        package_name: conu
