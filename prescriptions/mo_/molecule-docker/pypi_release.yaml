@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MoleculeDockerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: molecule-docker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'molecule-docker' has no recent release, last release dates back to 2021-10-26 15:38:11.972498
+        link: https://pypi.org/project/molecule-docker/#history
+        package_name: molecule-docker
