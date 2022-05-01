@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AlembicGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alembic
+    run:
+      justification:
+      - type: INFO
+        message: Project 'alembic' has very high popularity on GitHub
+        link: https://github.com/sqlalchemy/alembic
+        package_name: alembic
