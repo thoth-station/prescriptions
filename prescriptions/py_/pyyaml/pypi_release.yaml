@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyyamlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyyaml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyyaml' has no recent release, last release dates back to 2021-10-13 19:40:57.802867
+        link: https://pypi.org/project/pyyaml/#history
+        package_name: pyyaml
