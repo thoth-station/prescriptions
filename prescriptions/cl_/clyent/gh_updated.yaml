@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ClyentGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clyent
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'clyent' was last updated at 2017-08-02 20:50:44
+        link: https://github.com/anaconda-graveyard/clyent
+        package_name: clyent
