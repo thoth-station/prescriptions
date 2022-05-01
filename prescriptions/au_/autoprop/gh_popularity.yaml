@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutopropGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoprop
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'autoprop' has low popularity on GitHub
+        link: https://github.com/kalekundert/autoprop
+        package_name: autoprop
