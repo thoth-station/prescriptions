@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: VecrecGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: vecrec
+    run:
+      release_notes:
+        organization: kxgames
+        repository: vecrec
+        tag_version_prefix: v
