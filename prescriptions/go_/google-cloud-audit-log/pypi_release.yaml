@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleCloudAuditLogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-audit-log
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-cloud-audit-log' has no recent release, last release dates back to 2021-10-25 14:21:42.304885
+        link: https://pypi.org/project/google-cloud-audit-log/#history
+        package_name: google-cloud-audit-log
