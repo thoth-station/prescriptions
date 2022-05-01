@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: NdjsonGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ndjson
+    run:
+      release_notes:
+        organization: rhgrant10
+        repository: ndjson
+        tag_version_prefix: v
