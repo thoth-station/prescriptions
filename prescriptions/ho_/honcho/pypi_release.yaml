@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HonchoPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: honcho
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'honcho' has no recent release, last release dates back to 2021-10-30 15:18:04.759870
+        link: https://pypi.org/project/honcho/#history
+        package_name: honcho
