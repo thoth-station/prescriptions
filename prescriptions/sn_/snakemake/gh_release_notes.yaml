@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SnakemakeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snakemake
+    run:
+      release_notes:
+        organization: snakemake
+        repository: snakemake
+        tag_version_prefix: v
