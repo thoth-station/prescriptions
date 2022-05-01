@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PathyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pathy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pathy' has no recent release, last release dates back to 2021-10-25 15:03:21.333093
+        link: https://pypi.org/project/pathy/#history
+        package_name: pathy
