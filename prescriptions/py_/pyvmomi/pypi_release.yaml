@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PyvmomiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyvmomi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pyvmomi' has no recent release, last release dates back to 2021-10-14 20:43:06.752882
+        link: https://pypi.org/project/pyvmomi/#history
+        package_name: pyvmomi
