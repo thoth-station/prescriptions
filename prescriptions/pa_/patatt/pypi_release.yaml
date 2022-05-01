@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PatattPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: patatt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'patatt' has no recent release, last release dates back to 2021-10-04 20:34:37.463474
+        link: https://pypi.org/project/patatt/#history
+        package_name: patatt
