@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CyclerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cycler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cycler' has no recent release, last release dates back to 2021-10-29 03:40:55.140371
+        link: https://pypi.org/project/cycler/#history
+        package_name: cycler
