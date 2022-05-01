@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PycupsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycups
+    run:
+      release_notes:
+        organization: OpenPrinting
+        repository: pycups
+        tag_version_prefix: v
