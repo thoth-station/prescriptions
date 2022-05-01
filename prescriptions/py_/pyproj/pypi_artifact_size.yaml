@@ -576,3 +576,21 @@ units:
           '3.3.0' can have up to 7.32MiB
         link: https://pypi.org/project/pyproj/3.3.0/#files
         package_name: pyproj
+  - name: Pyproj3x3x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyproj
+          version: ==3.3.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyproj' in version
+          '3.3.1' can have up to 7.78MiB
+        link: https://pypi.org/project/pyproj/3.3.1/#files
+        package_name: pyproj
