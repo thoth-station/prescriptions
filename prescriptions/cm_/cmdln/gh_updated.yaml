@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CmdlnGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cmdln
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cmdln' was last updated at 2020-09-24 23:17:53
+        link: https://github.com/trentm/cmdln
+        package_name: cmdln
