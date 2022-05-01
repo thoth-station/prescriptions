@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GelidumGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gelidum
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gelidum' has less than 5 contributors on GitHub
+        link: https://github.com/diegojromerolopez/gelidum
+        package_name: gelidum
