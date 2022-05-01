@@ -1962,6 +1962,24 @@ units:
           '0.75.1' can have up to 6.48MiB
         link: https://pypi.org/project/fastapi/0.75.1/#files
         package_name: fastapi
+  - name: Fastapi0x75x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastapi
+          version: ==0.75.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fastapi' in version
+          '0.75.2' can have up to 6.52MiB
+        link: https://pypi.org/project/fastapi/0.75.2/#files
+        package_name: fastapi
   - name: Fastapi0x8x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
