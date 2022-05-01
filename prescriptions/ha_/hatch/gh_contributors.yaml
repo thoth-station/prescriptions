@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: HatchGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hatch
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'hatch' has less than 5 contributors on GitHub
+        link: https://github.com/ofek/hatch
+        package_name: hatch
