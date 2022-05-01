@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PikaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pika
+    run:
+      justification:
+      - type: INFO
+        message: Package 'pika' is hosted on GitHub
+        link: https://github.com/pika/pika
+        package_name: pika
