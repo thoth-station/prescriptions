@@ -648,3 +648,21 @@ units:
           '3.2.4.2' can have up to 6.57MiB
         link: https://pypi.org/project/glances/3.2.4.2/#files
         package_name: glances
+  - name: Glances3x2x5PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glances
+          version: ==3.2.5
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'glances' in version
+          '3.2.5' can have up to 6.57MiB
+        link: https://pypi.org/project/glances/3.2.5/#files
+        package_name: glances
