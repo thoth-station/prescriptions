@@ -396,3 +396,21 @@ units:
           '1.9.0rc1' can have up to 20.32MiB
         link: https://pypi.org/project/awkward/1.9.0rc1/#files
         package_name: awkward
+  - name: Awkward1x9x0rc2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awkward
+          version: ==1.9.0rc2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awkward' in version
+          '1.9.0rc2' can have up to 20.32MiB
+        link: https://pypi.org/project/awkward/1.9.0rc2/#files
+        package_name: awkward
