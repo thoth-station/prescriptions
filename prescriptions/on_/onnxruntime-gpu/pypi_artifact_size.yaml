@@ -216,6 +216,24 @@ units:
           '1.11.0' can have up to 103.93MiB
         link: https://pypi.org/project/onnxruntime-gpu/1.11.0/#files
         package_name: onnxruntime-gpu
+  - name: OnnxruntimeGpu1x11x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: onnxruntime-gpu
+          version: ==1.11.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'onnxruntime-gpu' in version
+          '1.11.1' can have up to 103.95MiB
+        link: https://pypi.org/project/onnxruntime-gpu/1.11.1/#files
+        package_name: onnxruntime-gpu
   - name: OnnxruntimeGpu1x2x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
