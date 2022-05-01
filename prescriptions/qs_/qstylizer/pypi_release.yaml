@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: QstylizerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qstylizer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'qstylizer' has no recent release, last release dates back to 2021-07-30 01:37:44.450576
+        link: https://pypi.org/project/qstylizer/#history
+        package_name: qstylizer
