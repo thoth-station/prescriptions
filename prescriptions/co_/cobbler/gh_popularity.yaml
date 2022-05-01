@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CobblerGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cobbler
+    run:
+      justification:
+      - type: INFO
+        message: Project 'cobbler' has very high popularity on GitHub
+        link: https://github.com/cobbler/cobbler
+        package_name: cobbler
