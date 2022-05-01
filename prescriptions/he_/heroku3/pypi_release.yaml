@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Heroku3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: heroku3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'heroku3' has no recent release, last release dates back to 2021-10-30 23:09:51.563718
+        link: https://pypi.org/project/heroku3/#history
+        package_name: heroku3
