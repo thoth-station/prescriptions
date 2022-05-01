@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeuromPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neurom
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neurom' has no recent release, last release dates back to 2021-10-29 14:30:24.949503
+        link: https://pypi.org/project/neurom/#history
+        package_name: neurom
