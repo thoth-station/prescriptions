@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CircuitbreakerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: circuitbreaker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'circuitbreaker' has no recent release, last release dates back to 2021-10-27 12:52:08.247974
+        link: https://pypi.org/project/circuitbreaker/#history
+        package_name: circuitbreaker
