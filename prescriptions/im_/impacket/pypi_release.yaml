@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ImpacketPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: impacket
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'impacket' has no recent release, last release dates back to 2021-10-27 15:15:33.435863
+        link: https://pypi.org/project/impacket/#history
+        package_name: impacket
