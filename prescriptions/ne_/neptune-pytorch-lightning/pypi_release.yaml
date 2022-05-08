@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NeptunePytorchLightningPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: neptune-pytorch-lightning
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'neptune-pytorch-lightning' has no recent release, last release dates back to 2021-11-03 12:41:31.052396
+        link: https://pypi.org/project/neptune-pytorch-lightning/#history
+        package_name: neptune-pytorch-lightning
