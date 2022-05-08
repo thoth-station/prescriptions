@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cle
+    run:
+      release_notes:
+        organization: angr
+        repository: cle
+        tag_version_prefix: v
