@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CyipoptGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cyipopt
+    run:
+      release_notes:
+        organization: mechmotum
+        repository: cyipopt
+        tag_version_prefix: v
