@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PyedflibGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyedflib
+    run:
+      release_notes:
+        organization: holgern
+        repository: pyedflib
+        tag_version_prefix: v
