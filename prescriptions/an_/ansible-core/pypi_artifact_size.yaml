@@ -810,3 +810,21 @@ units:
           '2.13.0b1' can have up to 7.04MiB
         link: https://pypi.org/project/ansible-core/2.13.0b1/#files
         package_name: ansible-core
+  - name: AnsibleCore2x13x0rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-core
+          version: ==2.13.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible-core' in version
+          '2.13.0rc1' can have up to 7.04MiB
+        link: https://pypi.org/project/ansible-core/2.13.0rc1/#files
+        package_name: ansible-core
