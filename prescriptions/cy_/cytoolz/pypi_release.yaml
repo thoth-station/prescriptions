@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CytoolzPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cytoolz
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cytoolz' has no recent release, last release dates back to 2021-11-06 05:36:29.426439
+        link: https://pypi.org/project/cytoolz/#history
+        package_name: cytoolz
