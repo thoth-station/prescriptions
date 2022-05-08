@@ -504,3 +504,21 @@ units:
           '0.942' can have up to 16.97MiB
         link: https://pypi.org/project/mypy/0.942/#files
         package_name: mypy
+  - name: Mypy0x950PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mypy
+          version: ==0.950
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mypy' in version
+          '0.950' can have up to 17.90MiB
+        link: https://pypi.org/project/mypy/0.950/#files
+        package_name: mypy
