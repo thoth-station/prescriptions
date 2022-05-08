@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MicrofsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: microfs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'microfs' has no recent release, last release dates back to 2021-11-05 11:50:07.391522
+        link: https://pypi.org/project/microfs/#history
+        package_name: microfs
