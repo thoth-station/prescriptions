@@ -540,3 +540,21 @@ units:
           '2.7.3' can have up to 4.10MiB
         link: https://pypi.org/project/picard/2.7.3/#files
         package_name: picard
+  - name: Picard2x8x0rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: picard
+          version: ==2.8.0rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'picard' in version
+          '2.8.0rc1' can have up to 4.26MiB
+        link: https://pypi.org/project/picard/2.8.0rc1/#files
+        package_name: picard
