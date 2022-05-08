@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: SphinxemojiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sphinxemoji
+    run:
+      release_notes:
+        organization: sphinx-contrib
+        repository: emojicodes
+        tag_version_prefix: v
