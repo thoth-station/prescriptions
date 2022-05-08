@@ -504,3 +504,21 @@ units:
           '2.2.2' can have up to 4.30MiB
         link: https://pypi.org/project/jupyterhub/2.2.2/#files
         package_name: jupyterhub
+  - name: Jupyterhub2x3x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyterhub
+          version: ==2.3.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'jupyterhub' in version
+          '2.3.0' can have up to 4.31MiB
+        link: https://pypi.org/project/jupyterhub/2.3.0/#files
+        package_name: jupyterhub
