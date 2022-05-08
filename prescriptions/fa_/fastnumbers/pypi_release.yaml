@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastnumbersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastnumbers
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastnumbers' has no recent release, last release dates back to 2021-11-02 19:21:09.968889
+        link: https://pypi.org/project/fastnumbers/#history
+        package_name: fastnumbers
