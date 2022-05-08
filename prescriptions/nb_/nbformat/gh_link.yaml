@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: NbformatGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbformat
+    run:
+      justification:
+      - type: INFO
+        message: Package 'nbformat' is hosted on GitHub
+        link: https://github.com/jupyter/nbformat
+        package_name: nbformat
