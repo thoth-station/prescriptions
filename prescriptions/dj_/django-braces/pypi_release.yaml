@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoBracesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-braces
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-braces' has no recent release, last release dates back to 2021-11-05 21:41:43.799206
+        link: https://pypi.org/project/django-braces/#history
+        package_name: django-braces
