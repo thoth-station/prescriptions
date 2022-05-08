@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MessagingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: messaging
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'messaging' has no recent release, last release dates back to 2021-11-03 11:00:08.733099
+        link: https://pypi.org/project/messaging/#history
+        package_name: messaging
