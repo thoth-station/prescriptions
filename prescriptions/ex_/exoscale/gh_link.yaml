@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ExoscaleGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: exoscale
+    run:
+      justification:
+      - type: INFO
+        message: Package 'exoscale' is hosted on GitHub
+        link: https://github.com/exoscale/python-exoscale
+        package_name: exoscale
