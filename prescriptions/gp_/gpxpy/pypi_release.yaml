@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GpxpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gpxpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gpxpy' has no recent release, last release dates back to 2021-11-04 17:42:45.300891
+        link: https://pypi.org/project/gpxpy/#history
+        package_name: gpxpy
