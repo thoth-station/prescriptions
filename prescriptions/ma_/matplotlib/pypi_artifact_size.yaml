@@ -864,3 +864,21 @@ units:
           '3.5.1' can have up to 33.68MiB
         link: https://pypi.org/project/matplotlib/3.5.1/#files
         package_name: matplotlib
+  - name: Matplotlib3x5x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: matplotlib
+          version: ==3.5.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'matplotlib' in version
+          '3.5.2' can have up to 33.58MiB
+        link: https://pypi.org/project/matplotlib/3.5.2/#files
+        package_name: matplotlib
