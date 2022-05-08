@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PluggyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pluggy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pluggy' has no recent release, last release dates back to 2021-08-25 16:26:02.196929
+        link: https://pypi.org/project/pluggy/#history
+        package_name: pluggy
