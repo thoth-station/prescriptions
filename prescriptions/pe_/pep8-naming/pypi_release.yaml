@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pep8NamingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pep8-naming
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pep8-naming' has no recent release, last release dates back to 2021-08-08 02:45:09.922620
+        link: https://pypi.org/project/pep8-naming/#history
+        package_name: pep8-naming
