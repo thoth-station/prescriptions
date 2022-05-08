@@ -162,3 +162,21 @@ units:
           '2.0.2' can have up to 8.11MiB
         link: https://pypi.org/project/awslambdaric/2.0.2/#files
         package_name: awslambdaric
+  - name: Awslambdaric2x0x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awslambdaric
+          version: ==2.0.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awslambdaric' in version
+          '2.0.3' can have up to 4.23MiB
+        link: https://pypi.org/project/awslambdaric/2.0.3/#files
+        package_name: awslambdaric
