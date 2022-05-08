@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Omegaconf211PyPIArtifactSizeWrap
+  - name: Omegaconf2x2x0xdev3PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: omegaconf
-          version: ==2.1.1
+          version: ==2.2.0.dev3
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'omegaconf' in version
-          '2.1.1' can have up to 1.99MiB
-        link: https://pypi.org/project/omegaconf/2.1.1/#files
+          '2.2.0.dev3' can have up to 3.13MiB
+        link: https://pypi.org/project/omegaconf/2.2.0.dev3/#files
+        package_name: omegaconf
+  - name: Omegaconf2x2x0xdev4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: omegaconf
+          version: ==2.2.0.dev4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'omegaconf' in version
+          '2.2.0.dev4' can have up to 3.13MiB
+        link: https://pypi.org/project/omegaconf/2.2.0.dev4/#files
         package_name: omegaconf
