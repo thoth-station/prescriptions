@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: JelloGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jello
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jello' is hosted on GitHub
+        link: https://github.com/kellyjonbrazil/jello
+        package_name: jello
