@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: DropboxGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dropbox
+    run:
+      release_notes:
+        organization: dropbox
+        repository: dropbox-sdk-python
+        tag_version_prefix: v
