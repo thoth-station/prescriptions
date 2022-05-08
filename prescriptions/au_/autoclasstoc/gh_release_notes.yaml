@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AutoclasstocGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoclasstoc
+    run:
+      release_notes:
+        organization: kalekundert
+        repository: autoclasstoc
+        tag_version_prefix: v
