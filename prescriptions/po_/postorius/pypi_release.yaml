@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PostoriusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: postorius
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'postorius' has no recent release, last release dates back to 2021-09-29 02:58:48.598202
+        link: https://pypi.org/project/postorius/#history
+        package_name: postorius
