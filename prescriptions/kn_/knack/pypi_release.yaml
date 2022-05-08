@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: KnackPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: knack
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'knack' has no recent release, last release dates back to 2021-11-05 05:21:09.889656
+        link: https://pypi.org/project/knack/#history
+        package_name: knack
