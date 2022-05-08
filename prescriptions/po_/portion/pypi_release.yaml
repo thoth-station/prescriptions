@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PortionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: portion
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'portion' has no recent release, last release dates back to 2021-09-14 07:12:15.153323
+        link: https://pypi.org/project/portion/#history
+        package_name: portion
