@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiopgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiopg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiopg' has no recent release, last release dates back to 2021-11-01 16:33:34.084426
+        link: https://pypi.org/project/aiopg/#history
+        package_name: aiopg
