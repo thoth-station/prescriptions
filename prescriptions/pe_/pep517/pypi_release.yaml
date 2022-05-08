@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pep517PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pep517
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pep517' has no recent release, last release dates back to 2021-10-18 09:14:23.393180
+        link: https://pypi.org/project/pep517/#history
+        package_name: pep517
