@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiohttpMiddlewaresPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-middlewares
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiohttp-middlewares' has no recent release, last release dates back to 2021-11-06 21:14:18.414013
+        link: https://pypi.org/project/aiohttp-middlewares/#history
+        package_name: aiohttp-middlewares
