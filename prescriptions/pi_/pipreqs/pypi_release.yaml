@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PipreqsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pipreqs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pipreqs' has no recent release, last release dates back to 2021-10-23 09:15:37.981145
+        link: https://pypi.org/project/pipreqs/#history
+        package_name: pipreqs
