@@ -4050,6 +4050,24 @@ units:
           '5.7.0' can have up to 34.20MiB
         link: https://pypi.org/project/ansible/5.7.0/#files
         package_name: ansible
+  - name: Ansible5x7x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible
+          version: ==5.7.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible' in version
+          '5.7.1' can have up to 34.01MiB
+        link: https://pypi.org/project/ansible/5.7.1/#files
+        package_name: ansible
   - name: Ansible6x0x0a1PyPIArtifactSizeWrap
     type: wrap
     should_include:
@@ -4067,4 +4085,22 @@ units:
           Installed artifact size for package 'ansible' in version
           '6.0.0a1' can have up to 39.07MiB
         link: https://pypi.org/project/ansible/6.0.0a1/#files
+        package_name: ansible
+  - name: Ansible6x0x0a2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible
+          version: ==6.0.0a2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ansible' in version
+          '6.0.0a2' can have up to 37.41MiB
+        link: https://pypi.org/project/ansible/6.0.0a2/#files
         package_name: ansible
