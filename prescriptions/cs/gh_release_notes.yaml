@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: CsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cs
+    run:
+      release_notes:
+        organization: exoscale
+        repository: cs
