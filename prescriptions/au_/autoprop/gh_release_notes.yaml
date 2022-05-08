@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AutopropGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoprop
+    run:
+      release_notes:
+        organization: kalekundert
+        repository: autoprop
+        tag_version_prefix: v
