@@ -180,6 +180,24 @@ units:
           '15.1.1' can have up to 9.95MiB
         link: https://pypi.org/project/google-ads/15.1.1/#files
         package_name: google-ads
+  - name: GoogleAds16x0x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-ads
+          version: ==16.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'google-ads' in version
+          '16.0.0' can have up to 5.18MiB
+        link: https://pypi.org/project/google-ads/16.0.0/#files
+        package_name: google-ads
   - name: GoogleAds7x0x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
