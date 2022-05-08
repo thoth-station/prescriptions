@@ -270,3 +270,21 @@ units:
           '37.0.1' can have up to 5.09MiB
         link: https://pypi.org/project/cryptography/37.0.1/#files
         package_name: cryptography
+  - name: Cryptography37x0x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cryptography
+          version: ==37.0.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'cryptography' in version
+          '37.0.2' can have up to 5.10MiB
+        link: https://pypi.org/project/cryptography/37.0.2/#files
+        package_name: cryptography
