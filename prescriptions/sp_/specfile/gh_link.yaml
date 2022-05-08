@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SpecfileGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: specfile
+    run:
+      justification:
+      - type: INFO
+        message: Package 'specfile' is hosted on GitHub
+        link: https://github.com/packit/specfile
+        package_name: specfile
