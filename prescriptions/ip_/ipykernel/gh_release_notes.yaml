@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: IpykernelGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ipykernel
+    run:
+      release_notes:
+        organization: ipython
+        repository: ipykernel
+        tag_version_prefix: v
