@@ -558,3 +558,21 @@ units:
           '1.7.0' can have up to 18.03MiB
         link: https://pypi.org/project/ml-metadata/1.7.0/#files
         package_name: ml-metadata
+  - name: MlMetadata1x8x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ml-metadata
+          version: ==1.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ml-metadata' in version
+          '1.8.0' can have up to 18.06MiB
+        link: https://pypi.org/project/ml-metadata/1.8.0/#files
+        package_name: ml-metadata
