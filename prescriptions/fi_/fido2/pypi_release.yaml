@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Fido2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fido2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fido2' has no recent release, last release dates back to 2021-11-09 11:25:33.780189
+        link: https://pypi.org/project/fido2/#history
+        package_name: fido2
