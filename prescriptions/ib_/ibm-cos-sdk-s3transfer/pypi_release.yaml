@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IbmCosSdkS3transferPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-cos-sdk-s3transfer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ibm-cos-sdk-s3transfer' has no recent release, last release dates back to 2021-11-09 15:36:44.524690
+        link: https://pypi.org/project/ibm-cos-sdk-s3transfer/#history
+        package_name: ibm-cos-sdk-s3transfer
