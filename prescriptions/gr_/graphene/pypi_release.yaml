@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GraphenePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: graphene
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'graphene' has no recent release, last release dates back to 2021-11-13 22:20:13.320228
+        link: https://pypi.org/project/graphene/#history
+        package_name: graphene
