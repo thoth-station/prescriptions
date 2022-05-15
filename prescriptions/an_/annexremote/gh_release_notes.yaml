@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: AnnexremoteGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: annexremote
+    run:
+      release_notes:
+        organization: Lykos153
+        repository: AnnexRemote
+        tag_version_prefix: v
