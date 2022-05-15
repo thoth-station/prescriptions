@@ -2610,3 +2610,21 @@ units:
           '2.3.0' can have up to 12.50MiB
         link: https://pypi.org/project/dtale/2.3.0/#files
         package_name: dtale
+  - name: Dtale2x4x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dtale
+          version: ==2.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dtale' in version
+          '2.4.0' can have up to 12.52MiB
+        link: https://pypi.org/project/dtale/2.4.0/#files
+        package_name: dtale
