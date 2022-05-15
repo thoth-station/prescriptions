@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FunctionsFrameworkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: functions-framework
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'functions-framework' has no recent release, last release dates back to 2021-11-10 22:26:53.740607
+        link: https://pypi.org/project/functions-framework/#history
+        package_name: functions-framework
