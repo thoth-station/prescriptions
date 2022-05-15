@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CoverallsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coveralls
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'coveralls' has no recent release, last release dates back to 2021-11-11 21:00:05.240107
+        link: https://pypi.org/project/coveralls/#history
+        package_name: coveralls
