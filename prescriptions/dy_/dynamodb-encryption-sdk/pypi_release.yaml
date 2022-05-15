@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DynamodbEncryptionSdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dynamodb-encryption-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dynamodb-encryption-sdk' has no recent release, last release dates back to 2021-11-10 21:52:38.571527
+        link: https://pypi.org/project/dynamodb-encryption-sdk/#history
+        package_name: dynamodb-encryption-sdk
