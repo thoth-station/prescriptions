@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IbmCosSdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-cos-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ibm-cos-sdk' has no recent release, last release dates back to 2021-11-09 15:36:49.978717
+        link: https://pypi.org/project/ibm-cos-sdk/#history
+        package_name: ibm-cos-sdk
