@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: FlaskAppbuilderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-appbuilder
+    run:
+      release_notes:
+        organization: dpgaspar
+        repository: flask-appbuilder
+        tag_version_prefix: v
