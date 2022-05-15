@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NestedLookupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nested-lookup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nested-lookup' has no recent release, last release dates back to 2021-11-08 15:57:42.601438
+        link: https://pypi.org/project/nested-lookup/#history
+        package_name: nested-lookup
