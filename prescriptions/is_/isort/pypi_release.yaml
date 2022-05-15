@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IsortPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: isort
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'isort' has no recent release, last release dates back to 2021-11-09 05:42:46.759439
+        link: https://pypi.org/project/isort/#history
+        package_name: isort
