@@ -540,6 +540,24 @@ units:
           '2.7.0' can have up to 11.01MiB
         link: https://pypi.org/project/azure-mgmt-network/2.7.0/#files
         package_name: azure-mgmt-network
+  - name: AzureMgmtNetwork20x0x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-network
+          version: ==20.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-network' in version
+          '20.0.0' can have up to 8.29MiB
+        link: https://pypi.org/project/azure-mgmt-network/20.0.0/#files
+        package_name: azure-mgmt-network
   - name: AzureMgmtNetwork3x0x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
