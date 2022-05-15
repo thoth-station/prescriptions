@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzureLoganalyticsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-loganalytics
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-loganalytics' has no recent release, last release dates back to 2021-11-12 18:53:52.154454
+        link: https://pypi.org/project/azure-loganalytics/#history
+        package_name: azure-loganalytics
