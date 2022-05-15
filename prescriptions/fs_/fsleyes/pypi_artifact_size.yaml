@@ -1674,3 +1674,21 @@ units:
           '1.4.1' can have up to 38.62MiB
         link: https://pypi.org/project/fsleyes/1.4.1/#files
         package_name: fsleyes
+  - name: Fsleyes1x4x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fsleyes
+          version: ==1.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fsleyes' in version
+          '1.4.2' can have up to 38.62MiB
+        link: https://pypi.org/project/fsleyes/1.4.2/#files
+        package_name: fsleyes
