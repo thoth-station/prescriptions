@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BpythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bpython
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bpython' has no recent release, last release dates back to 2021-11-08 10:28:41.331537
+        link: https://pypi.org/project/bpython/#history
+        package_name: bpython
