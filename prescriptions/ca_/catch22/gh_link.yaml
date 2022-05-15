@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: Catch22GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catch22
+    run:
+      justification:
+      - type: INFO
+        message: Package 'catch22' is hosted on GitHub
+        link: https://github.com/chlubba/catch22
+        package_name: catch22
