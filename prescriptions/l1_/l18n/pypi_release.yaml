@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: L18nPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: l18n
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'l18n' has no recent release, last release dates back to 2021-11-12 09:32:36.255672
+        link: https://pypi.org/project/l18n/#history
+        package_name: l18n
