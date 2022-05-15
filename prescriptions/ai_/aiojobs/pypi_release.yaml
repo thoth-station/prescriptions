@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiojobsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiojobs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiojobs' has no recent release, last release dates back to 2021-11-09 12:01:41.190922
+        link: https://pypi.org/project/aiojobs/#history
+        package_name: aiojobs
