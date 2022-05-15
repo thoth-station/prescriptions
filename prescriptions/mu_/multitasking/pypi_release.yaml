@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultitaskingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multitasking
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multitasking' has no recent release, last release dates back to 2021-11-13 23:06:20.477819
+        link: https://pypi.org/project/multitasking/#history
+        package_name: multitasking
