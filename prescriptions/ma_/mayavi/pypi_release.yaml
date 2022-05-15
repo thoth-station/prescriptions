@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MayaviPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mayavi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mayavi' has no recent release, last release dates back to 2021-11-13 13:59:20.461455
+        link: https://pypi.org/project/mayavi/#history
+        package_name: mayavi
