@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CoverageBadgePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: coverage-badge
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'coverage-badge' has no recent release, last release dates back to 2021-11-12 22:41:30.457433
+        link: https://pypi.org/project/coverage-badge/#history
+        package_name: coverage-badge
