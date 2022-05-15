@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CupyCuda100PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda100
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cupy-cuda100' has no recent release, last release dates back to 2021-11-10 08:01:30.867671
+        link: https://pypi.org/project/cupy-cuda100/#history
+        package_name: cupy-cuda100
