@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: HijriConverterPyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hijri-converter
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'hijri-converter' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/hijri-converter/
+        package_name: hijri-converter
