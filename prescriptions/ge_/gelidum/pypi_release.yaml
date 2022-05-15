@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GelidumPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gelidum
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gelidum' has no recent release, last release dates back to 2021-11-09 09:30:01.454293
+        link: https://pypi.org/project/gelidum/#history
+        package_name: gelidum
