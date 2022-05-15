@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JiwerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jiwer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jiwer' has no recent release, last release dates back to 2021-11-10 21:07:33.897368
+        link: https://pypi.org/project/jiwer/#history
+        package_name: jiwer
