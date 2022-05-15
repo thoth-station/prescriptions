@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IbmCosSdkCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ibm-cos-sdk-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ibm-cos-sdk-core' has no recent release, last release dates back to 2021-11-09 15:36:38.352254
+        link: https://pypi.org/project/ibm-cos-sdk-core/#history
+        package_name: ibm-cos-sdk-core
