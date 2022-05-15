@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GoogleCloudNdbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: google-cloud-ndb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'google-cloud-ndb' has no recent release, last release dates back to 2021-11-08 18:39:05.201711
+        link: https://pypi.org/project/google-cloud-ndb/#history
+        package_name: google-cloud-ndb
