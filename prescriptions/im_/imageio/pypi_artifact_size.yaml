@@ -504,6 +504,24 @@ units:
           '2.19.0' can have up to 3.27MiB
         link: https://pypi.org/project/imageio/2.19.0/#files
         package_name: imageio
+  - name: Imageio2x19x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: imageio
+          version: ==2.19.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'imageio' in version
+          '2.19.1' can have up to 3.27MiB
+        link: https://pypi.org/project/imageio/2.19.1/#files
+        package_name: imageio
   - name: Imageio2x2x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
