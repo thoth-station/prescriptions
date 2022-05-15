@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AwsEncryptionSdkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aws-encryption-sdk
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aws-encryption-sdk' has no recent release, last release dates back to 2021-11-11 00:11:17.117123
+        link: https://pypi.org/project/aws-encryption-sdk/#history
+        package_name: aws-encryption-sdk
