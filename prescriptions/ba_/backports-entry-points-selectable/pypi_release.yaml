@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BackportsEntryPointsSelectablePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-entry-points-selectable
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-entry-points-selectable' has no recent release, last release dates back to 2021-11-09 02:15:21.346564
+        link: https://pypi.org/project/backports-entry-points-selectable/#history
+        package_name: backports-entry-points-selectable
