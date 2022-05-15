@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HddfancontrolPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hddfancontrol
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hddfancontrol' has no recent release, last release dates back to 2021-11-14 14:28:52.678055
+        link: https://pypi.org/project/hddfancontrol/#history
+        package_name: hddfancontrol
