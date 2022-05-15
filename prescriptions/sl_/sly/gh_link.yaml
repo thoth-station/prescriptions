@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SlyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sly
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sly' is hosted on GitHub
+        link: https://github.com/dabeaz/sly
+        package_name: sly
