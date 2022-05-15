@@ -1332,3 +1332,21 @@ units:
           '3.9.0' can have up to 4.46MiB
         link: https://pypi.org/project/fslpy/3.9.0/#files
         package_name: fslpy
+  - name: Fslpy3x9x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fslpy
+          version: ==3.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fslpy' in version
+          '3.9.1' can have up to 4.46MiB
+        link: https://pypi.org/project/fslpy/3.9.1/#files
+        package_name: fslpy
