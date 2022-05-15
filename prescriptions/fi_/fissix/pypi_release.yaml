@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FissixPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fissix
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fissix' has no recent release, last release dates back to 2021-11-13 23:27:51.398280
+        link: https://pypi.org/project/fissix/#history
+        package_name: fissix
