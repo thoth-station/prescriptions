@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AsyncprawPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asyncpraw
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'asyncpraw' has no recent release, last release dates back to 2021-11-14 00:59:03.905462
+        link: https://pypi.org/project/asyncpraw/#history
+        package_name: asyncpraw
