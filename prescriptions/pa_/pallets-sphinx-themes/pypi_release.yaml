@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PalletsSphinxThemesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pallets-sphinx-themes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pallets-sphinx-themes' has no recent release, last release dates back to 2021-11-10 18:00:14.264731
+        link: https://pypi.org/project/pallets-sphinx-themes/#history
+        package_name: pallets-sphinx-themes
