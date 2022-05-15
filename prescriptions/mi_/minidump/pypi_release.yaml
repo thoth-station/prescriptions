@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MinidumpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: minidump
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'minidump' has no recent release, last release dates back to 2021-11-13 18:28:11.357069
+        link: https://pypi.org/project/minidump/#history
+        package_name: minidump
