@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BoutdataGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boutdata
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'boutdata' has low popularity on GitHub
+        link: https://github.com/boutproject/boutdata
+        package_name: boutdata
