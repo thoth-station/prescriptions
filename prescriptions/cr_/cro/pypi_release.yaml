@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cro
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cro' has no recent release, last release dates back to 2021-11-12 11:39:37.736888
+        link: https://pypi.org/project/cro/#history
+        package_name: cro
