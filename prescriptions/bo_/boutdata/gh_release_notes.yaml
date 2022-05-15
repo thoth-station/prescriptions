@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: BoutdataGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boutdata
+    run:
+      release_notes:
+        organization: boutproject
+        repository: boutdata
+        tag_version_prefix: v
