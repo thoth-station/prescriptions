@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RadexreaderGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: radexreader
+    run:
+      release_notes:
+        organization: luigifab
+        repository: python-radexreader
+        tag_version_prefix: v
