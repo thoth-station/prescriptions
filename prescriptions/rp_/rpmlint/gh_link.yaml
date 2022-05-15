@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RpmlintGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpmlint
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rpmlint' is hosted on GitHub
+        link: https://github.com/rpm-software-management/rpmlint
+        package_name: rpmlint
