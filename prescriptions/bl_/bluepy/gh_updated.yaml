@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BluepyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bluepy
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bluepy' was last updated at 2021-05-03 16:34:54
+        link: https://github.com/IanHarvey/bluepy
+        package_name: bluepy
