@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Ogr2osmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ogr2osm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ogr2osm' has no recent release, last release dates back to 2021-11-11 13:17:14.226725
+        link: https://pypi.org/project/ogr2osm/#history
+        package_name: ogr2osm
