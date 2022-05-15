@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GastPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gast
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gast' has no recent release, last release dates back to 2021-11-13 21:39:33.540260
+        link: https://pypi.org/project/gast/#history
+        package_name: gast
