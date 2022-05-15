@@ -1692,3 +1692,21 @@ units:
           '5.0.1' can have up to 3.27MiB
         link: https://pypi.org/project/pikepdf/5.0.1/#files
         package_name: pikepdf
+  - name: Pikepdf5x1x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pikepdf
+          version: ==5.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pikepdf' in version
+          '5.1.0' can have up to 3.27MiB
+        link: https://pypi.org/project/pikepdf/5.1.0/#files
+        package_name: pikepdf
