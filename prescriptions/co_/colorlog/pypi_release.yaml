@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ColorlogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: colorlog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'colorlog' has no recent release, last release dates back to 2021-11-08 16:56:44.532441
+        link: https://pypi.org/project/colorlog/#history
+        package_name: colorlog
