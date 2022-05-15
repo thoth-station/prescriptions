@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BatchingKafkaConsumerGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batching-kafka-consumer
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'batching-kafka-consumer' was last updated at 2021-05-13 19:18:21
+        link: https://github.com/getsentry/batching-kafka-consumer
+        package_name: batching-kafka-consumer
