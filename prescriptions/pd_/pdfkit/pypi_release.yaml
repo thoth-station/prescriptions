@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PdfkitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pdfkit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pdfkit' has no recent release, last release dates back to 2021-11-14 19:28:51.672448
+        link: https://pypi.org/project/pdfkit/#history
+        package_name: pdfkit
