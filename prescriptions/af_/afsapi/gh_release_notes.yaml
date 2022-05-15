@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: AfsapiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: afsapi
+    run:
+      release_notes:
+        organization: zhelev
+        repository: python-afsapi
