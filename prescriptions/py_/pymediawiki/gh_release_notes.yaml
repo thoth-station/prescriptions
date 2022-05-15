@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PymediawikiGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pymediawiki
+    run:
+      release_notes:
+        organization: barrust
+        repository: mediawiki
+        tag_version_prefix: v
