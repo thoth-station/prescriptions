@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: CerberusGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cerberus
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'cerberus' was last updated at 2021-05-05 20:47:21
+        link: https://github.com/pyeve/cerberus
+        package_name: cerberus
