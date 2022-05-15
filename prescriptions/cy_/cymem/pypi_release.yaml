@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CymemPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cymem
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cymem' has no recent release, last release dates back to 2021-11-08 07:31:55.499569
+        link: https://pypi.org/project/cymem/#history
+        package_name: cymem
