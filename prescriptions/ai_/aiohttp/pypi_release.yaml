@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiohttpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiohttp' has no recent release, last release dates back to 2021-11-14 21:25:46.643129
+        link: https://pypi.org/project/aiohttp/#history
+        package_name: aiohttp
