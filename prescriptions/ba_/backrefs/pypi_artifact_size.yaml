@@ -774,3 +774,21 @@ units:
           '5.2' can have up to 4.98MiB
         link: https://pypi.org/project/backrefs/5.2/#files
         package_name: backrefs
+  - name: Backrefs5x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backrefs
+          version: ==5.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'backrefs' in version
+          '5.3' can have up to 4.09MiB
+        link: https://pypi.org/project/backrefs/5.3/#files
+        package_name: backrefs
