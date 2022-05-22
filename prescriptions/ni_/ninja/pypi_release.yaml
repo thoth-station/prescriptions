@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NinjaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ninja
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ninja' has no recent release, last release dates back to 2021-11-21 10:55:51.753147
+        link: https://pypi.org/project/ninja/#history
+        package_name: ninja
