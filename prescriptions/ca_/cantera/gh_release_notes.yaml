@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: CanteraGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cantera
+    run:
+      release_notes:
+        organization: Cantera
+        repository: cantera
+        tag_version_prefix: v
