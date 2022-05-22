@@ -1530,3 +1530,21 @@ units:
           '1.0.5' can have up to 73.04MiB
         link: https://pypi.org/project/catboost/1.0.5/#files
         package_name: catboost
+  - name: Catboost1x0x6PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catboost
+          version: ==1.0.6
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'catboost' in version
+          '1.0.6' can have up to 73.07MiB
+        link: https://pypi.org/project/catboost/1.0.6/#files
+        package_name: catboost
