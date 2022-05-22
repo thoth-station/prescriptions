@@ -90,3 +90,21 @@ units:
           '5.3.0' can have up to 4.16MiB
         link: https://pypi.org/project/mimesis/5.3.0/#files
         package_name: mimesis
+  - name: Mimesis5x4x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mimesis
+          version: ==5.4.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'mimesis' in version
+          '5.4.0' can have up to 4.16MiB
+        link: https://pypi.org/project/mimesis/5.4.0/#files
+        package_name: mimesis
