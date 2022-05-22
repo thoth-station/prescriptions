@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoPolymorphicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-polymorphic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-polymorphic' has no recent release, last release dates back to 2021-11-18 11:55:40.825253
+        link: https://pypi.org/project/django-polymorphic/#history
+        package_name: django-polymorphic
