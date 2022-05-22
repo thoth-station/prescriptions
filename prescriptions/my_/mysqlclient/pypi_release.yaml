@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MysqlclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mysqlclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mysqlclient' has no recent release, last release dates back to 2021-11-18 05:51:40.724915
+        link: https://pypi.org/project/mysqlclient/#history
+        package_name: mysqlclient
