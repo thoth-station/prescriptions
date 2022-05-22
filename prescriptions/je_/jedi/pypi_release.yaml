@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JediPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jedi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jedi' has no recent release, last release dates back to 2021-11-17 00:47:51.663429
+        link: https://pypi.org/project/jedi/#history
+        package_name: jedi
