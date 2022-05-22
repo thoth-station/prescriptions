@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GelidumGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gelidum
+    run:
+      release_notes:
+        organization: diegojromerolopez
+        repository: gelidum
+        tag_version_prefix: v
