@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: ServerlessrepoGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: serverlessrepo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'serverlessrepo' has less than 5 contributors on GitHub
+        link: https://github.com/amazon-archives/aws-serverlessrepo-python
+        package_name: serverlessrepo
