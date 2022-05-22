@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MplcursorsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mplcursors
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mplcursors' has no recent release, last release dates back to 2021-11-18 10:54:23.831114
+        link: https://pypi.org/project/mplcursors/#history
+        package_name: mplcursors
