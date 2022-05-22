@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PackagingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: packaging
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'packaging' has no recent release, last release dates back to 2021-11-18 00:39:13.586929
+        link: https://pypi.org/project/packaging/#history
+        package_name: packaging
