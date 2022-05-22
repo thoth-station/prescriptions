@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LibsassPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libsass
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'libsass' has no recent release, last release dates back to 2021-11-18 17:51:43.480177
+        link: https://pypi.org/project/libsass/#history
+        package_name: libsass
