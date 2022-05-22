@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestTrioGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-trio
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-trio' was last updated at 2021-05-07 11:50:37
+        link: https://github.com/python-trio/pytest-trio
+        package_name: pytest-trio
