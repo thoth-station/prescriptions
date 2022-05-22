@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CountryConverterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: country-converter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'country-converter' has no recent release, last release dates back to 2021-11-18 13:23:37.952353
+        link: https://pypi.org/project/country-converter/#history
+        package_name: country-converter
