@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestBlackGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-black
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-black' was last updated at 2020-10-05 09:39:56
+        link: https://github.com/shopkeep/pytest-black
+        package_name: pytest-black
