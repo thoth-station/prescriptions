@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyprindGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyprind
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyprind' was last updated at 2021-04-18 18:08:56
+        link: https://github.com/rasbt/pyprind
+        package_name: pyprind
