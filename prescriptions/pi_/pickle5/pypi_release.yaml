@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Pickle5PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pickle5
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pickle5' has no recent release, last release dates back to 2021-11-20 19:53:06.160434
+        link: https://pypi.org/project/pickle5/#history
+        package_name: pickle5
