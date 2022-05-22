@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RadexreaderGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: radexreader
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'radexreader' has less than 5 contributors on GitHub
+        link: https://github.com/luigifab/python-radexreader
+        package_name: radexreader
