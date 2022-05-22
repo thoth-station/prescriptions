@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: JwcryptoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jwcrypto
+    run:
+      release_notes:
+        organization: latchset
+        repository: jwcrypto
+        tag_version_prefix: v
