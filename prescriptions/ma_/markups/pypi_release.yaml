@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MarkupsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: markups
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'markups' has no recent release, last release dates back to 2021-11-21 19:03:27.875881
+        link: https://pypi.org/project/markups/#history
+        package_name: markups
