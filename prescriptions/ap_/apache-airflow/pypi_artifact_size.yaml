@@ -1890,3 +1890,21 @@ units:
           '2.3.0rc2' can have up to 4.94MiB
         link: https://pypi.org/project/apache-airflow/2.3.0rc2/#files
         package_name: apache-airflow
+  - name: ApacheAirflow2x3x1rc1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apache-airflow
+          version: ==2.3.1rc1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apache-airflow' in version
+          '2.3.1rc1' can have up to 4.97MiB
+        link: https://pypi.org/project/apache-airflow/2.3.1rc1/#files
+        package_name: apache-airflow
