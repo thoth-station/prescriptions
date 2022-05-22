@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SetoolsGitHubContributorsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: setools
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'setools' has less than 5 contributors on GitHub
+        link: https://github.com/haoxiangsnr/Speech_Enhancement_Tools
+        package_name: setools
