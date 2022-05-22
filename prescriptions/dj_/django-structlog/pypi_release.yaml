@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoStructlogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-structlog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-structlog' has no recent release, last release dates back to 2021-11-18 18:56:50.032291
+        link: https://pypi.org/project/django-structlog/#history
+        package_name: django-structlog
