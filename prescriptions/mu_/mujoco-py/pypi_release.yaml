@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MujocoPyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mujoco-py
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mujoco-py' has no recent release, last release dates back to 2021-11-19 00:21:32.043039
+        link: https://pypi.org/project/mujoco-py/#history
+        package_name: mujoco-py
