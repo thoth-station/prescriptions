@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GuessitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: guessit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'guessit' has no recent release, last release dates back to 2021-11-20 11:05:58.773632
+        link: https://pypi.org/project/guessit/#history
+        package_name: guessit
