@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AstroscrappyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astroscrappy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'astroscrappy' has no recent release, last release dates back to 2021-11-19 10:46:06.913531
+        link: https://pypi.org/project/astroscrappy/#history
+        package_name: astroscrappy
