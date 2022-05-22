@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DevpiClientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devpi-client
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'devpi-client' has no recent release, last release dates back to 2021-11-15 09:42:36.325185
+        link: https://pypi.org/project/devpi-client/#history
+        package_name: devpi-client
