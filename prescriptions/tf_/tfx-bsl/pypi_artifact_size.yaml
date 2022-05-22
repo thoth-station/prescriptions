@@ -216,3 +216,21 @@ units:
           '1.7.0' can have up to 19.46MiB
         link: https://pypi.org/project/tfx-bsl/1.7.0/#files
         package_name: tfx-bsl
+  - name: TfxBsl1x8x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tfx-bsl
+          version: ==1.8.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'tfx-bsl' in version
+          '1.8.0' can have up to 19.50MiB
+        link: https://pypi.org/project/tfx-bsl/1.8.0/#files
+        package_name: tfx-bsl
