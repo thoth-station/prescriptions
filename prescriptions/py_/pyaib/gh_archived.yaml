@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyaibGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyaib
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyaib' is marked as archived on GitHub
+        link: https://github.com/facebookarchive/pyaib
+        package_name: pyaib
