@@ -3150,3 +3150,21 @@ units:
           '4.0rc1' can have up to 9.45MiB
         link: https://pypi.org/project/django/4.0rc1/#files
         package_name: django
+  - name: Django4x1a1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django
+          version: ==4.1a1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'django' in version
+          '4.1a1' can have up to 9.98MiB
+        link: https://pypi.org/project/django/4.1a1/#files
+        package_name: django
