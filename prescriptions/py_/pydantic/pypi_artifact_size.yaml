@@ -612,3 +612,21 @@ units:
           '1.9.0a2' can have up to 14.41MiB
         link: https://pypi.org/project/pydantic/1.9.0a2/#files
         package_name: pydantic
+  - name: Pydantic1x9x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydantic
+          version: ==1.9.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pydantic' in version
+          '1.9.1' can have up to 14.67MiB
+        link: https://pypi.org/project/pydantic/1.9.1/#files
+        package_name: pydantic
