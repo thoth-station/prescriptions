@@ -594,3 +594,21 @@ units:
           '0.38.0rc1' can have up to 35.68MiB
         link: https://pypi.org/project/llvmlite/0.38.0rc1/#files
         package_name: llvmlite
+  - name: Llvmlite0x38x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: llvmlite
+          version: ==0.38.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'llvmlite' in version
+          '0.38.1' can have up to 35.61MiB
+        link: https://pypi.org/project/llvmlite/0.38.1/#files
+        package_name: llvmlite
