@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestRepeatGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-repeat
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-repeat' was last updated at 2020-10-31 11:34:01
+        link: https://github.com/pytest-dev/pytest-repeat
+        package_name: pytest-repeat
