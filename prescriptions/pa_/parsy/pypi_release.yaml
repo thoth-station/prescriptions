@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ParsyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: parsy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'parsy' has no recent release, last release dates back to 2021-11-15 16:50:48.968884
+        link: https://pypi.org/project/parsy/#history
+        package_name: parsy
