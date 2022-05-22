@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthUtilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-utils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eth-utils' has no recent release, last release dates back to 2021-11-18 23:08:40.804295
+        link: https://pypi.org/project/eth-utils/#history
+        package_name: eth-utils
