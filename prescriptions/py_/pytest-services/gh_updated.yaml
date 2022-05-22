@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PytestServicesGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytest-services
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pytest-services' was last updated at 2020-10-30 12:07:22
+        link: https://github.com/pytest-dev/pytest-services
+        package_name: pytest-services
