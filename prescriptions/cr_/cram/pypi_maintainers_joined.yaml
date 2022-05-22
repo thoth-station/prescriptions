@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CramPyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cram
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'cram' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/cram/
+        package_name: cram
