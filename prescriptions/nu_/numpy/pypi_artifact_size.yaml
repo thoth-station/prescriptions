@@ -1386,3 +1386,21 @@ units:
           '1.22.3' can have up to 16.83MiB
         link: https://pypi.org/project/numpy/1.22.3/#files
         package_name: numpy
+  - name: Numpy1x22x4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: numpy
+          version: ==1.22.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'numpy' in version
+          '1.22.4' can have up to 16.84MiB
+        link: https://pypi.org/project/numpy/1.22.4/#files
+        package_name: numpy
