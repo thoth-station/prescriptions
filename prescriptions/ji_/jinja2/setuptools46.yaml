@@ -1,0 +1,22 @@
+units:
+  steps:
+  - name: Setuptools46xJinja2Step
+    type: step.Group
+    should_include:
+      adviser_pipeline: true
+    match:
+    - group:
+      - package_version:
+          name: setuptools
+          version: ">46,==3.0,==3.0.1,==3.0.2"
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: jinja2
+          version: ">=2.0,<=2.6"
+          index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: Cannot install jinja2>=2.0,<=2.6 with setuptools>46,==3.0,==3.0.1,==3.0.2
+        link: https://github.com/pypa/setuptools/issues/2017
+      not_acceptable: Cannot install jinja2>=2.0,<=2.6 with setuptools>46,==3.0,==3.0.1,==3.0.2
