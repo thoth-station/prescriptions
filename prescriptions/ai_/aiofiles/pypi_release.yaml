@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiofilesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiofiles
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiofiles' has no recent release, last release dates back to 2021-11-27 15:05:28.662011
+        link: https://pypi.org/project/aiofiles/#history
+        package_name: aiofiles
