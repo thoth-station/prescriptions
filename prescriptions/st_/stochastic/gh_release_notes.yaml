@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: StochasticGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stochastic
+    run:
+      release_notes:
+        organization: crflynn
+        repository: stochastic
