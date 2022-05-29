@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeotilerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geotiler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'geotiler' has no recent release, last release dates back to 2021-11-24 18:47:55.123221
+        link: https://pypi.org/project/geotiler/#history
+        package_name: geotiler
