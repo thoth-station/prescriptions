@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TensorflowxCpuGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tensorflow-cpu
+    run:
+      release_notes:
+        organization: tensorflow
+        repository: tensorflow
+        tag_version_prefix: v
