@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HypothesmithPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hypothesmith
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hypothesmith' has no recent release, last release dates back to 2021-11-27 08:58:18.369955
+        link: https://pypi.org/project/hypothesmith/#history
+        package_name: hypothesmith
