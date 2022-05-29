@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BeetsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beets
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'beets' has no recent release, last release dates back to 2021-11-27 16:42:09.520177
+        link: https://pypi.org/project/beets/#history
+        package_name: beets
