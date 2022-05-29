@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DatabricksxApiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: databricks-api
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'databricks-api' has no recent release, last release dates back to 2021-11-22 02:19:56.800994
+        link: https://pypi.org/project/databricks-api/#history
+        package_name: databricks-api
