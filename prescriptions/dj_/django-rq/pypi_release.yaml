@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxRqPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-rq
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-rq' has no recent release, last release dates back to 2021-11-22 00:39:56.486949
+        link: https://pypi.org/project/django-rq/#history
+        package_name: django-rq
