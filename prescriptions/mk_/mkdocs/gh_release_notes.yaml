@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: MkdocsGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mkdocs
+    run:
+      release_notes:
+        organization: mkdocs
+        repository: mkdocs
