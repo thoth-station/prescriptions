@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastecdsaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastecdsa
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fastecdsa' has no recent release, last release dates back to 2021-11-26 23:29:54.689752
+        link: https://pypi.org/project/fastecdsa/#history
+        package_name: fastecdsa
