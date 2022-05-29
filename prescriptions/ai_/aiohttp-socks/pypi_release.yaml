@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiohttpxSocksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-socks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiohttp-socks' has no recent release, last release dates back to 2021-11-23 15:31:01.888554
+        link: https://pypi.org/project/aiohttp-socks/#history
+        package_name: aiohttp-socks
