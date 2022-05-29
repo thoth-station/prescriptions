@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HolePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hole
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hole' has no recent release, last release dates back to 2021-11-23 11:18:22.300442
+        link: https://pypi.org/project/hole/#history
+        package_name: hole
