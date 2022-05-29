@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiofloPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioflo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioflo' has no recent release, last release dates back to 2021-11-28 06:06:33.412634
+        link: https://pypi.org/project/aioflo/#history
+        package_name: aioflo
