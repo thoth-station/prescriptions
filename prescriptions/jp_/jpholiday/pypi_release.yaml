@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JpholidayPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jpholiday
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jpholiday' has no recent release, last release dates back to 2021-11-22 11:38:41.328795
+        link: https://pypi.org/project/jpholiday/#history
+        package_name: jpholiday
