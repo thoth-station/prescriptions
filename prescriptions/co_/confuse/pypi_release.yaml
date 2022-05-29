@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConfusePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: confuse
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'confuse' has no recent release, last release dates back to 2021-11-27 16:47:15.943831
+        link: https://pypi.org/project/confuse/#history
+        package_name: confuse
