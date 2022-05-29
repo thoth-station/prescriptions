@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MygeotabPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mygeotab
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mygeotab' has no recent release, last release dates back to 2021-11-23 03:06:30.778730
+        link: https://pypi.org/project/mygeotab/#history
+        package_name: mygeotab
