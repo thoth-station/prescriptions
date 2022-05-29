@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiocronPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocron
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiocron' has no recent release, last release dates back to 2021-11-24 16:31:34.889638
+        link: https://pypi.org/project/aiocron/#history
+        package_name: aiocron
