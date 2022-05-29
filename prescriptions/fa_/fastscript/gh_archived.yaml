@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: FastscriptGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastscript
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'fastscript' is marked as archived on GitHub
+        link: https://github.com/fastai/fastscript
+        package_name: fastscript
