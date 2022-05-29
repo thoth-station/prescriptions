@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: TrieGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: trie
+    run:
+      release_notes:
+        organization: ethereum
+        repository: py-trie
+        tag_version_prefix: v
