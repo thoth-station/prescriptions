@@ -1,0 +1,22 @@
+units:
+  steps:
+  - name: GooglexCloudxLoggingx3x1x1xProtobufx4x21x0
+    type: step.Group
+    should_include:
+      adviser_pipeline: true
+    match:
+    - group:
+      - package_version:
+          name: google-cloud-logging
+          version: ==3.1.1
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: protobuf
+          version: ==4.21.0
+          index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: Cannot install protobuf==4.21.0 with google-cloud-logging==3.1.1
+        link: https://github.com/protocolbuffers/protobuf/issues/10051#issue-1249114696
+      not_acceptable: Cannot install protobuf==4.21.0 with google-cloud-logging==3.1.1
