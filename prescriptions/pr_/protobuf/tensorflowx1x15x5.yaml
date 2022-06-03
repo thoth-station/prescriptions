@@ -1,0 +1,22 @@
+units:
+  steps:
+  - name: Tensorflowx1x15x5xProtobufx4x21x0
+    type: step.Group
+    should_include:
+      adviser_pipeline: true
+    match:
+    - group:
+      - package_version:
+          name: tensorflow
+          version: ==1.15.5
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: protobuf
+          version: ==4.21.0
+          index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: Cannot install protobuf==4.21.0 with tensorflow==1.15.5
+        link: https://github.com/protocolbuffers/protobuf/issues/10051#issuecomment-1138237510
+      not_acceptable: Cannot install protobuf==4.21.0 with tensorflow==1.15.5
