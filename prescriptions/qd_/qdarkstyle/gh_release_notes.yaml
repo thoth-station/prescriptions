@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: QdarkstyleGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qdarkstyle
+    run:
+      release_notes:
+        organization: ColinDuquesnoy
+        repository: QDarkStyleSheet
+        tag_version_prefix: v
