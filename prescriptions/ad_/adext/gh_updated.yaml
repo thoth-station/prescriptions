@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AdextGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adext
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'adext' was last updated at 2021-06-01 00:11:08
+        link: https://github.com/ajschmidt8/adext
+        package_name: adext
