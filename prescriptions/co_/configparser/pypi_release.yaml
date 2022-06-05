@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConfigparserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configparser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'configparser' has no recent release, last release dates back to 2021-12-03 17:56:01.868429
+        link: https://pypi.org/project/configparser/#history
+        package_name: configparser
