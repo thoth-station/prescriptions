@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AcademicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: academic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'academic' has no recent release, last release dates back to 2021-11-29 20:56:16.955475
+        link: https://pypi.org/project/academic/#history
+        package_name: academic
