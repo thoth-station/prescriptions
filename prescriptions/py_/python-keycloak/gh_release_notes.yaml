@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PythonxKeycloakGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-keycloak
+    run:
+      release_notes:
+        organization: marcospereirampj
+        repository: python-keycloak
+        tag_version_prefix: v
