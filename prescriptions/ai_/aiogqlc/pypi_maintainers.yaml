@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AiogqlcPyPIMaintainerProjectsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiogqlc
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'aiogqlc' is maintained by maintainers that maintain small
+          number of projects on PyPI (less than 3)
+        link: https://pypi.org/project/aiogqlc/
+        package_name: aiogqlc
