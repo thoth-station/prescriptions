@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ForexxPythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: forex-python
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'forex-python' has no recent release, last release dates back to 2021-12-03 09:26:59.975046
+        link: https://pypi.org/project/forex-python/#history
+        package_name: forex-python
