@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AlarmdecoderGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alarmdecoder
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'alarmdecoder' was last updated at 2021-06-01 00:02:04
+        link: https://github.com/nutechsoftware/alarmdecoder
+        package_name: alarmdecoder
