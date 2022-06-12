@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FedfindPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fedfind
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fedfind' has no recent release, last release dates back to 2021-12-11 01:11:40.384708
+        link: https://pypi.org/project/fedfind/#history
+        package_name: fedfind
