@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GetmacPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: getmac
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'getmac' has no recent release, last release dates back to 2021-12-10 20:58:34.163751
+        link: https://pypi.org/project/getmac/#history
+        package_name: getmac
