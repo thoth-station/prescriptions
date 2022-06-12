@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: GeomdlGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geomdl
+    run:
+      release_notes:
+        organization: orbingol
+        repository: NURBS-Python
+        tag_version_prefix: v
