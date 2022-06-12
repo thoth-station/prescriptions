@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ActdiagPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: actdiag
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'actdiag' has no recent release, last release dates back to 2021-12-06 16:57:59.862947
+        link: https://pypi.org/project/actdiag/#history
+        package_name: actdiag
