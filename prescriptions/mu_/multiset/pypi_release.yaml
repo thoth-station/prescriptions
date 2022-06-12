@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultisetPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multiset
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multiset' has no recent release, last release dates back to 2021-12-06 07:29:20.013794
+        link: https://pypi.org/project/multiset/#history
+        package_name: multiset
