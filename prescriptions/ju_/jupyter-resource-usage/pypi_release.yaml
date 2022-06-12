@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterxResourcexUsagePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-resource-usage
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-resource-usage' has no recent release, last release dates back to 2021-12-06 09:34:10.336512
+        link: https://pypi.org/project/jupyter-resource-usage/#history
+        package_name: jupyter-resource-usage
