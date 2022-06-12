@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DocxWardenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: doc-warden
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'doc-warden' has no recent release, last release dates back to 2021-12-09 20:59:05.601508
+        link: https://pypi.org/project/doc-warden/#history
+        package_name: doc-warden
