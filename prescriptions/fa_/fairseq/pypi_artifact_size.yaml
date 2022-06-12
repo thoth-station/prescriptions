@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Fairseq090PyPIArtifactSizeWrap
+  - name: Fairseqx0x11x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,31 @@ units:
       state:
         resolved_dependencies:
         - name: fairseq
-          version: ==0.9.0
+          version: ==0.11.1
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'fairseq' in version
-          '0.9.0' can have up to 298.93KiB
-        link: https://pypi.org/project/fairseq/0.9.0/#files
+          '0.11.1' can have up to 10.44MiB
+        link: https://pypi.org/project/fairseq/0.11.1/#files
+        package_name: fairseq
+  - name: Fairseqx0x12x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fairseq
+          version: ==0.12.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'fairseq' in version
+          '0.12.0' can have up to 10.44MiB
+        link: https://pypi.org/project/fairseq/0.12.0/#files
         package_name: fairseq
