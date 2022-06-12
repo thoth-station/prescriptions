@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AexpectPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aexpect
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aexpect' has no recent release, last release dates back to 2021-12-08 22:22:39.781705
+        link: https://pypi.org/project/aexpect/#history
+        package_name: aexpect
