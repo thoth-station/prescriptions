@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EnlightenPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enlighten
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'enlighten' has no recent release, last release dates back to 2021-12-12 14:04:04.175899
+        link: https://pypi.org/project/enlighten/#history
+        package_name: enlighten
