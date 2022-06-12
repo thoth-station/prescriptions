@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Argon2xCffiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: argon2-cffi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'argon2-cffi' has no recent release, last release dates back to 2021-12-11 11:47:50.012396
+        link: https://pypi.org/project/argon2-cffi/#history
+        package_name: argon2-cffi
