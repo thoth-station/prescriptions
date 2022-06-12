@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: PydyfGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pydyf
+    run:
+      release_notes:
+        organization: CourtBouillon
+        repository: pydyf
+        tag_version_prefix: v
