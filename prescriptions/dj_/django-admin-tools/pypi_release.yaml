@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxAdminxToolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-admin-tools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-admin-tools' has no recent release, last release dates back to 2021-12-12 15:42:13.219845
+        link: https://pypi.org/project/django-admin-tools/#history
+        package_name: django-admin-tools
