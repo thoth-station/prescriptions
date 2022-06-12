@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CpyparsingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cpyparsing
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cpyparsing' has no recent release, last release dates back to 2021-12-07 00:48:31.035150
+        link: https://pypi.org/project/cpyparsing/#history
+        package_name: cpyparsing
