@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DocutilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docutils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'docutils' has no recent release, last release dates back to 2021-11-23 17:49:42.043199
+        link: https://pypi.org/project/docutils/#history
+        package_name: docutils
