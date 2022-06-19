@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CatalystxSphinxxThemePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catalyst-sphinx-theme
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'catalyst-sphinx-theme' has no recent release, last release dates back to 2021-11-29 06:30:53.915647
+        link: https://pypi.org/project/catalyst-sphinx-theme/#history
+        package_name: catalyst-sphinx-theme
