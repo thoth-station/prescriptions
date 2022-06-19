@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: KaggleGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kaggle
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'kaggle' was last updated at 2021-03-15 15:49:05
+        link: https://github.com/Kaggle/kaggle-api
+        package_name: kaggle
