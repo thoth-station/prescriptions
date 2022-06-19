@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutoverGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autover
+    run:
+      justification:
+      - type: INFO
+        message: Package 'autover' is hosted on GitHub
+        link: https://github.com/pyviz-dev/autover
+        package_name: autover
