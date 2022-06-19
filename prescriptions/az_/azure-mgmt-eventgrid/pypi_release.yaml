@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzurexMgmtxEventgridPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-eventgrid
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-eventgrid' has no recent release, last release dates back to 2021-12-16 01:41:18.204734
+        link: https://pypi.org/project/azure-mgmt-eventgrid/#history
+        package_name: azure-mgmt-eventgrid
