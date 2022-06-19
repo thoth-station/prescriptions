@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiohttpxRemotesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-remotes
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiohttp-remotes' has no recent release, last release dates back to 2021-12-15 10:03:45.867299
+        link: https://pypi.org/project/aiohttp-remotes/#history
+        package_name: aiohttp-remotes
