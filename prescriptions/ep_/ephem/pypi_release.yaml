@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EphemPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ephem
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ephem' has no recent release, last release dates back to 2021-12-13 13:11:53.905976
+        link: https://pypi.org/project/ephem/#history
+        package_name: ephem
