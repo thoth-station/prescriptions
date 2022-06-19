@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PycupsGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycups
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pycups' is a GitHub fork
+        link: https://github.com/OpenPrinting/pycups
+        package_name: pycups
