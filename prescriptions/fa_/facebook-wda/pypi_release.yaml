@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FacebookxWdaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: facebook-wda
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'facebook-wda' has no recent release, last release dates back to 2021-12-13 07:43:25.703189
+        link: https://pypi.org/project/facebook-wda/#history
+        package_name: facebook-wda
