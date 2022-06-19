@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BlockdiagPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blockdiag
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'blockdiag' has no recent release, last release dates back to 2021-12-06 16:43:56.394142
+        link: https://pypi.org/project/blockdiag/#history
+        package_name: blockdiag
