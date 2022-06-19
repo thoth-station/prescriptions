@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NbsmokePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nbsmoke
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nbsmoke' has no recent release, last release dates back to 2021-12-16 08:09:36.716206
+        link: https://pypi.org/project/nbsmoke/#history
+        package_name: nbsmoke
