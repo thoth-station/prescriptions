@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CffsubrPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cffsubr
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cffsubr' has no recent release, last release dates back to 2021-11-25 16:04:59.507287
+        link: https://pypi.org/project/cffsubr/#history
+        package_name: cffsubr
