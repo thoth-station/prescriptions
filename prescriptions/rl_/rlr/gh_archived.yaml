@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RlrGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rlr
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'rlr' is marked as archived on GitHub
+        link: https://github.com/dedupeio/rlr
+        package_name: rlr
