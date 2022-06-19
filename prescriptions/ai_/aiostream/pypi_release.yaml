@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiostreamPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiostream
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiostream' has no recent release, last release dates back to 2021-12-14 18:25:25.985858
+        link: https://pypi.org/project/aiostream/#history
+        package_name: aiostream
