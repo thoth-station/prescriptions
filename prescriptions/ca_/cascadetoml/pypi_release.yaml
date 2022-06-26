@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CascadetomlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cascadetoml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cascadetoml' has no recent release, last release dates back to 2021-12-21 19:15:30.007520
+        link: https://pypi.org/project/cascadetoml/#history
+        package_name: cascadetoml
