@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CssxParserPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: css-parser
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'css-parser' has no recent release, last release dates back to 2021-12-11 02:56:16.184924
+        link: https://pypi.org/project/css-parser/#history
+        package_name: css-parser
