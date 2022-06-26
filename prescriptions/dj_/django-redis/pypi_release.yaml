@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxRedisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-redis
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-redis' has no recent release, last release dates back to 2021-12-22 15:10:38.485912
+        link: https://pypi.org/project/django-redis/#history
+        package_name: django-redis
