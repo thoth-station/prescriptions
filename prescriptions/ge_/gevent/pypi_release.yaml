@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GeventPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gevent
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gevent' has no recent release, last release dates back to 2021-12-11 22:16:59.879576
+        link: https://pypi.org/project/gevent/#history
+        package_name: gevent
