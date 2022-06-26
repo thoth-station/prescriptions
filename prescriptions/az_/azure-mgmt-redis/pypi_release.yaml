@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzurexMgmtxRedisPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-redis
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-redis' has no recent release, last release dates back to 2021-12-21 02:58:50.741405
+        link: https://pypi.org/project/azure-mgmt-redis/#history
+        package_name: azure-mgmt-redis
