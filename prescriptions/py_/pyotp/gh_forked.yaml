@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyotpGitHubForkedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyotp
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyotp' is a GitHub fork
+        link: https://github.com/pyauth/pyotp
+        package_name: pyotp
