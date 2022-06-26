@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ChromedriverxAutoinstallerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chromedriver-autoinstaller
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'chromedriver-autoinstaller' has no recent release, last release dates back to 2021-12-16 03:47:09.240584
+        link: https://pypi.org/project/chromedriver-autoinstaller/#history
+        package_name: chromedriver-autoinstaller
