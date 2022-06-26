@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FuncyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: funcy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'funcy' has no recent release, last release dates back to 2021-12-20 05:36:34.100028
+        link: https://pypi.org/project/funcy/#history
+        package_name: funcy
