@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GitlintPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitlint
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gitlint' has no recent release, last release dates back to 2021-11-28 11:34:14.700471
+        link: https://pypi.org/project/gitlint/#history
+        package_name: gitlint
