@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CysignalsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cysignals
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cysignals' has no recent release, last release dates back to 2021-12-15 08:52:53.869535
+        link: https://pypi.org/project/cysignals/#history
+        package_name: cysignals
