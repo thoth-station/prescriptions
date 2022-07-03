@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiskcachePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diskcache
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'diskcache' has no recent release, last release dates back to 2021-12-31 03:55:02.458501
+        link: https://pypi.org/project/diskcache/#history
+        package_name: diskcache
