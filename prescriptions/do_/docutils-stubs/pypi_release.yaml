@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DocutilsxStubsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: docutils-stubs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'docutils-stubs' has no recent release, last release dates back to 2022-01-02 11:13:17.499925
+        link: https://pypi.org/project/docutils-stubs/#history
+        package_name: docutils-stubs
