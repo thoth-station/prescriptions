@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: FastdownloadGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fastdownload
+    run:
+      release_notes:
+        organization: fastai
+        repository: fastdownload
