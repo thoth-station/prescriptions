@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AttrsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: attrs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'attrs' has no recent release, last release dates back to 2021-12-29 13:15:09.056893
+        link: https://pypi.org/project/attrs/#history
+        package_name: attrs
