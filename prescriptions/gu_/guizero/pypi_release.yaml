@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GuizeroPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: guizero
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'guizero' has no recent release, last release dates back to 2022-01-01 15:34:57.843503
+        link: https://pypi.org/project/guizero/#history
+        package_name: guizero
