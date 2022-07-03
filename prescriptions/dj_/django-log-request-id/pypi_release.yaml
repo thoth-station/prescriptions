@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxLogxRequestxIdPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-log-request-id
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-log-request-id' has no recent release, last release dates back to 2021-12-22 16:53:09.163191
+        link: https://pypi.org/project/django-log-request-id/#history
+        package_name: django-log-request-id
