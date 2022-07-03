@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GrinGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: grin
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'grin' was last updated at 2020-12-08 10:05:11
+        link: https://github.com/matthew-brett/grin
+        package_name: grin
