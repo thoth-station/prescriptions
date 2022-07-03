@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AltairPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: altair
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'altair' has no recent release, last release dates back to 2021-12-29 13:25:39.471424
+        link: https://pypi.org/project/altair/#history
+        package_name: altair
