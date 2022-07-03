@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: GorillaGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gorilla
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'gorilla' was last updated at 2021-04-17 00:08:43
+        link: https://github.com/christophercrouzet/gorilla
+        package_name: gorilla
