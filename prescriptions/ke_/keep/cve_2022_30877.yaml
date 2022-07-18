@@ -1,0 +1,19 @@
+units:
+  sieves:
+  - name: Keep12CVESieve
+    type: sieve
+    should_include:
+      adviser_pipeline: true
+    match:
+    - package_version:
+        name: keep
+        version: ==1.2
+        index_url: https://pypi.org/simple
+    run:
+      log:
+        type: WARNING
+        message: Removing version 1.2 of the 'keep' package as it contains a code-execution backdoor (CVE-2022-30877)
+      stack_info:
+      - type: WARNING
+        message: Removing version 1.2 of the 'keep' package as it contains a code-execution backdoor (CVE-2022-30877)
+        link: cve
