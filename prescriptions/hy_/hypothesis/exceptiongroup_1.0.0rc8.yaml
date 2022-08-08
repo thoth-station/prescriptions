@@ -1,0 +1,22 @@
+units:
+  steps:
+  - name: Exceptiongroupx1x0x0xrc8xHypothesisx6x53x0
+    type: step.Group
+    should_include:
+      adviser_pipeline: true
+    match:
+    - group:
+      - package_version:
+          name: exceptiongroup
+          version: ">=1.0.0rc8"
+          index_url: https://pypi.org/simple
+      - package_version:
+          name: hypothesis
+          version: ==6.53.0
+          index_url: https://pypi.org/simple
+    run:
+      stack_info:
+      - type: WARNING
+        message: Cannot install exceptiongroup >=1.0.0rc8 with hypothesis==6.53.0
+        link: https://github.com/thoth-station/slo-reporter/issues/350
+      not_acceptable: Cannot install exceptiongroup >=1.0.0rc8 with hypothesis==6.53.0
