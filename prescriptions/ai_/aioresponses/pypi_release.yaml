@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioresponsesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioresponses
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioresponses' has no recent release, last release dates back to 2022-01-10 22:40:02.105326
+        link: https://pypi.org/project/aioresponses/#history
+        package_name: aioresponses
