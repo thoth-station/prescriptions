@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DpathPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dpath
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dpath' has no recent release, last release dates back to 2022-02-01 21:22:47.337104
+        link: https://pypi.org/project/dpath/#history
+        package_name: dpath
