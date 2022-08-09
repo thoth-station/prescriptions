@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AuthencodingGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authencoding
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'authencoding' was last updated at 2021-06-29 13:19:16
+        link: https://github.com/zopefoundation/AuthEncoding
+        package_name: authencoding
