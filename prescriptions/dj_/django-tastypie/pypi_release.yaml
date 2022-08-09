@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxTastypiePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-tastypie
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-tastypie' has no recent release, last release dates back to 2022-01-04 01:19:47.634969
+        link: https://pypi.org/project/django-tastypie/#history
+        package_name: django-tastypie
