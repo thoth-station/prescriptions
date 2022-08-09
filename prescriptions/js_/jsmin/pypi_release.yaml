@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsminPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsmin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsmin' has no recent release, last release dates back to 2022-01-16 20:35:59.130934
+        link: https://pypi.org/project/jsmin/#history
+        package_name: jsmin
