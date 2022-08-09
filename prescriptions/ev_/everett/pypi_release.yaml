@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EverettPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: everett
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'everett' has no recent release, last release dates back to 2022-01-13 16:31:50.131226
+        link: https://pypi.org/project/everett/#history
+        package_name: everett
