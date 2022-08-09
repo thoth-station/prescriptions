@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxSelect2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-select2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-select2' has no recent release, last release dates back to 2022-02-03 19:45:37.725089
+        link: https://pypi.org/project/django-select2/#history
+        package_name: django-select2
