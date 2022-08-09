@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioredlockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioredlock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioredlock' has no recent release, last release dates back to 2022-02-08 15:11:13.352930
+        link: https://pypi.org/project/aioredlock/#history
+        package_name: aioredlock
