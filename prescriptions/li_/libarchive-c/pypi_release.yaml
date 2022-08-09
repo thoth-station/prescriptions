@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LibarchivexCPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libarchive-c
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'libarchive-c' has no recent release, last release dates back to 2022-01-22 17:36:03.388268
+        link: https://pypi.org/project/libarchive-c/#history
+        package_name: libarchive-c
