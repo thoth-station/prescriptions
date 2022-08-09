@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: NagiospluginPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nagiosplugin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'nagiosplugin' has no recent release, last release dates back to 2022-02-07 19:39:09.263276
+        link: https://pypi.org/project/nagiosplugin/#history
+        package_name: nagiosplugin
