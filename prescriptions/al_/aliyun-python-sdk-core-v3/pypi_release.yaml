@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AliyunxPythonxSdkxCorexV3PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aliyun-python-sdk-core-v3
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aliyun-python-sdk-core-v3' has no recent release, last release dates back to 2022-02-07 09:10:11.890833
+        link: https://pypi.org/project/aliyun-python-sdk-core-v3/#history
+        package_name: aliyun-python-sdk-core-v3
