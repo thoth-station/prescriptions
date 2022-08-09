@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CornicePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cornice
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cornice' has no recent release, last release dates back to 2022-01-07 13:40:07.449819
+        link: https://pypi.org/project/cornice/#history
+        package_name: cornice
