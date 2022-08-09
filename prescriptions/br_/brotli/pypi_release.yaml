@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BrotliPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: brotli
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'brotli' has no recent release, last release dates back to 2022-01-24 11:53:03.417934
+        link: https://pypi.org/project/brotli/#history
+        package_name: brotli
