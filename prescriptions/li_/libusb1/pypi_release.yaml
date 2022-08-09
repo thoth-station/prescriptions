@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Libusb1PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: libusb1
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'libusb1' has no recent release, last release dates back to 2022-02-06 04:54:41.609210
+        link: https://pypi.org/project/libusb1/#history
+        package_name: libusb1
