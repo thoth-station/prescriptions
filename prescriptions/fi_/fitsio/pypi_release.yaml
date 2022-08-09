@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FitsioPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fitsio
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fitsio' has no recent release, last release dates back to 2022-01-28 18:47:41.907001
+        link: https://pypi.org/project/fitsio/#history
+        package_name: fitsio
