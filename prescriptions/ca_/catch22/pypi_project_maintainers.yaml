@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Catch22PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catch22
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'catch22' has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/catch22/
+        package_name: catch22
