@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IntakePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: intake
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'intake' has no recent release, last release dates back to 2022-01-09 22:34:01.815713
+        link: https://pypi.org/project/intake/#history
+        package_name: intake
