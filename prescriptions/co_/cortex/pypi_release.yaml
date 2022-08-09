@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CortexPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cortex
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cortex' has no recent release, last release dates back to 2022-01-10 17:37:01.197086
+        link: https://pypi.org/project/cortex/#history
+        package_name: cortex
