@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CocotbPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cocotb
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cocotb' has no recent release, last release dates back to 2022-02-07 21:00:35.016670
+        link: https://pypi.org/project/cocotb/#history
+        package_name: cocotb
