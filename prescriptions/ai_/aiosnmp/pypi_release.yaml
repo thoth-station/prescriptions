@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiosnmpPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosnmp
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiosnmp' has no recent release, last release dates back to 2022-01-07 16:35:10.438413
+        link: https://pypi.org/project/aiosnmp/#history
+        package_name: aiosnmp
