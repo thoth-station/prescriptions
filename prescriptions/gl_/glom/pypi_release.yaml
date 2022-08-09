@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GlomPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: glom
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'glom' has no recent release, last release dates back to 2022-01-24 09:34:04.874461
+        link: https://pypi.org/project/glom/#history
+        package_name: glom
