@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzurexMgmtxIothubPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-iothub
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-iothub' has no recent release, last release dates back to 2022-01-29 02:49:36.477319
+        link: https://pypi.org/project/azure-mgmt-iothub/#history
+        package_name: azure-mgmt-iothub
