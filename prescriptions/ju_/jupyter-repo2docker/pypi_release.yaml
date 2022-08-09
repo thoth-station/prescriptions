@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterxRepo2dockerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-repo2docker
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-repo2docker' has no recent release, last release dates back to 2022-02-06 14:20:16.369120
+        link: https://pypi.org/project/jupyter-repo2docker/#history
+        package_name: jupyter-repo2docker
