@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EnrichPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: enrich
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'enrich' has no recent release, last release dates back to 2022-01-10 15:30:33.873785
+        link: https://pypi.org/project/enrich/#history
+        package_name: enrich
