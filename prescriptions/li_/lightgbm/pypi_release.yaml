@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LightgbmPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lightgbm
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lightgbm' has no recent release, last release dates back to 2022-01-07 15:20:33.730660
+        link: https://pypi.org/project/lightgbm/#history
+        package_name: lightgbm
