@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AiocurrencylayerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiocurrencylayer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiocurrencylayer' has no recent release, last release dates back to 2022-01-04 08:43:13.825031
+        link: https://pypi.org/project/aiocurrencylayer/#history
+        package_name: aiocurrencylayer
