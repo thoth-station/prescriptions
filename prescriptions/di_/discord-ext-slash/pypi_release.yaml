@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiscordxExtxSlashPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-ext-slash
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'discord-ext-slash' has no recent release, last release dates back to 2022-01-04 06:36:32.161332
+        link: https://pypi.org/project/discord-ext-slash/#history
+        package_name: discord-ext-slash
