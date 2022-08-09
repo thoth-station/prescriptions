@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Mpi4pyPyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mpi4py
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'mpi4py' has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/mpi4py/
+        package_name: mpi4py
