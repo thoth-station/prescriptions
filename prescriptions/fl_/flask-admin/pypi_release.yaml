@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlaskxAdminPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flask-admin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flask-admin' has no recent release, last release dates back to 2022-01-30 03:32:51.086623
+        link: https://pypi.org/project/flask-admin/#history
+        package_name: flask-admin
