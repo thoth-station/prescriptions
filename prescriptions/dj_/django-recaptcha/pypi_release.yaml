@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxRecaptchaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-recaptcha
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-recaptcha' has no recent release, last release dates back to 2022-02-07 21:44:22.724667
+        link: https://pypi.org/project/django-recaptcha/#history
+        package_name: django-recaptcha
