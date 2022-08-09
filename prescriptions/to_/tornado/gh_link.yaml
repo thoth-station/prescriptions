@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: TornadoGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: tornado
+    run:
+      justification:
+      - type: INFO
+        message: Package 'tornado' is hosted on GitHub
+        link: https://github.com/tornadoweb/tornado
+        package_name: tornado
