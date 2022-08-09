@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AsvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'asv' has no recent release, last release dates back to 2022-02-06 14:16:23.087632
+        link: https://pypi.org/project/asv/#history
+        package_name: asv
