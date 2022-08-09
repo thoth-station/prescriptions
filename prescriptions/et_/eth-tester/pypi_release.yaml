@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthxTesterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-tester
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eth-tester' has no recent release, last release dates back to 2022-01-26 19:00:58.102982
+        link: https://pypi.org/project/eth-tester/#history
+        package_name: eth-tester
