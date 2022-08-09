@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AnsiblexBasePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ansible-base
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ansible-base' has no recent release, last release dates back to 2022-01-31 20:35:24.348372
+        link: https://pypi.org/project/ansible-base/#history
+        package_name: ansible-base
