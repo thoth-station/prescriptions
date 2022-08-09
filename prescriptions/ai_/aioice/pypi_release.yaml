@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioicePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioice
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioice' has no recent release, last release dates back to 2022-01-24 13:08:16.479250
+        link: https://pypi.org/project/aioice/#history
+        package_name: aioice
