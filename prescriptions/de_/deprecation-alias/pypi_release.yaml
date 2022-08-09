@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DeprecationxAliasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: deprecation-alias
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'deprecation-alias' has no recent release, last release dates back to 2022-02-07 10:28:33.520912
+        link: https://pypi.org/project/deprecation-alias/#history
+        package_name: deprecation-alias
