@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Ovs2x17x1PyPIArtifactSizeWrap
+  - name: Ovsx2x17x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -17,4 +17,22 @@ units:
           Installed artifact size for package 'ovs' in version
           '2.17.1' can have up to 5.27MiB
         link: https://pypi.org/project/ovs/2.17.1/#files
+        package_name: ovs
+  - name: Ovsx2x17x1xpost1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ovs
+          version: ==2.17.1.post1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ovs' in version
+          '2.17.1.post1' can have up to 5.27MiB
+        link: https://pypi.org/project/ovs/2.17.1.post1/#files
         package_name: ovs
