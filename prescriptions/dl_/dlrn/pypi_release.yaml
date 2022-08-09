@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DlrnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dlrn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dlrn' has no recent release, last release dates back to 2022-01-11 11:34:13.805361
+        link: https://pypi.org/project/dlrn/#history
+        package_name: dlrn
