@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DbutilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dbutils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dbutils' has no recent release, last release dates back to 2022-01-14 21:03:09.904225
+        link: https://pypi.org/project/dbutils/#history
+        package_name: dbutils
