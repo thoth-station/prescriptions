@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: LruxDictGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lru-dict
+    run:
+      release_notes:
+        organization: amitdev
+        repository: lru-dict
+        tag_version_prefix: v
