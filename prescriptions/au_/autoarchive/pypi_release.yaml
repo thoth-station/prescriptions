@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AutoarchivePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoarchive
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autoarchive' has no recent release, last release dates back to 2022-02-08 16:06:57.175354
+        link: https://pypi.org/project/autoarchive/#history
+        package_name: autoarchive
