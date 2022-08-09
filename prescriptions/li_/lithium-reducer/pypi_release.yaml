@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LithiumxReducerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lithium-reducer
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lithium-reducer' has no recent release, last release dates back to 2022-01-31 22:04:18.470580
+        link: https://pypi.org/project/lithium-reducer/#history
+        package_name: lithium-reducer
