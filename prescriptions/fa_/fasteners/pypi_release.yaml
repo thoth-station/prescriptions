@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FastenersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fasteners
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fasteners' has no recent release, last release dates back to 2022-01-25 14:54:24.569051
+        link: https://pypi.org/project/fasteners/#history
+        package_name: fasteners
