@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Gmpy2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gmpy2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gmpy2' has no recent release, last release dates back to 2022-01-06 05:52:36.253048
+        link: https://pypi.org/project/gmpy2/#history
+        package_name: gmpy2
