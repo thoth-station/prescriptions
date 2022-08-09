@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GetxVersionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: get-version
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'get-version' has no recent release, last release dates back to 2022-02-07 10:24:30.636796
+        link: https://pypi.org/project/get-version/#history
+        package_name: get-version
