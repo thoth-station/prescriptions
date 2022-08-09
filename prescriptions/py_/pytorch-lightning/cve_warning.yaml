@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PytorchxLightningCVEWarningWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pytorch-lightning
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'pytorch-lightning' is known to have at least 3 vulnerabilities reported in releases
+        link: cve_warning
+        package_name: pytorch-lightning
