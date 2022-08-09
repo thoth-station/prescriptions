@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxPipelinePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-pipeline
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-pipeline' has no recent release, last release dates back to 2022-01-10 19:32:37.884033
+        link: https://pypi.org/project/django-pipeline/#history
+        package_name: django-pipeline
