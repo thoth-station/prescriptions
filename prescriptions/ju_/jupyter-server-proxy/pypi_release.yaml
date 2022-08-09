@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JupyterxServerxProxyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jupyter-server-proxy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jupyter-server-proxy' has no recent release, last release dates back to 2022-01-24 23:18:10.502513
+        link: https://pypi.org/project/jupyter-server-proxy/#history
+        package_name: jupyter-server-proxy
