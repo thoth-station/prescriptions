@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: djangoql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'djangoql' has no recent release, last release dates back to 2022-01-26 15:51:46.738231
+        link: https://pypi.org/project/djangoql/#history
+        package_name: djangoql
