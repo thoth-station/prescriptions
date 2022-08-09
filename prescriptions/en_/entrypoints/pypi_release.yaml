@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EntrypointsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: entrypoints
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'entrypoints' has no recent release, last release dates back to 2022-02-02 21:30:28.172295
+        link: https://pypi.org/project/entrypoints/#history
+        package_name: entrypoints
