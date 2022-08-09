@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LoguruPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: loguru
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'loguru' has no recent release, last release dates back to 2022-01-29 13:47:31.879819
+        link: https://pypi.org/project/loguru/#history
+        package_name: loguru
