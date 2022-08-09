@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AuditwheelPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: auditwheel
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'auditwheel' has no recent release, last release dates back to 2022-01-08 09:31:12.942212
+        link: https://pypi.org/project/auditwheel/#history
+        package_name: auditwheel
