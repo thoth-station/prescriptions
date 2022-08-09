@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FaissxCpuPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: faiss-cpu
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'faiss-cpu' has no recent release, last release dates back to 2022-01-11 07:10:11.494313
+        link: https://pypi.org/project/faiss-cpu/#history
+        package_name: faiss-cpu
