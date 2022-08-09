@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EthxKeyfilePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eth-keyfile
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eth-keyfile' has no recent release, last release dates back to 2022-01-19 18:03:13.391377
+        link: https://pypi.org/project/eth-keyfile/#history
+        package_name: eth-keyfile
