@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AsysocksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asysocks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'asysocks' has no recent release, last release dates back to 2022-02-06 17:43:55.462050
+        link: https://pypi.org/project/asysocks/#history
+        package_name: asysocks
