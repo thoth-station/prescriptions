@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MultidictPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: multidict
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'multidict' has no recent release, last release dates back to 2022-01-24 16:57:12.290940
+        link: https://pypi.org/project/multidict/#history
+        package_name: multidict
