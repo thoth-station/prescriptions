@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ApeyePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apeye
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'apeye' has no recent release, last release dates back to 2022-02-07 07:19:17.860678
+        link: https://pypi.org/project/apeye/#history
+        package_name: apeye
