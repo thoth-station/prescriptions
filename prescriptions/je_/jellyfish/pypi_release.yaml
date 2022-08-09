@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JellyfishPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jellyfish
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jellyfish' has no recent release, last release dates back to 2022-01-07 20:20:57.663567
+        link: https://pypi.org/project/jellyfish/#history
+        package_name: jellyfish
