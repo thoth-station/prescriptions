@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConvertdatePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: convertdate
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'convertdate' has no recent release, last release dates back to 2022-01-22 18:32:33.952745
+        link: https://pypi.org/project/convertdate/#history
+        package_name: convertdate
