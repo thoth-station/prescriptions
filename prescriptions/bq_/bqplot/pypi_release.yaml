@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BqplotPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bqplot
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bqplot' has no recent release, last release dates back to 2022-02-11 15:27:18.922642
+        link: https://pypi.org/project/bqplot/#history
+        package_name: bqplot
