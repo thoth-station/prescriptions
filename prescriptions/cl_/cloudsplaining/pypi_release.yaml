@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CloudsplainingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cloudsplaining
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cloudsplaining' has no recent release, last release dates back to 2022-02-09 20:27:56.278986
+        link: https://pypi.org/project/cloudsplaining/#history
+        package_name: cloudsplaining
