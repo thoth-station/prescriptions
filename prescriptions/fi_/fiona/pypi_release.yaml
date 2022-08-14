@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FionaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fiona
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fiona' has no recent release, last release dates back to 2022-02-11 16:32:41.688118
+        link: https://pypi.org/project/fiona/#history
+        package_name: fiona
