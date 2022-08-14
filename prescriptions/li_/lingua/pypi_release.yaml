@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LinguaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lingua
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lingua' has no recent release, last release dates back to 2022-02-12 19:59:35.769945
+        link: https://pypi.org/project/lingua/#history
+        package_name: lingua
