@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LkmlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lkml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lkml' has no recent release, last release dates back to 2022-02-11 19:48:22.564194
+        link: https://pypi.org/project/lkml/#history
+        package_name: lkml
