@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: MdxxIncludeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mdx-include
+    run:
+      release_notes:
+        organization: neurobin
+        repository: mdx_include
+        tag_version_prefix: v
