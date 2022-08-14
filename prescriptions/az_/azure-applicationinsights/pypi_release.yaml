@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzurexApplicationinsightsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-applicationinsights
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-applicationinsights' has no recent release, last release dates back to 2022-02-11 22:33:47.977556
+        link: https://pypi.org/project/azure-applicationinsights/#history
+        package_name: azure-applicationinsights
