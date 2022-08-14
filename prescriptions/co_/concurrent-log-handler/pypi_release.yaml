@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConcurrentxLogxHandlerPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: concurrent-log-handler
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'concurrent-log-handler' has no recent release, last release dates back to 2022-02-13 18:40:18.970402
+        link: https://pypi.org/project/concurrent-log-handler/#history
+        package_name: concurrent-log-handler
