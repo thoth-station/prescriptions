@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlexmockPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flexmock
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flexmock' has no recent release, last release dates back to 2022-02-10 01:09:34.011050
+        link: https://pypi.org/project/flexmock/#history
+        package_name: flexmock
