@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DidPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: did
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'did' has no recent release, last release dates back to 2022-02-11 13:30:44.510167
+        link: https://pypi.org/project/did/#history
+        package_name: did
