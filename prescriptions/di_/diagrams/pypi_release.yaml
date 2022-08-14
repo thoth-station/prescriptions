@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiagramsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: diagrams
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'diagrams' has no recent release, last release dates back to 2022-02-09 13:23:33.861735
+        link: https://pypi.org/project/diagrams/#history
+        package_name: diagrams
