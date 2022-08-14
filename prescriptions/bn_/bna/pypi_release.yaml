@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BnaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bna
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bna' has no recent release, last release dates back to 2022-02-11 14:19:04.728116
+        link: https://pypi.org/project/bna/#history
+        package_name: bna
