@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoxPackagingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-packaging
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-packaging' has no recent release, last release dates back to 2022-02-11 02:56:27.268584
+        link: https://pypi.org/project/jaraco-packaging/#history
+        package_name: jaraco-packaging
