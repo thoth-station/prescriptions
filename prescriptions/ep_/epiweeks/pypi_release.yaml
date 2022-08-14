@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: EpiweeksPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: epiweeks
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'epiweeks' has no recent release, last release dates back to 2022-02-12 07:39:20.921273
+        link: https://pypi.org/project/epiweeks/#history
+        package_name: epiweeks
