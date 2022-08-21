@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FilecheckPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: filecheck
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'filecheck' has no recent release, last release dates back to 2022-02-16 19:39:02.762151
+        link: https://pypi.org/project/filecheck/#history
+        package_name: filecheck
