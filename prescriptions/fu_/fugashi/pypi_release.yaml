@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FugashiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fugashi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fugashi' has no recent release, last release dates back to 2022-02-16 05:56:18.666796
+        link: https://pypi.org/project/fugashi/#history
+        package_name: fugashi
