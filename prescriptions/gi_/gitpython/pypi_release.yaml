@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GitpythonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gitpython
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gitpython' has no recent release, last release dates back to 2022-02-20 01:15:41.132891
+        link: https://pypi.org/project/gitpython/#history
+        package_name: gitpython
