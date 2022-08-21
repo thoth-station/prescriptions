@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ElasticsearchxDbapiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: elasticsearch-dbapi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'elasticsearch-dbapi' has no recent release, last release dates back to 2022-02-14 12:40:35.125446
+        link: https://pypi.org/project/elasticsearch-dbapi/#history
+        package_name: elasticsearch-dbapi
