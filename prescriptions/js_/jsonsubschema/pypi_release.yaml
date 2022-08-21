@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JsonsubschemaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonsubschema
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jsonsubschema' has no recent release, last release dates back to 2022-02-18 01:08:51.298248
+        link: https://pypi.org/project/jsonsubschema/#history
+        package_name: jsonsubschema
