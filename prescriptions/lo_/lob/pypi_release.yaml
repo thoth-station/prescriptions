@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: LobPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: lob
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'lob' has no recent release, last release dates back to 2022-02-19 00:23:09.170141
+        link: https://pypi.org/project/lob/#history
+        package_name: lob
