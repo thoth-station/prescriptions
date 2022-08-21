@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: MwparserfromhellPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mwparserfromhell
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'mwparserfromhell' has no recent release, last release dates back to 2022-02-14 07:47:11.894908
+        link: https://pypi.org/project/mwparserfromhell/#history
+        package_name: mwparserfromhell
