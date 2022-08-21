@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FiscalyearPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fiscalyear
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'fiscalyear' has no recent release, last release dates back to 2022-02-17 03:18:28.541138
+        link: https://pypi.org/project/fiscalyear/#history
+        package_name: fiscalyear
