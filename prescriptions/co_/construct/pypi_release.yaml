@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ConstructPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: construct
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'construct' has no recent release, last release dates back to 2022-02-21 23:09:15.100840
+        link: https://pypi.org/project/construct/#history
+        package_name: construct
