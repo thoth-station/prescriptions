@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlitxCorePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flit-core
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flit-core' has no recent release, last release dates back to 2022-02-23 11:36:18.876371
+        link: https://pypi.org/project/flit-core/#history
+        package_name: flit-core
