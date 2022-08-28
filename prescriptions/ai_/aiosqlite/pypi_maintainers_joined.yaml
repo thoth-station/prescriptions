@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AiosqlitePyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiosqlite
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'aiosqlite' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/aiosqlite/
+        package_name: aiosqlite
