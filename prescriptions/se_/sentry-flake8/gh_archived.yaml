@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SentryxFlake8GitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sentry-flake8
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'sentry-flake8' is marked as archived on GitHub
+        link: https://github.com/getsentry/sentry-flake8
+        package_name: sentry-flake8
