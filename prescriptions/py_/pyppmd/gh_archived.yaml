@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: PyppmdGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyppmd
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pyppmd' is marked as archived on GitHub
+        link: https://github.com/miurahr/pyppmd
+        package_name: pyppmd
