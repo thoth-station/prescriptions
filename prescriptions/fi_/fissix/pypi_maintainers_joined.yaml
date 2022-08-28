@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: FissixPyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: fissix
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'fissix' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/fissix/
+        package_name: fissix
