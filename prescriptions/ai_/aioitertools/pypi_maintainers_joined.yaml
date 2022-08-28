@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AioitertoolsPyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioitertools
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'aioitertools' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/aioitertools/
+        package_name: aioitertools
