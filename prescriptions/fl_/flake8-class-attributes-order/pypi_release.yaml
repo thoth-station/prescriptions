@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Flake8xClassxAttributesxOrderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flake8-class-attributes-order
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flake8-class-attributes-order' has no recent release, last release dates back to 2022-02-24 15:47:09.848430
+        link: https://pypi.org/project/flake8-class-attributes-order/#history
+        package_name: flake8-class-attributes-order
