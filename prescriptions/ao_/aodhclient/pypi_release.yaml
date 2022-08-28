@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AodhclientPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aodhclient
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aodhclient' has no recent release, last release dates back to 2022-02-22 10:19:49.893646
+        link: https://pypi.org/project/aodhclient/#history
+        package_name: aodhclient
