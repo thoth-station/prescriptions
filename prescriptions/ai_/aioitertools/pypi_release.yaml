@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AioitertoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioitertools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioitertools' has no recent release, last release dates back to 2022-02-24 03:42:44.100399
+        link: https://pypi.org/project/aioitertools/#history
+        package_name: aioitertools
