@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: FlitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flit
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'flit' has no recent release, last release dates back to 2022-02-23 11:36:32.862063
+        link: https://pypi.org/project/flit/#history
+        package_name: flit
