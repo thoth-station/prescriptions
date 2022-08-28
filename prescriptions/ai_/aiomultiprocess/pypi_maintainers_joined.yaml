@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AiomultiprocessPyPIMaintainersJoinWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiomultiprocess
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Project 'aiomultiprocess' has maintainers that joined PyPI
+          recently (less than 180 days ago)
+        link: https://pypi.org/project/aiomultiprocess/
+        package_name: aiomultiprocess
