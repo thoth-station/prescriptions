@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AstromlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astroml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'astroml' has no recent release, last release dates back to 2022-03-01 20:02:02.761719
+        link: https://pypi.org/project/astroml/#history
+        package_name: astroml
