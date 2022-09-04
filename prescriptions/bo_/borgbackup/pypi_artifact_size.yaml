@@ -558,6 +558,24 @@ units:
           '1.2.1' can have up to 3.83MiB
         link: https://pypi.org/project/borgbackup/1.2.1/#files
         package_name: borgbackup
+  - name: Borgbackupx1x2x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: borgbackup
+          version: ==1.2.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'borgbackup' in version
+          '1.2.2' can have up to 3.86MiB
+        link: https://pypi.org/project/borgbackup/1.2.2/#files
+        package_name: borgbackup
   - name: Borgbackupx1x3x0a1PyPIArtifactSizeWrap
     type: wrap
     should_include:
