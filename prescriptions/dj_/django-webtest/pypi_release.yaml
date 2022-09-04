@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxWebtestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-webtest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-webtest' has no recent release, last release dates back to 2022-03-02 13:29:45.469804
+        link: https://pypi.org/project/django-webtest/#history
+        package_name: django-webtest
