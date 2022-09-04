@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxWatchmanPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-watchman
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-watchman' has no recent release, last release dates back to 2022-03-04 16:20:54.545516
+        link: https://pypi.org/project/django-watchman/#history
+        package_name: django-watchman
