@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DiscordxPyxSelfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-py-self
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'discord-py-self' has no recent release, last release dates back to 2022-03-02 01:56:41.182284
+        link: https://pypi.org/project/discord-py-self/#history
+        package_name: discord-py-self
