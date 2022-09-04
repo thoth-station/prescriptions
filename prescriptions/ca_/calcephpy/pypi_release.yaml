@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CalcephpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: calcephpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'calcephpy' has no recent release, last release dates back to 2022-02-28 15:21:55.485131
+        link: https://pypi.org/project/calcephpy/#history
+        package_name: calcephpy
