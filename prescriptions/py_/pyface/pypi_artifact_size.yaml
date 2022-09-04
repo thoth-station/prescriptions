@@ -252,3 +252,21 @@ units:
           '7.4.1' can have up to 7.40MiB
         link: https://pypi.org/project/pyface/7.4.1/#files
         package_name: pyface
+  - name: Pyfacex7x4x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pyface
+          version: ==7.4.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pyface' in version
+          '7.4.2' can have up to 7.41MiB
+        link: https://pypi.org/project/pyface/7.4.2/#files
+        package_name: pyface
