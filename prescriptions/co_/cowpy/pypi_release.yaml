@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CowpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cowpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cowpy' has no recent release, last release dates back to 2022-03-06 18:17:38.926530
+        link: https://pypi.org/project/cowpy/#history
+        package_name: cowpy
