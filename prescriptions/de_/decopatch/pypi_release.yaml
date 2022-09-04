@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DecopatchPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: decopatch
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'decopatch' has no recent release, last release dates back to 2022-03-01 08:57:21.790711
+        link: https://pypi.org/project/decopatch/#history
+        package_name: decopatch
