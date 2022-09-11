@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MongomockGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mongomock
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mongomock' is hosted on GitHub
+        link: https://github.com/mongomock/mongomock
+        package_name: mongomock
