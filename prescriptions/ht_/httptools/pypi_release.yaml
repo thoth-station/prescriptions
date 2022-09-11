@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HttptoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httptools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'httptools' has no recent release, last release dates back to 2022-02-22 18:56:32.885079
+        link: https://pypi.org/project/httptools/#history
+        package_name: httptools
