@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RpycGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rpyc
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rpyc' is hosted on GitHub
+        link: https://github.com/tomerfiliba-org/rpyc
+        package_name: rpyc
