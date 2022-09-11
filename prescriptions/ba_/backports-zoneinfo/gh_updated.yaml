@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BackportsxZoneinfoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-zoneinfo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'backports-zoneinfo' was last updated at 2021-05-25 14:34:32
+        link: https://github.com/pganssle/zoneinfo
+        package_name: backports-zoneinfo
