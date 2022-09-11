@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: KfpGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: kfp
+    run:
+      release_notes:
+        organization: kubeflow
+        repository: pipelines
