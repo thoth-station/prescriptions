@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpentokPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: opentok
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'opentok' has no recent release, last release dates back to 2022-02-03 13:47:41.032895
+        link: https://pypi.org/project/opentok/#history
+        package_name: opentok
