@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: BtreesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btrees
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'btrees' has no recent release, last release dates back to 2022-03-09 09:08:21.641383
+        link: https://pypi.org/project/btrees/#history
+        package_name: btrees
