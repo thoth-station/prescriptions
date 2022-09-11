@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JaracoxItertoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jaraco-itertools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'jaraco-itertools' has no recent release, last release dates back to 2022-02-21 03:01:58.887329
+        link: https://pypi.org/project/jaraco-itertools/#history
+        package_name: jaraco-itertools
