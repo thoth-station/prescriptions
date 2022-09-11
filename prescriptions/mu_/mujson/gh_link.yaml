@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: MujsonGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mujson
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mujson' is hosted on GitHub
+        link: https://github.com/mattgiles/mujson
+        package_name: mujson
