@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: RequestsxFuturesGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: requests-futures
+    run:
+      release_notes:
+        organization: ross
+        repository: requests-futures
+        tag_version_prefix: v
