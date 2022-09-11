@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: IjsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ijson
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ijson' has no recent release, last release dates back to 2022-02-08 06:30:37.277055
+        link: https://pypi.org/project/ijson/#history
+        package_name: ijson
