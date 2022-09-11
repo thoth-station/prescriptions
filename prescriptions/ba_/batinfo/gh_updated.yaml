@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BatinfoGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: batinfo
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'batinfo' was last updated at 2021-08-21 08:58:08
+        link: https://github.com/nicolargo/batinfo
+        package_name: batinfo
