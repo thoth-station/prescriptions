@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BabelGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: babel
+    run:
+      justification:
+      - type: INFO
+        message: Package 'babel' is hosted on GitHub
+        link: https://github.com/python-babel/babel
+        package_name: babel
