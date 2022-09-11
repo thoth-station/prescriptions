@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BenigetGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beniget
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'beniget' was last updated at 2021-08-06 10:14:17
+        link: https://github.com/serge-sans-paille/beniget
+        package_name: beniget
