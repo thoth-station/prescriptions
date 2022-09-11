@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HashinPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hashin
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hashin' has no recent release, last release dates back to 2022-01-07 17:36:50.861421
+        link: https://pypi.org/project/hashin/#history
+        package_name: hashin
