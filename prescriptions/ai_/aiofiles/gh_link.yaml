@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AiofilesGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiofiles
+    run:
+      justification:
+      - type: INFO
+        message: Package 'aiofiles' is hosted on GitHub
+        link: https://github.com/Tinche/aiofiles
+        package_name: aiofiles
