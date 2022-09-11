@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: OpenshiftPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: openshift
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'openshift' has no recent release, last release dates back to 2022-02-06 21:11:32.861652
+        link: https://pypi.org/project/openshift/#history
+        package_name: openshift
