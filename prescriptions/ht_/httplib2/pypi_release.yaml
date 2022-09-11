@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: Httplib2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: httplib2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'httplib2' has no recent release, last release dates back to 2022-02-03 00:00:30.900506
+        link: https://pypi.org/project/httplib2/#history
+        package_name: httplib2
