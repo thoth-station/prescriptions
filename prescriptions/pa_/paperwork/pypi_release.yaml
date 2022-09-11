@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: PaperworkPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paperwork
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'paperwork' has no recent release, last release dates back to 2022-01-31 10:50:46.151265
+        link: https://pypi.org/project/paperwork/#history
+        package_name: paperwork
