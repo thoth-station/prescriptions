@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AzurexMgmtxRdbmsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-rdbms
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-rdbms' has no recent release, last release dates back to 2022-03-07 05:33:37.515860
+        link: https://pypi.org/project/azure-mgmt-rdbms/#history
+        package_name: azure-mgmt-rdbms
