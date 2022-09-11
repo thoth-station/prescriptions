@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AtomicwritesGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atomicwrites
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'atomicwrites' is marked as archived on GitHub
+        link: https://github.com/untitaker/python-atomicwrites
+        package_name: atomicwrites
