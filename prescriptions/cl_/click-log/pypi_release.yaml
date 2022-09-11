@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: ClickxLogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click-log
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'click-log' has no recent release, last release dates back to 2022-03-13 11:10:17.594807
+        link: https://pypi.org/project/click-log/#history
+        package_name: click-log
