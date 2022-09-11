@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BloomxFilterGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bloom-filter
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'bloom-filter' was last updated at 2021-07-04 07:18:22
+        link: https://github.com/hiway/python-bloom-filter
+        package_name: bloom-filter
