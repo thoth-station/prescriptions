@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: BlinkerGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: blinker
+    run:
+      justification:
+      - type: INFO
+        message: Package 'blinker' is hosted on GitHub
+        link: https://github.com/pallets-eco/blinker
+        package_name: blinker
