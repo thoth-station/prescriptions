@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: RsaGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: rsa
+    run:
+      justification:
+      - type: INFO
+        message: Package 'rsa' is hosted on GitHub
+        link: https://github.com/sybrenstuvel/python-rsa
+        package_name: rsa
