@@ -1,0 +1,14 @@
+units:
+  wraps:
+  - name: Ip2locationGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ip2location
+    run:
+      release_notes:
+        organization: chrislim2888
+        repository: ip2location-python
