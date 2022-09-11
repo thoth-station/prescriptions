@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CvxoptPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cvxopt
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cvxopt' has no recent release, last release dates back to 2022-03-08 21:06:34.943358
+        link: https://pypi.org/project/cvxopt/#history
+        package_name: cvxopt
