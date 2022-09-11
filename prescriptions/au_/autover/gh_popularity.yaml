@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: AutoverGitHubPopularityWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autover
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'autover' has low popularity on GitHub
+        link: https://github.com/pyviz-dev/autover
+        package_name: autover
