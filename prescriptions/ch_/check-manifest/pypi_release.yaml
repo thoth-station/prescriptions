@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: CheckxManifestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: check-manifest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'check-manifest' has no recent release, last release dates back to 2022-03-13 10:09:32.037162
+        link: https://pypi.org/project/check-manifest/#history
+        package_name: check-manifest
