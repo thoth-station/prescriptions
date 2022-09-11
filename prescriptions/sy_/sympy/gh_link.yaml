@@ -1,0 +1,16 @@
+units:
+  wraps:
+  - name: SympyGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sympy
+    run:
+      justification:
+      - type: INFO
+        message: Package 'sympy' is hosted on GitHub
+        link: https://github.com/sympy/sympy
+        package_name: sympy
