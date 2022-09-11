@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HgtoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hgtools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hgtools' has no recent release, last release dates back to 2022-01-10 03:23:17.311416
+        link: https://pypi.org/project/hgtools/#history
+        package_name: hgtools
