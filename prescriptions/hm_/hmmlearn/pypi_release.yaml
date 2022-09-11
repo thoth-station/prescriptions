@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: HmmlearnPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: hmmlearn
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'hmmlearn' has no recent release, last release dates back to 2022-02-10 14:15:27.953027
+        link: https://pypi.org/project/hmmlearn/#history
+        package_name: hmmlearn
