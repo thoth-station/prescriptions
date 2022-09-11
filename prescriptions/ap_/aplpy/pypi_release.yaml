@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: AplpyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aplpy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aplpy' has no recent release, last release dates back to 2022-03-10 16:25:40.999984
+        link: https://pypi.org/project/aplpy/#history
+        package_name: aplpy
