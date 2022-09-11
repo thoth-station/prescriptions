@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: GspreadxFormattingPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: gspread-formatting
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'gspread-formatting' has no recent release, last release dates back to 2022-02-09 19:19:11.030113
+        link: https://pypi.org/project/gspread-formatting/#history
+        package_name: gspread-formatting
