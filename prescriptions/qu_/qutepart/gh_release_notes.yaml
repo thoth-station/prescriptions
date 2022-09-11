@@ -1,0 +1,15 @@
+units:
+  wraps:
+  - name: QutepartGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: qutepart
+    run:
+      release_notes:
+        organization: andreikop
+        repository: qutepart
+        tag_version_prefix: v
