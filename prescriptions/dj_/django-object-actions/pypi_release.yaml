@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: DjangoxObjectxActionsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-object-actions
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-object-actions' has no recent release, last release dates back to 2022-03-12 16:08:32.002547
+        link: https://pypi.org/project/django-object-actions/#history
+        package_name: django-object-actions
