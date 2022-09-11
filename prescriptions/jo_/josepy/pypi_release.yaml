@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: JosepyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: josepy
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'josepy' has no recent release, last release dates back to 2022-03-10 15:41:40.587237
+        link: https://pypi.org/project/josepy/#history
+        package_name: josepy
