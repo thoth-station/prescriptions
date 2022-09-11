@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: H11PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: h11
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'h11' has no recent release, last release dates back to 2022-01-19 20:45:24.995982
+        link: https://pypi.org/project/h11/#history
+        package_name: h11
