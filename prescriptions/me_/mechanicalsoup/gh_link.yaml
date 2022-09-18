@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: MechanicalsoupGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: mechanicalsoup
+    run:
+      justification:
+      - type: INFO
+        message: Package 'mechanicalsoup' is hosted on GitHub
+        link: https://github.com/MechanicalSoup/MechanicalSoup
+        package_name: mechanicalsoup
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.4
