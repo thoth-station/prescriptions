@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BcpandasPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bcpandas
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bcpandas' has no recent release, last release dates back to 2022-03-18 03:40:32.182248
+        link: https://pypi.org/project/bcpandas/#history
+        package_name: bcpandas
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.4
