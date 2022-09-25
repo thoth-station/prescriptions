@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AltgraphGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: altgraph
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'altgraph' was last updated at 2021-09-16 11:14:34
+        link: https://github.com/ronaldoussoren/altgraph
+        package_name: altgraph
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.4
