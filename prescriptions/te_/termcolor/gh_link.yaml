@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: TermcolorGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: termcolor
+    run:
+      justification:
+      - type: INFO
+        message: Package 'termcolor' is hosted on GitHub
+        link: https://github.com/termcolor/termcolor
+        package_name: termcolor
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.4
