@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AioquicPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aioquic
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aioquic' has no recent release, last release dates back to 2022-03-29 23:04:18.533158
+        link: https://pypi.org/project/aioquic/#history
+        package_name: aioquic
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.4
