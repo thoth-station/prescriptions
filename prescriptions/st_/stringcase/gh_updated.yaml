@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: StringcaseGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stringcase
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stringcase' was last updated at 2021-03-08 02:30:39
+        link: https://github.com/okunishinishi/python-stringcase
+        package_name: stringcase
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.5
