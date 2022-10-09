@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: StdlibxListGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: stdlib-list
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'stdlib-list' was last updated at 2020-11-18 17:13:32
+        link: https://github.com/jackmaney/python-stdlib-list
+        package_name: stdlib-list
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.5
