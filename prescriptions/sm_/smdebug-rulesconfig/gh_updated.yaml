@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SmdebugxRulesconfigGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: smdebug-rulesconfig
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'smdebug-rulesconfig' was last updated at 2021-05-12 18:04:04
+        link: https://github.com/awslabs/sagemaker-debugger-rulesconfig
+        package_name: smdebug-rulesconfig
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.5
