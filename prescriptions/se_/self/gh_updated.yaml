@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SelfGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: self
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'self' was last updated at 2020-12-03 21:24:16
+        link: https://github.com/andrewp-as-is/self.py
+        package_name: self
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.5
