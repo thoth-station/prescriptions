@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Beautifulsoup4PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beautifulsoup4
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'beautifulsoup4' has no recent release, last release dates back to 2022-04-08 21:22:48.366338
+        link: https://pypi.org/project/beautifulsoup4/#history
+        package_name: beautifulsoup4
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.5
