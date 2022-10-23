@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Chiabip158PyPIProjectMaintainersWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: chiabip158
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: WARNING
+        message: Project 'chiabip158' has low number of maintainers on PyPI (less than 3)
+        link: https://pypi.org/project/chiabip158/
+        package_name: chiabip158
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.5
