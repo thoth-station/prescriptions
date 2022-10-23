@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AuthheadersPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: authheaders
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'authheaders' has no recent release, last release dates back to 2022-04-22 01:56:08.491661
+        link: https://pypi.org/project/authheaders/#history
+        package_name: authheaders
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.7.5
