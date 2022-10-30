@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SalibGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: salib
+    run:
+      justification:
+      - type: INFO
+        message: Package 'salib' is hosted on GitHub
+        link: https://github.com/SALib/SALib
+        package_name: salib
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
