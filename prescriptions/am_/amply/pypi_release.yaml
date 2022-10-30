@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AmplyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: amply
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'amply' has no recent release, last release dates back to 2022-04-25 09:15:16.175312
+        link: https://pypi.org/project/amply/#history
+        package_name: amply
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
