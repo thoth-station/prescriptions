@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: VulnerabilitiesRobotframeworkxExcellibScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: robotframework-excellib
+    run:
+      justification:
+      - type: INFO
+        message: Project does not have open or unfixed vulnerabilities on the OSV service based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: robotframework-excellib
+        project_url: github.com/peterservice-rnd/robotframework-excellib
+        project_revision: 85324dde9929649932f254a93cf6e101f4a778c9
+        scorecard_score: 10
+        tag: no-unfixed-vulnerabilities
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
