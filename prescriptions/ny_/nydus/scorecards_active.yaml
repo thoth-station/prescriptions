@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: ActiveNydusScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: nydus
+    run:
+      justification:
+      - type: WARNING
+        message: Project is NOT actively maintained based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: nydus
+        project_url: github.com/disqus/nydus
+        project_revision: 9b505840da47a34f758a830c3992fa5dcb7bb7ad
+        scorecard_score: 0
+        tag: no-actively-maintained
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
