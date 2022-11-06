@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BeautifultablePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: beautifultable
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'beautifultable' has no recent release, last release dates back to 2022-05-06 17:20:59.879498
+        link: https://pypi.org/project/beautifultable/#history
+        package_name: beautifultable
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
