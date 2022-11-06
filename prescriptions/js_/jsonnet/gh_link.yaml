@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: JsonnetGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: jsonnet
+    run:
+      justification:
+      - type: INFO
+        message: Package 'jsonnet' is hosted on GitHub
+        link: https://github.com/google/jsonnet
+        package_name: jsonnet
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
