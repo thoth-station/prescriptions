@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AiomysqlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiomysql
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiomysql' has no recent release, last release dates back to 2022-05-08 19:40:36.735941
+        link: https://pypi.org/project/aiomysql/#history
+        package_name: aiomysql
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
