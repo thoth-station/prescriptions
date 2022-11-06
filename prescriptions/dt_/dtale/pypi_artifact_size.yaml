@@ -3171,3 +3171,24 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Dtalex2x9x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dtale
+          version: ==2.9.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'dtale' in version
+          '2.9.0' can have up to 12.46MiB
+        link: https://pypi.org/project/dtale/2.9.0/#files
+        package_name: dtale
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
