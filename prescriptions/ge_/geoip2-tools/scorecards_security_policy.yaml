@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: SecurityPolicyGeoip2xToolsScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoip2-tools
+    run:
+      justification:
+      - type: WARNING
+        message: Project does not have any security policy published based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: geoip2-tools
+        project_url: github.com/Nekmo/geoip2-tools
+        project_revision: 25bb63e877c4b051823ea04f8adc40d114c9a6df
+        scorecard_score: 0
+        tag: no-security-policy
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
