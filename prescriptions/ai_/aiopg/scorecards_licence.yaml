@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: LicenseAiopgScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiopg
+    run:
+      justification:
+      - type: INFO
+        message: Project has published a license based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: aiopg
+        project_url: github.com/aio-libs/aiopg
+        project_revision: 0b5e63cac2a50d4409051c2c066cc80d4d35b862
+        scorecard_score: 10
+        tag: license
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
