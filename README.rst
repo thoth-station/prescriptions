@@ -43,6 +43,21 @@ Need help with a prescription?
 If you spotted an issue in Python dependencies or Python ecosystem, just let us
 know by openning an issue and we will help you with writing a prescription.
 
+Data sources used for automatically generated prescriptions
+===========================================================
+
+Currently implemented `handlers
+<https://github.com/thoth-station/prescriptions-refresh-job/tree/master/thoth/prescriptions_refresh/handlers>`__
+in Thoth's weekly cronjob allow to auto-generate prescriptions for the given data:
+
+- CVE present in a package, from the `PyPA advisory-database
+<https://github.com/pypa/advisory-database>`__
+- Project maintenance and development practices as evaluated by the `OSSF Security Scorecards
+<https://github.com/ossf/scorecard>___
+- Information on package maintainance obtained via the GitHub API: if the given project is marked as archived, is forked from another project, hosts release notes, its number of maintainers, stars, contributors.
+- The package size, number of downloads, maintainers and last release date from `PyPI
+<https://pypi.org/>`___.
+
 Release Details
 ==============================
 
