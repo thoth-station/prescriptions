@@ -53,8 +53,7 @@ in Thoth's weekly cronjob allow to auto-generate prescriptions for the given dat
 - CVE present in a package, from the `PyPA advisory-database <https://github.com/pypa/advisory-database>`_
 - Project maintenance and development practices as evaluated by the `OSSF Security Scorecards <https://github.com/ossf/scorecard>`_
 - Information on package maintainance obtained via the GitHub API: if the given project is marked as archived, is forked from another project, hosts release notes, its number of maintainers, stars, contributors.
-- The package size, number of downloads, maintainers and last release date from `PyPI
-<https://pypi.org/>`_.
+- The package size, number of downloads, maintainers and last release date from `PyPI <https://pypi.org/>`_.
 
 Release Details
 ==============================
