@@ -273,6 +273,27 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Awkwardx1x10x2PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awkward
+          version: ==1.10.2
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awkward' in version
+          '1.10.2' can have up to 20.60MiB
+        link: https://pypi.org/project/awkward/1.10.2/#files
+        package_name: awkward
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
   - name: Awkwardx1x2x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
@@ -815,6 +836,27 @@ units:
           Installed artifact size for package 'awkward' in version
           '2.0.0rc3' can have up to 3.88MiB
         link: https://pypi.org/project/awkward/2.0.0rc3/#files
+        package_name: awkward
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
+  - name: Awkwardx2x0x0rc4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awkward
+          version: ==2.0.0rc4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awkward' in version
+          '2.0.0rc4' can have up to 4.70MiB
+        link: https://pypi.org/project/awkward/2.0.0rc4/#files
         package_name: awkward
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
