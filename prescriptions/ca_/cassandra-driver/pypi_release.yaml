@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CassandraxDriverPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cassandra-driver
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cassandra-driver' has no recent release, last release dates back to 2022-04-20 17:21:13.940997
+        link: https://pypi.org/project/cassandra-driver/#history
+        package_name: cassandra-driver
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
