@@ -20,7 +20,7 @@ units:
         package_name: flent
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
-          prescriptions_version: 0.7.4
+          prescriptions_version: 0.8.0
   - name: Flentx2x0x1PyPIArtifactSizeWrap
     type: wrap
     should_include:
@@ -41,4 +41,46 @@ units:
         package_name: flent
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
-          prescriptions_version: 0.7.4
+          prescriptions_version: 0.8.0
+  - name: Flentx2x1x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flent
+          version: ==2.1.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flent' in version
+          '2.1.0' can have up to 3.87MiB
+        link: https://pypi.org/project/flent/2.1.0/#files
+        package_name: flent
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
+  - name: Flentx2x1x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: flent
+          version: ==2.1.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'flent' in version
+          '2.1.1' can have up to 3.87MiB
+        link: https://pypi.org/project/flent/2.1.1/#files
+        package_name: flent
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
