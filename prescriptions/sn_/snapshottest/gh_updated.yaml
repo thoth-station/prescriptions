@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: SnapshottestGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: snapshottest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'snapshottest' was last updated at 2021-11-04 01:31:09
+        link: https://github.com/syrusakbary/snapshottest
+        package_name: snapshottest
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
