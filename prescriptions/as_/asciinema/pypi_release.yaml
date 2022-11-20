@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AsciinemaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: asciinema
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'asciinema' has no recent release, last release dates back to 2022-05-07 19:12:19.999992
+        link: https://pypi.org/project/asciinema/#history
+        package_name: asciinema
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
