@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ClevercsvPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: clevercsv
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'clevercsv' has no recent release, last release dates back to 2022-05-12 20:46:42.074513
+        link: https://pypi.org/project/clevercsv/#history
+        package_name: clevercsv
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
