@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ClickPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: click
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'click' has no recent release, last release dates back to 2022-04-28 17:36:09.097657
+        link: https://pypi.org/project/click/#history
+        package_name: click
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
