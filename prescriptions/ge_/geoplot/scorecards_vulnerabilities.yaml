@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: VulnerabilitiesGeoplotScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoplot
+    run:
+      justification:
+      - type: INFO
+        message: Project does not have open or unfixed vulnerabilities on the OSV service based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: geoplot
+        project_url: github.com/ResidentMario/geoplot
+        project_revision: 2da7dc7392d0c7525db7585fd741e95c124fe5c6
+        scorecard_score: 10
+        tag: no-unfixed-vulnerabilities
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
