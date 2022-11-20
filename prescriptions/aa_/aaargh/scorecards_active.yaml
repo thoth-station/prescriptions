@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: ActiveAaarghScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aaargh
+    run:
+      justification:
+      - type: WARNING
+        message: Project is NOT actively maintained based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: aaargh
+        project_url: github.com/wbolster/aaargh
+        project_revision: fb63414890d1e01158ee0e3bf834e23cc5d68005
+        scorecard_score: 0
+        tag: no-actively-maintained
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
