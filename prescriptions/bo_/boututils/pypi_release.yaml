@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BoututilsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: boututils
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'boututils' has no recent release, last release dates back to 2022-04-07 15:04:42.539050
+        link: https://pypi.org/project/boututils/#history
+        package_name: boututils
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
