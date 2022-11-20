@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AppnopePyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: appnope
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'appnope' has no recent release, last release dates back to 2022-04-04 10:26:28.632234
+        link: https://pypi.org/project/appnope/#history
+        package_name: appnope
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
