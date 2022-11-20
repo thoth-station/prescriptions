@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BtlewrapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: btlewrap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'btlewrap' has no recent release, last release dates back to 2022-05-15 09:40:34.879061
+        link: https://pypi.org/project/btlewrap/#history
+        package_name: btlewrap
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
