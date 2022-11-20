@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AnyasciiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: anyascii
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'anyascii' has no recent release, last release dates back to 2022-04-06 09:24:07.835089
+        link: https://pypi.org/project/anyascii/#history
+        package_name: anyascii
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
