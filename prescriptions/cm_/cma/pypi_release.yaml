@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CmaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cma
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cma' has no recent release, last release dates back to 2022-03-19 16:49:29.266851
+        link: https://pypi.org/project/cma/#history
+        package_name: cma
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
