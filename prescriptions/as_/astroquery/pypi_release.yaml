@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AstroqueryPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astroquery
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'astroquery' has no recent release, last release dates back to 2022-03-23 06:57:01.767874
+        link: https://pypi.org/project/astroquery/#history
+        package_name: astroquery
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
