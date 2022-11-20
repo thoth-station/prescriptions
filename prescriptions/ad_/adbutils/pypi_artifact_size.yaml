@@ -126,6 +126,27 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Adbutilsx1x0x10PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: adbutils
+          version: ==1.0.10
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'adbutils' in version
+          '1.0.10' can have up to 5.72MiB
+        link: https://pypi.org/project/adbutils/1.0.10/#files
+        package_name: adbutils
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
   - name: Adbutilsx1x0x2PyPIArtifactSizeWrap
     type: wrap
     should_include:
