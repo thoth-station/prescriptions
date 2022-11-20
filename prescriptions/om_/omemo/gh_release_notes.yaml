@@ -1,0 +1,18 @@
+units:
+  wraps:
+  - name: OmemoGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: omemo
+    run:
+      release_notes:
+        organization: Syndace
+        repository: python-omemo
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
+        tag_version_prefix: v
