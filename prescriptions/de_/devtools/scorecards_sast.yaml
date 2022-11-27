@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: SASTDevtoolsScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devtools
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT use static source code analysis based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: devtools
+        project_url: github.com/samuelcolvin/python-devtools
+        project_revision: 5efff5fdcf8539e7a4f539d018f785ba4d0e59c4
+        scorecard_score: 0
+        tag: no-static-analysis
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
