@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: SignedReleasesShapScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: shap
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT cryptographically sign released artifacts based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: shap
+        project_url: github.com/slundberg/shap
+        project_revision: 45b85c1837283fdaeed7440ec6365a886af4a333
+        scorecard_score: -1
+        tag: no-signed-releases
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
