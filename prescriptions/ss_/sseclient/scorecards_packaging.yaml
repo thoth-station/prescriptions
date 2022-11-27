@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: PackagingSseclientScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: sseclient
+    run:
+      justification:
+      - type: WARNING
+        message: Project is NOT published as a package based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: sseclient
+        project_url: github.com/btubbs/sseclient
+        project_revision: 87e4b49b052b538b4d8dfc4db75ca87f6757119d
+        scorecard_score: -1
+        tag: no-published-package
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
