@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: SASTAstroplanScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: astroplan
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT use static source code analysis based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: astroplan
+        project_url: github.com/astropy/astroplan
+        project_revision: 920f189701b03f13ff3328bca51d95cc858bcd34
+        scorecard_score: 0
+        tag: no-static-analysis
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
