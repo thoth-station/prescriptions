@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: VulnerabilitiesDevtoolsScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: devtools
+    run:
+      justification:
+      - type: INFO
+        message: Project does not have open or unfixed vulnerabilities on the OSV service based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: devtools
+        project_url: github.com/samuelcolvin/python-devtools
+        project_revision: 5efff5fdcf8539e7a4f539d018f785ba4d0e59c4
+        scorecard_score: 10
+        tag: no-unfixed-vulnerabilities
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
