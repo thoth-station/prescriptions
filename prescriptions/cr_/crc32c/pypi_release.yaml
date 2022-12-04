@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Crc32cPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: crc32c
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'crc32c' has no recent release, last release dates back to 2022-05-30 14:24:48.824205
+        link: https://pypi.org/project/crc32c/#history
+        package_name: crc32c
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
