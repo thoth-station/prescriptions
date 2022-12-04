@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DiscordxPyxSlashxCommandPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: discord-py-slash-command
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'discord-py-slash-command' has no recent release, last release dates back to 2022-05-18 23:49:49.504980
+        link: https://pypi.org/project/discord-py-slash-command/#history
+        package_name: discord-py-slash-command
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
