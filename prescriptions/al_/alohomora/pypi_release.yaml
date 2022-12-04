@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AlohomoraPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: alohomora
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'alohomora' has no recent release, last release dates back to 2022-06-03 18:49:46.814782
+        link: https://pypi.org/project/alohomora/#history
+        package_name: alohomora
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
