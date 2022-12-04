@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: EdxxRbacPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: edx-rbac
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'edx-rbac' has no recent release, last release dates back to 2022-04-12 18:34:58.545956
+        link: https://pypi.org/project/edx-rbac/#history
+        package_name: edx-rbac
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
