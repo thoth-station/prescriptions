@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AirflowxExporterGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: airflow-exporter
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'airflow-exporter' was last updated at 2021-12-01 06:41:28
+        link: https://github.com/epoch8/airflow-exporter
+        package_name: airflow-exporter
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
