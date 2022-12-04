@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CachetoolsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachetools
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cachetools' has no recent release, last release dates back to 2022-05-29 20:53:07.442903
+        link: https://pypi.org/project/cachetools/#history
+        package_name: cachetools
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
