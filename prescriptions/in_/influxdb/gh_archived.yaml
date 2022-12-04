@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: InfluxdbGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: influxdb
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'influxdb' is marked as archived on GitHub
+        link: https://github.com/influxdata/influxdb-python
+        package_name: influxdb
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
