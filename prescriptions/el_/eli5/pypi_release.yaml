@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Eli5PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: eli5
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'eli5' has no recent release, last release dates back to 2022-05-11 09:37:12.474538
+        link: https://pypi.org/project/eli5/#history
+        package_name: eli5
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
