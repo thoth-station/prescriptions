@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzurexMgmtxRecoveryservicesbackupPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-recoveryservicesbackup
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-recoveryservicesbackup' has no recent release, last release dates back to 2022-05-16 09:45:16.526777
+        link: https://pypi.org/project/azure-mgmt-recoveryservicesbackup/#history
+        package_name: azure-mgmt-recoveryservicesbackup
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
