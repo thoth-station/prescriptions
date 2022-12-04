@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AutopropPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autoprop
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'autoprop' has no recent release, last release dates back to 2022-05-30 22:51:54.626215
+        link: https://pypi.org/project/autoprop/#history
+        package_name: autoprop
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
