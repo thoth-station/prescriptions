@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: CIIBestPracticesAutoreprScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: autorepr
+    run:
+      justification:
+      - type: WARNING
+        message: Project does NOT honour CII Best Practices based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: autorepr
+        project_url: github.com/wolever/autorepr
+        project_revision: 31b713c7235259bb1456b90eb20722a6d09345b8
+        scorecard_score: 0
+        tag: no-cii
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
