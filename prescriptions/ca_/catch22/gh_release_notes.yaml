@@ -1,0 +1,18 @@
+units:
+  wraps:
+  - name: Catch22GitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: catch22
+    run:
+      release_notes:
+        organization: chlubba
+        repository: catch22
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
+        tag_version_prefix: v
