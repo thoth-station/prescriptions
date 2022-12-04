@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoxSequencesPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-sequences
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-sequences' has no recent release, last release dates back to 2022-05-21 08:28:16.124235
+        link: https://pypi.org/project/django-sequences/#history
+        package_name: django-sequences
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
