@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzurexMgmtxApplicationinsightsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-applicationinsights
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-applicationinsights' has no recent release, last release dates back to 2022-06-02 09:10:45.821847
+        link: https://pypi.org/project/azure-mgmt-applicationinsights/#history
+        package_name: azure-mgmt-applicationinsights
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
