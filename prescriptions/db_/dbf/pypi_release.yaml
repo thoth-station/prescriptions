@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DbfPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dbf
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dbf' has no recent release, last release dates back to 2022-05-09 19:10:03.040954
+        link: https://pypi.org/project/dbf/#history
+        package_name: dbf
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
