@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DumbxInitPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dumb-init
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dumb-init' has no recent release, last release dates back to 2022-04-26 17:47:50.804479
+        link: https://pypi.org/project/dumb-init/#history
+        package_name: dumb-init
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
