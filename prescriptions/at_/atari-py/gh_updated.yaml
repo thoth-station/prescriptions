@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AtarixPyGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: atari-py
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'atari-py' was last updated at 2021-09-14 23:15:23
+        link: https://github.com/openai/atari-py
+        package_name: atari-py
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
