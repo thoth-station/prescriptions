@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DatapropertyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dataproperty
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dataproperty' has no recent release, last release dates back to 2022-03-20 15:59:10.561028
+        link: https://pypi.org/project/dataproperty/#history
+        package_name: dataproperty
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
