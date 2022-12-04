@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoxCryptographyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-cryptography
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-cryptography' has no recent release, last release dates back to 2022-04-06 04:27:28.340554
+        link: https://pypi.org/project/django-cryptography/#history
+        package_name: django-cryptography
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
