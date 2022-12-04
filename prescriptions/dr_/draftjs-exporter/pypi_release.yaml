@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DraftjsxExporterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: draftjs-exporter
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'draftjs-exporter' has no recent release, last release dates back to 2022-04-03 22:00:47.094964
+        link: https://pypi.org/project/draftjs-exporter/#history
+        package_name: draftjs-exporter
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
