@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: DangerousWorkflowDotmapScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dotmap
+    run:
+      justification:
+      - type: INFO
+        message: Project GitHub Action workflows do not have dangerous code patterns based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: dotmap
+        project_url: github.com/drgrib/dotmap
+        project_revision: c7a778a95a01a7a0fd2f816a07c62de2478260c6
+        scorecard_score: 10
+        tag: no-dangerous-patterns
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
