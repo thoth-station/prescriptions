@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ComboPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: combo
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'combo' has no recent release, last release dates back to 2022-04-02 16:20:07.788431
+        link: https://pypi.org/project/combo/#history
+        package_name: combo
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
