@@ -126,3 +126,24 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Apswx3x40x0x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apsw
+          version: ==3.40.0.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'apsw' in version
+          '3.40.0.0' can have up to 4.43MiB
+        link: https://pypi.org/project/apsw/3.40.0.0/#files
+        package_name: apsw
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
