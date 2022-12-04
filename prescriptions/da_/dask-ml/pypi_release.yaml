@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DaskxMlPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dask-ml
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dask-ml' has no recent release, last release dates back to 2022-05-27 14:17:47.844475
+        link: https://pypi.org/project/dask-ml/#history
+        package_name: dask-ml
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
