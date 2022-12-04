@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: DpathGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dpath
+    run:
+      justification:
+      - type: INFO
+        message: Package 'dpath' is hosted on GitHub
+        link: https://github.com/dpath-maintainers/dpath-python
+        package_name: dpath
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
