@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DataclassesxJsonPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: dataclasses-json
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'dataclasses-json' has no recent release, last release dates back to 2022-03-21 14:49:46.685321
+        link: https://pypi.org/project/dataclasses-json/#history
+        package_name: dataclasses-json
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
