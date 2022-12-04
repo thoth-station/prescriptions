@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BotostubsPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: botostubs
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'botostubs' has no recent release, last release dates back to 2022-05-31 00:03:02.124229
+        link: https://pypi.org/project/botostubs/#history
+        package_name: botostubs
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
