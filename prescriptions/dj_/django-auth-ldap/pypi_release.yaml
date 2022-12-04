@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoxAuthxLdapPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-auth-ldap
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-auth-ldap' has no recent release, last release dates back to 2022-05-10 12:00:34.416846
+        link: https://pypi.org/project/django-auth-ldap/#history
+        package_name: django-auth-ldap
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
