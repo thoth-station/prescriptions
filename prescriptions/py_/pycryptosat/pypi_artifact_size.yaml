@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Pycryptosat070dev3PyPIArtifactSizeWrap
+  - name: Pycryptosatx5x11x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,37 @@ units:
       state:
         resolved_dependencies:
         - name: pycryptosat
-          version: ==0.7.0.dev3
+          version: ==5.11.0
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'pycryptosat' in version
-          '0.7.0.dev3' can have up to 499.08KiB
-        link: https://pypi.org/project/pycryptosat/0.7.0.dev3/#files
+          '5.11.0' can have up to 5.44MiB
+        link: https://pypi.org/project/pycryptosat/5.11.0/#files
         package_name: pycryptosat
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
+  - name: Pycryptosatx5x11x4PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pycryptosat
+          version: ==5.11.4
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'pycryptosat' in version
+          '5.11.4' can have up to 9.17MiB
+        link: https://pypi.org/project/pycryptosat/5.11.4/#files
+        package_name: pycryptosat
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
