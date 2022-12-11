@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: Geoip2GitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: geoip2
+    run:
+      justification:
+      - type: INFO
+        message: Package 'geoip2' is hosted on GitHub
+        link: https://github.com/maxmind/GeoIP2-python
+        package_name: geoip2
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
