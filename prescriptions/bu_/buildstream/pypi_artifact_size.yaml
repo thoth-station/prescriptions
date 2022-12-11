@@ -84,3 +84,24 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Buildstreamx1x95x6xdev0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: buildstream
+          version: ==1.95.6.dev0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'buildstream' in version
+          '1.95.6.dev0' can have up to 18.90MiB
+        link: https://pypi.org/project/buildstream/1.95.6.dev0/#files
+        package_name: buildstream
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
