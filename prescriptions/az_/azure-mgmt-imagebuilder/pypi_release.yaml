@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzurexMgmtxImagebuilderPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-imagebuilder
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-imagebuilder' has no recent release, last release dates back to 2022-06-07 03:12:08.528064
+        link: https://pypi.org/project/azure-mgmt-imagebuilder/#history
+        package_name: azure-mgmt-imagebuilder
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
