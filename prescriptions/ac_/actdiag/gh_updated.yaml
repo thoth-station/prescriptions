@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: ActdiagGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: actdiag
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'actdiag' was last updated at 2021-12-06 16:53:49
+        link: https://github.com/blockdiag/actdiag
+        package_name: actdiag
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
