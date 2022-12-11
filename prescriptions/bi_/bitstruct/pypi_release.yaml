@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BitstructPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bitstruct
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bitstruct' has no recent release, last release dates back to 2022-06-07 19:58:19.383435
+        link: https://pypi.org/project/bitstruct/#history
+        package_name: bitstruct
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
