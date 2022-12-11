@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ApipkgPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: apipkg
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'apipkg' has no recent release, last release dates back to 2022-06-08 10:20:13.208921
+        link: https://pypi.org/project/apipkg/#history
+        package_name: apipkg
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
