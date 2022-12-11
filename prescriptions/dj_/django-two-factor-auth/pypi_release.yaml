@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoxTwoxFactorxAuthPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-two-factor-auth
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-two-factor-auth' has no recent release, last release dates back to 2022-06-06 10:00:28.672371
+        link: https://pypi.org/project/django-two-factor-auth/#history
+        package_name: django-two-factor-auth
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
