@@ -1218,6 +1218,27 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Awscrtx0x16x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: awscrt
+          version: ==0.16.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'awscrt' in version
+          '0.16.1' can have up to 20.80MiB
+        link: https://pypi.org/project/awscrt/0.16.1/#files
+        package_name: awscrt
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
   - name: Awscrtx0x5x11PyPIArtifactSizeWrap
     type: wrap
     should_include:
