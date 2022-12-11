@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: PackagingUpdatexCheckerScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: update-checker
+    run:
+      justification:
+      - type: WARNING
+        message: Project is NOT published as a package based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: update-checker
+        project_url: github.com/bboe/update_checker
+        project_revision: 2f3b1db5ae816cb3d9c7ad65c3d3a955e4b8197d
+        scorecard_score: -1
+        tag: no-published-package
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
