@@ -1,0 +1,23 @@
+units:
+  wraps:
+  - name: LicenseSubprocess32ScoreCardsWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: subprocess32
+    run:
+      justification:
+      - type: WARNING
+        message: Project has NOT published a license based on Security Scorecards
+        link: https://github.com/ossf/scorecard/blob/main/docs/checks.md
+        package_name: subprocess32
+        project_url: github.com/google/python-subprocess32
+        project_revision: b63954f56166eca312afb70b6d3a4af1128f81f3
+        scorecard_score: 9
+        tag: no-license
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
