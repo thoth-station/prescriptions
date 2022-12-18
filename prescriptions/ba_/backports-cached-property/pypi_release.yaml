@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BackportsxCachedxPropertyPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: backports-cached-property
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'backports-cached-property' has no recent release, last release dates back to 2022-06-14 08:48:18.937747
+        link: https://pypi.org/project/backports-cached-property/#history
+        package_name: backports-cached-property
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
