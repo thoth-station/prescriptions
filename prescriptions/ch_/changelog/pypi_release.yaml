@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ChangelogPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: changelog
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'changelog' has no recent release, last release dates back to 2022-06-14 23:05:37.281811
+        link: https://pypi.org/project/changelog/#history
+        package_name: changelog
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
