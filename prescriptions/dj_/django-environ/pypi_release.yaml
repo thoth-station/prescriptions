@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: DjangoxEnvironPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: django-environ
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'django-environ' has no recent release, last release dates back to 2022-06-15 14:49:19.591528
+        link: https://pypi.org/project/django-environ/#history
+        package_name: django-environ
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
