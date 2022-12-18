@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AiomodbusPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiomodbus
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiomodbus' has no recent release, last release dates back to 2022-06-17 07:44:19.477476
+        link: https://pypi.org/project/aiomodbus/#history
+        package_name: aiomodbus
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
