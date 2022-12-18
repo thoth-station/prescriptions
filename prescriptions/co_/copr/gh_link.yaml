@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: CoprGitHubURLWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: copr
+    run:
+      justification:
+      - type: INFO
+        message: Package 'copr' is hosted on GitHub
+        link: https://github.com/fedora-copr/copr
+        package_name: copr
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
