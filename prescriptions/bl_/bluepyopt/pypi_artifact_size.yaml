@@ -1,6 +1,6 @@
 units:
   wraps:
-  - name: Bluepyopt1998PyPIArtifactSizeWrap
+  - name: Bluepyoptx1x13x76PyPIArtifactSizeWrap
     type: wrap
     should_include:
       adviser_pipeline: true
@@ -8,13 +8,37 @@ units:
       state:
         resolved_dependencies:
         - name: bluepyopt
-          version: ==1.9.98
+          version: ==1.13.76
           index_url: https://pypi.org/simple
     run:
       justification:
       - type: INFO
         message: >-
           Installed artifact size for package 'bluepyopt' in version
-          '1.9.98' can have up to 173.49KiB
-        link: https://pypi.org/project/bluepyopt/1.9.98/#files
+          '1.13.76' can have up to 19.74MiB
+        link: https://pypi.org/project/bluepyopt/1.13.76/#files
         package_name: bluepyopt
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
+  - name: Bluepyoptx1x13x79PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bluepyopt
+          version: ==1.13.79
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'bluepyopt' in version
+          '1.13.79' can have up to 19.74MiB
+        link: https://pypi.org/project/bluepyopt/1.13.79/#files
+        package_name: bluepyopt
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
