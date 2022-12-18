@@ -525,3 +525,24 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Paddlepaddlex2x4x1PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: paddlepaddle
+          version: ==2.4.1
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'paddlepaddle' in version
+          '2.4.1' can have up to 116.01MiB
+        link: https://pypi.org/project/paddlepaddle/2.4.1/#files
+        package_name: paddlepaddle
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
