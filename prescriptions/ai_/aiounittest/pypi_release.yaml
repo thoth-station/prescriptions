@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AiounittestPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiounittest
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'aiounittest' has no recent release, last release dates back to 2022-06-13 13:11:03.239015
+        link: https://pypi.org/project/aiounittest/#history
+        package_name: aiounittest
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
