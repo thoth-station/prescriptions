@@ -735,6 +735,27 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: AzurexMgmtxNetworkx22x2x0PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-network
+          version: ==22.2.0
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'azure-mgmt-network' in version
+          '22.2.0' can have up to 9.95MiB
+        link: https://pypi.org/project/azure-mgmt-network/22.2.0/#files
+        package_name: azure-mgmt-network
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
   - name: AzurexMgmtxNetworkx3x0x0PyPIArtifactSizeWrap
     type: wrap
     should_include:
