@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: ConfigupdaterPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: configupdater
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'configupdater' has no recent release, last release dates back to 2022-06-26 18:37:27.392884
+        link: https://pypi.org/project/configupdater/#history
+        package_name: configupdater
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
