@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CachelibPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cachelib
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cachelib' has no recent release, last release dates back to 2022-06-26 17:56:58.916481
+        link: https://pypi.org/project/cachelib/#history
+        package_name: cachelib
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
