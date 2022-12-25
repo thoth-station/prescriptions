@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PylintxPytestGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: pylint-pytest
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'pylint-pytest' is marked as archived on GitHub
+        link: https://github.com/reverbc/pylint-pytest
+        package_name: pylint-pytest
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
