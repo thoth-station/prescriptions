@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: AzurexMgmtxConsumptionPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: azure-mgmt-consumption
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'azure-mgmt-consumption' has no recent release, last release dates back to 2022-06-21 02:17:29.927336
+        link: https://pypi.org/project/azure-mgmt-consumption/#history
+        package_name: azure-mgmt-consumption
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
