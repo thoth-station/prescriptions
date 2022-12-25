@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: Brian2PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: brian2
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'brian2' has no recent release, last release dates back to 2022-06-23 13:52:04.234582
+        link: https://pypi.org/project/brian2/#history
+        package_name: brian2
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
