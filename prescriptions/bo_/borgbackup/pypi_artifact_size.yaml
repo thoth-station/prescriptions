@@ -672,6 +672,27 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: Borgbackupx1x2x3PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: borgbackup
+          version: ==1.2.3
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'borgbackup' in version
+          '1.2.3' can have up to 3.86MiB
+        link: https://pypi.org/project/borgbackup/1.2.3/#files
+        package_name: borgbackup
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
   - name: Borgbackupx1x3x0a1PyPIArtifactSizeWrap
     type: wrap
     should_include:
