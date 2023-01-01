@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CffiPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cffi
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cffi' has no recent release, last release dates back to 2022-06-30 18:18:32.799105
+        link: https://pypi.org/project/cffi/#history
+        package_name: cffi
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
