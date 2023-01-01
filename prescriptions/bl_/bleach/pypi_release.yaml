@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BleachPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bleach
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bleach' has no recent release, last release dates back to 2022-06-27 14:40:08.177801
+        link: https://pypi.org/project/bleach/#history
+        package_name: bleach
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
