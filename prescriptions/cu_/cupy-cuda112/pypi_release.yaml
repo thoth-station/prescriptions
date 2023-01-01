@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: CupyxCuda112PyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: cupy-cuda112
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'cupy-cuda112' has no recent release, last release dates back to 2022-06-30 04:52:03.724737
+        link: https://pypi.org/project/cupy-cuda112/#history
+        package_name: cupy-cuda112
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
