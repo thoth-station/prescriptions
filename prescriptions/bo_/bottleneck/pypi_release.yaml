@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: BottleneckPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: bottleneck
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'bottleneck' has no recent release, last release dates back to 2022-07-02 20:05:48.821263
+        link: https://pypi.org/project/bottleneck/#history
+        package_name: bottleneck
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
