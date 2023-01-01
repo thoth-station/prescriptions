@@ -147,6 +147,27 @@ units:
         metadata:
         - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
           prescriptions_version: 0.8.0
+  - name: AxxPlatformx0x2x10PyPIArtifactSizeWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ax-platform
+          version: ==0.2.10
+          index_url: https://pypi.org/simple
+    run:
+      justification:
+      - type: INFO
+        message: >-
+          Installed artifact size for package 'ax-platform' in version
+          '0.2.10' can have up to 3.18MiB
+        link: https://pypi.org/project/ax-platform/0.2.10/#files
+        package_name: ax-platform
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
   - name: AxxPlatformx0x2x2PyPIArtifactSizeWrap
     type: wrap
     should_include:
