@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: PythonxGflagsGitHubArchivedWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: python-gflags
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'python-gflags' is marked as archived on GitHub
+        link: https://github.com/google/python-gflags
+        package_name: python-gflags
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
