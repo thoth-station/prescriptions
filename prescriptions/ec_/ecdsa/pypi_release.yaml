@@ -1,0 +1,20 @@
+units:
+  wraps:
+  - name: EcdsaPyPIReleaseWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: ecdsa
+    run:
+      justification:
+      - type: WARNING
+        message: >-
+          Package 'ecdsa' has no recent release, last release dates back to 2022-07-09 13:02:49.468187
+        link: https://pypi.org/project/ecdsa/#history
+        package_name: ecdsa
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
