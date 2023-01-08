@@ -1,0 +1,19 @@
+units:
+  wraps:
+  - name: AiohttpxCorsGitHubUpdatedAtWrap
+    type: wrap
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: aiohttp-cors
+    run:
+      justification:
+      - type: WARNING
+        message: Package 'aiohttp-cors' was last updated at 2022-01-03 14:47:46
+        link: https://github.com/aio-libs/aiohttp-cors
+        package_name: aiohttp-cors
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
