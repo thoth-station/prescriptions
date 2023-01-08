@@ -1,0 +1,17 @@
+units:
+  wraps:
+  - name: InvokeGitHubReleaseNotesWrap
+    type: wrap.GHReleaseNotes
+    should_include:
+      adviser_pipeline: true
+    match:
+      state:
+        resolved_dependencies:
+        - name: invoke
+    run:
+      release_notes:
+        organization: pyinvoke
+        repository: invoke
+        metadata:
+        - prescriptions_repository: git@github.com:thoth-station/prescriptions.git
+          prescriptions_version: 0.8.0
